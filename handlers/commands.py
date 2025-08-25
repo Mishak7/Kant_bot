@@ -6,6 +6,7 @@ from handlers.keyboard import main_roots_keyboard, info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
 from aiogram.types import CallbackQuery
 from handlers.language_check_handlers.language_check_keyboard import language_check_keyboard
+from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 
 router = Router()
 
@@ -52,7 +53,9 @@ async def medical_center_info(callback: CallbackQuery):
 @router.callback_query(F.data == "critical")
 async def emergency_info(callback: CallbackQuery):
     text = "⚠️ Критические ситуации"
-    await callback.message.answer(text, parse_mode="Markdown")
+    await callback.message.edit_text(text,
+                                  parse_mode="Markdown",
+                                  reply_markup=critical_keyboard())
     await callback.answer()
 
 @router.callback_query(F.data == "language_check")
