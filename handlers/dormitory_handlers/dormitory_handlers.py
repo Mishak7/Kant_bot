@@ -92,7 +92,7 @@ async def dormitory_addresses_handler(callback: CallbackQuery):
 # Хэндлер для правил проживания
 @router.callback_query(F.data == "dormitory_rules")
 async def dormitory_rules_handler(callback: CallbackQuery):
-    photo = FSInputFile('handlers/dormitory_handlers/dormitory_pictures/dormitory_rules.jpg')
+    photo = FSInputFile('handlers/location_handlers/dormitory_pictures/dormitory_rules.jpg')
     caption = """
 - Содержи комнату и кухню в чистоте самостоятельно.
 - Заводить домашних животных запрещено.
