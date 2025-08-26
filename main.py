@@ -3,11 +3,11 @@ from config.settings import settings
 from config.logger import logger
 from handlers import commands, messages
 from handlers.dormitory_handlers import dormitory_handlers
-from handlers.dormitory_handlers import dormitory_addresses_handler
 from handlers.critical_info_handlers import critical_handler
 from handlers.location_handlers import location_handlers
 from handlers.hospital_handlers import hospital_handler
 from handlers.university_handlers import university_info_handlers
+from handlers.location_handlers import dorm_handlers
 
 
 async def main():
@@ -17,11 +17,11 @@ async def main():
     dp.include_router(commands.router)
     dp.include_router(messages.router)
     dp.include_router(dormitory_handlers.router)
-    dp.include_router(dormitory_addresses_handler.router)
     dp.include_router(critical_handler.router)
     dp.include_router(location_handlers.router)
     dp.include_router(hospital_handler.router)
     dp.include_router(university_info_handlers.router)
+    dp.include_router(dorm_handlers.router)
 
     try:
         logger.info('Bot started')
