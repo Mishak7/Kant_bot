@@ -3,18 +3,11 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery, FSInputFile
 from aiogram.exceptions import TelegramBadRequest
 from config.logger import logger
-from handlers.location_handlers.dorm_keyboard import dormitories_keyboard, back_to_dormitories_keyboard
+from handlers.dormitory_handlers.dormitory_keyboard import back_to_addresses_keyboard
 
 router = Router()
 
-# Хэндлер для адресов (возможно инетграция с картами?
-@router.callback_query(F.data == "loc_dormitory_building")
-async def dormitory_building_handler(callback: CallbackQuery):
-    text = 'Выбери корпус'
-    await callback.message.delete()
-    await callback.message.answer(text,
-                                    reply_markup=dormitories_keyboard())
-    await callback.answer()
+
 
 # Хэндлер для общежития №1
 @router.callback_query(F.data == "dormitory_1")
@@ -30,7 +23,7 @@ async def dormitory_1_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 1 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -58,7 +51,7 @@ async def dormitory_2_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 2 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -86,7 +79,7 @@ async def dormitory_3_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 3 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -114,7 +107,7 @@ async def dormitory_4_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 4 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -143,7 +136,7 @@ async def dormitory_5_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 5 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -171,7 +164,7 @@ async def dormitory_6_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 6 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -198,7 +191,7 @@ async def dormitory_7_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 7 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -225,7 +218,7 @@ async def dormitory_8_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 8 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -252,7 +245,7 @@ async def dormitory_9_handler(callback: CallbackQuery):
         await callback.message.answer_photo(
             photo=photo,
             caption=caption,
-            reply_markup=back_to_dormitories_keyboard()
+            reply_markup=back_to_addresses_keyboard()
         )
         logger.info(f"Photo for dormitory 9 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:

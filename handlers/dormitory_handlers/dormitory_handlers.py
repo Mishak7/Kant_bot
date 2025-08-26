@@ -1,6 +1,6 @@
 from aiogram import Router, F
 from aiogram.types import CallbackQuery, FSInputFile
-from handlers.dormitory_handlers.dormitory_keyboard import dormitory_check_in_keyboard, back_to_dormitory_keyboard, dormitory_addresses_keyboard
+from handlers.dormitory_handlers.dormitory_keyboard import dormitory_check_in_keyboard, back_to_dormitory_keyboard, dormitories_keyboard_back_to_dormitory_info
 
 router = Router()
 
@@ -84,10 +84,8 @@ async def dormitory_addresses_handler(callback: CallbackQuery):
     text = 'Выбери общежитие'
     await callback.message.delete()
     await callback.message.answer(text,
-                                    reply_markup=dormitory_addresses_keyboard())
+                                    reply_markup=dormitories_keyboard_back_to_dormitory_info())
     await callback.answer()
-
-
 
 
 # Хэндлер для правил проживания
@@ -130,5 +128,7 @@ async def dormitory_laundry_handler(callback: CallbackQuery):
     await callback.message.edit_text(text,
                                      reply_markup=back_to_dormitory_keyboard())
     await callback.answer()
+
+
 
 
