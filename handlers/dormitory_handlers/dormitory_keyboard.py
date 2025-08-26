@@ -39,5 +39,5 @@ def dormitory_addresses_keyboard() -> InlineKeyboardMarkup:
 
 def back_to_addresses_keyboard():
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="◀️ Назад к общежитиям", callback_data="dormitory_address")]
+        [InlineKeyboardButton(text="◀️ Назад к адресам общежитий", callback_data="dormitory_address")]
     ])

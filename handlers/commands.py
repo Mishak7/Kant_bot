@@ -7,7 +7,7 @@ from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
 from aiogram.types import CallbackQuery
 from handlers.language_check_handlers.language_check_keyboard import language_check_keyboard
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
-
+from handlers.location_handlers.location_keyboard import choose_type_of_location
 router = Router()
 
 @router.message(CommandStart())
@@ -27,10 +27,12 @@ async def university_info(callback: CallbackQuery):
                          parse_mode="Markdown")
     await callback.answer()
 
-@router.callback_query(F.data == "place")
+@router.callback_query(F.data == "location")
 async def location_info(callback: CallbackQuery):
     text = "📍 Местоположение корпуса"
-    await callback.message.answer(text, parse_mode="Markdown")
+    await callback.message.edit_text(text,
+                                     parse_mode="Markdown",
+                                     reply_markup=choose_type_of_location())
     await callback.answer()
 
 @router.callback_query(F.data == "dormitory")
