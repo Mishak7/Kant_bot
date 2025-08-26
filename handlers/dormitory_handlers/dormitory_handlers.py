@@ -1,6 +1,7 @@
 from aiogram import Router, F
+from aiogram.enums import ParseMode
 from aiogram.types import CallbackQuery, FSInputFile
-from handlers.dormitory_handlers.dormitory_keyboard import dormitory_check_in_keyboard, back_to_dormitory_keyboard, dormitories_keyboard_back_to_dormitory_info
+from handlers.dormitory_handlers.dormitory_keyboard import dormitory_check_in_keyboard, back_to_dormitory_keyboard, dormitories_keyboard_back_to_dormitory_info, back_to_check_in_keyboard
 
 router = Router()
 
@@ -131,4 +132,39 @@ async def dormitory_laundry_handler(callback: CallbackQuery):
 
 
 
+@router.callback_query(F.data == "no_certificate")
+async def dormitory_no_certificate(callback: CallbackQuery):
+    text = """
+    ЕСЛИ НЕТ СЕРТИФИКАТА ПРИВИВОК ИЛИ ФЛЮОРОГРАФИИ
+    
+1 *Если у вас отсутствует свежая флюорография*
+Вы можете сделать ее в нескольких местах, например:
+- В КДЦ БФУ за 320 руб. по карте студента (она должна быть в
+наличии). Расположение КДЦ: [https://goo.gl/maps/P4djCkwJ3ZQHThgGA]
+(https://goo.gl/maps/P4djCkwJ3ZQHThgGA)
+- в Медэксперте (ул. Космическая или московский пр-т), до 17:00, за
+450 руб. без снимка. Расположение:
+[https://goo.gl/maps/rRiC1Nh35BNPw2w3A](https://goo.gl/maps/rRiC1Nh35B
+NPw2w3A)
+- Novomed (Гагарина 2В) до 17:00, 350 руб.
+Расположение:
+[https://goo.gl/maps/kgEkj4yLnWBNbFUm6](https://goo.gl/maps/kgEkj4yLnW
+BNbFUm6)
 
+2 *Если у вас отсутствуют сертификаты о прививках*
+
+Обратитесь в любое отделение Медэксперта. Там вам необходимо
+сдать анализ крови, который называется “Напряженность к иммунитету
+для кори и дифтерии”. Анализ можно сдать каждый день, понедельник
+- пятница с 7:30 до 19, выходные с 7:30 до 17:00.
+
+Анализ сдается натощак.
+
+Результат выдается через 4 рабочих дня (результат можно получить в
+личном кабинете).
+    """
+    await callback.message.delete()
+    await callback.message.answer(text,
+                                  parse_mode="Markdown",
+                                    reply_markup=back_to_check_in_keyboard())
+    await callback.answer()
