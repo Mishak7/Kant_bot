@@ -35,3 +35,4 @@ def uni_loc_keyboard() -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text="Корпус №28", callback_data="loc_28")],
         [InlineKeyboardButton(text="Назад к списку мест", callback_data="location")]
     ])
+

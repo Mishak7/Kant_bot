@@ -22,3 +22,8 @@ def info_keyboard() -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text="🌍 Визово-миграционный центр", callback_data="visa_center")],
         [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]
     ])
+
+def back_to_main_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+                                [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]]
+    )

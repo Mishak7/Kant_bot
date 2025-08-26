@@ -46,12 +46,6 @@ async def dormitory_info(callback: CallbackQuery):
     )
     await callback.answer()
 
-@router.callback_query(F.data == "hospital")
-async def medical_center_info(callback: CallbackQuery):
-    text = """🏥 Медицинский центр"""
-    await callback.message.answer(text, parse_mode="Markdown")
-    await callback.answer()
-
 @router.callback_query(F.data == "critical")
 async def emergency_info(callback: CallbackQuery):
     text = "⚠️ Критические ситуации"
