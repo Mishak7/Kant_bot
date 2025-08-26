@@ -5,7 +5,7 @@ def main_roots_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(
         inline_keyboard=[
             [InlineKeyboardButton(text="🎓 Информация про университет", callback_data="info")],
-            [InlineKeyboardButton(text="📍 Местоположение корпуса", callback_data="place")],
+            [InlineKeyboardButton(text="📍 Местоположение корпуса", callback_data="location")],
             [InlineKeyboardButton(text="🏘️ Общежития", callback_data="dormitory")],
             [InlineKeyboardButton(text="🏥 Медцентр", callback_data="hospital")],
             [InlineKeyboardButton(text="⚠️ Критические ситуации", callback_data="critical")],
