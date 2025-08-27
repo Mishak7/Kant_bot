@@ -12,10 +12,10 @@ def setup_logger():
         backupCount=5,
         encoding='utf-8'
     )
-    file_handler.setLevel('DEBUG')
+    file_handler.setLevel('CRITICAL')
 
     stream_handler = StreamHandler()
-    stream_handler.setLevel('DEBUG')
+    stream_handler.setLevel('CRITICAL')
 
     basicConfig(
         level=logging.DEBUG,

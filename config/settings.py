@@ -10,6 +10,9 @@ except Exception as e:
 class Settings:
     TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
     GIGA_CREDENTIALS = os.getenv("GIGA_CREDENTIALS")
+    SALUTE_CREDENTIALS = os.getenv("SALUTE_CREDENTIALS")
 
 
 settings = Settings()
+
+

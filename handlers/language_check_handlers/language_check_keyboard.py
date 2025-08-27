@@ -7,3 +7,4 @@ def language_check_keyboard() -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text="🎤 Говорение", callback_data="speaking")],
         [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]
     ])
+
