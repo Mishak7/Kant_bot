@@ -1,7 +1,14 @@
+"""
+Keyboard layouts for the main menu and navigation.
+
+This module provides inline keyboards for the bot's main menu
+and navigation back button. All keyboards are built using
+aiogram's InlineKeyboardMarkup and InlineKeyboardButton.
+"""
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-#Основная клавиатура
 def main_roots_keyboard() -> InlineKeyboardMarkup:
+    """Create the main menu keyboard with all available options."""
     return InlineKeyboardMarkup(
         inline_keyboard=[
             [InlineKeyboardButton(text="🎓 Информация про университет", callback_data="info")],
@@ -13,17 +20,8 @@ def main_roots_keyboard() -> InlineKeyboardMarkup:
         ]
     )
 
-#Клавиатура, открывающаяся при нажатии на информацию про университет
-def info_keyboard() -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="📅 Расписание", callback_data="schedule")],
-        [InlineKeyboardButton(text="💰 Стипендии", callback_data="scholarship")],
-        [InlineKeyboardButton(text="📞 Контакты учебного офиса", callback_data="office_contacts")],
-        [InlineKeyboardButton(text="🌍 Визово-миграционный центр", callback_data="visa_center")],
-        [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]
-    ])
-
 def back_to_main_keyboard() -> InlineKeyboardMarkup:
+    """Create a simple back button keyboard for returning to main menu."""
     return InlineKeyboardMarkup(inline_keyboard=[
                                 [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]]
     )

@@ -1,3 +1,8 @@
+"""
+Module shows the pictures of dormitory buildings and corresponding info/address
+Handler for each button - may not be optimal
+"""
+
 from aiogram import Router, F
 
 from aiogram.types import CallbackQuery, FSInputFile
@@ -8,8 +13,6 @@ from handlers.dormitory_handlers.dormitory_keyboard import back_to_addresses_key
 router = Router()
 
 
-
-# Хэндлер для общежития №1
 @router.callback_query(F.data == "dormitory_1")
 async def dormitory_1_handler(callback: CallbackQuery):
     try:
@@ -38,7 +41,7 @@ async def dormitory_1_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для общежития №2
+
 @router.callback_query(F.data == "dormitory_2")
 async def dormitory_2_handler(callback: CallbackQuery):
     try:
@@ -66,7 +69,7 @@ async def dormitory_2_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для общежития №3
+
 @router.callback_query(F.data == "dormitory_3")
 async def dormitory_3_handler(callback: CallbackQuery):
     try:
@@ -94,7 +97,8 @@ async def dormitory_3_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для общежития №4
+
+
 @router.callback_query(F.data == "dormitory_4")
 async def dormitory_4_handler(callback: CallbackQuery):
     try:
@@ -122,7 +126,7 @@ async def dormitory_4_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для общежития №5
+
 @router.callback_query(F.data == "dormitory_5")
 async def dormitory_5_handler(callback: CallbackQuery):
     try:
@@ -151,7 +155,8 @@ async def dormitory_5_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для общежития №6
+
+
 @router.callback_query(F.data == "dormitory_6")
 async def dormitory_6_handler(callback: CallbackQuery):
     try:
@@ -179,7 +184,8 @@ async def dormitory_6_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для общежития №7
+
+
 @router.callback_query(F.data == "dormitory_7")
 async def dormitory_7_handler(callback: CallbackQuery):
     try:
@@ -206,7 +212,8 @@ async def dormitory_7_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для общежития №8
+
+
 @router.callback_query(F.data == "dormitory_8")
 async def dormitory_8_handler(callback: CallbackQuery):
     try:
@@ -233,7 +240,8 @@ async def dormitory_8_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для общежития №9
+
+
 @router.callback_query(F.data == "dormitory_9")
 async def dormitory_9_handler(callback: CallbackQuery):
     try:

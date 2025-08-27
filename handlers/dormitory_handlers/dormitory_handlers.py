@@ -1,14 +1,124 @@
+"""
+Dormitory information handlers for student accommodation.
+
+This module provides handlers for dormitory-related information including:
+- Check-in procedures and requirements
+- Payment information
+- Dormitory addresses and selection
+- Rules and regulations
+- Laundry facilities
+- Certificate requirements
+"""
+
+import traceback
 from aiogram import Router, F
-from aiogram.enums import ParseMode
 from aiogram.types import CallbackQuery, FSInputFile
-from handlers.dormitory_handlers.dormitory_keyboard import dormitory_check_in_keyboard, back_to_dormitory_keyboard, dormitories_keyboard_back_to_dormitory_info, back_to_check_in_keyboard
+from config.logger import logger
+from handlers.dormitory_handlers.dormitory_keyboard import (
+    dormitory_check_in_keyboard,
+    back_to_dormitory_keyboard,
+    dormitories_keyboard_back_to_dormitory_info,
+    back_to_check_in_keyboard
+)
+
 
 router = Router()
 
-# Хэндлер для заселения в общежитие
 @router.callback_query(F.data == "dormitory_check-in")
 async def dormitory_check_in_handler(callback: CallbackQuery):
-    text = """Подробнее про заселение ты можешь узнать (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
+    """Display dormitory check-in procedures and requirements."""
+    try:
+        await callback.message.edit_text(
+            DORMITORY_TEXT,
+            parse_mode="Markdown",
+            reply_markup=dormitory_check_in_keyboard()
+        )
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Dormitory check-in error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Ошибка при загрузке информации о заселении")
+
+
+@router.callback_query(F.data == "dormitory_payment")
+async def dormitory_payment_handler(callback: CallbackQuery):
+    """Display dormitory payment information and procedures."""
+    try:
+        await callback.message.edit_text(
+            PAYMENT_TEXT,
+            parse_mode="Markdown",
+            reply_markup=back_to_dormitory_keyboard()
+        )
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Dormitory payment error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Ошибка при загрузке информации об оплате")
+
+
+@router.callback_query(F.data == "dormitory_address")
+async def dormitory_addresses_handler(callback: CallbackQuery):
+    """Display dormitory selection menu for address information."""
+    try:
+        await callback.message.delete()
+        await callback.message.answer(
+            'Выбери общежитие',
+            reply_markup=dormitories_keyboard_back_to_dormitory_info()
+        )
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Dormitory addresses error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Ошибка при загрузке адресов общежитий")
+
+
+@router.callback_query(F.data == "dormitory_rules")
+async def dormitory_rules_handler(callback: CallbackQuery):
+    """Display dormitory rules and regulations with photo."""
+    try:
+        photo = FSInputFile('handlers/location_handlers/dormitory_pictures/dormitory_rules.jpg')
+
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=RULES_TEXT,
+            parse_mode="Markdown",
+            reply_markup=back_to_dormitory_keyboard()
+        )
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Dormitory rules error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Ошибка при загрузке правил общежития")
+
+
+@router.callback_query(F.data == "dormitory_laundry")
+async def dormitory_laundry_handler(callback: CallbackQuery):
+    """Display laundry facilities information."""
+    try:
+        await callback.message.edit_text(
+            LAUNDRY_TEXT,
+            reply_markup=back_to_dormitory_keyboard()
+        )
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Dormitory laundry error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Ошибка при загрузке информации о прачечной")
+
+
+@router.callback_query(F.data == "no_certificate")
+async def dormitory_no_certificate_handler(callback: CallbackQuery):
+    """Handle case when student doesn't have required certificate."""
+    try:
+        await callback.message.delete()
+        await callback.message.answer(
+            NO_CERIFICATION_TEXT,
+            parse_mode="Markdown",
+            reply_markup=back_to_check_in_keyboard()
+        )
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'No certificate error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Ошибка при обработке запроса о справке")
+
+
+DORMITORY_TEXT = text = """Подробнее про заселение ты можешь узнать (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
 
 *Как подать заявление на место в общежитии?*
 
@@ -56,15 +166,8 @@ _Документы должны быть на русском языке или 
 
 _В случае если на момент заселения у тебя этих справок нет, их необходимо сделать за свой счет в любой клинике._
 """
-    await callback.message.edit_text(text,
-                                     parse_mode="Markdown",
-                                     reply_markup=dormitory_check_in_keyboard())
-    await callback.answer()
 
-# Хэндлер для оплаты общежития
-@router.callback_query(F.data == "dormitory_payment")
-async def dormitory_payment_handler(callback: CallbackQuery):
-    text = """
+PAYMENT_TEXT = """
     Оплатить общежитие можно двумя путями.
 
 1. Лично. В кабинет № 222 административного корпуса, 2 этаж. Здесь ты получишь квитанцию для оплаты в кассе на том же этаже. Оплатить через кассу можно наличными в рублях или банковской картой.
@@ -73,27 +176,8 @@ async def dormitory_payment_handler(callback: CallbackQuery):
 
 Первокурсники оплачивают при заселении полностью первый семестр. Далее осенний семестр оплачивается до 15 сентября, а весенний – до 15 февраля.
 """
-    await callback.message.edit_text(text,
-                                     parse_mode="Markdown",
-                                     reply_markup=back_to_dormitory_keyboard())
-    await callback.answer()
 
-
-# Хэндлер для адресов (возможно инетграция с картами?
-@router.callback_query(F.data == "dormitory_address")
-async def dormitory_addresses_handler(callback: CallbackQuery):
-    text = 'Выбери общежитие'
-    await callback.message.delete()
-    await callback.message.answer(text,
-                                    reply_markup=dormitories_keyboard_back_to_dormitory_info())
-    await callback.answer()
-
-
-# Хэндлер для правил проживания
-@router.callback_query(F.data == "dormitory_rules")
-async def dormitory_rules_handler(callback: CallbackQuery):
-    photo = FSInputFile('handlers/location_handlers/dormitory_pictures/dormitory_rules.jpg')
-    caption = """
+RULES_TEXT = """
 - Содержи комнату и кухню в чистоте самостоятельно.
 - Заводить домашних животных запрещено.
 - Уважай соседей: соблюдай тишину с 23:00 до 08:00, будь вежлив и внимателен.
@@ -109,32 +193,15 @@ _Не все общежития оснащены посудой, но ежене
 *Совет*: знакомься с комендантом сразу после вселения — он твой главный помощник в вопросах быта.
 """
 
-    await callback.message.delete()
-    await callback.message.answer_photo(photo=photo,
-                                        caption=caption,
-                                        parse_mode="Markdown",
-                                        reply_markup=back_to_dormitory_keyboard())
-    await callback.answer()
-
-# Хэндлер для прачечной
-@router.callback_query(F.data == "dormitory_laundry")
-async def dormitory_laundry_handler(callback: CallbackQuery):
-    text = """
+LAUNDRY_TEXT = """
     Прачечные находятся в здании каждого общежития. Комендант или вахтер расскажут, где именно находится комната со стиральными машинами и в какое время можно брать ключ.
 
 Стиральный порошок нужно приносить с собой. Прачечная оборудована несколькими стиральными машинами, в которых можно стирать одновременно, если много белья для стирки. Стирать нижнее белье обязательно в специальных мешках. Стирать обувь запрещается, так как это приводит к поломке стиральных машин. Внимательно перед использованием машинки ознакомься с инструкцией в комнате. Сушить белье после стирки можно в специальной комнате, которая оборудована сушилками для одежды.
 
 *Помни*, что другие студенты в общежитии тоже хотят постирать свою одежду, поэтому возвращай ключ вахтеру или коменданту сразу после стирки, именно в то время, когда пообещал его вернуть.
 """
-    await callback.message.edit_text(text,
-                                     reply_markup=back_to_dormitory_keyboard())
-    await callback.answer()
 
-
-
-@router.callback_query(F.data == "no_certificate")
-async def dormitory_no_certificate(callback: CallbackQuery):
-    text = """
+NO_CERIFICATION_TEXT = """
     ЕСЛИ НЕТ СЕРТИФИКАТА ПРИВИВОК ИЛИ ФЛЮОРОГРАФИИ
     
 1 *Если у вас отсутствует свежая флюорография*
@@ -163,8 +230,3 @@ BNbFUm6)
 Результат выдается через 4 рабочих дня (результат можно получить в
 личном кабинете).
     """
-    await callback.message.delete()
-    await callback.message.answer(text,
-                                  parse_mode="Markdown",
-                                    reply_markup=back_to_check_in_keyboard())
-    await callback.answer()
