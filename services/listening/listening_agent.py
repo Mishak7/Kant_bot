@@ -1,9 +1,10 @@
+"""
+!!! JUST FOR TESTING !!! BOT DOES NOT USE IT YET
+"""
 from langchain_gigachat import GigaChat
-from config.settings import settings
 from langchain.agents import tool
 from services.listening.listening import ListeningGeneration
-import uuid
-from langchain.schema import SystemMessage, HumanMessage
+from langchain.schema import HumanMessage
 
 from config.settings import settings
 import urllib3

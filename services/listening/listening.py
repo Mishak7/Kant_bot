@@ -1,3 +1,6 @@
+"""
+!!! JUST FOR TESTING !!! BOT DOES NOT USE IT YET (EXCEPT LISTENINGGENERATION CLASS)
+"""
 from config.settings import settings
 import urllib3
 import requests

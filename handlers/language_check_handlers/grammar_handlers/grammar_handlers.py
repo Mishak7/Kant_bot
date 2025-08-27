@@ -76,3 +76,5 @@ async def translation_analysis_handler(message: Message):
 
     translation_result = gigachat_response(translate_text, to_russian)
     await message.answer(translation_result, parse_mode="Markdown", reply_markup=back_to_translation())
+
+
