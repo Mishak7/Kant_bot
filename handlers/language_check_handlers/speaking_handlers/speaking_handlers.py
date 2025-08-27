@@ -1,10 +1,10 @@
 import random
-from aiogram import Bot, Dispatcher, Router, F
+from aiogram import Bot, Router, F
 from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from services.speaking.speaking import SpeakingAnalyzer
-import types
+
 
 class SpeakingStates(StatesGroup):
     waiting_for_voice = State()
@@ -34,7 +34,6 @@ async def speaking_send(callback: CallbackQuery, state: FSMContext):
     ]
     chosen_topic = random.choice(topics)
 
-    # Сохраняем тему в состоянии
     await state.update_data(topic=chosen_topic)
     await callback.message.answer(f'Жду твой рассказ на тему: {chosen_topic}')
     await state.set_state(SpeakingStates.waiting_for_voice)
@@ -42,17 +41,14 @@ async def speaking_send(callback: CallbackQuery, state: FSMContext):
 
 @router.message(F.voice, SpeakingStates.waiting_for_voice)
 async def handle_voice_message(message: Message, state: FSMContext, bot: Bot):
-    # Получаем тему из состояния
     state_data = await state.get_data()
     topic = state_data.get('topic', 'Неизвестная тема')
 
-    # Скачиваем голосовое сообщение
     file_info = await bot.get_file(message.voice.file_id)
     file_content = await bot.download_file(file_info.file_path)
-    # Создаем анализатор с темой как текстом для сравнения
-    analyzer = SpeakingAnalyzer('')
 
-    # Обрабатываем голосовое сообщение
+    analyzer = SpeakingAnalyzer(topic)
+
     try:
         result = await analyzer.process_voice_message(file_content.read())
         await message.answer(f"Результат анализа:\n\n{result}")

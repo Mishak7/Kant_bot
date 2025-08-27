@@ -34,11 +34,9 @@ class SpeakingAnalyzer(ListeningGeneration):
         """Транскрибация аудиофайла"""
         token = self.get_access_token()['access_token']
 
-        # Конвертация в нужный формат
         audio = AudioSegment.from_file(audio_path)
         audio = audio.set_frame_rate(16000).set_channels(1).set_sample_width(2)
 
-        # Отправка сырых аудиоданных
         headers = {
             "Authorization": f"Bearer {token}",
             "Content-Type": "audio/x-pcm;bit=16;rate=16000"
@@ -66,23 +64,20 @@ class SpeakingAnalyzer(ListeningGeneration):
 
         response = self.gigachat.invoke([
             SystemMessage(content=self.system_prompt),
-            HumanMessage(content=f"Транскрипция: {transcribed}")
+            HumanMessage(content=f"Транскрипция: {transcribed}. Тема {self.text}"),
         ])
         return response.content
 
     async def process_voice_message(self, file_content: bytes, bot=None) -> str:
         """Обработка голосового сообщения из bytes"""
-        # Создаем временный файл
         with tempfile.NamedTemporaryFile(delete=False, suffix='.ogg') as temp_file:
             temp_file.write(file_content)
             temp_path = temp_file.name
             print(temp_path)
 
         try:
-            # Анализируем
             result = self.compare_with_original(temp_path)
             return result
         finally:
-            # Удаляем временный файл
             if os.path.exists(temp_path):
                 os.remove(temp_path)

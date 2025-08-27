@@ -1,35 +1,46 @@
+"""
+Module for university info handling
+"""
+
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
-from handlers.university_handlers.university_info_keyboard import info_keyboard, back_to_info_keyboard
+from handlers.university_handlers.university_info_keyboard import back_to_info_keyboard
 
 router = Router()
 
-# Хэндлер для расписания
 @router.callback_query(F.data == "schedule")
 async def schedule_handler(callback: CallbackQuery):
-    text = '''
+    await callback.message.edit_text(SCHEDULE_TEXT, parse_mode="Markdown", reply_markup=back_to_info_keyboard())
+    await callback.answer()
+
+
+@router.callback_query(F.data == "scholarship")
+async def scholarship_handler(callback: CallbackQuery):
+    await callback.message.edit_text(SCHOLARSHIP_TEXT, parse_mode="Markdown", reply_markup=back_to_info_keyboard())
+    await callback.answer()
+
+
+@router.callback_query(F.data == "office_contacts")
+async def office_contacts_handler(callback: CallbackQuery):
+    await callback.message.edit_text(OFFICE_CONTACTS_TEXT, parse_mode='Markdown', reply_markup=back_to_info_keyboard())
+    await callback.answer()
+
+
+@router.callback_query(F.data == "visa_center")
+async def visa_center_handler(callback: CallbackQuery):
+    await callback.message.edit_text(VISA_CENTER_TEXT, parse_mode='Markdown', reply_markup=back_to_info_keyboard())
+    await callback.answer()
+
+
+SCHEDULE_TEXT = '''
     *Расписание занятий*:
     https://schedule.kantiana.ru/
     '''
-    await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_info_keyboard())
-    await callback.answer()
-
-
-# Хэндлер для стипендий
-@router.callback_query(F.data == "scholarship")
-async def scholarship_handler(callback: CallbackQuery):
-    text = '''
+SCHOLARSHIP_TEXT ='''
     *Информация о стипендиях и материальной помощи*:
     https://kantiana.ru/students/scholarship/
     '''
-    await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_info_keyboard())
-    await callback.answer()
-
-
-# Хэндлер для контактов учебного офиса
-@router.callback_query(F.data == "office_contacts")
-async def office_contacts_handler(callback: CallbackQuery):
-    text = '''
+OFFICE_CONTACTS_TEXT = '''
     *Контакты*:
 
     _Адрес_: 236041, Калининград, ул. Александра Невского, 14
@@ -57,14 +68,8 @@ async def office_contacts_handler(callback: CallbackQuery):
 
     Суббота и воскресенье: выходные дни
     '''
-    await callback.message.edit_text(text, parse_mode='Markdown', reply_markup=back_to_info_keyboard())
-    await callback.answer()
 
-
-# Хэндлер для визово-миграционного центра
-@router.callback_query(F.data == "visa_center")
-async def visa_center_handler(callback: CallbackQuery):
-    text = '''
+VISA_CENTER_TEXT = '''
     *Визово-миграционный центр*:
     https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/
 
@@ -75,5 +80,3 @@ async def visa_center_handler(callback: CallbackQuery):
     _Телефон_: +7 (4012) 31-33-99
     _Email_: international-study@kantiana.ru
     '''
-    await callback.message.edit_text(text, parse_mode='Markdown', reply_markup=back_to_info_keyboard())
-    await callback.answer()

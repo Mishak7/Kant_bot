@@ -1,5 +1,3 @@
-import langchain
-import os
 from langchain_community.llms import GigaChat
 from services.grammar.prompt_to_russian import prompt_to_russian
 from services.grammar.prompt_from_russian import prompt_from_russian

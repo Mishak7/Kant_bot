@@ -1,10 +1,14 @@
+"""
+Keyboard to choose from language exercises
+"""
+
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-def language_check_keyboard() -> InlineKeyboardMarkup:
+def language_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🎧 Аудирование", callback_data="listening")],
-        [InlineKeyboardButton(text="📝 Грамматика", callback_data="grammar")],
-        [InlineKeyboardButton(text="🎤 Говорение", callback_data="speaking")],
-        [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]
+        [InlineKeyboardButton(text='\U0001F508 Аудирование', callback_data='language_audio')],
+        [InlineKeyboardButton(text='\U0001F4DA Грамматика', callback_data='language_grammar')],
+        [InlineKeyboardButton(text='\U0001F4AC Говорение', callback_data='language_speaking')],
+        [InlineKeyboardButton(text='◀️ Назад', callback_data='back_to_main')],
     ])
 

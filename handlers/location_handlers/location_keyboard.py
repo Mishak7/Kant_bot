@@ -1,22 +1,17 @@
+"""
+Keyboard for location handlers.
+"""
+
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-def choose_type_of_location() -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="Учебно-лабораторные корпуса", callback_data="loc_uni_building")],
-        [InlineKeyboardButton(text="Общежития", callback_data="loc_dormitory_building")],
-        [InlineKeyboardButton(text="Прочее", callback_data="loc_other")],
-        [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]
-    ])
-
-
 def back_to_locations_keyboard():
+    """Go back to buildings"""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="◀️ Назад к корпусам", callback_data="loc_uni_building")]
     ])
 
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
 def uni_loc_keyboard() -> InlineKeyboardMarkup:
+    """Buttons for each university building"""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="Административный корпус", callback_data="loc_1")],
         [InlineKeyboardButton(text="Корпус №2, Институт физики, математики и ИТ («Физмат»)", callback_data="loc_2")],

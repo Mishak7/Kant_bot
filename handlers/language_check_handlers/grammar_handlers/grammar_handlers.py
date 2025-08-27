@@ -1,24 +1,22 @@
 from aiogram import Router, F
-from aiogram.types import CallbackQuery, InlineKeyboardMarkup, FSInputFile, Message
-from handlers.language_check_handlers.grammar_handlers.grammar_keyboard import language_keyboard, back_to_language_keyboard, \
-    translation_keyboard, back_to_translation
+from aiogram.types import CallbackQuery, Message
+from handlers.language_check_handlers.grammar_handlers.grammar_keyboard import translation_keyboard, back_to_translation
 from services.grammar.grammar import gigachat_response
 
 router = Router()
 user_states = {}
 
-# Хэндлер для грамматики
+
 @router.callback_query(F.data == "language_grammar")
 async def language_grammar_handler(callback: CallbackQuery):
     text = '''
     *Выберите вариант перевода*:
     '''
-
     await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=translation_keyboard())
     await callback.answer()
 
 
-# Хэндлер для перевода на русский
+
 @router.callback_query(F.data == "translate_to_russian")
 async def translate_to_russian_handler(callback: CallbackQuery):
     user_states[callback.from_user.id] = {"to_russian": True}
@@ -36,7 +34,6 @@ async def translate_to_russian_handler(callback: CallbackQuery):
     await callback.answer()
 
 
-# Хэндлер для перевода с русского
 @router.callback_query(F.data == "translate_from_russian")
 async def translate_from_russian_handler(callback: CallbackQuery):
     user_states[callback.from_user.id] = {"to_russian": False}
@@ -63,7 +60,6 @@ async def translate_from_russian_handler(callback: CallbackQuery):
 
 Поэтому теперь меня все дебилы держат за дебила. И это хорошо. 
 
-Слава Исусу Христу!
 
 Герман Стерлигов (русский крестьянин)
     '''
@@ -72,9 +68,8 @@ async def translate_from_russian_handler(callback: CallbackQuery):
     await callback.answer()
 
 
-# Хэндлер для анализа перевода
 @router.message(F.text)
-async def traslation_analysis_handler(message: Message):
+async def translation_analysis_handler(message: Message):
     user_id = message.from_user.id
     to_russian = user_states[user_id]["to_russian"]
     translate_text = message.text

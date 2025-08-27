@@ -1,22 +1,35 @@
+"""
+Module for searching info on university buildings
+Handler for each building - may not be optimal
+"""
+
 from aiogram import Router, F
 from handlers.location_handlers.location_keyboard import back_to_locations_keyboard
 from aiogram.types import CallbackQuery, FSInputFile
 from aiogram.exceptions import TelegramBadRequest
 from config.logger import logger
 from handlers.location_handlers.location_keyboard import uni_loc_keyboard
+import traceback
 
 router = Router()
 
-# Хэндлер для адресов (возможно инетграция с картами?
-@router.callback_query(F.data == "loc_uni_building")
-async def dormitory_addresses_handler(callback: CallbackQuery):
-    text = 'Выбери корпус'
-    await callback.message.delete()
-    await callback.message.answer(text,
-                                    reply_markup=uni_loc_keyboard())
-    await callback.answer()
 
-# Хэндлер для местоположения №1
+@router.callback_query(F.data == "loc_uni_building")
+async def addresses_handler(callback: CallbackQuery):
+    """
+    Provides choice of buttons for each university building
+    """
+    try:
+        text = 'Выбери корпус'
+        await callback.message.delete()
+        await callback.message.answer(text,
+                                        reply_markup=uni_loc_keyboard())
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Dormitory choice info error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Ошибка при загрузке информации про корпуса")
+
+
 @router.callback_query(F.data == "loc_1")
 async def loc_1_handler(callback: CallbackQuery):
     try:
@@ -56,7 +69,7 @@ async def loc_1_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №2
+
 @router.callback_query(F.data == "loc_2")
 async def loc_2_handler(callback: CallbackQuery):
     try:
@@ -94,7 +107,7 @@ async def loc_2_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №3
+
 @router.callback_query(F.data == "loc_3")
 async def loc_3_handler(callback: CallbackQuery):
     try:
@@ -129,7 +142,7 @@ async def loc_3_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №4
+
 @router.callback_query(F.data == "loc_4")
 async def loc_4_handler(callback: CallbackQuery):
     try:
@@ -165,7 +178,7 @@ async def loc_4_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №5
+
 @router.callback_query(F.data == "loc_5")
 async def loc_5_handler(callback: CallbackQuery):
     try:
@@ -199,7 +212,7 @@ async def loc_5_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №6
+
 @router.callback_query(F.data == "loc_6")
 async def loc_6_handler(callback: CallbackQuery):
     try:
@@ -234,7 +247,7 @@ async def loc_6_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №7
+
 @router.callback_query(F.data == "loc_7")
 async def loc_7_handler(callback: CallbackQuery):
     try:
@@ -269,7 +282,7 @@ async def loc_7_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №8
+
 @router.callback_query(F.data == "loc_8")
 async def loc_8_handler(callback: CallbackQuery):
     try:
@@ -303,7 +316,7 @@ async def loc_8_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №9
+
 @router.callback_query(F.data == "loc_9")
 async def loc_9_handler(callback: CallbackQuery):
     try:
@@ -337,7 +350,7 @@ async def loc_9_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №10
+
 @router.callback_query(F.data == "loc_10")
 async def loc_10_handler(callback: CallbackQuery):
     try:
@@ -372,7 +385,7 @@ async def loc_10_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №12
+
 @router.callback_query(F.data == "loc_12")
 async def loc_12_handler(callback: CallbackQuery):
     try:
@@ -406,7 +419,7 @@ async def loc_12_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №22
+
 @router.callback_query(F.data == "loc_22")
 async def loc_22_handler(callback: CallbackQuery):
     try:
@@ -440,7 +453,7 @@ async def loc_22_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №24
+
 @router.callback_query(F.data == "loc_24")
 async def loc_24_handler(callback: CallbackQuery):
     try:
@@ -474,7 +487,7 @@ async def loc_24_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №27
+
 @router.callback_query(F.data == "loc_27")
 async def loc_27_handler(callback: CallbackQuery):
     try:
@@ -509,7 +522,7 @@ async def loc_27_handler(callback: CallbackQuery):
     finally:
         await callback.answer()
 
-# Хэндлер для местоположения №28
+
 @router.callback_query(F.data == "loc_28")
 async def loc_28_handler(callback: CallbackQuery):
     try:
