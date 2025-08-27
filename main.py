@@ -7,6 +7,9 @@ from handlers.critical_info_handlers import critical_handler
 from handlers.location_handlers import location_handlers
 from handlers.hospital_handlers import hospital_handler
 from handlers.university_handlers import university_info_handlers
+from handlers.language_check_handlers.grammar_handlers import grammar_handlers
+from handlers.language_check_handlers.listening_handlers import listening_handlers
+from handlers.language_check_handlers.speaking_handlers import speaking_handlers
 
 
 async def main():
@@ -21,6 +24,9 @@ async def main():
     dp.include_router(hospital_handler.router)
     dp.include_router(university_info_handlers.router)
     dp.include_router(dormitory_location_handlers.router)
+    dp.include_router(grammar_handlers.router)
+    dp.include_router(listening_handlers.router)
+    dp.include_router(speaking_handlers.router)
 
     try:
         logger.info('Bot started')

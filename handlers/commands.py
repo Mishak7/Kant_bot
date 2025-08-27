@@ -8,6 +8,8 @@ from aiogram.types import CallbackQuery
 from handlers.language_check_handlers.language_check_keyboard import language_check_keyboard
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 from handlers.location_handlers.location_keyboard import choose_type_of_location, uni_loc_keyboard
+from handlers.language_check_handlers.grammar_handlers.grammar_keyboard import language_keyboard
+
 router = Router()
 
 @router.message(CommandStart())
@@ -57,9 +59,7 @@ async def emergency_info(callback: CallbackQuery):
 @router.callback_query(F.data == "language_check")
 async def language_check_info(callback: CallbackQuery):
     text = "🇷🇺 Проверка русского языка"
-    await callback.message.edit_text(text,
-                                  parse_mode="Markdown",
-                                  reply_markup=language_check_keyboard())
+    await callback.message.edit_text(text, reply_markup=language_keyboard() ,parse_mode="Markdown")
     await callback.answer()
 
 @router.callback_query(F.data == "back_to_main")
