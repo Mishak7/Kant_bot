@@ -4,6 +4,7 @@ from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from services.speaking.speaking import SpeakingAnalyzer
+from handlers.language_check_handlers.speaking_handlers.speaking_keyboard import back_to_language_keyboard
 
 
 class SpeakingStates(StatesGroup):
@@ -51,7 +52,7 @@ async def handle_voice_message(message: Message, state: FSMContext, bot: Bot):
 
     try:
         result = await analyzer.process_voice_message(file_content.read())
-        await message.answer(f"Результат анализа:\n\n{result}")
+        await message.answer(f"Результат анализа:\n\n{result}", parse_mode="Markdown", reply_markup=back_to_language_keyboard())
     except Exception as e:
         await message.answer(f"Произошла ошибка при обработке: {e}")
 
