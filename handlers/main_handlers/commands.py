@@ -20,7 +20,7 @@ import traceback
 from aiogram import Router, types, F
 from aiogram.filters import CommandStart
 from config.logger import logger
-from handlers.main_handlers.keyboard import main_roots_keyboard
+from handlers.main_handlers.keyboard import main_roots_keyboard, get_language_reply_keyboard
 from handlers.critical_info_handlers.critical_keyboard import info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
 from aiogram.types import CallbackQuery
@@ -32,6 +32,18 @@ router = Router()
 
 
 @router.message(CommandStart())
+async def choose_language(message: types.Message):
+    """Provide choice of language"""
+    try:
+        logger.info(f'User {message.from_user.id} started bot')
+        await message.answer('Привет! Выбери язык:', reply_markup=get_language_reply_keyboard())
+    except Exception as e:
+        logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
+        await message.answer("Произошла ошибка при выборе языка бота. Пожалуйста, попробуйте позже.")
+
+
+
+@router.message(CommandStart())
 async def send_welcome(message: types.Message):
     """Handle bot startup command and display main menu."""
     try:
@@ -40,6 +52,8 @@ async def send_welcome(message: types.Message):
     except Exception as e:
         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
         await message.answer("Произошла ошибка при запуске бота. Пожалуйста, попробуйте позже.")
+
+
 
 
 @router.callback_query(F.data == "info")

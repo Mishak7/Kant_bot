@@ -6,6 +6,8 @@ and navigation back button. All keyboards are built using
 aiogram's InlineKeyboardMarkup and InlineKeyboardButton.
 """
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+
 
 def main_roots_keyboard() -> InlineKeyboardMarkup:
     """Create the main menu keyboard with all available options."""
@@ -24,4 +26,24 @@ def back_to_main_keyboard() -> InlineKeyboardMarkup:
     """Create a simple back button keyboard for returning to main menu."""
     return InlineKeyboardMarkup(inline_keyboard=[
                                 [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]]
+    )
+
+def get_language_reply_keyboard():
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="English 🇺🇸"),
+                KeyboardButton(text="हिन्दी 🇮🇳")
+            ],
+            [
+                KeyboardButton(text="中文 🇨🇳"),
+                KeyboardButton(text="Español 🇪🇸")
+            ],
+            [
+                KeyboardButton(text="Français 🇫🇷"),
+                KeyboardButton(text="Русский 🇷🇺")
+            ]
+        ],
+        resize_keyboard=True,
+        input_field_placeholder="Выберите язык / Choose language"
     )

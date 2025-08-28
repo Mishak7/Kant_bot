@@ -94,6 +94,7 @@ async def dormitory_laundry_handler(callback: CallbackQuery):
     try:
         await callback.message.edit_text(
             LAUNDRY_TEXT,
+            parse_mode="Markdown",
             reply_markup=back_to_dormitory_keyboard()
         )
         await callback.answer()
