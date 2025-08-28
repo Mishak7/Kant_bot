@@ -4,6 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, InlineKeyboardMarkup, FSInputFile, Message
 from handlers.language_check_handlers.grammar_handlers.grammar_keyboard import translation_keyboard, back_to_translation
 from services.grammar.grammar import gigachat_response
+from handlers.main_handlers.languages import TEXTS
 
 router = Router()
 
@@ -14,9 +15,7 @@ class TranslationState(StatesGroup):
 
 @router.callback_query(F.data == "language_grammar")
 async def language_grammar_handler(callback: CallbackQuery):
-    text = '''
-    *Выберите вариант перевода*:
-    '''
+    text = TEXTS['ru']['handlers']['language_check_handlers']['grammar_handlers']['language_grammar_handler']
 
     await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=translation_keyboard())
     await callback.answer()
@@ -25,10 +24,7 @@ async def language_grammar_handler(callback: CallbackQuery):
 @router.callback_query(F.data == "translate_to_russian")
 async def translate_to_russian_handler(callback: CallbackQuery, state: FSMContext):
     await state.set_state(TranslationState.waiting_to_russian)
-    text = '''
-    Переведите данный текст на русский язык:
-
-    '''
+    text = TEXTS['ru']['handlers']['language_check_handlers']['grammar_handlers']['translate_to_russian_handler']
 
     await callback.message.edit_text(text, parse_mode="Markdown")
     await callback.answer()
@@ -37,10 +33,7 @@ async def translate_to_russian_handler(callback: CallbackQuery, state: FSMContex
 @router.callback_query(F.data == "translate_from_russian")
 async def translate_from_russian_handler(callback: CallbackQuery, state: FSMContext):
     await state.set_state(TranslationState.waiting_from_russian)
-    text = '''
-    Переведите данный текст с русского языка на свой:
-
-    '''
+    text = TEXTS['ru']['handlers']['language_check_handlers']['grammar_handlers']['translate_from_russian_handler']
 
     await callback.message.edit_text(text, parse_mode="Markdown")
     await callback.answer()

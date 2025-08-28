@@ -5,6 +5,7 @@ from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from services.speaking.speaking import SpeakingAnalyzer
 from handlers.language_check_handlers.speaking_handlers.speaking_keyboard import back_to_language_keyboard
+from handlers.main_handlers.languages import TEXTS
 
 
 class SpeakingStates(StatesGroup):
@@ -14,29 +15,11 @@ router = Router()
 
 @router.callback_query(F.data == 'language_speaking')
 async def speaking_send(callback: CallbackQuery, state: FSMContext):
-    topics = [
-        'Расскажите немного о своей семье.',
-        'Есть ли у вас домашнее животное?',
-        'Какие блюда вам нравятся?',
-        'Опишите свою комнату.',
-        'Какой ваш любимый вид транспорта?',
-        'Где вы любите проводить свободное время?',
-        'Как вы проводите свое воскресенье?',
-        'Ваше самое яркое воспоминание детства?',
-        'Куда вы хотели бы отправиться в путешествие?',
-        'Какие привычки помогают вам оставаться продуктивным?',
-        'Как прошёл твой вчерашний день?',
-        'Кем ты работаешь и чем занимаешься на работе?',
-        'О чём мечтает твоя семья?',
-        'Что интересного произошло с тобой на прошлой неделе?',
-        'Чем увлекается твой лучший друг?',
-        'Поделись своими впечатлениями от последнего фильма, который смотрел.',
-        'Почему ты решил учиться в Калининграде?'
-    ]
+    topics = TEXTS['ru']['handlers']['language_check_handlers']['speaking_handlers']['topics']
     chosen_topic = random.choice(topics)
 
     await state.update_data(topic=chosen_topic)
-    await callback.message.answer(f'Жду твой рассказ на тему: {chosen_topic}')
+    await callback.message.answer(f"{TEXTS['ru']['handlers']['language_check_handlers']['speaking_handlers']['speaking_send']} {chosen_topic}")
     await state.set_state(SpeakingStates.waiting_for_voice)
 
 
@@ -54,6 +37,6 @@ async def handle_voice_message(message: Message, state: FSMContext, bot: Bot):
         result = await analyzer.process_voice_message(file_content.read())
         await message.answer(f"Результат анализа:\n\n{result}", parse_mode="Markdown", reply_markup=back_to_language_keyboard())
     except Exception as e:
-        await message.answer(f"Произошла ошибка при обработке: {e}")
+        await message.answer(f"{TEXTS['ru']['errors']['audio_error']}: {e}")
 
     await state.clear()

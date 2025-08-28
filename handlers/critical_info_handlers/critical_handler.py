@@ -11,6 +11,7 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery
 from config.logger import logger
 from handlers.critical_info_handlers.critical_keyboard import back_to_critical_keyboard
+from handlers.main_handlers.languages import TEXTS
 
 router = Router()
 
@@ -19,106 +20,45 @@ router = Router()
 async def critical_police_handler(callback: CallbackQuery):
     """Provide emergency police, rescue, and medical contact numbers."""
     try:
-        text = '''
-        *Экстренные контакты*
-
-Единый номер служб экстренного реагирования (пожарной охраны, МЧС, полиции, скорой помощи, газовой службы) — *112*.
-
-Пожарные и спасатели — *01* (с городского телефона) и *101* (с мобильного)
-
-Полиция — *02* (с городского телефона) и *102* (с мобильного).
-
-Скорая помощь — *103* (с мобильного телефона) и *03* (с городского телефона).
-        '''
+        text = TEXTS['ru']['handlers']['critical_handlers']['critical_police_handler']
         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
         await callback.answer()
     except Exception as e:
         logger.error(f'Police contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer("Ошибка при загрузке контактов полиции", show_alert=True)
+        await callback.answer(TEXTS['ru']['errors']['info_error'], show_alert=True)
 
 
 @router.callback_query(F.data == "critical_hotline")
 async def critical_hotline_handler(callback: CallbackQuery):
     """Provide visa and migration support hotline information."""
     try:
-        text = '''
-        *Сектор визово-миграционной поддержки*
-
-_Телефон_:
-
-8 (4012) 595-595 (доб. 7454)— по вопросам миграционного учета и виз,
-
-8 (4012) 595-595 (доб. 7452) доб. 7452 — по вопросам визовых приглашений
-
-_Адрес_: ул. А. Невского 14, корпус №2, каб. 114
-
-_Приемные_ _часы_:
-
-пн 14.00-17.00 
-вт 10.00-13.00 
-чт 14.00-17.00 
-пт 10.00-13.00
-
-обеденный перерыв 13.00-14.00
-        '''
+        text = TEXTS['ru']['handlers']['critical_handlers']['critical_hotline_handler']
         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
         await callback.answer()
     except Exception as e:
         logger.error(f'Hotline contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer("Ошибка при загрузке контактов горячей линии", show_alert=True)
+        await callback.answer(TEXTS['ru']['errors']['info_error'], show_alert=True)
 
 
 @router.callback_query(F.data == "critical_government")
 async def critical_government_handler(callback: CallbackQuery):
     """Provide local government contact information and procedures."""
     try:
-        text = '''
-        *Электронное обращение доступно по ссылке*:
-        https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
-
-        *Личный прием граждан*
-Личный прием граждан в Комитете проводится председателем Комитета или его первым заместителем, руководителями структурных подразделений и уполномоченными на то лицами. Информация о месте приема, а также об установленных для приема днях и часах доводится до сведения граждан.
-При личном приеме гражданин предъявляет документ, удостоверяющий его личность.
-Содержание устного обращения заносится в карточку личного приема гражданина. В случае, если изложенные в устном обращении факты и обстоятельства являются очевидными и не требуют дополнительной проверки, ответ на обращение с согласия гражданина может быть дан устно в ходе личного приема, о чем делается запись в карточке личного приема гражданина. В остальных случаях дается письменный ответ по существу поставленных в обращении вопросов.
-Письменное обращение, принятое в ходе личного приема, подлежит регистрации и рассмотрению в порядке, установленном для письменных обращений.
-В случае, если в обращении содержатся вопросы, решение которых не входит в компетенцию Комитета по межнациональным отношениям и реализации миграционной политики в Санкт‑Петербурге, гражданину дается разъяснение, куда и в каком порядке ему следует обратиться.
-В ходе личного приема гражданину может быть отказано в дальнейшем рассмотрении обращения, если ему ранее был дан ответ по существу поставленных в обращении вопросов.
-
-Предварительная запись на личный прием осуществляется по телефону приемной Комитета: 576-28-08, ежедневно с 9.00 до 18.00, в пятницу до 17.00, перерыв: с 13.00 до 14.00; суббота, воскресенье – выходные.
-        '''
+        text = TEXTS['ru']['handlers']['critical_handlers']['critical_government_handler']
         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
         await callback.answer()
     except Exception as e:
         logger.error(f'Government contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer("Ошибка при загрузке контактов правительства", show_alert=True)
+        await callback.answer(TEXTS['ru']['errors']['info_error'], show_alert=True)
 
 
 @router.callback_query(F.data == "critical_consulate")
 async def critical_consulate_handler(callback: CallbackQuery):
     """Provide consulate office information and working hours."""
     try:
-        text = '''
-        *Представительство МИД России в Калининграде*
-        Адрес: 236022, Россия, г. Калининград, ул. Кирова, 17
-        Приемная: + 7 (401) 221-37-12
-        Факс: + 7 (401) 221-06-26
-        Консульский отдел: + 7 (401) 221-16-68
-        Паспортный отдел: + 7 (401) 295-82-02
-        Отдел оформления приглашений: + 7 (4012) 21-59-28
-
-
-        *Приём граждан по консульско-правовым вопросам*
-
-        Пн, Вт, Ср, Чт: с 9-00 до 17-00 
-        (перерыв с 12-00 до 14-00)
-
-        Пт: с 9-00 до 16-00 
-        (перерыв с 12-00 до 14-00)
-
-        Сб, Вс: Выходной
-        '''
+        text = TEXTS['ru']['handlers']['critical_handlers']['critical_consulate_handler']
         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
         await callback.answer()
     except Exception as e:
         logger.error(f'Consulate contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer("Ошибка при загрузке контактов консульства", show_alert=True)
+        await callback.answer(TEXTS['ru']['errors']['info_error'], show_alert=True)

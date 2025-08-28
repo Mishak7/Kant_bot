@@ -4,6 +4,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from services.grammar.grammar import gigachat_response
 from handlers.language_check_handlers.grammar_handlers.grammar_keyboard import back_to_language_keyboard
+from handlers.main_handlers.languages import TEXTS
 
 router = Router()
 
@@ -13,7 +14,7 @@ class TranslationState(StatesGroup):
 @router.callback_query(F.data == "language_audio")
 async def send_voice(callback: CallbackQuery, state: FSMContext):
     voice_file =  FSInputFile('file_name.ogg')
-    text = 'Прослушайте текст и попробуйте написать его на русском.'
+    text = TEXTS['ru']['handlers']['language_check_handlers']['listening_handlers']['send_voice']
     await callback.message.edit_text(text, parse_mode="Markdown")
     await callback.message.answer_voice(voice=voice_file)
     await state.set_state(TranslationState.waiting_for_text)
@@ -27,6 +28,6 @@ async def audio_text_analysis(message: Message, state: FSMContext):
         transcription_result = gigachat_response(transcription_text, to_russian=False, audio_file=True)
         await message.answer(transcription_result, parse_mode="Markdown", reply_markup=back_to_language_keyboard())
     except Exception as e:
-        await message.answer(f"Ошибка при обработке текста: {str(e)}")
+        await message.answer(f"{TEXTS['ru']['errors']['audio_error']}: {str(e)}")
     finally:
         await state.clear()
