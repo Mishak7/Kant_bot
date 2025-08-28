@@ -13,12 +13,13 @@ def main_roots_keyboard() -> InlineKeyboardMarkup:
     """Create the main menu keyboard with all available options."""
     return InlineKeyboardMarkup(
         inline_keyboard=[
+            [InlineKeyboardButton(text="🇷🇺 Проверка русского языка", callback_data="language_check")],
+            [InlineKeyboardButton(text="💳 СБЕР", callback_data="sber")],
             [InlineKeyboardButton(text="🎓 Информация про университет", callback_data="info")],
             [InlineKeyboardButton(text="📍 Местоположение корпуса", callback_data="location")],
             [InlineKeyboardButton(text="🏘️ Общежития", callback_data="dormitory")],
             [InlineKeyboardButton(text="🏥 Медцентр", callback_data="hospital")],
-            [InlineKeyboardButton(text="⚠️ Критические ситуации", callback_data="critical")],
-            [InlineKeyboardButton(text="🇷🇺 Проверка русского языка", callback_data="language_check")]
+            [InlineKeyboardButton(text="⚠️ Критические ситуации", callback_data="critical")]
         ]
     )
 
@@ -28,22 +29,22 @@ def back_to_main_keyboard() -> InlineKeyboardMarkup:
                                 [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]]
     )
 
-def get_language_reply_keyboard():
-    return ReplyKeyboardMarkup(
-        keyboard=[
-            [
-                KeyboardButton(text="English 🇺🇸"),
-                KeyboardButton(text="हिन्दी 🇮🇳")
-            ],
-            [
-                KeyboardButton(text="中文 🇨🇳"),
-                KeyboardButton(text="Español 🇪🇸")
-            ],
-            [
-                KeyboardButton(text="Français 🇫🇷"),
-                KeyboardButton(text="Русский 🇷🇺")
-            ]
-        ],
-        resize_keyboard=True,
-        input_field_placeholder="Выберите язык / Choose language"
-    )
+# def get_language_reply_keyboard():
+#     return ReplyKeyboardMarkup(
+#         keyboard=[
+#             [
+#                 KeyboardButton(text="English 🇺🇸"),
+#                 KeyboardButton(text="हिन्दी 🇮🇳")
+#             ],
+#             [
+#                 KeyboardButton(text="中文 🇨🇳"),
+#                 KeyboardButton(text="Español 🇪🇸")
+#             ],
+#             [
+#                 KeyboardButton(text="Français 🇫🇷"),
+#                 KeyboardButton(text="Русский 🇷🇺")
+#             ]
+#         ],
+#         resize_keyboard=True,
+#         input_field_placeholder="Выберите язык / Choose language"
+#     )

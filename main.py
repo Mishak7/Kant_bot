@@ -10,7 +10,7 @@ from handlers.university_handlers import university_info_handlers
 from handlers.language_check_handlers.grammar_handlers import grammar_handlers
 from handlers.language_check_handlers.listening_handlers import listening_handlers
 from handlers.language_check_handlers.speaking_handlers import speaking_handlers
-
+from handlers.sber_handlers import sber_handlers
 
 async def main():
     bot = Bot(token=settings.TELEGRAM_TOKEN)
@@ -26,6 +26,7 @@ async def main():
     dp.include_router(grammar_handlers.router)
     dp.include_router(listening_handlers.router)
     dp.include_router(speaking_handlers.router)
+    dp.include_router(sber_handlers.router)
 
     try:
         logger.info('Bot started')

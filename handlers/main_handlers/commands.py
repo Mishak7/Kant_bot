@@ -17,29 +17,32 @@ Sections include:
 """
 
 import traceback
+from config.logger import logger
+
 from aiogram import Router, types, F
 from aiogram.filters import CommandStart
-from config.logger import logger
-from handlers.main_handlers.keyboard import main_roots_keyboard, get_language_reply_keyboard
+from aiogram.types import CallbackQuery
+
+from handlers.main_handlers.keyboard import main_roots_keyboard #, get_language_reply_keyboard
 from handlers.critical_info_handlers.critical_keyboard import info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
-from aiogram.types import CallbackQuery
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 from handlers.location_handlers.location_keyboard import uni_loc_keyboard
 from handlers.language_check_handlers.language_check_keyboard import language_keyboard
+from handlers.sber_handlers.sber_keyboard import sber_keyboard
 
 router = Router()
 
 
-@router.message(CommandStart())
-async def choose_language(message: types.Message):
-    """Provide choice of language"""
-    try:
-        logger.info(f'User {message.from_user.id} started bot')
-        await message.answer('Привет! Выбери язык:', reply_markup=get_language_reply_keyboard())
-    except Exception as e:
-        logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
-        await message.answer("Произошла ошибка при выборе языка бота. Пожалуйста, попробуйте позже.")
+# @router.message(CommandStart())
+# async def choose_language(message: types.Message):
+#     """Provide choice of language"""
+#     try:
+#         logger.info(f'User {message.from_user.id} started bot')
+#         await message.answer('Привет! Выбери язык:', reply_markup=get_language_reply_keyboard())
+#     except Exception as e:
+#         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
+#         await message.answer("Произошла ошибка при выборе языка бота. Пожалуйста, попробуйте позже.")
 
 
 
@@ -52,7 +55,6 @@ async def send_welcome(message: types.Message):
     except Exception as e:
         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
         await message.answer("Произошла ошибка при запуске бота. Пожалуйста, попробуйте позже.")
-
 
 
 
@@ -115,6 +117,17 @@ async def language_check_info(callback: CallbackQuery):
     except Exception as e:
         logger.error(f'Language check error: {e}\n{traceback.format_exc()}')
         await callback.answer("Ошибка при загрузке инструментов проверки языка")
+
+@router.callback_query(F.data == "sber")
+async def sber_handler(callback: CallbackQuery):
+    try:
+        await callback.message.edit_text('💳 СБЕР',
+                                     parse_mode="Markdown",
+                                     reply_markup=sber_keyboard())
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'sber error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Ошибка при загрузке информации про сбербанк")
 
 
 @router.callback_query(F.data == "back_to_main")
