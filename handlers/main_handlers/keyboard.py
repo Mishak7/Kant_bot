@@ -12,13 +12,13 @@ def main_roots_keyboard() -> InlineKeyboardMarkup:
     """Create the main menu keyboard with all available options."""
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text=f"🎓 {TEXTS['ru']['keyboards']['main_keyboard']['info']}", callback_data="info")],
-            [InlineKeyboardButton(text=f"📍 {TEXTS['ru']['keyboards']['main_keyboard']['location']}", callback_data="location")],
-            [InlineKeyboardButton(text=f"🏘️ {TEXTS['ru']['keyboards']['main_keyboard']['dormitory']}", callback_data="dormitory")],
-            [InlineKeyboardButton(text=f"💳 {TEXTS['ru']['keyboards']['main_keyboard']['sber']}", callback_data="sber")],
-            [InlineKeyboardButton(text=f"🏥 {TEXTS['ru']['keyboards']['main_keyboard']['hospital']}", callback_data="hospital")],
-            [InlineKeyboardButton(text=f"⚠️ {TEXTS['ru']['keyboards']['main_keyboard']['critical']}", callback_data="critical")],
-            [InlineKeyboardButton(text=f"🇷🇺 {TEXTS['ru']['keyboards']['main_keyboard']['language_check']}", callback_data="language_check")]
+            [InlineKeyboardButton(text=f"🎓 {TEXTS['ru']['keyboards']['main_keyboard']['info']}", callback_data="info"),
+            InlineKeyboardButton(text=f"📍 {TEXTS['ru']['keyboards']['main_keyboard']['location']}", callback_data="location")],
+            [InlineKeyboardButton(text=f"🏘️ {TEXTS['ru']['keyboards']['main_keyboard']['dormitory']}", callback_data="dormitory"),
+            InlineKeyboardButton(text=f"🏥 {TEXTS['ru']['keyboards']['main_keyboard']['hospital']}", callback_data="hospital")],
+            [InlineKeyboardButton(text=f"⚠️ {TEXTS['ru']['keyboards']['main_keyboard']['critical']}", callback_data="critical"),
+            InlineKeyboardButton(text=f"🇷🇺 {TEXTS['ru']['keyboards']['main_keyboard']['language_check']}", callback_data="language_check")],
+            [InlineKeyboardButton(text=f"💳 {TEXTS['ru']['keyboards']['main_keyboard']['sber']}", callback_data="sber")]
         ]
     )
 

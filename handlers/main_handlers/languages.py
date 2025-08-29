@@ -12,13 +12,13 @@ TEXTS = {
 
         'keyboards': {
             'main_keyboard': {
-                'info': 'Информация про университет',
-                'location': 'Местоположение корпуса',
+                'info': 'Инфо',
+                'location': 'Корпуса',
                 'dormitory': 'Общежития',
                 'hospital': 'Медцентр',
                 'sber':'СБЕР',
-                'critical': 'Критические ситуации',
-                'language_check': 'Проверка русского языка',
+                'critical': 'SOS',
+                'language_check': 'Тренажер',
                 'back': 'Назад'
             },
             'critical_keyboard': {
