@@ -6,20 +6,22 @@ from aiogram.fsm.context import FSMContext
 from services.speaking.speaking import SpeakingAnalyzer
 from handlers.language_check_handlers.speaking_handlers.speaking_keyboard import back_to_language_keyboard
 from handlers.main_handlers.languages import TEXTS
+from handlers.main_handlers.commands import get_user_language
 
 
 class SpeakingStates(StatesGroup):
     waiting_for_voice = State()
 
 router = Router()
+language = get_user_language(callback.from_user.id)
 
 @router.callback_query(F.data == 'language_speaking')
 async def speaking_send(callback: CallbackQuery, state: FSMContext):
-    topics = TEXTS['ru']['handlers']['language_check_handlers']['speaking_handlers']['topics']
+    topics = TEXTS[language]['handlers']['language_check_handlers']['speaking_handlers']['topics']
     chosen_topic = random.choice(topics)
 
     await state.update_data(topic=chosen_topic)
-    await callback.message.answer(f"{TEXTS['ru']['handlers']['language_check_handlers']['speaking_handlers']['speaking_send']} {chosen_topic}")
+    await callback.message.answer(f"{TEXTS[language]['handlers']['language_check_handlers']['speaking_handlers']['speaking_send']} {chosen_topic}")
     await state.set_state(SpeakingStates.waiting_for_voice)
 
 
@@ -37,6 +39,6 @@ async def handle_voice_message(message: Message, state: FSMContext, bot: Bot):
         result = await analyzer.process_voice_message(file_content.read())
         await message.answer(f"Результат анализа:\n\n{result}", parse_mode="Markdown", reply_markup=back_to_language_keyboard())
     except Exception as e:
-        await message.answer(f"{TEXTS['ru']['errors']['audio_error']}: {e}")
+        await message.answer(f"{TEXTS[language]['errors']['audio_error']}: {e}")
 
     await state.clear()
