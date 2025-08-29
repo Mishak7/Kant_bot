@@ -57,3 +57,10 @@ def back_to_check_in_keyboard():
         [InlineKeyboardButton(text=f"◀️ {TEXTS['ru']['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_check-in")]
     ])
 
+
+def payment_keyboard():
+    """Create the keyboard to go back to the dormitory check-in menu"""
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text=f"🏦 {TEXTS['ru']['keyboards']['dormitory_keyboard']['sber_payment']}", url="http://sberbank.com/sms/shpa/?cs=1444813186989&psh=p&did=1756363598644000596")],
+        [InlineKeyboardButton(text=f"◀️ {TEXTS['ru']['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]
+    ])

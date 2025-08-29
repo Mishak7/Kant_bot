@@ -18,7 +18,8 @@ from handlers.dormitory_handlers.dormitory_keyboard import (
     dormitory_check_in_keyboard,
     back_to_dormitory_keyboard,
     dormitories_keyboard_back_to_dormitory_info,
-    back_to_check_in_keyboard
+    back_to_check_in_keyboard,
+payment_keyboard
 )
 from handlers.main_handlers.languages import TEXTS
 
@@ -47,7 +48,7 @@ async def dormitory_payment_handler(callback: CallbackQuery):
         await callback.message.edit_text(
             PAYMENT_TEXT,
             parse_mode="Markdown",
-            reply_markup=back_to_dormitory_keyboard()
+            reply_markup=payment_keyboard()
         )
         await callback.answer()
     except Exception as e:

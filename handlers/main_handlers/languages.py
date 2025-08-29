@@ -36,6 +36,7 @@ TEXTS = {
                 'laundry': 'Прачечная',
                 'no_certificate': 'Нет сертификата прививок или флюорографии',
                 'dormitory': 'Общежитие №',
+                'sber_payment': 'Оплатить в Сбере',
                 'back': 'Назад'
             },
             'language_check_keyboard': {
