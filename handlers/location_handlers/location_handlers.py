@@ -4,7 +4,7 @@ Handler for each building - may not be optimal
 """
 
 from aiogram import Router, F
-from handlers.location_handlers.location_keyboard import back_to_locations_keyboard
+from handlers.location_handlers.location_keyboard import loc_1_keyboard, loc_2_keyboard, loc_3_keyboard, loc_4_keyboard, loc_5_keyboard, loc_6_keyboard, loc_7_keyboard, loc_8_keyboard, loc_9_keyboard, loc_10_keyboard, loc_12_keyboard, loc_22_keyboard, loc_24_keyboard, loc_27_keyboard, loc_28_keyboard
 from aiogram.types import CallbackQuery, FSInputFile
 from aiogram.exceptions import TelegramBadRequest
 from config.logger import logger
@@ -42,7 +42,7 @@ async def loc_1_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_1_keyboard()
         )
         logger.info(f"Photo for location 1 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -70,7 +70,7 @@ async def loc_2_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_2_keyboard()
         )
         logger.info(f"Photo for location 2 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -98,7 +98,7 @@ async def loc_3_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_3_keyboard()
         )
         logger.info(f"Photo for location 3 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -126,7 +126,7 @@ async def loc_4_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_4_keyboard()
         )
         logger.info(f"Photo for location 4 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -154,7 +154,7 @@ async def loc_5_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_5_keyboard()
         )
         logger.info(f"Photo for location 5 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -182,7 +182,7 @@ async def loc_6_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_6_keyboard()
         )
         logger.info(f"Photo for location 6 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -209,7 +209,7 @@ async def loc_7_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_7_keyboard()
         )
         logger.info(f"Photo for location 7 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -236,7 +236,7 @@ async def loc_8_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_8_keyboard()
         )
         logger.info(f"Photo for location 8 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -263,7 +263,7 @@ async def loc_9_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_9_keyboard()
         )
         logger.info(f"Photo for location 9 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -290,7 +290,7 @@ async def loc_10_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_10_keyboard()
         )
         logger.info(f"Photo for location 10 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -317,7 +317,7 @@ async def loc_12_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_12_keyboard()
         )
         logger.info(f"Photo for location 12 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -344,7 +344,7 @@ async def loc_22_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_22_keyboard()
         )
         logger.info(f"Photo for location 22 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -371,7 +371,7 @@ async def loc_24_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_24_keyboard()
         )
         logger.info(f"Photo for location 24 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -398,7 +398,7 @@ async def loc_27_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_27_keyboard()
         )
         logger.info(f"Photo for location 27 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -425,7 +425,7 @@ async def loc_28_handler(callback: CallbackQuery):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=back_to_locations_keyboard()
+            reply_markup=loc_28_keyboard()
         )
         logger.info(f"Photo for location 28 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:

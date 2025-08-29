@@ -27,6 +27,7 @@ from aiogram.types import CallbackQuery
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 from handlers.location_handlers.location_keyboard import uni_loc_keyboard
 from handlers.language_check_handlers.language_check_keyboard import language_keyboard
+from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
 
 router = Router()
@@ -91,6 +92,16 @@ async def emergency_info(callback: CallbackQuery):
         logger.error(f'Emergency info error: {e}\n{traceback.format_exc()}')
         await callback.answer(f"{TEXTS['ru']['errors']['info_error']}")
 
+@router.callback_query(F.data == "sber")
+async def sber_info(callback: CallbackQuery):
+    """SBER"""
+    try:
+        text = f"💳 {TEXTS['ru']['keyboards']['main_keyboard']['sber']}"
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=sber_keyboard())
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'SBER info error: {e}\n{traceback.format_exc()}')
+        await callback.answer(f"{TEXTS['ru']['errors']['info_error']}")
 
 @router.callback_query(F.data == "language_check")
 async def language_check_info(callback: CallbackQuery):
