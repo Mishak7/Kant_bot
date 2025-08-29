@@ -21,9 +21,12 @@ from handlers.dormitory_handlers.dormitory_keyboard import (
     back_to_check_in_keyboard
 )
 from handlers.main_handlers.languages import TEXTS
+from handlers.main_handlers.commands import get_user_language
 
 
 router = Router()
+language = get_user_language(callback.from_user.id)
+
 
 @router.callback_query(F.data == "dormitory_check-in")
 async def dormitory_check_in_handler(callback: CallbackQuery):
@@ -37,7 +40,7 @@ async def dormitory_check_in_handler(callback: CallbackQuery):
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory check-in error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'])
+        await callback.answer(TEXTS[language]['errors']['info_error'])
 
 
 @router.callback_query(F.data == "dormitory_payment")
@@ -52,7 +55,7 @@ async def dormitory_payment_handler(callback: CallbackQuery):
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory payment error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'])
+        await callback.answer(TEXTS[language]['errors']['info_error'])
 
 
 @router.callback_query(F.data == "dormitory_address")
@@ -67,7 +70,7 @@ async def dormitory_addresses_handler(callback: CallbackQuery):
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory addresses error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'])
+        await callback.answer(TEXTS[language]['errors']['info_error'])
 
 
 @router.callback_query(F.data == "dormitory_rules")
@@ -86,7 +89,7 @@ async def dormitory_rules_handler(callback: CallbackQuery):
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory rules error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'])
+        await callback.answer(TEXTS[language]['errors']['info_error'])
 
 
 @router.callback_query(F.data == "dormitory_laundry")
@@ -101,7 +104,7 @@ async def dormitory_laundry_handler(callback: CallbackQuery):
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory laundry error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'])
+        await callback.answer(TEXTS[language]['errors']['info_error'])
 
 
 @router.callback_query(F.data == "no_certificate")
@@ -117,15 +120,15 @@ async def dormitory_no_certificate_handler(callback: CallbackQuery):
         await callback.answer()
     except Exception as e:
         logger.error(f'No certificate error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'])
+        await callback.answer(TEXTS[language]['errors']['info_error'])
 
 
-DORMITORY_TEXT = TEXTS['ru']['handlers']['dormitory_handlers']['dormitory_text']
+DORMITORY_TEXT = TEXTS[language]['handlers']['dormitory_handlers']['dormitory_text']
 
-PAYMENT_TEXT = TEXTS['ru']['handlers']['dormitory_handlers']['payment_text']
+PAYMENT_TEXT = TEXTS[language]['handlers']['dormitory_handlers']['payment_text']
 
-RULES_TEXT = TEXTS['ru']['handlers']['dormitory_handlers']['rules_text']
+RULES_TEXT = TEXTS[language]['handlers']['dormitory_handlers']['rules_text']
 
-LAUNDRY_TEXT = TEXTS['ru']['handlers']['dormitory_handlers']['laundry_text']
+LAUNDRY_TEXT = TEXTS[language]['handlers']['dormitory_handlers']['laundry_text']
 
-NO_CERIFICATION_TEXT = TEXTS['ru']['handlers']['dormitory_handlers']['no_certificate_text']
+NO_CERIFICATION_TEXT = TEXTS[language]['handlers']['dormitory_handlers']['no_certificate_text']
