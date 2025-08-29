@@ -33,16 +33,16 @@ def back_to_dormitory_keyboard():
 def dormitories_keyboard_back_to_dormitory_info() -> InlineKeyboardMarkup:
     """Create the keyboard to choose between the dormitory buildings"""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}1", callback_data="dormitory_1")],
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}2", callback_data="dormitory_2")],
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}3", callback_data="dormitory_3")],
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}4", callback_data="dormitory_4")],
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}5", callback_data="dormitory_5")],
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}6", callback_data="dormitory_6")],
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}7", callback_data="dormitory_7")],
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}8", callback_data="dormitory_8")],
-        [InlineKeyboardButton(text=f"{TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory']}9-13", callback_data="dormitory_9")],
-        [InlineKeyboardButton(text=f"◀️ {TEXTS['ru']['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]
+        [InlineKeyboardButton(text=f"🪖 {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_1']} №1",callback_data="dormitory_1"),
+        InlineKeyboardButton(text=f"📝 {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_2']} №2", callback_data="dormitory_2")],
+        [InlineKeyboardButton(text=f"🛡️ {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_3']} №3", callback_data="dormitory_3"),
+        InlineKeyboardButton(text=f"🗡 {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_4']} №4", callback_data="dormitory_4")],
+        [InlineKeyboardButton(text=f"🎻 {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_5']} №5", callback_data="dormitory_5"),
+        InlineKeyboardButton(text=f"🌊 {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_6']} №6", callback_data="dormitory_6")],
+        [InlineKeyboardButton(text=f"🌲 {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_7']} №7", callback_data="dormitory_7"),
+        InlineKeyboardButton(text=f"🎄 {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_8']} №8", callback_data="dormitory_8")],
+        [InlineKeyboardButton(text=f"🎉  {TEXTS['ru']['keyboards']['dormitory_keyboard']['dormitory_9']} №9-13", callback_data="dormitory_9"),
+        InlineKeyboardButton(text=f"◀️ {TEXTS['ru']['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]
     ])
 
 def back_to_addresses_keyboard():
