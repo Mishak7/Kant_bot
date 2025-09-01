@@ -18,7 +18,8 @@ from handlers.dormitory_handlers.dormitory_keyboard import (
     dormitory_check_in_keyboard,
     back_to_dormitory_keyboard,
     dormitories_keyboard_back_to_dormitory_info,
-    back_to_check_in_keyboard
+    back_to_check_in_keyboard,
+    payment_keyboard
 )
 from handlers.main_handlers.languages import TEXTS
 from handlers.main_handlers.commands import get_user_language
@@ -50,13 +51,21 @@ async def dormitory_payment_handler(callback: CallbackQuery):
         await callback.message.edit_text(
             PAYMENT_TEXT,
             parse_mode="Markdown",
-            reply_markup=back_to_dormitory_keyboard()
+            reply_markup=payment_keyboard()
         )
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory payment error: {e}\n{traceback.format_exc()}')
         await callback.answer(TEXTS[language]['errors']['info_error'])
 
+@router.callback_query(F.data == "sber_payment")
+async def sber_payment_handler(callback: CallbackQuery):
+    """Handle case when student doesn't have required certificate."""
+    try:
+        pass
+    except Exception as e:
+        logger.error(f'No certificate error: {e}\n{traceback.format_exc()}')
+        await callback.answer(TEXTS[language]['errors']['info_error'])
 
 @router.callback_query(F.data == "dormitory_address")
 async def dormitory_addresses_handler(callback: CallbackQuery):
