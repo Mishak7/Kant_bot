@@ -38,22 +38,25 @@ TEXTS = {
                 'critical': 'SOS',
                 'language_check': 'Тренажер',
                 'back': 'Назад'
-    },
-    'critical_keyboard': {
-        'police': 'Полиция',
-        'hotline': 'Горячая линия ФМС',
-        'government': 'Местные органы власти',
-        'consulate': 'Консульство',
-        'back': 'Назад'
-    },
-    'dormitory_keyboard': {
-        'check-in': 'Заселение',
-        'payment': 'Оплата',
-        'address': 'Адреса общежитий',
-        'rules': 'Правила проживания',
-        'laundry': 'Прачечная',
-        'no_certificate': 'Нет сертификата прививок или флюорографии',
-        'dormitory_1': 'Соммера',
+            },
+            'critical_keyboard': {
+                'police': 'Полиция',
+                'hotline': 'Горячая линия ФМС',
+                'government': 'Местные органы власти',
+                'consulate': 'Консульство',
+                'back': 'Назад'
+            },
+            'dormitory_keyboard': {
+                'check-in': 'Заселение в общежитие',
+                'payment': 'Оплата',
+                'address': 'Адреса общежитий',
+                'rules': 'Правила проживания',
+                'laundry': 'Прачечная',
+                'no_certificate': 'Нет сертификата прививок или флюорографии',
+                'back': 'Назад'
+            },
+            'dormitory_location_keyboard': {
+                'dormitory_1': 'Соммера',
                 'dormitory_2': 'Чернышевского',
                 'dormitory_3': 'А. Невского',
                 'dormitory_4': 'А. Невского',
@@ -62,6 +65,8 @@ TEXTS = {
                 'dormitory_7': 'Еловая',
                 'dormitory_8': 'Еловая',
                 'dormitory_9': 'Юбилейная',
+            },
+            'payment_keyboard': {
                 'sber_payment': 'Оплатить в Сбере',
         'back': 'Назад',
         'more': 'Подробнее'
@@ -568,88 +573,95 @@ Where shall we start? 👇 Choose a menu item!""",
         'gigachat_error': 'Error initializing GigaChat:',
     },
 
-    'keyboards': {
-        'main_keyboard': {
-            'info': 'University Information',
-            'location': 'Building location',
-            'dormitory': 'Dormitories',
-            'hospital': 'Medical Center',
-            'critical': 'Critical situations',
-            'language_check': 'Russian language check',
-            'sber':'SBER',
-            'back': 'Back'
-        },
-        'critical_keyboard': {
-            'police': 'Police',
-            'hotline': 'FMS hotline',
-            'government': 'Local authorities',
-            'consulate': 'Consulate',
-            'back': 'Back'
-        },
-        'dormitory_keyboard': {
-            'check-in': 'Dormitory check-in',
-            'payment': 'Payment',
-            'address': 'Dormitory addresses',
-            'rules': 'Dormitory rules',
-            'laundry': 'Laundry',
-            'no_certificate': 'No vaccination certificate or fluorography',
-            'dormitory_1': 'Sommer',
-            'dormitory_2': 'Chernyshevsky',
-            'dormitory_3': 'Nevsky',
-            'dormitory_4': 'Nevsky',
-            'dormitory_5': 'Tchaikovsky',
-            'dormitory_6': 'Azovskaya',
-            'dormitory_7': 'Yelovaya',
-            'dormitory_8': 'Yelovaya',
-            'dormitory_9': 'Yubileynaya',
-            'sber_payment': 'Pay in SBER',
-            'more': 'More',
-            'back': 'Back'
-        },
-        'language_check_keyboard': {
-            'grammar_keyboard': {
-                'to_russian': 'Translate into Russian',
-                'from_russian': 'Translate from Russian',
+        'keyboards': {
+            'main_keyboard': {
+                'info': 'Information',
+                'location': 'Buildings',
+                'dormitory': 'Dormitories',
+                'hospital': 'Medical Center',
+                'critical': 'SOS',
+                'language_check': 'Trainer',
+                'sber':'SBER',
                 'back': 'Back'
             },
-            'speaking_keyboard': {
+            'critical_keyboard': {
+                'police': 'Police',
+                'hotline': 'FMS hotline',
+                'government': 'Local authorities',
+                'consulate': 'Consulate',
+                'back': 'Back'
+            },
+            'dormitory_keyboard': {
+                'check-in': 'Dormitory check-in',
+                'payment': 'Payment',
+                'address': 'Dormitory addresses',
+                'rules': 'Dormitory rules',
+                'laundry': 'Laundry',
+                'no_certificate': 'No vaccination certificate or fluorography',
+                'dormitory_1': 'Sommera',
+                'dormitory_2': 'Chernyshevskogo',
+                'dormitory_3': 'A. Nevskogo',
+                'dormitory_4': 'A. Nevskogo',
+                'dormitory_5': 'Tchaikovskogo',
+                'dormitory_6': 'Azovskaya',
+                'dormitory_7': 'Yelovaya',
+                'dormitory_8': 'Yelovaya',
+                'dormitory_9': 'Yubileynaya',
+                'sber_payment': 'Pay at Sber',
                 'back': 'Back'
             },
             'language_check_keyboard': {
-                'audio': 'Listening',
-                'grammar': 'Grammar',
-                'speaking': 'Speaking',
+                'grammar_keyboard': {
+                    'to_russian': 'Translate into Russian',
+                    'from_russian': 'Translate from Russian',
+                    'back': 'Back'
+                },
+                'speaking_keyboard': {
+                    'back': 'Back'
+                },
+                'language_check_keyboard': {
+                    'audio': 'Listening',
+                    'grammar': 'Grammar',
+                    'speaking': 'Speaking',
+                    'back': 'Back'
+                }
+            },
+            'location_keyboard': {
+                'loc_1': '🏛️ Admin building',
+                'loc_2': '🧮 Physics and Mathematics',
+                'loc_3': '🧬 Live systems',
+                'loc_4': '🏫 IGN',
+                'loc_5': '👨‍🏫 Education',
+                'loc_6': '🛌 Puck',
+                'loc_7': '⚖️ Juridical',
+                'loc_8': '📚 Medlibrary',
+                'loc_9': '🏐 FOC',
+                'loc_10': '👩‍🏫 Candle',
+                'loc_12': '🩺 Medical Institute',
+                'loc_22': '🏊‍♂️ Swimming Pool',
+                'loc_24': '🎓 College',
+                'loc_27': '⚙️ ITI',
+                'loc_28': '💸 Economics',
+                'back': 'Back'
+            },
+            'university_info_keyboard': {
+                'schedule': 'Schedule',
+                'scholarship': 'Scholarship',
+                'office_contacts': 'Educational Office contacts',
+                'visa_canter': 'Visa and Migration Center',
+                'back': 'Back'
+            },
+            'language_selection_keyboard': {
+                'back': 'Back'
+            },
+            'sber_keyboard': {
+                'educational_loan': 'Educational loan',
+                'sber_card': 'Scholarship card',
+                'useful_links': 'Useful links',
+                'details': 'Details',
                 'back': 'Back'
             }
         },
-        'location_keyboard': {
-            'loc_1': 'Administrative building',
-            'loc': 'Building',
-            'loc_2': 'Building №2, Institute of Physics, Mathematics and IT',
-            'loc_4': 'Building №4 ("The building with the clock")',
-            'loc_6': 'Building №6 ("Puck")',
-            'loc_9': 'Building №9 («FOС»)',
-            'loc_10': 'Building №10 ("Candle")',
-            'back': 'Back'
-        },
-        'university_info_keyboard': {
-            'schedule': 'Schedule',
-            'scholarship': 'Scholarship',
-            'office_contacts': 'Educational Office contacts',
-            'visa_canter': 'Visa and Migration Center',
-            'back': 'Back'
-        },
-        'language_selection_keyboard': {
-            'back': 'Back'
-        },
-        'sber_keyboard': {
-            'educational_loan': 'Educational loan',
-            'sber_card': 'Scholarship card',
-            'useful_links': 'Useful links',
-            'details': 'Details',
-            'back': 'Back'
-        }
-    },
 
     'handlers': {
         'critical_handlers': {
@@ -1143,7 +1155,2354 @@ Click the *button below* for details:
 
 Click the *button below* for details:
 """
+            }
+        }
+    },
+
+    'fr': {
+        'greetings': 'Bonjour ! En quoi puis-je vous aider?',
+        'errors': {
+            'start_error': 'Une erreur est survenue lors du lancement du bot. Veuillez réessayer plus tard.',
+            'info_error': 'Erreur lors du chargement des informations',
+            'back_error': 'Erreur lors du retour au menu principal',
+            'audio_error': 'Erreur lors du traitement',
+            'photo_error': 'Une erreur est survenue lors du chargement de la photo.',
+            'gigachat_error': 'Erreur d\'initialisation de GigaChat :',
+        },
+
+        'keyboards': {
+            'main_keyboard': {
+                'info': 'Information',
+                'location': 'Bâtiments',
+                'dormitory': 'Résidences universitaires',
+                'hospital': 'Centre médical',
+                'critical': 'SOS',
+                'language_check': 'Coach',
+                'back': 'Retour'
+            },
+            'critical_keyboard': {
+                'police': 'Police',
+                'hotline': 'Ligne directe de la FMS (USCIS)',
+                'government': 'Autorités locales',
+                'consulate': 'Consulat',
+                'back': 'Retour'
+            },
+            'dormitory_keyboard': {
+                'check-in': 'Installation dans le dortoir',
+                'payment': 'Paiement',
+                'address': 'Adresses des résidences estudiantines',
+                'rules': 'Règles de vie',
+                'laundry': 'Buanderie',
+                'no_certificate': 'Pas de certificat de vaccination ou de radiographie des poumons.',
+                'dormitory_1': 'Sommera',
+                'dormitory_2': 'Tchernychevskogo',
+                'dormitory_3': 'A. Nevskogo',
+                'dormitory_4': 'A. Nevskogo',
+                'dormitory_5': 'Tchaïkovskogo',
+                'dormitory_6': 'Azovskaya',
+                'dormitory_7': 'Yelovaya',
+                'dormitory_8': 'Yelovaya',
+                'dormitory_9': 'Yubileynaya',
+                'sber_payment': 'Payer dans Sber',
+                'back': 'Retour'
+            },
+            'language_check_keyboard': {
+                'grammar_keyboard': {
+                    'to_russian': 'Traduire en russe',
+                    'from_russian': 'Traduire du russe',
+                    'back': 'Retour'
+                },
+                'speaking_keyboard': {
+                    'back': 'Retour'
+                },
+                'language_check_keyboard': {
+                    'audio': 'Écoute',
+                    'grammar': 'Grammaire',
+                    'speaking': 'Parler',
+                    'back': 'Retour'
+                }
+            },
+            'location_keyboard': {
+                'loc_1': '🏛️ Administration',
+                'loc_2': '🧮 Physique-Mathématiques',
+                'loc_3': '🧬 Systèmes vivants',
+                'loc_4': '🏫 IGN',
+                'loc_5': '👨‍🏫 Éducation',
+                'loc_6': '🛌 Disque',
+                'loc_7': '⚖️ Juridique',
+                'loc_8': '📚 Bibliothèque médicale',
+                'loc_9': '🏐 FOC',
+                'loc_10': '👩‍🏫 Bougie',
+                'loc_12': '🩺 Institut médical',
+                'loc_22': '🏊‍♂️ Piscine',
+                'loc_24': '🎓 Collège',
+                'loc_27': '⚙️ ITI',
+                'loc_28': '💸 Économie',
+                'back': 'Retour'
+            },
+            'university_info_keyboard': {
+                'schedule': 'Horaires',
+                'scholarship': 'Bourses',
+                'office_contacts': 'Contacts du bureau académique',
+                'visa_canter': 'Centre de visa et de migration',
+                'back': 'Retour'
+            },
+            'language_selection_keyboard': {
+                'back': 'Retour'
+            },
+            'sber_keyboard': {
+                'educational_loan': 'Crédit éducatif',
+                'sber_card': 'Carte pour la bourse',
+                'useful_links': 'Liens utiles',
+                'details': 'Plus de détails',
+                'back': 'Retour'
+            }
+        },
+
+        'handlers': {
+            'critical_handlers': {
+                'critical_police_handler': '''
+*Contacts d'urgence*
+
+Le numéro unique des services d'urgence (pompiers, ministère des Situations d'urgence, police, ambulance, service de gaz) — *112*.
+
+Pompiers et sauveteurs — *01* (depuis un téléphone fixe) et *101* (depuis un téléphone mobile).
+
+Police — *02* (depuis un téléphone fixe) et *102* (depuis un téléphone mobile).
+
+Ambulance — *103* (depuis un téléphone mobile) et *03* (depuis un téléphone fixe).
+                                                    ''',
+
+                'critical_hotline_handler': '''
+*Secteur de soutien aux visas et à la migration*
+
+_Téléphone_ :8 (4012) 595-595 (poste 7454) — pour des questions de comptabilité migratoire et de visas,
+8 (4012) 595-595 (poste 7452) — pour des questions d'invitations de visa
+
+_Adresse_ : 14 rue A. Nevski, bâtiment n°2, bureau 114
+
+_Horaires d'ouverture_ :
+
+lun: 14:00-17:00
+mar: 10:00-13:00
+jeu: 14:00-17:00
+ven: 10:00-13:00
+
+pause déjeuner 13:00-14:00
+                                                    ''',
+
+                'critical_government_handler': '''
+*La demande électronique est disponible au lien*:
+https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+
+*Réception des citoyens en personne*
+La réception des citoyens au Comité est effectuée par le président du Comité ou son premier adjoint, les responsables des départements et les personnes autorisées à cet effet. 
+L'information concernant le lieu de la réception, ainsi que les jours et heures fixés pour la réception, est portée à la connaissance des citoyens.
+Lors de la réception en personne, le citoyen présente un document prouvant son identité.Le contenu de la demande orale est consigné dans une fiche de réception personnelle du citoyen. 
+Dans le cas où les faits et circonstances exposés dans la demande orale sont évidents et ne nécessitent pas de vérification supplémentaire, la réponse à la demande, 
+avec l'accord du citoyen, peut être donnée oralement lors de la réception, et cela est noté dans la fiche de réception personnelle du citoyen. 
+Dans les autres cas, une réponse écrite est fournie sur le fond des questions posées dans la demande. Une demande écrite, reçue lors d'une audience personnelle, 
+doit être enregistrée et examinée conformément à la procédure établie pour les demandes écrites. 
+Si la demande contient des questions dont la résolution ne relève pas de la compétence du Comité des relations interethniques et de la mise en œuvre de la politique migratoire à Saint-Pétersbourg, 
+le citoyen reçoit des explications sur où et selon quelle procédure il doit s'adresser. Lors de l'audience personnelle, il peut être refusé au citoyen une nouvelle considération de sa demande, 
+s'il a déjà reçu une réponse sur le fond des questions soulevées dans sa demande. 
+
+L'enregistrement préalable pour une audience personnelle se fait par téléphone au secrétariat du Comité : 576-28-08, 
+tous les jours de 9h00 à 18h00, le vendredi jusqu'à 17h00, pause : de 13h00 à 14h00 ; le samedi et le dimanche – week-end.
+                                                    ''',
+
+                'critical_consulate_handler': '''
+*Représentation du ministère des Affaires étrangères de la Russie à Kaliningrad* 
+
+Adresse: 236022, Russie, ville de Kaliningrad, rue Kirov, 17 
+Réception: +7 (401) 221-37-12 
+Fax : +7 (401) 221-06-26 
+Département consulaire: +7 (401) 221-16-68 
+Département des passeports: +7 (401) 295-82-02 
+Département de délivrance des invitations: +7 (4012) 21-59-28 
+
+*Accueil du public pour les questions consulaires et juridiques* 
+
+Lun, Mar, Mer, Jeu : de 9:00 à 17:00 (pauses de 12:00 à 14:00) 
+Ven : de 9:00 à 16:00 (pauses de 12:00 à 14:00) 
+Sam, Dim : Fermé
+                                            ''',
+            },
+
+            'dormitory_handlers': {
+                'dormitory_text': """
+Tu peux en savoir plus sur l'emménagement ici (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
+
+*Comment faire une demande de place dans un dortoir?*
+
+1. Après votre admission à un programme éducatif, vous devez soumettre une demande de place sur le site à l'adresse https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key=
+
+_Nous attirons votre attention sur le fait que le nombre de places dans le dortoir est limité._
+
+2. Si vous avez reçu un avis par e-mail indiquant que le dortoir est approuvé, cela signifie que votre demande a été acceptée et que vous participez maintenant au concours. 
+Vous pouvez suivre le statut de votre demande dans le groupe du Complexe de dortoirs étudiants: [groupe KSO] https://vk.com/kso_bfu
+
+3. Lorsque vous voyez votre nom dans le classement, cela signifie que vous pouvez obtenir les 2 autorisations nécessaires pour l'emménagement. 
+Nous vous en parlerons plus en détail par la suite.
+
+4. Avec les autorisations obtenues, allez signer le contrat au KSO (rue Nevskiy, 14/1, bureau 101).
+
+5. Après avoir signé le contrat et payé le loyer, rendez-vous auprès de la responsable du dortoir indiqué pour l'emménagement et l'instruction.
+
+À l'arrivée, il est nécessaire de signer le contrat de location d'un logement dans la résidence étudiante au Centre de soutien socio-économique aux étudiants, 
+de recevoir une orientation et de payer le loyer de la résidence pour le premier semestre. 
+
+_Il est impératif d'apporter son passeport._
+
+*Heures d'accueil du Centre de soutien socio-économique aux étudiants :* 
+
+- Lundi : De 10:00 à 17:00 
+- Mardi : De 10:00 à 17:00 
+- Jeudi : De 10:00 à 17:00 
+- Vendredi : De 10:00 à 16:45 
+Pause déjeuner de 13:00 à 14:00 
+
+*Adresse : rue A. Nevski, 14, bâtiment 10, 1er étage, bureau 14.* 
+
+*Certificat médical* 
+
+Pour résider dans le dortoir, il est nécessaire de fournir au concierge du dortoir un certificat attestant de l'examen médical. 
+Pour obtenir ce certificat, vous devez vous rendre au bureau 2 du Centre clinique et diagnostique de l'Université fédérale de l'Oural (KDC/КДЦ). 
+
+*Apportez avec vous :* 
+- Passeport
+- Certificat de vaccination (document indiquant tous les vaccins que vous avez reçus au cours de votre vie, en particulier il doit contenir des attestations de vaccination contre la rougeole, la diphtérie, le tétanos et l'hépatite B) 
+- Radiographie pulmonaire datant de moins d'un an 
+- 2 résultats négatifs de tests PCR pour COVID-19 / autorisation de participation aux cours. 
+
+_Les documents doivent être en russe ou avoir une traduction certifiée en russe._ 
+
+*Adresse* KDC BFU im. I. Kanta: (https://goo.gl/maps/bwq24xTh5P1EctiU8) 
+
+_Si à l'heure de ton emménagement tu n'as pas ces certificats, il est nécessaire de les obtenir à tes frais dans n'importe quelle clinique._
+                                            """,
+
+                'payment_text': """
+Il existe deux façons de payer le logement étudiant.
+
+1. En personne. 
+
+Au bureau n° 222 du bâtiment administratif, 2ème étage. Vous y recevrez un reçu pour le paiement à la caisse au même étage. 
+Vous pouvez payer à la caisse en espèces en roubles ou par carte bancaire.
+
+2. À distance sur le site.
+
+Les étudiants de première année paient la totalité du premier semestre lors de l'emménagement. Ensuite, le semestre d'automne est payé avant le 15 septembre, 
+et le semestre de printemps avant le 15 février.                                            
+""",
+
+                'rules_text': """
+- Garde la chambre et la cuisine propres par toi-même.
+- Il est interdit d'avoir des animaux domestiques.
+- Respecte les voisins : fais silence de 23h00 à 08h00, sois poli et attentif.
+- Avant 22h00, tu peux inviter des amis, mais les visites nocturnes sont exclues.
+- Fumer et consommer de l'alcool sur le territoire de l'université est formellement interdit.
+- Étudie attentivement la sécurité, renseigne-toi sur l'emplacement des sorties de secours les plus proches.
+- En cas de panne d'équipement, informe immédiatement le surveillant.
+- Contacte l'administration de la résidence pour toutes questions concernant le logement.
+- Ne fais pas de déménagement dans une autre chambre sans l'approbation du Centre de soutien social aux étudiants.
+
+_Toutes les résidences ne sont pas équipées de vaisselle, mais des draps propres sont fournis chaque semaine._
+
+*Conseil* : fais connaissance avec le surveillant dès ton arrivée — c'est ton principal aide pour les questions de la vie quotidienne.
+""",
+
+                'laundry_text': """
+Les laveries se trouvent dans le bâtiment de chaque résidence. Le responsable ou le gardien vous indiquera où se trouve la pièce avec les machines à laver et à quel moment vous pouvez prendre la clé.
+
+Vous devez apporter votre propre lessive. La laverie est équipée de plusieurs machines à laver, dans lesquelles vous pouvez laver en même temps si vous avez beaucoup de linge. 
+Il est obligatoire de laver les sous-vêtements dans des sacs spéciaux. Il est interdit de laver des chaussures, car cela peut endommager les machines à laver. Avant d'utiliser la machine, 
+familiarisez-vous attentivement avec le mode d'emploi dans la pièce. Vous pouvez sécher votre linge après le lavage dans une pièce spéciale, qui est équipée de sèche-linges.
+
+*Souvenez-vous* que d'autres étudiants dans la résidence souhaitent également laver leurs vêtements, alors veuillez retourner la clé au gardien ou au responsable immédiatement après le lavage, exactement à l'heure à laquelle vous avez promis de la rendre.                                            
+""",
+
+                'no_certificate_text': """
+S'IL N'Y A PAS DE CERTIFICAT DE VACCINATION OU DE RADIOGRAPHIE
+
+1. *Si vous n'avez pas de radiographie récente*
+
+Vous pouvez en faire une à plusieurs endroits, par exemple: 
+
+- Au KDC de l'Université fédérale de l'Oural pour 320 roubles avec la carte d'étudiant (elle doit être en possession). Emplacement du KDC : [https://goo.gl/maps/P4djCkwJ3ZQHThgGA]
+- chez Medexpert (rue Kosmicheskaya ou avenue de Moscou), jusqu'à 17h00, pour 450 roubles sans photo. Emplacement : [https://goo.gl/maps/rRiC1Nh35BNPw2w3A]
+- Novomed (Gagarin 2B) jusqu'à 17h00, 350 roubles. Emplacement : [https://goo.gl/maps/kgEkj4yLnWBNbFUm6]
+
+2. *Si vous n'avez pas de certificats de vaccination*
+
+Adressez-vous à n'importe quelle agence de Medexpert. Vous devez y faire un test sanguin appelé "Niveau d'immunité contre la rougeole et la diphtérie". Le test peut être effectué tous les jours, du lundi au vendredi de 7h30 à 19h, le week-end de 7h30 à 17h.
+
+Le test doit être effectué à jeun.
+
+Le résultat est délivré dans un délai de 4 jours ouvrables (le résultat peut être obtenu dans le cabinet personnel).
+                                                """,
+            },
+
+            'dormitory_location_handlers': 'Résidence universitaire №',
+
+            'hospital_handlers': {
+                'hospital_text': '''
+*Clinique universitaire de l'Université d'État de Kaliningrad, nommée d'après I. Kant*
+
+*Adresse*: 236041, Russie, Kaliningrad, rue du 9 avril, 60
+*Contacts*: +7 (4012) 31-33-39 kdc@kantiana.ru
+
+*Assurance maladie*: 
+https://kantiana.ru/international/inostrannomu-studentu/oms/
+
+*Instruction pour l'affiliation à la polyclinique*: 
+https://kantiana.ru/students/polyclinic/
+
+*Clinique sur la carte*: 
+https://2gis.ru/kaliningrad/search/236041%2C%20Russie%2C%20Kaliningrad%2C%20rue%209%20avril%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07                                            '''
+            },
+
+            'language_chack_handlers': {
+                'grammar_handlers': {
+                    'language_grammar_handler': '''
+                                            *Choisissez l'option de traduction*:
+                                            ''',
+                    'translate_to_russian_handler': '''
+                                            Traduisez ce texte en russe:
+                                            ''',
+                    'translate_from_russian_handler': '''
+                                            Traduisez ce texte de la langue russe vers la vôtre:
+                                            ''',
+                },
+
+                'listening_handlers': {
+                    'send_voice': 'Écoutez le texte et essayez de l\'écrire en russe.',
+                },
+
+                'speaking_handlers': {
+                    'topics': [
+                        'Parlez-moi un peu de votre famille.',
+                        'Avez-vous un animal de compagnie ?',
+                        'Quels plats aimez-vous ?',
+                        'Décrivez votre chambre.',
+                        'Quel est votre moyen de transport préféré ?',
+                        'Où aimez-vous passer votre temps libre ?',
+                        'Comment passez-vous votre dimanche ?',
+                        'Quel est votre souvenir d\'enfance le plus marquant ?',
+                        'Où aimeriez-vous partir en voyage ?',
+                        'Quelles habitudes vous aident à rester productif ?',
+                        'Comment s\'est passé votre journée d\'hier ?',
+                        'Quel est votre emploi et que faites-vous au travail ?',
+                        'De quoi rêve votre famille ?',
+                        'Quoi d\'intéressant vous est arrivé la semaine dernière ?',
+                        'Quels sont les loisirs de votre meilleur ami ?',
+                        'Partagez vos impressions du dernier film que vous avez regardé.',
+                        'Pourquoi avez-vous décidé d\'étudier à Kaliningrad ?'
+                    ],
+                    'speaking_send': 'J\'attends ton récit sur le thème :',
+                    'handle_voice_message': 'Résultat de l\'analyse :',
+                }
+            },
+
+            'location_handlers': {
+                'addresses_handler': 'Choisissez le boîtier',
+                'loc_1_handler': """
+*Bâtiment administratif, rue A. Nevski, 14*
+
+Ici se trouvent :
+· Département de la gestion des documents (cab. 115)
+· Service de comptabilité (cab. 212)
+· Archives (cab. 221)
+· Groupe des calculs des revenus et de la comptabilité fiscale (cab. 222)
+· Caisse (deuxième étage)
+· Salle Aquarium
+· Salle Maximum
+· Cafétéria (premier étage)
+
+*Emplacement :* https://goo.gl/maps/zRT7KcqxLXtAVaUE7
+                                            """,
+
+                'loc_2_handler': """
+*Bâtiment n°2, Institut de physique, de mathématiques et de technologies de l'information (« Fizmat »), rue A. Nevski, 14*
+
+Ici se trouvent :
+· Le bureau des relations avec les étudiants étrangers (cab. 119)
+· Le secteur de l'assistance à la visa et à la migration (cab. 114)
+· Le bureau des admissions (cab. 116 et 117)
+· La bibliothèque, salle 202 (« Salle de lecture »)
+· Le service de maintenance de l'infrastructure IT (cab. 121)
+
+*Localisation* : https://goo.gl/maps/6yt18jT8DoS5KgQv5
+                                            """,
+
+                'loc_3_handler': """
+*Bâtiment n°3, rue Universitaire, 2*
+
+Ici se trouvent :
+· Institut des systèmes vivants
+· Bibliothèque universitaire principale : abonnement scientifique (cab. 126), salle de lecture (cab. 115)
+
+*Localisation* : https://goo.gl/maps/y2XnUi5vj5MxbRPeA
+                                            """,
+
+                'loc_4_handler': """
+*Bâtiment n°4, rue Tchernychevski, 56 («Bâtiment avec l'horloge»)*
+
+Ici se trouvent :
+· Institut des sciences humaines
+· Centre de la langue russe (cab. 01)
+· Musée de l'enfance soviétique
+
+*Localisation*: https://goo.gl/maps/EBrY5H86euoPi6Sn9
+                                            """,
+
+                'loc_5_handler': """
+*Bâtiment n°5, rue Tchernychevski, 56a*
+
+Ici se trouve :
+· Institut de formation
+
+*Localisation* : https://goo.gl/maps/xgHnL2PJ7ASXTFGG6
+                                            """,
+
+                'loc_6_handler': """
+*Bâtiment n°6, rue A. Nevski, 14b («Shaïba»)*
+
+Ici se trouvent :
+· Complexe de résidences étudiantes (cab. 101)
+· Gestion des activités parascolaires
+
+*Localisation* : https://maps.app.goo.gl/pKu1EREgTPvJ6VGN7
+                                            """,
+
+                'loc_7_handler': """
+*Bâtiment n° 7, rue Frunze, 6* 
+
+Ici se trouvent :  
+· Studio télévisé éducatif  
+· Institut de droit  
+
+*Localisation* : https://goo.gl/maps/39LxmNSyZdSjnme16
+                                            """,
+
+                'loc_8_handler': """
+*Bâtiment n°8, rue 9 Avril, 5*
+
+Ici se trouve :
+· Bibliothèque médicale
+
+*Localisation* : https://goo.gl/maps/Tja71g7t1QPRqtbt7
+                                            """,
+
+                'loc_9_handler': """
+*Bâtiment n°9, rue A. Nevsky, 14 («FOC»)*
+
+Ici se trouve :
+· Complexe sportif et de bien-être
+
+*Location* : https://g.page/kantiana-sport?share
+                                            """,
+
+                'loc_10_handler': """
+*Bâtiment n°10, rue A. Nievsky. 14 («Bougie»)*
+
+Ici se trouve :
+· Centre de soutien socio-économique aux étudiants (cab. 14)
+· Centre de carrière
+
+*Emplacement* : https://goo.gl/maps/djfHWwTNer12z7caA
+                                            """,
+
+                'loc_12_handler': """
+*Bâtiment n°12, rue Botkina, 4-6* 
+
+Ici se trouve : 
+· Institut médical 
+
+*Localisation* : https://goo.gl/maps/BKJMV9WAR9G6PpaJ6
+                                            """,
+
+                'loc_22_handler': """
+*Bâtiment n° 22, rue A. Nevski, 14* 
+
+Ici se trouve : 
+· Complexe sportif et éducatif avec piscine 
+
+*Emplacement* : https://goo.gl/maps/VevnRkQyv8FmZPXcA
+                                            """,
+
+                'loc_24_handler': """
+*Bâtiment n°24, rue Zoologique, 2* 
+
+Voici où se trouve : 
+· Collège universitaire 
+
+*Localisation*: https://goo.gl/maps/Fb76GxbTCQUm3zEa7
+                                            """,
+
+                'loc_27_handler': """
+*Bâtiment n°27, rue du général-lieutenant Ozerov, 57*
+
+Ici se trouvent :
+· Institut d'ingénierie et de technologie
+· Arène "Kantiana"
+
+*Localisation*: https://goo.gl/maps/H126DeMnucPJvA1U9
+                                            """,
+
+                'loc_28_handler': """
+*Bâtiment n°28, rue Gorki, 23*
+
+Ici se trouvent :
+· Institut d'économie et de gestion
+
+*Localisation*: https://goo.gl/maps/THR3WG17cF2EBtvW6
+                                            """,
+            },
+
+            'university_info_handlers': {
+                'schedule_text': '''
+*Emploi du temps des cours*:
+https://schedule.kantiana.ru/
+                                            ''',
+                'scholarship_text': '''
+*Information sur les bourses et l'aide matérielle*:
+https://kantiana.ru/students/scholarship/
+                                            ''',
+                'office_contacts_text': '''
+*Contacts*:
+
+_Adresse_: 236041, Kaliningrad, rue Alexandre Nevski, 14
+_Téléphone de contact_: +7 (4012) 59-55-95
+_Commission des admissions_: rue Alexandre Nevski, 14
+
+8 (800) 600-52-39 appel gratuit
++7 (4012) 59-55-96
+
+_Secrétariat_: +7 (4012) 59-55-97
+
+_E-mail_: post@kantiana.ru
+
+*Heures d'ouverture des services administratifs*
+
+Lundi: 9:00 — 18:00 _pause_: 13:00—13:45
+Mardi: 9:00 — 18:00 _pause_: 13:00—13:45
+Mercredi: jour sans réception (traitement des documents)
+Jeudi: 9:00 — 18:00 _pause_: 13:00—13:45
+Vendredi: 9:00 — 16:45 _pause_: 13:00—13:45
+Samedi et dimanche: jours de repos
+''',
+                'visa_center_text': '''
+*Centre de visa et de migration* :
+https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/*Contacts*
+
+_Adresse_ : 236041, Russie, Kaliningrad, rue A. Nievski 14, bâtiment 2, bureau 119
+
+_Horaires_ _d'ouverture_ : 
+Du lundi au jeudi de 9:00 à 18:00, le vendredi de 9:00 à 16:45
+
+_Téléphone_ : +7 (4012) 31-33-99
+_Email_ : international-study@kantiana.ru
+'''
+            },
+
+            'sber_handlers': {
+                'useful_links_text': """
+🔗 Ressources utiles de Sber et de ses partenaires :
+• [Plateforme Netologie](https://netology.ru/navigation) — cours en ligne et professions
+• [Entraîne ta tranquillité](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — simulateur d'entretiens
+• [École 21](https://sbergraduate.ru/careerofthefuture/) — éducation IT gratuite
+• [SberSova](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — plateforme éducative
+• [Cyberbibliothèque](https://sber.ru/kibrary) — bibliothèque numérique
+• [Marathon numérique](https://it-marathon.21-school.ru/?utm_source=ter_bank&utm_medium=referral&utm_campaign) — compétitions et défis
+• [Startup de Sber](https://sberstudent.sberclass.ru/) — soutien aux startups
+• [Stages](https://sbergraduate.ru/practice/) — offres d'emploi et stages
+""",
+
+                'sber_card_text': """
+💳 *Carte de Sber*
+
+✨ *Entretien gratuit pour toujours*
+💸 *Jusqu'à 5 % de cashback* sur vos achats préférés
+📈 *Intérêts sur le compte d'épargne* allant jusqu'à *16 %* par an
+🎨 *Autocollants uniques de Sber* pour chaque transaction — collectionnez et partagez avec vos amis !
+🎯 *Offres spéciales pour les jeunes* — réductions sur les loisirs, l'éducation et bien plus
+
+Cliquez sur *le bouton ci-dessous* pour plus de détails :
+""",
+
+                'educational_loan_text': """
+🎓 *Crédit éducatif de Sber* 
+🎯 *Seulement 3% par an* 
+📚 *Payer uniquement les intérêts pendant les études* 
+👨‍🎓 *Ouverture dès 14 ans* 
+⏳ *Échelonnement jusqu'à 15 ans après l'obtention du diplôme* 
+
+Clique sur *le bouton ci-dessous* pour plus de détails:
+"""
+            }
+        }
+    },
+
+    'es': {
+        'greetings': '¡Hola! ¿Con qué puedo ayudar?',
+        'errors': {
+            'start_error': 'Se produjo un error al iniciar el bot. Por favor, inténtelo más tarde.',
+            'info_error': 'Error al cargar la información',
+            'back_error': 'Error al regresar al menú principal',
+            'audio_error': 'Error al procesar',
+            'photo_error': 'Se produjo un error al cargar la foto.',
+            'gigachat_error': 'Error de inicialización de GigaChat:',
+        },
+
+        'keyboards': {
+            'main_keyboard': {
+                'info': 'Información',
+                'location': 'Cuerpos',
+                'dormitory': 'Residencias estudiantiles',
+                'hospital': 'Centro médico',
+                'critical': 'SOS',
+                'language_check': 'Entrenador',
+                'back': 'Atrás'
+            },
+            'critical_keyboard': {
+                'police': 'Policía',
+                'hotline': 'Línea directa de la FMS (Ministerio de Inclusión, Seguridad Social y Migraciones)',
+                'government': 'Autoridades locales',
+                'consulate': 'Consulado',
+                'back': 'Atrás'
+            },
+            'dormitory_keyboard': {
+                'check-in': 'Alojamiento en un dormitorio',
+                'payment': 'Pago',
+                'address': 'Direcciones de los dormitorios',
+                'rules': 'Reglas de convivencia',
+                'laundry': 'Lavandería',
+                'no_certificate': 'No hay un certificado de vacunas o de fluorografía',
+                'back': 'Atrás'
+            },
+            'dormitory_location_keyboard': {
+                'dormitory_1': 'Sommera',
+                'dormitory_2': 'Tchernyshevskogo',
+                'dormitory_3': 'A. Nevskogo',
+                'dormitory_4': 'A. Nevskogo',
+                'dormitory_5': 'Tchaikovskogo',
+                'dormitory_6': 'Azovskaya',
+                'dormitory_7': 'Yelovaya',
+                'dormitory_8': 'Yelovaya',
+                'dormitory_9': 'Yubileynaya',
+            },
+            'payment_keyboard': {
+                'sber_payment': 'Pagar en Sber',
+                'back': 'Atrás'
+            },
+            'language_check_keyboard': {
+                'grammar_keyboard': {
+                    'to_russian': 'Traducir al ruso',
+                    'from_russian': 'Traducir del ruso',
+                    'back': 'Atrás'
+                },
+                'speaking_keyboard': {
+                    'back': 'Atrás'
+                },
+                'language_check_keyboard': {
+                    'audio': 'Audición',
+                    'grammar': 'Gramática',
+                    'speaking': 'Hablando',
+                    'back': 'Atrás'
+                }
+            },
+            'location_keyboard': {
+                'loc_1': '🏛️ Cuerpo administrativo',
+                'loc_2': '🧮 Físico-matemático',
+                'loc_3': '🧬 Sistemas vivos',
+                'loc_4': '🏫 IGN',
+                'loc_5': '👨‍🏫 Educación',
+                'loc_6': '🛌 Disco',
+                'loc_7': '⚖️ Jurídico',
+                'loc_8': '📚 Medicina Biblioteca',
+                'loc_9': '🏐 FOC',
+                'loc_10': '👩‍🏫 Vela',
+                'loc_12': '🩺 Instituto de Medicina',
+                'loc_22': '🏊‍♂️ Piscina',
+                'loc_24': '🎓 Colegio',
+                'loc_27': '⚙️ ITI',
+                'loc_28': '💸 Economía',
+                'back': 'Atrás'
+            },
+            'university_info_keyboard': {
+                'schedule': 'Horarios',
+                'scholarship': 'Becas',
+                'office_contacts': 'Contactos de la oficina de estudios',
+                'visa_canter': 'Centro de visas y migración',
+                'back': 'Atrás'
+            },
+            'language_selection_keyboard': {
+                'back': 'Atrás'
+            },
+            'sber_keyboard': {
+                'educational_loan': 'Crédito educativo',
+                'sber_card': 'Mapa para la beca',
+                'useful_links': 'Enlaces útiles',
+                'details': 'Más detalles',
+                'back': 'Atrás'
+            }
+        },
+
+        'handlers': {
+            'critical_handlers': {
+                'critical_police_handler': '''
+*Contactos de emergencia*
+
+Número único de los servicios de emergencia (bomberos, Ministerio de Emergencias, policía, ambulancia, servicios de gas) — *112*.
+
+Bomberos y rescatistas — *01* (desde un teléfono fijo) y *101* (desde un móvil)
+
+Policía — *02* (desde un teléfono fijo) y *102* (desde un móvil)
+
+Ambulancia — *103* (desde un móvil) y *03* (desde un teléfono fijo)
+                                                   ''',
+
+                'critical_hotline_handler': '''
+*Sector de apoyo visa-migratorio*
+
+_Teléfono_:
+
+8 (4012) 595-595 (ext. 7454) — para preguntas sobre el registro migratorio y visas
+8 (4012) 595-595 (ext. 7452) — para preguntas sobre invitaciones de visa
+
+_Dirección_: Calle A. Nevski 14, edificio №2, oficina 114
+
+_Horas_ _de atención_:
+
+Lun 14:00-17:00
+Mar 10:00-13:00
+Jue 14:00-17:00
+Vie 10:00-13:00
+
+pausa para el almuerzo 13:00-14:00
+                                                    ''',
+
+                'critical_government_handler': '''
+*La solicitud electrónica está disponible en el enlace*: 
+https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+
+*Atención personal al ciudadano* 
+
+La atención personal al ciudadano en el Comité es llevada a cabo por el presidente del Comité o su primer adjunto, 
+por los directores de las divisiones estructurales y por las personas autorizadas para ello. 
+La información sobre el lugar de atención, así como sobre los días y horas establecidos para la atención, 
+se comunica a los ciudadanos. Durante la atención personal, el ciudadano presenta un documento que acredita su identidad. 
+El contenido de la solicitud oral se registra en la tarjeta de atención personal del ciudadano. 
+En caso de que los hechos y circunstancias expuestos en la solicitud oral sean evidentes y no requieran verificación adicional, 
+la respuesta a la solicitud, con el consentimiento del ciudadano, puede ser dada oralmente durante la atención personal, 
+lo que se registra en la tarjeta de atención personal del ciudadano. En los demás casos, 
+se proporciona una respuesta por escrito sobre el fondo de las cuestiones planteadas en la solicitud. 
+La solicitud por escrito, recibida durante la atención personal, 
+debe ser registrada y considerada de acuerdo con el procedimiento establecido para las solicitudes por escrito.
+En caso de que la solicitud contenga preguntas cuya resolución no esté dentro de la competencia 
+del Comité de Relaciones Interétnicas y la Implementación de la Política Migratoria en San Petersburgo, 
+se le dará al ciudadano una explicación de a dónde y en qué orden debe dirigirse.Durante la recepción personal, 
+se le puede negar al ciudadano el ulterior examen de la solicitud, si ya se le ha dado una respuesta sobre el fondo 
+de las preguntas planteadas en la solicitud.
+
+La inscripción previa para la recepción personal se realiza por teléfono a la oficina del Comité: 576-28-08, diariamente de 9:00 a 18:00, los viernes hasta las 17:00, con un receso de 13:00 a 14:00; sábado y domingo – días no laborables.
+                                                   ''',
+
+                'critical_consulate_handler': '''
+*Representación del Ministerio de Relaciones Exteriores de Rusia en Kaliningrado*  
+
+Dirección: 236022, Rusia, ciudad de Kaliningrado, calle Kírov, 17  
+Recepción: + 7 (401) 221-37-12  
+Fax: + 7 (401) 221-06-26  
+Departamento consular: + 7 (401) 221-16-68  
+Departamento de pasaportes: + 7 (401) 295-82-02  
+Departamento de tramitación de invitaciones: + 7 (4012) 21-59-28  
+
+*Atención a ciudadanos por cuestiones consulares y legales*  
+
+Lun, Mar, Mié, Jue: de 9:00 a 17:00 (recogida de 12:00 a 14:00)  
+Vie: de 9:00 a 16:00 (recogida de 12:00 a 14:00)  
+Sáb, Dom: Cerrado
+                                            ''',
+            },
+
+            'dormitory_handlers': {
+                'dormitory_text': """
+Puedes obtener más información sobre el alojamiento aquí (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/)
+
+*¿Cómo solicitar una plaza en la residencia estudiantil?*
+
+1. Después de tu admisión en el programa educativo, debes solicitar una plaza en el sitio web a través de https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key=
+
+_Ten en cuenta que la cantidad de plazas en la residencia estudiantil es limitada._
+
+2. Si recibiste un aviso por correo de que la residencia ha sido aprobada, significa que tu solicitud ha sido aceptada y ahora participas en el concurso. 
+Puedes seguir el estado de tu solicitud en el grupo del Complejo de Residencias Estudiantiles: [grupo KSO] https://vk.com/kso_bfu
+
+3. Cuando veas tu nombre en el ranking, significa que puedes obtener los 2 permisos necesarios para el alojamiento. Te lo explicaremos en detalle a continuación.
+
+4. Con los permisos obtenidos, dirígete a firmar el contrato en el KSO (Calle Nevski, 14/1, oficina 101).
+
+5. Después de firmar el contrato y pagar el alojamiento, acércate a la administradora de la residencia indicada para el alojamiento y la orientación. 
+A la llegada es necesario firmar el contrato de arrendamiento del alojamiento en la residencia estudiantil en el Centro de Apoyo Socioeconómico para Estudiantes, recibir la orientación y pagar la residencia por el primer semestre. 
+
+_Es obligatorio llevar el pasaporte._
+
+*Horas de atención del Centro de apoyo socioeconómico para estudiantes:* 
+
+- Lunes: De 10:00 a 17:00 
+- Martes: De 10:00 a 17:00 
+- Jueves: De 10:00 a 17:00 
+- Viernes: De 10:00 a 16:45 
+
+Pausa para el almuerzo de 13:00 a 14:00 
+
+*Dirección: Calle A. Nevski, 14, edificio 10, 1er piso, oficina 14.* 
+
+*Certificado médico* 
+
+Para residir en la residencia, es necesario presentar al conserje de la residencia un certificado de haberse sometido a un examen médico. 
+Para obtener dicho certificado, debes visitar la oficina 2 en el Centro clínico-diagnóstico de la Universidad Federal de Immanuel Kant (KDC). 
+
+*Lleva contigo:* 
+- pasaporte 
+- certificado de vacunación (documento que menciona todas las vacunas que has recibido a lo largo de tu vida, en particular debe incluir certificados de vacunación contra el sarampión, difteria, tétanos y hepatitis B)
+- una radiografía de tórax no mayor a 1 año
+- 2 resultados negativos de pruebas PCR para COVID-19/ autorización para participar en clases. 
+
+_Los documentos deben estar en ruso o tener una traducción certificada al ruso._ 
+
+*Dirección* KDC BFU im.I.Kanta: (https://goo.gl/maps/bwq24xTh5P1EctiU8) 
+
+_En caso de que no tengas estos documentos en el momento de la mudanza, debes obtenerlos por tu cuenta en cualquier clínica._
+                                            """,
+
+                'payment_text': """
+Se puede pagar el alojamiento de dos maneras.
+
+1. Personalmente. 
+
+En la oficina número 222 del edificio administrativo, segundo piso. Aquí recibirás un recibo para el pago en la caja del mismo piso. 
+Se puede pagar en la caja en efectivo en rublos o con tarjeta bancaria.
+
+2. De forma remota en el sitio web.
+
+Los estudiantes de primer año pagan el primer semestre en su totalidad al momento de la llegada. 
+Posteriormente, el semestre de otoño se paga hasta el 15 de septiembre, y el semestre de primavera hasta el 15 de febrero.
+                                            """,
+
+                'rules_text': """
+- Mantén la habitación y la cocina limpias por tu cuenta.
+- No se permite tener mascotas.
+- Respeta a los vecinos: guarda silencio de 23:00 a 08:00, sé educado y atento.
+- Hasta las 22:00 puedes invitar a amigos, pero no se permite el alojamiento nocturno de invitados.
+- Fumar y consumir alcohol en el recinto de la universidad está estrictamente prohibido.
+- Estudia cuidadosamente las normas de seguridad y conoce la ubicación de las salidas de emergencia más cercanas.
+- Ante cualquier fallo del equipo, informa de inmediato al conserje.
+- Contacta con la administración de la residencia para cualquier pregunta sobre tu estancia.
+- No te mudes a otra habitación sin la aprobación del Centro de Apoyo Social para Estudiantes.
+
+_No todas las residencias están equipadas con utensilios de cocina, pero se proporciona ropa de cama limpia semanalmente._
+
+*Consejo*: conéctate con el conserje inmediatamente después de mudarte; él es tu principal ayuda en cuestiones de convivencia.
+""",
+
+                'laundry_text': """
+Las lavanderías se encuentran en el edificio de cada residencia. El conserje o el portero te indicarán dónde está exactamente la habitación con las lavadoras y a qué hora puedes recoger la llave.Debes traer tu propio detergente. 
+
+La lavandería está equipada con varias lavadoras que se pueden usar simultáneamente si tienes mucha ropa para lavar. Es obligatorio lavar la ropa interior en bolsas especiales. Está prohibido lavar zapatos, ya que esto puede dañar las lavadoras. 
+Asegúrate de leer las instrucciones en la habitación antes de usar la máquina. Puedes secar la ropa después de lavarla en una sala especial que está equipada con secadoras.
+
+*Recuerda* que otros estudiantes en la residencia también quieren lavar su ropa, por lo que debes devolver la llave al portero o al conserje inmediatamente después de lavar, exactamente a la hora que prometiste devolverla.                                            """,
+
+                'no_certificate_text': """
+SI NO TIENES CERTIFICADO DE VACUNAS O DE FLEOGRAFÍA
+
+1. *Si no tienes una fleografía reciente*
+
+Puedes hacerla en varios lugares, por ejemplo:
+- En el KDC BFU por 320 rublos con la tarjeta de estudiante (debe estar disponible). Ubicación del KDC: [https://goo.gl/maps/P4djCkwJ3ZQHThgGA] (https://goo.gl/maps/P4djCkwJ3ZQHThgGA)
+- En Medexpert (calle Kosmicheskaya o avenida Moscú), hasta las 17:00, por 450 rublos sin radiografía. Ubicación: [https://goo.gl/maps/rRiC1Nh35BNPw2w3A](https://goo.gl/maps/rRiC1Nh35BNPw2w3A)
+- Novomed (Gagarina 2B) hasta las 17:00, 350 rublos. Ubicación: [https://goo.gl/maps/kgEkj4yLnWBNbFUm6](https://goo.gl/maps/kgEkj4yLnWBNbFUm6)
+
+2. *Si no tienes certificados de vacunación*
+
+Dirígete a cualquier sucursal de Medexpert. Allí necesitas hacerte un análisis de sangre, que se llama “Tensión de inmunidad para sarampión y difteria”. 
+El análisis se puede realizar todos los días, de lunes a viernes de 7:30 a 19:00, y los fines de semana de 7:30 a 17:00.
+
+El análisis se realiza en ayunas.
+
+El resultado se emite en 4 días hábiles (el resultado se puede obtener en el área personal).
+                                                """,
+            },
+
+            'dormitory_location_handlers': 'Residencia estudiantil №',
+
+            'hospital_handlers': {
+                'hospital_text': '''
+*Clínica Universitaria BFU im. I. Kanta*  
+
+*Dirección*: 236041, Rusia, Kaliningrado, calle 9 de abril, 60  
+*Contactos*: +7 (4012) 31-33-39 kdc@kantiana.ru  
+
+*Seguro médico*:  
+https://kantiana.ru/international/inostrannomu-studentu/oms/  
+
+*Instrucciones para registrarse en la clínica*:  
+https://kantiana.ru/students/polyclinic/  
+
+*Clínica en el mapa*:  
+https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%209%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07
+                                            '''
+            },
+
+            'language_chack_handlers': {
+                'grammar_handlers': {
+                    'language_grammar_handler': '''
+                                            *Elija la opción de traducción*:
+                                            ''',
+                    'translate_to_russian_handler': '''
+                                            Traduce este texto al ruso:
+                                            ''',
+                    'translate_from_russian_handler': '''
+                                            Traduce este texto del ruso a tu idioma:
+                                            ''',
+                },
+
+                'listening_handlers': {
+                    'send_voice': 'Escucha el texto e intenta escribirlo en ruso.',
+                },
+
+                'speaking_handlers': {
+                    'topics': [
+                        'Cuéntanos un poco sobre tu familia',
+                        '¿Tienes una mascota?',
+                        '¿Qué platos te gustan?',
+                        'Describe tu habitación',
+                        '¿Cuál es su medio de transporte favorito?',
+                        '¿Dónde te gusta pasar tu tiempo libre?',
+                        '¿Cómo pasas tu domingo?',
+                        '¿Cuál es tu recuerdo más vívido de la infancia?',
+                        '¿A dónde te gustaría viajar?',
+                        '¿Qué hábitos te ayudan a mantenerte productivo?',
+                        '¿Cómo estuvo tu ayer?',
+                        '¿Qué haces en un trabajo y qué haces en el trabajo?',
+                        '¿Con qué sueña tu familia?',
+                        '¿Qué cosas interesantes te pasaron la semana pasada?',
+                        '¿Qué le interesa a tu mejor amigo?',
+                        "Comparte tus impresiones de la última película que viste",
+                        '¿Por qué decidiste estudiar en Kaliningrado?'
+                    ],
+                    'speaking_send': 'Espero tu historia sobre el tema:',
+                    'handle_voice_message': 'Resultado del análisis:',
+                }
+            },
+
+            'location_handlers': {
+                'addresses_handler': 'Elige el cuerpo',
+                'loc_1_handler': """
+*Cuerpo administrativo, calle A. Nevski, 14* 
+
+Aquí se encuentran: 
+· Oficina de administración (of. 115) 
+· Servicio de contabilidad (of. 212) 
+· Archivo (of. 221) 
+· Grupo de cálculos de ingresos y contabilidad fiscal (of. 222) 
+· Caja (segundo piso) 
+· Sala Acuario 
+· Sala Máximo 
+· Comedor (primer piso) 
+
+*Ubicación*: https://goo.gl/maps/zRT7KcqxLXtAVaUE7
+                                            """,
+
+                'loc_2_handler': """
+*Cuerpo Nº 2, Instituto de Física, Matemáticas y Tecnologías de la Información («Fizmat»), calle A. Nevsky, 14* 
+
+Aquí se encuentran: 
+· Departamento de trabajo con estudiantes extranjeros (oficina 119) 
+· Sector de apoyo de visas y migración (oficina 114) 
+· Comisión de admisión (oficinas 116 y 117) 
+· Biblioteca, sala 202 («Sala de Lectura») 
+· Servicio de atención a la infraestructura IT (oficina 121) 
+
+*Ubicación*: https://goo.gl/maps/6yt18jT8DoS5KgQv5
+                                            """,
+
+                'loc_3_handler': """
+*Cuerpo N° 3, calle Universitaria, 2*
+
+Aquí se encuentran:
+· Instituto de Sistemas Vivos
+· Biblioteca universitaria principal: suscripción científica (of. 126), sala de lectura (of. 115)
+
+*Ubicación*: https://goo.gl/maps/y2XnUi5vj5MxbRPeA
+                                            """,
+
+                'loc_4_handler': """
+*Cuerpo N°4, calle Tchernyshevsky, 56 («Edificio con reloj»)*
+
+Aquí se encuentran:
+· Instituto de Ciencias Humanas
+· Centro de la lengua rusa (oficina 01)
+· Museo de la infancia soviética
+
+*Ubicación*: https://goo.gl/maps/EBrY5H86euoPi6Sn9
+                                            """,
+
+                'loc_5_handler': """
+*Cuerpo Nº5, calle Tchernyshevsky, 56a* 
+
+Aquí se encuentra: 
+· Instituto de Educación 
+
+*Ubicación*: https://goo.gl/maps/xgHnL2PJ7ASXTFGG6
+                                            """,
+
+                'loc_6_handler': """
+*Cuerpo No. 6, calle A. Nevski, 14b («Shaiba»)*
+
+Aquí se encuentran:
+· Complejo de residencias estudiantiles (cab. 101)
+· Gestión de actividades extracurriculares
+
+*Ubicación *: https://maps.app.goo.gl/pKu1EREgTPvJ6VGN7
+                                            """,
+
+                'loc_7_handler': """
+*Cuerpo Nº7, calle Frunze, 6*
+
+Aquí se encuentran:
+· Estudio de teleeducación
+· Instituto de Derecho
+
+*Ubicación*: https://goo.gl/maps/39LxmNSyZdSjnme16
+                                            """,
+
+                'loc_8_handler': """
+*Cuerpo Nº 8, calle 9 de abril, 5* 
+
+Aquí se encuentra: 
+· Biblioteca médica 
+
+*Ubicación*: https://goo.gl/maps/Tja71g7t1QPRqtbt7
+                                            """,
+
+                'loc_9_handler': """
+*Cuerpo N°9, calle A. Nevsky, 14 («FOK»)*
+
+Aquí se encuentra:
+· Complejo de educación física y salud
+
+*Ubicación*: https://g.page/kantiana-sport?share
+                                            """,
+
+                'loc_10_handler': """
+*Cuerpo #10, calle A. Nevski. 14 («Vela»)*
+
+Aquí se encuentran:
+· Centro de apoyo socioeconómico para estudiantes (cab. 14)
+· Centro de carreras
+
+*Ubicación*: https://goo.gl/maps/djfHWwTNer12z7caA
+                                            """,
+
+                'loc_12_handler': """
+*Cuerpo Nº12, calle Botkina, 4-6*
+
+Aquí se encuentra:
+· Instituto Médico
+
+*Ubicación*: https://goo.gl/maps/BKJMV9WAR9G6PpaJ6
+                                            """,
+
+                'loc_22_handler': """
+*Cuerpo №22, calle A. Nevskogo, 14* 
+
+Aquí se encuentra: 
+· Complejo educativo y deportivo con piscina 
+
+*Ubicación*: https://goo.gl/maps/VevnRkQyv8FmZPXcA
+                                            """,
+
+                'loc_24_handler': """
+*Cuerpo nº 24, calle Zoológica, 2*
+
+Aquí se encuentra:
+· Colegio universitario
+
+*Ubicación*: https://goo.gl/maps/Fb76GxbTCQUm3zEa7
+                                            """,
+
+                'loc_27_handler': """
+*Cuerpo Nº 27, calle General-lieutenant Ozerov, 57*
+
+Aquí se encuentran:
+· Instituto de ingeniería y tecnología
+· Arena «Kantiana»
+
+*Ubicación*: https://goo.gl/maps/H126DeMnucPJvA1U9
+                                            """,
+
+                'loc_28_handler': """
+*Cuerpo Nº28, calle Gorky, 23*
+
+Aquí se encuentran:
+· Instituto de Economía y Gestión
+
+*Ubicación*: https://goo.gl/maps/THR3WG17cF2EBtvW6
+                                            """,
+            },
+
+            'university_info_handlers': {
+                'schedule_text': '''
+*Horario de clases*:
+https://schedule.kantiana.ru/
+                                            ''',
+                'scholarship_text': '''
+*Información sobre becas y ayuda financiera*:
+https://kantiana.ru/students/scholarship/
+                                            ''',
+                'office_contacts_text': '''
+*Contactos*:  
+
+_Dirección_: 236041, Kaliningrado, calle Aleksandra Nevski, 14  
+_Teléfono de contacto_: +7 (4012) 59-55-95  
+_Comisión de admisión_: calle Aleksandra Nevski, 14  
+
+8 (800) 600-52-39 llamada gratuita  
++7 (4012) 59-55-96  
+
+_Oficina_: +7 (4012) 59-55-97  
+_Correo electrónico_: post@kantiana.ru  
+
+*Horario de trabajo de los servicios administrativos*  
+
+Lunes: 9:00 — 18:00 _pausa_: 13:00—13:45  
+Martes: 9:00 — 18:00 _pausa_: 13:00—13:45  
+Miércoles: día no laboral (trabajo con documentos)  
+Jueves: 9:00 — 18:00 _pausa_: 13:00—13:45  
+Viernes: 9:00 — 16:45 _pausa_: 13:00—13:45  
+Sábado y domingo: días no laborables
+''',
+                'visa_center_text': '''
+*Centro de visa y migración*:
+https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/
+
+*Contactos*
+
+_Dirección_: 236041, Rusia, Kaliningrado, calle A. Névsky 14, edificio 2, oficina 119
+
+_Horario de atención_: 
+
+Lunes a jueves de 9:00 a 18:00, viernes de 9:00 a 16:45
+
+_Teléfono_: +7 (4012) 31-33-99
+_Email_: international-study@kantiana.ru
+'''
+            },
+
+            'sber_handlers': {
+                'useful_links_text': """
+🔗 Recursos útiles de Sber y sus socios:
+• [Plataforma Netología](https://netology.ru/navigation) — cursos y profesiones en línea
+• [Entrena la calma](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — simulador para entrevistas
+• [Escuela 21](https://sbergraduate.ru/careerofthefuture/) — educación IT gratuita
+• [SberSova](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — plataforma educativa
+• [Cibiblioteca](https://sber.ru/kibrary) — biblioteca digital
+• [Maratón digital](https://it-marathon.21-school.ru/?utm_source=ter_bank&utm_medium=referral&utm_campaign) — competiciones y desafíos
+• [Startup de Sber](https://sberstudent.sberclass.ru/) — apoyo a startups
+• [Prácticas](https://sbergraduate.ru/practice/) — ofertas de empleo y prácticas
+""",
+
+                'sber_card_text': """
+💳 *Tarjeta de Sber*  
+✨ *Mantenimiento gratuito para siempre*  
+💸 *Hasta un 5% de devolución en efectivo* en tus compras favoritas  
+📈 *Intereses en cuenta de ahorros* de hasta *16%* anuales  
+🎨 *Pegatinas únicas de Sber* para cada transacción — ¡colecciona y comparte con amigos!  
+🎯 *Ofertas especiales para jóvenes* — descuentos en entretenimiento, educación y mucho más  
+
+Haz clic en *el botón de abajo* para más detalles:
+""",
+
+                'educational_loan_text': """
+🎓 *Crédito educativo de Sber* 
+🎯 *Solo 3% anual* 
+📚 *Solo paga los intereses durante los estudios* 
+👨‍🎓 *Contratación desde los 14 años* 
+⏳ *Plazo de hasta 15 años después de la graduación* 
+
+Haz clic en *el botón de abajo* para más detalles:
+"""
+            }
+        }
+    },
+
+    'cn': {
+        'greetings': '你好！有什麼需要幫忙的嗎?',
+        'errors': {
+            'start_error': '啟動機器人時發生錯誤。請稍後再試。',
+            'info_error': '載入資訊時出錯',
+            'back_error': '返回主菜單時出錯',
+            'audio_error': '處理時出錯',
+            'photo_error': '載入照片時發生錯誤',
+            'gigachat_error': 'GigaChat初始化錯誤:',
+        },
+
+        'keyboards': {
+            'main_keyboard': {
+                'info': '資訊',
+                'location': '機構',
+                'dormitory': '宿舍',
+                'hospital': '醫療中心',
+                'critical': 'SOS',
+                'language_check': '訓練器',
+                'back': '回去'
+            },
+            'critical_keyboard': {
+                'police': '警察',
+                'hotline': '熱線 FMS',
+                'government': '地方當局',
+                'consulate': '領事館',
+                'back': '回去'
+            },
+            'dormitory_keyboard': {
+                'check-in': '入住宿舍',
+                'payment': '付款',
+                'address': '宿舍地址',
+                'rules': '居住規則',
+                'laundry': '洗衣房',
+                'no_certificate': '沒有疫苗接種證明或胸部X光檢查報告',
+                'back': '回去'
+            },
+            'dormitory_location_keyboard': {
+                'dormitory_1': 'Sommera',
+                'dormitory_2': 'Tchernyshevskogo',
+                'dormitory_3': 'A. Nevskogo',
+                'dormitory_4': 'A. Nevskogo',
+                'dormitory_5': 'Tchaikovskogo',
+                'dormitory_6': 'Azovskaya',
+                'dormitory_7': 'Yelovaya',
+                'dormitory_8': 'Yelovaya',
+                'dormitory_9': 'Yubileynaya',
+            },
+            'payment_keyboard': {
+                'sber_payment': '在 Sber 銀行支付',
+                'back': '回去'
+            },
+            'language_check_keyboard': {
+                'grammar_keyboard': {
+                    'to_russian': '翻譯成俄語',
+                    'from_russian': '從俄語翻譯',
+                    'back': '回去'
+                },
+                'speaking_keyboard': {
+                    'back': '回去'
+                },
+                'language_check_keyboard': {
+                    'audio': '聆聽',
+                    'grammar': '語法',
+                    'speaking': '說話',
+                    'back': '回去'
+                }
+            },
+            'location_keyboard': {
+                'loc_1': '🏛️ 管理機構',
+                'loc_2': '🧮 物理數學',
+                'loc_3': '🧬 活的系統',
+                'loc_4': '🏫 IGN',
+                'loc_5': '👨‍🏫 教育',
+                'loc_6': '🛌 圓盤',
+                'loc_7': '⚖️ 法律的',
+                'loc_8': '📚 醫學圖書館',
+                'loc_9': '🏐 FOC',
+                'loc_10': '👩‍🏫 蠟燭',
+                'loc_12': '🩺 醫學院',
+                'loc_22': '🏊‍♂️ 游泳池',
+                'loc_24': '🎓 學院',
+                'loc_27': '⚙️ ITI',
+                'loc_28': '💸 經濟',
+                'back': '回去'
+            },
+            'university_info_keyboard': {
+                'schedule': '時刻表',
+                'scholarship': '獎學金',
+                'office_contacts': '聯絡學習辦公室',
+                'visa_canter': '簽證移民中心',
+                'back': '回去'
+            },
+            'language_selection_keyboard': {
+                'back': '回去'
+            },
+            'sber_keyboard': {
+                'educational_loan': '教育貸款',
+                'sber_card': '獎學金地圖',
+                'useful_links': '有用的鏈接',
+                'details': '更詳細的資訊',
+                'back': '回去'
+            }
+        },
+
+        'handlers': {
+            'critical_handlers': {
+                'critical_police_handler': '''
+*緊急聯絡方式*
+
+統一的緊急服務號碼（消防、緊急情況部、警察、急救、天然氣服務）— *112*
+
+消防員和救援人員 — *01*（使用市話）和 *101*（使用手機）
+
+警察 — *02*（使用市話）和 *102*（使用手機）
+
+急救 — *103*（使用手機）和 *03*（使用市話）
+                                                    ''',
+
+                'critical_hotline_handler': '''
+*簽證移民支持部*
+
+_電話_：
+
+8 (4012) 595-595 (分機 7454)— 關於移民登記和簽證的問題
+8 (4012) 595-595 (分機 7452) — 關於簽證邀請的問題
+
+_地址_：俄羅斯─聖彼得堡市，A. 內夫斯基街 14 號，2 號樓，114 室
+
+_辦公時間_：
+
+週一 14:00-17:00
+週二 10:00-13:00
+週四 14:00-17:00
+週五 10:00-13:00
+
+午餐時間 13:00-14:00
+                                                    ''',
+
+                'critical_government_handler': '''
+*電子申請可通過以下鏈接訪問*:
+https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+
+*公眾會見* 公共會見在委員會由委員會主席或其第一副主席、各結構部門的負責人及指定授權人員進行。
+會見的地點以及指定的接待日和時間將通知市民。在面對面接見中，市民需出示證明其身份的文件。
+口頭請求的內容將被記錄在市民會見的卡片上。如果口頭請求中陳述的事實和情況顯而易見且不需進一步核實，
+則可在會見過程中經市民同意口頭答復請求，並在市民會見卡片上進行記錄。在其他情況下，將針對請求中提出的問題給予書面答復。
+在面對面接見中接受的書面請求需按書面請求的程序進行登記和審查。
+如果申請中包含的問題不在聖彼得堡民族關係與移民政策委員會的職責範圍內，則公民將被說明應該向哪裡以及以什麼方式進行申請。
+在個人接待過程中，如果之前已經對申請中提出的問題給予了實質性的答覆，則可能會拒絕進一步考慮該申請。
+
+個人接待的預約可以通過委員會的接待電話進行：576-28-08，每天從9:00到18:00，星期五至17:00，中午12:00至13:00為休息時間；星期六、星期天為休息日。
+                                                    ''',
+
+                'critical_consulate_handler': '''
+*俄羅斯外交部在加里寧格勒的代表處*
+
+地址：236022，俄羅斯，加里寧格勒，基羅夫街17
+號接待電話：+7 (401) 221-37-12
+傳真：+7 (401) 221-06-26
+領事部：+7 (401) 221-16-68
+護照部：+7 (401) 295-82-02
+邀請函辦公室：+7 (4012) 21-59-28
+
+*公民諮詢領事法律事務*
+
+週一、週二、週三、週四：9:00到17:00（12:00到14:00休息）
+
+週五：9:00到16:00（12:00到14:00休息）
+
+週六、週日：休息
+                                            ''',
+            },
+
+            'dormitory_handlers': {
+                'dormitory_text': """
+更多關於入住的資訊你可以在這裡了解 (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
+
+*如何申請宿舍名額？*
+
+1. 在你被錄取到教育項目後，需要在網站上提交宿舍申請，網址為 https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key=
+
+_請注意，宿舍的名額是有限的。_
+
+2. 如果你收到郵件通知宿舍已獲得批准，這意味著你的申請已被接受，現在你參加了競賽。你可以在學生宿舍綜合體的群組中跟蹤申請狀態：[KSO群組] https://vk.com/kso_bfu
+
+3. 當你在排名中看到自己的名字，這意味著你可以獲取入住所需的兩個許可。我們將詳細介紹這些許可。
+
+4. 手持所獲取的許可到KSO簽署合同（地址：涅夫斯基大街14/1號，101室）。
+
+5. 簽署合同並支付住宿費後，請前往指定宿舍的負責人處辦理入住和指導。
+
+抵達時需簽署學生宿舍租賃合同，並在學生社會經濟支持中心獲取指導，支付第一學期的宿舍費用。
+
+_必須攜帶護照。_
+
+*學生社會經濟支持中心的接待時間：*
+
+- 星期一：從 10:00 到 17:00
+- 星期二：從 10:00 到 17:00
+- 星期四：從 10:00 到 17:00
+- 星期五：從 10:00 到 16:45
+
+午餐休息時間為 13:00 至 14:00
+
+*地址：阿.涅夫斯基街14號，10號樓，1樓，14號辦公室。*
+
+*醫療證明*
+
+為了在宿舍居住，需要向宿舍管理员提供醫療檢查合格證明。要獲得這樣的證明，你需要前往伊曼紐爾·康德國立大學診斷醫學中心的2號辦公室（KDC）。
+
+*請攜帶：*
+
+- 護照
+- 疫苗接種證明（文件中應列出你一生中所有的疫苗接種情況，特別是麻疹、白喉、破傷風及B型肝炎的接種證明）
+- 不超過1年的胸部X光檢查
+- 2份COVID-19的PCR測試陰性結果/上課許可。
+
+_文件必須以俄語撰寫或附有經公證的俄語翻譯._
+
+*地址* 伊曼紐爾·康德國立大學KDC：（https://goo.gl/maps/bwq24xTh5P1EctiU8）
+
+_如果在入住時你沒有這些證明，則必須自費在任何診所進行檢查。_*
+                                            """,
+
+                'payment_text': """
+支付宿舍費用可以通過兩種方式。 
+
+1. 親自到訪。
+
+前往行政大樓的222號辦公室，二樓。在這裡，你將獲得一張收據，用於在同一樓層的收銀台付款。你可以選擇用盧布現金或銀行卡通過收銀台付款。
+
+2. 在線上支付。 
+
+一年級新生在入住時需全額支付第一學期的費用。此後秋季學期的費用需在9月15日之前支付，而春季學期的費用需在2月15日之前支付。                                            
+""",
+
+                'rules_text': """
+- 請自行保持房間和廚房的清潔。
+- 禁止飼養寵物。
+- 尊重鄰居：請在23:00至08:00之間保持安靜，並保持禮貌和關心。
+- 在22:00之前可以邀請客人，但禁止夜間的客人停留。
+- 在校園內嚴禁吸煙和飲酒。
+- 請仔細閱讀安全規則，了解最近的緊急出口位置。
+- 如設備故障，請立即通知宿舍管理人。
+- 如有任何住宿問題，請與宿舍管理部門聯繫。
+- 未經學生社會支持中心的批准，不得搬遷至其他房間。
+
+_並非所有宿舍都配備餐具，但每週會提供新鮮的床單。_
+
+*建議*：在入住後立即與宿舍管理人熟識——他是您在生活事務上的主要幫手。
+""",
+
+                'laundry_text': """
+洗衣房位於每個宿舍大樓內。值班人員或管理員會告訴你洗衣機所在的房間以及可以取鑰匙的時間。
+
+洗衣粉需要自備。洗衣房配備有多台洗衣機，可以同時清洗大量的衣物。如果洗衣服的內衣，必須放在專用的袋子裡清洗。禁止清洗鞋子，因為這樣會導致洗衣機故障。
+在使用洗衣機之前，請仔細閱讀房間裡的說明書。洗完衣物後，可以在專門的房間裡晾乾，該房間配有衣物烘乾機。
+
+*請記住*，宿舍裡的其他學生也想洗衣服，因此請在洗完衣物後，按約定的時間立即將鑰匙歸還給值班人員或管理員。                                            """,
+
+                'no_certificate_text': """
+如果沒有疫苗接種證明或胸部X光片
+
+1. *如果您缺少最新的胸部X光檢查* 
+
+您可以在幾個地方進行檢查，例如：
+- 在BФУ的KДЦ，使用學生證檢查需320盧布（必須持有學生證）。KДЦ的位置：[https://goo.gl/maps/P4djCkwJ3ZQHThgGA](https://goo.gl/maps/P4djCkwJ3ZQHThgGA) 
+- 在醫學專家（宇宙街或莫斯科大街），17:00之前，無拍攝需450盧布。位置：[https://goo.gl/maps/rRiC1Nh35BNPw2w3A](https://goo.gl/maps/rRiC1Nh35BNPw2w3A) 
+- Novomed（加加林街2В），17:00之前，需350盧布。位置：[https://goo.gl/maps/kgEkj4yLnWBNbFUm6](https://goo.gl/maps/kgEkj4yLnWBNbFUm6) 
+
+2. *如果您缺少疫苗接種證書* 
+
+請聯繫任何醫學專家的分支機構。您需要進行一項稱為“麻疹和白喉免疫狀況”的血液檢查。檢查可以在每個工作日進行，週一至週五，7:30至19:00，週末7:30至17:00。
+
+檢查需空腹進行。
+
+結果在4個工作日後發放（結果可以在個人帳戶中獲得）。
+                                                """,
+            },
+
+            'dormitory_location_handlers': '宿舍 №',
+
+            'hospital_handlers': {
+                'hospital_text': '''
+*BFU康特大學醫療診所*  
+
+*地址*: 236041，俄羅斯，卡里寧格勒，4月9日街60號  
+*聯繫方式*: +7 (4012) 31-33-39 kdc@kantiana.ru  
+
+*醫療保險*:  
+https://kantiana.ru/international/inostrannomu-studentu/oms/  
+
+*附加到診所的說明*:  
+https://kantiana.ru/students/polyclinic/  
+
+*診所地圖*:  
+https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%209%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07                                            '''
+            },
+
+            'language_chack_handlers': {
+                'grammar_handlers': {
+                    'language_grammar_handler': '''
+                                            *選擇翻譯選項*:
+                                            ''',
+                    'translate_to_russian_handler': '''
+                                            請將這段文字翻譯成俄語：
+                                            ''',
+                    'translate_from_russian_handler': '''
+                                            將這段文字從俄語翻譯成你的語言:
+                                            ''',
+                },
+
+                'listening_handlers': {
+                    'send_voice': '聽文本並嘗試將其寫成俄語。',
+                },
+
+                'speaking_handlers': {
+                    'topics': [
+                        '談談你的家庭。',
+                        '你有寵物嗎？',
+                        '你喜歡什麼菜？',
+                        '描述一下你的房間。',
+                        '你最喜歡的交通工具是什麼？',
+                        '你喜歡在空閒時間做什麼？',
+                        '你周日是怎麼度過的？',
+                        '你最難忘的童年回憶是什麼？',
+                        '你想去哪裡旅行？',
+                        '有哪些習慣幫助你保持生產力？',
+                        '你昨天過得怎麼樣？',
+                        '你從事什麼工作，工作內容是什麼？',
+                        '你的家庭夢想著什麼？',
+                        '上週有什麼有趣的事情發生在你身上？',
+                        '你最好的朋友喜歡什麼？',
+                        '分享一下你對最近看過的電影的感受。',
+                        '為什麼你決定在加里寧格勒學習？'
+                    ],
+                    'speaking_send': '我在等你講述的主題：',
+                    'handle_voice_message': '分析結果：',
+                }
+            },
+
+            'location_handlers': {
+                'addresses_handler': '選擇機殼',
+                'loc_1_handler': """
+*行政大樓，亞歷山大·涅夫斯基街14號*
+
+這裡有：
+· 文書處理 (115室)
+· 會計服務 (212室)
+· 檔案館 (221室)
+· 收入和稅務會計結算組 (222室)
+· 現金櫃 (二樓)
+· 水族館大廳
+· 最大值大廳
+· 餐廳 (一樓)
+
+*位置*: https://goo.gl/maps/zRT7KcqxLXtAVaUE7
+                                            """,
+
+                'loc_2_handler': """
+*第二號樓，物理、數學與信息技術研究所（「菲茨」），阿·涅夫斯基街14號* 
+
+這裡有：
+· 外國學生工作部（119室）
+· 簽證-移民支持部（114室）
+· 招生辦公室（116和117室）
+· 圖書館，202室（「閱覽室」）
+· IT基礎設施服務部（121室）
+
+*位置*: https://goo.gl/maps/6yt18jT8DoS5KgQv5
+                                            """,
+
+                'loc_3_handler': """
+*第三號樓, 大學街 2 號*
+
+這裡有：
+· 生物系統研究所
+· 主大學圖書館：科學訂閱（126室），閱覽室（115室）
+
+*位置*: https://goo.gl/maps/y2XnUi5vj5MxbRPeA
+                                            """,
+
+                'loc_4_handler': """
+*第四號樓, 切爾尼斯赫夫斯基街56號（“有鐘樓的建築”）*
+
+這裡有：
+· 人文科學院
+· 俄語中心（01號辦公室）
+· 蘇聯兒童博物館
+
+*位置*: https://goo.gl/maps/EBrY5H86euoPi6Sn9
+                                            """,
+
+                'loc_5_handler': """
+*第五大樓，切爾尼雪夫斯基街，56a*
+
+這裡有：
+· 教育研究所
+
+*位置*：https://goo.gl/maps/xgHnL2PJ7ASXTFGG6
+                                            """,
+
+                'loc_6_handler': """
+*第六號樓，阿. 涅夫斯基街，14b（“橡膠圓盤”）* 
+
+這裡有：
+· 學生宿舍綜合大樓（101室）
+· 課外活動管理處
+
+*位置*: https://maps.app.goo.gl/pKu1EREgTPvJ6VGN7
+                                            """,
+
+                'loc_7_handler': """
+*第7號大樓，弗魯恩茨街6號* 
+
+這裡有：
+· 教學電視工作室
+· 法律學院
+
+*位置*: https://goo.gl/maps/39LxmNSyZdSjnme16
+                                            """,
+
+                'loc_8_handler': """
+*第8號樓，4月9日街，5號* 
+
+此處設有： 
+· 醫學圖書館 
+
+*位置*: https://goo.gl/maps/Tja71g7t1QPRqtbt7
+                                            """,
+
+                'loc_9_handler': """
+*第9號大樓，A.涅夫斯基街14號（「FOK」）
+
+*這裡有：
+· 體育健身複合體
+
+*位置*：https://g.page/kantiana-sport?share
+                                            """,
+
+                'loc_10_handler': """
+*第10號樓, A. 內夫斯基街 14 號（“小蠟燭”）
+
+*這裡有：
+· 學生社會經濟支持中心（14室）
+· 職業中心
+
+*位置*: https://goo.gl/maps/djfHWwTNer12z7caA
+                                            """,
+
+                'loc_12_handler': """
+*第12號樓，博特金街4-6號* 
+
+此處有：
+· 醫學院 
+
+*位置*: https://goo.gl/maps/BKJMV9WAR9G6PpaJ6
+                                            """,
+
+                'loc_22_handler': """
+*第22號大樓，A.涅夫斯基大街14號*
+
+這裡有：
+· 帶游泳池的體育訓練綜合體
+
+*地點*：https://goo.gl/maps/VevnRkQyv8FmZPXcA
+                                            """,
+
+                'loc_24_handler': """
+*第24號樓，動物學街2號* 
+
+這裡有：
+· 大學學院
+
+*位置*: https://goo.gl/maps/Fb76GxbTCQUm3zEa7
+                                            """,
+
+                'loc_27_handler': """
+*第27號建築，俄羅斯格涅拉爾-萊特南特奧捷羅夫街57號*
+
+這裡有：
+· 工程技術學院
+·「康提亞那」體育館
+
+*位置*: https://goo.gl/maps/H126DeMnucPJvA1U9
+                                            """,
+
+                'loc_28_handler': """
+*第28號樓，戈爾基大街23號*
+
+此處設有：
+· 經濟與管理研究所
+
+*位置*: https://goo.gl/maps/THR3WG17cF2EBtvW6
+                                            """,
+            },
+
+            'university_info_handlers': {
+                'schedule_text': '''
+*課程時間表*:
+https://schedule.kantiana.ru/
+                                            ''',
+                'scholarship_text': '''
+*獎學金和經濟援助信息*:
+https://kantiana.ru/students/scholarship/
+                                            ''',
+                'office_contacts_text': '''
+*聯繫方式*:
+
+_地址_: 236041, 加里寧格勒, 亞歷山大·涅夫斯基街, 14
+_聯絡電話_: +7 (4012) 59-55-95
+_招生辦公室_: 亞歷山大·涅夫斯基街, 14
+
+8 (800) 600-52-39 免費電話
++7 (4012) 59-55-96
+
+_辦公室_: +7 (4012) 59-55-97
+_電子郵件_: post@kantiana.ru
+
+*行政部門工作時間*
+
+星期一: 9:00 — 18:00 _休息_: 13:00—13:45
+星期二: 9:00 — 18:00 _休息_: 13:00—13:45
+星期三: 不接待日（處理文件）
+星期四: 9:00 — 18:00 _休息_: 13:00—13:45
+星期五: 9:00 — 16:45 _休息_: 13:00—13:45
+星期六和星期日: 休息日
+''',
+                'visa_center_text': '''
+*簽證移民中心*:
+https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/
+
+*聯繫資訊*
+
+_地址_: 236041, 俄羅斯, 卡林寧格勒, A. 內夫斯基街 14號, 2號樓, 119室
+
+_工作時間_: 
+
+星期一至星期四 9:00 至 18:00，星期五 9:00 至 16:45
+
+_電話_: +7 (4012) 31-33-99
+_電子郵件_: international-study@kantiana.ru
+'''
+            },
+
+            'sber_handlers': {
+                'useful_links_text': """
+🔗 Sber及其合作夥伴的有用資源：
+• [Netology平台](https://netology.ru/navigation) — 在線課程與職業
+• [訓練冷靜](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — 面試模擬器
+• [21學校](https://sbergraduate.ru/careerofthefuture/) — 免費IT教育
+• [SberSova](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — 教育平台
+• [Kibrary](https://sber.ru/kibrary) — 數位圖書館• [數位馬拉松](https://it-marathon.21-school.ru/?utm_source=ter_bank&utm_medium=referral&utm_campaign) — 競賽與挑戰
+• [Sber的創業計劃](https://sberstudent.sberclass.ru/) — 對創業的支持
+• [實習機會](https://sbergraduate.ru/practice/) — 職位與實習
+""",
+
+                'sber_card_text': """
+💳 *俄羅斯聯邦儲備銀行卡*    
+✨ *永遠免費的服務*  
+💸 *對於喜愛的購物最高可達5%現金回饋*  
+📈 *儲蓄賬戶利息* 可達 *16%* 年利率  
+🎨 *來自俄聯儲的獨特貼紙* 每次交易都可收集並與朋友分享！  
+🎯 *針對年輕人的特別優惠* — 休閒娛樂、教育等折扣    
+
+點擊 *下方按鈕* 獲取更多詳情:
+""",
+
+                'educational_loan_text': """
+🎓 *來自斯伯銀行的教育貸款*   
+🎯 *年利率僅為3%*   
+📚 *在學期間僅支付利息*   
+👨‍🎓 *14歲即可申請*   
+⏳ *畢業後可分期付款長達15年*  
+
+請點擊 *下方按鈕* 獲取詳情：
+"""
+            }
+        }
+    },
+
+    'in': {
+        'greetings': 'नमस्ते! मैं आपकी किस प्रकार सहायता कर सकता हूँ?',
+        'errors': {
+            'start_error': 'बोट चालू करने में एक त्रुटि हुई। कृपया बाद में प्रयास करें।',
+            'info_error': 'जानकारी लोड करने में त्रुटि',
+            'back_error': 'मुख्य मेनू में लौटने में त्रुटि',
+            'audio_error': 'प्रसंस्करण में त्रुटि',
+            'photo_error': 'फोटो लोड करते समय एक त्रुटि हुई',
+            'gigachat_error': 'GigaChat में प्रारंभिककरण की त्रुटि:',
+        },
+
+        'keyboards': {
+            'main_keyboard': {
+                'info': 'जानकारी',
+                'location': 'इमारतें',
+                'dormitory': 'छात्रावास',
+                'hospital': 'मेडिकल सेंटर',
+                'critical': 'SOS',
+                'language_check': 'व्यायाम मशीन',
+                'back': 'पीछे'
+            },
+            'critical_keyboard': {
+                'police': 'पुलिस',
+                'hotline': 'प्रवासन सेवा की हॉटलाइन',
+                'government': 'स्थानीय सरकारी संस्थाएँ',
+                'consulate': 'कांसुलीट',
+                'back': 'पीछे'
+            },
+            'dormitory_keyboard': {
+                'check-in': 'हॉस्टल में दाखिला',
+                'payment': 'भुगतान',
+                'address': 'होस्टल के पते',
+                'rules': 'निवासी नियम',
+                'laundry': 'धुलाई की जगह',
+                'no_certificate': 'कोई टीकाकरण या फ्लोरोोग्राफी का प्रमाण पत्र नहीं है',
+                'back': 'पीछे'
+            },
+            'dormitory_location_keyboard': {
+                'dormitory_1': 'Sommera',
+                'dormitory_2': 'Tchernyshevskogo',
+                'dormitory_3': 'A. Nevskogo',
+                'dormitory_4': 'A. Nevskogo',
+                'dormitory_5': 'Tchaikovskogo',
+                'dormitory_6': 'Azovskaya',
+                'dormitory_7': 'Yelovaya',
+                'dormitory_8': 'Yelovaya',
+                'dormitory_9': 'Yubileynaya',
+            },
+            'payment_keyboard': {
+                'sber_payment': 'Sber में भुगतान करें',
+                'back': 'पीछे'
+            },
+            'language_check_keyboard': {
+                'grammar_keyboard': {
+                    'to_russian': 'रूसी में अनुवाद करें',
+                    'from_russian': 'रूसी से अनुवाद करना',
+                    'back': 'पीछे'
+                },
+                'speaking_keyboard': {
+                    'back': 'पीछे'
+                },
+                'language_check_keyboard': {
+                    'audio': 'सुनाई',
+                    'grammar': 'व्याकरण',
+                    'speaking': 'बोलना',
+                    'back': 'पीछे'
+                }
+            },
+            'location_keyboard': {
+                'loc_1': '🏛️ प्रशासनिक निकाय',
+                'loc_2': '🧮 फिज़मैट',
+                'loc_3': '🧬 जीवित प्रणाली',
+                'loc_4': '🏫 IGN',
+                'loc_5': '👨‍🏫 शिक्षा',
+                'loc_6': '🛌 पक',
+                'loc_7': '⚖️ कानूनी',
+                'loc_8': '📚 मेड लाइब्रेरी',
+                'loc_9': '🏐 FOC',
+                'loc_10': '👩‍🏫 मोमबत्ती',
+                'loc_12': '🩺 मेडिकल इंस्टीट्यूट',
+                'loc_22': '🏊‍♂️ स्विमिंग पूल',
+                'loc_24': '🎓 कॉलेज',
+                'loc_27': '⚙️ ITI',
+                'loc_28': '💸 अर्थव्यवस्था',
+                'back': 'पीछे'
+            },
+            'university_info_keyboard': {
+                'schedule': 'अनुक्रमणिका',
+                'scholarship': 'छात्रवृत्तियाँ',
+                'office_contacts': 'शिक्षा कार्यालय के संपर्क',
+                'visa_canter': 'विजा-आप्रवासन केंद्र',
+                'back': 'पीछे'
+            },
+            'language_selection_keyboard': {
+                'back': 'पीछे'
+            },
+            'sber_keyboard': {
+                'educational_loan': 'शैक्षणिक ऋण',
+                'sber_card': 'छात्रवृत्ति के लिए नक्शा',
+                'useful_links': 'उपयोगी लिंक',
+                'details': 'अधिक जानकारी',
+                'back': 'पीछे'
+            }
+        },
+
+        'handlers': {
+            'critical_handlers': {
+                'critical_police_handler': '''
+*आपातकालीन संपर्क*
+
+आपातकालीन सेवाओं का एकल नंबर (फायर ब्रिगेड, एमसीएस, पुलिस, एम्बुलेंस, गैस सेवा) — *112*
+
+।फायर ब्रिगेड और बचावकर्मी — *01* (स्थायी फोन से) और *101* (मोबाइल से)
+
+पुलिस — *02* (स्थायी फोन से) और *102* (मोबाइल से)
+
+।एम्बुलेंस — *103* (मोबाइल फोन से) और *03* (स्थायी फोन से)
+                                                    ''',
+
+                'critical_hotline_handler': '''
+*वीजा-आप्रवासी सहायता क्षेत्र*
+
+_फोन_:
+
+8 (4012) 595-595 (डॉ. 7454)— आप्रवासी रजिस्ट्री और वीजा संबंधी प्रश्नों के लिए
+
+8 (4012) 595-595 (डॉ. 7452) डॉ. 7452 — वीजा आमंत्रण संबंधी प्रश्नों के लिए
+
+_पता_: ए. नेवस्की स्ट्रीट 14, भवन संख्या 2, कक्ष 114
+
+_कार्यालय के_ _घंटे_:
+
+सोमवार 14.00-17.00
+मंगलवार 10.00-13.00
+गुरुवार 14.00-17.00
+शुक्रवार 10.00-13.00
+
+दोपहर का ब्रेक 13.00-14.00
+                                                    ''',
+
+                'critical_government_handler': '''
+*इलेक्ट्रॉनिक अपील लिंक पर उपलब्ध है:*
+https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+
+*नागरिकों की व्यक्तिगत सुनवाई* 
+
+समिति में नागरिकों की व्यक्तिगत सुनवाई समिति के अध्यक्ष या उनके पहले उपाध्यक्ष, संरचनात्मक इकाइयों के नेताओं और अधिकृत व्यक्तियों द्वारा आयोजित की जाती है। 
+सुनवाई के स्थान के बारे में, साथ ही सुनवाई के लिए निर्धारित दिनों और घंटों की जानकारी नागरिकों को दी जाती है। 
+व्यक्तिगत सुनवाई के दौरान, नागरिक अपनी पहचान प्रमाणित करने वाला दस्तावेज प्रस्तुत करता है। 
+मौखिक निवेदन की सामग्री नागरिक की व्यक्तिगत सुनवाई की पर्ची में दर्ज की जाती है। 
+यदि मौखिक निवेदन में प्रस्तुत तथ्य और परिस्थितियाँ स्पष्ट हैं और अतिरिक्त जाँच की आवश्यकता नहीं है, तो नागरिक की सहमति से सुनवाई के दौरान मौखिक उत्तर दिया जा सकता है, 
+जिसे नागरिक की व्यक्तिगत सुनवाई की पर्ची में दर्ज किया जाता है। अन्य मामलों में, निवेदन में उठाए गए प्रश्नों के विषय में लिखित उत्तर दिया जाता है। 
+व्यक्तिगत सुनवाई के दौरान प्राप्त लिखित निवेदन की रजिस्ट्रेशन और उस पर विचार करने की प्रक्रिया को लिखित निवेदनों के लिए निर्धारित नियमों के अनुसार किया जाता है।
+यदि आवेदन में ऐसे प्रश्न शामिल हैं, जिनका समाधान सेंट पीटर्सबर्ग में अंतर्राष्ट्रीय संबंधों और प्रवासन नीति के समिति की क्षमता में नहीं आता है, 
+तो नागरिक को यह स्पष्ट किया जाएगा कि उसे कहाँ और किस क्रम में आवेदन करना चाहिए। व्यक्तिगत सुनवाई के दौरान, यदि पहले से आवेदन में उठाए गए प्रश्नों पर उसे जवाब दिया गया है, 
+तो नागरिक को आगे की सुनवाई से इंकार किया जा सकता है। 
+
+व्यक्तिगत सुनवाई के लिए पूर्व-निर्धारित रजिस्ट्रेशन समिति की रिसेप्शन पर फोन करके किया जा सकता है: 576-28-08, प्रतिदिन 9.00 से 18.00 तक, शुक्रवार को 17.00 बजे तक, अवकाश: 13.00 से 14.00 तक; शनिवार, रविवार - अवकाश।                                                    ''',
+
+                'critical_consulate_handler': '''
+*रूस के विदेश मंत्रालय का कार्यालय कलीनिनग्राद में*
+
+पता: 236022, रूस, कलीनिनग्राद शहर, किरॉवा स्ट्रीट, 17
+फोन: + 7 (401) 221-37-12
+फैक्स: + 7 (401) 221-06-26
+कॉंसुलर डिपार्टमेंट: + 7 (401) 221-16-68
+पासपोर्ट डिपार्टमेंट: + 7 (401) 295-82-02
+आमंत्रण पत्रों की प्रक्रिया विभाग: + 7 (4012) 21-59-28
+
+*कांसुलर-लीगल मामलों में नागरिकों की बैठक*
+
+सोम, मंगल, बुध, गुरु: 9-00 से 17-00 बजे तक(12-00 से 14-00 बजे तक ब्रीक)
+
+शुक्र: 9-00 से 16-00 बजे तक(12-00 से 14-00 बजे तक ब्रीक)
+
+शनिवार, रविवार: अवकाश
+                                            ''',
+            },
+
+            'dormitory_handlers': {
+                'dormitory_text': """
+आप यहां निवास के बारे में अधिक जानकारी प्राप्त कर सकते हैं (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
+
+*छात्रावास में स्थान के लिए आवेदन कैसे करें?*
+
+1. शैक्षिक कार्यक्रम में आपका नामांकन होने के बाद, आपको https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key= पर वेबसाइट पर स्थान के लिए आवेदन करना आवश्यक है।
+
+_कृपया ध्यान दें कि छात्रावास में स्थानों की संख्या सीमित है।_
+
+2. यदि आपको आपके ईमेल पर यह सूचना मिली है कि छात्रावास को मंजूरी दी गई है, तो इसका मतलब है कि आपका आवेदन स्वीकार कर लिया गया है, और अब आप प्रतियोगिता में शामिल हैं। आप अपने आवेदन की स्थिति छात्र आवास परिसर के समूह में देख सकते हैं: [केएसओ समूह] https://vk.com/kso_bfu
+
+3. जब आप रैंकिंग में अपना नाम देखते हैं, तो इसका मतलब है कि आप आवास के लिए 2 आवश्यक अनुमतियाँ प्राप्त कर सकते हैं। इसके बारे में हम बाद में विस्तार से बताएंगे।
+
+4. प्राप्त अनुमतियों के साथ केएसओ (नवस्की स्ट्रीट, 14/1, कक्ष 101) में अनुबंध पर हस्ताक्षर करने के लिए जाएं।
+
+5. अनुबंध पर हस्ताक्षर करने और निवास शुल्क का भुगतान करने के बाद आप निर्दिष्ट छात्रावास की प्रबंधक के पास आवास और जानकारी के लिए जाएं।
+
+पहुंचने पर, छात्रावास में निवास अनुबंध पर हस्ताक्षर करना आवश्यक है, दिशा-निर्देश प्राप्त करना और पहले सेमेस्टर के लिए छात्रावास का भुगतान करना है।
+
+_साथ में पासपोर्ट लाना अनिवार्य है।_
+
+*छात्रों के सामाजिक-आर्थिक समर्थन केंद्र के कार्यालय समय:*  
+
+- सोमवार: 10:00 से 17:00 तक  
+- मंगलवार: 10:00 से 17:00 तक  
+- गुरुवार: 10:00 से 17:00 तक  
+- शुक्रवार: 10:00 से 16:45 तक  
+
+दोपहर का भोजन 13:00 से 14:00 तक है।
+
+*पता: ए. नेव्स्की सड़क, 14, भवन 10, 1 वां तल, कार्यालय 14.*
+
+*चिकित्सा प्रमाणपत्र*
+
+आवास में रहने के लिए, छात्रावास के कमांडेंट को चिकित्सा आयोग के पास होने का प्रमाणपत्र प्रदान करना आवश्यक है। इस प्रमाणपत्र के लिए, आपको बीएफयू इम. आई. कांता के क्लिनिकल-डायग्नोस्टिक सेंटर (केडीसी) के कार्यालय 2 में जाना होगा।
+
+*आपके साथ ले जाएं:*
+
+- पासपोर्ट
+- टीकाकरण प्रमाणपत्र (दस्तावेज़ जिसमें आपके जीवन के दौरान सभी टीकों का विवरण है, विशेष रूप से इसमें तिल्ली, डिफ्थीरिया, टेटनस और हेपेटाइटिस बी के टीकों के प्रमाण होना चाहिए)
+- 1 वर्ष से पुरानी न होने वाली फ्लोरोोग्राफी
+- COVID-19 पर 2 नकारात्मक पीसीआर परीक्षण परिणाम/ पाठ्यक्रम में भाग लेने की अनुमति।
+
+_दस्तावेज़ों को रूसी भाषा में होना चाहिए या इनमें प्रमाणित अनुवाद होना चाहिए।_
+
+*पता* केडीसी बीएफयू इम. आई. कांता: (https://goo.gl/maps/bwq24xTh5P1EctiU8)
+
+_यदि आपके पास入住 करने के समय ये प्रमाणपत्र नहीं हैं, तो इन्हें किसी भी क्लिनिक में अपनी लागत पर बनवाना आवश्यक है।_
+                                            """,
+
+                'payment_text': """
+छात्रावास का भुगतान दो तरीकों से किया जा सकता है।
+
+1. व्यक्तिगत रूप से। 
+
+प्रशासनिक भवन के कक्ष संख्या 222, दूसरी मंजिल में। यहाँ आपको उसी मंजिल पर भुगतान के लिए एक रसीद मिलेगी। कैश काउंटर के माध्यम से आप नकद में रूबल या बैंक कार्ड से भुगतान कर सकते हैं।
+
+2. वेबसाइट के माध्यम से दूरस्थ रूप से।
+
+प्रथम वर्ष के छात्र आवास लेते समय पहले सेमेस्टर का पूरा भुगतान करते हैं। इसके बाद, शरद सेमेस्टर का भुगतान 15 सितंबर तक और वसंत सेमेस्टर का भुगतान 15 फरवरी तक किया जाता है।                                            """,
+
+                'rules_text': """
+- अपने कमरे और रसोई को स्वच्छ रखना।
+- पालतू जानवर रखना मना है।
+- पड़ोसियों का सम्मान करें: रात 11:00 बजे से सुबह 8:00 बजे तक शांत रहें, विनम्र और ध्यानपूर्ण रहें।
+- रात 10:00 बजे तक मेहमानों को आमंत्रित कर सकते हैं, लेकिन रात में मेहमानों की पार्किंग की अनुमति नहीं है।
+- विश्वविद्यालय के परिसर में धूम्रपान और शराब पीना पूरी तरह से मना है।
+- सुरक्षा नियमों का ध्यानपूर्वक अध्ययन करें, निकासी के पास के स्थानों को जानें।
+- उपकरण में खराबी होने पर तुरंत वार्डन को सूचित करें।
+- निवास के किसी भी प्रश्न के लिए हॉस्टल प्रशासन से संपर्क करें।
+- छात्रों के सामाजिक समर्थन केंद्र की स्वीकृति के बिना किसी अन्य कमरे में न जाएं।
+
+_सभी हॉस्टलों में बर्तन नहीं होते, लेकिन हर सप्ताह ताजा बिस्तर प्रदान किया जाता है।_
+
+*सलाह*: निवास के तुरंत बाद वार्डन से मिलें - वह घरेलू मामलों में आपका मुख्य सहायक है।
+""",
+
+                'laundry_text': """
+धुलाई की मशीनें प्रत्येक छात्रावास की इमारत में होती हैं। कमांडेंट या चौकीदार बताएंगे कि कपड़े धोने वाली मशीनों का कमरा कहाँ है और कुंजी कब लेना संभव है।आपको धुलाई के लिए अपने साथ डिटर्जेंट लाना होगा। 
+
+धुलाई की जगह में कई धुलाई मशीनें हैं, जहाँ आप एक साथ कई कपड़े धो सकते हैं यदि आपके पास धोने के लिए बहुत अधिक कपड़े हैं। अंतर्वस्त्र को विशेष बैग में धोना अनिवार्य है। 
+जूतों को धोना मना है, क्योंकि इससे धुलाई मशीनें खराब हो जाती हैं। मशीन का उपयोग करने से पहले, कमरे में दिए गए निर्देशों को ध्यान से पढ़ें। धोने के बाद कपड़े सुखाने के लिए विशेष कमरे का उपयोग किया जा सकता है, 
+जिसमें कपड़े सुखाने के लिए मशीनें हैं।
+
+*याद रखें*, कि छात्रावास में अन्य छात्र भी अपनी कपड़े धोना चाहते हैं, इसलिए धोने के बाद कुंजी को चौकीदार या कमांडेंट को तुरंत लौटाएं, ठीक उसी समय जब आपने इसे वापिस करने का वादा किया था।                                            """,
+
+                'no_certificate_text': """
+अगर टीकाकरण या फ्लोरोग्राफी का सर्टिफिकेट नहीं है
+
+1. *यदि आपके पास ताजा फ्लुओरोप्टोग्राफी नहीं है*  
+
+आप इसे कई स्थानों पर करा सकते हैं, उदाहरण के लिए:  
+- बीएफयू के केडीसी में 320 रू. छात्र कार्ड पर (यह पास में होना चाहिए)। केडीसी का स्थान: [https://goo.gl/maps/P4djCkwJ3ZQHThgGA]  
+- मेडएक्सपर्ट में (कосмическая स्ट्रीट या मॉस्को प्रॉस्पेक्ट), 17:00 बजे तक, बिना चित्र के 450 रू. स्थान:  [https://goo.gl/maps/rRiC1Nh35BNPw2w3A]  
+- नोवोमेड (गागरिन 2वी) 17:00 बजे तक, 350 रू.  स्थान:  [https://goo.gl/maps/kgEkj4yLnWBNbFUm6]    
+
+2. *यदि आपके पास टीकाकरण का प्रमाण पत्र नहीं है*  
+
+किसी भी मेडएक्सपर्ट शाखा में जाएं। वहां आपको एक रक्त परीक्षण करना होगा, जिसे कहा जाता है "मिजाज प्रतिरक्षा के लिए खसरा और डिफ्थीरिया"। 
+यह परीक्षण प्रत्येक दिन, सोमवार से शुक्रवार, 7:30 बजे से 19:00 बजे, शनिवार और रविवार, 7:30 बजे से 17:00 बजे के बीच किया जा सकता है।  
+
+परीक्षण उपवास में किया जाता है।  
+
+परिणाम 4 कार्य दिवसों के बाद जारी किया जाता है (परिणाम व्यक्तिगत खाते में प्राप्त किया जा सकता है)।
+                                                """,
+            },
+
+            'dormitory_location_handlers': 'छात्रावास №',
+
+            'hospital_handlers': {
+                'hospital_text': '''
+*विश्वविद्यालय क्लिनिक BFU। नाम: I. Kant*  
+
+*पता*: 236041, रूस, कालिनिनग्राद, 9 अप्रैल सड़क, 60  
+*संपर्क*: +7 (4012) 31-33-39 kdc@kantiana.ru  
+
+*चिकित्सा बीमा*:  
+https://kantiana.ru/international/inostrannomu-studentu/oms/  
+
+*पॉलीक्लिनिक से जुड़ने के लिए निर्देश*:  
+https://kantiana.ru/students/polyclinic/  
+
+*मानचित्र पर क्लिनिक*:  
+https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%209%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07
+                                            '''
+            },
+
+            'language_chack_handlers': {
+                'grammar_handlers': {
+                    'language_grammar_handler': '''
+                                            *अनुवाद विकल्प चुनें*:
+                                            ''',
+                    'translate_to_russian_handler': '''
+                                            इस पाठ का रूसी भाषा में अनुवाद करें:
+                                            ''',
+                    'translate_from_russian_handler': '''
+                                            इस पाठ का रूसी भाषा से अपने में अनुवाद करें:
+                                            ''',
+                },
+
+                'listening_handlers': {
+                    'send_voice': 'पाठ सुनें और इसे रूसी में लिखने की कोशिश करें।',
+                },
+
+                'speaking_handlers': {
+                    'topics': [
+                        'आप अपने परिवार के बारे में थोड़ा बताएं।',
+                        'क्या आपके पास कोई पालतू जानवर है?',
+                        'आपको कौन से व्यंजन पसंद हैं?',
+                        'आपका कमरा कैसा है, इसका वर्णन करें।',
+                        'आपका पसंदीदा परिवहन का साधन कौन सा है?',
+                        'आप अपना खाली समय कहां बिताना पसंद करते हैं?',
+                        'आप अपने रविवार को कैसे बिताते हैं?',
+                        'आपकी बचपन की सबसे जीवंत याद क्या है?',
+                        'आप किस यात्रा पर जाना चाहेंगे?',
+                        'कौन सी आदतें आपको उत्पादक बने रहने में मदद करती हैं?',
+                        'आपका कल का दिन कैसे गुजरा?',
+                        'आप क्या काम करते हैं और काम में आप क्या करते हैं?',
+                        'आपका परिवार किस चीज़ का सपना देखता है?',
+                        'पिछले हफ्ते आपके साथ क्या दिलचस्प हुआ?',
+                        'आपका सबसे अच्छा दोस्त किस चीज़ में रुचि रखता है?',
+                        'आपने जो आखिरी फिल्म देखी, उसके बारे में अपने अनुभव साझा करें।',
+                        'आपने कालिनिनग्राद में पढ़ाई करने का फैसला क्यों किया?'
+                    ],
+                    'speaking_send': 'मैं तेरी कहानी का इंतजार कर रहा हूँ:',
+                    'handle_voice_message': 'विश्लेषण का परिणाम:',
+                }
+            },
+
+            'location_handlers': {
+                'addresses_handler': 'केंद्र का चयन करें',
+                'loc_1_handler': """
+*प्रशासनिक भवन, ए.नेव्स्कोय सड़क, 14*
+
+यहां स्थित हैं:
+· दस्तावेज प्रबंधन (कक्ष 115)
+· लेखा सेवा (कक्ष 212)
+· अभिलेखागार (कक्ष 221)
+· आय और कर लेखांकन के लिए गणना समूह (कक्ष 222)
+· नकद काउंटर (दूसरी मंजिल)
+· एक्वेरियम हॉल
+· मैक्सिमम हॉल
+· कैफेटेरिया (पहली मंजिल)
+
+*स्थान*: https://goo.gl/maps/zRT7KcqxLXtAVaUE7
+                                            """,
+
+                'loc_2_handler': """
+*कोर्पस №2, भौतिकी, गणित और सूचना प्रौद्योगिकी संस्थान («फिजмат»), अलेक्सांद्र नेवस्की स्ट्रीट, 14* 
+
+यहाँ स्थित हैं: 
+· विदेशी छात्रों के साथ कार्य करने वाला विभाग (कमरा 119) 
+· वीज़ा-आव्रजन सहायता विभाग (कमरा 114) 
+· भर्ती समिति (कमरा 116 और 117) 
+· पुस्तकालय, कमरा 202 («पढ़ने का क्षेत्र») 
+· IT अवसंरचना सेवा (कमरा 121) 
+
+*स्थान*: https://goo.gl/maps/6yt18jT8DoS5KgQv5
+                                            """,
+
+                'loc_3_handler': """
+*कॉरपस संख्या 3, विश्वविद्यालय सड़क, 2*
+
+यहाँ हैं:
+· जीवित प्रणालियों का संस्थान
+· मुख्य विश्वविद्यालय पुस्तकालय: वैज्ञानिक सदस्यता (कमरा 126), अध्ययन कक्ष (कमरा 115)
+
+*स्थान*: https://goo.gl/maps/y2XnUi5vj5MxbRPeA
+                                            """,
+
+                'loc_4_handler': """
+*कर्पस नंबर 4, चेरनिशेवस्कोवो स्ट्रीट, 56 («घड़ी वाला कर्पस»)*
+
+यहाँ स्थित हैं:
+
+· मानविकी संस्थान
+· रूसी भाषा केंद्र (कमरा 01)
+· सोवियत बचपन का संग्रहालय
+
+*स्थान*: https://goo.gl/maps/EBrY5H86euoPi6Sn9
+                                            """,
+
+                'loc_5_handler': """
+*भवन संख्या 5, चेरनिशेव्स्कोगो स्ट्रीट, 56ए* 
+
+यहाँ स्थित है: 
+· शिक्षा संस्थान 
+
+*स्थान*: https://goo.gl/maps/xgHnL2PJ7ASXTFGG6
+                                            """,
+
+                'loc_6_handler': """
+*कर्पस नंबर 6, अलेक्सांद्र नेवस्की स्ट्रीट, 14बी (शाइबा)*
+
+यहां स्थित है:
+· छात्रावासों का परिसर (कमरा 101)
+· पाठ्येतर गतिविधियों का प्रबंधन
+
+*स्थान*: https://maps.app.goo.gl/pKu1EREgTPvJ6VGN7
+                                            """,
+
+                'loc_7_handler': """
+*कोर्पस नंबर 7, फ्रुन्ज़े स्ट्रीट, 6*
+
+यहाँ हैं:
+· शैक्षिक टेलीस्टूडियो
+· विधि संस्थान
+
+*स्थान*: https://goo.gl/maps/39LxmNSyZdSjnme16
+                                            """,
+
+                'loc_8_handler': """
+*कोर्पस नं 8, 9 अप्रैल रोड, 5* 
+
+यहां स्थित है: 
+· चिकित्सा पुस्तकालय 
+
+*स्थान*: https://goo.gl/maps/Tja71g7t1QPRqtbt7
+                                            """,
+
+                'loc_9_handler': """
+*कॉर्पस नंबर 9, ए. नेव्स्कोय स्ट्रीट, 14 ('फोक')*
+
+यहाँ स्थित है:
+· जीवित स्वास्थ्य और खेल परिसर
+
+*स्थान*: https://g.page/kantiana-sport?share
+                                            """,
+
+                'loc_10_handler': """
+*कॉर्पस नंबर 10, ए. नेव्स्की स्ट्रीट. 14 («स्वेचका»)*
+
+यहाँ स्थित हैं:
+· छात्रों के लिए सामाजिक-आर्थिक सहायता केंद्र (कब. 14)
+· करियर केंद्र
+
+*स्थान*: https://goo.gl/maps/djfHWwTNer12z7caA
+                                            """,
+
+                'loc_12_handler': """
+*कोर्पस नं १२, उल.बोटकिना, ४-६*
+
+यहां स्थित है:
+· मेडिकल इंस्टीट्यूट
+
+*स्थान*: https://goo.gl/maps/BKJMV9WAR9G6PpaJ6
+                                            """,
+
+                'loc_22_handler': """
+*कॉर्पस नंबर 22, ए. नेव्स्की स्ट्रीट, 14*
+
+यहाँ स्थित है:
+· एकेडमिक-फिजिकल कॉम्प्लेक्स जिसमें स्विमिंग पूल है
+
+*लोकेशन*: https://goo.gl/maps/VevnRkQyv8FmZPXcA
+                                            """,
+
+                'loc_24_handler': """
+*भवन संख्या 24, ज़ूलॉजिकल स्ट्रीट, 2*
+
+यहाँ मौजूद हैं:
+· यूनिवर्सिटी कॉलेज
+
+*स्थान*: https://goo.gl/maps/Fb76GxbTCQUm3zEa7
+                                            """,
+
+                'loc_27_handler': """
+*भवन संख्या 27, लेफ्टिनेंट जनरल ओज़ेरोव सड़क, 57*
+
+यहां स्थित है:  
+· इंजीनियरिंग-तकनीकी संस्थान  
+· 'कांतियाना' एरेना  
+
+*स्थान*: https://goo.gl/maps/H126DeMnucPJvA1U9
+                                            """,
+
+                'loc_28_handler': """
+*भवन संख्या 28, गोर्की सड़क, 23*
+
+यहाँ स्थित हैं:
+· अर्थशास्त्र और प्रबंधन संस्थान
+
+*स्थान*: https://goo.gl/maps/THR3WG17cF2EBtvW6
+                                            """,
+            },
+
+            'university_info_handlers': {
+                'schedule_text': '''
+*कक्षाओं का कार्यक्रम*:
+https://schedule.kantiana.ru/
+                                            ''',
+                'scholarship_text': '''
+*छात्रवृत्तियों और वित्तीय सहायता की जानकारी*:
+https://kantiana.ru/students/scholarship/
+                                            ''',
+                'office_contacts_text': '''
+*संपर्क:* 
+
+_पता_: 236041, कालनिनग्राद, अलेक्ज़ेंडर नेवस्की स्ट्रीट, 14 
+_संपर्क फोन_: +7 (4012) 59-55-95 
+_प्रवेश पत्रक कार्यालय_: अलेक्ज़ेंडर नेवस्की स्ट्रीट, 14 
+
+8 (800) 600-52-39 कॉल मुफ्त है 
++7 (4012) 59-55-96 
+
+_केनसिलरी_: +7 (4012) 59-55-97 
+_ई-मेल_: post@kantiana.ru 
+
+*प्रशासनिक सेवाओं का समय* 
+
+सोमवार: 9:00 — 18:00 _ब्रेक_: 13:00—13:45 
+मंगलवार: 9:00 — 18:00 _ब्रेक_: 13:00—13:45 
+बुधवार: कोई प्रवेश नहीं (दस्तावेजों के साथ काम) 
+गुरुवार: 9:00 — 18:00 _ब्रेक_: 13:00—13:45 
+शुक्रवार: 9:00 — 16:45 _ब्रेक_: 13:00—13:45 
+शनिवार और रविवार: छुट्टी के दिन
+''',
+                'visa_center_text': '''
+*विज़ा-प्रवासन केंद्र*:
+https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/*संपर्क*
+
+_पता_: 236041, रूस, कालिनिनग्राद, सड़कों ए. नेव्स्की 14, भवन 2, कक्ष 119
+
+_काम करने के घंटे_: 
+सोमवार — गुरुवार 9:00 से 18:00 तक, शुक्रवार 9:00 से 16:45 तक
+
+_फोन_: +7 (4012) 31-33-99
+_ईमेल_: international-study@kantiana.ru
+'''
+            },
+
+            'sber_handlers': {
+                'useful_links_text': """
+🔗 स्बेर और भागीदारों के उपयोगी संसाधन:
+• [नेटोलॉजी प्लेटफॉर्म](https://netology.ru/navigation) — ऑनलाइन पाठ्यक्रम और प्रोफेशन
+• [शांत रहने की प्रैक्टिस](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — साक्षात्कार के लिए ट्रेनर
+• [स्कूल 21](https://sbergraduate.ru/careerofthefuture/) — मुफ्त आईटी शिक्षा
+• [स्बेरसोवा](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — शैक्षिक प्लेटफॉर्म
+• [किब्रारी](https://sber.ru/kibrary) — डिजिटल पुस्तकालय
+• [डिजिटल मैराथन](https://it-marathon.21-school.ru/?utm_source=ter_bank&utm_medium=referral&utm_campaign) — प्रतियोगिताएँ और चुनौतियाँ
+• [स्बेर द्वारा स्टार्टअप](https://sberstudent.sberclass.ru/) — स्टार्टअप्स का समर्थन
+• [इंटर्नशिप](https://sbergraduate.ru/practice/) — नौकरी के अवसर और इंटर्नशिप
+""",
+
+                'sber_card_text': """
+💳 *Sber का कार्ड*
+✨ *हमेशा के लिए मुफ्त सेवा*
+💸 *पसंदीदा खरीदारी पर 5% कैशबैक*
+📈 *संचय खाते पर ब्याज* *16%* वार्षिक तक
+🎨 *Sber के अनोखे स्टिकर्स* हर लेनदेन के लिए — संग्रह करें और दोस्तों के साथ साझा करें!
+🎯 *युवाओं के लिए विशेष प्रस्ताव* — मनोरंजन, शिक्षा और बहुत कुछ पर छूटविवरण के लिए *नीचे बटन* पर क्लिक करें:
+""",
+
+                'educational_loan_text': """
+🎓 *शिक्षा ऋण स्बेर से* 
+🎯 *सिर्फ 3% वार्षिक* 
+📚 *शिक्षा के दौरान केवल ब्याज का भुगतान करें* 
+👨‍🎓 *14 वर्ष की उम्र से आवेदन करें* 
+⏳ *स्नातक होने के बाद 15 वर्ष की किस्तें* विवरण के लिए *नीचे बटन* पर क्लिक करें:
+"""
+            }
         }
     }
-}
 }
