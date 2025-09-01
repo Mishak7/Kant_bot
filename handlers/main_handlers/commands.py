@@ -73,8 +73,7 @@ async def dormitory_info(callback: CallbackQuery):
     """Display dormitory information section."""
     try:
         text = f"🏘️ {TEXTS['ru']['keyboards']['main_keyboard']['dormitory']}"
-        await callback.message.delete()
-        await callback.message.answer(text, reply_markup=dormitory_keyboard(), parse_mode="Markdown")
+        await callback.message.edit_text(text, reply_markup=dormitory_keyboard(), parse_mode="Markdown")
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory info error: {e}\n{traceback.format_exc()}')

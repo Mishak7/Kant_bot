@@ -292,7 +292,7 @@ https://kantiana.ru/students/polyclinic/
                                             '''
             },
 
-            'language_chack_handlers': {
+            'language_check_handlers': {
                 'grammar_handlers': {
                     'language_grammar_handler': '''
                                             *Выберите вариант перевода*:
