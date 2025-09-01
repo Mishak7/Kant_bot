@@ -46,7 +46,8 @@ TEXTS = {
                 'dormitory_8': 'Еловая',
                 'dormitory_9': 'Юбилейная',
                 'sber_payment': 'Оплатить в Сбере',
-        'back': 'Назад'
+        'back': 'Назад',
+        'more': 'Подробнее'
     },
     'language_check_keyboard': {
         'grammar_keyboard': {
@@ -616,6 +617,7 @@ _Email_: international-study@kantiana.ru
             'dormitory_8': 'Yelovaya',
             'dormitory_9': 'Yubileynaya',
             'sber_payment': 'Pay in SBER',
+            'more': 'More',
             'back': 'Back'
         },
         'language_check_keyboard': {
