@@ -247,8 +247,9 @@ async def dormitory_8_handler(callback: CallbackQuery, language: str):
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
                 [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}",
                                       url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-8/")],
-                [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/iGhft")],
-                [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
+                [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}",
+                                      callback_data="dormitory_check-in")]
+
             ])
         )
         logger.info(f"Photo for dormitory 8 sent to user {callback.from_user.id}")

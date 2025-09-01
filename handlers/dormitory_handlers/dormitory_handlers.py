@@ -22,6 +22,8 @@ from handlers.dormitory_handlers.dormitory_keyboard import (
 payment_keyboard
 )
 from handlers.main_handlers.languages import TEXTS
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 
 
 router = Router()
@@ -34,8 +36,9 @@ async def dormitory_check_in_handler(callback: CallbackQuery, language: str):
         await callback.message.edit_text(
             DORMITORY_TEXT,
             parse_mode="Markdown",
-            reply_markup=dormitory_check_in_keyboard(language)
-        )
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text=f"🧳  {TEXTS[language]['keyboards']['dormitory_keyboard']['check-in']}", url='https://telegra.ph/Zaselenie-v-obshchezhitie-08-29')],
+                [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="back_to_main")]]))
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory check-in error: {e}\n{traceback.format_exc()}')

@@ -29,17 +29,14 @@ from handlers.location_handlers.location_keyboard import uni_loc_keyboard
 from handlers.language_check_handlers.language_check_keyboard import language_keyboard
 from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
-
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.storage.memory import MemoryStorage
 
 class LanguageState(StatesGroup):
     waiting_for_language = State()
 
 router = Router()
 user_languages = {}
-
 
 @router.message(CommandStart())
 async def send_welcome(message: types.Message, state: FSMContext):
@@ -65,15 +62,12 @@ async def set_language(callback: CallbackQuery, state: FSMContext):
         }
 
         lang_code = callback.data
-        language = lang_map.get(lang_code, "ru")  # по умолчанию русский
+        language = lang_map.get(lang_code, "ru")
 
-        # Сохраняем язык в состоянии
         await state.update_data(language=language)
 
-        # Сохраняем язык в глобальный словарь (если нужно)
         user_languages[callback.from_user.id] = language
 
-        # Отправляем приветствие на выбранном языке
         await callback.message.edit_text(
             text=TEXTS[language]['greetings'],
             reply_markup=main_roots_keyboard(language),
