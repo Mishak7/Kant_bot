@@ -300,7 +300,7 @@ https://kantiana.ru/students/polyclinic/
   '''
     },
 
-    'language_chack_handlers': {
+    'language_check_handlers': {
         'grammar_handlers': {
             'language_grammar_handler': '''
                                             *Выберите вариант перевода*:
@@ -589,6 +589,7 @@ _Email_: international-study@kantiana.ru
             'hospital': 'Medical Center',
             'critical': 'Critical situations',
             'language_check': 'Russian language check',
+            'sber':'SBER',
             'back': 'Back'
         },
         'critical_keyboard': {
@@ -605,7 +606,16 @@ _Email_: international-study@kantiana.ru
             'rules': 'Dormitory rules',
             'laundry': 'Laundry',
             'no_certificate': 'No vaccination certificate or fluorography',
-            'dormitory': 'Dormitory №',
+            'dormitory_1': 'Sommer',
+            'dormitory_2': 'Chernyshevsky',
+            'dormitory_3': 'Nevsky',
+            'dormitory_4': 'Nevsky',
+            'dormitory_5': 'Tchaikovsky',
+            'dormitory_6': 'Azovskaya',
+            'dormitory_7': 'Yelovaya',
+            'dormitory_8': 'Yelovaya',
+            'dormitory_9': 'Yubileynaya',
+            'sber_payment': 'Pay in SBER',
             'back': 'Back'
         },
         'language_check_keyboard': {
@@ -864,7 +874,7 @@ https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1
                                             '''
         },
 
-        'language_chack_handlers': {
+        'language_check_handlers': {
             'grammar_handlers': {
                 'language_grammar_handler': '''
                                             *Choose an option for translation*:
@@ -920,8 +930,6 @@ Here you can find:
 · Aquarium Hall
 · Maximum Hall
 · Cafeteria (first floor)
-
-*Location*: https://goo.gl/maps/zRT7KcqxLXtAVaUE7
                                             """,
 
             'loc_2_handler': """
@@ -934,7 +942,7 @@ Here are located:
 · Library, room 202 ("Reading Room")
 · IT Infrastructure Service (room 121)
 
-*Location*: https://goo.gl/maps/6yt18jT8DoS5KgQv5
+: https://goo.gl/maps/6yt18jT8DoS5KgQv5
                                             """,
 
             'loc_3_handler': """
@@ -944,7 +952,7 @@ Here you can find:
 · Institute of Living Systems
 · Main University Library: Scientific subscription (room 126), reading room (room 115)
 
-*Location*: https://goo.gl/maps/y2XnUi5vj5MxbRPeA
+: https://goo.gl/maps/y2XnUi5vj5MxbRPeA
                                             """,
 
             'loc_4_handler': """
@@ -955,7 +963,7 @@ Here are located:
 · Center for the Russian Language (room 01)
 · Museum of Soviet Childhood
 
-*Location*: https://goo.gl/maps/EBrY5H86euoPi6Sn9
+: https://goo.gl/maps/EBrY5H86euoPi6Sn9
                                             """,
 
             'loc_5_handler': """
@@ -964,7 +972,7 @@ Here are located:
 Here is located:  
 · Institute of Education  
 
-*Location*: https://goo.gl/maps/xgHnL2PJ7ASXTFGG6
+: https://goo.gl/maps/xgHnL2PJ7ASXTFGG6
                                             """,
 
             'loc_6_handler': """
@@ -974,7 +982,7 @@ Here are located:
 · Complex of student dormitories (room 101)
 · Office of extracurricular activities
 
-*Location*: https://maps.app.goo.gl/pKu1EREgTPvJ6VGN7
+: https://maps.app.goo.gl/pKu1EREgTPvJ6VGN7
                                             """,
 
             'loc_7_handler': """
@@ -984,7 +992,7 @@ Here you can find:
 · Educational Television Studio 
 · Law Institute 
 
-*Location*: https://goo.gl/maps/39LxmNSyZdSjnme16
+: https://goo.gl/maps/39LxmNSyZdSjnme16
                                             """,
 
             'loc_8_handler': """
@@ -993,7 +1001,7 @@ Here you can find:
 Here is located:
 · Medical Library
 
-*Location*: https://goo.gl/maps/Tja71g7t1QPRqtbt7
+: https://goo.gl/maps/Tja71g7t1QPRqtbt7
                                             """,
 
             'loc_9_handler': """
@@ -1002,7 +1010,7 @@ Here is located:
 Here is located: 
 · Physical Culture and Health Complex 
 
-*Location*: https://g.page/kantiana-sport?share
+: https://g.page/kantiana-sport?share
                                             """,
 
             'loc_10_handler': """
@@ -1012,7 +1020,7 @@ Here are located:
 · Center for Socio-Economic Support of Students (room 14)
 · Career Center
 
-*Location*: https://goo.gl/maps/djfHWwTNer12z7caA
+: https://goo.gl/maps/djfHWwTNer12z7caA
                                             """,
 
             'loc_12_handler': """
@@ -1021,7 +1029,7 @@ Here are located:
 Here is located: 
 · Medical Institute 
 
-*Location*: https://goo.gl/maps/BKJMV9WAR9G6PpaJ6
+: https://goo.gl/maps/BKJMV9WAR9G6PpaJ6
                                             """,
 
             'loc_22_handler': """
@@ -1030,7 +1038,7 @@ Here is located:
 Here is located: 
 · Educational and Sports Complex with a swimming pool 
 
-*Location*: https://goo.gl/maps/VevnRkQyv8FmZPXcA
+: https://goo.gl/maps/VevnRkQyv8FmZPXcA
                                             """,
 
             'loc_24_handler': """
@@ -1039,7 +1047,7 @@ Here is located:
 Here you can find:  
 · University College  
 
-*Location*: https://goo.gl/maps/Fb76GxbTCQUm3zEa7
+: https://goo.gl/maps/Fb76GxbTCQUm3zEa7
                                             """,
 
             'loc_27_handler': """
@@ -1049,7 +1057,7 @@ Here are located:
 · Engineering and Technical Institute  
 · «Kantiana» Arena  
 
-*Location*: https://goo.gl/maps/H126DeMnucPJvA1U9
+: https://goo.gl/maps/H126DeMnucPJvA1U9
                                             """,
 
             'loc_28_handler': """
@@ -1058,7 +1066,7 @@ Here are located:
 Here are located:
 · Institute of Economics and Management
 
-*Location*: https://goo.gl/maps/THR3WG17cF2EBtvW6
+: https://goo.gl/maps/THR3WG17cF2EBtvW6
                                             """,
         },
 

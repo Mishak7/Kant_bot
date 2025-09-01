@@ -1,6 +1,6 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-def sber_keyboard() -> InlineKeyboardMarkup:
+def sber_keyboard(language: str) -> InlineKeyboardMarkup:
     """Creates main keyboard for sber handlers"""
     return InlineKeyboardMarkup(
         inline_keyboard=[
@@ -12,21 +12,21 @@ def sber_keyboard() -> InlineKeyboardMarkup:
         ]
     )
 
-def card_keyboard() -> InlineKeyboardMarkup:
+def card_keyboard(language: str) -> InlineKeyboardMarkup:
     """Go to sber cards info"""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text='🔗 Подробнее', url='https://kantiana.ru/students/scholarship/sber/')],
         [InlineKeyboardButton(text='◀️ Назад', callback_data='sber')]
     ])
 
-def loan_keyboard() -> InlineKeyboardMarkup:
+def loan_keyboard(language: str) -> InlineKeyboardMarkup:
     """Go to loan info - MAY BE OUTDATED, WEBSITE MADE BY NOVGU!!!"""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text='🔗 Подробнее', url='https://telegra.ph/Obrazovatelnyj-kredit-06-19')],
         [InlineKeyboardButton(text='◀️ Назад', callback_data='sber')]
     ])
 
-def back_to_sber_keyboard() -> InlineKeyboardMarkup:
+def back_to_sber_keyboard(language: str) -> InlineKeyboardMarkup:
     """Go back to main sber keyboard"""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text='◀️ Назад', callback_data='sber')]

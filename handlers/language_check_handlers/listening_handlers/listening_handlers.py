@@ -12,9 +12,9 @@ class TranslationState(StatesGroup):
     waiting_for_text = State()
 
 @router.callback_query(F.data == "language_audio")
-async def send_voice(callback: CallbackQuery, state: FSMContext):
+async def send_voice(callback: CallbackQuery, state: FSMContext, language: str):
     voice_file =  FSInputFile('file_name.ogg')
-    text = TEXTS['ru']['handlers']['language_check_handlers']['listening_handlers']['send_voice']
+    text = TEXTS[language]['handlers']['language_check_handlers']['listening_handlers']['send_voice']
     await callback.message.edit_text(text, parse_mode="Markdown")
     await callback.message.answer_voice(voice=voice_file)
     await state.set_state(TranslationState.waiting_for_text)
@@ -22,12 +22,12 @@ async def send_voice(callback: CallbackQuery, state: FSMContext):
 
 
 @router.message(TranslationState.waiting_for_text, F.text)
-async def audio_text_analysis(message: Message, state: FSMContext):
+async def audio_text_analysis(message: Message, state: FSMContext, language: str):
     try:
         transcription_text = message.text
         transcription_result = gigachat_response(transcription_text, to_russian=False, audio_file=True)
-        await message.answer(transcription_result, parse_mode="Markdown", reply_markup=back_to_language_keyboard())
+        await message.answer(transcription_result, parse_mode="Markdown", reply_markup=back_to_language_keyboard(language))
     except Exception as e:
-        await message.answer(f"{TEXTS['ru']['errors']['audio_error']}: {str(e)}")
+        await message.answer(f"{TEXTS[language]['errors']['audio_error']}: {str(e)}")
     finally:
         await state.clear()

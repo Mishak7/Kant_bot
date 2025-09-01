@@ -17,48 +17,48 @@ router = Router()
 
 
 @router.callback_query(F.data == "critical_police")
-async def critical_police_handler(callback: CallbackQuery):
+async def critical_police_handler(callback: CallbackQuery, language: str):
     """Provide emergency police, rescue, and medical contact numbers."""
     try:
-        text = TEXTS['ru']['handlers']['critical_handlers']['critical_police_handler']
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
+        text = TEXTS[language]['handlers']['critical_handlers']['critical_police_handler']
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'Police contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'], show_alert=True)
+        await callback.answer(TEXTS[language]['errors']['info_error'], show_alert=True)
 
 
 @router.callback_query(F.data == "critical_hotline")
-async def critical_hotline_handler(callback: CallbackQuery):
+async def critical_hotline_handler(callback: CallbackQuery, language: str):
     """Provide visa and migration support hotline information."""
     try:
-        text = TEXTS['ru']['handlers']['critical_handlers']['critical_hotline_handler']
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
+        text = TEXTS[language]['handlers']['critical_handlers']['critical_hotline_handler']
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'Hotline contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'], show_alert=True)
+        await callback.answer(TEXTS[language]['errors']['info_error'], show_alert=True)
 
 
 @router.callback_query(F.data == "critical_government")
-async def critical_government_handler(callback: CallbackQuery):
+async def critical_government_handler(callback: CallbackQuery, language: str):
     """Provide local government contact information and procedures."""
     try:
-        text = TEXTS['ru']['handlers']['critical_handlers']['critical_government_handler']
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
+        text = TEXTS[language]['handlers']['critical_handlers']['critical_government_handler']
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'Government contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'], show_alert=True)
+        await callback.answer(TEXTS[language]['errors']['info_error'], show_alert=True)
 
 
 @router.callback_query(F.data == "critical_consulate")
-async def critical_consulate_handler(callback: CallbackQuery):
+async def critical_consulate_handler(callback: CallbackQuery, language: str):
     """Provide consulate office information and working hours."""
     try:
-        text = TEXTS['ru']['handlers']['critical_handlers']['critical_consulate_handler']
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
+        text = TEXTS[language]['handlers']['critical_handlers']['critical_consulate_handler']
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'Consulate contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS['ru']['errors']['info_error'], show_alert=True)
+        await callback.answer(TEXTS[language]['errors']['info_error'], show_alert=True)

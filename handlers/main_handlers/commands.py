@@ -20,7 +20,7 @@ import traceback
 from aiogram import Router, types, F
 from aiogram.filters import CommandStart
 from config.logger import logger
-from handlers.main_handlers.keyboard import main_roots_keyboard
+from handlers.main_handlers.keyboard import main_roots_keyboard, language_selection
 from handlers.critical_info_handlers.critical_keyboard import info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
 from aiogram.types import CallbackQuery
@@ -30,98 +30,153 @@ from handlers.language_check_handlers.language_check_keyboard import language_ke
 from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
 
+from aiogram.fsm.state import State, StatesGroup
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.storage.memory import MemoryStorage
+
+class LanguageState(StatesGroup):
+    waiting_for_language = State()
+
 router = Router()
+user_languages = {}
 
 
 @router.message(CommandStart())
-async def send_welcome(message: types.Message):
-    """Handle bot startup command and display main menu."""
+async def send_welcome(message: types.Message, state: FSMContext):
     try:
         logger.info(f'User {message.from_user.id} started bot')
-        await message.answer(f"{TEXTS['ru']['greetings']}", reply_markup=main_roots_keyboard())
+        await state.set_state(LanguageState.waiting_for_language)
+        await message.answer("Выберите язык / Choose language:",
+                           reply_markup=language_selection())
     except Exception as e:
         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
-        await message.answer(f"{TEXTS['ru']['errors']['start_error']}")
+
+
+@router.callback_query(F.data.in_(["russian", "english", "french", "spanish", "chinese", "indian"]))
+async def set_language(callback: CallbackQuery, state: FSMContext):
+    try:
+        lang_map = {
+            "russian": "ru",
+            "english": "en",
+            "french": "fr",
+            "spanish": "es",
+            "chinese": "zh",
+            "indian": "hi"
+        }
+
+        lang_code = callback.data
+        language = lang_map.get(lang_code, "ru")  # по умолчанию русский
+
+        # Сохраняем язык в состоянии
+        await state.update_data(language=language)
+
+        # Сохраняем язык в глобальный словарь (если нужно)
+        user_languages[callback.from_user.id] = language
+
+        # Отправляем приветствие на выбранном языке
+        await callback.message.edit_text(
+            text=TEXTS[language]['greetings'],
+            reply_markup=main_roots_keyboard(language),
+            parse_mode="Markdown"
+        )
+        await callback.answer()
+
+    except Exception as e:
+        logger.error(f'Language selection error: {e}\n{traceback.format_exc()}')
+        await callback.answer("Произошла ошибка при выборе языка")
+
+
+@router.message(CommandStart())
+async def send_welcome_redirect(message: types.Message, language: str):
+    """Handle bot startup command and display main menu."""
+    try:
+        logger.info(f'User {message.from_user.id} started bot with existing language: {language}')
+        await message.answer(f"{TEXTS[language]['greetings']}", reply_markup=main_roots_keyboard(language))
+    except Exception as e:
+        logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
+        await message.answer(f"{TEXTS[language]['errors']['start_error']}")
 
 
 @router.callback_query(F.data == "info")
-async def university_info(callback: CallbackQuery):
+async def university_info(callback: CallbackQuery, language: str):
     """Display university information section."""
     try:
-        text = f"🎓 {TEXTS['ru']['keyboards']['main_keyboard']['info']}"
-        await callback.message.edit_text(text, reply_markup=info_keyboard(), parse_mode="Markdown")
+        text = f"🎓 {TEXTS[language]['keyboards']['main_keyboard']['info']}"
+        await callback.message.edit_text(text, reply_markup=info_keyboard(language), parse_mode="Markdown")
         await callback.answer()
     except Exception as e:
         logger.error(f'University info error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"{TEXTS['ru']['errors']['info_error']}")
+        await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
 
 
 @router.callback_query(F.data == "location")
-async def location_info(callback: CallbackQuery):
+async def location_info(callback: CallbackQuery, language: str):
     """Display university location information."""
     try:
-        text = f"📍 {TEXTS['ru']['keyboards']['main_keyboard']['location']}"
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=uni_loc_keyboard())
+        text = f"📍 {TEXTS[language]['keyboards']['main_keyboard']['location']}"
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=uni_loc_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'Location info error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"{TEXTS['ru']['errors']['info_error']}")
+        await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
 
 
 @router.callback_query(F.data == "dormitory")
-async def dormitory_info(callback: CallbackQuery):
+async def dormitory_info(callback: CallbackQuery, language: str):
     """Display dormitory information section."""
     try:
-        text = f"🏘️ {TEXTS['ru']['keyboards']['main_keyboard']['dormitory']}"
+        text = f"🏘️ {TEXTS[language]['keyboards']['main_keyboard']['dormitory']}"
         await callback.message.delete()
-        await callback.message.answer(text, reply_markup=dormitory_keyboard(), parse_mode="Markdown")
+        await callback.message.answer(text, reply_markup=dormitory_keyboard(language), parse_mode="Markdown")
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory info error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"{TEXTS['ru']['errors']['info_error']}")
+        await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
 
 
 @router.callback_query(F.data == "critical")
-async def emergency_info(callback: CallbackQuery):
+async def emergency_info(callback: CallbackQuery, language: str):
     """Display emergency contacts and critical information."""
     try:
-        text = f"⚠️ {TEXTS['ru']['keyboards']['main_keyboard']['critical']}"
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=critical_keyboard())
+        text = f"⚠️ {TEXTS[language]['keyboards']['main_keyboard']['critical']}"
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=critical_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'Emergency info error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"{TEXTS['ru']['errors']['info_error']}")
+        await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
+
 
 @router.callback_query(F.data == "sber")
-async def sber_info(callback: CallbackQuery):
+async def sber_info(callback: CallbackQuery, language: str):
     """SBER"""
     try:
-        text = f"💳 {TEXTS['ru']['keyboards']['main_keyboard']['sber']}"
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=sber_keyboard())
+        text = f"💳 {TEXTS[language]['keyboards']['main_keyboard']['sber']}"
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=sber_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'SBER info error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"{TEXTS['ru']['errors']['info_error']}")
+        await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
+
 
 @router.callback_query(F.data == "language_check")
-async def language_check_info(callback: CallbackQuery):
+async def language_check_info(callback: CallbackQuery, language: str):
     """Display language checking tools section."""
     try:
-        text = f"🇷🇺 {TEXTS['ru']['keyboards']['main_keyboard']['language_check']}"
-        await callback.message.edit_text(text, reply_markup=language_keyboard(), parse_mode="Markdown")
+        text = f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}"
+        await callback.message.edit_text(text, reply_markup=language_keyboard(language), parse_mode="Markdown")
         await callback.answer()
     except Exception as e:
         logger.error(f'Language check error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"{TEXTS['ru']['errors']['info_error']}")
+        await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
 
 
 @router.callback_query(F.data == "back_to_main")
-async def back_to_main_menu(callback: CallbackQuery):
+async def back_to_main_menu(callback: CallbackQuery, language: str):
     """Return to main menu from any section."""
     try:
-        text = f"{TEXTS['ru']['greetings']}"
-        await callback.message.edit_text(text, reply_markup=main_roots_keyboard(), parse_mode="Markdown")
+        text = f"{TEXTS[language]['greetings']}"
+        await callback.message.edit_text(text, reply_markup=main_roots_keyboard(language), parse_mode="Markdown")
         await callback.answer()
     except Exception as e:
         logger.error(f'Back to main error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"{TEXTS['ru']['errors']['back_error']}")
+        await callback.answer(f"{TEXTS[language]['errors']['back_error']}")

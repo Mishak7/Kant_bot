@@ -8,11 +8,11 @@ router = Router()
 
 
 @router.callback_query(F.data == "educational_loan")
-async def educational_loan_handler(callback: CallbackQuery):
+async def educational_loan_handler(callback: CallbackQuery, language: str):
     try:
         await callback.message.edit_text(EDUCATIONAL_LOAN_TEXT,
                                          parse_mode="Markdown",
-                                         reply_markup=loan_keyboard())
+                                         reply_markup=loan_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'sber error: {e}\n{traceback.format_exc()}')
@@ -20,11 +20,11 @@ async def educational_loan_handler(callback: CallbackQuery):
 
 
 @router.callback_query(F.data == "sber_card")
-async def sber_card_handler(callback: CallbackQuery):
+async def sber_card_handler(callback: CallbackQuery, language: str):
     try:
         await callback.message.edit_text(SBER_CARD_TEXT,
                                          parse_mode="Markdown",
-                                         reply_markup=card_keyboard())
+                                         reply_markup=card_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'sber card error: {e}\n{traceback.format_exc()}')
@@ -32,12 +32,12 @@ async def sber_card_handler(callback: CallbackQuery):
 
 
 @router.callback_query(F.data == "useful_links")
-async def useful_links_handler(callback: CallbackQuery):
+async def useful_links_handler(callback: CallbackQuery, language: str):
     try:
         await callback.message.edit_text(USEFUL_LINKS_TEXT,
                                          parse_mode="Markdown",
                                          disable_web_page_preview=True,
-                                         reply_markup=back_to_sber_keyboard())
+                                         reply_markup=back_to_sber_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'sber error: {e}\n{traceback.format_exc()}')

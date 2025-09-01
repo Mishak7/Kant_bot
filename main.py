@@ -11,10 +11,30 @@ from handlers.language_check_handlers.grammar_handlers import grammar_handlers
 from handlers.language_check_handlers.listening_handlers import listening_handlers
 from handlers.language_check_handlers.speaking_handlers import speaking_handlers
 from handlers.sber_handlers import sber_handlers
+from aiogram.fsm.storage.memory import MemoryStorage
+
+
+from aiogram import BaseMiddleware
+from typing import Callable, Dict, Any, Awaitable
+from aiogram.types import TelegramObject
+
+class LanguageMiddleware(BaseMiddleware):
+    async def __call__(
+        self,
+        handler: Callable[[TelegramObject, Dict[str, Any]], Awaitable[Any]],
+        event: TelegramObject,
+        data: Dict[str, Any]
+    ) -> Any:
+        state = data['state']
+        user_data = await state.get_data()
+        data['language'] = user_data.get('language', 'ru')
+        return await handler(event, data)
 
 async def main():
     bot = Bot(token=settings.TELEGRAM_TOKEN)
-    dp = Dispatcher()
+    storage = MemoryStorage()
+    dp = Dispatcher(storage=storage)
+    dp.update.middleware(LanguageMiddleware())
 
     dp.include_router(commands.router)
     dp.include_router(dormitory_handlers.router)
@@ -27,6 +47,7 @@ async def main():
     dp.include_router(listening_handlers.router)
     dp.include_router(speaking_handlers.router)
     dp.include_router(sber_handlers.router)
+
 
     try:
         logger.info('Bot started')
