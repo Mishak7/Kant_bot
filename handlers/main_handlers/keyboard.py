@@ -28,12 +28,12 @@ def lenguage_selection() -> InlineKeyboardMarkup:
     """Creates a language selection keyboard at the start"""
     return InlineKeyboardButton(
         inline_keyboard=[
-            [InlineKeyboardButton(text='\U0001F1F7 Русский', callback_data='russian')],
-            [InlineKeyboardButton(text='\U0001F1EC English', callback_data='english')],
-            [InlineKeyboardButton(text='\U0001F1EB Français', callback_data='french')],
-            [InlineKeyboardButton(text='\U0001F1EA Español', callback_data='spanish')],
-            [InlineKeyboardButton(text='\U0001F1E8 中國的', callback_data='chinese')],
-            [InlineKeyboardButton(text='\U0001F1EE हिंदी', callback_data='indian')]
+            [InlineKeyboardButton(text='🇷🇺 Русский', callback_data='russian')],
+            [InlineKeyboardButton(text='🇬🇧 English', callback_data='english')],
+            [InlineKeyboardButton(text='🇫🇷 Français', callback_data='french')],
+            [InlineKeyboardButton(text='🇪🇸 Español', callback_data='spanish')],
+            [InlineKeyboardButton(text='🇨🇳 中國的', callback_data='chinese')],
+            [InlineKeyboardButton(text='🇮🇳 हिंदी', callback_data='indian')]
         ]
     )
 
