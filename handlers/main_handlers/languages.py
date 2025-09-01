@@ -1197,7 +1197,7 @@ Click the *button below* for details:
 """
             }
         }
-    }
+    },
 
 
     'fr': {
@@ -1819,7 +1819,7 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
                 'check-in': 'Alojamiento en un dormitorio',
                 'payment': 'Pago',
                 'address': 'Direcciones de los dormitorios',
-                'rules': 'Reglas de convivencia,
+                'rules': 'Reglas de convivencia',
                 'laundry': 'Lavandería',
                 'no_certificate': 'No hay un certificado de vacunas o de fluorografía',
                 'back': 'Atrás'
@@ -2135,7 +2135,7 @@ https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1
                                 '¿Con qué sueña tu familia?',
                                 '¿Qué cosas interesantes te pasaron la semana pasada?',
                                 '¿Qué le interesa a tu mejor amigo?',
-                                "Comparte tus impresiones de la última película que viste".
+                                "Comparte tus impresiones de la última película que viste",
                                 '¿Por qué decidiste estudiar en Kaliningrado?'
                             ],
                     'speaking_send': 'Espero tu historia sobre el tema:',
