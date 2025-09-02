@@ -45,7 +45,8 @@ TEXTS = {
                 'hotline': 'Горячая линия ФМС',
                 'government': 'Местные органы власти',
                 'consulate': 'Консульство',
-                'back': 'Назад'
+                'back': 'Назад',
+                'appeal':'Электронное обращение'
             },
             'dormitory_keyboard': {
                 'check-in': 'Заселение в общежитие',
@@ -172,19 +173,38 @@ TEXTS = {
                                                     ''',
 
         'critical_government_handler': '''
-*Электронное обращение доступно по ссылке*:
-https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+🏛️ *Комитет по межнациональным отношениям и реализации миграционной политики в Санкт‑Петербурге*
 
-*Личный прием граждан*
-Личный прием граждан в Комитете проводится председателем Комитета или его первым заместителем, руководителями структурных подразделений и уполномоченными на то лицами. Информация о месте приема, а также об установленных для приема днях и часах доводится до сведения граждан.
-При личном приеме гражданин предъявляет документ, удостоверяющий его личность.
-Содержание устного обращения заносится в карточку личного приема гражданина. В случае, если изложенные в устном обращении факты и обстоятельства являются очевидными и не требуют дополнительной проверки, ответ на обращение с согласия гражданина может быть дан устно в ходе личного приема, о чем делается запись в карточке личного приема гражданина. В остальных случаях дается письменный ответ по существу поставленных в обращении вопросов.
-Письменное обращение, принятое в ходе личного приема, подлежит регистрации и рассмотрению в порядке, установленном для письменных обращений.
-В случае, если в обращении содержатся вопросы, решение которых не входит в компетенцию Комитета по межнациональным отношениям и реализации миграционной политики в Санкт‑Петербурге, гражданину дается разъяснение, куда и в каком порядке ему следует обратиться.
-В ходе личного приема гражданину может быть отказано в дальнейшем рассмотрении обращения, если ему ранее был дан ответ по существу поставленных в обращении вопросов.
+Вы можете записаться на онлайн- или офлайн-встречу!
 
-Предварительная запись на личный прием осуществляется по телефону приемной Комитета: 576-28-08, ежедневно с 9.00 до 18.00, в пятницу до 17.00, перерыв: с 13.00 до 14.00; суббота, воскресенье – выходные.
-                                                    ''',
+1. 📅 *Офлайн-формат* (личный прием граждан)
+Как записаться?
+Запись по телефону: *576-28-08* 1.
+Часы работы приемной:
+• Понедельник – четверг: *9:00 – 18:00*
+• Пятница: *9:00 – 17:00*
+• Обеденный перерыв: *13:00 – 14:00* (звонки не принимаются)
+• Суббота и воскресенье: выходные.
+
+*Что взять с собой?*
+
+Паспорт или иной документ, удостоверяющий личность.
+
+*Как проходит прием?*
+Вас примет председатель Комитета, его заместитель или уполномоченные лица 4.
+
+Обращение фиксируется в карточке личного приема.
+
+Простые вопросы → устный ответ (с записью в карточку).
+
+Сложные вопросы → письменный ответ позже.
+
+Вопрос не в компетенции Комитета → вас направят в соответствующую инстанцию.
+⚠️ Если по вашему вопросу уже был дан ответ, в повторном приеме могут отказать.
+
+2. 🌐 *Онлайн-прием*
+Записаться можно через официальные ресурсы Комитета.
+Ссылка для записи:''',
 
         'critical_consulate_handler': '''
 *Представительство МИД России в Калининграде* 🏛️
@@ -589,7 +609,8 @@ Where shall we start? 👇 Choose a menu item!""",
                 'hotline': 'FMS hotline',
                 'government': 'Local authorities',
                 'consulate': 'Consulate',
-                'back': 'Back'
+                'back': 'Back',
+                'appeal':'Online request'
             },
             'dormitory_keyboard': {
                 'check-in': 'Dormitory check-in',
@@ -717,26 +738,37 @@ Lunch break: 13:00–14:00
                                                     ''',
 
             'critical_government_handler': '''
-*The electronic appeal is available here:*
-https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+🏛️ *Committee on Interethnic Relations and Migration Policy in St. Petersburg*
+You can book an online or offline meeting!
 
-*Reception of Citizens*
+1. 📅 *Offline format* (in-person reception)
+How to book?
+Call: *576-28-08* 1.
+Reception hours:
+• Monday–Thursday: 9:00 AM – 6:00 PM
+• Friday: 9:00 AM – 5:00 PM
+• Lunch break: 1:00 PM – 2:00 PM (calls not accepted)
+• Saturday and Sunday: closed.
 
-The reception of citizens in the Committee is conducted by the Chairman of the Committee or his first deputy, 
-heads of structural units, and authorized persons. Information about the place of reception, as well as the established days and hours for receptions, 
-is communicated to the citizens.During the personal reception, the citizen presents a document verifying their identity.
-The content of the oral appeal is recorded in the citizen's personal reception card. If the facts and circumstances presented in the oral appeal are obvious 
-and do not require additional verification, a response to the appeal may be given orally during the personal reception with the citizen's consent, 
-which is then noted in the citizen's personal reception card. In other cases, a written response is provided regarding the issues raised in the appeal.
+*What to bring?*
 
-A written appeal received during the personal reception is subject to registration and consideration in accordance with the procedures established for written appeals.
-If there are questions in the appeal that are outside the competence of the Committee for Interethnic Relations and Migration Policy in St. Petersburg, 
-the citizen is provided with clarification on where and in what order they should turn. During the personal reception, a citizen may be denied further 
-consideration of the appeal if they have previously received a substantive response to the questions raised in the appeal. 
+Passport or ID.
 
-Preliminary registration for a personal reception is carried out by calling the Committee's reception office at 576-28-08, daily from 9:00 AM to 6:00 PM, 
-on Fridays until 5:00 PM, with a break from 1:00 PM to 2:00 PM; Saturday and Sunday are days off.
-                                                   ''',
+*How does the reception work?*
+You will be received by the Committee Chair, deputies, or authorized personnel 4.
+
+Your query is recorded in a reception card.
+
+Simple questions → verbal response (recorded in the card).
+
+Complex questions → written response later.
+
+Issue outside the Committee’s competence → you will be redirected to the relevant authority.
+⚠️ If your issue has already been addressed, a repeat reception may be denied.
+
+2. 🌐 *Online reception*
+Book via the Committee’s official resources.
+Booking link: ''',
 
             'critical_consulate_handler': '''
 *Representative Office of the Ministry of Foreign Affairs of Russia in Kaliningrad* 🏛️
@@ -1172,7 +1204,8 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'hotline': 'Ligne directe de la FMS (USCIS)',
                 'government': 'Autorités locales',
                 'consulate': 'Consulat',
-                'back': 'Retour'
+                'back': 'Retour',
+                'appeal':'Demande en ligne'
             },
             'dormitory_keyboard': {
                 'check-in': 'Installation dans le dortoir',
@@ -1295,24 +1328,37 @@ Pause déjeuner 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
-*La demande électronique est disponible au lien*:
-https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+🏛️ *Comité des relations interethniques et de la politique migratoire à Saint-Pétersbourg*
+Vous pouvez prendre rendez-vous en ligne ou en présentiel !
 
-*Réception des citoyens en personne*
-La réception des citoyens au Comité est effectuée par le président du Comité ou son premier adjoint, les responsables des départements et les personnes autorisées à cet effet. 
-L'information concernant le lieu de la réception, ainsi que les jours et heures fixés pour la réception, est portée à la connaissance des citoyens.
-Lors de la réception en personne, le citoyen présente un document prouvant son identité.Le contenu de la demande orale est consigné dans une fiche de réception personnelle du citoyen. 
-Dans le cas où les faits et circonstances exposés dans la demande orale sont évidents et ne nécessitent pas de vérification supplémentaire, la réponse à la demande, 
-avec l'accord du citoyen, peut être donnée oralement lors de la réception, et cela est noté dans la fiche de réception personnelle du citoyen. 
-Dans les autres cas, une réponse écrite est fournie sur le fond des questions posées dans la demande. Une demande écrite, reçue lors d'une audience personnelle, 
-doit être enregistrée et examinée conformément à la procédure établie pour les demandes écrites. 
-Si la demande contient des questions dont la résolution ne relève pas de la compétence du Comité des relations interethniques et de la mise en œuvre de la politique migratoire à Saint-Pétersbourg, 
-le citoyen reçoit des explications sur où et selon quelle procédure il doit s'adresser. Lors de l'audience personnelle, il peut être refusé au citoyen une nouvelle considération de sa demande, 
-s'il a déjà reçu une réponse sur le fond des questions soulevées dans sa demande. 
+1. 📅 *Format présentiel* (réception en personne)
+Comment prendre rendez-vous ?
+Appelez le *576-28-08* 1.
+Heures de réception :
+• Lundi-jeudi : *9h00 – 18h00*
+• Vendredi : *9h00 – 17h00*
+• Pause déjeuner : *13h00 – 14h00* (appels non acceptés)
+• Samedi et dimanche : fermé.
 
-L'enregistrement préalable pour une audience personnelle se fait par téléphone au secrétariat du Comité : 576-28-08, 
-tous les jours de 9h00 à 18h00, le vendredi jusqu'à 17h00, pause : de 13h00 à 14h00 ; le samedi et le dimanche – week-end.
-                                                    ''',
+*Que apporter ?*
+
+Passeport ou pièce d’identité.
+
+*Comment se déroule la réception ?*
+Vous serez reçu par le président du Comité, ses adjoints ou des personnel autorisés 4.
+
+Votre demande est inscrite dans une fiche de réception.
+
+Questions simples → réponse verbale (consignée dans la fiche).
+
+Questions complexes → réponse écrite ultérieure.
+
+Question hors compétence du Comité → vous serez orienté vers l’autorité compétente.
+⚠️ Si votre demande a déjà été traitée, une nouvelle réception peut être refusée.
+
+2. 🌐 *Réception en ligne*
+Réservation via les ressources officielles du Comité.
+Lien de réservation: ''',
 
                 'critical_consulate_handler': '''
 *Représentation du ministère des Affaires étrangères de la Russie à Kaliningrad* 🏛️
@@ -1702,7 +1748,8 @@ Conmigo podrás:
                 'hotline': 'Línea Migración (FMS)',
                 'government': 'Autoridades locales',
                 'consulate': 'Consulado',
-                'back': 'Atrás'
+                'back': 'Atrás',
+                'appeal':'Solicitud en línea'
             },
             'dormitory_keyboard': {
                 'check-in': 'Alojamiento en un dormitorio',
@@ -1827,30 +1874,37 @@ Almuerzo 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
-*La solicitud electrónica está disponible en el enlace*: 
-https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+🏛️ *Comité de Relaciones Interétnicas y Implementación de Políticas Migratorias en San Petersburgo*
+¡Puedes agendar una cita en línea o presencial!
 
-*Atención personal al ciudadano* 
+1. 📅 *Formato presencial* (recepción personal)
+¿Cómo agendar?
+Llama al *576-28-08* 1.
+Horario de recepción:
+• Lunes–jueves: *9:00 – 18:00*
+• Viernes: *9:00 – 17:00*
+• Pausa para comer: *13:00 – 14:00* (no se atienden llamadas)
+• Sábado y domingo: cerrado.
 
-La atención personal al ciudadano en el Comité es llevada a cabo por el presidente del Comité o su primer adjunto, 
-por los directores de las divisiones estructurales y por las personas autorizadas para ello. 
-La información sobre el lugar de atención, así como sobre los días y horas establecidos para la atención, 
-se comunica a los ciudadanos. Durante la atención personal, el ciudadano presenta un documento que acredita su identidad. 
-El contenido de la solicitud oral se registra en la tarjeta de atención personal del ciudadano. 
-En caso de que los hechos y circunstancias expuestos en la solicitud oral sean evidentes y no requieran verificación adicional, 
-la respuesta a la solicitud, con el consentimiento del ciudadano, puede ser dada oralmente durante la atención personal, 
-lo que se registra en la tarjeta de atención personal del ciudadano. En los demás casos, 
-se proporciona una respuesta por escrito sobre el fondo de las cuestiones planteadas en la solicitud. 
-La solicitud por escrito, recibida durante la atención personal, 
-debe ser registrada y considerada de acuerdo con el procedimiento establecido para las solicitudes por escrito.
-En caso de que la solicitud contenga preguntas cuya resolución no esté dentro de la competencia 
-del Comité de Relaciones Interétnicas y la Implementación de la Política Migratoria en San Petersburgo, 
-se le dará al ciudadano una explicación de a dónde y en qué orden debe dirigirse.Durante la recepción personal, 
-se le puede negar al ciudadano el ulterior examen de la solicitud, si ya se le ha dado una respuesta sobre el fondo 
-de las preguntas planteadas en la solicitud.
+*¿Qué llevar?*
 
-La inscripción previa para la recepción personal se realiza por teléfono a la oficina del Comité: 576-28-08, diariamente de 9:00 a 18:00, los viernes hasta las 17:00, con un receso de 13:00 a 14:00; sábado y domingo – días no laborables.
-                                                   ''',
+Pasaporte o documento de identidad.
+
+*¿Cómo se desarrolla la recepción?*
+Serás atendido por el presidente del Comité, su adjunto o personal autorizado 4.
+
+Tu solicitud se registra en una ficha de recepción.
+
+Preguntas simples → respuesta verbal (registrada en la ficha).
+
+Preguntas complejas → respuesta escrita posterior.
+
+Si el tema no es competencia del Comité → se te derivará a la instancia correspondiente.
+⚠️ Si tu consulta ya fue respondida, podrían denegar una nueva recepción.
+
+2. 🌐 *Recepción en línea*
+Agenda a través de los recursos oficiales del Comité.
+*Enlace para agendar*:''',
 
                 'critical_consulate_handler': '''
 *Representación del Ministerio de Relaciones Exteriores de Rusia en Kaliningrado* 🏛️
@@ -2236,7 +2290,8 @@ Haz clic en *el botón de abajo* para más detalles:
                 'hotline': '熱線 FMS',
                 'government': '地方當局',
                 'consulate': '領事館',
-                'back': '回去'
+                'back': '回去',
+                'appeal':'線上申請 '
             },
             'dormitory_keyboard': {
                 'check-in': '入住宿舍',
@@ -2360,19 +2415,37 @@ Haz clic en *el botón de abajo* para más detalles:
                                                     ''',
 
                 'critical_government_handler': '''
-*電子申請可通過以下鏈接訪問*:
-https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+🏛️ *圣彼得堡民族关系与移民政策委员会
+您可预约线上或线下会议*
 
-*公眾會見* 公共會見在委員會由委員會主席或其第一副主席、各結構部門的負責人及指定授權人員進行。
-會見的地點以及指定的接待日和時間將通知市民。在面對面接見中，市民需出示證明其身份的文件。
-口頭請求的內容將被記錄在市民會見的卡片上。如果口頭請求中陳述的事實和情況顯而易見且不需進一步核實，
-則可在會見過程中經市民同意口頭答復請求，並在市民會見卡片上進行記錄。在其他情況下，將針對請求中提出的問題給予書面答復。
-在面對面接見中接受的書面請求需按書面請求的程序進行登記和審查。
-如果申請中包含的問題不在聖彼得堡民族關係與移民政策委員會的職責範圍內，則公民將被說明應該向哪裡以及以什麼方式進行申請。
-在個人接待過程中，如果之前已經對申請中提出的問題給予了實質性的答覆，則可能會拒絕進一步考慮該申請。
+1. 📅 *线下形式*（线下接待）
+如何预约？
+拨打电话：*576-28-08*1。
+接待时间：
+• 周一至周四：*9:00 – 18:00*
+• 周五：*9:00 – 17:00*
+• 午休时间：*13:00 – 14:00*（不接听电话）
+• 周六和周日：休息。
 
-個人接待的預約可以通過委員會的接待電話進行：576-28-08，每天從9:00到18:00，星期五至17:00，中午12:00至13:00為休息時間；星期六、星期天為休息日。
-                                                    ''',
+需携带文件：
+
+护照或其他身份证明文件。
+
+接待流程：
+由委员会主席、副主席或授权人员接待4。
+
+您的诉求将记录在接待卡中。
+
+简单问题 → 口头答复（记录在卡中）。
+
+复杂问题 → 后续书面答复。
+
+不属委员会职权范围 → 告知您应联系的相关部门及方式。
+⚠️ 若您的问题已答复过，可能拒绝再次接待。
+
+2. 🌐 线上接待
+通过委员会官方资源预约。
+*预约链接*：''',
 
                 'critical_consulate_handler': '''
 *俄羅斯外交部駐加里寧格勒代表處* 🏛️
@@ -2755,7 +2828,8 @@ _電子郵件_: international-study@kantiana.ru
                 'hotline': 'प्रवासन सेवा की हॉटलाइन',
                 'government': 'स्थानीय सरकारी संस्थाएँ',
                 'consulate': 'कांसुलीट',
-                'back': 'पीछे'
+                'back': 'पीछे',
+                'appeal':'ऑनलाइन अनुरोध'
             },
             'dormitory_keyboard': {
                 'check-in': 'हॉस्टल में दाखिला',
@@ -2881,24 +2955,38 @@ _電子郵件_: international-study@kantiana.ru
                                                     ''',
 
                 'critical_government_handler': '''
-*इलेक्ट्रॉनिक अपील लिंक पर उपलब्ध है:*
-https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2
+🏛️ *सेंट पीटर्सबर्ग में अंतर-जातीय संबंध और प्रवासन नीति समिति*
+आप ऑनलाइन या ऑफलाइन मुलाकात के लिए अपॉइंटमेंट ले सकते हैं!
 
-*नागरिकों की व्यक्तिगत सुनवाई* 
+1. 📅 *ऑफलाइन प्रारूप* (नागरिकों की व्यक्तिगत स्वीकार्यता)
+अपॉइंटमेंट कैसे लें?
+फोन: *576-28-08* 1।
+स्वीकार्यता घंटे:
+• सोमवार–गुरुवार: *9:00 – 18:00*
+• शुक्रवार: *9:00 – 17:00*
+• लंच ब्रेक: *13:00 – 14:00* (इस दौरान कॉल स्वीकार नहीं)
+• शनिवार और रविवार: बंद।
 
-समिति में नागरिकों की व्यक्तिगत सुनवाई समिति के अध्यक्ष या उनके पहले उपाध्यक्ष, संरचनात्मक इकाइयों के नेताओं और अधिकृत व्यक्तियों द्वारा आयोजित की जाती है। 
-सुनवाई के स्थान के बारे में, साथ ही सुनवाई के लिए निर्धारित दिनों और घंटों की जानकारी नागरिकों को दी जाती है। 
-व्यक्तिगत सुनवाई के दौरान, नागरिक अपनी पहचान प्रमाणित करने वाला दस्तावेज प्रस्तुत करता है। 
-मौखिक निवेदन की सामग्री नागरिक की व्यक्तिगत सुनवाई की पर्ची में दर्ज की जाती है। 
-यदि मौखिक निवेदन में प्रस्तुत तथ्य और परिस्थितियाँ स्पष्ट हैं और अतिरिक्त जाँच की आवश्यकता नहीं है, तो नागरिक की सहमति से सुनवाई के दौरान मौखिक उत्तर दिया जा सकता है, 
-जिसे नागरिक की व्यक्तिगत सुनवाई की पर्ची में दर्ज किया जाता है। अन्य मामलों में, निवेदन में उठाए गए प्रश्नों के विषय में लिखित उत्तर दिया जाता है। 
-व्यक्तिगत सुनवाई के दौरान प्राप्त लिखित निवेदन की रजिस्ट्रेशन और उस पर विचार करने की प्रक्रिया को लिखित निवेदनों के लिए निर्धारित नियमों के अनुसार किया जाता है।
-यदि आवेदन में ऐसे प्रश्न शामिल हैं, जिनका समाधान सेंट पीटर्सबर्ग में अंतर्राष्ट्रीय संबंधों और प्रवासन नीति के समिति की क्षमता में नहीं आता है, 
-तो नागरिक को यह स्पष्ट किया जाएगा कि उसे कहाँ और किस क्रम में आवेदन करना चाहिए। व्यक्तिगत सुनवाई के दौरान, यदि पहले से आवेदन में उठाए गए प्रश्नों पर उसे जवाब दिया गया है, 
-तो नागरिक को आगे की सुनवाई से इंकार किया जा सकता है। 
+*क्या लेकर आएं?*
 
-व्यक्तिगत सुनवाई के लिए पूर्व-निर्धारित रजिस्ट्रेशन समिति की रिसेप्शन पर फोन करके किया जा सकता है: 576-28-08, प्रतिदिन 9.00 से 18.00 तक, शुक्रवार को 17.00 बजे तक, अवकाश: 13.00 से 14.00 तक; शनिवार, रविवार - अवकाश।                                                    ''',
+पासपोर्ट या कोई अन्य पहचान पत्र।
 
+स्वीकार्यता प्रक्रिया:
+आपको समिति के अध्यक्ष, उनके प्रथम उपाध्यक्ष, संरचनात्मक इकाइयों के प्रमुख या अधिकृत व्यक्ति स्वीकार करेंगे4।
+
+आपका अनुरोध नागरिक व्यक्तिगत स्वीकार्यता कार्ड में दर्ज किया जाएगा।
+
+सरल प्रश्न → मौखिक उत्तर (कार्ड में दर्ज)।
+
+जटिल प्रश्न → बाद में लिखित उत्तर।
+
+समिति की अधिकारिता से बाहर → आपको सही प्राधिकारी के पास भेजा जाएगा।
+⚠️ यदि आपके प्रश्न का पहले ही उत्तर दिया जा चुका है, तो दोबारा स्वीकार्यता से इनकार किया जा सकता है।
+
+2. 🌐 *ऑनलाइन स्वीकार्यता*
+आधिकारिक संसाधनों के माध्यम से अपॉइंटमेंट लें।
+*अपॉइंटमेंट लिंक*:
+''',
                 'critical_consulate_handler': '''
 *कालिनिनग्राद में रूस के विदेश मंत्रालय का प्रतिनिधि कार्यालय* 🏛️
 

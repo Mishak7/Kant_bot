@@ -12,6 +12,7 @@ from aiogram.types import CallbackQuery
 from config.logger import logger
 from handlers.critical_info_handlers.critical_keyboard import back_to_critical_keyboard
 from handlers.main_handlers.languages import TEXTS
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 router = Router()
 
@@ -45,7 +46,9 @@ async def critical_government_handler(callback: CallbackQuery, language: str):
     """Provide local government contact information and procedures."""
     try:
         text = TEXTS[language]['handlers']['critical_handlers']['critical_government_handler']
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard(language))
+        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text=f"📤 {TEXTS[language]['keyboards']['critical_keyboard']['appeal']}", url='https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2')],
+        [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['critical_keyboard']['back']}", callback_data="critical")]]))
         await callback.answer()
     except Exception as e:
         logger.error(f'Government contacts error: {e}\n{traceback.format_exc()}')
