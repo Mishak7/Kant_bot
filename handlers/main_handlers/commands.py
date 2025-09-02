@@ -57,7 +57,7 @@ async def set_language(callback: CallbackQuery, state: FSMContext):
             "english": "en",
             "french": "fr",
             "spanish": "es",
-            "chinese": "zh",
+            "chinese": "cn",
             "indian": "hi"
         }
 

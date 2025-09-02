@@ -23,7 +23,7 @@ async def dormitory_1_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}", url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-1/")],
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}", url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-1/")],
                 [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/abgd0/")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
             ])
@@ -54,7 +54,7 @@ async def dormitory_2_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}", url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-2/")],
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}", url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-2/")],
                 [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/4MzCv")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
             ])
@@ -85,7 +85,7 @@ async def dormitory_3_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}",
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}",
                                       url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-3/")],
                 [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/jZ2vc")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
@@ -117,7 +117,7 @@ async def dormitory_4_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}",
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}",
                                       url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-4/")],
                 [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/D5pwn")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
@@ -149,7 +149,7 @@ async def dormitory_5_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}",
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}",
                                       url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-5/")],
                 [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/Z7ALI")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
@@ -181,7 +181,7 @@ async def dormitory_6_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}",
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}",
                                       url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-6/")],
                 [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/00ye5")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
@@ -213,7 +213,7 @@ async def dormitory_7_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}",
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}",
                                       url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-7/")],
                 [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/L6vPS")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
@@ -245,7 +245,7 @@ async def dormitory_8_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}",
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}",
                                       url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-8/")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}",
                                       callback_data="dormitory_check-in")]
@@ -278,7 +278,7 @@ async def dormitory_9_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['more']}",
+                [InlineKeyboardButton(text=f"📌️ {TEXTS[language]['keyboards']['dormitory_keyboard']['details']}",
                                       url="https://kantiana.ru/students/kampus/obshchezhitiya/obshchezhitie-9-13/")],
                 [InlineKeyboardButton(text="📍 2GIS", url="https://go.2gis.com/O83CE")],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory_address")]
