@@ -1197,7 +1197,7 @@ Click the *button below* for details:
 """
             }
         }
-    },
+    }
 
 
     'fr': {
@@ -1819,7 +1819,7 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
                 'check-in': 'Alojamiento en un dormitorio',
                 'payment': 'Pago',
                 'address': 'Direcciones de los dormitorios',
-                'rules': 'Reglas de convivencia',
+                'rules': 'Reglas de convivencia,
                 'laundry': 'Lavandería',
                 'no_certificate': 'No hay un certificado de vacunas o de fluorografía',
                 'back': 'Atrás'
@@ -1916,7 +1916,7 @@ _Teléfono_:
 
 _Dirección_: Calle A. Nevski 14, edificio №2, oficina 114
 
-_Horas_ _de atención_:
+_Horarios_ _de atención_:
 
 Lun 14:00-17:00
 Mar 10:00-13:00
@@ -1992,7 +1992,7 @@ A la llegada es necesario firmar el contrato de arrendamiento del alojamiento en
 
 _Es obligatorio llevar el pasaporte._
 
-*Horas de atención del Centro de apoyo socioeconómico para estudiantes:* 
+*Horarios de atención del Centro de apoyo socioeconómico para estudiantes:* 
 
 - Lunes: De 10:00 a 17:00 
 - Martes: De 10:00 a 17:00 
@@ -2053,7 +2053,7 @@ _No todas las residencias están equipadas con utensilios de cocina, pero se pro
 
 
                 'laundry_text': """
-Las lavanderías se encuentran en el edificio de cada residencia. El conserje o el portero te indicarán dónde está exactamente la habitación con las lavadoras y a qué hora puedes recoger la llave.Debes traer tu propio detergente. 
+Las lavanderías se encuentran en el edificio de cada residencia. El conserje o el portero te indicarán dónde está exactamente la habitación con las lavadoras y a qué hora puedes recoger la llave. Debes traer tu propio detergente. 
 
 La lavandería está equipada con varias lavadoras que se pueden usar simultáneamente si tienes mucha ropa para lavar. Es obligatorio lavar la ropa interior en bolsas especiales. Está prohibido lavar zapatos, ya que esto puede dañar las lavadoras. 
 Asegúrate de leer las instrucciones en la habitación antes de usar la máquina. Puedes secar la ropa después de lavarla en una sala especial que está equipada con secadoras.
@@ -2061,7 +2061,7 @@ Asegúrate de leer las instrucciones en la habitación antes de usar la máquina
 *Recuerda* que otros estudiantes en la residencia también quieren lavar su ropa, por lo que debes devolver la llave al portero o al conserje inmediatamente después de lavar, exactamente a la hora que prometiste devolverla.                                            """,
 
                 'no_certificate_text': """
-SI NO TIENES CERTIFICADO DE VACUNAS O DE FLEOGRAFÍA
+SI NO TIENES CERTIFICADO DE VACUNAS O DE FLUOROGRAFÍA
 
 1. *Si no tienes una fleografía reciente*
 
@@ -2130,12 +2130,12 @@ https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1
                                 '¿Cuál es tu recuerdo más vívido de la infancia?',
                                 '¿A dónde te gustaría viajar?',
                                 '¿Qué hábitos te ayudan a mantenerte productivo?',
-                                '¿Cómo estuvo tu ayer?',
-                                '¿Qué haces en un trabajo y qué haces en el trabajo?',
+                                '¿Cómo estuvo tu día ayer?',
+                                '¿A qué te dedicas y qué haces en el trabajo?',
                                 '¿Con qué sueña tu familia?',
                                 '¿Qué cosas interesantes te pasaron la semana pasada?',
                                 '¿Qué le interesa a tu mejor amigo?',
-                                "Comparte tus impresiones de la última película que viste",
+                                "Comparte tus impresiones de la última película que viste".
                                 '¿Por qué decidiste estudiar en Kaliningrado?'
                             ],
                     'speaking_send': 'Espero tu historia sobre el tema:',
