@@ -21,7 +21,7 @@ from aiogram import Router, types, F
 from aiogram.filters import CommandStart
 from config.logger import logger
 from handlers.main_handlers.keyboard import main_roots_keyboard, language_selection
-from handlers.critical_info_handlers.critical_keyboard import info_keyboard
+from handlers.university_handlers.university_info_keyboard import info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
 from aiogram.types import CallbackQuery
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard

@@ -22,7 +22,7 @@ def back_to_info_keyboard(language: str) -> InlineKeyboardMarkup:
 
 def schedule_info_keyboard(language: str) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text= "📅 Расписание" , url="https://schedule.kantiana.ru/")],
+        [InlineKeyboardButton(text= f"📅 {TEXTS[language]['keyboards']['university_info_keyboard']['schedule']}" , url="https://schedule.kantiana.ru/")],
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['university_info_keyboard']['back']}",
                               callback_data='info')]
     ])
@@ -30,14 +30,14 @@ def schedule_info_keyboard(language: str) -> InlineKeyboardMarkup:
 def scholarship_info_keyboard(language: str) -> InlineKeyboardMarkup:
     """Go back to uni info keyboard"""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="💰Стипендия", url="https://kantiana.ru/students/scholarship/")],
+        [InlineKeyboardButton(text=f"💰{TEXTS[language]['keyboards']['university_info_keyboard']['scholarship']}", url="https://kantiana.ru/students/scholarship/")],
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['university_info_keyboard']['back']}", callback_data='info')]
     ])
 
 def visa_info_keyboard(language: str) -> InlineKeyboardMarkup:
     """Go back to uni info keyboard"""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🌍Визово-миграционный центр", url="https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/")],
+        [InlineKeyboardButton(text=f"🌍 {TEXTS[language]['keyboards']['university_info_keyboard']['visa_center']}", url="https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/")],
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['university_info_keyboard']['back']}", callback_data='info')]
     ])
 

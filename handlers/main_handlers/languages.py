@@ -109,7 +109,7 @@ TEXTS = {
         'schedule': 'Расписание',
         'scholarship': 'Стипендии',
         'office_contacts': 'Контакты учебного офиса',
-        'visa_canter': 'Визово-миграционный центр',
+        'visa_center': 'Визово-миграционный центр',
         'back': 'Назад'
     },
     'language_selection_keyboard': {
@@ -648,7 +648,7 @@ Where shall we start? 👇 Choose a menu item!""",
                 'schedule': 'Schedule',
                 'scholarship': 'Scholarship',
                 'office_contacts': 'Educational Office contacts',
-                'visa_canter': 'Visa and Migration Center',
+                'visa_center': 'Visa and Migration Center',
                 'back': 'Back'
             },
             'language_selection_keyboard': {
@@ -1178,6 +1178,7 @@ Click the *button below* for details:
                 'hospital': 'Centre médical',
                 'critical': 'SOS',
                 'language_check': 'Coach',
+                'sber':'SBER',
                 'back': 'Retour'
             },
             'critical_keyboard': {
@@ -1244,7 +1245,7 @@ Click the *button below* for details:
                 'schedule': 'Horaires',
                 'scholarship': 'Bourses',
                 'office_contacts': 'Contacts du bureau académique',
-                'visa_canter': 'Centre de visa et de migration',
+                'visa_center': 'Centre de visa et de migration',
                 'back': 'Retour'
             },
             'language_selection_keyboard': {
@@ -1763,6 +1764,7 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
                 'hospital': 'Centro médico',
                 'critical': 'SOS',
                 'language_check': 'Entrenador',
+                'sber':'SBER',
                 'back': 'Atrás'
             },
             'critical_keyboard': {
@@ -1834,7 +1836,7 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
                 'schedule': 'Horarios',
                 'scholarship': 'Becas',
                 'office_contacts': 'Contactos de la oficina de estudios',
-                'visa_canter': 'Centro de visas y migración',
+                'visa_center': 'Centro de visas y migración',
                 'back': 'Atrás'
             },
             'language_selection_keyboard': {
@@ -2358,6 +2360,7 @@ Haz clic en *el botón de abajo* para más detalles:
                 'dormitory': '宿舍',
                 'hospital': '醫療中心',
                 'critical': 'SOS',
+                'sber':'SBER',
                 'language_check': '訓練器',
                 'back': '回去'
             },
@@ -2430,7 +2433,7 @@ Haz clic en *el botón de abajo* para más detalles:
                 'schedule': '時刻表',
                 'scholarship': '獎學金',
                 'office_contacts': '聯絡學習辦公室',
-                'visa_canter': '簽證移民中心',
+                'visa_center': '簽證移民中心',
                 'back': '回去'
             },
             'language_selection_keyboard': {
@@ -2922,7 +2925,7 @@ _電子郵件_: international-study@kantiana.ru
         }
     },
 
-    'in': {
+    'hi': {
         'greetings': 'नमस्ते! मैं आपकी किस प्रकार सहायता कर सकता हूँ?',
         'errors': {
             'start_error': 'बोट चालू करने में एक त्रुटि हुई। कृपया बाद में प्रयास करें।',
@@ -2940,6 +2943,7 @@ _電子郵件_: international-study@kantiana.ru
                 'dormitory': 'छात्रावास',
                 'hospital': 'मेडिकल सेंटर',
                 'critical': 'SOS',
+                'sber':'SBER',
                 'language_check': 'व्यायाम मशीन',
                 'back': 'पीछे'
             },
@@ -3012,7 +3016,7 @@ _電子郵件_: international-study@kantiana.ru
                 'schedule': 'अनुक्रमणिका',
                 'scholarship': 'छात्रवृत्तियाँ',
                 'office_contacts': 'शिक्षा कार्यालय के संपर्क',
-                'visa_canter': 'विजा-आप्रवासन केंद्र',
+                'visa_center': 'विजा-आप्रवासन केंद्र',
                 'back': 'पीछे'
             },
             'language_selection_keyboard': {
