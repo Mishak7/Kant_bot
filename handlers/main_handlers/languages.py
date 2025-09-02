@@ -1,6 +1,22 @@
 TEXTS = {
     'ru': {
-        'greetings': 'Привет! С чем помочь?',
+        'greetings': '''
+Привет, студент БФУ! 🌍✨
+
+Рады тебя видеть в официальном чат-боте для иностранных студентов Балтийского федерального университета им. И. Канта! 🎓🇷🇺
+
+Я твой персональный помощник по любым вопросам в Калининграде. Со мной ты сможешь:
+
+🧠 Прокачать русский язык с помощью умного ИИ-тренажера
+🏛️ Узнать полезную информацию об университете и его жизни:
+📍 Найти корпуса и общежития
+🏠 Решить вопросы с заселением
+🤝 Получить поддержку и помощь
+🏦 Узнать про полезные услуги СБЕР 😊
+🚀 Адаптироваться в городе и найти единомышленников
+
+С чего начнем? 👇 Выбери пункт меню! 
+        ''',
         'language_selection': 'Выберите язык/Choose a language:',
         'errors': {
             'start_error': 'Произошла ошибка при запуске бота. Пожалуйста, попробуйте позже.',
@@ -22,7 +38,7 @@ TEXTS = {
                 'back': 'Назад'
             },
             'critical_keyboard': {
-                'police': 'Полиция',
+                'police': 'Службы',
                 'hotline': 'Горячая линия ФМС',
                 'government': 'Местные органы власти',
                 'consulate': 'Консульство',
@@ -108,36 +124,41 @@ TEXTS = {
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*Экстренные контакты*
+🚨 *Экстренные контакты*
 
-Единый номер служб экстренного реагирования (пожарной охраны, МЧС, полиции, скорой помощи, газовой службы) — *112*.
+*Единый номер служб экстренного реагирования*
+(пожарной охраны, МЧС, полиции, скорой помощи, газовой службы)
+📞 *112*
 
-Пожарные и спасатели — *01* (с городского телефона) и *101* (с мобильного)
+👨‍🚒 *Пожарные и спасатели*
+📞 *01* (с городского телефона) | *101* (с мобильного)
 
-Полиция — *02* (с городского телефона) и *102* (с мобильного).
+👮 *Полиция*
+📞 *02* (с городского телефона) | *102* (с мобильного)
 
-Скорая помощь — *103* (с мобильного телефона) и *03* (с городского телефона).
+🏥 *Скорая помощь*
+📞 *03* (с городского телефона) | *103* (с мобильного)
+
+💡 Сохрани эти номера в быстром доступе!
                                                     ''',
 
                 'critical_hotline_handler': '''
-*Сектор визово-миграционной поддержки*
+🚪 *Сектор визово-миграционной поддержки*
 
-_Телефон_:
+📞 *Телефон*:
++7 (4012) 595-595 (доб. 7454) — миграционный учет и визы 
++7 (4012) 595-595 (доб. 7452) — визовые приглашения
 
-8 (4012) 595-595 (доб. 7454)— по вопросам миграционного учета и виз,
+🏢 *Адрес*:
+Россия, г. Калининград, ул. А. Невского, 14, корп. 2, каб. 114
 
-8 (4012) 595-595 (доб. 7452) доб. 7452 — по вопросам визовых приглашений
+🕒 *Приемные часы*:
+Пн 14:00–17:00
+Вт 10:00–13:00
+Чт 14:00–17:00
+Пт 10:00–13:00
 
- _Адрес_: ул. А. Невского 14, корпус №2, каб. 114
-
-_Приемные_ _часы_:
-
-пн 14.00-17.00 
-вт 10.00-13.00 
-чт 14.00-17.00 
-пт 10.00-13.00
-
-обеденный перерыв 13.00-14.00
+Обед 13:00–14:00 
                                                     ''',
 
                 'critical_government_handler': '''
@@ -156,82 +177,36 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
                                                     ''',
 
                 'critical_consulate_handler': '''
-*Представительство МИД России в Калининграде*
-Адрес: 236022, Россия, г. Калининград, ул. Кирова, 17
+*Представительство МИД России в Калининграде* 🏛️
+
+*Адрес*: 🏠
+236022, Россия, г. Калининград, ул. Кирова, 17
+
+*Телефоны*: 📞
 Приемная: + 7 (401) 221-37-12
 Факс: + 7 (401) 221-06-26
 Консульский отдел: + 7 (401) 221-16-68
 Паспортный отдел: + 7 (401) 295-82-02
 Отдел оформления приглашений: + 7 (4012) 21-59-28
 
-
-*Приём граждан по консульско-правовым вопросам*
-
-Пн, Вт, Ср, Чт: с 9-00 до 17-00 
-(перерыв с 12-00 до 14-00)
-
-Пт: с 9-00 до 16-00 
-(перерыв с 12-00 до 14-00)
-
-Сб, Вс: Выходной
+*Приём граждан по консульско-правовым вопросам* ⚖️
+Пн-Чт: с *9:00* до *17:00* (перерыв с *12:00* до *14:00*)
+Пт: с *9:00* до *16:00* (перерыв с *12:00* до *14:00*)
+Сб-Вс: 🚫 Выходной
                                             ''',
             },
 
             'dormitory_handlers': {
                 'dormitory_text': """
-Подробнее про заселение ты можешь узнать (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
-
-*Как подать заявление на место в общежитии?*
-
-1. После твоего зачисления на образовательную программу необходимо подать заявление на место на сайте по https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key=
-
-_Обращаем внимание, что количество мест в общежитии ограничено._
-
-2. Если тебе на почту пришло уведомление о том, что общежитие одобрено, это значит, что твоя заявка принята, и теперь ты участвуешь в конкурсе. Статус своего заявления можно отслеживать по группе Комплекса студенческих общежитий: [группа КСО] https://vk.com/kso_bfu
-
-3. Когда ты увидел свое имя в рейтинге, это значит, что тебе можно получать 2 необходимых допуска для заселения. О них подробно расскажем далее.
-
-4. С полученными допусками подходи на подписание договора в КСО (ул.Невского, 14/1, кабинет 101).
-
-5. После заключения договора и оплаты проживания с направлением подходи к заведующей указанного общежития для заселения и инструктажа.
-
-По приезде необходимо подписать договор найма жилого помещения в студенческом общежитии в Центре социально-экономической поддержки студентов, получить направление и оплатить общежитие за первый семестр. 
-
-_С собой обязательно взять паспорт._
-
-*Приемные часы Центра социально-экономической поддержки студентов:*
-
-- Понедельник: C 10:00 до 17:00
-- Вторник: C 10:00 до 17:00
-- Четверг: C 10:00 до 17:00
-- Пятница: C 10:00 до 16:45 
-
-Обеденный перерыв с 13:00 до 14:00
-
-*Адрес: ул. А. Невского, 14, корпус 10, 1 этаж, кабинет 14.*
-
-*Медицинская справка*
-
-Чтобы проживать в общежитии, необходимо предоставить коменданту общежития справку о прохождении медицинской комиссии. Для получения такой справки тебе нужно посетить кабинет 2 в Клинико-диагностическом центре БФУ им. И.Канта (КДЦ). 
-
-*С собой возьми:*
-
-- паспорт;
-- прививочный сертификат (документ, в котором указаны все прививки, которые тебе делались в течение жизни, в частности там должны быть справки о прививках от кори, дифтерии, столбняка и гепатита В);
-- флюорографию не старше 1 года;
-- 2 отрицательных результата ПЦР-теста на COVID-19/ допуск к занятиям.
-
-_Документы должны быть на русском языке или иметь заверенный перевод на русский._
-
-*Адрес* КДЦ БФУ им.И.Канта: (https://goo.gl/maps/bwq24xTh5P1EctiU8)
-
-_В случае если на момент заселения у тебя этих справок нет, их необходимо сделать за свой счет в любой клинике._
+Для оформления места в общежитии 🏠 важно заранее подготовить необходимые документы 📋 и ознакомиться с процедурой подачи заявления 📝. Ознакомьтесь с подробной инструкцией ниже 👇:
                                             """,
 
                 'payment_text': """
 Оплатить общежитие можно двумя путями.
 
-1. Лично. В кабинет № 222 административного корпуса, 2 этаж. Здесь ты получишь квитанцию для оплаты в кассе на том же этаже. Оплатить через кассу можно наличными в рублях или банковской картой.
+1. Лично. 
+
+В кабинет № 222 административного корпуса, 2 этаж. Здесь ты получишь квитанцию для оплаты в кассе на том же этаже. Оплатить через кассу можно наличными в рублях или банковской картой.
 
 2. Удаленно на сайте.
 
@@ -256,11 +231,20 @@ _Не все общежития оснащены посудой, но ежене
 
 
                 'laundry_text': """
-Прачечные находятся в здании каждого общежития. Комендант или вахтер расскажут, где именно находится комната со стиральными машинами и в какое время можно брать ключ.
+🏢 *Расположение*:
+Прачечные находятся в каждом общежитии. Точное расположение и график работы подскажут комендант или вахтёр.
 
-Стиральный порошок нужно приносить с собой. Прачечная оборудована несколькими стиральными машинами, в которых можно стирать одновременно, если много белья для стирки. Стирать нижнее белье обязательно в специальных мешках. Стирать обувь запрещается, так как это приводит к поломке стиральных машин. Внимательно перед использованием машинки ознакомься с инструкцией в комнате. Сушить белье после стирки можно в специальной комнате, которая оборудована сушилками для одежды.
+🧼 *Правила использования*:
+• Приноси свой стиральный порошок
+• Используй специальные мешки для нижнего белья
+• *Запрещено* стирать обувь (это ломает машины)
+• Перед использованием ознакомься с инструкцией на месте
+• Суши белье в специальной оборудованной комнате
 
-*Помни*, что другие студенты в общежитии тоже хотят постирать свою одежду, поэтому возвращай ключ вахтеру или коменданту сразу после стирки, именно в то время, когда пообещал его вернуть.
+⏰ *Важно!*
+Возвращай ключ вахтёру *точно в оговоренное время* — другие студенты тоже хотят постирать свои вещи! 🙏
+
+✨ Всё организовано для твоего удобства — пользуйся аккуратно!
                                             """,
 
                 'no_certificate_text': """
@@ -601,7 +585,22 @@ _Email_: international-study@kantiana.ru
 
 
     'en': {
-        'greetings': 'Hello! How can I help you?',
+        'greetings': """
+Hello, IKBFU student! 🌍✨
+
+We're glad to see you in the official chat bot for international students of the Immanuel Kant Baltic Federal University! 🎓🇷🇺
+
+I'm your personal assistant for any questions in Kaliningrad. With me you can:
+
+🧠 Practice Russian with a smart AI tutor
+🏛️ Find useful information about university life:
+📍 Locate campuses and dormitories
+🏠 Solve accommodation issues
+🤝 Get support and help
+🏦 Learn about useful SBER services 😊
+🚀 Adapt to the city and find like-minded people
+
+Where shall we start? 👇 Choose a menu item!""",
         'errors': {
             'start_error': 'An error occurred while starting the bot. Please try again later.',
             'info_error': 'Error loading information',
@@ -622,7 +621,7 @@ _Email_: international-study@kantiana.ru
                 'back': 'Back'
             },
             'critical_keyboard': {
-                'police': 'Police',
+                'police': 'Emergency',
                 'hotline': 'FMS hotline',
                 'government': 'Local authorities',
                 'consulate': 'Consulate',
@@ -703,37 +702,41 @@ _Email_: international-study@kantiana.ru
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*Emergency Contacts*
+🚨 *Emergency Contacts*
 
-The unified number for emergency response services 
-(fire department, EMS, police, ambulance, gas service) — *112*.
+*Unified Emergency Response Number*
+(fire department, emergency services, police, ambulance, gas service)
+📞 *112*
 
-Firefighters and rescuers — *01* (from a landline) and *101* (from a mobile)
+👨‍🚒 *Firefighters and Rescuers*
+📞 *01* (from landline) | *101* (from mobile)
 
-Police — *02* (from a landline) and *102* (from a mobile).
+👮 *Police*
+📞 *02* (from landline) | *102* (from mobile)
 
-Ambulance — *103* (from a mobile) and *03* (from a landline).
+🏥 *Ambulance*
+📞 *03* (from landline) | *103* (from mobile)
+
+💡 Save these numbers for quick access!
                                                     ''',
 
                 'critical_hotline_handler': '''
-*Visa and Migration Support Center*
+🚪 *Visa and Migration Support Division*
 
-_Phone_: 
+📞 *Phone*:
++7 (4012) 595-595 (доб. 7454) — migration registration and visas
++7 (4012) 595-595 (доб. 7452) — visa invitations
 
-8 (4012) 595-595 (ext. 7454) — for questions regarding migration registration and visas
+🏢 *Address*:
+Russia, Kaliningrad, 14 Alexander Nevsky St., Bldg. 2, Office 114 3
 
-8 (4012) 595-595 (ext. 7452) — for questions regarding visa invitations
+🕒 *Office Hours*:
+Mon 14:00–17:00
+Tue 10:00–13:00
+Thu 14:00–17:00
+Fri 10:00–13:00
 
-_Address_: 14 A. Nevsky St., building 2, office 114
-
-_Office_ _Hours_:
-
-Mon 14:00-17:00
-Tue 10:00-13:00
-Thu 14:00-17:00
-Fri 10:00-13:00
-
-Lunch break: 13:00-14:00
+Lunch break: 13:00–14:00 
                                                     ''',
 
                 'critical_government_handler': '''
@@ -759,22 +762,22 @@ on Fridays until 5:00 PM, with a break from 1:00 PM to 2:00 PM; Saturday and Sun
                                                    ''',
 
                 'critical_consulate_handler': '''
-*Representation of the Ministry of Foreign Affairs of Russia in Kaliningrad* 
+*Representative Office of the Ministry of Foreign Affairs of Russia in Kaliningrad* 🏛️
 
-Address: 236022, Russia, Kaliningrad, Kirova St., 17 
-Reception: +7 (401) 221-37-12 
-Fax: +7 (401) 221-06-26 
-Consular Department: +7 (401) 221-16-68 
-Passport Department: +7 (401) 295-82-02 
-Invitation Processing Department: +7 (4012) 21-59-28
+*Address*: 🏠
+236022, Russia, Kaliningrad, 17 Kirova Street
 
-*Reception of citizens on consular-legal issues* 
+*Phones*: 📞
+Reception: + 7 (401) 221-37-12
+Fax: + 7 (401) 221-06-26
+Consular Section: + 7 (401) 221-16-68
+Passport Office: + 7 (401) 295-82-02
+Invitation Processing Department: + 7 (4012) 21-59-28
 
-Mon, Tue, Wed, Thu: 9:00 to 17:00 (break from 12:00 to 14:00) 
-
-Fri: 9:00 to 16:00 (break from 12:00 to 14:00) 
-
-Sat, Sun: Closed
+*Reception of citizens on consular and legal matters* ⚖️
+Mon-Thu: from *9:00* to *17:00* (break from *12:00* to *14:00*)
+Fri: from *9:00* to *16:00* (break from *12:00* to *14:00*)
+Sat-Sun: 🚫 Day off
                                             ''',
             },
 
@@ -861,15 +864,20 @@ _Not all dormitories are equipped with dishes, but fresh bed linen is provided w
 
 
                 'laundry_text': """
-The laundries are located in the building of each dormitory. 
-The commandant or the security guard will tell you where exactly the room with the washing machines is and at what time you can get the key.
+🏢 *Location*:
+Laundry rooms are located in every dormitory building. The exact location and operating hours can be provided by the warden or supervisor.
 
-You need to bring your own laundry detergent. 
-The laundry is equipped with several washing machines that can be used simultaneously if there is a lot of laundry to wash. 
-It is mandatory to wash underwear in special bags. Washing shoes is prohibited as it leads to damage to the washing machines. 
-Carefully read the instructions in the room before using the machine. You can dry the laundry after washing in a special room that is equipped with clothes dryers.
+🧼 *Usage Rules*:
+• Bring your own detergent
+• Use special mesh bags for underwear
+• *Do not* wash shoes (this breaks the machines)
+• Read the instructions on-site before use
+• Dry clothes in the specially equipped room
 
-*Remember*, that other students in the dormitory also want to wash their clothes, so return the key to the security guard or the commandant immediately after washing, exactly at the time you promised to return it.
+⏰ *Important!*
+Return the key to the supervisor *exactly at the agreed time* — other students also want to wash their clothes! 🙏
+
+✨ Everything is organized for your convenience — please use it carefully!
                                             """,
 
                 'no_certificate_text': """
@@ -1201,7 +1209,25 @@ Click the *button below* for details:
 
 
     'fr': {
-        'greetings': 'Bonjour ! En quoi puis-je vous aider?',
+        'greetings': '''
+Salut, étudiant de l'Université fédérale de la Baltique ! 🌍✨
+
+Nous sommes heureux de te voir dans le chatbot officiel pour les 
+étudiants étrangers de l'Université fédérale de la Baltique nommée d'I. Kant ! 🎓🇷🇺
+
+Je suis ton assistant personnel pour toute question à Kaliningrad. 
+Avec moi, tu pourras :
+
+🧠 Améliorer ton russe grâce à un entraîneur intelligent IA
+🏛️ Découvrir des informations utiles sur l'université et sa vie :
+📍 Trouver des bâtiments et des résidences universitaires
+🏠 Résoudre des questions de logement
+🤝 Obtenir du soutien et de l'aide
+🏦 Découvrir des services utiles de SBER 😊
+🚀 S'adapter dans la ville et trouver des personnes partageant les mêmes idées
+
+Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
+        ''',
         'errors': {
             'start_error': 'Une erreur est survenue lors du lancement du bot. Veuillez réessayer plus tard.',
             'info_error': 'Erreur lors du chargement des informations',
@@ -1222,7 +1248,7 @@ Click the *button below* for details:
                 'back': 'Retour'
             },
             'critical_keyboard': {
-                'police': 'Police',
+                'police': 'Urgence',
                 'hotline': 'Ligne directe de la FMS (USCIS)',
                 'government': 'Autorités locales',
                 'consulate': 'Consulat',
@@ -1303,33 +1329,40 @@ Click the *button below* for details:
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*Contacts d'urgence*
+🚨 *Contacts d'urgence*
 
-Le numéro unique des services d'urgence (pompiers, ministère des Situations d'urgence, police, ambulance, service de gaz) — *112*.
+*Numéro unique des services d'urgence*(pompiers, ministère des situations d'urgence, police, ambulance, service gaz)
+📞 *112*
 
-Pompiers et sauveteurs — *01* (depuis un téléphone fixe) et *101* (depuis un téléphone mobile).
+👨‍🚒 *Pompiers et sauveteurs*
+📞 *01* (depuis un téléphone fixe) | *101* (depuis un mobile)
 
-Police — *02* (depuis un téléphone fixe) et *102* (depuis un téléphone mobile).
+👮 *Police*
+📞 *02* (depuis un téléphone fixe) | *102* (depuis un mobile)
 
-Ambulance — *103* (depuis un téléphone mobile) et *03* (depuis un téléphone fixe).
+🏥 *Ambulance*
+📞 *03* (depuis un téléphone fixe) | *103* (depuis un mobile)
+
+💡 Enregistrez ces numéros pour un accès rapide!
                                                     ''',
 
                 'critical_hotline_handler': '''
-*Secteur de soutien aux visas et à la migration*
+🚪 *Secteur de soutien aux visas et à la migration*
 
-_Téléphone_ :8 (4012) 595-595 (poste 7454) — pour des questions de comptabilité migratoire et de visas,
-8 (4012) 595-595 (poste 7452) — pour des questions d'invitations de visa
+📞 *Téléphone* :
++7 (4012) 595-595 (poste 7454) — enregistrement migratoire et visas
++7 (4012) 595-595 (poste 7452) — invitations de visa
 
-_Adresse_ : 14 rue A. Nevski, bâtiment n°2, bureau 114
+🏢 *Adresse* :
+Russie, ville de Kaliningrad, rue A. Nevskogo, 14, bâtiment 2, bureau 114
 
-_Horaires d'ouverture_ :
+🕒 *Heures d'ouverture* :
+Lun 14:00–17:00
+Mar 10:00–13:00
+Jeu 14:00–17:00
+Ven 10:00–13:00
 
-lun: 14:00-17:00
-mar: 10:00-13:00
-jeu: 14:00-17:00
-ven: 10:00-13:00
-
-pause déjeuner 13:00-14:00
+Pause déjeuner 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
@@ -1353,74 +1386,29 @@ tous les jours de 9h00 à 18h00, le vendredi jusqu'à 17h00, pause : de 13h00 à
                                                     ''',
 
                 'critical_consulate_handler': '''
-*Représentation du ministère des Affaires étrangères de la Russie à Kaliningrad* 
+*Représentation du ministère des Affaires étrangères de la Russie à Kaliningrad* 🏛️
 
-Adresse: 236022, Russie, ville de Kaliningrad, rue Kirov, 17 
-Réception: +7 (401) 221-37-12 
-Fax : +7 (401) 221-06-26 
-Département consulaire: +7 (401) 221-16-68 
-Département des passeports: +7 (401) 295-82-02 
-Département de délivrance des invitations: +7 (4012) 21-59-28 
+*Adresse*: 🏠
+236022, Russie, Kaliningrad, rue Kirova, 17
 
-*Accueil du public pour les questions consulaires et juridiques* 
+*Téléphones*: 📞
+Standard: + 7 (401) 221-37-12
+Fax: + 7 (401) 221-06-26
+Service consulaire: + 7 (401) 221-16-68
+Service des passeports: + 7 (401) 295-82-02
+Service de délivrance des invitations: + 7 (4012) 21-59-28
 
-Lun, Mar, Mer, Jeu : de 9:00 à 17:00 (pauses de 12:00 à 14:00) 
-Ven : de 9:00 à 16:00 (pauses de 12:00 à 14:00) 
-Sam, Dim : Fermé
+*Accueil du public pour les questions consulaires et juridiques* ⚖️
+
+Lun-Jeu: de *9h00* à *17h00* (pause de *12h00* à *14h00*)
+Ven: de *9h00* à *16h00* (pause de *12h00* à *14h00*)
+Sam-Dim: 🚫 Fermé
                                             ''',
             },
 
             'dormitory_handlers': {
                 'dormitory_text': """
-Tu peux en savoir plus sur l'emménagement ici (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
-
-*Comment faire une demande de place dans un dortoir?*
-
-1. Après votre admission à un programme éducatif, vous devez soumettre une demande de place sur le site à l'adresse https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key=
-
-_Nous attirons votre attention sur le fait que le nombre de places dans le dortoir est limité._
-
-2. Si vous avez reçu un avis par e-mail indiquant que le dortoir est approuvé, cela signifie que votre demande a été acceptée et que vous participez maintenant au concours. 
-Vous pouvez suivre le statut de votre demande dans le groupe du Complexe de dortoirs étudiants: [groupe KSO] https://vk.com/kso_bfu
-
-3. Lorsque vous voyez votre nom dans le classement, cela signifie que vous pouvez obtenir les 2 autorisations nécessaires pour l'emménagement. 
-Nous vous en parlerons plus en détail par la suite.
-
-4. Avec les autorisations obtenues, allez signer le contrat au KSO (rue Nevskiy, 14/1, bureau 101).
-
-5. Après avoir signé le contrat et payé le loyer, rendez-vous auprès de la responsable du dortoir indiqué pour l'emménagement et l'instruction.
-
-À l'arrivée, il est nécessaire de signer le contrat de location d'un logement dans la résidence étudiante au Centre de soutien socio-économique aux étudiants, 
-de recevoir une orientation et de payer le loyer de la résidence pour le premier semestre. 
-
-_Il est impératif d'apporter son passeport._
-
-*Heures d'accueil du Centre de soutien socio-économique aux étudiants :* 
-
-- Lundi : De 10:00 à 17:00 
-- Mardi : De 10:00 à 17:00 
-- Jeudi : De 10:00 à 17:00 
-- Vendredi : De 10:00 à 16:45 
-Pause déjeuner de 13:00 à 14:00 
-
-*Adresse : rue A. Nevski, 14, bâtiment 10, 1er étage, bureau 14.* 
-
-*Certificat médical* 
-
-Pour résider dans le dortoir, il est nécessaire de fournir au concierge du dortoir un certificat attestant de l'examen médical. 
-Pour obtenir ce certificat, vous devez vous rendre au bureau 2 du Centre clinique et diagnostique de l'Université fédérale de l'Oural (KDC/КДЦ). 
-
-*Apportez avec vous :* 
-- Passeport
-- Certificat de vaccination (document indiquant tous les vaccins que vous avez reçus au cours de votre vie, en particulier il doit contenir des attestations de vaccination contre la rougeole, la diphtérie, le tétanos et l'hépatite B) 
-- Radiographie pulmonaire datant de moins d'un an 
-- 2 résultats négatifs de tests PCR pour COVID-19 / autorisation de participation aux cours. 
-
-_Les documents doivent être en russe ou avoir une traduction certifiée en russe._ 
-
-*Adresse* KDC BFU im. I. Kanta: (https://goo.gl/maps/bwq24xTh5P1EctiU8) 
-
-_Si à l'heure de ton emménagement tu n'as pas ces certificats, il est nécessaire de les obtenir à tes frais dans n'importe quelle clinique._
+Pour réserver un logement en résidence universitaire 🏠, il est important de préparer à l'avance les documents nécessaires 📋 et de se familiariser avec la procédure de dépôt de demande 📝. Veuillez consulter le guide détaillé ci-dessous 👇 :
                                             """,
 
                 'payment_text': """
@@ -1455,13 +1443,21 @@ _Toutes les résidences ne sont pas équipées de vaisselle, mais des draps prop
 
 
                 'laundry_text': """
-Les laveries se trouvent dans le bâtiment de chaque résidence. Le responsable ou le gardien vous indiquera où se trouve la pièce avec les machines à laver et à quel moment vous pouvez prendre la clé.
+🏢 *Emplacement* :
+Les laveries se trouvent dans chaque résidence étudiante. Le responsable ou le concierge vous renseignera 
+sur l'emplacement exact et les horaires d'ouverture.
 
-Vous devez apporter votre propre lessive. La laverie est équipée de plusieurs machines à laver, dans lesquelles vous pouvez laver en même temps si vous avez beaucoup de linge. 
-Il est obligatoire de laver les sous-vêtements dans des sacs spéciaux. Il est interdit de laver des chaussures, car cela peut endommager les machines à laver. Avant d'utiliser la machine, 
-familiarisez-vous attentivement avec le mode d'emploi dans la pièce. Vous pouvez sécher votre linge après le lavage dans une pièce spéciale, qui est équipée de sèche-linges.
+🧼 *Règles d'utilisation* :
+• Apporte ta propre lessive
+• Utilise des sacs spéciaux pour le linge
+• *Interdit* de laver des chaussures (cela casse les machines)
+• Consulte les instructions sur place avant d'utiliser
+• Fais sécher le linge dans une salle spécialement équipée
 
-*Souvenez-vous* que d'autres étudiants dans la résidence souhaitent également laver leurs vêtements, alors veuillez retourner la clé au gardien ou au responsable immédiatement après le lavage, exactement à l'heure à laquelle vous avez promis de la rendre.                                            
+⏰ *Important !*
+Rends la clé au concierge *exactement à l'heure convenue* — d'autres étudiants veulent aussi laver leurs affaires ! 🙏
+
+✨ Tout est organisé pour ton confort — utilise avec soin !
 """,
 
                 'no_certificate_text': """
@@ -1788,7 +1784,24 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
 
 
     'es': {
-        'greetings': '¡Hola! ¿Con qué puedo ayudar?',
+        'greetings': '''
+¡Hola, estudiante de la BFU! 🌍✨
+
+¡Nos alegra verte en el chatbot oficial para estudiantes internacionales de la Universidad Federal del Báltico Im. I. Kant! 🎓🇷🇺
+
+Soy tu asistente personal para cualquier pregunta en Kaliningrado. 
+Conmigo podrás:
+
+🧠 Mejorar tu ruso con la ayuda de un inteligente entrenador de IA
+🏛️ Obtener información útil sobre la universidad y su vida:
+📍 Encontrar edificios y residencias
+🏠 Resolver cuestiones de alojamiento
+🤝 Recibir apoyo y ayuda
+🏦 Conocer servicios útiles de SBER 😊
+🚀 Adaptarte en la ciudad y encontrar personas afines
+
+¿Con qué empezamos? 👇 ¡Elige un punto del menú!
+        ''',
         'errors': {
             'start_error': 'Se produjo un error al iniciar el bot. Por favor, inténtelo más tarde.',
             'info_error': 'Error al cargar la información',
@@ -1809,7 +1822,7 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
                 'back': 'Atrás'
             },
             'critical_keyboard': {
-                'police': 'Policía',
+                'police': 'Urgencia',
                 'hotline': 'Línea directa de la FMS (Ministerio de Inclusión, Seguridad Social y Migraciones)',
                 'government': 'Autoridades locales',
                 'consulate': 'Consulado',
@@ -1895,35 +1908,41 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*Contactos de emergencia*
+🚨 *Contacts d'urgence*
 
-Número único de los servicios de emergencia (bomberos, Ministerio de Emergencias, policía, ambulancia, servicios de gas) — *112*.
+*Numéro unique des services d'urgence*(pompiers, ministère des situations d'urgence, police, ambulance, service gaz)
+📞 *112*
 
-Bomberos y rescatistas — *01* (desde un teléfono fijo) y *101* (desde un móvil)
+👨‍🚒 *Pompiers et sauveteurs*
+📞 *01* (depuis un téléphone fixe) | *101* (depuis un mobile)
 
-Policía — *02* (desde un teléfono fijo) y *102* (desde un móvil)
+👮 *Police*
+📞 *02* (depuis un téléphone fixe) | *102* (depuis un mobile)
 
-Ambulancia — *103* (desde un móvil) y *03* (desde un teléfono fijo)
+🏥 *Ambulance*
+📞 *03* (depuis un téléphone fixe) | *103* (depuis un mobile)
+
+💡 Enregistrez ces numéros pour un accès rapide!
                                                    ''',
 
                 'critical_hotline_handler': '''
-*Sector de apoyo visa-migratorio*
+🚪 *Sector de apoyo visa-migratorio*
 
-_Teléfono_:
+📞 *Teléfono*:
++7 (4012) 595-595 (ext. 7454) — registro migratorio y visas
++7 (4012) 595-595 (ext. 7452) — invitaciones de visa
 
-8 (4012) 595-595 (ext. 7454) — para preguntas sobre el registro migratorio y visas
-8 (4012) 595-595 (ext. 7452) — para preguntas sobre invitaciones de visa
+🏢 *Dirección*:
+Rusia, ciudad de Kaliningrado, ul. A. Nevski, 14, corp. 2, oficina 114
 
-_Dirección_: Calle A. Nevski 14, edificio №2, oficina 114
+🕒 *Horarios de atención*:
 
-_Horarios_ _de atención_:
+Lun 14:00–17:00
+Mar 10:00–13:00
+Jue 14:00–17:00
+Vie 10:00–13:00
 
-Lun 14:00-17:00
-Mar 10:00-13:00
-Jue 14:00-17:00
-Vie 10:00-13:00
-
-pausa para el almuerzo 13:00-14:00
+Almuerzo 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
@@ -1953,73 +1972,29 @@ La inscripción previa para la recepción personal se realiza por teléfono a la
                                                    ''',
 
                 'critical_consulate_handler': '''
-*Representación del Ministerio de Relaciones Exteriores de Rusia en Kaliningrado*  
+*Representación del Ministerio de Relaciones Exteriores de Rusia en Kaliningrado* 🏛️
 
-Dirección: 236022, Rusia, ciudad de Kaliningrado, calle Kírov, 17  
-Recepción: + 7 (401) 221-37-12  
-Fax: + 7 (401) 221-06-26  
-Departamento consular: + 7 (401) 221-16-68  
-Departamento de pasaportes: + 7 (401) 295-82-02  
-Departamento de tramitación de invitaciones: + 7 (4012) 21-59-28  
+*Dirección*: 🏠
+236022, Rusia, ciudad de Kaliningrado, calle Kirova, 17
 
-*Atención a ciudadanos por cuestiones consulares y legales*  
+*Teléfonos*: 📞
+Recepción: + 7 (401) 221-37-12
+Fax: + 7 (401) 221-06-26
+Departamento consular: + 7 (401) 221-16-68
+Departamento de pasaportes: + 7 (401) 295-82-02
+Departamento de tramitación de invitaciones: + 7 (4012) 21-59-28
 
-Lun, Mar, Mié, Jue: de 9:00 a 17:00 (recogida de 12:00 a 14:00)  
-Vie: de 9:00 a 16:00 (recogida de 12:00 a 14:00)  
-Sáb, Dom: Cerrado
+*Atención al público en cuestiones consulares y legales* 
+⚖️Lun-Jue: de *9:00* a *17:00* (pausa de *12:00* a *14:00*)
+Vie: de *9:00* a *16:00* (pausa de *12:00* a *14:00*)
+Sáb-Dom: 🚫 Cerrado
                                             ''',
             },
 
             'dormitory_handlers': {
                 'dormitory_text': """
-Puedes obtener más información sobre el alojamiento aquí (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/)
-
-*¿Cómo solicitar una plaza en la residencia estudiantil?*
-
-1. Después de tu admisión en el programa educativo, debes solicitar una plaza en el sitio web a través de https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key=
-
-_Ten en cuenta que la cantidad de plazas en la residencia estudiantil es limitada._
-
-2. Si recibiste un aviso por correo de que la residencia ha sido aprobada, significa que tu solicitud ha sido aceptada y ahora participas en el concurso. 
-Puedes seguir el estado de tu solicitud en el grupo del Complejo de Residencias Estudiantiles: [grupo KSO] https://vk.com/kso_bfu
-
-3. Cuando veas tu nombre en el ranking, significa que puedes obtener los 2 permisos necesarios para el alojamiento. Te lo explicaremos en detalle a continuación.
-
-4. Con los permisos obtenidos, dirígete a firmar el contrato en el KSO (Calle Nevski, 14/1, oficina 101).
-
-5. Después de firmar el contrato y pagar el alojamiento, acércate a la administradora de la residencia indicada para el alojamiento y la orientación. 
-A la llegada es necesario firmar el contrato de arrendamiento del alojamiento en la residencia estudiantil en el Centro de Apoyo Socioeconómico para Estudiantes, recibir la orientación y pagar la residencia por el primer semestre. 
-
-_Es obligatorio llevar el pasaporte._
-
-*Horarios de atención del Centro de apoyo socioeconómico para estudiantes:* 
-
-- Lunes: De 10:00 a 17:00 
-- Martes: De 10:00 a 17:00 
-- Jueves: De 10:00 a 17:00 
-- Viernes: De 10:00 a 16:45 
-
-Pausa para el almuerzo de 13:00 a 14:00 
-
-*Dirección: Calle A. Nevski, 14, edificio 10, 1er piso, oficina 14.* 
-
-*Certificado médico* 
-
-Para residir en la residencia, es necesario presentar al conserje de la residencia un certificado de haberse sometido a un examen médico. 
-Para obtener dicho certificado, debes visitar la oficina 2 en el Centro clínico-diagnóstico de la Universidad Federal de Immanuel Kant (KDC). 
-
-*Lleva contigo:* 
-- pasaporte 
-- certificado de vacunación (documento que menciona todas las vacunas que has recibido a lo largo de tu vida, en particular debe incluir certificados de vacunación contra el sarampión, difteria, tétanos y hepatitis B)
-- una radiografía de tórax no mayor a 1 año
-- 2 resultados negativos de pruebas PCR para COVID-19/ autorización para participar en clases. 
-
-_Los documentos deben estar en ruso o tener una traducción certificada al ruso._ 
-
-*Dirección* KDC BFU im.I.Kanta: (https://goo.gl/maps/bwq24xTh5P1EctiU8) 
-
-_En caso de que no tengas estos documentos en el momento de la mudanza, debes obtenerlos por tu cuenta en cualquier clínica._
-                                            """,
+Para la tramitación del lugar en el alojamiento 🏠 es importante preparar con anticipación los documentos necesarios 📋 y familiarizarse con el procedimiento de presentación de solicitudes 📝. Consulte las instrucciones detalladas a continuación 👇:
+                                         """,
 
                 'payment_text': """
 Se puede pagar el alojamiento de dos maneras.
@@ -2053,12 +2028,21 @@ _No todas las residencias están equipadas con utensilios de cocina, pero se pro
 
 
                 'laundry_text': """
-Las lavanderías se encuentran en el edificio de cada residencia. El conserje o el portero te indicarán dónde está exactamente la habitación con las lavadoras y a qué hora puedes recoger la llave. Debes traer tu propio detergente. 
+🏢 *Ubicación*: 
+Las lavanderías se encuentran en cada residencia. La ubicación exacta y el horario de funcionamiento te lo indicará el conserje o el portero.
 
-La lavandería está equipada con varias lavadoras que se pueden usar simultáneamente si tienes mucha ropa para lavar. Es obligatorio lavar la ropa interior en bolsas especiales. Está prohibido lavar zapatos, ya que esto puede dañar las lavadoras. 
-Asegúrate de leer las instrucciones en la habitación antes de usar la máquina. Puedes secar la ropa después de lavarla en una sala especial que está equipada con secadoras.
+🧼 *Reglas de uso*: 
+• Trae tu propio detergente
+• Usa bolsas especiales para ropa interior
+• *Está prohibido* lavar calzado (esto daña las máquinas)
+• Antes de usar, familiarízate con las instrucciones en el lugar
+• Seca la ropa en la sala equipada especialmente para ello
 
-*Recuerda* que otros estudiantes en la residencia también quieren lavar su ropa, por lo que debes devolver la llave al portero o al conserje inmediatamente después de lavar, exactamente a la hora que prometiste devolverla.                                            """,
+⏰ *¡Importante!* 
+Devuelve la llave al portero *exactamente a la hora acordada* — ¡otros estudiantes también quieren lavar sus cosas! 🙏
+
+✨ Todo está organizado para tu comodidad — ¡úsalo con cuidado!
+""",
 
                 'no_certificate_text': """
 SI NO TIENES CERTIFICADO DE VACUNAS O DE FLUOROGRAFÍA
@@ -2386,7 +2370,24 @@ Haz clic en *el botón de abajo* para más detalles:
 
 
     'cn': {
-        'greetings': '你好！有什麼需要幫忙的嗎?',
+        'greetings': '''
+你好，BFU的學生！🌍✨
+
+我們很高興在官方的加爾滕巴爾捷國立大學外國學生聊天機器人中見到你！🎓🇷🇺
+
+我是你在卡廖林格勒的個人助理，任何問題都可以找我。
+你可以和我一起：
+
+🧠 通過智能AI訓練器提升你的俄語水平
+🏛️ 獲得有關大學及其生活的有用信息：
+📍 找到各個校區和宿舍
+🏠 解決住宿問題
+🤝 獲得支持和幫助
+🏦 知道有用的SBER服務😊
+🚀 在城市裡適應並找到志同道合的人
+
+我們從哪裡開始？👇 選擇菜單項！
+        ''',
         'errors': {
             'start_error': '啟動機器人時發生錯誤。請稍後再試。',
             'info_error': '載入資訊時出錯',
@@ -2407,7 +2408,7 @@ Haz clic en *el botón de abajo* para más detalles:
                 'back': '回去'
             },
             'critical_keyboard': {
-                'police': '警察',
+                'police': '緊急',
                 'hotline': '熱線 FMS',
                 'government': '地方當局',
                 'consulate': '領事館',
@@ -2493,35 +2494,41 @@ Haz clic en *el botón de abajo* para más detalles:
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*緊急聯絡方式*
+🚨 *緊急聯絡方式*
 
-統一的緊急服務號碼（消防、緊急情況部、警察、急救、天然氣服務）— *112*
+*緊急救援服務統一號碼*（消防、緊急情況部、警察、急救、燃氣服務）
+📞 *112*
 
-消防員和救援人員 — *01*（使用市話）和 *101*（使用手機）
+👨‍🚒 *消防員和救援人員*
+📞 *01*（從固定電話撥打）| *101*（從手機撥打）
 
-警察 — *02*（使用市話）和 *102*（使用手機）
+👮 *警察*
+📞 *02*（從固定電話撥打）| *102*（從手機撥打）
 
-急救 — *103*（使用手機）和 *03*（使用市話）
+🏥 *急救*
+📞 *03*（從固定電話撥打）| *103*（從手機撥打）
+
+💡 保存這些號碼以便快速使用！
                                                     ''',
 
                 'critical_hotline_handler': '''
-*簽證移民支持部*
+🚪 *簽證與移民支持部門*
 
-_電話_：
+📞 *電話*:
++7 (4012) 595-595 (分機 7454) — 移民登記與簽證
++7 (4012) 595-595 (分機 7452) — 簽證邀請
 
-8 (4012) 595-595 (分機 7454)— 關於移民登記和簽證的問題
-8 (4012) 595-595 (分機 7452) — 關於簽證邀請的問題
+🏢 *地址*:
+俄羅斯，加林寧格勒，A. 涅夫斯基街，14號，2號樓，114室
 
-_地址_：俄羅斯─聖彼得堡市，A. 內夫斯基街 14 號，2 號樓，114 室
+🕒 *辦公時間*:
 
-_辦公時間_：
+週一 14:00–17:00
+週二 10:00–13:00
+週四 14:00–17:00
+週五 10:00–13:00
 
-週一 14:00-17:00
-週二 10:00-13:00
-週四 14:00-17:00
-週五 10:00-13:00
-
-午餐時間 13:00-14:00
+午餐 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
@@ -2540,74 +2547,28 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
                                                     ''',
 
                 'critical_consulate_handler': '''
-*俄羅斯外交部在加里寧格勒的代表處*
+*俄羅斯外交部在加里寧格勒的代表處* 🏛️
 
-地址：236022，俄羅斯，加里寧格勒，基羅夫街17
-號接待電話：+7 (401) 221-37-12
-傳真：+7 (401) 221-06-26
-領事部：+7 (401) 221-16-68
-護照部：+7 (401) 295-82-02
-邀請函辦公室：+7 (4012) 21-59-28
+*地址*: 🏠
+236022, 俄羅斯, 加里寧格勒市, 基羅夫街, 17號
 
-*公民諮詢領事法律事務*
+*電話*: 📞
+接待處: + 7 (401) 221-37-12
+傳真: + 7 (401) 221-06-26
+領事部: + 7 (401) 221-16-68
+護照部: + 7 (401) 295-82-02
+邀請函處: + 7 (4012) 21-59-28
 
-週一、週二、週三、週四：9:00到17:00（12:00到14:00休息）
-
-週五：9:00到16:00（12:00到14:00休息）
-
-週六、週日：休息
+*有關領事法律問題的公民接待時間* ⚖️
+週一至週四: *9:00* 至 *17:00* （*12:00* 至 *14:00* 休息）
+週五: *9:00* 至 *16:00* （*12:00* 至 *14:00* 休息）
+週六至週日: 🚫 休息
                                             ''',
             },
 
             'dormitory_handlers': {
                 'dormitory_text': """
-更多關於入住的資訊你可以在這裡了解 (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
-
-*如何申請宿舍名額？*
-
-1. 在你被錄取到教育項目後，需要在網站上提交宿舍申請，網址為 https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key=
-
-_請注意，宿舍的名額是有限的。_
-
-2. 如果你收到郵件通知宿舍已獲得批准，這意味著你的申請已被接受，現在你參加了競賽。你可以在學生宿舍綜合體的群組中跟蹤申請狀態：[KSO群組] https://vk.com/kso_bfu
-
-3. 當你在排名中看到自己的名字，這意味著你可以獲取入住所需的兩個許可。我們將詳細介紹這些許可。
-
-4. 手持所獲取的許可到KSO簽署合同（地址：涅夫斯基大街14/1號，101室）。
-
-5. 簽署合同並支付住宿費後，請前往指定宿舍的負責人處辦理入住和指導。
-
-抵達時需簽署學生宿舍租賃合同，並在學生社會經濟支持中心獲取指導，支付第一學期的宿舍費用。
-
-_必須攜帶護照。_
-
-*學生社會經濟支持中心的接待時間：*
-
-- 星期一：從 10:00 到 17:00
-- 星期二：從 10:00 到 17:00
-- 星期四：從 10:00 到 17:00
-- 星期五：從 10:00 到 16:45
-
-午餐休息時間為 13:00 至 14:00
-
-*地址：阿.涅夫斯基街14號，10號樓，1樓，14號辦公室。*
-
-*醫療證明*
-
-為了在宿舍居住，需要向宿舍管理员提供醫療檢查合格證明。要獲得這樣的證明，你需要前往伊曼紐爾·康德國立大學診斷醫學中心的2號辦公室（KDC）。
-
-*請攜帶：*
-
-- 護照
-- 疫苗接種證明（文件中應列出你一生中所有的疫苗接種情況，特別是麻疹、白喉、破傷風及B型肝炎的接種證明）
-- 不超過1年的胸部X光檢查
-- 2份COVID-19的PCR測試陰性結果/上課許可。
-
-_文件必須以俄語撰寫或附有經公證的俄語翻譯._
-
-*地址* 伊曼紐爾·康德國立大學KDC：（https://goo.gl/maps/bwq24xTh5P1EctiU8）
-
-_如果在入住時你沒有這些證明，則必須自費在任何診所進行檢查。_*
+為了在宿舍辦理入住 🏠，提前準備必要的文件 📋 並了解申請程序 📝 是非常重要的。請參閱下面的詳細指導 👇:
                                             """,
 
                 'payment_text': """
@@ -2640,12 +2601,20 @@ _並非所有宿舍都配備餐具，但每週會提供新鮮的床單。_
 
 
                 'laundry_text': """
-洗衣房位於每個宿舍大樓內。值班人員或管理員會告訴你洗衣機所在的房間以及可以取鑰匙的時間。
+🏢 *位置*：
+每棟宿舍都有洗衣房。具體的位置和工作時間可以詢問管理員或夜班人員。
 
-洗衣粉需要自備。洗衣房配備有多台洗衣機，可以同時清洗大量的衣物。如果洗衣服的內衣，必須放在專用的袋子裡清洗。禁止清洗鞋子，因為這樣會導致洗衣機故障。
-在使用洗衣機之前，請仔細閱讀房間裡的說明書。洗完衣物後，可以在專門的房間裡晾乾，該房間配有衣物烘乾機。
+🧼 *使用規則*：
+• 請攜帶自己的洗衣粉
+• 使用專用的內衣袋
+• *禁止* 洗鞋子（會損壞機器）
+• 在使用前請參閱現場的說明書
+• 在專用的設備房間內晾乾衣物
 
-*請記住*，宿舍裡的其他學生也想洗衣服，因此請在洗完衣物後，按約定的時間立即將鑰匙歸還給值班人員或管理員。                                            """,
+⏰ *重要！*
+請在*確定的時間*內將鑰匙交還給夜班人員—其他學生也想洗自己的衣物！🙏
+
+✨ 一切都是為了你的便利—請小心使用！                                            """,
 
                 'no_certificate_text': """
 如果沒有疫苗接種證明或胸部X光片
@@ -2971,7 +2940,24 @@ _電子郵件_: international-study@kantiana.ru
 
 
     'in': {
-        'greetings': 'नमस्ते! मैं आपकी किस प्रकार सहायता कर सकता हूँ?',
+        'greetings': '''
+नमस्ते, BFU के छात्र! 🌍✨
+
+आपको इमानुअस कैन्ट के नाम से बाल्टिक फेडरल यूनिवर्सिटी के विदेशी छात्रों के लिए आधिकारिक चैट-बॉट में देखकर खुशी हुई! 🎓🇷🇺
+
+मैं कालिनिंग्राद में आपके किसी भी सवाल के लिए आपका व्यक्तिगत सहायक हूँ। 
+मेरे साथ आप:
+
+🧠 स्मार्ट AI-प्रशिक्षक के माध्यम से रूसी भाषा में सुधार कर सकते हैं
+🏛️ विश्वविद्यालय और इसके जीवन के बारे में उपयोगी जानकारी प्राप्त कर सकते हैं:
+📍 भवनों और छात्रावासों को ढूंढ सकते हैं
+🏠 आवास के मुद्दों को हल कर सकते हैं
+🤝 समर्थन और सहायता प्राप्त कर सकते हैं
+🏦 एसबीईआर की उपयोगी सेवाओं के बारे में जान सकते हैं 😊
+🚀 शहर में अनुकूलित कर सकते हैं और समान विचारधारा वाले लोगों को ढूंढ सकते 
+
+हैंकहाँ से शुरू करें? 👇 मेन्यू में से एक विकल्प चुनें!
+        ''',
         'errors': {
             'start_error': 'बोट चालू करने में एक त्रुटि हुई। कृपया बाद में प्रयास करें।',
             'info_error': 'जानकारी लोड करने में त्रुटि',
@@ -2992,7 +2978,7 @@ _電子郵件_: international-study@kantiana.ru
                 'back': 'पीछे'
             },
             'critical_keyboard': {
-                'police': 'पुलिस',
+                'police': 'आपातकाल',
                 'hotline': 'प्रवासन सेवा की हॉटलाइन',
                 'government': 'स्थानीय सरकारी संस्थाएँ',
                 'consulate': 'कांसुलीट',
@@ -3078,36 +3064,41 @@ _電子郵件_: international-study@kantiana.ru
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*आपातकालीन संपर्क*
+🚨 *आपात संपर्क*
 
-आपातकालीन सेवाओं का एकल नंबर (फायर ब्रिगेड, एमसीएस, पुलिस, एम्बुलेंस, गैस सेवा) — *112*
+*आपातकालीन प्रतिक्रिया सेवाओं का एकल नंबर* (आग extinguishing, आपातकालीन सेवाएं, पुलिस, एम्बुलेंस, गैस सेवा)
+📞 *112*
 
-।फायर ब्रिगेड और बचावकर्मी — *01* (स्थायी फोन से) और *101* (मोबाइल से)
+👨‍🚒 *अग्निशामक और बचावकर्ता*
+📞 *01* (स्थानीय फोन से) | *101* (मोबाइल से)
 
-पुलिस — *02* (स्थायी फोन से) और *102* (मोबाइल से)
+👮 *पुलिस*
+📞 *02* (स्थानीय फोन से) | *102* (मोबाइल से)
 
-।एम्बुलेंस — *103* (मोबाइल फोन से) और *03* (स्थायी फोन से)
+🏥 *एम्बुलेंस*
+📞 *03* (स्थानीय फोन से) | *103* (मोबाइल से)
+
+💡 इन नंबरों को जल्दी पहुँच में सुरक्षित करें!
                                                     ''',
 
                 'critical_hotline_handler': '''
-*वीजा-आप्रवासी सहायता क्षेत्र*
+🚪 *वीज़ा-आप्रवासी सहायता विभाग*
 
-_फोन_:
+📞 *फोन*:
++7 (4012) 595-595 (अगला 7454) — आप्रवासी पंजीकरण और वीज़ा
++7 (4012) 595-595 (अगला 7452) — वीज़ा निमंत्रण
 
-8 (4012) 595-595 (डॉ. 7454)— आप्रवासी रजिस्ट्री और वीजा संबंधी प्रश्नों के लिए
+🏢 *पता*:
+रूस, शहर कलिनिनग्राद, ए. नेव्स्की स्ट्रीट, 14, कॉर्प. 2, कक्ष 114
 
-8 (4012) 595-595 (डॉ. 7452) डॉ. 7452 — वीजा आमंत्रण संबंधी प्रश्नों के लिए
+🕒 *कार्यालय के घंटे*:
 
-_पता_: ए. नेवस्की स्ट्रीट 14, भवन संख्या 2, कक्ष 114
+सोम 14:00–17:00
+मंगल 10:00–13:00
+गुरु 14:00–17:00
+शुक्र 10:00–13:00
 
-_कार्यालय के_ _घंटे_:
-
-सोमवार 14.00-17.00
-मंगलवार 10.00-13.00
-गुरुवार 14.00-17.00
-शुक्रवार 10.00-13.00
-
-दोपहर का ब्रेक 13.00-14.00
+दोपहर का भोजन 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
@@ -3130,74 +3121,28 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
 व्यक्तिगत सुनवाई के लिए पूर्व-निर्धारित रजिस्ट्रेशन समिति की रिसेप्शन पर फोन करके किया जा सकता है: 576-28-08, प्रतिदिन 9.00 से 18.00 तक, शुक्रवार को 17.00 बजे तक, अवकाश: 13.00 से 14.00 तक; शनिवार, रविवार - अवकाश।                                                    ''',
 
                 'critical_consulate_handler': '''
-*रूस के विदेश मंत्रालय का कार्यालय कलीनिनग्राद में*
+*रूस का विदेश मंत्रालय का प्रतिनिधित्व कालिनिनग्राद में* 🏛️
 
-पता: 236022, रूस, कलीनिनग्राद शहर, किरॉवा स्ट्रीट, 17
-फोन: + 7 (401) 221-37-12
+*पता*: 🏠
+236022, रूस, कालिनिनग्राद, किरोवा सड़क, 17
+
+*फोन नंबर*: 📞
+प्रवेश कक्ष: + 7 (401) 221-37-12
 फैक्स: + 7 (401) 221-06-26
-कॉंसुलर डिपार्टमेंट: + 7 (401) 221-16-68
-पासपोर्ट डिपार्टमेंट: + 7 (401) 295-82-02
-आमंत्रण पत्रों की प्रक्रिया विभाग: + 7 (4012) 21-59-28
+कांसुलर विभाग: + 7 (401) 221-16-68
+पासपोर्ट विभाग: + 7 (401) 295-82-02
+आमंत्रण प्राप्ति विभाग: + 7 (4012) 21-59-28
 
-*कांसुलर-लीगल मामलों में नागरिकों की बैठक*
-
-सोम, मंगल, बुध, गुरु: 9-00 से 17-00 बजे तक(12-00 से 14-00 बजे तक ब्रीक)
-
-शुक्र: 9-00 से 16-00 बजे तक(12-00 से 14-00 बजे तक ब्रीक)
-
-शनिवार, रविवार: अवकाश
+*कांसुलर-न्यायिक मामलों में नागरिकों की सुनवाई* ⚖️
+सोम-गुरु: *9:00* बजे से *17:00* बजे तक (दोपहर का विश्राम *12:00* बजे से *14:00* बजे तक)
+शुक्र: *9:00* बजे से *16:00* बजे तक (दोपहर का विश्राम *12:00* बजे से *14:00* बजे तक)
+शनि-रवि: 🚫 बंद
                                             ''',
             },
 
             'dormitory_handlers': {
                 'dormitory_text': """
-आप यहां निवास के बारे में अधिक जानकारी प्राप्त कर सकते हैं (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
-
-*छात्रावास में स्थान के लिए आवेदन कैसे करें?*
-
-1. शैक्षिक कार्यक्रम में आपका नामांकन होने के बाद, आपको https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key= पर वेबसाइट पर स्थान के लिए आवेदन करना आवश्यक है।
-
-_कृपया ध्यान दें कि छात्रावास में स्थानों की संख्या सीमित है।_
-
-2. यदि आपको आपके ईमेल पर यह सूचना मिली है कि छात्रावास को मंजूरी दी गई है, तो इसका मतलब है कि आपका आवेदन स्वीकार कर लिया गया है, और अब आप प्रतियोगिता में शामिल हैं। आप अपने आवेदन की स्थिति छात्र आवास परिसर के समूह में देख सकते हैं: [केएसओ समूह] https://vk.com/kso_bfu
-
-3. जब आप रैंकिंग में अपना नाम देखते हैं, तो इसका मतलब है कि आप आवास के लिए 2 आवश्यक अनुमतियाँ प्राप्त कर सकते हैं। इसके बारे में हम बाद में विस्तार से बताएंगे।
-
-4. प्राप्त अनुमतियों के साथ केएसओ (नवस्की स्ट्रीट, 14/1, कक्ष 101) में अनुबंध पर हस्ताक्षर करने के लिए जाएं।
-
-5. अनुबंध पर हस्ताक्षर करने और निवास शुल्क का भुगतान करने के बाद आप निर्दिष्ट छात्रावास की प्रबंधक के पास आवास और जानकारी के लिए जाएं।
-
-पहुंचने पर, छात्रावास में निवास अनुबंध पर हस्ताक्षर करना आवश्यक है, दिशा-निर्देश प्राप्त करना और पहले सेमेस्टर के लिए छात्रावास का भुगतान करना है।
-
-_साथ में पासपोर्ट लाना अनिवार्य है।_
-
-*छात्रों के सामाजिक-आर्थिक समर्थन केंद्र के कार्यालय समय:*  
-
-- सोमवार: 10:00 से 17:00 तक  
-- मंगलवार: 10:00 से 17:00 तक  
-- गुरुवार: 10:00 से 17:00 तक  
-- शुक्रवार: 10:00 से 16:45 तक  
-
-दोपहर का भोजन 13:00 से 14:00 तक है।
-
-*पता: ए. नेव्स्की सड़क, 14, भवन 10, 1 वां तल, कार्यालय 14.*
-
-*चिकित्सा प्रमाणपत्र*
-
-आवास में रहने के लिए, छात्रावास के कमांडेंट को चिकित्सा आयोग के पास होने का प्रमाणपत्र प्रदान करना आवश्यक है। इस प्रमाणपत्र के लिए, आपको बीएफयू इम. आई. कांता के क्लिनिकल-डायग्नोस्टिक सेंटर (केडीसी) के कार्यालय 2 में जाना होगा।
-
-*आपके साथ ले जाएं:*
-
-- पासपोर्ट
-- टीकाकरण प्रमाणपत्र (दस्तावेज़ जिसमें आपके जीवन के दौरान सभी टीकों का विवरण है, विशेष रूप से इसमें तिल्ली, डिफ्थीरिया, टेटनस और हेपेटाइटिस बी के टीकों के प्रमाण होना चाहिए)
-- 1 वर्ष से पुरानी न होने वाली फ्लोरोोग्राफी
-- COVID-19 पर 2 नकारात्मक पीसीआर परीक्षण परिणाम/ पाठ्यक्रम में भाग लेने की अनुमति।
-
-_दस्तावेज़ों को रूसी भाषा में होना चाहिए या इनमें प्रमाणित अनुवाद होना चाहिए।_
-
-*पता* केडीसी बीएफयू इम. आई. कांता: (https://goo.gl/maps/bwq24xTh5P1EctiU8)
-
-_यदि आपके पास入住 करने के समय ये प्रमाणपत्र नहीं हैं, तो इन्हें किसी भी क्लिनिक में अपनी लागत पर बनवाना आवश्यक है।_
+कॉलेज के हॉस्टल में स्थान पाने के लिए 🏠 आवश्यक दस्तावेज़ों को पहले से तैयार करना 📋 और आवेदन करने की प्रक्रिया से परिचित होना महत्वपूर्ण है 📝। नीचे दिए गए विस्तृत निर्देशों से ознаком किया जाए 👇:
                                             """,
 
                 'payment_text': """
@@ -3229,13 +3174,21 @@ _सभी हॉस्टलों में बर्तन नहीं ह�
 
 
                 'laundry_text': """
-धुलाई की मशीनें प्रत्येक छात्रावास की इमारत में होती हैं। कमांडेंट या चौकीदार बताएंगे कि कपड़े धोने वाली मशीनों का कमरा कहाँ है और कुंजी कब लेना संभव है।आपको धुलाई के लिए अपने साथ डिटर्जेंट लाना होगा। 
+🏢 *स्थान*:
+प्रसारक प्रत्येक छात्रावास में होते हैं। सटीक स्थान और कार्य करने का समय कमांडेंट या चौकीदार बताएगा।
 
-धुलाई की जगह में कई धुलाई मशीनें हैं, जहाँ आप एक साथ कई कपड़े धो सकते हैं यदि आपके पास धोने के लिए बहुत अधिक कपड़े हैं। अंतर्वस्त्र को विशेष बैग में धोना अनिवार्य है। 
-जूतों को धोना मना है, क्योंकि इससे धुलाई मशीनें खराब हो जाती हैं। मशीन का उपयोग करने से पहले, कमरे में दिए गए निर्देशों को ध्यान से पढ़ें। धोने के बाद कपड़े सुखाने के लिए विशेष कमरे का उपयोग किया जा सकता है, 
-जिसमें कपड़े सुखाने के लिए मशीनें हैं।
+🧼 *उपयोग करने के नियम*:
+• अपना धोने का पाउडर लाओ
+• अंडरवियर के लिए विशेष बैग का उपयोग करो
+• *प्रतिबंधित* जूते धोना (यह मशीनों को नुकसान पहुंचाता है)
+• उपयोग से पहले स्थान पर दिए गए निर्देशों से परिचित हो जाओ
+• कपड़ों को विशेष रूप से सुसज्जित कमरे में सुखाओ
 
-*याद रखें*, कि छात्रावास में अन्य छात्र भी अपनी कपड़े धोना चाहते हैं, इसलिए धोने के बाद कुंजी को चौकीदार या कमांडेंट को तुरंत लौटाएं, ठीक उसी समय जब आपने इसे वापिस करने का वादा किया था।                                            """,
+⏰ *महत्वपूर्ण!*
+चौकीदार को कुंजी *ठीक समय पर* वापस करो — अन्य छात्रों को भी अपने कपड़े धोने हैं! 🙏
+
+✨ सब कुछ आपके आराम के लिए व्यवस्थित किया गया है — सावधानी से उपयोग करो!
+""",
 
                 'no_certificate_text': """
 अगर टीकाकरण या फ्लोरोग्राफी का सर्टिफिकेट नहीं है
