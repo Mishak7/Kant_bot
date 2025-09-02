@@ -220,20 +220,7 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
 Первокурсники оплачивают при заселении полностью первый семестр. Далее осенний семестр оплачивается до 15 сентября, а весенний – до 15 февраля.
                                             """,
         'rules_text': """
-- Содержи комнату и кухню в чистоте самостоятельно.
-- Заводить домашних животных запрещено.
-- Уважай соседей: соблюдай тишину с 23:00 до 08:00, будь вежлив и внимателен.
-- До 22:00 можешь приглашать гостей, но ночная гостевая стоянка исключена.
-- Курение и употребление алкоголя на территории университета категорически запрещено.
-- Тщательно изучи технику безопасности, узнай расположение ближайших эвакуационных выходов.
-- При неисправности оборудования немедленно уведомляй коменданта.
-- Свяжись с администрацией общежития по любым вопросам проживания.
-- Не осуществляй переезд в другую комнату без одобрения Центра социальной поддержки студентов.
-
-_Не все общежития оснащены посудой, но еженедельно предоставляется свежее постельное бельё._
-
-*Совет*: знакомься с комендантом сразу после вселения — он твой главный помощник в вопросах быта.""",
-
+        Нажми сюда 🏘️ «Правила проживания», чтобы ознакомиться с важными правилами и рекомендациями, которые помогут сделать твоё пребывание комфортным и безопасным. Здесь ты найдёшь всю необходимую информацию о режиме работы, обязанностях жильцов, правилах поведения и многое другое.✨""",
         'laundry_text': """
 🏢 *Расположение*:
 Прачечные находятся в каждом общежитии. Точное расположение и график работы подскажут комендант или вахтёр.
@@ -837,19 +824,7 @@ Subsequently, the autumn semester is to be paid by September 15, and the spring 
                                             """,
 
             'rules_text': """
-- Keep the room and kitchen clean by yourself.
-- Keeping pets is prohibited.
-- Respect your neighbors: maintain silence from 11:00 PM to 8:00 AM, be polite and attentive.
-- You can invite guests until 10:00 PM, but overnight guest parking is excluded.
-- Smoking and consuming alcohol on university premises is strictly prohibited.
-- Carefully study the safety regulations and learn the location of the nearest emergency exits.
-- Immediately notify the supervisor of any equipment malfunctions.
-- Contact the dormitory administration for any housing questions.
-- Do not move to another room without the approval of the Student Social Support Center.
-
-_Not all dormitories are equipped with dishes, but fresh bed linen is provided weekly._
-
-*Tip*: Get to know the supervisor right after moving in – he is your main helper in domestic matters.
+Click here 🏘️ "Rules of Residence" to learn about important rules and recommendations that will make your stay comfortable and safe. Here you will find all the necessary information about operating hours, resident responsibilities, code of conduct, and much more.✨
 """,
 
             'laundry_text': """
@@ -1379,21 +1354,7 @@ Les étudiants de première année paient la totalité du premier semestre lors 
 et le semestre de printemps avant le 15 février.                                            
 """,
 
-                'rules_text': """
-- Garde la chambre et la cuisine propres par toi-même.
-- Il est interdit d'avoir des animaux domestiques.
-- Respecte les voisins : fais silence de 23h00 à 08h00, sois poli et attentif.
-- Avant 22h00, tu peux inviter des amis, mais les visites nocturnes sont exclues.
-- Fumer et consommer de l'alcool sur le territoire de l'université est formellement interdit.
-- Étudie attentivement la sécurité, renseigne-toi sur l'emplacement des sorties de secours les plus proches.
-- En cas de panne d'équipement, informe immédiatement le surveillant.
-- Contacte l'administration de la résidence pour toutes questions concernant le logement.
-- Ne fais pas de déménagement dans une autre chambre sans l'approbation du Centre de soutien social aux étudiants.
-
-_Toutes les résidences ne sont pas équipées de vaisselle, mais des draps propres sont fournis chaque semaine._
-
-*Conseil* : fais connaissance avec le surveillant dès ton arrivée — c'est ton principal aide pour les questions de la vie quotidienne.
-""",
+                'rules_text': """Clique ici 🏘️ « Règles de résidence » pour prendre connaissance des règles et recommandations importantes qui rendront ton séjour confortable et sûr. Ici tu trouveras toutes les informations nécessaires sur les heures d'ouverture, les responsabilités des résidents, les règles de conduite et bien plus encore.✨""",
 
                 'laundry_text': """
 🏢 *Emplacement* :
@@ -1931,20 +1892,7 @@ Posteriormente, el semestre de otoño se paga hasta el 15 de septiembre, y el se
                                             """,
 
                 'rules_text': """
-- Mantén la habitación y la cocina limpias por tu cuenta.
-- No se permite tener mascotas.
-- Respeta a los vecinos: guarda silencio de 23:00 a 08:00, sé educado y atento.
-- Hasta las 22:00 puedes invitar a amigos, pero no se permite el alojamiento nocturno de invitados.
-- Fumar y consumir alcohol en el recinto de la universidad está estrictamente prohibido.
-- Estudia cuidadosamente las normas de seguridad y conoce la ubicación de las salidas de emergencia más cercanas.
-- Ante cualquier fallo del equipo, informa de inmediato al conserje.
-- Contacta con la administración de la residencia para cualquier pregunta sobre tu estancia.
-- No te mudes a otra habitación sin la aprobación del Centro de Apoyo Social para Estudiantes.
-
-_No todas las residencias están equipadas con utensilios de cocina, pero se proporciona ropa de cama limpia semanalmente._
-
-*Consejo*: conéctate con el conserje inmediatamente después de mudarte; él es tu principal ayuda en cuestiones de convivencia.
-""",
+Haz clic aquí 🏘️ "Normas de Convivencia" para conocer las reglas y recomendaciones importantes que harán tu estancia cómoda y segura. Aquí encontrarás toda la información necesaria sobre horarios, responsabilidades de los residentes, normas de comportamiento y mucho más.✨""",
 
                 'laundry_text': """
 🏢 *Ubicación*: 
@@ -2465,19 +2413,7 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
 """,
 
                 'rules_text': """
-- 請自行保持房間和廚房的清潔。
-- 禁止飼養寵物。
-- 尊重鄰居：請在23:00至08:00之間保持安靜，並保持禮貌和關心。
-- 在22:00之前可以邀請客人，但禁止夜間的客人停留。
-- 在校園內嚴禁吸煙和飲酒。
-- 請仔細閱讀安全規則，了解最近的緊急出口位置。
-- 如設備故障，請立即通知宿舍管理人。
-- 如有任何住宿問題，請與宿舍管理部門聯繫。
-- 未經學生社會支持中心的批准，不得搬遷至其他房間。
-
-_並非所有宿舍都配備餐具，但每週會提供新鮮的床單。_
-
-*建議*：在入住後立即與宿舍管理人熟識——他是您在生活事務上的主要幫手。
+點擊這裡 🏘️ «住宿規則» 以了解重要規則和建議，這些將使您的住宿舒適安全。在這裡您會找到關於工作時間、住宿者責任、行為規範等所有必要信息。✨
 """,
 
                 'laundry_text': """
@@ -3000,19 +2936,7 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
 प्रथम वर्ष के छात्र आवास लेते समय पहले सेमेस्टर का पूरा भुगतान करते हैं। इसके बाद, शरद सेमेस्टर का भुगतान 15 सितंबर तक और वसंत सेमेस्टर का भुगतान 15 फरवरी तक किया जाता है।                                            """,
 
                 'rules_text': """
-- अपने कमरे और रसोई को स्वच्छ रखना।
-- पालतू जानवर रखना मना है।
-- पड़ोसियों का सम्मान करें: रात 11:00 बजे से सुबह 8:00 बजे तक शांत रहें, विनम्र और ध्यानपूर्ण रहें।
-- रात 10:00 बजे तक मेहमानों को आमंत्रित कर सकते हैं, लेकिन रात में मेहमानों की पार्किंग की अनुमति नहीं है।
-- विश्वविद्यालय के परिसर में धूम्रपान और शराब पीना पूरी तरह से मना है।
-- सुरक्षा नियमों का ध्यानपूर्वक अध्ययन करें, निकासी के पास के स्थानों को जानें।
-- उपकरण में खराबी होने पर तुरंत वार्डन को सूचित करें।
-- निवास के किसी भी प्रश्न के लिए हॉस्टल प्रशासन से संपर्क करें।
-- छात्रों के सामाजिक समर्थन केंद्र की स्वीकृति के बिना किसी अन्य कमरे में न जाएं।
-
-_सभी हॉस्टलों में बर्तन नहीं होते, लेकिन हर सप्ताह ताजा बिस्तर प्रदान किया जाता है।_
-
-*सलाह*: निवास के तुरंत बाद वार्डन से मिलें - वह घरेलू मामलों में आपका मुख्य सहायक है।
+यहाँ क्लिक करें 🏘️ "रहने के नियम" महत्वपूर्ण नियमों और सिफारिशों से अवगत होने के लिए जो आके प्रवास को आरामदायक और सुरक्षित बनाएंगे। यहाँ आपको काम के घंटों, निवासियों की जिम्मेदारियों, आचरण के नियमों और भी बहुत कुछ के बारे में सभी आवश्यक जानकारी मिलेगी。✨
 """,
 
                 'laundry_text': """

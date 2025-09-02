@@ -12,7 +12,7 @@ This module provides handlers for dormitory-related information including:
 
 import traceback
 from aiogram import Router, F
-from aiogram.types import CallbackQuery, FSInputFile
+from aiogram.types import CallbackQuery
 from config.logger import logger
 from handlers.dormitory_handlers.dormitory_keyboard import (
     back_to_dormitory_keyboard,
@@ -80,14 +80,13 @@ async def dormitory_rules_handler(callback: CallbackQuery, language: str):
     """Display dormitory rules and regulations with photo."""
     try:
         RULES_TEXT = TEXTS[language]['handlers']['dormitory_handlers']['rules_text']
-        photo = FSInputFile('handlers/location_handlers/dormitory_pictures/dormitory_rules.jpg')
-
-        await callback.message.delete()
-        await callback.message.answer_photo(
-            photo=photo,
-            caption=RULES_TEXT,
+        await callback.message.edit_text(
+            text=RULES_TEXT,
             parse_mode="Markdown",
-            reply_markup=back_to_dormitory_keyboard(language)
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text=f"🔗 {TEXTS[language]['keyboards']['dormitory_keyboard']['rules']}", url='https://telegra.ph/Pravila-zhizni-v-obshchezhitii-09-02')],
+        [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]
+    ])
         )
         await callback.answer()
     except Exception as e:
