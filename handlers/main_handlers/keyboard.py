@@ -18,7 +18,8 @@ def main_roots_keyboard(language: str) -> InlineKeyboardMarkup:
             InlineKeyboardButton(text=f"🏥 {TEXTS[language]['keyboards']['main_keyboard']['hospital']}", callback_data="hospital")],
             [InlineKeyboardButton(text=f"⚠️ {TEXTS[language]['keyboards']['main_keyboard']['critical']}", callback_data="critical"),
             InlineKeyboardButton(text=f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}", callback_data="language_check")],
-            [InlineKeyboardButton(text=f"💳 {TEXTS[language]['keyboards']['main_keyboard']['sber']}", callback_data="sber")]
+            [InlineKeyboardButton(text=f"💳 {TEXTS[language]['keyboards']['main_keyboard']['sber']}", callback_data="sber")],
+            [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['language_selection_keyboard']['back']}", callback_data="start_again")]
 
         ]
     )

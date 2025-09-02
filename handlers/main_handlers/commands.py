@@ -48,16 +48,15 @@ async def send_welcome(message: types.Message, state: FSMContext):
     except Exception as e:
         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
 
-@router.callback_query(F.data == 'start')
-async def send_welcome_callback(message: types.Message, state: FSMContext):
+@router.callback_query(F.data == 'start_again')
+async def send_welcome_callback(callback: CallbackQuery, state: FSMContext):
     try:
-        logger.info(f'User {message.from_user.id} started bot')
+        logger.info(f'User {callback.from_user.id} started bot')
         await state.set_state(LanguageState.waiting_for_language)
-        await message.answer("Выберите язык / Choose language:",
+        await callback.message.edit_text("Выберите язык / Choose language:",
                            reply_markup=language_selection())
     except Exception as e:
         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
-
 
 
 @router.callback_query(F.data.in_(["russian", "english", "french", "spanish", "chinese", "indian"]))
