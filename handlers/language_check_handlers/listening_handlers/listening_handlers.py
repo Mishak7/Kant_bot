@@ -13,10 +13,10 @@ class TranslationState(StatesGroup):
 
 @router.callback_query(F.data == "language_audio")
 async def send_voice(callback: CallbackQuery, state: FSMContext, language: str):
-    voice_file =  FSInputFile('file_name.ogg')
+    voice_file =  FSInputFile('file_name.opus')
     text = TEXTS[language]['handlers']['language_check_handlers']['listening_handlers']['send_voice']
     await callback.message.edit_text(text, parse_mode="Markdown")
-    await callback.message.answer_voice(voice=voice_file)
+    await callback.message.answer_voice(voice=voice_file, duration=255)
     await state.set_state(TranslationState.waiting_for_text)
     await callback.answer()
 

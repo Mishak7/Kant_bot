@@ -123,42 +123,52 @@ TEXTS = {
         'useful_links': 'Полезные ссылки',
         'details': 'Подробнее',
         'back': 'Назад'
+    },
+
+    'hospital_keyboard': {
+        'insurance':'Медицинское страхование',
+        'attachment':'Прикреплению к поликлинике'
     }
 },
 
 'handlers': {
     'critical_handlers': {
         'critical_police_handler': '''
-*Экстренные контакты*
+🚨 *Экстренные контакты*
 
-Единый номер служб экстренного реагирования (пожарной охраны, МЧС, полиции, скорой помощи, газовой службы) — *112*.
+*Единый номер служб экстренного реагирования*
+(пожарной охраны, МЧС, полиции, скорой помощи, газовой службы)
+📞 *112*
 
-Пожарные и спасатели — *01* (с городского телефона) и *101* (с мобильного)
+👨‍🚒 *Пожарные и спасатели*
+📞 *01* (с городского телефона) | *101* (с мобильного)
 
-Полиция — *02* (с городского телефона) и *102* (с мобильного).
+👮 *Полиция*
+📞 *02* (с городского телефона) | *102* (с мобильного)
 
-Скорая помощь — *103* (с мобильного телефона) и *03* (с городского телефона).
+🏥 *Скорая помощь*
+📞 *03* (с городского телефона) | *103* (с мобильного)
+
+💡 Сохрани эти номера в быстром доступе!
                                                     ''',
 
         'critical_hotline_handler': '''
-*Сектор визово-миграционной поддержки*
+🚪 *Сектор визово-миграционной поддержки*
 
-_Телефон_:
+📞 *Телефон*:
++7 (4012) 595-595 (доб. 7454) — миграционный учет и визы 
++7 (4012) 595-595 (доб. 7452) — визовые приглашения
 
-8 (4012) 595-595 (доб. 7454)— по вопросам миграционного учета и виз,
+🏢 *Адрес*:
+Россия, г. Калининград, ул. А. Невского, 14, корп. 2, каб. 114
 
-8 (4012) 595-595 (доб. 7452) доб. 7452 — по вопросам визовых приглашений
+🕒 *Приемные часы*:
+Пн 14:00–17:00
+Вт 10:00–13:00
+Чт 14:00–17:00
+Пт 10:00–13:00
 
- _Адрес_: ул. А. Невского 14, корпус №2, каб. 114
-
-_Приемные_ _часы_:
-
-пн 14.00-17.00 
-вт 10.00-13.00 
-чт 14.00-17.00 
-пт 10.00-13.00
-
-обеденный перерыв 13.00-14.00
+Обед 13:00–14:00 
                                                     ''',
 
         'critical_government_handler': '''
@@ -177,24 +187,22 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
                                                     ''',
 
         'critical_consulate_handler': '''
-*Представительство МИД России в Калининграде*
-Адрес: 236022, Россия, г. Калининград, ул. Кирова, 17
+*Представительство МИД России в Калининграде* 🏛️
+
+*Адрес*: 🏠
+236022, Россия, г. Калининград, ул. Кирова, 17
+
+*Телефоны*: 📞
 Приемная: + 7 (401) 221-37-12
 Факс: + 7 (401) 221-06-26
 Консульский отдел: + 7 (401) 221-16-68
 Паспортный отдел: + 7 (401) 295-82-02
 Отдел оформления приглашений: + 7 (4012) 21-59-28
 
-
-*Приём граждан по консульско-правовым вопросам*
-
-Пн, Вт, Ср, Чт: с 9-00 до 17-00 
-(перерыв с 12-00 до 14-00)
-
-Пт: с 9-00 до 16-00 
-(перерыв с 12-00 до 14-00)
-
-Сб, Вс: Выходной
+*Приём граждан по консульско-правовым вопросам* ⚖️
+Пн-Чт: с *9:00* до *17:00* (перерыв с *12:00* до *14:00*)
+Пт: с *9:00* до *16:00* (перерыв с *12:00* до *14:00*)
+Сб-Вс: 🚫 Выходной
                                             ''',
     },
 
@@ -227,11 +235,20 @@ _Не все общежития оснащены посудой, но ежене
 *Совет*: знакомься с комендантом сразу после вселения — он твой главный помощник в вопросах быта.""",
 
         'laundry_text': """
-Прачечные находятся в здании каждого общежития. Комендант или вахтер расскажут, где именно находится комната со стиральными машинами и в какое время можно брать ключ.
+🏢 *Расположение*:
+Прачечные находятся в каждом общежитии. Точное расположение и график работы подскажут комендант или вахтёр.
 
-Стиральный порошок нужно приносить с собой. Прачечная оборудована несколькими стиральными машинами, в которых можно стирать одновременно, если много белья для стирки. Стирать нижнее белье обязательно в специальных мешках. Стирать обувь запрещается, так как это приводит к поломке стиральных машин. Внимательно перед использованием машинки ознакомься с инструкцией в комнате. Сушить белье после стирки можно в специальной комнате, которая оборудована сушилками для одежды.
+🧼 *Правила использования*:
+• Приноси свой стиральный порошок
+• Используй специальные мешки для нижнего белья
+• *Запрещено* стирать обувь (это ломает машины)
+• Перед использованием ознакомься с инструкцией на месте
+• Суши белье в специальной оборудованной комнате
 
-*Помни*, что другие студенты в общежитии тоже хотят постирать свою одежду, поэтому возвращай ключ вахтеру или коменданту сразу после стирки, именно в то время, когда пообещал его вернуть.
+⏰ *Важно!*
+Возвращай ключ вахтёру *точно в оговоренное время* — другие студенты тоже хотят постирать свои вещи! 🙏
+
+✨ Всё организовано для твоего удобства — пользуйся аккуратно!
                                             """,
         'no_certificate_text': """
 ЕСЛИ НЕТ СЕРТИФИКАТА ПРИВИВОК ИЛИ ФЛЮОРОГРАФИИ
@@ -270,12 +287,6 @@ _Не все общежития оснащены посудой, но ежене
 
 *Адрес*: 236041, Россия, Калининград, ул. 9 апреля, 60
 *Контакты*: +7 (4012) 31-33-39    kdc@kantiana.ru
-
-*Медицинское страхование*:
-https://kantiana.ru/international/inostrannomu-studentu/oms/
-
-*Инструкция по прикреплению к поликлинике*: 
-https://kantiana.ru/students/polyclinic/
   '''
     },
 
@@ -671,43 +682,51 @@ Where shall we start? 👇 Choose a menu item!""",
                 'useful_links': 'Useful links',
                 'details': 'Details',
                 'back': 'Back'
-            }
+            },
+'hospital_keyboard': {
+    'insurance': 'Health Insurance',
+    'attachment': 'Clinic Attachment'
+}
         },
 
     'handlers': {
         'critical_handlers': {
             'critical_police_handler': '''
-*Emergency Contacts*
+🚨 *Emergency Contacts*
 
-The unified number for emergency response services 
-(fire department, EMS, police, ambulance, gas service) — *112*.
+*Unified Emergency Response Number*
+(fire department, emergency services, police, ambulance, gas service)
+📞 *112*
 
-Firefighters and rescuers — *01* (from a landline) and *101* (from a mobile)
+👨‍🚒 *Firefighters and Rescuers*
+📞 *01* (from landline) | *101* (from mobile)
 
-Police — *02* (from a landline) and *102* (from a mobile).
+👮 *Police*
+📞 *02* (from landline) | *102* (from mobile)
 
-Ambulance — *103* (from a mobile) and *03* (from a landline).
+🏥 *Ambulance*
+📞 *03* (from landline) | *103* (from mobile)
+
+💡 Save these numbers for quick access!
                                                     ''',
 
             'critical_hotline_handler': '''
-*Visa and Migration Support Center*
+🚪 *Visa and Migration Support Division*
 
-_Phone_: 
+📞 *Phone*:
++7 (4012) 595-595 (доб. 7454) — migration registration and visas
++7 (4012) 595-595 (доб. 7452) — visa invitations
 
-8 (4012) 595-595 (ext. 7454) — for questions regarding migration registration and visas
+🏢 *Address*:
+Russia, Kaliningrad, 14 Alexander Nevsky St., Bldg. 2, Office 114 3
 
-8 (4012) 595-595 (ext. 7452) — for questions regarding visa invitations
+🕒 *Office Hours*:
+Mon 14:00–17:00
+Tue 10:00–13:00
+Thu 14:00–17:00
+Fri 10:00–13:00
 
-_Address_: 14 A. Nevsky St., building 2, office 114
-
-_Office_ _Hours_:
-
-Mon 14:00-17:00
-Tue 10:00-13:00
-Thu 14:00-17:00
-Fri 10:00-13:00
-
-Lunch break: 13:00-14:00
+Lunch break: 13:00–14:00 
                                                     ''',
 
             'critical_government_handler': '''
@@ -733,22 +752,22 @@ on Fridays until 5:00 PM, with a break from 1:00 PM to 2:00 PM; Saturday and Sun
                                                    ''',
 
             'critical_consulate_handler': '''
-*Representation of the Ministry of Foreign Affairs of Russia in Kaliningrad* 
+*Representative Office of the Ministry of Foreign Affairs of Russia in Kaliningrad* 🏛️
 
-Address: 236022, Russia, Kaliningrad, Kirova St., 17 
-Reception: +7 (401) 221-37-12 
-Fax: +7 (401) 221-06-26 
-Consular Department: +7 (401) 221-16-68 
-Passport Department: +7 (401) 295-82-02 
-Invitation Processing Department: +7 (4012) 21-59-28
+*Address*: 🏠
+236022, Russia, Kaliningrad, 17 Kirova Street
 
-*Reception of citizens on consular-legal issues* 
+*Phones*: 📞
+Reception: + 7 (401) 221-37-12
+Fax: + 7 (401) 221-06-26
+Consular Section: + 7 (401) 221-16-68
+Passport Office: + 7 (401) 295-82-02
+Invitation Processing Department: + 7 (4012) 21-59-28
 
-Mon, Tue, Wed, Thu: 9:00 to 17:00 (break from 12:00 to 14:00) 
-
-Fri: 9:00 to 16:00 (break from 12:00 to 14:00) 
-
-Sat, Sun: Closed
+*Reception of citizens on consular and legal matters* ⚖️
+Mon-Thu: from *9:00* to *17:00* (break from *12:00* to *14:00*)
+Fri: from *9:00* to *16:00* (break from *12:00* to *14:00*)
+Sat-Sun: 🚫 Day off
                                             ''',
         },
 
@@ -834,16 +853,20 @@ _Not all dormitories are equipped with dishes, but fresh bed linen is provided w
 """,
 
             'laundry_text': """
-The laundries are located in the building of each dormitory. 
-The commandant or the security guard will tell you where exactly the room with the washing machines is and at what time you can get the key.
+🏢 *Location*:
+Laundry rooms are located in every dormitory building. The exact location and operating hours can be provided by the warden or supervisor.
 
-You need to bring your own laundry detergent. 
-The laundry is equipped with several washing machines that can be used simultaneously if there is a lot of laundry to wash. 
-It is mandatory to wash underwear in special bags. Washing shoes is prohibited as it leads to damage to the washing machines. 
-Carefully read the instructions in the room before using the machine. You can dry the laundry after washing in a special room that is equipped with clothes dryers.
+🧼 *Usage Rules*:
+• Bring your own detergent
+• Use special mesh bags for underwear
+• *Do not* wash shoes (this breaks the machines)
+• Read the instructions on-site before use
+• Dry clothes in the specially equipped room
 
-*Remember*, that other students in the dormitory also want to wash their clothes, so return the key to the security guard or the commandant immediately after washing, exactly at the time you promised to return it.
-                                            """,
+⏰ *Important!*
+Return the key to the supervisor *exactly at the agreed time* — other students also want to wash their clothes! 🙏
+
+✨ Everything is organized for your convenience — please use it carefully!""",
 
             'no_certificate_text': """
 IF THERE IS NO VACCINATION OR FLUOROGRAPHY CERTIFICATE
@@ -872,17 +895,7 @@ The result is provided within 4 working days (it can be obtained in the personal
 *University Clinic of BFU named after I. Kant*
 
 *Address*: 236041, Russia, Kaliningrad, ul. 9 April, 60
-*Contacts*: +7 (4012) 31-33-39 kdc@kantiana.ru
-
-*Medical Insurance*: 
-https://kantiana.ru/international/inostrannomu-studentu/oms/
-
-*Instruction for attaching to the polyclinic*: 
-https://kantiana.ru/students/polyclinic/
-
-*Clinic on the map*:
-https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%209%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07
-                                            '''
+*Contacts*: +7 (4012) 31-33-39 kdc@kantiana.ru'''
         },
 
         'language_check_handlers': {
@@ -1242,39 +1255,51 @@ Click the *button below* for details:
                 'useful_links': 'Liens utiles',
                 'details': 'Plus de détails',
                 'back': 'Retour'
+            },
+            'hospital_keyboard': {
+                'insurance': 'Assurance médicale',
+                'attachment': 'Affiliation à la polyclinique'
             }
         },
 
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*Contacts d'urgence*
+🚨 *Contacts d'urgence*
 
-Le numéro unique des services d'urgence (pompiers, ministère des Situations d'urgence, police, ambulance, service de gaz) — *112*.
+*Numéro unique d'urgence*
+(pompiers, services de secours, police, ambulance, service gaz)
+📞 *112*
 
-Pompiers et sauveteurs — *01* (depuis un téléphone fixe) et *101* (depuis un téléphone mobile).
+👨‍🚒 *Pompiers et secours*
+📞 *01* (téléphone fixe) | *101* (portable)
 
-Police — *02* (depuis un téléphone fixe) et *102* (depuis un téléphone mobile).
+👮 *Police*
+📞 *02* (téléphone fixe) | *102* (portable)
 
-Ambulance — *103* (depuis un téléphone mobile) et *03* (depuis un téléphone fixe).
+🏥 *Ambulance*
+📞 *03* (téléphone fixe) | *103* (portable)
+
+💡 Enregistrez ces numéros dans vos contacts !
                                                     ''',
 
                 'critical_hotline_handler': '''
-*Secteur de soutien aux visas et à la migration*
+🚪 *Service de Soutien Visa et Migration*
 
-_Téléphone_ :8 (4012) 595-595 (poste 7454) — pour des questions de comptabilité migratoire et de visas,
-8 (4012) 595-595 (poste 7452) — pour des questions d'invitations de visa
+📞 *Téléphone*:
++7 (4012) 595-595 (poste 7454) — enregistrement migratoire et visas
++7 (4012) 595-595 (poste 7452) — invitations visa
 
-_Adresse_ : 14 rue A. Nevski, bâtiment n°2, bureau 114
+🏢 *Adresse*:
+Russie, Kaliningrad, rue A. Nevskogo 14, Bâtiment 2, Bureau 114
 
-_Horaires d'ouverture_ :
+🕒 *Heures de réception*:
+Lun 14:00–17:00
+Mar 10:00–13:00
+Jeu 14:00–17:00
+Ven 10:00–13:00
 
-lun: 14:00-17:00
-mar: 10:00-13:00
-jeu: 14:00-17:00
-ven: 10:00-13:00
-
-pause déjeuner 13:00-14:00
+Pause déjeuner: 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
@@ -1298,20 +1323,22 @@ tous les jours de 9h00 à 18h00, le vendredi jusqu'à 17h00, pause : de 13h00 à
                                                     ''',
 
                 'critical_consulate_handler': '''
-*Représentation du ministère des Affaires étrangères de la Russie à Kaliningrad* 
+*Représentation du Ministère des Affaires Étrangères de Russie à Kaliningrad* 🏛️
 
-Adresse: 236022, Russie, ville de Kaliningrad, rue Kirov, 17 
-Réception: +7 (401) 221-37-12 
-Fax : +7 (401) 221-06-26 
-Département consulaire: +7 (401) 221-16-68 
-Département des passeports: +7 (401) 295-82-02 
-Département de délivrance des invitations: +7 (4012) 21-59-28 
+*Adresse* : 🏠
+236022, Russie, Kaliningrad, rue Kirova, 17
 
-*Accueil du public pour les questions consulaires et juridiques* 
+*Téléphones* : 📞
+Réception : + 7 (401) 221-37-12
+Fax : + 7 (401) 221-06-26
+Section consulaire : + 7 (401) 221-16-68
+Service des passeports : + 7 (401) 295-82-02
+Service de traitement des invitations : + 7 (4012) 21-59-28
 
-Lun, Mar, Mer, Jeu : de 9:00 à 17:00 (pauses de 12:00 à 14:00) 
-Ven : de 9:00 à 16:00 (pauses de 12:00 à 14:00) 
-Sam, Dim : Fermé
+*Réception des citoyens pour les questions consulaires et juridiques* ⚖️
+Lun-Jeu : de *9h00* à *17h00* (pause de *12h00* à *14h00*)
+Ven : de *9h00* à *16h00* (pause de *12h00* à *14h00*)
+Sam-Dim : 🚫 Fermé
                                             ''',
             },
 
@@ -1399,13 +1426,20 @@ _Toutes les résidences ne sont pas équipées de vaisselle, mais des draps prop
 """,
 
                 'laundry_text': """
-Les laveries se trouvent dans le bâtiment de chaque résidence. Le responsable ou le gardien vous indiquera où se trouve la pièce avec les machines à laver et à quel moment vous pouvez prendre la clé.
+🏢 *Emplacement* :
+Les buanderies se trouvent dans chaque résidence universitaire. Le gardien ou le superviseur vous indiquera l'emplacement exact et les horaires.
 
-Vous devez apporter votre propre lessive. La laverie est équipée de plusieurs machines à laver, dans lesquelles vous pouvez laver en même temps si vous avez beaucoup de linge. 
-Il est obligatoire de laver les sous-vêtements dans des sacs spéciaux. Il est interdit de laver des chaussures, car cela peut endommager les machines à laver. Avant d'utiliser la machine, 
-familiarisez-vous attentivement avec le mode d'emploi dans la pièce. Vous pouvez sécher votre linge après le lavage dans une pièce spéciale, qui est équipée de sèche-linges.
+🧼 *Règles d'utilisation* :
+• Apportez votre propre détergent
+• Utilisez des sacs spéciaux pour les sous-vêtements
+• *Il est interdit* de laver les chaussures (cela casse les machines)
+• Lisez les instructions sur place avant utilisation
+• Séchez le linge dans la pièce spécialement équipée
 
-*Souvenez-vous* que d'autres étudiants dans la résidence souhaitent également laver leurs vêtements, alors veuillez retourner la clé au gardien ou au responsable immédiatement après le lavage, exactement à l'heure à laquelle vous avez promis de la rendre.                                            
+⏰ *Important* !
+Rendez la clé au superviseur *exactement à l'heure convenue* — les autres étudiants veulent aussi laver leurs vêtements ! 🙏
+
+✨ Tout est organisé pour votre commodité — utilisez-le avec soin !                             
 """,
 
                 'no_certificate_text': """
@@ -1436,16 +1470,7 @@ Le résultat est délivré dans un délai de 4 jours ouvrables (le résultat peu
 *Clinique universitaire de l'Université d'État de Kaliningrad, nommée d'après I. Kant*
 
 *Adresse*: 236041, Russie, Kaliningrad, rue du 9 avril, 60
-*Contacts*: +7 (4012) 31-33-39 kdc@kantiana.ru
-
-*Assurance maladie*: 
-https://kantiana.ru/international/inostrannomu-studentu/oms/
-
-*Instruction pour l'affiliation à la polyclinique*: 
-https://kantiana.ru/students/polyclinic/
-
-*Clinique sur la carte*: 
-https://2gis.ru/kaliningrad/search/236041%2C%20Russie%2C%20Kaliningrad%2C%20rue%209%20avril%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07                                            '''
+*Contacts*: +7 (4012) 31-33-39 kdc@kantiana.ru'''
             },
 
             'language_chack_handlers': {
@@ -1805,41 +1830,51 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
                 'useful_links': 'Enlaces útiles',
                 'details': 'Más detalles',
                 'back': 'Atrás'
+            },
+            'hospital_keyboard': {
+                'insurance': 'Seguro médico',
+                'attachment': 'Afiliación a la policlínica'
             }
         },
 
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*Contactos de emergencia*
+🚨 *Contactos de emergencia*
 
-Número único de los servicios de emergencia (bomberos, Ministerio de Emergencias, policía, ambulancia, servicios de gas) — *112*.
+*Número único de emergencia*
+(bomberos, servicios de rescate, policía, ambulancia, servicio de gas)
+📞 *112*
 
-Bomberos y rescatistas — *01* (desde un teléfono fijo) y *101* (desde un móvil)
+👨‍🚒 *Bomberos y rescatistas*
+📞 *01* (teléfono fijo) | *101* (móvil)
 
-Policía — *02* (desde un teléfono fijo) y *102* (desde un móvil)
+👮 *Policía*
+📞 *02* (teléfono fijo) | *102* (móvil)
 
-Ambulancia — *103* (desde un móvil) y *03* (desde un teléfono fijo)
+🏥 *Ambulancia*
+📞 *03* (teléfono fijo) | *103* (móvil)
+
+💡 ¡Guarda estos números en tu teléfono!
                                                    ''',
 
                 'critical_hotline_handler': '''
-*Sector de apoyo visa-migratorio*
+🚪 *Departamento de Apoyo Migratorio y de Visados*
 
-_Teléfono_:
+📞 *Teléfono*:
++7 (4012) 595-595 (ext. 7454) — registro migratorio y visados
++7 (4012) 595-595 (ext. 7452) — invitaciones de visado
 
-8 (4012) 595-595 (ext. 7454) — para preguntas sobre el registro migratorio y visas
-8 (4012) 595-595 (ext. 7452) — para preguntas sobre invitaciones de visa
+🏢 *Dirección*:
+Rusia, Kaliningrado, ul. A. Nevskogo 14, Edificio 2, Oficina 114
 
-_Dirección_: Calle A. Nevski 14, edificio №2, oficina 114
+🕒 *Horario de atención*:
+Lun 14:00–17:00
+Mar 10:00–13:00
+Jue 14:00–17:00
+Vie 10:00–13:00
 
-_Horas_ _de atención_:
-
-Lun 14:00-17:00
-Mar 10:00-13:00
-Jue 14:00-17:00
-Vie 10:00-13:00
-
-pausa para el almuerzo 13:00-14:00
+Descanso para comer: 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
@@ -1869,20 +1904,22 @@ La inscripción previa para la recepción personal se realiza por teléfono a la
                                                    ''',
 
                 'critical_consulate_handler': '''
-*Representación del Ministerio de Relaciones Exteriores de Rusia en Kaliningrado*  
+*Oficina de Representación del Ministerio de Asuntos Exteriores de Rusia en Kaliningrado* 🏛️
 
-Dirección: 236022, Rusia, ciudad de Kaliningrado, calle Kírov, 17  
-Recepción: + 7 (401) 221-37-12  
-Fax: + 7 (401) 221-06-26  
-Departamento consular: + 7 (401) 221-16-68  
-Departamento de pasaportes: + 7 (401) 295-82-02  
-Departamento de tramitación de invitaciones: + 7 (4012) 21-59-28  
+*Dirección*: 🏠
+236022, Rusia, Kaliningrado, calle Kirova, 17
 
-*Atención a ciudadanos por cuestiones consulares y legales*  
+*Teléfonos*: 📞
+Recepción: + 7 (401) 221-37-12
+Fax: + 7 (401) 221-06-26
+Departamento Consular: + 7 (401) 221-16-68
+Oficina de Pasaportes: + 7 (401) 295-82-02
+Departamento de Trámite de Invitaciones: + 7 (4012) 21-59-28
 
-Lun, Mar, Mié, Jue: de 9:00 a 17:00 (recogida de 12:00 a 14:00)  
-Vie: de 9:00 a 16:00 (recogida de 12:00 a 14:00)  
-Sáb, Dom: Cerrado
+*Atención al ciudadano para asuntos consulares y legales* ⚖️
+Lun-Jue: de *9:00* a *17:00* (descanso de *12:00* a *14:00*)
+Vie: de *9:00* a *16:00* (descanso de *12:00* a *14:00*)
+Sáb-Dom: 🚫 Cerrado
                                             ''',
             },
 
@@ -1968,12 +2005,21 @@ _No todas las residencias están equipadas con utensilios de cocina, pero se pro
 """,
 
                 'laundry_text': """
-Las lavanderías se encuentran en el edificio de cada residencia. El conserje o el portero te indicarán dónde está exactamente la habitación con las lavadoras y a qué hora puedes recoger la llave.Debes traer tu propio detergente. 
+🏢 *Ubicación*:
+Las lavanderías se encuentran en cada residencia universitaria. El conserje o supervisor te indicará la ubicación exacta y el horario.
 
-La lavandería está equipada con varias lavadoras que se pueden usar simultáneamente si tienes mucha ropa para lavar. Es obligatorio lavar la ropa interior en bolsas especiales. Está prohibido lavar zapatos, ya que esto puede dañar las lavadoras. 
-Asegúrate de leer las instrucciones en la habitación antes de usar la máquina. Puedes secar la ropa después de lavarla en una sala especial que está equipada con secadoras.
+🧼 *Reglas de uso*:
+• Lleva tu propio detergente
+• Usa bolsas especiales para ropa interior
+• *Prohibido* lavar zapatos (esto daña las máquinas)
+• Lee las instrucciones in situ antes de usar
+• Seca la ropa en la habitación especialmente equipada
 
-*Recuerda* que otros estudiantes en la residencia también quieren lavar su ropa, por lo que debes devolver la llave al portero o al conserje inmediatamente después de lavar, exactamente a la hora que prometiste devolverla.                                            """,
+⏰ *¡Importante!*
+Devuelve la llave al supervisor *exactamente a la hora acordada* — ¡otros estudiantes también quieren lavar su ropa! 🙏
+
+✨ Todo está organizado para tu comodidad — ¡úsalo con cuidado!
+""",
 
                 'no_certificate_text': """
 SI NO TIENES CERTIFICADO DE VACUNAS O DE FLEOGRAFÍA
@@ -2003,17 +2049,7 @@ El resultado se emite en 4 días hábiles (el resultado se puede obtener en el �
 *Clínica Universitaria BFU im. I. Kanta*  
 
 *Dirección*: 236041, Rusia, Kaliningrado, calle 9 de abril, 60  
-*Contactos*: +7 (4012) 31-33-39 kdc@kantiana.ru  
-
-*Seguro médico*:  
-https://kantiana.ru/international/inostrannomu-studentu/oms/  
-
-*Instrucciones para registrarse en la clínica*:  
-https://kantiana.ru/students/polyclinic/  
-
-*Clínica en el mapa*:  
-https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%209%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07
-                                            '''
+*Contactos*: +7 (4012) 31-33-39 kdc@kantiana.ru'''
             },
 
             'language_chack_handlers': {
@@ -2370,41 +2406,51 @@ Haz clic en *el botón de abajo* para más detalles:
                 'useful_links': '有用的鏈接',
                 'details': '更詳細的資訊',
                 'back': '回去'
+            },
+            'hospital_keyboard': {
+                'insurance': '醫療保險',
+                'attachment': '診所附屬'
             }
         },
 
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*緊急聯絡方式*
+🚨 *緊急聯絡方式*
 
-統一的緊急服務號碼（消防、緊急情況部、警察、急救、天然氣服務）— *112*
+*統一應急服務號碼*
+(消防、緊急服務、警察、救護車、瓦斯服務)
+📞 *112*
 
-消防員和救援人員 — *01*（使用市話）和 *101*（使用手機）
+👨‍🚒 *消防和救援人員*
+📞 *01* (市話) | *101* (手機)
 
-警察 — *02*（使用市話）和 *102*（使用手機）
+👮 *警察*
+📞 *02* (市話) | *102* (手機)
 
-急救 — *103*（使用手機）和 *03*（使用市話）
+🏥 *救護車*
+📞 *03* (市話) | *103* (手機)
+
+💡 請保存這些號碼以備不時之需！
                                                     ''',
 
                 'critical_hotline_handler': '''
-*簽證移民支持部*
+🚪 *簽證與移民支援部門*
 
-_電話_：
+📞 *電話*:
++7 (4012) 595-595 (分機 7454) — 移民登記和簽證
++7 (4012) 595-595 (分機 7452) — 簽證邀請
 
-8 (4012) 595-595 (分機 7454)— 關於移民登記和簽證的問題
-8 (4012) 595-595 (分機 7452) — 關於簽證邀請的問題
+🏢 *地址*:
+俄羅斯加里寧格勒市 A. Nevskogo 街 14 號 2 號樓 114 室
 
-_地址_：俄羅斯─聖彼得堡市，A. 內夫斯基街 14 號，2 號樓，114 室
+🕒 *辦公時間*:
+週一 14:00–17:00
+週二 10:00–13:00
+週四 14:00–17:00
+週五 10:00–13:00
 
-_辦公時間_：
-
-週一 14:00-17:00
-週二 10:00-13:00
-週四 14:00-17:00
-週五 10:00-13:00
-
-午餐時間 13:00-14:00
+午休時間: 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
@@ -2423,22 +2469,23 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
                                                     ''',
 
                 'critical_consulate_handler': '''
-*俄羅斯外交部在加里寧格勒的代表處*
+*俄羅斯外交部駐加里寧格勒代表處* 🏛️
 
-地址：236022，俄羅斯，加里寧格勒，基羅夫街17
-號接待電話：+7 (401) 221-37-12
-傳真：+7 (401) 221-06-26
-領事部：+7 (401) 221-16-68
-護照部：+7 (401) 295-82-02
-邀請函辦公室：+7 (4012) 21-59-28
+*地址*: 🏠
+236022, 俄羅斯, 加里寧格勒市, 基羅夫街 17號
+(236022, Russia, Kaliningrad, ul. Kirova, 17)
 
-*公民諮詢領事法律事務*
+*電話*: 📞
+接待處: + 7 (401) 221-37-12
+傳真: + 7 (401) 221-06-26
+領事部門: + 7 (401) 221-16-68
+護照部門: + 7 (401) 295-82-02
+邀請函辦理部門: + 7 (4012) 21-59-28
 
-週一、週二、週三、週四：9:00到17:00（12:00到14:00休息）
-
-週五：9:00到16:00（12:00到14:00休息）
-
-週六、週日：休息
+*受理公民領事和法律事務* ⚖️
+週一至週四: *9:00* 至 *17:00* (休息時間 *12:00* 至 *14:00*)
+週五: *9:00* 至 *16:00* (休息時間 *12:00* 至 *14:00*)
+週六-週日: 🚫 休息日
                                             ''',
             },
 
@@ -2522,13 +2569,21 @@ _並非所有宿舍都配備餐具，但每週會提供新鮮的床單。_
 """,
 
                 'laundry_text': """
-洗衣房位於每個宿舍大樓內。值班人員或管理員會告訴你洗衣機所在的房間以及可以取鑰匙的時間。
+🏢 *位置*：
+每棟宿舍樓均設有洗衣房。管理員或舍監將告知具體位置和使用時間。
 
-洗衣粉需要自備。洗衣房配備有多台洗衣機，可以同時清洗大量的衣物。如果洗衣服的內衣，必須放在專用的袋子裡清洗。禁止清洗鞋子，因為這樣會導致洗衣機故障。
-在使用洗衣機之前，請仔細閱讀房間裡的說明書。洗完衣物後，可以在專門的房間裡晾乾，該房間配有衣物烘乾機。
+🧼 *使用規則*：
+• 請自帶洗衣粉
+• 內衣必須使用專用洗衣網
+• 禁止清洗鞋子（會導致機器損壞）
+• 使用前請閱讀現場說明
+• 可在配備烘乾設備的專用房間晾乾衣物
 
-*請記住*，宿舍裡的其他學生也想洗衣服，因此請在洗完衣物後，按約定的時間立即將鑰匙歸還給值班人員或管理員。                                            """,
+⏰ *重要提示!*
+請準時歸還鑰匙給管理員——其他學生也需要使用洗衣機！🙏
 
+✨ 一切均為您的方便而設——請仔細使用！
+""",
                 'no_certificate_text': """
 如果沒有疫苗接種證明或胸部X光片
 
@@ -2556,17 +2611,8 @@ _並非所有宿舍都配備餐具，但每週會提供新鮮的床單。_
 *BFU康特大學醫療診所*  
 
 *地址*: 236041，俄羅斯，卡里寧格勒，4月9日街60號  
-*聯繫方式*: +7 (4012) 31-33-39 kdc@kantiana.ru  
-
-*醫療保險*:  
-https://kantiana.ru/international/inostrannomu-studentu/oms/  
-
-*附加到診所的說明*:  
-https://kantiana.ru/students/polyclinic/  
-
-*診所地圖*:  
-https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%209%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07                                            '''
-            },
+*聯繫方式*: +7 (4012) 31-33-39 kdc@kantiana.ru '''
+},
 
             'language_chack_handlers': {
                 'grammar_handlers': {
@@ -2921,42 +2967,52 @@ _電子郵件_: international-study@kantiana.ru
                 'useful_links': 'उपयोगी लिंक',
                 'details': 'अधिक जानकारी',
                 'back': 'पीछे'
+            },
+            'hospital_keyboard': {
+                'insurance': 'स्वास्थ्य बीма',
+                'attachment': 'क्लिनिक से संलग्नक'
             }
         },
 
         'handlers': {
             'critical_handlers': {
                 'critical_police_handler': '''
-*आपातकालीन संपर्क*
+🚨 *आपातकालीन संपर्क*
 
-आपातकालीन सेवाओं का एकल नंबर (फायर ब्रिगेड, एमसीएस, पुलिस, एम्बुलेंस, गैस सेवा) — *112*
+*एकीकृत आपातकालीन प्रतिक्रिया सेवा*
+(फायर ब्रिगेड, आपातकालीन सेवाएं, पुलिस, एम्बुलेंस, गैस सेवा)
+📞 *112*
 
-।फायर ब्रिगेड और बचावकर्मी — *01* (स्थायी फोन से) और *101* (मोबाइल से)
+👨‍🚒 *फायरफाइटर्स और रेस्क्यूर्स*
+📞 *01* (लैंडलाइन से) | *101* (मोबाइल से)
 
-पुलिस — *02* (स्थायी फोन से) और *102* (मोबाइल से)
+👮 *पुलिस*
+📞 *02* (लैंडलाइन से) | *102* (मोबाइल से)
 
-।एम्बुलेंस — *103* (मोबाइल फोन से) और *03* (स्थायी फोन से)
+🏥 *एम्बुलेंस*
+📞 *03* (लैंडलाइन से) | *103* (मोबाइल से)
+
+💡 इन नंबरों को जल्दी एक्सेस के लिए सेव करें!
                                                     ''',
 
                 'critical_hotline_handler': '''
-*वीजा-आप्रवासी सहायता क्षेत्र*
+                
+🚪 *वीज़ा और प्रवासन सहायता विभाग*
 
-_फोन_:
+📞 *फ़ोन*:
++7 (4012) 595-595 (एक्सट. 7454) — प्रवासन पंजीकरण और वीज़ा
++7 (4012) 595-595 (एक्सट. 7452) — वीज़ा निमंत्रण
 
-8 (4012) 595-595 (डॉ. 7454)— आप्रवासी रजिस्ट्री और वीजा संबंधी प्रश्नों के लिए
+🏢 *पता*:
+रूस, कालिनिनग्राद, A. नेव्स्कोगो स्ट्रीट 14, भवन 2, कक्ष 114
 
-8 (4012) 595-595 (डॉ. 7452) डॉ. 7452 — वीजा आमंत्रण संबंधी प्रश्नों के लिए
+🕒 *कार्यालय समय*:
+सोम 14:00–17:00
+मंगल 10:00–13:00
+गुरु 14:00–17:00
+शुक्र 10:00–13:00
 
-_पता_: ए. नेवस्की स्ट्रीट 14, भवन संख्या 2, कक्ष 114
-
-_कार्यालय के_ _घंटे_:
-
-सोमवार 14.00-17.00
-मंगलवार 10.00-13.00
-गुरुवार 14.00-17.00
-शुक्रवार 10.00-13.00
-
-दोपहर का ब्रेक 13.00-14.00
+दोपहर का भोजन: 13:00–14:00
                                                     ''',
 
                 'critical_government_handler': '''
@@ -2979,22 +3035,22 @@ https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0f
 व्यक्तिगत सुनवाई के लिए पूर्व-निर्धारित रजिस्ट्रेशन समिति की रिसेप्शन पर फोन करके किया जा सकता है: 576-28-08, प्रतिदिन 9.00 से 18.00 तक, शुक्रवार को 17.00 बजे तक, अवकाश: 13.00 से 14.00 तक; शनिवार, रविवार - अवकाश।                                                    ''',
 
                 'critical_consulate_handler': '''
-*रूस के विदेश मंत्रालय का कार्यालय कलीनिनग्राद में*
+*कालिनिनग्राद में रूस के विदेश मंत्रालय का प्रतिनिधि कार्यालय* 🏛️
 
-पता: 236022, रूस, कलीनिनग्राद शहर, किरॉवा स्ट्रीट, 17
-फोन: + 7 (401) 221-37-12
+*पता*: 🏠
+236022, रूस, कालिनिनग्राद शहर, किरोवा स्ट्रीट, 17
+
+*फोन*: 📞
+रिसेप्शन: + 7 (401) 221-37-12
 फैक्स: + 7 (401) 221-06-26
-कॉंसुलर डिपार्टमेंट: + 7 (401) 221-16-68
-पासपोर्ट डिपार्टमेंट: + 7 (401) 295-82-02
-आमंत्रण पत्रों की प्रक्रिया विभाग: + 7 (4012) 21-59-28
+कांसुलर विभाग: + 7 (401) 221-16-68
+पासपोर्ट विभाग: + 7 (401) 295-82-02
+निमंत्रण प्रसंस्करण विभाग: + 7 (4012) 21-59-28
 
-*कांसुलर-लीगल मामलों में नागरिकों की बैठक*
-
-सोम, मंगल, बुध, गुरु: 9-00 से 17-00 बजे तक(12-00 से 14-00 बजे तक ब्रीक)
-
-शुक्र: 9-00 से 16-00 बजे तक(12-00 से 14-00 बजे तक ब्रीक)
-
-शनिवार, रविवार: अवकाश
+*कांसुलर-कानूनी मामलों पर नागरिकों की स्वीकार्यता* ⚖️
+सोम-गुरु: *9:00* से *17:00* तक (*12:00* से *14:00* तक ब्रेक)
+शुक्र: *9:00* से *16:00* तक (*12:00* से *14:00* तक ब्रेक)
+शनि-रवि: 🚫 बंद
                                             ''',
             },
 
@@ -3077,13 +3133,21 @@ _सभी हॉस्टलों में बर्तन नहीं ह�
 """,
 
                 'laundry_text': """
-धुलाई की मशीनें प्रत्येक छात्रावास की इमारत में होती हैं। कमांडेंट या चौकीदार बताएंगे कि कपड़े धोने वाली मशीनों का कमरा कहाँ है और कुंजी कब लेना संभव है।आपको धुलाई के लिए अपने साथ डिटर्जेंट लाना होगा। 
+🏢 *स्थान*:
+हर छात्रावास भवन में लॉन्डरी रूम हैं। वार्डन या पर्यवेक्षक आपको सटीक स्थान और समय बता सकते हैं।
 
-धुलाई की जगह में कई धुलाई मशीनें हैं, जहाँ आप एक साथ कई कपड़े धो सकते हैं यदि आपके पास धोने के लिए बहुत अधिक कपड़े हैं। अंतर्वस्त्र को विशेष बैग में धोना अनिवार्य है। 
-जूतों को धोना मना है, क्योंकि इससे धुलाई मशीनें खराब हो जाती हैं। मशीन का उपयोग करने से पहले, कमरे में दिए गए निर्देशों को ध्यान से पढ़ें। धोने के बाद कपड़े सुखाने के लिए विशेष कमरे का उपयोग किया जा सकता है, 
-जिसमें कपड़े सुखाने के लिए मशीनें हैं।
+🧼 *उपयोग के नियम*:
+• अपना डिटर्जेंट स्वयं लाएं
+• अंडरवियर के लिए विशेष मेश बैग का उपयोग करें
+• जूते धोने की मनाही है (इससे मशीन खराब होती है)
+• उपयोग से पहले निर्देशों को पढ़ें
+• कपड़े विशेष रूप से सुसज्जित कमरे में सुखाएं
 
-*याद रखें*, कि छात्रावास में अन्य छात्र भी अपनी कपड़े धोना चाहते हैं, इसलिए धोने के बाद कुंजी को चौकीदार या कमांडेंट को तुरंत लौटाएं, ठीक उसी समय जब आपने इसे वापिस करने का वादा किया था।                                            """,
+⏰ *महत्वपूर्ण!*
+चाबी पर्यवेक्षक को ठीक निर्धारित समय पर लौटाएं — अन्य छात्र भी अपने कपड़े धोना चाहते हैं! 🙏
+
+✨ सब कुछ आपकी सुविधा के लिए व्यवस्थित है — कृपया सावधानी से उपयोग करें!                
+""",
 
                 'no_certificate_text': """
 अगर टीकाकरण या फ्लोरोग्राफी का सर्टिफिकेट नहीं है
@@ -3114,16 +3178,7 @@ _सभी हॉस्टलों में बर्तन नहीं ह�
 
 *पता*: 236041, रूस, कालिनिनग्राद, 9 अप्रैल सड़क, 60  
 *संपर्क*: +7 (4012) 31-33-39 kdc@kantiana.ru  
-
-*चिकित्सा बीमा*:  
-https://kantiana.ru/international/inostrannomu-studentu/oms/  
-
-*पॉलीक्लिनिक से जुड़ने के लिए निर्देश*:  
-https://kantiana.ru/students/polyclinic/  
-
-*मानचित्र पर क्लिनिक*:  
-https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%9A%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%209%20%D0%B0%D0%BF%D1%80%D0%B5%D0%BB%D1%8F%2C%2060/firm/70000001006212174/20.524707%2C54.71579?m=20.524833%2C54.715617%2F19.07
-                                            '''
+'''
             },
 
             'language_chack_handlers': {
