@@ -20,7 +20,8 @@ def main_roots_keyboard() -> InlineKeyboardMarkup:
             [InlineKeyboardButton(text=f"🏘️ {TEXTS[language]['keyboards']['main_keyboard']['dormitory']}", callback_data="dormitory")],
             [InlineKeyboardButton(text=f"🏥 {TEXTS[language]['keyboards']['main_keyboard']['hospital']}", callback_data="hospital")],
             [InlineKeyboardButton(text=f"⚠️ {TEXTS[language]['keyboards']['main_keyboard']['critical']}", callback_data="critical")],
-            [InlineKeyboardButton(text=f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}", callback_data="language_check")]
+            [InlineKeyboardButton(text=f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}", callback_data="language_check")],
+            [InlineKeyboardButton(text=f'◀️ {TEXTS[language]['keyboards']['language_selection_keyboard']['back']}', callback_data='back_to_language_selection')]
         ]
     )
 
@@ -34,14 +35,6 @@ def lenguage_selection() -> InlineKeyboardMarkup:
             [InlineKeyboardButton(text='🇪🇸 Español', callback_data='spanish')],
             [InlineKeyboardButton(text='🇨🇳 中國的', callback_data='chinese')],
             [InlineKeyboardButton(text='🇮🇳 हिंदी', callback_data='indian')]
-        ]
-    )
-
-def back_to_language_selection() -> InlineKeyboardMarkup:
-    """Creates a back button keyboard for language selection"""
-    return InlineKeyboardMarkup(
-        inline_keyboard=[
-            [InlineKeyboardButton(text=f'◀️ {TEXTS[language]['keyboards']['language_selection_keyboard']['back']}', callback_data='back_to_language_selection')]
         ]
     )
 
