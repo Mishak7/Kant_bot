@@ -57,7 +57,7 @@ TEXTS = {
                 'details': 'Подробнее',
                 'back': 'Назад'
             },
-            'dormitory_location_keyboard': {
+            'dormitory_locations_keyboard': {
                 'dormitory_1': 'Соммера',
                 'dormitory_2': 'Чернышевского',
                 'dormitory_3': 'А. Невского',
@@ -1056,11 +1056,9 @@ Here are located:
         'university_info_handlers': {
             'schedule_text': '''
 *Class schedule*:
-https://schedule.kantiana.ru/
                                             ''',
             'scholarship_text': '''
 *Information about scholarships and financial aid*:
-https://kantiana.ru/students/scholarship/
                                             ''',
             'office_contacts_text': '''
 *Contacts*:
@@ -1086,7 +1084,6 @@ Saturday and Sunday: days off
 ''',
             'visa_center_text': '''
 *Visa and Migration Center*:
-https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/
 
 *Contacts*  
 
@@ -1157,8 +1154,8 @@ Click the *button below* for details:
             'main_keyboard': {
                 'info': 'Information',
                 'location': 'Bâtiments',
-                'dormitory': 'Résidences universitaires',
-                'hospital': 'Centre médical',
+                'dormitory': 'Résidences',
+                'hospital': 'Santé',
                 'critical': 'SOS',
                 'language_check': 'Coach',
                 'sber':'SBER',
@@ -1183,7 +1180,7 @@ Click the *button below* for details:
                 'back': 'Retour'
             },
 
-            'dormitory_location_keyboard': {
+            'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Tchernyshevskogo',
                 'dormitory_3': 'A. Nevskogo',
@@ -1624,11 +1621,9 @@ Ici se trouvent :
             'university_info_handlers': {
                 'schedule_text': '''
 *Emploi du temps des cours*:
-https://schedule.kantiana.ru/
                                             ''',
                 'scholarship_text': '''
 *Information sur les bourses et l'aide matérielle*:
-https://kantiana.ru/students/scholarship/
                                             ''',
                 'office_contacts_text': '''
 *Contacts*:
@@ -1655,7 +1650,8 @@ Samedi et dimanche: jours de repos
 ''',
                 'visa_center_text': '''
 *Centre de visa et de migration* :
-https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/*Contacts*
+
+*Contacts*
 
 _Adresse_ : 236041, Russie, Kaliningrad, rue A. Nievski 14, bâtiment 2, bureau 119
 
@@ -1720,7 +1716,7 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
             'main_keyboard': {
                 'info': 'Información',
                 'location': 'Cuerpos',
-                'dormitory': 'Residencias estudiantiles',
+                'dormitory': 'Residencias',
                 'hospital': 'Centro médico',
                 'critical': 'SOS',
                 'language_check': 'Entrenador',
@@ -1729,7 +1725,7 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
             },
             'critical_keyboard': {
                 'police': 'Policía',
-                'hotline': 'Línea directa de la FMS (Ministerio de Inclusión, Seguridad Social y Migraciones)',
+                'hotline': 'Línea Migración (FMS)',
                 'government': 'Autoridades locales',
                 'consulate': 'Consulado',
                 'back': 'Atrás'
@@ -1744,7 +1740,7 @@ Clique sur *le bouton ci-dessous* pour plus de détails:
                 'no_certificate': 'No hay un certificado de vacunas o de fluorografía',
                 'back': 'Atrás'
             },
-            'dormitory_location_keyboard': {
+            'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Tchernyshevskogo',
                 'dormitory_3': 'A. Nevskogo',
@@ -2191,11 +2187,9 @@ Aquí se encuentran:
             'university_info_handlers': {
                 'schedule_text': '''
 *Horario de clases*:
-https://schedule.kantiana.ru/
                                             ''',
                 'scholarship_text': '''
 *Información sobre becas y ayuda financiera*:
-https://kantiana.ru/students/scholarship/
                                             ''',
                 'office_contacts_text': '''
 *Contactos*:  
@@ -2221,7 +2215,6 @@ Sábado y domingo: días no laborables
 ''',
                 'visa_center_text': '''
 *Centro de visa y migración*:
-https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/
 
 *Contactos*
 
@@ -2312,7 +2305,7 @@ Haz clic en *el botón de abajo* para más detalles:
                 'no_certificate': '沒有疫苗接種證明或胸部X光檢查報告',
                 'back': '回去'
             },
-            'dormitory_location_keyboard': {
+            'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Tchernyshevskogo',
                 'dormitory_3': 'A. Nevskogo',
@@ -2746,11 +2739,9 @@ https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1
             'university_info_handlers': {
                 'schedule_text': '''
 *課程時間表*:
-https://schedule.kantiana.ru/
                                             ''',
                 'scholarship_text': '''
 *獎學金和經濟援助信息*:
-https://kantiana.ru/students/scholarship/
                                             ''',
                 'office_contacts_text': '''
 *聯繫方式*:
@@ -2776,7 +2767,6 @@ _電子郵件_: post@kantiana.ru
 ''',
                 'visa_center_text': '''
 *簽證移民中心*:
-https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/
 
 *聯繫資訊*
 
@@ -2866,7 +2856,7 @@ _電子郵件_: international-study@kantiana.ru
                 'no_certificate': 'कोई टीकाकरण या फ्लोरोोग्राफी का प्रमाण पत्र नहीं है',
                 'back': 'पीछे'
             },
-            'dormitory_location_keyboard': {
+            'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Tchernyshevskogo',
                 'dormitory_3': 'A. Nevskogo',
@@ -3308,11 +3298,9 @@ https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1
             'university_info_handlers': {
                 'schedule_text': '''
 *कक्षाओं का कार्यक्रम*:
-https://schedule.kantiana.ru/
                                             ''',
                 'scholarship_text': '''
 *छात्रवृत्तियों और वित्तीय सहायता की जानकारी*:
-https://kantiana.ru/students/scholarship/
                                             ''',
                 'office_contacts_text': '''
 *संपर्क:* 
@@ -3338,7 +3326,6 @@ _ई-मेल_: post@kantiana.ru
 ''',
                 'visa_center_text': '''
 *विज़ा-प्रवासन केंद्र*:
-https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/*संपर्क*
 
 _पता_: 236041, रूस, कालिनिनग्राद, सड़कों ए. नेव्स्की 14, भवन 2, कक्ष 119
 

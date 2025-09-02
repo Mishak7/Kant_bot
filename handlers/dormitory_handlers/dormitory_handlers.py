@@ -15,7 +15,6 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery, FSInputFile
 from config.logger import logger
 from handlers.dormitory_handlers.dormitory_keyboard import (
-    dormitory_check_in_keyboard,
     back_to_dormitory_keyboard,
     dormitories_keyboard_back_to_dormitory_info,
     back_to_check_in_keyboard,
@@ -38,7 +37,7 @@ async def dormitory_check_in_handler(callback: CallbackQuery, language: str):
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
                 [InlineKeyboardButton(text=f"🧳  {TEXTS[language]['keyboards']['dormitory_keyboard']['check-in']}", url='https://telegra.ph/Zaselenie-v-obshchezhitie-08-29')],
-                [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="back_to_main")]]))
+                [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]]))
         await callback.answer()
     except Exception as e:
         logger.error(f'Dormitory check-in error: {e}\n{traceback.format_exc()}')

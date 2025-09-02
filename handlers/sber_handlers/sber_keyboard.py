@@ -5,7 +5,7 @@ def sber_keyboard(language: str) -> InlineKeyboardMarkup:
     """Creates main keyboard for sber handlers"""
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text=f"🎓 {TEXTS[language]['keyboards']['sbeк_keyboard']['educational_loan']}", callback_data="educational_loan")],
+            [InlineKeyboardButton(text=f"🎓 {TEXTS[language]['keyboards']['sber_keyboard']['educational_loan']}", callback_data="educational_loan")],
             [InlineKeyboardButton(text=f"💳 {TEXTS[language]['keyboards']['sber_keyboard']['sber_card']}", callback_data="sber_card")],
             [InlineKeyboardButton(text=f"🔗 {TEXTS[language]['keyboards']['sber_keyboard']['useful_links']}", callback_data="useful_links")],
             [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['sber_keyboard']['back']}", callback_data='back_to_main')]
