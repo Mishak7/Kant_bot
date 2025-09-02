@@ -48,6 +48,17 @@ async def send_welcome(message: types.Message, state: FSMContext):
     except Exception as e:
         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
 
+@router.callback_query(F.data == 'start')
+async def send_welcome_callback(message: types.Message, state: FSMContext):
+    try:
+        logger.info(f'User {message.from_user.id} started bot')
+        await state.set_state(LanguageState.waiting_for_language)
+        await message.answer("Выберите язык / Choose language:",
+                           reply_markup=language_selection())
+    except Exception as e:
+        logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
+
+
 
 @router.callback_query(F.data.in_(["russian", "english", "french", "spanish", "chinese", "indian"]))
 async def set_language(callback: CallbackQuery, state: FSMContext):
@@ -78,17 +89,6 @@ async def set_language(callback: CallbackQuery, state: FSMContext):
     except Exception as e:
         logger.error(f'Language selection error: {e}\n{traceback.format_exc()}')
         await callback.answer("Произошла ошибка при выборе языка")
-
-
-@router.message(CommandStart())
-async def send_welcome_redirect(message: types.Message, language: str):
-    """Handle bot startup command and display main menu."""
-    try:
-        logger.info(f'User {message.from_user.id} started bot with existing language: {language}')
-        await message.answer(f"{TEXTS[language]['greetings']}", reply_markup=main_roots_keyboard(language))
-    except Exception as e:
-        logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
-        await message.answer(f"{TEXTS[language]['errors']['start_error']}")
 
 
 @router.callback_query(F.data == "info")
