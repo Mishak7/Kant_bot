@@ -306,6 +306,33 @@ async def loc_10_handler(callback: CallbackQuery, language: str):
         await callback.answer()
 
 
+@router.callback_query(F.data == "loc_11")
+async def loc_10_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 11 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_10.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_11_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_11_keyboard(language)
+        )
+        logger.info(f"Photo for location 11 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 11: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 11: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_11_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
 @router.callback_query(F.data == "loc_12")
 async def loc_12_handler(callback: CallbackQuery, language: str):
     try:
@@ -328,6 +355,141 @@ async def loc_12_handler(callback: CallbackQuery, language: str):
         await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
     except Exception as e:
         logger.error(f"Unexpected error in loc_12_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_13")
+async def loc_12_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 13 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_13_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_12_keyboard(language)
+        )
+        logger.info(f"Photo for location 13 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 13: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 13: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_13_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_14")
+async def loc_12_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 14 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_14_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_14_keyboard(language)
+        )
+        logger.info(f"Photo for location 14 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 14: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 14: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_14_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_19")
+async def loc_12_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 19 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_19_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_19_keyboard(language)
+        )
+        logger.info(f"Photo for location 19 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 19 {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 19: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_19_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_20")
+async def loc_12_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 20 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_20_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_20_keyboard(language)
+        )
+        logger.info(f"Photo for location 20 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 20: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 20: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_20_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_21")
+async def loc_12_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 21 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_21_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_21_keyboard(language)
+        )
+        logger.info(f"Photo for location 21 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 21: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 21: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_21_handler: {e}")
         await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
     finally:
         await callback.answer()
@@ -387,6 +549,33 @@ async def loc_24_handler(callback: CallbackQuery, language: str):
         await callback.answer()
 
 
+@router.callback_query(F.data == "loc_25")
+async def loc_25_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 25 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_24.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_25_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_25_keyboard(language)
+        )
+        logger.info(f"Photo for location 25 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 25: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 25: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_25_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
 @router.callback_query(F.data == "loc_27")
 async def loc_27_handler(callback: CallbackQuery, language: str):
     try:
@@ -436,6 +625,87 @@ async def loc_28_handler(callback: CallbackQuery, language: str):
         await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
     except Exception as e:
         logger.error(f"Unexpected error in loc_28_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_29")
+async def loc_24_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 29 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_24.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_29_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_29_keyboard(language)
+        )
+        logger.info(f"Photo for location 29 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 29: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 29: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_29_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_32")
+async def loc_24_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 32 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_24.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_32_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_32_keyboard(language)
+        )
+        logger.info(f"Photo for location 32 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 32: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 32: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_32_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_35")
+async def loc_24_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 35 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_35.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_35_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_35_keyboard(language)
+        )
+        logger.info(f"Photo for location 35 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 35: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 35: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_35_handler: {e}")
         await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
     finally:
         await callback.answer()
