@@ -15,7 +15,7 @@ Sections include:
 - Main menu navigation
 
 """
-
+import os
 import traceback
 from aiogram import Router, types, F
 from aiogram.filters import CommandStart
@@ -23,7 +23,7 @@ from config.logger import logger
 from handlers.main_handlers.keyboard import main_roots_keyboard, language_selection
 from handlers.university_handlers.university_info_keyboard import info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
-from aiogram.types import CallbackQuery
+from aiogram.types import CallbackQuery, FSInputFile
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 from handlers.location_handlers.location_keyboard import uni_loc_keyboard
 from handlers.language_check_handlers.language_check_keyboard import language_keyboard
@@ -78,11 +78,22 @@ async def set_language(callback: CallbackQuery, state: FSMContext):
 
         user_languages[callback.from_user.id] = language
 
-        await callback.message.edit_text(
-            text=TEXTS[language]['greetings'],
-            reply_markup=main_roots_keyboard(language),
-            parse_mode="Markdown"
-        )
+        if os.path.exists('gif_kant.gif'):
+            gif_file = FSInputFile('gif_kant.gif')
+            await callback.message.answer_animation(
+                animation=gif_file,
+                caption=TEXTS[language]['greetings'],
+                reply_markup=main_roots_keyboard(language),
+                parse_mode="Markdown"
+            )
+            await callback.message.delete()
+
+        else:
+            await callback.message.edit_text(
+                text=TEXTS[language]['greetings'],
+                reply_markup=main_roots_keyboard(language),
+                parse_mode="Markdown")
+
         await callback.answer()
 
     except Exception as e:
