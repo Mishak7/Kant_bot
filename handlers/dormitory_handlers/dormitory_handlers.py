@@ -11,6 +11,7 @@ This module provides handlers for dormitory-related information including:
 """
 
 import traceback
+from config.settings import settings
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
 from config.logger import logger
@@ -22,8 +23,9 @@ payment_keyboard
 )
 from handlers.main_handlers.languages import TEXTS
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from telegraph import Telegraph
 
-
+telegraph = Telegraph(access_token=settings.TELEGRAPH_TOKEN)
 
 router = Router()
 
@@ -36,7 +38,7 @@ async def dormitory_check_in_handler(callback: CallbackQuery, language: str):
             DORMITORY_TEXT,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"🧳  {TEXTS[language]['keyboards']['dormitory_keyboard']['check-in']}", url='https://telegra.ph/Zaselenie-v-obshchezhitie-08-29')],
+                [InlineKeyboardButton(text=f"🧳  {TEXTS[language]['keyboards']['dormitory_keyboard']['check-in']}", url=f'https://telegra.ph/Zaselenie-v-obshchezhitie-{language}-09-04')],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]]))
         await callback.answer()
     except Exception as e:
