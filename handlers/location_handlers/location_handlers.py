@@ -4,7 +4,7 @@ Handler for each building - may not be optimal
 """
 
 from aiogram import Router, F
-from handlers.location_handlers.location_keyboard import loc_1_keyboard, loc_2_keyboard, loc_3_keyboard, loc_4_keyboard, loc_5_keyboard, loc_6_keyboard, loc_7_keyboard, loc_8_keyboard, loc_9_keyboard, loc_10_keyboard, loc_12_keyboard, loc_22_keyboard, loc_24_keyboard, loc_27_keyboard, loc_28_keyboard
+from handlers.location_handlers.location_keyboard import loc_1_keyboard, loc_2_keyboard, loc_3_keyboard, loc_4_keyboard, loc_5_keyboard, loc_6_keyboard, loc_7_keyboard, loc_8_keyboard, loc_9_keyboard, loc_10_keyboard, loc_11_keyboard, loc_12_keyboard, loc_13_keyboard, loc_14_keyboard, loc_19_keyboard, loc_20_keyboard, loc_21_keyboard, loc_22_keyboard, loc_24_keyboard, loc_25_keyboard, loc_27_keyboard, loc_28_keyboard, loc_29_keyboard, loc_32_keyboard, loc_35_keyboard
 from aiogram.types import CallbackQuery, FSInputFile
 from aiogram.exceptions import TelegramBadRequest
 from config.logger import logger
