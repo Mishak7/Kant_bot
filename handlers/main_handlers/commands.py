@@ -86,7 +86,9 @@ async def set_language(callback: CallbackQuery, state: FSMContext):
                 reply_markup=main_roots_keyboard(language),
                 parse_mode="Markdown"
             )
+
             await callback.message.delete()
+
 
         else:
             await callback.message.edit_text(
@@ -106,7 +108,8 @@ async def university_info(callback: CallbackQuery, language: str):
     """Display university information section."""
     try:
         text = f"🎓 {TEXTS[language]['keyboards']['main_keyboard']['info']}"
-        await callback.message.edit_text(text, reply_markup=info_keyboard(language), parse_mode="Markdown")
+        await callback.message.delete()
+        await callback.message.answer(text, reply_markup=info_keyboard(language), parse_mode="Markdown")
         await callback.answer()
     except Exception as e:
         logger.error(f'University info error: {e}\n{traceback.format_exc()}')
@@ -118,7 +121,8 @@ async def location_info(callback: CallbackQuery, language: str):
     """Display university location information."""
     try:
         text = f"📍 {TEXTS[language]['keyboards']['main_keyboard']['location']}"
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=uni_loc_keyboard(language))
+        await callback.message.delete()
+        await callback.message.answer(text, parse_mode="Markdown", reply_markup=uni_loc_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'Location info error: {e}\n{traceback.format_exc()}')
@@ -143,7 +147,8 @@ async def emergency_info(callback: CallbackQuery, language: str):
     """Display emergency contacts and critical information."""
     try:
         text = f"⚠️ {TEXTS[language]['keyboards']['main_keyboard']['critical']}"
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=critical_keyboard(language))
+        await callback.message.delete()
+        await callback.message.answer(text, parse_mode="Markdown", reply_markup=critical_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'Emergency info error: {e}\n{traceback.format_exc()}')
@@ -155,7 +160,8 @@ async def sber_info(callback: CallbackQuery, language: str):
     """SBER"""
     try:
         text = f"💳 {TEXTS[language]['keyboards']['main_keyboard']['sber']}"
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=sber_keyboard(language))
+        await callback.message.delete()
+        await callback.message.answer(text, parse_mode="Markdown", reply_markup=sber_keyboard(language))
         await callback.answer()
     except Exception as e:
         logger.error(f'SBER info error: {e}\n{traceback.format_exc()}')
@@ -167,7 +173,8 @@ async def language_check_info(callback: CallbackQuery, language: str):
     """Display language checking tools section."""
     try:
         text = f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}"
-        await callback.message.edit_text(text, reply_markup=language_keyboard(language), parse_mode="Markdown")
+        await callback.message.delete()
+        await callback.message.answer(text, reply_markup=language_keyboard(language), parse_mode="Markdown")
         await callback.answer()
     except Exception as e:
         logger.error(f'Language check error: {e}\n{traceback.format_exc()}')
