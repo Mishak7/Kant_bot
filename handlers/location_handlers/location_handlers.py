@@ -4,7 +4,7 @@ Handler for each building - may not be optimal
 """
 
 from aiogram import Router, F
-from handlers.location_handlers.location_keyboard import loc_1_keyboard, loc_2_keyboard, loc_3_keyboard, loc_4_keyboard, loc_5_keyboard, loc_6_keyboard, loc_7_keyboard, loc_8_keyboard, loc_9_keyboard, loc_10_keyboard, loc_11_keyboard, loc_12_keyboard, loc_13_keyboard, loc_14_keyboard, loc_19_keyboard, loc_20_keyboard, loc_21_keyboard, loc_22_keyboard, loc_24_keyboard, loc_25_keyboard, loc_27_keyboard, loc_28_keyboard, loc_29_keyboard, loc_32_keyboard, loc_35_keyboard
+from handlers.location_handlers.location_keyboard import loc_1_keyboard, loc_2_keyboard, loc_3_keyboard, loc_4_keyboard, loc_5_keyboard, loc_6_keyboard, loc_7_keyboard, loc_8_keyboard, loc_9_keyboard, loc_10_keyboard, loc_11_keyboard, loc_12_keyboard, loc_13_keyboard, loc_14_keyboard, loc_19_keyboard, loc_20_keyboard, loc_21_keyboard, loc_22_keyboard, loc_23_keyboard, loc_24_keyboard, loc_25_keyboard, loc_27_keyboard, loc_28_keyboard, loc_29_keyboard, loc_32_keyboard, loc_35_keyboard
 from aiogram.types import CallbackQuery, FSInputFile
 from aiogram.exceptions import TelegramBadRequest
 from config.logger import logger
@@ -371,7 +371,7 @@ async def loc_13_handler(callback: CallbackQuery, language: str):
             photo=photo,
             caption=caption,
             parse_mode="Markdown",
-            reply_markup=loc_12_keyboard(language)
+            reply_markup=loc_13_keyboard(language)
         )
         logger.info(f"Photo for location 13 sent to user {callback.from_user.id}")
     except TelegramBadRequest as e:
@@ -517,6 +517,33 @@ async def loc_22_handler(callback: CallbackQuery, language: str):
         await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
     except Exception as e:
         logger.error(f"Unexpected error in loc_22_handler: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    finally:
+        await callback.answer()
+
+
+@router.callback_query(F.data == "loc_23")
+async def loc_23_handler(callback: CallbackQuery, language: str):
+    try:
+        logger.info(f"User {callback.from_user.id} requested location 23 photo")
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_23.jpg')
+        caption = TEXTS[language]['handlers']['location_handlers']['loc_23_handler']
+        await callback.message.delete()
+        await callback.message.answer_photo(
+            photo=photo,
+            caption=caption,
+            parse_mode="Markdown",
+            reply_markup=loc_23_keyboard(language)
+        )
+        logger.info(f"Photo for location 22 sent to user {callback.from_user.id}")
+    except TelegramBadRequest as e:
+        logger.error(f"Telegram error for location 23: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except FileNotFoundError as e:
+        logger.error(f"File not found for location 23: {e}")
+        await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
+    except Exception as e:
+        logger.error(f"Unexpected error in loc_23_handler: {e}")
         await callback.message.answer(f"{TEXTS[language]['errors']['photo_error']}")
     finally:
         await callback.answer()
