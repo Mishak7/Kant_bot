@@ -183,20 +183,20 @@ def loc_28_keyboard(language: str):
 def loc_29_keyboard(language: str):
     """Link on loc_29"""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="📍 2GIS", url='https://go.2gis.com/0lUI7')],
+        [InlineKeyboardButton(text="📍 2GIS", url='https://go.2gis.com/IkBDX')],
         [InlineKeyboardButton(text="◀️ Назад", callback_data="loc_uni_building")]
     ])
 
 def loc_32_keyboard(language: str):
     """Link on loc_32"""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="📍 2GIS", url='https://go.2gis.com/0lUI7')],
+        [InlineKeyboardButton(text="📍 2GIS", url='https://go.2gis.com/IRXez')],
         [InlineKeyboardButton(text="◀️ Назад", callback_data="loc_uni_building")]
     ])
 
 def loc_35_keyboard(language: str):
     """Link on loc_35"""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="📍 2GIS", url='https://go.2gis.com/0lUI7')],
+        [InlineKeyboardButton(text="📍 2GIS", url='https://go.2gis.com/zp9wz')],
         [InlineKeyboardButton(text="◀️ Назад", callback_data="loc_uni_building")]
     ])
