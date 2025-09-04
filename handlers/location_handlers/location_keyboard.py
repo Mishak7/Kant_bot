@@ -24,12 +24,22 @@ def uni_loc_keyboard(language: str) -> InlineKeyboardMarkup:
         InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_8']}", callback_data="loc_8")],
         [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_9']}", callback_data="loc_9"),
         InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_10']}", callback_data="loc_10")],
-        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_12']}", callback_data="loc_12"),
+        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_11']}", callback_data="loc_11"),
+        InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_12']}", callback_data="loc_12")],
+        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_13']}", callback_data="loc_13"),
+        InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_14']}", callback_data="loc_14")],
+        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_19']}", callback_data="loc_19"),
+        InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_20']}", callback_data="loc_20")],
+        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_21']}", callback_data="loc_21"),
         InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_22']}", callback_data="loc_22")],
         [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_24']}", callback_data="loc_24"),
-        InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_27']}", callback_data="loc_27")],
-        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_28']}", callback_data="loc_28")],
-        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['back']}", callback_data="back_to_main")]
+        InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_25']}", callback_data="loc_25")],
+        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_27']}", callback_data="loc_27"),
+        InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_28']}", callback_data="loc_28")],
+        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_29']}", callback_data="loc_29"),
+        InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_32']}", callback_data="loc_32")],
+        [InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['loc_35']}", callback_data="loc_35"),
+        InlineKeyboardButton(text=f"{TEXTS[language]['keyboards']['location_keyboard']['back']}", callback_data="back_to_main")]
     ])
 
 
@@ -163,6 +173,13 @@ def loc_24_keyboard(language: str):
     """Link on loc_24"""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="📍 2GIS", url='https://go.2gis.com/viGCa')],
+        [InlineKeyboardButton(text="◀️ Назад", callback_data="loc_uni_building")]
+    ])
+
+def loc_25_keyboard(language: str):
+    """Link on loc_25"""
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="📍 2GIS", url='https://go.2gis.com/uvDvG')],
         [InlineKeyboardButton(text="◀️ Назад", callback_data="loc_uni_building")]
     ])
 
