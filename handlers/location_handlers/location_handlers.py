@@ -307,10 +307,10 @@ async def loc_10_handler(callback: CallbackQuery, language: str):
 
 
 @router.callback_query(F.data == "loc_11")
-async def loc_10_handler(callback: CallbackQuery, language: str):
+async def loc_11_handler(callback: CallbackQuery, language: str):
     try:
         logger.info(f"User {callback.from_user.id} requested location 11 photo")
-        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_10.jpg')
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_11.jpg')
         caption = TEXTS[language]['handlers']['location_handlers']['loc_11_handler']
         await callback.message.delete()
         await callback.message.answer_photo(
@@ -361,10 +361,10 @@ async def loc_12_handler(callback: CallbackQuery, language: str):
 
 
 @router.callback_query(F.data == "loc_13")
-async def loc_12_handler(callback: CallbackQuery, language: str):
+async def loc_13_handler(callback: CallbackQuery, language: str):
     try:
         logger.info(f"User {callback.from_user.id} requested location 13 photo")
-        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_13.jpg')
         caption = TEXTS[language]['handlers']['location_handlers']['loc_13_handler']
         await callback.message.delete()
         await callback.message.answer_photo(
@@ -388,10 +388,10 @@ async def loc_12_handler(callback: CallbackQuery, language: str):
 
 
 @router.callback_query(F.data == "loc_14")
-async def loc_12_handler(callback: CallbackQuery, language: str):
+async def loc_14_handler(callback: CallbackQuery, language: str):
     try:
         logger.info(f"User {callback.from_user.id} requested location 14 photo")
-        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_14.jpg')
         caption = TEXTS[language]['handlers']['location_handlers']['loc_14_handler']
         await callback.message.delete()
         await callback.message.answer_photo(
@@ -415,10 +415,10 @@ async def loc_12_handler(callback: CallbackQuery, language: str):
 
 
 @router.callback_query(F.data == "loc_19")
-async def loc_12_handler(callback: CallbackQuery, language: str):
+async def loc_19_handler(callback: CallbackQuery, language: str):
     try:
         logger.info(f"User {callback.from_user.id} requested location 19 photo")
-        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_19.jpg')
         caption = TEXTS[language]['handlers']['location_handlers']['loc_19_handler']
         await callback.message.delete()
         await callback.message.answer_photo(
@@ -442,10 +442,10 @@ async def loc_12_handler(callback: CallbackQuery, language: str):
 
 
 @router.callback_query(F.data == "loc_20")
-async def loc_12_handler(callback: CallbackQuery, language: str):
+async def loc_20_handler(callback: CallbackQuery, language: str):
     try:
         logger.info(f"User {callback.from_user.id} requested location 20 photo")
-        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_20.jpg')
         caption = TEXTS[language]['handlers']['location_handlers']['loc_20_handler']
         await callback.message.delete()
         await callback.message.answer_photo(
@@ -469,10 +469,10 @@ async def loc_12_handler(callback: CallbackQuery, language: str):
 
 
 @router.callback_query(F.data == "loc_21")
-async def loc_12_handler(callback: CallbackQuery, language: str):
+async def loc_21_handler(callback: CallbackQuery, language: str):
     try:
         logger.info(f"User {callback.from_user.id} requested location 21 photo")
-        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_12.jpg')
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_21.jpg')
         caption = TEXTS[language]['handlers']['location_handlers']['loc_21_handler']
         await callback.message.delete()
         await callback.message.answer_photo(
@@ -553,7 +553,7 @@ async def loc_24_handler(callback: CallbackQuery, language: str):
 async def loc_25_handler(callback: CallbackQuery, language: str):
     try:
         logger.info(f"User {callback.from_user.id} requested location 25 photo")
-        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_24.jpg')
+        photo = FSInputFile('handlers/location_handlers/location_pictures/loc_25.jpg')
         caption = TEXTS[language]['handlers']['location_handlers']['loc_25_handler']
         await callback.message.delete()
         await callback.message.answer_photo(
