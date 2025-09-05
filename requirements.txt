@@ -7,3 +7,4 @@ pydub~=0.25.1
 langchain-community~=0.3.28
 urllib3~=2.5.0
 langgraph~=0.6.6
+telegraph~=2.2.0
