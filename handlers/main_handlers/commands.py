@@ -78,8 +78,8 @@ async def set_language(callback: CallbackQuery, state: FSMContext):
 
         user_languages[callback.from_user.id] = language
 
-        if os.path.exists('gif_kant.gif'):
-            gif_file = FSInputFile('gif_kant.gif')
+        if os.path.exists('utility_files/gif_kant.gif'):
+            gif_file = FSInputFile('utility_files/gif_kant.gif')
             await callback.message.answer_animation(
                 animation=gif_file,
                 caption=TEXTS[language]['greetings'],
