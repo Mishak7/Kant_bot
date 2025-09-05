@@ -11,7 +11,6 @@ This module provides handlers for dormitory-related information including:
 """
 
 import traceback
-from config.settings import settings
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
 from config.logger import logger
@@ -23,9 +22,7 @@ payment_keyboard
 )
 from handlers.main_handlers.languages import TEXTS
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from telegraph import Telegraph
 
-telegraph = Telegraph(access_token=settings.TELEGRAPH_TOKEN)
 
 router = Router()
 

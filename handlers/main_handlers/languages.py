@@ -901,56 +901,8 @@ Sat-Sun: 🚫 Day off
 
         'dormitory_handlers': {
             'dormitory_text': """
-You can find out more about check-in here (https://kantiana.ru/students/kampus/obshchezhitiya/zaselenie-v-obshchezhitie/).
-
-*How to apply for a place in the dormitory?*
-
-1. After your enrollment in the educational program, you must submit an application for a place on the website at https://vk.com/away.php?to=https%3A%2F%2Fkantiana.ru%2Fstudents%2Fdormitory%2F&cc_key=
-
-_Please note that the number of places in the dormitory is limited._
-
-2. If you received a notification in your email that the dormitory has been approved, it means that your application has been accepted, 
-and now you are participating in the competition. You can track the status of your application in the group of the Student Dormitory Complex: [KSO group] https://vk.com/kso_bfu
-
-3. When you see your name in the ranking, it means that you can obtain the 2 necessary permits for accommodation. 
-We will explain them in detail below.
-
-4. With the obtained permits, go to sign the contract at KSO (Nevsky St., 14/1, office 101).
-
-5. After signing the contract and paying for accommodation, go to the head of the specified dormitory for check-in and instructions.Upon arrival, you need to sign the rental agreement.
-
-Upon arrival, it is necessary to sign a lease agreement for accommodation in the student dormitory at the Center for Socio-Economic Support for Students, 
-obtain a referral, and pay for the dormitory for the first semester. 
-
-_You must bring your passport._ 
-
-*Office hours of the Center for Socio-Economic Support for Students:* 
-
-- Mon: 10:00 to 17:00 
-- Tue: 10:00 to 17:00 
-- Thu: 10:00 to 17:00 
-- Fri: 10:00 to 16:45 
-
-Lunch break from 13:00 to 14:00
-
-*Address*: A. Nevsky St., 14, building 10, 1st floor, office 14.
-
-*Medical Certificate*
-
-To live in the dormitory, you must provide the dormitory manager with a certificate of passing the medical examination. 
-To obtain such a certificate, you need to visit office 2 at the Clinical Diagnostic Center of the I.Kant Baltic Federal University (CDC).
-
-*Bring with you:*
-- passport
-- vaccination certificate (a document indicating all vaccinations you have received throughout your life, specifically including certificates for vaccinations against measles, diphtheria, tetanus, and hepatitis B)
-- a fluorography not older than 1 year
-- 2 negative results of PCR tests for COVID-19 / admission to classes
-
-_Documents must be in Russian or have a certified translation into Russian._
-
-*Address* of the CDC of I.Kant BFU: (https://goo.gl/maps/bwq24xTh5P1EctiU8)
-_If you do not have these certificates at the time of check-in, you must obtain them at your own expense at any clinic._
-                                            """,
+            To apply for a place in the dormitory 🏠, it is important to prepare the necessary documents 📋  in advance and familiarize yourself with the application procedure. Check out the detailed instructions below 👇:
+""",
 
             'payment_text': """
 You can pay for the dormitory in two ways. 
