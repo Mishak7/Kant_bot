@@ -84,6 +84,7 @@ TEXTS = {
             'back': 'Назад'
         },
         'language_check_keyboard': {
+            'Authorization':'Напиши свое имя', 
             'audio': 'Аудирование',
             'grammar': 'Грамматика',
             'speaking': 'Говорение',

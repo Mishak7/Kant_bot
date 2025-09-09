@@ -23,7 +23,7 @@ from config.logger import logger
 from handlers.main_handlers.keyboard import main_roots_keyboard, language_selection
 from handlers.university_handlers.university_info_keyboard import info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
-from aiogram.types import CallbackQuery, FSInputFile
+from aiogram.types import CallbackQuery, FSInputFile, Message
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 from handlers.location_handlers.location_keyboard import uni_loc_keyboard
 from handlers.language_check_handlers.language_check_keyboard import language_keyboard
@@ -31,9 +31,14 @@ from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
+from services.database.functions_database import check_user_exists, create_user
 
 class LanguageState(StatesGroup):
     waiting_for_language = State()
+
+
+class UserRegistration(StatesGroup):
+    waiting_for_name = State()
 
 router = Router()
 user_languages = {}
@@ -169,17 +174,64 @@ async def sber_info(callback: CallbackQuery, language: str):
 
 
 @router.callback_query(F.data == "language_check")
-async def language_check_info(callback: CallbackQuery, language: str):
-    """Display language checking tools section."""
+async def language_check_info(callback: CallbackQuery, language: str, state: FSMContext):
+    """Display language checking tools section with user check."""
     try:
+        user_id = callback.from_user.id
+
+        user_exists = await check_user_exists(user_id)
+
+        if not user_exists:
+            await callback.message.answer("👋 Для начала работы введите ваше имя:")
+            await state.set_state(UserRegistration.waiting_for_name)
+            await callback.answer("Сначала нужно зарегистрироваться")
+            return
+
         text = f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}"
         await callback.message.delete()
         await callback.message.answer(text, reply_markup=language_keyboard(language), parse_mode="Markdown")
         await callback.answer()
+
     except Exception as e:
         logger.error(f'Language check error: {e}\n{traceback.format_exc()}')
         await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
 
+
+
+@router.message(UserRegistration.waiting_for_name)
+async def process_name(message: Message, state: FSMContext):
+    try:
+        user_name = message.text.strip()
+        user_id = message.from_user.id
+
+        if len(user_name) < 2:
+            await message.answer("❌ Имя должно содержать минимум 2 символа. Попробуйте еще раз:")
+            return
+
+        if len(user_name) > 50:
+            await message.answer("❌ Имя слишком длинное. Максимум 50 символов. Попробуйте еще раз:")
+            return
+
+        success = await create_user(
+            telegram_id=user_id,
+            username=user_name
+        )
+
+        if success:
+            await message.answer(f"✅ Отлично, {user_name}! Регистрация завершена! 🎉")
+            await state.clear()
+
+            language = "ru"
+            text = f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}"
+            await message.answer(text, reply_markup=language_keyboard(language), parse_mode="Markdown")
+        else:
+            await message.answer("❌ Произошла ошибка при регистрации. Попробуйте позже.")
+            await state.clear()
+
+    except Exception as e:
+        logger.error(f"Name processing error: {e}")
+        await message.answer("❌ Произошла ошибка. Попробуйте позже.")
+        await state.clear()
 
 @router.callback_query(F.data == "back_to_main")
 async def back_to_main_menu(callback: CallbackQuery, language: str):
