@@ -2,8 +2,6 @@ import traceback
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
 from config.logger import logger
-from handlers.level_selection_handlers.level_selection_keyboard import back_to_level_selection_keyboard, back_to_after_level_selection_keyboard, after_level_selection_keyboard, level_selection_keyboard
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 router = Router()
 
@@ -13,7 +11,7 @@ async def level_handler(callback: CallbackQuery):
     try:
         level = callback.data.split('_')[0]
         text = ''''''
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=after_level_selection_keyboard(level))
+        await callback.message.edit_text(text, parse_mode="Markdown")
         await callback.answer()
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')

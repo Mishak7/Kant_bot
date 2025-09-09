@@ -20,6 +20,7 @@ import traceback
 from aiogram import Router, types, F
 from aiogram.filters import CommandStart
 from config.logger import logger
+from handlers.level_selection_handlers.level_selection_keyboard import level_selection
 from handlers.main_handlers.keyboard import main_roots_keyboard, language_selection
 from handlers.university_handlers.university_info_keyboard import info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
@@ -32,6 +33,7 @@ from handlers.main_handlers.languages import TEXTS
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 from services.database.functions_database import check_user_exists, create_user, get_user_name
+from handlers.level_selection_handlers.level_selection_keyboard import level_selection
 
 class LanguageState(StatesGroup):
     waiting_for_language = State()
@@ -192,7 +194,7 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
 
         text = f"Привет, {user_info[0]}! Переходи к заданиям: 👇"
         await callback.message.delete()
-        await callback.message.answer(text, reply_markup=go_to_lessons(language), parse_mode="Markdown")
+        await callback.message.answer(text, reply_markup=level_selection(), parse_mode="Markdown")
         await callback.answer()
 
     except Exception as e:
@@ -225,7 +227,7 @@ async def process_name(message: Message, state: FSMContext, language: str):
             await state.clear()
 
             text = f'Переходи к заданиями: '
-            await message.answer(text, reply_markup=go_to_lessons(language), parse_mode="Markdown")
+            await message.answer(text, reply_markup=level_selection(), parse_mode="Markdown")
         else:
             await message.answer("❌ Произошла ошибка при регистрации. Попробуйте позже.")
             await state.clear()

@@ -15,7 +15,7 @@ def level_selection() -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text=f"🔥 B2", callback_data='b2_level')],
         [InlineKeyboardButton(text=f"🏆 C1", callback_data='c1_level')],
         [InlineKeyboardButton(text=f"👑 C2", callback_data='c2_level')],
-        [InlineKeyboardButton(text=f"◀️ Назад", callback_data='pass')]
+        [InlineKeyboardButton(text=f"◀️ Назад", callback_data='back_to_main')]
     ])
 
 def back_to_level_selection_keyboard():

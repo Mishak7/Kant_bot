@@ -1,6 +1,7 @@
 from aiogram import Bot, Dispatcher
 from config.settings import settings
 from config.logger import logger
+from handlers import level_selection_handlers
 from handlers.main_handlers import commands
 from handlers.dormitory_handlers import dormitory_handlers, dormitory_location_handlers
 from handlers.critical_info_handlers import critical_handler
@@ -12,6 +13,7 @@ from handlers.language_check_handlers.listening_handlers import listening_handle
 from handlers.language_check_handlers.speaking_handlers import speaking_handlers
 from handlers.sber_handlers import sber_handlers
 from aiogram.fsm.storage.memory import MemoryStorage
+from handlers.level_selection_handlers import level_selection_handler
 
 from aiogram import BaseMiddleware
 from typing import Callable, Dict, Any, Awaitable
@@ -154,6 +156,7 @@ async def main():
     dp.include_router(listening_handlers.router)
     dp.include_router(speaking_handlers.router)
     dp.include_router(sber_handlers.router)
+    dp.include_router(level_selection_handler.router)
 
     try:
         logger.info('Bot started')
