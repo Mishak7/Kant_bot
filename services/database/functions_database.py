@@ -23,3 +23,16 @@ async def create_user(telegram_id: int, username: str):
     except Exception as e:
         logger.error(f"Error creating user: {e}")
         return False
+
+async def get_user_name(telegram_id: int) -> str:
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute(
+                "SELECT username FROM Users WHERE telegram_id = ?",
+                (telegram_id,)
+            )
+            result = await cursor.fetchone()
+            return result[0] if result else None
+    except Exception as e:
+        logger.error(f"Error getting user name: {e}")
+        return None
