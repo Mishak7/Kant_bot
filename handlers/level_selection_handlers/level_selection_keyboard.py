@@ -6,7 +6,7 @@ Keyboards for handlers of level selection.
 
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-def level_selection() -> InlineKeyboardMarkup:
+def level_selection_keyboard() -> InlineKeyboardMarkup:
     """Creates a keyboard layout for level selection."""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=f"✏️ A1", callback_data='a1_level')],
