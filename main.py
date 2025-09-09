@@ -20,6 +20,7 @@ import aiosqlite
 import asyncio
 
 
+
 class LanguageMiddleware(BaseMiddleware):
     async def __call__(
             self,
@@ -131,6 +132,7 @@ async def init_db():
             logger.info("Добавлен столбец check_method в таблицу Tasks")
 
         logger.info("База данных инициализирована")
+
 
 
 async def main():

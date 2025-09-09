@@ -180,9 +180,9 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
     try:
         user_id = callback.from_user.id
 
-        user_name = await get_user_name(user_id)
+        user_info = await get_user_name(user_id)
 
-        if not user_name:
+        if not user_info:
             await callback.message.delete()
             await callback.message.answer("👋 Для начала работы введите ваше имя:")
             await state.set_state(UserRegistration.waiting_for_name)
@@ -190,7 +190,7 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
             return
 
 
-        text = f"Привет, {user_name}! Переходи к заданиям: 👇"
+        text = f"Привет, {user_info[0]}! Переходи к заданиям: 👇"
         await callback.message.delete()
         await callback.message.answer(text, reply_markup=go_to_lessons(language), parse_mode="Markdown")
         await callback.answer()

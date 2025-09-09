@@ -11,6 +11,7 @@ async def check_user_exists(telegram_id: int) -> bool:
         logger.error(f"Error checking user existence: {e}")
         return False
 
+
 async def create_user(telegram_id: int, username: str):
     try:
         async with aiosqlite.connect('BFU.db') as db:
@@ -28,11 +29,11 @@ async def get_user_name(telegram_id: int) -> str:
     try:
         async with aiosqlite.connect('BFU.db') as db:
             cursor = await db.execute(
-                "SELECT username FROM Users WHERE telegram_id = ?",
+                "SELECT username, score, hearts FROM Users WHERE telegram_id = ?",
                 (telegram_id,)
             )
             result = await cursor.fetchone()
-            return result[0] if result else None
+            return result if result else None
     except Exception as e:
         logger.error(f"Error getting user name: {e}")
         return None
