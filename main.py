@@ -36,7 +36,6 @@ class LanguageMiddleware(BaseMiddleware):
 async def init_db():
     """Асинхронная инициализация базы данных"""
     async with aiosqlite.connect('BFU.db') as db:
-        # Создание таблиц
         await db.execute("""
         CREATE TABLE IF NOT EXISTS Levels (
         level_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -123,7 +122,6 @@ async def init_db():
 
         await db.commit()
 
-        # Проверка и добавление столбца check_method
         cursor = await db.execute("PRAGMA table_info(Tasks)")
         columns = [row[1] for row in await cursor.fetchall()]
 

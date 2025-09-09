@@ -10,3 +10,10 @@ def language_keyboard(language: str) -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['language_check_keyboard']['language_check_keyboard']['back']}", callback_data='back_to_main')],
     ])
 
+def go_to_lessons(language: str) -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text=f"🇷🇺️ {TEXTS[language]['keyboards']['language_check_keyboard']['language_check_keyboard']['to_lessons']}",callback_data='lessons')],
+        [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['language_check_keyboard']['language_check_keyboard']['back']}", callback_data='back_to_main')],
+    ])
+
+
