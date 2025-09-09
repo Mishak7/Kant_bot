@@ -26,12 +26,12 @@ from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
 from aiogram.types import CallbackQuery, FSInputFile, Message
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 from handlers.location_handlers.location_keyboard import uni_loc_keyboard
-from handlers.language_check_handlers.language_check_keyboard import language_keyboard, go_to_lessons
+from handlers.language_check_handlers.language_check_keyboard import  go_to_lessons
 from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-from services.database.functions_database import check_user_exists, create_user
+from services.database.functions_database import check_user_exists, create_user, get_user_name
 
 class LanguageState(StatesGroup):
     waiting_for_language = State()
@@ -180,18 +180,17 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
     try:
         user_id = callback.from_user.id
 
-        # Проверяем, зарегистрирован ли пользователь
-        user_exists = await check_user_exists(user_id)
+        user_name = await get_user_name(user_id)
 
-        if not user_exists:
-            # Если пользователь не зарегистрирован, просим ввести имя
+        if not user_name:
+            await callback.message.delete()
             await callback.message.answer("👋 Для начала работы введите ваше имя:")
             await state.set_state(UserRegistration.waiting_for_name)
-            await callback.answer("Сначала нужно зарегистрироваться")
+            await callback.message.delete()
             return
 
-        # Если пользователь зарегистрирован, показываем контент
-        text = f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}"
+
+        text = f"Привет, {user_name}! Переходи к заданиям: 👇"
         await callback.message.delete()
         await callback.message.answer(text, reply_markup=go_to_lessons(language), parse_mode="Markdown")
         await callback.answer()
@@ -208,7 +207,6 @@ async def process_name(message: Message, state: FSMContext, language: str):
         user_name = message.text.strip()
         user_id = message.from_user.id
 
-        # Валидация имени
         if len(user_name) < 2:
             await message.answer("❌ Имя должно содержать минимум 2 символа. Попробуйте еще раз:")
             return
@@ -217,7 +215,6 @@ async def process_name(message: Message, state: FSMContext, language: str):
             await message.answer("❌ Имя слишком длинное. Максимум 50 символов. Попробуйте еще раз:")
             return
 
-        # Сохраняем пользователя в базу
         success = await create_user(
             telegram_id=user_id,
             username=user_name
@@ -227,8 +224,7 @@ async def process_name(message: Message, state: FSMContext, language: str):
             await message.answer(f"✅ Отлично, {user_name}! Регистрация завершена! 🎉")
             await state.clear()
 
-            # После регистрации показываем language_chec
-            text = f"🇷🇺 {TEXTS[language]['keyboards']['main_keyboard']['language_check']}"
+            text = f'Переходи к заданиями: '
             await message.answer(text, reply_markup=go_to_lessons(language), parse_mode="Markdown")
         else:
             await message.answer("❌ Произошла ошибка при регистрации. Попробуйте позже.")
