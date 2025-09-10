@@ -1,19 +1,36 @@
 # авторизация
 
 import sqlite3
+import aiosqlite
+from config.logger import logger
 
 db = sqlite3.connect('BFU')
 cursor = db.cursor()
 
 # при авторизации получаем telegram_id и username пользователя
-def get_user_id(inserted_telegram_id, inserted_username):
-    cursor.execute("SELECT id FROM Users WHERE telegram_id = ?", (inserted_telegram_id,))
-    user = cursor.fetchone()
-    if user:
-        return user[0]
-    else:
-        cursor.execute("INSERT INTO Users(telegram_id, username)", (inserted_telegram_id, inserted_username))
-        return cursor.lastrowid
+# выводит id юзера 
+async def get_user_id(inserted_telegram_id, inserted_username):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            async with db.cursor() as cursor:
+                await cursor.execute("SELECT id FROM Users WHERE telegram_id = ?", (inserted_telegram_id,))
+                user = await cursor.fetchone()
+                if user:
+                    return user[0]
+                else:
+                    success = await create_user(inserted_telegram_id, inserted_username)
+                    if success:
+                        await cursor.execute("SELECT id FROM Users WHERE telegram_id = ?", (inserted_telegram_id,))
+                        user = await cursor.fetchone()
+                        await db.commit()
+                        return user[0] if user else None
+                    else:
+                        logger.error("Failed to create user")
+                        await db.rollback()
+                        return None
+    except Exception as e:
+        logger.error(f"Error in get_user_id: {e}")
+        return None
 
 # надо прописать логику, чтобы name_level это было название той кнопки, которую нажимает пользователь
 def get_task(name_level, user_id): # user_id - результат работы функции get_user_id
@@ -58,3 +75,30 @@ def check_task_grammar_reading(user_ident, task_ident, user_answer):
             return 'not correct' # тут нужно будет использовать эту функцию в самой логике работы, чтобы потом
             # ориентируясь на аутпут функции либо выводить объяснение правильного ответа с помощью гигачата + текущи скор
             # либо просто выводить а-ля "Вы молодец" и текущий скор
+
+
+async def create_user(telegram_id: int, username: str):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            await db.execute("""
+                INSERT INTO Users (telegram_id, username, score, hearts, created_at, updated_at)
+                VALUES (?, ?, 0, 5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+            """, (telegram_id, username))
+            await db.commit()
+            return True
+    except Exception as e:
+        logger.error(f"Error creating user: {e}")
+        return False
+
+async def get_user_name(telegram_id: int) -> str:
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute(
+                "SELECT username, score, hearts FROM Users WHERE telegram_id = ?",
+                (telegram_id,)
+            )
+            result = await cursor.fetchone()
+            return result if result else None
+    except Exception as e:
+        logger.error(f"Error getting user name: {e}")
+        return None
