@@ -11,7 +11,7 @@ router = Router()
 class AnswerState(StatesGroup):
     waiting_for_answer = State()
 
-@router.callback_query(F.data == "a1_level" | F.data == 'a2_level' | F.data == 'b1_level' | F.data == 'b2_level' | F.data == 'c1_level' | F.data == 'c2_level')
+@router.callback_query(F.data.in_(["a1_level", "a2_level", "b1_level", "b2_level", "c1_level", "c2_level"]))
 async def level_handler(callback: CallbackQuery, state: FSMContext):
     """Handler for all tasks"""
     try:
@@ -53,13 +53,21 @@ async def check_text_answer(message: Message, state: FSMContext):
         
         answer_check = check_task(user_id, task_id, message.text)
         
-        if answer_check == 'верно':
-            response_text = 'Молодец! Все верно!'
-        elif answer_check == 'неверно':
-            response_text = 'К сожалению, не верно.'
+        if isinstance(answer_check, str):
+            if answer_check == 'верно':
+                response_text = '✅ Молодец! Все верно!'
+            elif answer_check == 'неверно':
+                response_text = '❌ К сожалению, не верно.'
+            else:
+                response_text = 'Неизвестный ответ от системы проверки'
+        elif isinstance(answer_check, dict):
+            response = answer_check
+            response_text = f"""
+{'✅ Верно!' if response['correct'] is True else '❌ Не верно.'}
+{response['explanation']}
+"""
         else:
-            response_text = answer_check
-        
+            response_text = 'Ошибка: неверный формат ответа от системы проверки'
         await message.answer(response_text, parse_mode="Markdown")
         await state.clear()
         

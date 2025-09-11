@@ -4,10 +4,8 @@ import sqlite3
 import aiosqlite
 from config.logger import logger
 from langchain_gigachat.chat_models import GigaChat
-from langchain_core.messages import SystemMessage, HumanMessage
-from handlers.language_check_handlers.database.prompts.prompt_check_writing import prompt as writing_prompt
-from handlers.language_check_handlers.database.prompts.prompt_check_speaking import prompt as speaking_prompt
-from handlers.language_check_handlers.database.prompts.prompt_check_listening import prompt as listening_prompt
+from langchain_core.messages import SystemMessage
+from handlers.language_check_handlers.database.prompts.evaluation_prompt import evaluation_prompt
 from handlers.language_check_handlers.database.speech_utils import transcribe_voice_message
 
 db = sqlite3.connect('BFU')
@@ -82,6 +80,20 @@ async def prepare_question(task):
         # content, task_id нам нужны доя проверки
     else:
         return {"task_id": task_id, "content": content, "question": question}
+    
+
+async def extract_audio_from_db(task_id: str):
+    '''
+    Функция для извлечения аудио из бд.
+    '''
+    async with aiosqlite.connect('BFU.db') as db:
+        cursor = await db.execute("SELECT audio FROM Tasks WHERE task_id=?", (task_id,))
+        row = await cursor.fetchone()
+
+        if row and row[0]:
+            audio_blob = row[0]
+            with open('audio.blob', f'extracted_audio{task_id}.wav') as f:
+                f.write(audio_blob)
 
 
 # тут дальше в коде мы получаем идентификтор из функции get_task
@@ -98,9 +110,14 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
             row = await cursor.fetchone()[0]
             check_answ = row[0] if row else None
 
-            cursor = await db.execute("SELECT type, score, level_id FROM Tasks WHERE task_id=?", (task_ident,))
-            task_row = await cursor.fetchone()
-            type_task, score_change, level_id = task_row
+            cursor = await db.execute("""
+                    SELECT T.type, T.score, T.level_id, T.question, T.content, L.level_name
+                    FROM Tasks T
+                    JOIN Levels L ON T.level_id = L.level_id
+                    WHERE T.task_id=?
+                """, (task_ident,))
+            task_row = cursor.fetchone()
+            type_task, score_change, level_id, question, content, level_name = task_row
 
             if check_answ:
                 if user_answer == check_answ:
@@ -116,22 +133,19 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                         WHERE user_id = ? AND level_id = ?
                         """, (score_change, user_ident, level_id))
                     await db.commit()
-                    return 'неверно' # тут нужно будет использовать эту функцию в самой логике работы, чтобы потом
-                    # ориентируясь на аутпут функции либо выводить объяснение правильного ответа с помощью гигачата + текущи скор
-                    # либо просто выводить а-ля "Вы молодец" и текущий скор
-            else:
+                    return 'неверно'
+                    
+            if is_voice:
+                user_answer = transcribe_voice_message(user_answer) # ТУТ НАДО ПОМЕНЯТЬ ПАРАМЕТР! Когда будет настроена логика ответ человека в гс должен сохраняться у нас где-то как путь
 
-                if is_voice:
-                    user_answer = transcribe_voice_message(user_answer)
-
-                if type_task == 'Speaking':
-                    prompt = speaking_prompt
-                elif type_task == 'Listening':
-                    prompt = listening_prompt
-                elif type_task == 'Writing':
-                    prompt = writing_prompt
+                prompt = evaluation_prompt.format(
+                    content=content,
+                    question=question,
+                    user_answer=user_answer,
+                    level_name=level_id,
+                    type_question=type_task
+                )
                 response = gigachat.invoke([
-                    HumanMessage(content=user_answer),
                     SystemMessage(content=prompt)
                 ])
                 # здесь надо прописать, как очки добавлять, если открытый ответ (в промпте должно быть)
