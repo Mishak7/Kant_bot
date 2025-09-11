@@ -32,7 +32,7 @@ from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-from services.database.functions_database import check_user_exists, create_user, get_user_name
+from services.database.database_functions import check_user_exists, create_user, get_user_name
 from handlers.level_selection_handlers.level_selection_keyboard import level_selection_keyboard
 
 class LanguageState(StatesGroup):

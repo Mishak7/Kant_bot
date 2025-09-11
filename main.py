@@ -1,7 +1,6 @@
 from aiogram import Bot, Dispatcher
 from config.settings import settings
 from config.logger import logger
-from handlers import level_selection_handlers
 from handlers.main_handlers import commands
 from handlers.dormitory_handlers import dormitory_handlers, dormitory_location_handlers
 from handlers.critical_info_handlers import critical_handler
@@ -14,6 +13,8 @@ from handlers.language_check_handlers.speaking_handlers import speaking_handlers
 from handlers.sber_handlers import sber_handlers
 from aiogram.fsm.storage.memory import MemoryStorage
 from handlers.level_selection_handlers import level_selection_handler
+from services.database.database_fill import data
+from services.database.database_functions import add_tasks
 
 from aiogram import BaseMiddleware
 from typing import Callable, Dict, Any, Awaitable
@@ -45,14 +46,16 @@ async def init_db():
         level_score INTEGER,
         level_name TEXT
         )
-        """)
+        """
+                       )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS Modules (
         module_id INTEGER PRIMARY KEY AUTOINCREMENT, 
         module_name TEXT
         )
-        """)
+        """
+                       )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS LevelsModules(
@@ -62,19 +65,25 @@ async def init_db():
         FOREIGN KEY(module_id) REFERENCES Modules(module_id), 
         PRIMARY KEY (level_id, module_id)
         )
-        """)
+        """
+                       )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS Tasks(
         task_id INTEGER PRIMARY KEY AUTOINCREMENT, 
-        module_id INTEGER, 
+        level_id INTEGER, 
+        module_id INTEGER,
         type TEXT NOT NULL,
         content TEXT NOT NULL, 
         question TEXT NOT NULL, 
+        audio BLOB DEFAULT NULL,
         score INTEGER DEFAULT 10,
+        check_method TEXT,
+        FOREIGN KEY(level_id) REFERENCES Levels(level_id),
         FOREIGN KEY(module_id) REFERENCES Modules(module_id)
         )
-        """)
+        """
+                       )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS TasksAnswers(
@@ -83,31 +92,36 @@ async def init_db():
         correct_answer INTEGER, 
         FOREIGN KEY(task_id) REFERENCES Tasks(task_id)
         )
-        """)
+        """
+                       )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS Users(
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         telegram_id BIGINT UNIQUE NOT NULL, 
         username TEXT, 
-        score INTEGER DEFAULT 0, 
-        hearts INTEGER DEFAULT 5, 
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
-        """)
+        """
+                       )
 
+        # изменила module_id на level_id (чтобы мы сохраняли именно прогресс по уровню, а не easy и тд модулям
         await db.execute("""
         CREATE TABLE IF NOT EXISTS UserModules(
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         user_id INTEGER, 
-        module_id INTEGER, 
+        level_id INTEGER,
+        level_name TEXT,
+        score INTEGER DEFAULT 0, 
         is_completed BOOLEAN DEFAULT FALSE, 
         completed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
         FOREIGN KEY(user_id) REFERENCES Users(id), 
-        FOREIGN KEY(module_id) REFERENCES Modules(module_id)
+        FOREIGN KEY(level_id) REFERENCES Levels(level_id),
+        FOREIGN KEY(level_name) REFERENCES Levels(level_name)
         )
-        """)
+        """
+                       )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS UserProgress(
@@ -121,9 +135,18 @@ async def init_db():
         FOREIGN KEY(user_id) REFERENCES Users(id), 
         FOREIGN KEY(task_id) REFERENCES Tasks(task_id)
         )
-        """)
+        """
+                       )
 
         await db.commit()
+
+        cursor = await db.execute("PRAGMA table_info(Tasks)")
+        columns = [row[1] for row in await cursor.fetchall()]
+
+        if "check_method" not in columns:
+            await db.execute("ALTER TABLE Tasks ADD COLUMN check_method TEXT")
+            await db.commit()
+            logger.info("Добавлен столбец check_method в таблицу Tasks")
 
         cursor = await db.execute("PRAGMA table_info(Tasks)")
         columns = [row[1] for row in await cursor.fetchall()]
@@ -139,6 +162,7 @@ async def init_db():
 
 async def main():
     await init_db()
+    await add_tasks(data=data)
 
     bot = Bot(token=settings.TELEGRAM_TOKEN)
     storage = MemoryStorage()
