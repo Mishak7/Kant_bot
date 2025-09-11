@@ -1205,7 +1205,7 @@ Click the *button below* for details:
 """
             }
         }
-    }
+    },
 
 
     'fr': {
@@ -1832,7 +1832,7 @@ Conmigo podrás:
                 'check-in': 'Alojamiento en un dormitorio',
                 'payment': 'Pago',
                 'address': 'Direcciones de los dormitorios',
-                'rules': 'Reglas de convivencia,
+                'rules': 'Reglas de convivencia',
                 'laundry': 'Lavandería',
                 'no_certificate': 'No hay un certificado de vacunas o de fluorografía',
                 'back': 'Atrás'
@@ -2124,7 +2124,7 @@ https://2gis.ru/kaliningrad/search/236041%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1
                             ],
                     'speaking_send': 'Espero tu historia sobre el tema:',
                     'handle_voice_message': 'Resultado del análisis:',
-                }
+                },
             },
 
             'location_handlers': {
@@ -2365,7 +2365,7 @@ Haz clic en *el botón de abajo* para más detalles:
 Haz clic en *el botón de abajo* para más detalles:
 """
             }
-        }
+        },
     },
 
 
