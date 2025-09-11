@@ -69,7 +69,7 @@ async def get_task(name_level, user_id): # user_id - результат рабо
         return False
 
 
-def prepare_question(task):
+async def prepare_question(task):
     '''
     Функция prepare_question формирует в удобном ответе результат выбора рандомного задания из бд.
 
