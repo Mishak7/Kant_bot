@@ -20,16 +20,15 @@ gigachat = GigaChat(temperature = 0,
 
 # при авторизации получаем telegram_id и username пользователя
 # выводит id юзера 
-async def get_user_id(inserted_telegram_id, inserted_username):
+async def get_user_id(inserted_telegram_id):
     try:
         async with aiosqlite.connect('BFU.db') as db:
-            async with db.cursor() as cursor:
-                await cursor.execute("SELECT id FROM Users WHERE telegram_id = ?", (inserted_telegram_id,))
-                user = await cursor.fetchone()
-                if user:
-                    return user[0]
-                else:
-                    return "User not found"
+            cursor = await db.execute("SELECT id FROM Users WHERE telegram_id = ?", (inserted_telegram_id,))
+            user = await cursor.fetchone()
+            if user:
+                return user[0]
+            else:
+                return "User not found"
     except Exception as e:
         logger.error(f"Error in get_user_id: {e}")
         return None
@@ -40,27 +39,34 @@ async def get_task(name_level, user_id): # user_id - результат рабо
     name_level - кнопка, которую нажал пользователь (надо как-то прописать эту логику)
     user_id - результат работы функции get_user_id
     '''
-    await cursor.execute("SELECT score FROM UserModules WHERE user_id = ? AND level_name=?", (user_id, name_level))
-    row = await cursor.fetchone()
-    user_score = row[0] if row else 0
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT score FROM UserModules WHERE user_id = ? AND level_name=?", (user_id, name_level))
+            row = await cursor.fetchone()
+            user_score = row[0] if row else 0
 
-    if user_score < 30:
-        module_type = 'Easy'
-    elif 30 <= user_score < 60:
-        module_type = 'Middle'
-    else:
-        module_type = 'Senior'
+            if user_score < 30:
+                module_type = 'Easy'
+            elif 30 <= user_score < 60:
+                module_type = 'Middle'
+            else:
+                module_type = 'Senior'
 
-    await cursor.execute("SELECT level_id FROM Levels WHERE level_name = ?", (name_level,))
-    row = await cursor.fetchone()
-    level_id = row[0] if row else None
+            cursor = await db.execute("SELECT level_id FROM Levels WHERE level_name = ?", (name_level,))
+            row = await cursor.fetchone()
+            level_id = row[0] if row else None
 
-    await cursor.execute("SELECT module_id FROM Modules WHERE module_name = ?", (module_type,))
-    module = await cursor.fetchone()
-    module_id = module[0] if module else None
+            cursor = await db.execute("SELECT module_id FROM Modules WHERE module_name = ?", (module_type,))
+            module = await cursor.fetchone()
+            module_id = module[0] if module else None
 
-    await cursor.execute("SELECT task_id, content, question FROM Tasks WHERE module_id =? AND level_id = ? ORDER BY RANDOM() LIMIT 1", (module_id, level_id))
-    return await cursor.fetchone()
+            cursor = await db.execute("SELECT task_id, content, question FROM Tasks WHERE module_id =? AND level_id = ? ORDER BY RANDOM() LIMIT 1", (module_id, level_id))
+            row = await cursor.fetchone()
+            return row
+    
+    except Exception as e:
+        logger.error(f"Error getting a task: {e}")
+        return False
 
 
 def prepare_question(task):
@@ -86,45 +92,96 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
     user_answer - ответ пользователя на задание, которое было выбрано в get_task
     is_voice - True если ответ юзера это голосовое (задание на спикинг)
     '''
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT correct_answer FROM TasksAnswers WHERE task_id=?", (task_ident,))
+            row = await cursor.fetchone()[0]
+            check_answ = row[0] if row else None
 
-    await cursor.execute("SELECT correct_answer FROM TasksAnswers WHERE task_id=?", (task_ident,))
-    row = await cursor.fetchone()[0]
-    check_answ = row[0] if row else None
+            cursor = await db.execute("SELECT type, score, level_id FROM Tasks WHERE task_id=?", (task_ident,))
+            task_row = await cursor.fetchone()
+            type_task, score_change, level_id = task_row
 
-    await cursor.execute("SELECT type, score, level_id FROM Tasks WHERE task_id=?", (task_ident,))
-    task_row = await cursor.fetchone()
-    type_task, score_change, level_id = task_row
+            if check_answ:
+                if user_answer == check_answ:
+                    await db.execute("""UPDATE UserModules 
+                        SET score = score + ? 
+                        WHERE user_id = ? AND level_id = ?
+                        """, (score_change, user_ident, level_id))
+                    await db.commit()
+                    return 'верно'
+                else:
+                    await db.execute("""UPDATE UserModules
+                        SET score = score - ?
+                        WHERE user_id = ? AND level_id = ?
+                        """, (score_change, user_ident, level_id))
+                    await db.commit()
+                    return 'неверно' # тут нужно будет использовать эту функцию в самой логике работы, чтобы потом
+                    # ориентируясь на аутпут функции либо выводить объяснение правильного ответа с помощью гигачата + текущи скор
+                    # либо просто выводить а-ля "Вы молодец" и текущий скор
+            else:
 
-    if check_answ:
-        if user_answer == check_answ:
-            await cursor.execute("""UPDATE UserModules 
-                SET score = score + ? 
-                WHERE user_id = ? AND level_id = ?
-                """, (score_change, user_ident, level_id))
-            return 'верно'
+                if is_voice:
+                    user_answer = transcribe_voice_message(user_answer)
+
+                if type_task == 'Speaking':
+                    prompt = speaking_prompt
+                elif type_task == 'Listening':
+                    prompt = listening_prompt
+                elif type_task == 'Writing':
+                    prompt = writing_prompt
+                response = gigachat.invoke([
+                    HumanMessage(content=user_answer),
+                    SystemMessage(content=prompt)
+                ])
+                # здесь надо прописать, как очки добавлять, если открытый ответ (в промпте должно быть)
+                return response.content
+    except Exception as e:
+        logger.error(f"Error checking user answer: {e}")
+        return False
+    
+
+async def check_user_exists(telegram_id: int) -> bool:
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT id FROM Users WHERE telegram_id = ?", (telegram_id,))
+            result = await cursor.fetchone()
+            return result is not None
+    except Exception as e:
+        logger.error(f"Error checking user existence: {e}")
+        return False
+
+
+async def create_user(telegram_id: int, username: str):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            user = check_user_exists(telegram_id)
+            if not user:
+                await db.execute("""
+                    INSERT INTO Users (telegram_id, username, score, hearts, created_at, updated_at)
+                    VALUES (?, ?, 0, 5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+                """, (telegram_id, username))
+                await db.commit()
+                return True
+            else:
+                return 'This user already exists'
+    except Exception as e:
+        logger.error(f"Error creating user: {e}")
+        return False
+
+async def get_user_name(telegram_id: int) -> str:
+    try:
+        user = check_user_exists(telegram_id)
+        if user:
+            async with aiosqlite.connect('BFU.db') as db:
+                cursor = await db.execute(
+                    "SELECT username, score, hearts FROM Users WHERE telegram_id = ?",
+                    (telegram_id,)
+                )
+                result = await cursor.fetchone()
+                return result if result else None
         else:
-            await cursor.execute("""UPDATE UserModules
-                SET score = score - ?
-                WHERE user_id = ? AND level_id = ?
-                """, (score_change, user_ident, level_id))
-            await db.commit()
-            return 'неверно' # тут нужно будет использовать эту функцию в самой логике работы, чтобы потом
-            # ориентируясь на аутпут функции либо выводить объяснение правильного ответа с помощью гигачата + текущи скор
-            # либо просто выводить а-ля "Вы молодец" и текущий скор
-    else:
-
-        if is_voice:
-            user_answer = transcribe_voice_message(user_answer)
-
-        if type_task == 'Speaking':
-            prompt = speaking_prompt
-        elif type_task == 'Listening':
-            prompt = listening_prompt
-        elif type_task == 'Writing':
-            prompt = writing_prompt
-        response = gigachat.invoke([
-            HumanMessage(content=user_answer),
-            SystemMessage(content=prompt)
-        ])
-        # здесь надо прописать, как очки добавлять, если открытый ответ (в промпте должно быть)
-        return response.content
+            return 'User does not exist'
+    except Exception as e:
+        logger.error(f"Error getting user name: {e}")
+        return None

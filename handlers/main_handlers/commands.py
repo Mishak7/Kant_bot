@@ -27,7 +27,6 @@ from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
 from aiogram.types import CallbackQuery, FSInputFile, Message
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 from handlers.location_handlers.location_keyboard import uni_loc_keyboard
-from handlers.language_check_handlers.language_check_keyboard import  go_to_lessons
 from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
 from aiogram.fsm.state import State, StatesGroup
