@@ -100,6 +100,8 @@ async def init_db():
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         telegram_id BIGINT UNIQUE NOT NULL, 
         username TEXT, 
+        score INTEGER, 
+        hearts INTEGER, 
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )

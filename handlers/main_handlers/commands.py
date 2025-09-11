@@ -188,7 +188,6 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
             await callback.message.delete()
             await callback.message.answer("👋 Для начала работы введите ваше имя:")
             await state.set_state(UserRegistration.waiting_for_name)
-            await callback.message.delete()
             return
 
 
