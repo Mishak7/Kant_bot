@@ -10,7 +10,9 @@ async def level_handler(callback: CallbackQuery):
     """Handler for all tasks"""
     try:
         level = callback.data.split('_')[0]
-        text = ''''''
+        text = '''
+
+'''
         await callback.message.edit_text(text, parse_mode="Markdown")
         await callback.answer()
     except Exception as e:

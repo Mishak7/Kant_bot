@@ -7,7 +7,7 @@ import requests
 from pydub import AudioSegment
 import tempfile
 import os
-from services.speaking.speaking_prompt import system_prompt
+from handlers.language_check_handlers.database.prompts.prompt_check_speaking import system_prompt
 
 class SpeakingAnalyzer(ListeningGeneration):
     def __init__(self, text: str):
