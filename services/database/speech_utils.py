@@ -2,6 +2,7 @@ import uuid
 import requests
 from pydub import AudioSegment
 from config.settings import Settings
+from services.listening.listening import ListeningGeneration
 
 def salute_speech_token():
     """Получение токена для SberSpeech"""
@@ -41,3 +42,11 @@ def transcribe_voice_message(file_path: str):
 
     salute_text = ''.join(result_json.get('result', []))
     return salute_text
+
+def text_to_speech(text: str, filename: str = "temp.wav") -> str:
+    """
+    To get path of the file
+    """
+    lg = ListeningGeneration(text)
+    lg.create_file(filename)
+    return filename

@@ -1,6 +1,6 @@
 import traceback
 from aiogram import Router, F
-from aiogram.types import CallbackQuery, Message
+from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
 from services.database.database_functions import get_task, check_task, prepare_question, get_user_id
 from aiogram.fsm.state import State, StatesGroup
@@ -67,9 +67,16 @@ async def check_text_answer(message: Message, state: FSMContext):
 """
         else:
             response_text = 'Ошибка: неверный формат ответа от системы проверки'
-        await message.answer(response_text, parse_mode="Markdown")
+        await message.answer(response_text,
+                             parse_mode="Markdown",
+                             reply_markup= InlineKeyboardMarkup(
+                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
+                             )
+                             )
         await state.clear()
 
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await message.answer('Ошибка при проверке ответа')
+
+

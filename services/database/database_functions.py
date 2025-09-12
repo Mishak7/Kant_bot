@@ -5,7 +5,7 @@ from typing import Optional
 from langchain_gigachat.chat_models import GigaChat
 from langchain_core.messages import SystemMessage
 from services.database.database_prompts import evaluation_prompt
-from services.database.speech_utils import transcribe_voice_message
+from services.database.speech_utils import transcribe_voice_message, text_to_speech
 from config.settings import Settings
 
 
@@ -15,8 +15,6 @@ gigachat = GigaChat(temperature=0,
                     credentials=Settings.GIGA_CREDENTIALS,
                     verify_ssl_certs=False)
 
-
-text_to_speech = lambda x, y: x#ВРЕМЕННАЯ ЗАТЫЧКА
 
 async def add_tasks(
     data=None,
@@ -249,7 +247,7 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
 
 
             cursor = await db.execute(
-                "SELECT task_id, content, question FROM Tasks WHERE module_id =? AND level_id = ? ORDER BY RANDOM() LIMIT 1",
+                "SELECT task_id, content, question, audio FROM Tasks WHERE module_id =? AND level_id = ? ORDER BY RANDOM() LIMIT 1",
                 (module_id, level_id))
             row = await cursor.fetchone()
             return row
@@ -265,15 +263,13 @@ async def prepare_question(task):
 
     task - результат работы функции get_task.
     """
-    #ОТКУДА тут аудио
-    #task_id, content, question, audio = task
-    task_id, content, question = task
-    # if audio:
-    #     return {"task_id": task_id, "content": content, "question": question, "audio": audio}
-    #     # в выводе задания пользователю мы выводим только question, audio
-    #     # content, task_id нам нужны доя проверки
-    # else:
-    return {"task_id": task_id, "content": content, "question": question}
+    task_id, content, question, audio = task
+    # в выводе задания пользователю мы выводим только question, audio
+    # content, task_id нам нужны доя проверки
+    if audio:
+        return {"task_id": task_id, "content": content, "question": question, "audio": audio}
+    else:
+        return {"task_id": task_id, "content": content, "question": question}
 
 
 async def extract_audio_from_db(task_id: str):

@@ -2215,6 +2215,28 @@ data = {
             "task_question": "Напишите небольшой текст. Объем: 1-3 предложения.",
             "check_method": "open_question_writing",
             "task_score": 10
+        },
+{
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Мой любимый предмет в школе — история, а не математика.",
+            "task_question": "Вопрос: Какой его любимый предмет?\n\n1) Математика\n2) История\n3) География\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Мой любимый цвет — синий. У меня есть сумка этого цвета.",
+            "task_question": "Какой любимый цвет рассказчика?\n\n1) Красный\n2) Синий\n3) Зелёный\n\nНапиши ТОЛЬКО цифру ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
         }
     ]
 }
