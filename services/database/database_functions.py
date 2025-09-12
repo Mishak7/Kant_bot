@@ -4,7 +4,7 @@ from config.logger import logger
 from typing import Optional
 from langchain_gigachat.chat_models import GigaChat
 from langchain_core.messages import SystemMessage
-from services.database.database_prompts. evaluation_prompt import evaluation_prompt
+from services.database.database_prompts.evaluation_prompt import evaluation_prompt
 from services.database.speech_utils import transcribe_voice_message, text_to_speech
 from config.settings import Settings
 import json
@@ -361,8 +361,6 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                 except Exception as parse_error:
                     logger.error(f"Error parsing GigaChat response: {parse_error}, raw={response.content}")
                     return {"error": "Invalid response from AI"}
-
-
     except Exception as e:
         logger.error(f"Error checking user answer: {e}")
         return False
