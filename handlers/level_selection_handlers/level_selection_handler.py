@@ -2,7 +2,7 @@ import traceback
 from aiogram import Router, F
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
-from services.database.database_functions import get_task, check_task, prepare_question, get_user_id
+from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 
@@ -21,11 +21,19 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         #level = callback.data.split('_')[0]
         level = 'A1'
         telegram_id = callback.from_user.id
+        chat_id = callback.message.chat.id
         user_id = await get_user_id(telegram_id)
         task = await get_task(level, user_id)
         prepared_task = await prepare_question(task)
         text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
-        await callback.message.edit_text(text, parse_mode="Markdown")
+
+        if prepared_task.get('audio'):
+            audio_file = await extract_audio_from_db(prepared_task['task_id'])
+            if audio_file:
+                await callback.message.edit_text(prepared_task['question'], parse_mode="Markdown")
+                await callback.bot.send_voice(chat_id=chat_id, voice=audio_file)
+        else:
+            await callback.message.edit_text(text, parse_mode="Markdown")
         await callback.answer()
 
         await state.update_data(
@@ -50,7 +58,15 @@ async def check_text_answer(message: Message, state: FSMContext):
             await state.clear()
             return
 
-        answer_check = await check_task(user_id, task_id, message.text)
+        if message.content_type == "voice" and message.voice:
+            voice_file = await message.voice.download()
+            user_answer = voice_file.name
+            is_voice = True
+        else:
+            user_answer = message.text
+            is_voice = False
+
+        answer_check = await check_task(user_id, task_id, user_answer, is_voice=is_voice)
 
         if isinstance(answer_check, str):
             if answer_check == 'верно':

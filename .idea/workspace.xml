@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/level_selection_handlers/level_selection_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/level_selection_handlers/level_selection_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/database/database_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/database/database_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/grammar/grammar.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/grammar/grammar.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
