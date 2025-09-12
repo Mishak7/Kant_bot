@@ -61,6 +61,7 @@ async def check_text_answer(message: Message, state: FSMContext):
                 response_text = 'Неизвестный ответ от системы проверки'
         elif isinstance(answer_check, dict):
             response = answer_check
+            print(response)
             response_text = f"""
     Вы набрали {response['score']} баллов из {response['max_score']} возможных.\n\nОбъяснение такой оценки:
     {response['explanation']}

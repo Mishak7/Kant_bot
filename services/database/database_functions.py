@@ -14,6 +14,7 @@ import json
 gigachat = GigaChat(temperature=0,
                     top_p=0.1,
                     credentials=Settings.GIGA_CREDENTIALS,
+                    model="GigaChat-Pro",
                     verify_ssl_certs=False)
 
 
@@ -302,8 +303,8 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
             check_answ = row[0] if row else None
 
             cursor = await db.execute("""
-                    SELECT T.type, T.score, T.level_id, T.module_name, T.question, T.content, L.level_name
-                    FROM Tasks T
+                    SELECT T.type, T.score, T.level_id, L.module_name, T.question, T.content, L.level_name
+                    FROM Tasks T LEFT JOIN Modules L ON (T.module_id=L.module_id)
                     JOIN Levels L ON T.level_id = L.level_id
                     WHERE T.task_id=?
                 """, (task_ident,))
@@ -344,15 +345,22 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                 ])
 
                 try:
-                    result = json.loads(response.content)
+                    content = response.content.strip()
+                    if content.startswith('```json') and content.endswith('```'):
+                        json_content = content[7:-3].strip()
+                    else:
+                        json_content = content
+
+                    print(json_content)
+                    result = json.loads(json_content)
                     score = result.get('score', 0)
                     max_score = result.get('max_score', 0)
                     explanation = result.get('explanation', "")
 
-                    await db.execute("""UPDATE UserModules 
-                        SET score = score + ? 
-                        WHERE user_id = ? AND level_id = ?
-                        """, (score, user_ident, level_id))
+                    await db.execute("""UPDATE UserModules
+                            SET score = score + ?
+                            WHERE user_id = ? AND level_id = ?
+                            """, (score, user_ident, level_id))
 
                     await db.commit()
 
@@ -361,9 +369,8 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                 except Exception as parse_error:
                     logger.error(f"Error parsing GigaChat response: {parse_error}, raw={response.content}")
                     return {"error": "Invalid response from AI"}
+
+
     except Exception as e:
         logger.error(f"Error checking user answer: {e}")
         return False
-
-
-
