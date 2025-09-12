@@ -283,7 +283,7 @@ async def extract_audio_from_db(task_id: str):
 
         if row and row[0]:
             audio_blob = row[0]
-            with open('audio.blob', f'extracted_audio{task_id}.wav') as f:
+            with open('audio.blob', f'extracted_audio{task_id}.MP3') as f:
                 f.write(audio_blob)
 
 
