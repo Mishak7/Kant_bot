@@ -7,6 +7,7 @@ from langchain_core.messages import SystemMessage
 from services.database.database_prompts import evaluation_prompt
 from services.database.speech_utils import transcribe_voice_message, text_to_speech
 from config.settings import Settings
+import json
 
 
 #ОЧЕНЬ ВРЕМЕННО - спрятать такое лучше
@@ -301,13 +302,13 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
             check_answ = row[0] if row else None
 
             cursor = await db.execute("""
-                    SELECT T.type, T.score, T.level_id, T.question, T.content, L.level_name
+                    SELECT T.type, T.score, T.level_id, T.module_name, T.question, T.content, L.level_name
                     FROM Tasks T
                     JOIN Levels L ON T.level_id = L.level_id
                     WHERE T.task_id=?
                 """, (task_ident,))
             task_row = await cursor.fetchone()
-            type_task, score_change, level_id, question, content, level_name = task_row
+            type_task, score_change, level_id, module_name, question, content, level_name = task_row
 
             if check_answ:
                 if int(user_answer) == int(check_answ):
@@ -325,25 +326,37 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     await db.commit()
                     return 'неверно'
 
-            if is_voice:
-                user_answer = transcribe_voice_message(
-                    user_answer)  # ТУТ НАДО ПОМЕНЯТЬ ПАРАМЕТР! Когда будет настроена логика ответ человека в гс должен сохраняться у нас где-то как путь
+            else:
+                if is_voice:
+                    user_answer = transcribe_voice_message(
+                        user_answer)  # ТУТ НАДО ПОМЕНЯТЬ ПАРАМЕТР! Когда будет настроена логика ответ человека в гс должен сохраняться у нас где-то как путь
 
                 prompt = evaluation_prompt.format(
                     content=content,
                     question=question,
                     user_answer=user_answer,
-                    level_name=level_id,
-                    type_question=type_task
-                )
+                    level_name=level_name,
+                    module_name=module_name,
+                    type_question=type_task)
+
                 response = gigachat.invoke([
                     SystemMessage(content=prompt)
                 ])
-                # здесь надо прописать, как очки добавлять, если открытый ответ (в промпте должно быть)
-                return response.content
 
-            else:
-                return None
+                try:
+                    result = json.loads(response.content)
+                    score = result.get('score', 0)
+                    max_score = result.get('max_score', 0)
+                    explanation = result.get('explanation', "")
+
+                await db.execute("""UPDATE UserModules 
+                        SET score = score + ? 
+                        WHERE user_id = ? AND level_id = ?
+                        """, (score, user_ident, level_id))
+
+                await db.commit()
+
+                return {"score": score, "max_score": max_score, "explanation": explanation}
 
     except Exception as e:
         logger.error(f"Error checking user answer: {e}")
