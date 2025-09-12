@@ -24,7 +24,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         user_id = await get_user_id(telegram_id)
         task = await get_task(level, user_id)
         prepared_task = await prepare_question(task)
-        text = f"""{prepared_task['question']}\n{prepared_task['content']}"""
+        text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
         await callback.message.edit_text(text, parse_mode="Markdown")
         await callback.answer()
 
@@ -56,15 +56,15 @@ async def check_text_answer(message: Message, state: FSMContext):
             if answer_check == 'верно':
                 response_text = '✅ Молодец! Все верно!'
             elif answer_check == 'неверно':
-                response_text = '❌ К сожалению, не верно.'
+                response_text = '❌ К сожалению, ответ неверный.'
             else:
                 response_text = 'Неизвестный ответ от системы проверки'
         elif isinstance(answer_check, dict):
             response = answer_check
             response_text = f"""
-{'✅ Верно!' if response['correct'] is True else '❌ Не верно.'}
-{response['explanation']}
-"""
+    Вы набрали {response['score']} баллов из {response['max_score']} возможных.\n\nОбъяснение такой оценки:
+    {response['explanation']}
+        """
         else:
             response_text = 'Ошибка: неверный формат ответа от системы проверки'
         await message.answer(response_text,
@@ -78,5 +78,3 @@ async def check_text_answer(message: Message, state: FSMContext):
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await message.answer('Ошибка при проверке ответа')
-
-
