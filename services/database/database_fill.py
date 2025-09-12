@@ -2225,7 +2225,8 @@ data = {
             "task_question": "Вопрос: Какой его любимый предмет?\n\n1) Математика\n2) История\n3) География\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2236,7 +2237,8 @@ data = {
             "task_question": "Какой любимый цвет рассказчика?\n\n1) Красный\n2) Синий\n3) Зелёный\n\nНапиши ТОЛЬКО цифру ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         }
     ]
 }
