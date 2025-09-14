@@ -1,4 +1,6 @@
 from aiogram import Router, F, Bot
+import os
+import tempfile
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
 from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db
@@ -39,60 +41,62 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await callback.answer('Ошибка при загрузке информации', show_alert=True)
 
+
 @router.message(AnswerState.waiting_for_answer, F.content_type == 'voice')
 async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
     """Handler for voice answers from user"""
     try:
-        # Получаем информацию о файле
         file_id = message.voice.file_id
         file = await bot.get_file(file_id)
         file_path = file.file_path
 
-        # Скачиваем файл
         voice_file = await bot.download_file(file_path)
 
-        # Сохраняем файл локально
-        voice_file_path = f"voice_message_{message.message_id}.ogg"
-        with open(voice_file_path, 'wb') as f:
-            f.write(voice_file.read())
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.ogg') as tmp_file:
+            tmp_file.write(voice_file.read())
+            voice_file_path = tmp_file.name
 
-        # Проверка ответа
-        data = await state.get_data()
-        task_id = data.get('task_id')
-        user_id = data.get('user_id')
-        if not task_id or not user_id:
-            await message.answer("Произошла ошибка. Попробуйте начать заново.")
-            await state.clear()
-            return
+        try:
+            data = await state.get_data()
+            task_id = data.get('task_id')
+            user_id = data.get('user_id')
+            if not task_id or not user_id:
+                await message.answer("Произошла ошибка. Попробуйте начать заново.")
+                await state.clear()
+                return
 
-        user_answer = voice_file_path
-        is_voice = True
-        answer_check = await check_task(user_id, task_id, user_answer, is_voice=is_voice)
+            user_answer = voice_file_path
+            is_voice = True
+            answer_check = await check_task(user_id, task_id, user_answer, is_voice=is_voice)
 
-        if isinstance(answer_check, str):
-            if answer_check == 'верно':
-                response_text = '✅ Молодец! Все верно!'
-            elif answer_check == 'неверно':
-                response_text = '❌ К сожалению, ответ неверный.'
-            else:
-                response_text = 'Неизвестный ответ от системы проверки'
-        elif isinstance(answer_check, dict):
-            response = answer_check
-            print(response)
-            response_text = f"""
+            if isinstance(answer_check, str):
+                if answer_check == 'верно':
+                    response_text = '✅ Молодец! Все верно!'
+                elif answer_check == 'неверно':
+                    response_text = '❌ К сожалению, ответ неверный.'
+                else:
+                    response_text = 'Неизвестный ответ от системы проверки'
+            elif isinstance(answer_check, dict):
+                response = answer_check
+                response_text = f"""
 Вы набрали {response['score']} баллов из {response['max_score']} возможных.\n\nОбъяснение такой оценки:
 {response['explanation']}
-            """
-        else:
-            response_text = 'Ошибка: неверный формат ответа от системы проверки'
+                """
+            else:
+                response_text = 'Ошибка: неверный формат ответа от системы проверки'
 
-        await message.answer(response_text,
-                             parse_mode="Markdown",
-                             reply_markup=InlineKeyboardMarkup(
-                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
-                             )
-                             )
-        await state.clear()
+            await message.answer(
+                response_text,
+                parse_mode="Markdown",
+                reply_markup=InlineKeyboardMarkup(
+                    inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
+                )
+            )
+            await state.clear()
+
+        finally:
+            os.unlink(voice_file_path)
+
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await message.answer('Ошибка при обработке голосового сообщения')
