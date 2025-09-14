@@ -154,7 +154,7 @@ async def create_user(telegram_id: int, username: str):
 
 async def get_user_name(telegram_id: int) -> Optional[str]:
     try:
-        user = await check_user_exists(telegram_id)
+        user = check_user_exists(telegram_id)
         if user:
             async with aiosqlite.connect('BFU.db') as db:
                 cursor = await db.execute(
