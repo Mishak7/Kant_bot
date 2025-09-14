@@ -8,6 +8,7 @@ from services.database.database_prompts.evaluation_prompt import evaluation_prom
 from services.database.speech_utils import transcribe_voice_message, text_to_speech
 from config.settings import Settings
 import json
+from aiogram.types import InputFile
 
 
 #ОЧЕНЬ ВРЕМЕННО - спрятать такое лучше
@@ -153,7 +154,7 @@ async def create_user(telegram_id: int, username: str):
 
 async def get_user_name(telegram_id: int) -> Optional[str]:
     try:
-        user = check_user_exists(telegram_id)
+        user = await check_user_exists(telegram_id)
         if user:
             async with aiosqlite.connect('BFU.db') as db:
                 cursor = await db.execute(
@@ -274,7 +275,7 @@ async def prepare_question(task):
         return {"task_id": task_id, "content": content, "question": question}
 
 
-async def extract_audio_from_db(task_id: str):
+async def extract_audio_from_db(task_id: str) -> InputFile | None:
     """
     Функция для извлечения аудио из бд.
     """
@@ -284,8 +285,12 @@ async def extract_audio_from_db(task_id: str):
 
         if row and row[0]:
             audio_blob = row[0]
-            with open('audio.blob', f'extracted_audio{task_id}.MP3') as f:
+            audio_path = f"extracted_audio_{task_id}.mp3"
+            with open(audio_path, "wb") as f:
                 f.write(audio_blob)
+            return InputFile(audio_path)
+        else:
+            return None
 
 
 # тут дальше в коде мы получаем идентификтор из функции get_task
@@ -330,7 +335,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
             else:
                 if is_voice:
                     user_answer = transcribe_voice_message(
-                        user_answer)  # ТУТ НАДО ПОМЕНЯТЬ ПАРАМЕТР! Когда будет настроена логика ответ человека в гс должен сохраняться у нас где-то как путь
+                        user_answer)
 
                 prompt = evaluation_prompt.format(
                     content=content,
