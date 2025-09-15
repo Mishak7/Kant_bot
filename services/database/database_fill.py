@@ -2237,7 +2237,183 @@ data = {
             "check_method": "multiple_choice",
             "task_score": 5,
             "answer": 2
-        }
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Здравствуйте! Я Мария. Мне 25 лет. Я работаю врачом.",
+            "task_question": "Кто Мария по профессии?\n1) Учитель\n2) Врач\n3) Студент\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Я родился в Новосибирске, но сейчас живу в Екатеринбурге.",
+            "task_question": "Где он живёт сейчас?\n1) В Новосибирске\n2) В Москве\n3) В Екатеринбурге\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "У меня есть собака и кошка. Собаку зовут Рекс, кошку — Мурка.",
+            "task_question": "Вопрос: Как зовут кошку?\n\n1) Рекс\n2) Мурка\n3) Белка\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Моя мама работает врачом, а папа — инженером.",
+            "task_question": "Кто инженер в семье?\n\n1) Мама\n2) Папа\n3) Я\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "У нас дома живёт кошка и собака.",
+            "task_question": "Сколько животных у них дома?\n\n1) Одно\n2) Два\n3) Три\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "У меня есть сестра и брат. Сестру зовут Оля, брата — Иван.",
+            "task_question": "Как зовут брата?\n\n1) Иван\n2) Оля\n3) Сергей\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 1
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "В моей семье пять человек: папа, мама, я, младший брат и старшая сестра.",
+            "task_question": "Сколько человек в семье?\n\n1) 3\n2) 4\n3) 5\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Мою бабушку зовут Ольга Ивановна, а дедушку — Александр Петрович.",
+            "task_question": "Как зовут мужчину?\n\n1) Ольга Ивановна\n2) Пётр Александрович\n3)  Александр Петрович\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Мой папа работает врачом, а мама — учительница в школе.",
+            "task_question": "Где работает женщина?\n\n1) В школе\n2) В банке\n3) В больнице\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 1
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Моего лучшего друга зовут Дмитрий, но все называют его Дима.",
+            "task_question": "Как зовут лучшего друга?\n\n1) Алексей\n2) Дмитрий\n3) Михаил\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Завтра будет солнечно и тепло.",
+            "task_question": "Какая погода завтра?\n\n1)Солнечно и тепло\n2)Дождь\n3)Снег\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 1
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "— Алло! Это школа?— Да, это школа номер 12.",
+            "task_question": "Что это за учреждение?\n\n1) Магазин\n2) Больница\n3) Школа\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "— Алло! Это школа?— Да, это школа номер 12.",
+            "task_question": "Что это за учреждение?\n\n1) Магазин\n2) Больница\n3) Школа\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Моя мама работает в больнице. Она лечит людей.",
+            "task_question": "Где работает мама?\n\n1) В магазине\n2) В школе\n3) В больнице\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "— Сколько стоит билет?— Сто рублей.",
+            "task_question": "Сколько стоит билет?\n\n1) 100 рублей\n2) 200 рублей\n3) 10 рублей\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 1
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Easy",
+            "type_task": "Listening",
+            "task_content": "Расписание. 8:13 - Биология",
+            "task_question": "Прослушайте расписание и отметьте правильное время пары.\n\n1)8:30\n2)18:30\n3)8:13\n4)18:13\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
     ]
 }
 
