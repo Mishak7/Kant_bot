@@ -278,25 +278,25 @@ async def prepare_question(task):
 
 async def extract_audio_from_db(task_id: str) -> Optional[FSInputFile]:
     """
-    Функция для извлечения аудио из БД и сохранения во временный файл.
+    Функция для извлечения аудио из бд.
+    Если файл уже существует - возвращает его, иначе создает новый.
     """
+    audio_path = f"extracted_audio_{task_id}.mp3"
+
+    if os.path.exists(audio_path):
+        return FSInputFile(audio_path)
+
     async with aiosqlite.connect('BFU.db') as db:
         cursor = await db.execute("SELECT audio FROM Tasks WHERE task_id=?", (task_id,))
         row = await cursor.fetchone()
 
-        if row and row[0]:
-            audio_blob = row[0]
-
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp_file:
-                temp_file.write(audio_blob)
-                file_path = temp_file.name
-
-            input_file = FSInputFile(file_path)
-            os.remove(file_path)
-
-            return input_file
-        else:
-            return None
+    if row and row[0]:
+        audio_blob = row[0]
+        with open(audio_path, "wb") as f:
+            f.write(audio_blob)
+        return FSInputFile(audio_path)
+    else:
+        return None
 
 
 # тут дальше в коде мы получаем идентификтор из функции get_task
