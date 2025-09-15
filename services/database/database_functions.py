@@ -148,7 +148,6 @@ async def check_user_exists(telegram_id: int) -> bool:
         async with aiosqlite.connect('BFU.db') as db:
             cursor = await db.execute("SELECT id FROM Users WHERE telegram_id = ?", (telegram_id,))
             result = await cursor.fetchone()
-            logger.critical(f"Fetched data CUE: {result}")
             return result is not None
     except Exception as e:
         logger.error(f"Error checking user existence: {e}")
@@ -157,7 +156,6 @@ async def check_user_exists(telegram_id: int) -> bool:
 async def get_user_name(telegram_id: int) -> Optional[str]:
     try:
         user = await check_user_exists(telegram_id)
-        logger.critical(f"Fetched data GUN: {user}")
         if user:
             async with aiosqlite.connect('BFU.db') as db:
                 cursor = await db.execute(
@@ -165,7 +163,6 @@ async def get_user_name(telegram_id: int) -> Optional[str]:
                     (telegram_id,)
                 )
                 result = await cursor.fetchone()
-                logger.critical(f"Fetched data R: {result}")
                 return result if result else None
         else:
             return None
