@@ -17,6 +17,7 @@ class AnswerState(StatesGroup):
 async def level_handler(callback: CallbackQuery, state: FSMContext):
     """Handler for all tasks"""
     try:
+        await callback.message.delete()
         await state.set_state(AnswerState.waiting_for_answer)
         level = 'A1'
         telegram_id = callback.from_user.id
@@ -28,10 +29,10 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         if prepared_task.get('audio'):
             audio_file = await extract_audio_from_db(prepared_task['task_id'])
             if audio_file:
-                await callback.message.edit_text(prepared_task['question'], parse_mode="Markdown")
+                await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
                 await callback.bot.send_voice(chat_id=chat_id, voice=audio_file)
         else:
-            await callback.message.edit_text(text, parse_mode="Markdown")
+            await callback.message.answer(text, parse_mode="Markdown")
         await callback.answer()
         await state.update_data(
             task_id=prepared_task['task_id'],
@@ -89,7 +90,9 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
                 response_text,
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
-                    inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
+                    inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
+                                     [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]
+                                     ]
                 )
             )
             await state.clear()
@@ -138,8 +141,8 @@ async def check_text_answer(message: Message, state: FSMContext):
         await message.answer(response_text,
                              parse_mode="Markdown",
                              reply_markup=InlineKeyboardMarkup(
-                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
-                             )
+                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
+                                                  [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]])
                              )
         await state.clear()
     except Exception as e:
