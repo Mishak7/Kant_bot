@@ -2225,7 +2225,8 @@ data = {
             "task_question": "Вопрос: Какой его любимый предмет?\n\n1) Математика\n2) История\n3) География\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2236,7 +2237,8 @@ data = {
             "task_question": "Какой любимый цвет рассказчика?\n\n1) Красный\n2) Синий\n3) Зелёный\n\nНапиши ТОЛЬКО цифру ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2247,7 +2249,8 @@ data = {
             "task_question": "Кто Мария по профессии?\n1) Учитель\n2) Врач\n3) Студент\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2258,7 +2261,8 @@ data = {
             "task_question": "Где он живёт сейчас?\n1) В Новосибирске\n2) В Москве\n3) В Екатеринбурге\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2269,7 +2273,8 @@ data = {
             "task_question": "Вопрос: Как зовут кошку?\n\n1) Рекс\n2) Мурка\n3) Белка\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2280,7 +2285,8 @@ data = {
             "task_question": "Кто инженер в семье?\n\n1) Мама\n2) Папа\n3) Я\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2291,7 +2297,8 @@ data = {
             "task_question": "Сколько животных у них дома?\n\n1) Одно\n2) Два\n3) Три\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2302,7 +2309,8 @@ data = {
             "task_question": "Как зовут брата?\n\n1) Иван\n2) Оля\n3) Сергей\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2313,7 +2321,8 @@ data = {
             "task_question": "Сколько человек в семье?\n\n1) 3\n2) 4\n3) 5\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2324,7 +2333,8 @@ data = {
             "task_question": "Как зовут мужчину?\n\n1) Ольга Ивановна\n2) Пётр Александрович\n3)  Александр Петрович\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2335,7 +2345,8 @@ data = {
             "task_question": "Где работает женщина?\n\n1) В школе\n2) В банке\n3) В больнице\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2346,7 +2357,8 @@ data = {
             "task_question": "Как зовут лучшего друга?\n\n1) Алексей\n2) Дмитрий\n3) Михаил\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2357,7 +2369,8 @@ data = {
             "task_question": "Какая погода завтра?\n\n1)Солнечно и тепло\n2)Дождь\n3)Снег\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2368,7 +2381,8 @@ data = {
             "task_question": "Что это за учреждение?\n\n1) Магазин\n2) Больница\n3) Школа\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2379,7 +2393,8 @@ data = {
             "task_question": "Что это за учреждение?\n\n1) Магазин\n2) Больница\n3) Школа\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2390,7 +2405,8 @@ data = {
             "task_question": "Где работает мама?\n\n1) В магазине\n2) В школе\n3) В больнице\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2401,7 +2417,8 @@ data = {
             "task_question": "Сколько стоит билет?\n\n1) 100 рублей\n2) 200 рублей\n3) 10 рублей\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2412,8 +2429,537 @@ data = {
             "task_question": "Прослушайте расписание и отметьте правильное время пары.\n\n1)8:30\n2)18:30\n3)8:13\n4)18:13\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Мне 22 года. Мой день рождения 10 октября.",
+            "task_question": "Когда у него день рождения?\n\n1) 10 сентября\n2) 10 октября\n3) 10 ноября",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "По вечерам я люблю читать книги или смотреть фильмы.",
+            "task_question": "Что он любит делать по вечерам? (Выберите лишнее)\n\n1) Гулять\n2) Читать книги\n3) Смотреть фильмы",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "У меня есть дядя. Он брат моего отца.",
+            "task_question": "Кто такой дядя?\n\n1) Брат отца\n2) Брат матери\n3) Отец отца",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Мы живём в большой квартире: в ней три комнаты и кухня.",
+            "task_question": "Сколько комнат в квартире?\n\n1) 2\n2) 3\n3) 4\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Сегодня днём будет дождь и сильный ветер, а завтра снова солнечно.",
+            "task_question": "Выберите верное утверждение.\n\n1) Сегодня будет дождь и ветер, завтра солнечно.\n2) Завтра будет дождь и ветер.\n3) Сегодня солнечно, завтра дождь.\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Летом я всегда ношу шляпу. Солнце очень яркое, и без шляпы может заболеть голова.",
+            "task_question": "Почему летом он носит шляпу?\n\n1) Чтобы было модно\n2) Чтобы солнце не светило в глаза\n3) Чтобы не болела голова\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Сегодня холодно. Надень шапку и куртку.",
+            "task_question": "Что надеть на голову?\n\n1) Куртку\n2) Шапку\n3) Шлёпки\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Ура! Сегодня тепло, можно надеть футболку.",
+            "task_question": "Что можно надеть?\n\n1) Пальто\n2) Футболку\n3) Варежки\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Мой брат — инженер. Он работает на большом заводе.",
+            "task_question": "Кто по профессии брат?\n\n1) Врач\n2) Учитель\n3) Инженер\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Мой телефон — 5-6-3-9.",
+            "task_question": "Задание: Запишите номер телефона\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 5639,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Мой друг любит играть в футбол. А я не люблю спорт, я предпочитаю смотреть сериалы.",
+            "task_question": "Что любит делать автор текста?\n\n1) Играть в футбол\n2) Смотреть сериалы\n3) Заниматься спортом\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "По вечерам я обычно отдыхаю: смотрю телевизор или разговариваю с друзьями по телефону.",
+            "task_question": "Чем он НЕ занимается по вечерам?\n\n1) Отдыхает\n2) Работает\n3) Смотрит телевизор\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "У меня есть два хобби: фотография и рисование. Но рисовать я люблю больше.",
+            "task_question": "Какое хобби ему нравится больше?\n\n1) Фотография\n2) Рисование\n3) Спорт\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Каждое воскресенье мы с друзьями играем в настольные игры. Иногда мы ходим в кафе.",
+            "task_question": "Вопрос: Что они делают каждое воскресенье?\n\n1) Играют в настольные игры\n2) Ходят в кино\n3) Сидят дома\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "— Здравствуйте! Можно меню, пожалуйста?— Конечно. Что будете пить?— Кофе, пожалуйста.",
+            "task_question": "Где находятся люди?\n\n1) В магазине\n2) В школе\n3) В кафе\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "— Скажите, пожалуйста, как пройти к библиотеке?— Идите прямо и налево.",
+            "task_question": "Куда нужно повернуть?\n\n1) Направо\n2) Налево\n3) Назад\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "Мой адрес - улица Ленина, дом 15, квартира 7.",
+            "task_question": "Задание: Напишите ТОЛЬКО номер квартиры.",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 7,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Middle",
+            "type_task": "Listening",
+            "task_content": "У нас занятие в 102 аудитории",
+            "task_question": "Напишите только номер аудитории, в которой у вас пара.",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 102,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "В прошлые выходные мы с Антоном ходили в кино на новый фильм.",
+            "task_question": "С кем он ходил в кино?\n\n1) С Мариной\n2) С Антоном\n3) С семьёй\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Моя подруга Катя учится в одной школе со мной, а с Мариной мы познакомились на танцах.",
+            "task_question": "Кто учится с рассказчиком в школе?\n\n1) Катя\n2) Оля\n3) Мария\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Моя подруга Маша очень занята. У неё сегодня урок английского, а потом она идёт к врачу.",
+            "task_question": "Куда Маша идёт ПОСЛЕ урока?\n\n1) Домой\n2) На работу\n3) К врачу\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Петя и Аня — мои друзья. Петя живёт в соседнем доме, а Аня — в другом районе.",
+            "task_question": "Кто живёт дальше?\n\n1) Аня\n2) Петя\n3) Они живут рядом\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Мы с другом любим смотреть разные сериалы. Я люблю комедии, а он — детективы.",
+            "task_question": "Что любит смотреть его друг?\n\n1) Комедии\n2) Детективы\n3) Мультфильмы\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "У моего друга Саши сегодня плохое настроение. Он получил плохую оценку по математике.",
+            "task_question": "Почему у Саши плохое настроение?\n\n1) Он заболел\n2) Он устал\n3) Он получил двойку\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Мой друг Андрей не любит шумные вечеринки. Он любит тишину и спокойные разговоры.",
+            "task_question": "Вопрос: Что любит Андрей?\n\n1)Громкую музыку\n2)Шумные вечеринки\n3)  Тихие разговоры\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Я не взял зонт, потому что утром было солнце. А сейчас по радио сказали, что вечером будет гроза.",
+            "task_question": "Что будет вечером?\n1) Будет солнце\n2) Будет гроза\n3) Будет ветер\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Моя мама работает в банке. Каждый день она начинает работать в 9 утра, а заканчивает в 6 вечера. Она никогда не работает в выходные.",
+            "task_question": "Когда мама НЕ работает?\n\n1) В среду\n2) В субботу и воскресенье\n3) В пятницу вечером\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Антон — повар. Он работает в маленьком ресторане. Его работа очень трудная, но интересная.",
+            "task_question": "Где работает Антон?\n\n1) В большом ресторане\n2) В маленьком кафе\n3) В маленьком ресторане\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "У нас уроки начинаются в 8:30, а заканчиваются в 14:00.",
+            "task_question": "Во сколько заканчиваются уроки?\n\n1) В 8:30\n2) В 18:30\n3) В 14:00\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Сегодня 8 мая. Завтра у Анны экзамен в 9 часов утра.",
+            "task_question": "Какое сегодня число?\n\n1) 8 мая\n2) 8 марта\n3) 18 мая\n4) 18 марта\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Внимание! Поезд до Москвы отправляется в 18 часов 45 минут с третьего пути.",
+            "task_question": "Во сколько отправляется поезд?\n\n1) В 8:45\n2) В 18:45\n3) В 16:45\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Сегодня 15 декабря. На улице холодно, идёт снег.",
+            "task_question": "Какое сегодня число?\n\n1) 15 декабря\n2) 15 ноября\n3) 5 декабря\n4) 25 декабря\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Сегодня 8 мая. Завтра у Анны экзамен в 9 часов.",
+            "task_question": "Во сколько у Анны завтра экзамен?\n\n1) В 9 часов\n2) В 10 часов\n3) Нет информации\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Внимание! Автобус до Москвы поедет в 14 часов 30 минут.",
+            "task_question": "Выберите верное утверждение.\n\n1) Автобус в Москву уезжает в 14:30.\n2) Поезд в Москву уходит завтра утром.\n3) Автобус в Москву уходит вечером в 18:30.\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "В субботу в 19:00 в нашем клубе концерт джазовой музыки.",
+            "task_question": "Выберите верное утверждение.\n\n1) Концерт джазовой музыки будет в субботу вечером в клубе.\n2) Сегодня вечером в клубе будет рок-концерт.\n3) В воскресенье утром в клубе состоится концерт классической музыки.\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Мария приедет в Москву 12 мая и останется там на неделю.",
+            "task_question": "Выберите верное утверждение.\n\n1) Мария приезжает в Москву 12 мая и будет там неделю.\n2) Мария уезжает в Москву 20 мая и остаётся там на месяц.\n3) Мария приезжает в Москву завтра и останется там два дня.\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Летом я всегда езжу на море. Я плаваю и загораю на пляже.",
+            "task_question": "Что он делает на пляже?\n\n1) Катается на лыжах\n2) Гуляет по городу\n3)Плавает и загорает\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Я купил билеты на концерт на субботу. А мой брат купил билеты в музей.",
+            "task_question": "Куда пойдет автор текста в субботу?\n\n1) На концерт\n2) В музей\n3) В кино\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Внимание! Поезд до Москвы отправляется в 18:45 с третьего пути.",
+            "task_question": "Куда едет поезд?\n\n1) В Мурманскn2) В Калиниград\n3) В Москву\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 3,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Внимание! Самолёт до Парижа вылетает в 14 часов 30 минут.",
+            "task_question": "Куда летит самолёт?\n\n1) В Лондон\n2) В Париж\n3) В Москву\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Завтра в 10 утра в библиотеке будет встреча со знаменитым писателем.",
+            "task_question": "Выберите верное утверждение.\n\n1)Сегодня вечером в библиотеке встреча с актёром. \n2) Встреча с писателем состоится завтра в 10 утра в библиотеке.\n3) Встреча со студентами будет завтра вечером в библиотеке.\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Наш музей работает каждый день с 10 утра до 6 вечера, кроме понедельника.",
+            "task_question": "Выберите верное утверждение.\n\n1) Музей работает с 10 до 18, кроме понедельника.\n2) Музей открыт только по понедельникам.\n3) Музей работает круглосуточно.\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 1,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Выключите телевизор! Он мешает спать!",
+            "task_question": "Прослушайте аудио и определите, что мешает соседу.\n\n1) Музыка\n2) Телевизор\n3) Телефон\n4) Радио\n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 2,
+            "with_audio": True
+        },
+        {
+            "level_score": 1,
+            "level_name": "A1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Меня злит, потому что ты не убираешь за собой. Из-за этого мне нужно убирать за двух людей",
+            "task_question": "Почему сосед злится?\n\n1)Потому что я долго моюсь\n2)Потому что я много разговариваю по телефону\n3) Потому что я громко смотрю телевизор\n4) Потому что я не убираю за собой \n\nНапиши ТОЛЬКО номер ответа!",
+            "check_method": "multiple_choice",
+            "task_score": 10,
+            "answer": 4,
+            "with_audio": True
+        }
     ]
 }
 
