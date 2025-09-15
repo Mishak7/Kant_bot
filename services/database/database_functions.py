@@ -1,5 +1,6 @@
 import aiosqlite
 import os
+import tempfile
 from config.logger import logger
 from typing import Optional
 from langchain_gigachat.chat_models import GigaChat
@@ -8,14 +9,14 @@ from services.database.database_prompts.evaluation_prompt import evaluation_prom
 from services.database.speech_utils import transcribe_voice_message, text_to_speech
 from config.settings import Settings
 import json
-from aiogram.types import InputFile
+from aiogram.types import FSInputFile
 
 
 #ОЧЕНЬ ВРЕМЕННО - спрятать такое лучше
 gigachat = GigaChat(temperature=0,
                     top_p=0.1,
                     credentials=Settings.GIGA_CREDENTIALS,
-                    model="GigaChat-Pro",
+                    model="GigaChat-2-Max",
                     verify_ssl_certs=False)
 
 
@@ -128,16 +129,6 @@ async def add_tasks(
                 with_audio=with_audio
             )
 
-async def check_user_exists(telegram_id: int) -> bool:
-    try:
-        async with aiosqlite.connect('BFU.db') as db:
-            cursor = await db.execute("SELECT id FROM Users WHERE telegram_id = ?", (telegram_id,))
-            result = await cursor.fetchone()
-            return result is not None
-    except Exception as e:
-        logger.error(f"Error checking user existence: {e}")
-        return False
-
 
 async def create_user(telegram_id: int, username: str):
     try:
@@ -152,9 +143,21 @@ async def create_user(telegram_id: int, username: str):
         logger.error(f"Error creating user: {e}")
         return False
 
+async def check_user_exists(telegram_id: int) -> bool:
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT id FROM Users WHERE telegram_id = ?", (telegram_id,))
+            result = await cursor.fetchone()
+            logger.critical(f"Fetched data CUE: {result}")
+            return result is not None
+    except Exception as e:
+        logger.error(f"Error checking user existence: {e}")
+        return False
+
 async def get_user_name(telegram_id: int) -> Optional[str]:
     try:
-        user = check_user_exists(telegram_id)
+        user = await check_user_exists(telegram_id)
+        logger.critical(f"Fetched data GUN: {user}")
         if user:
             async with aiosqlite.connect('BFU.db') as db:
                 cursor = await db.execute(
@@ -162,9 +165,10 @@ async def get_user_name(telegram_id: int) -> Optional[str]:
                     (telegram_id,)
                 )
                 result = await cursor.fetchone()
+                logger.critical(f"Fetched data R: {result}")
                 return result if result else None
         else:
-            return 'User does not exist'
+            return None
     except Exception as e:
         logger.error(f"Error getting user name: {e}")
         return None
@@ -275,9 +279,9 @@ async def prepare_question(task):
         return {"task_id": task_id, "content": content, "question": question}
 
 
-async def extract_audio_from_db(task_id: str) -> InputFile | None:
+async def extract_audio_from_db(task_id: str) -> Optional[FSInputFile]:
     """
-    Функция для извлечения аудио из бд.
+    Функция для извлечения аудио из БД и сохранения во временный файл.
     """
     async with aiosqlite.connect('BFU.db') as db:
         cursor = await db.execute("SELECT audio FROM Tasks WHERE task_id=?", (task_id,))
@@ -285,10 +289,15 @@ async def extract_audio_from_db(task_id: str) -> InputFile | None:
 
         if row and row[0]:
             audio_blob = row[0]
-            audio_path = f"extracted_audio_{task_id}.mp3"
-            with open(audio_path, "wb") as f:
-                f.write(audio_blob)
-            return InputFile(audio_path)
+
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp_file:
+                temp_file.write(audio_blob)
+                file_path = temp_file.name
+
+            input_file = FSInputFile(file_path)
+            os.remove(file_path)
+
+            return input_file
         else:
             return None
 

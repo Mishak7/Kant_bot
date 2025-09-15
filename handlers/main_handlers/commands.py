@@ -20,19 +20,17 @@ import traceback
 from aiogram import Router, types, F
 from aiogram.filters import CommandStart
 from config.logger import logger
-from handlers.level_selection_handlers.level_selection_keyboard import level_selection_keyboard
 from handlers.main_handlers.keyboard import main_roots_keyboard, language_selection
 from handlers.university_handlers.university_info_keyboard import info_keyboard
 from handlers.dormitory_handlers.dormitory_keyboard import dormitory_keyboard
 from aiogram.types import CallbackQuery, FSInputFile, Message
 from handlers.critical_info_handlers.critical_keyboard import critical_keyboard
 from handlers.location_handlers.location_keyboard import uni_loc_keyboard
-from handlers.language_check_handlers.language_check_keyboard import  go_to_lessons
 from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-from services.database.database_functions import check_user_exists, create_user, get_user_name
+from services.database.database_functions import  create_user, get_user_name
 from handlers.level_selection_handlers.level_selection_keyboard import level_selection_keyboard
 
 class LanguageState(StatesGroup):

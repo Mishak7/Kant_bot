@@ -8,7 +8,7 @@ def gigachat_response(text: str, to_russian: bool, audio_file: bool):
     llm = GigaChat(
         credentials=settings.GIGA_CREDENTIALS,
         verify_ssl_certs=False,
-        model="GigaChat-Pro",
+        model="GigaChat-2-Max",
         temperature=0.1
     )
 

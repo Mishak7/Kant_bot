@@ -23,7 +23,7 @@ class SpeakingAnalyzer(ListeningGeneration):
             gigachat = GigaChat(
                 credentials=settings.GIGA_CREDENTIALS,
                 scope="GIGACHAT_API_PERS",
-                model='GigaChat-Pro',
+                model='GigaChat-2-Max',
                 verify_ssl_certs=False
             )
             return gigachat

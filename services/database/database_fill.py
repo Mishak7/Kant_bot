@@ -2249,7 +2249,8 @@ data = {
             "task_question": "Как зовут брата?\n\n1) Иван\n2) Оля\n3) Сергей\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2260,7 +2261,8 @@ data = {
             "task_question": "Сколько человек в семье?\n\n1) 3\n2) 4\n3) 5\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2271,7 +2273,8 @@ data = {
             "task_question": "Как зовут мужчину?\n\n1) Ольга Ивановна\n2) Пётр Александрович\n3)  Александр Петрович\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2282,7 +2285,8 @@ data = {
             "task_question": "Где работает женщина?\n\n1) В школе\n2) В банке\n3) В больнице\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2293,7 +2297,8 @@ data = {
             "task_question": "Как зовут лучшего друга?\n\n1) Алексей\n2) Дмитрий\n3) Михаил\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2304,7 +2309,8 @@ data = {
             "task_question": "Какая погода завтра?\n\n1)Солнечно и тепло\n2)Дождь\n3)Снег\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2315,7 +2321,8 @@ data = {
             "task_question": "Что это за учреждение?\n\n1) Магазин\n2) Больница\n3) Школа\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2326,7 +2333,8 @@ data = {
             "task_question": "Где работает мама?\n\n1) В магазине\n2) В школе\n3) В больнице\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2337,7 +2345,8 @@ data = {
             "task_question": "Сколько стоит билет?\n\n1) 100 рублей\n2) 200 рублей\n3) 10 рублей\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 1,
@@ -2348,7 +2357,8 @@ data = {
             "task_question": "Прослушайте расписание и отметьте правильное время пары.\n\n1)8:30\n2)18:30\n3)8:13\n4)18:13\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         }
     ]
 }
