@@ -248,8 +248,6 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
             module = await cursor.fetchone()
             module_id = module[0] if module else None
 
-
-
             cursor = await db.execute(
                 "SELECT task_id, content, question, audio FROM Tasks WHERE module_id =? AND level_id = ? ORDER BY RANDOM() LIMIT 1",
                 (module_id, level_id))
@@ -334,9 +332,9 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     return 'неверно'
 
             else:
-                if is_voice:
-                    user_answer = transcribe_voice_message(
-                        user_answer)
+                # if is_voice:
+                #     user_answer = transcribe_voice_message(
+                #         user_answer)
 
                 prompt = evaluation_prompt.format(
                     content=content,

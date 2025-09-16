@@ -3,6 +3,7 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
 from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db, explain_multiple_choice
+from services.database.speech_utils import transcribe_voice_message
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 
@@ -73,12 +74,13 @@ async def check_text_answer(message: Message, state: FSMContext):
         if message.content_type == "voice" and message.voice:
             voice_file = await message.voice.download()
             user_answer = voice_file.name
-            is_voice = True
+            user_answer = transcribe_voice_message(user_answer)
+            # is_voice = True
         else:
             user_answer = message.text
-            is_voice = False
+            # is_voice = False
 
-        answer_check = await check_task(user_id, task_id, user_answer, is_voice=is_voice)
+        answer_check = await check_task(user_id, task_id, user_answer)
 
         if isinstance(answer_check, str):
             if answer_check == 'верно':
