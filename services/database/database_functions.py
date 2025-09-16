@@ -251,7 +251,7 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
 
 
             cursor = await db.execute(
-                "SELECT task_id, content, question, audio FROM Tasks WHERE module_id =? AND level_id = ? ORDER BY RANDOM() LIMIT 1",
+                "SELECT task_id, content, type, question, audio FROM Tasks WHERE module_id =? AND level_id = ? ORDER BY RANDOM() LIMIT 1",
                 (module_id, level_id))
             row = await cursor.fetchone()
             return row
@@ -267,13 +267,13 @@ async def prepare_question(task):
 
     task - результат работы функции get_task.
     """
-    task_id, content, question, audio = task
+    task_id, content, task_type, question, audio = task
     # в выводе задания пользователю мы выводим только question, audio
     # content, task_id нам нужны доя проверки
     if audio:
-        return {"task_id": task_id, "content": content, "question": question, "audio": audio}
+        return {"task_id": task_id, "content": content, "type": task_type, "question": question, "audio": audio}
     else:
-        return {"task_id": task_id, "content": content, "question": question}
+        return {"task_id": task_id, "content": content, "type": task_type, "question": question}
 
 
 async def extract_audio_from_db(task_id: str) -> Optional[FSInputFile]:

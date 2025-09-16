@@ -26,6 +26,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         task = await get_task(level, user_id)
         prepared_task = await prepare_question(task)
         text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
+        is_speaking_task = prepared_task.get('type') == 'Speaking'
         if prepared_task.get('audio'):
             audio_file = await extract_audio_from_db(prepared_task['task_id'])
             if audio_file:
@@ -36,7 +37,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         await callback.answer()
         await state.update_data(
             task_id=prepared_task['task_id'],
-            user_id=user_id
+            user_id=user_id,
+            is_speaking_task=is_speaking_task,
         )
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
@@ -61,6 +63,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
             data = await state.get_data()
             task_id = data.get('task_id')
             user_id = data.get('user_id')
+
             if not task_id or not user_id:
                 await message.answer("Произошла ошибка. Попробуйте начать заново.")
                 await state.clear()
@@ -112,6 +115,12 @@ async def check_text_answer(message: Message, state: FSMContext):
         data = await state.get_data()
         task_id = data.get('task_id')
         user_id = data.get('user_id')
+        is_speaking_task = data.get("is_speaking_task", False)
+
+        if is_speaking_task:
+            await message.answer("Пожалуйста, отправь голосовое сообщение.")
+            return
+
         if not task_id or not user_id:
             await message.answer("Произошла ошибка. Попробуйте начать заново.")
             await state.clear()
