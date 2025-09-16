@@ -150,8 +150,9 @@ async def check_text_answer(message: Message, state: FSMContext):
         await message.answer(response_text,
                              parse_mode="Markdown",
                              reply_markup=InlineKeyboardMarkup(
-                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
-                                                  [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]])
+                                 inline_keyboard=[
+                                     [InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
+                                     [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]])
                              )
         await state.clear()
     except Exception as e:

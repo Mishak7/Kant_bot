@@ -89,7 +89,7 @@ async def init_db():
         CREATE TABLE IF NOT EXISTS TasksAnswers(
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         task_id INTEGER, 
-        correct_answer INTEGER, 
+        correct_answer, 
         FOREIGN KEY(task_id) REFERENCES Tasks(task_id)
         )
         """

@@ -3,6 +3,8 @@ from services.grammar.prompt_to_russian import prompt_to_russian
 from services.grammar.prompt_from_russian import prompt_from_russian
 from services.listening.prompt_audio_check import prompt_audio_check
 from config.settings import settings
+
+
 def gigachat_response(text: str, to_russian: bool, audio_file: bool):
 
     llm = GigaChat(
