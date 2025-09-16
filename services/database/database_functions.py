@@ -327,8 +327,9 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     else:
                         await db.execute("INSERT INTO UserModules (user_id, level_id, score) VALUES (?, ?, ?)",
                     (user_ident, level_id, score_change))
+                    score_message = f'За это задание вы набрали: {score_change}'
                     await db.commit()
-                    return 'верно'
+                    return f'верно!{score_message}'
                 else:
                     # await db.execute("""UPDATE UserModules
                     #     SET score = score - ?
@@ -425,3 +426,10 @@ async def explain_multiple_choice(task_ident, user_answer):
     except Exception as e:
         logger.error(f"Error checking user answer: {e}")
         return False
+
+async def show_progress(user_ident):
+    async with aiosqlite.connect('BFU.db') as db:
+        cursor = await db.execute("SELECT level_name, score FROM UserModules WHERE user_id=?", (user_ident,))
+        user_progress = await cursor.fetchone()
+        level_name, score = user_progress
+        return f'Ваш прогресс по уровню {level_name}: {score} / 100 баллов.'

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="caa36654-3d8d-4854-a09d-15744a093acd" name="Changes" comment="db logic + functions for the choice of tasks for user and its check">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/level_selection_handlers/level_selection_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/level_selection_handlers/level_selection_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/database/database_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/database/database_functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

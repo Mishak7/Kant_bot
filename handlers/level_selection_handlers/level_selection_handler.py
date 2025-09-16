@@ -2,8 +2,7 @@ import traceback
 from aiogram import Router, F
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
-from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db, explain_multiple_choice
-from services.database.speech_utils import transcribe_voice_message
+from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db, explain_multiple_choice, show_progress
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 
@@ -74,17 +73,17 @@ async def check_text_answer(message: Message, state: FSMContext):
         if message.content_type == "voice" and message.voice:
             voice_file = await message.voice.download()
             user_answer = voice_file.name
-            user_answer = transcribe_voice_message(user_answer)
-            # is_voice = True
+            is_voice = True
         else:
             user_answer = message.text
-            # is_voice = False
+            is_voice = False
 
-        answer_check = await check_task(user_id, task_id, user_answer)
+        answer_check = await check_task(user_id, task_id, user_answer, is_voice)
 
         if isinstance(answer_check, str):
-            if answer_check == 'верно':
-                response_text = '✅ Молодец! Все верно!'
+            if answer_check.startswith('верно'):
+                _, message = answer_check.split('!')
+                response_text = f'✅ Молодец! Все верно!\n{message}'
             elif answer_check == 'неверно':
                 response_text = '❌ К сожалению, ответ неверный.'
             else:
@@ -114,6 +113,8 @@ async def check_text_answer(message: Message, state: FSMContext):
                                  inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
                              )
                              )
+        await message.answer(str(show_progress(user_id)),
+                             parse_mode="Markdown")
         await state.clear()
 
     except Exception as e:
