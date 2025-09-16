@@ -311,7 +311,30 @@ async def update_user_score(user_ident, level_id, score_change):
         logger.error(f"Error connecting to db: {e}")
         return False
 
-# тут дальше в коде мы получаем идентификтор из функции get_task
+async def update_user_progress(user_ident, task_ident, correct):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            result = await db.execute(
+        "SELECT task_id FROM UserProgress WHERE user_id=? AND task_id=?",
+        (user_ident, task_ident))
+            if await result.fetchone():
+                await db.execute(
+                    "UPDATE UserProgress SET is_correct=? WHERE user_id=? AND task_id=?",
+                    (correct, user_ident, task_ident)
+                )
+            else:
+                await db.execute(
+                    "INSERT INTO UserProgress (user_id, task_id, is_correct) VALUES (?, ?, ?)",
+                    (user_ident, task_ident, correct)
+                )
+
+            await db.commit()
+
+    except Exception as e:
+        logger.error(f"Error connecting to db: {e}")
+        return False
+
+
 async def check_task(user_ident, task_ident, user_answer, is_voice=False):
     """
     user_ident - идентификатор пользователя из get_user_id
@@ -327,7 +350,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
 
             cursor = await db.execute("""
                     SELECT T.type, T.score, T.level_id, L.module_name, T.question, T.content, L.level_name
-                    FROM Tasks T LEFT JOIN Modules L ON (T.module_id=L.module_id)
+                    FROM Tasks T LEFT JOIN Modules M ON (T.module_id=L.module_id)
                     JOIN Levels L ON T.level_id = L.level_id
                     WHERE T.task_id=?
                 """, (task_ident,))
@@ -335,17 +358,20 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
             type_task, score_change, level_id, module_name, question, content, level_name = task_row
 
             if check_answ:
-                if int(user_answer) == int(check_answ):
+                if user_answer.lower().strip() == check_answ.lower().strip():
                     await update_user_score(user_ident, level_id, score_change)
-                    score_message = f'За это задание вы набрали: {score_change}'
-                    return f'верно!{score_message}'
+                    correct = True
+                    multiple_choice_response = f'верно!За это задание вы набрали: {score_change}'
                 else:
                     # await db.execute("""UPDATE UserModules
                     #     SET score = score - ?
                     #     WHERE user_id = ? AND level_id = ?
                     #     """, (score_change, user_ident, level_id))
                     # await db.commit()
-                    return 'неверно'
+                    correct = False
+                    multiple_choice_response = 'неверно'
+                await update_user_progress(user_ident, task_ident, correct)
+                return multiple_choice_response
 
             else:
                 if is_voice:
@@ -378,6 +404,13 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     explanation = result.get('explanation', "")
 
                     await update_user_score(user_ident, level_id, score_change)
+
+                    if score == 0.7 * max_score:
+                        correct = True
+                    else:
+                        correct = False
+
+                    await update_user_progress(user_ident, task_ident, correct)
 
                     return {"score": score, "max_score": max_score, "explanation": explanation}
 
