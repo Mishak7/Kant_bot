@@ -120,10 +120,13 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
                                      ]
                 )
             )
-            progress = await show_progress(user_id)
-            await message.answer(str(progress),
-                                 parse_mode="Markdown")
 
+            progress = await show_progress(user_id)
+            if progress['score'] >= 100:
+                await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!")
+            else:
+                await message.answer(progress['text'],
+                                     parse_mode="Markdown")
             await state.clear()
 
         finally:
