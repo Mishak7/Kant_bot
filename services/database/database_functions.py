@@ -475,4 +475,4 @@ async def show_progress(user_ident):
         level_name, score = user_progress
         return {'score': score,
                 'level_name': level_name,
-                'text': f"Ваш прогресс по уровню {level_name}: {max(score, 100)} / 100 баллов."}
+                'text': f"Ваш прогресс по уровню {level_name}: {min(score, 100)} / 100 баллов."}
