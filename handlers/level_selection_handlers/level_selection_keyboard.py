@@ -18,8 +18,15 @@ def level_selection_keyboard() -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text=f"◀️ Назад", callback_data='back_to_main')]
     ])
 
-def back_to_level_selection_keyboard():
+def back_to_level_selection_keyboard() -> InlineKeyboardMarkup:
     """Returns a single-button keyboard to go back to the level selection."""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=f"◀️ Назад", callback_data="back_to_level_selection")]
+    ])
+
+def send_task() -> InlineKeyboardMarkup:
+    """Creates a keyboard for sending a new task"""
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text=f'Дальше', callback_data='next_task')],
+        [InlineKeyboardButton(text=f'Назад', callback_data='back_to_level_selection')]
     ])

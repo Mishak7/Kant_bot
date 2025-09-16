@@ -31,7 +31,6 @@ async def get_user_id(inserted_telegram_id):
         logger.error(f"Error in get_user_id: {e}")
         return None
 
-# надо прописать логику, чтобы name_level это было название той кнопки, которую нажимает пользователь
 async def get_task(name_level, user_id): # user_id - результат работы функции get_user_id
     '''
     name_level - кнопка, которую нажал пользователь (надо как-то прописать эту логику)
@@ -73,13 +72,14 @@ async def prepare_question(task):
 
     task - результат работы функции get_task.
     '''
-    task_id, content, question, audio = task
-    if audio:
-        return {"task_id": task_id, "content": content, "question": question, "audio": audio}
-        # в выводе задания пользователю мы выводим только question, audio
-        # content, task_id нам нужны доя проверки
-    else:
-        return {"task_id": task_id, "content": content, "question": question}
+    # task_id, content, question, audio = task
+    task_id, content, question = task
+    # if audio:
+    #     return {"task_id": task_id, "content": content, "question": question, "audio": audio}
+    #     # в выводе задания пользователю мы выводим только question, audio
+    #     # content, task_id нам нужны доя проверки
+    # else:
+    return {"task_id": task_id, "content": content, "question": question}
     
 
 async def extract_audio_from_db(task_id: str):
