@@ -367,7 +367,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     question=question,
                     user_answer=user_answer,
                     level_name=level_name,
-                    module_name=module_name,
+                    score=score_change,
                     type_question=type_task)
 
                 response = gigachat.invoke([
@@ -387,7 +387,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     max_score = result.get('max_score', 0)
                     explanation = result.get('explanation', "")
 
-                    await update_user_score(user_ident, level_id, score_change)
+                    await update_user_score(user_ident, level_id, int(score))
 
                     if score == 0.7 * max_score:
                         correct = True
