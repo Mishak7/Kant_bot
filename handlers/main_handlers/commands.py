@@ -190,7 +190,6 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
             await state.set_state(UserRegistration.waiting_for_name)
             return
 
-
         text = f"Привет, {user_info[0]}! Переходи к заданиям: 👇"
         await callback.message.delete()
         await callback.message.answer(text, reply_markup=level_selection_keyboard(), parse_mode="Markdown")

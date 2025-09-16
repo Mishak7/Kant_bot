@@ -2,7 +2,7 @@ import traceback
 from aiogram import Router, F
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
-from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db
+from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db, explain_multiple_choice
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 
@@ -43,6 +43,18 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await callback.answer('Ошибка при загрузке информации', show_alert=True)
+
+
+@router.callback_query(F.data.startswith('explanation'))
+async def explanation_handler(callback: CallbackQuery):
+    try:
+        explanation, task_id, user_answer = callback.data.split("!ПУ!")
+        gigachat_explanation = await explain_multiple_choice(task_ident=task_id, user_answer=user_answer)
+        await callback.message.answer(gigachat_explanation, parse_mode="Markdown")
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Error: {e}\n{traceback.format_exc()}')
+        await callback.answer('Ошибка при объяснении задания multiple_choice', show_alert=True)
 
 
 @router.message(AnswerState.waiting_for_answer)
@@ -87,7 +99,8 @@ async def check_text_answer(message: Message, state: FSMContext):
         await message.answer(response_text,
                              parse_mode="Markdown",
                              reply_markup= InlineKeyboardMarkup(
-                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
+                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level"),
+                                                   InlineKeyboardButton(text='Объяснение', callback_data=f'explanation!ПУ!{task_id}!ПУ!{user_answer}')]]
                              )
                              )
         await state.clear()
