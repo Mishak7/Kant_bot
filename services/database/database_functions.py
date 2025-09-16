@@ -365,7 +365,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
             type_task, score_change, level_id, module_name, question, content, level_name = task_row
 
             if check_answ:
-                if user_answer.lower().strip() == check_answ.lower().strip():
+                if int(user_answer) == int(check_answ):
                     await update_user_score(user_ident, level_id, score_change)
                     correct = True
                     multiple_choice_response = f'верно!За это задание вы набрали: {score_change}'
