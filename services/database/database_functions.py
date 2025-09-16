@@ -332,9 +332,9 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     return 'неверно'
 
             else:
-                # if is_voice:
-                #     user_answer = transcribe_voice_message(
-                #         user_answer)
+                if is_voice:
+                    user_answer = transcribe_voice_message(
+                        user_answer)
 
                 prompt = evaluation_prompt.format(
                     content=content,
