@@ -19,7 +19,7 @@ def salute_speech_token():
 
     return response.json()['access_token']
 
-def transcribe_voice_message(file_path: str):
+def transcribe_voice_message(file_path: str) -> str:
     """Конвертация и транскрипция голосового сообщения"""
     token = salute_speech_token()
 

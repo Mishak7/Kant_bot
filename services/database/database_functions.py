@@ -281,7 +281,7 @@ async def extract_audio_from_db(task_id: str) -> Optional[FSInputFile]:
     Функция для извлечения аудио из бд.
     Если файл уже существует - возвращает его, иначе создает новый.
     """
-    audio_path = f"extracted_audio_{task_id}.mp3"
+    audio_path = f"extracted_audio_listening/extracted_audio_{task_id}.mp3"
 
     if os.path.exists(audio_path):
         return FSInputFile(audio_path)
