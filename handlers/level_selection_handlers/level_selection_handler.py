@@ -204,9 +204,13 @@ async def check_text_answer(message: Message, state: FSMContext):
                              )
 
         progress = await show_progress(user_id)
-        await message.answer(str(progress),
-                             parse_mode="Markdown")
+        if progress['score'] >= 100:
+            await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!")
+        else:
+            await message.answer(progress['text'],
+                                 parse_mode="Markdown")
         await state.clear()
+
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await message.answer('Ошибка при проверке ответа')

@@ -163,8 +163,8 @@ async def init_db():
 
 
 async def main():
-    #await init_db()
-    #await add_tasks(data=data)
+    # await init_db()
+    # await add_tasks(data=data)
 
     bot = Bot(token=settings.TELEGRAM_TOKEN)
     storage = MemoryStorage()
