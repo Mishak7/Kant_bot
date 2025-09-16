@@ -215,17 +215,23 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
             module = await cursor.fetchone()
             module_id = module[0] if module else None
 
-
-
             cursor = await db.execute(
-                "SELECT task_id, content, type, question, audio FROM Tasks WHERE module_id =? AND level_id = ? ORDER BY RANDOM() LIMIT 1",
-                (module_id, level_id))
+                """SELECT T.task_id, T.content, T.type, T.question, T.audio FROM Tasks T
+                WHERE T.module_id =? AND T.level_id = ? 
+                AND T.task_id NOT IN(
+                    SELECT task_id FROM UserProgress
+                    WHERE user_id = ? and is_correct=TRUE)
+                ORDER BY RANDOM() 
+                LIMIT 1
+                """,
+                (module_id, level_id, user_id))
             row = await cursor.fetchone()
             return row
 
     except Exception as e:
         logger.error(f"Error getting a task: {e}")
         return False
+
 
 
 async def prepare_question(task):
@@ -272,21 +278,52 @@ async def update_user_score(user_ident, level_id, score_change):
             result = await db.execute(
             "SELECT score FROM UserModules WHERE user_id=? AND level_id=?",
         (user_ident, level_id))
-            if await result.fetchone():
-                await db.execute(
-                "UPDATE UserModules SET score = score + ? WHERE user_id = ? AND level_id = ?",
-            (score_change, user_ident, level_id))
+            score = await result.fetchone()
+            if score:
+                if score[0] < 100:
+                    await db.execute(
+                        "UPDATE UserModules SET score = score + ? WHERE user_id = ? AND level_id = ?",
+                        (score_change, user_ident, level_id))
+
+                else:
+                    await db.execute(
+                        "UPDATE UserModules SET is_completed = 1, completed_at = CURRENT_TIMESTAMP WHERE user_id = ? AND level_id = ?",
+                        (score_change, user_ident, level_id)
+                    )
+
             else:
                 await db.execute(
                 "INSERT INTO UserModules (user_id, level_id, score) VALUES (?, ?, ?)",
                 (user_ident, level_id, score_change))
             await db.commit()
+            return None
     except Exception as e:
         logger.error(f"Error connecting to db: {e}")
         return False
 
+async def update_user_progress(user_ident, task_ident, correct):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            result = await db.execute(
+        "SELECT task_id FROM UserProgress WHERE user_id=? AND task_id=?",
+        (user_ident, task_ident))
+            if await result.fetchone():
+                await db.execute(
+                    "UPDATE UserProgress SET is_correct=? WHERE user_id=? AND task_id=?",
+                    (correct, user_ident, task_ident)
+                )
+            else:
+                await db.execute(
+                    "INSERT INTO UserProgress (user_id, task_id, is_correct) VALUES (?, ?, ?)",
+                    (user_ident, task_ident, correct)
+                )
 
-# тут дальше в коде мы получаем идентификтор из функции get_task
+            await db.commit()
+
+    except Exception as e:
+        logger.error(f"Error connecting to db: {e}")
+        return False
+
 async def check_task(user_ident, task_ident, user_answer, is_voice=False):
     """
     user_ident - идентификатор пользователя из get_user_id
@@ -312,15 +349,13 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
             if check_answ:
                 if int(user_answer) == int(check_answ):
                     await update_user_score(user_ident, level_id, score_change)
-                    score_message = f'За это задание вы набрали: {score_change}'
-                    return f'верно!{score_message}'
+                    correct = True
+                    multiple_choice_response = f'верно!За это задание вы набрали: {score_change}'
                 else:
-                    # await db.execute("""UPDATE UserModules
-                    #     SET score = score - ?
-                    #     WHERE user_id = ? AND level_id = ?
-                    #     """, (score_change, user_ident, level_id))
-                    # await db.commit()
-                    return 'неверно'
+                    correct = False
+                    multiple_choice_response = 'неверно'
+                await update_user_progress(user_ident, task_ident, correct)
+                return multiple_choice_response
 
             else:
                 if is_voice:
@@ -353,6 +388,13 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     explanation = result.get('explanation', "")
 
                     await update_user_score(user_ident, level_id, score_change)
+
+                    if score == 0.7 * max_score:
+                        correct = True
+                    else:
+                        correct = False
+
+                    await update_user_progress(user_ident, task_ident, correct)
 
                     return {"score": score, "max_score": max_score, "explanation": explanation}
 
@@ -431,4 +473,6 @@ async def show_progress(user_ident):
                                   WHERE user_id=?""", (user_ident,))
         user_progress = await cursor.fetchone()
         level_name, score = user_progress
-        return f'Ваш прогресс по уровню {level_name}: {score} / 100 баллов.'
+        return {'score': score,
+                'level_name': level_name,
+                'text': f"Ваш прогресс по уровню {level_name}: {max(score, 100)} / 100 баллов."}
