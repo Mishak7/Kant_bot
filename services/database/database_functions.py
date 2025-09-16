@@ -317,18 +317,24 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
 
             if check_answ:
                 if int(user_answer) == int(check_answ):
-                    await db.execute("""UPDATE UserModules 
+                    result = await db.execute("""SELECT score FROM UserModules 
+                    WHERE user_id=? AND level_id=?""", (user_ident, level_id))
+                    if await result.fetchone():
+                        await db.execute("""UPDATE UserModules 
                         SET score = score + ? 
                         WHERE user_id = ? AND level_id = ?
                         """, (score_change, user_ident, level_id))
+                    else:
+                        await db.execute("INSERT INTO UserModules (user_id, level_id, score) VALUES (?, ?, ?)",
+                    (user_ident, level_id, score_change))
                     await db.commit()
                     return 'верно'
                 else:
-                    await db.execute("""UPDATE UserModules
-                        SET score = score - ?
-                        WHERE user_id = ? AND level_id = ?
-                        """, (score_change, user_ident, level_id))
-                    await db.commit()
+                    # await db.execute("""UPDATE UserModules
+                    #     SET score = score - ?
+                    #     WHERE user_id = ? AND level_id = ?
+                    #     """, (score_change, user_ident, level_id))
+                    # await db.commit()
                     return 'неверно'
 
             else:
