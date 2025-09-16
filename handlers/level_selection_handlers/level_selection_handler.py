@@ -3,7 +3,7 @@ import os
 import tempfile
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
-from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db
+from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db, explain_multiple_choice, show_progress
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 import traceback
@@ -43,6 +43,27 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await callback.answer('Ошибка при загрузке информации', show_alert=True)
+
+
+
+@router.callback_query(F.data.startswith('explanation'))
+async def explanation_handler(callback: CallbackQuery):
+    try:
+        explanation, task_id, user_answer = callback.data.split("!ПУ!")
+        gigachat_explanation = await explain_multiple_choice(task_ident=task_id, user_answer=user_answer)
+        await callback.message.answer(str(gigachat_explanation),
+                                      parse_mode="Markdown",
+                                      reply_markup= InlineKeyboardMarkup(
+                                          inline_keyboard= [[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
+                                                            [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]
+                                        )
+                                      )
+
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Error: {e}\n{traceback.format_exc()}')
+        await callback.answer('Ошибка при объяснении задания multiple_choice', show_alert=True)
+
 
 
 @router.message(AnswerState.waiting_for_answer, F.content_type == 'voice')
@@ -93,11 +114,16 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
                 response_text,
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
-                    inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
+                    inline_keyboard=[
+                                     [InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
                                      [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]
                                      ]
                 )
             )
+            progress = await show_progress(user_id)
+            await message.answer(str(progress),
+                                 parse_mode="Markdown")
+
             await state.clear()
 
         finally:
@@ -106,6 +132,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await message.answer('Ошибка при обработке голосового сообщения')
+
 
 
 @router.message(AnswerState.waiting_for_answer)
@@ -126,13 +153,20 @@ async def check_text_answer(message: Message, state: FSMContext):
             await state.clear()
             return
 
-        user_answer = message.text
-        is_voice = False
-        answer_check = await check_task(user_id, task_id, user_answer, is_voice=is_voice)
+        if message.content_type == "voice" and message.voice:
+            voice_file = await message.voice.download()
+            user_answer = voice_file.name
+            is_voice = True
+        else:
+            user_answer = message.text
+            is_voice = False
+
+        answer_check = await check_task(user_id, task_id, user_answer, is_voice)
 
         if isinstance(answer_check, str):
-            if answer_check == 'верно':
-                response_text = '✅ Молодец! Все верно!'
+            if answer_check.startswith('верно'):
+                score_message = answer_check.split('!')[1]
+                response_text = f'✅ Молодец! Все верно!\n{score_message}'
             elif answer_check == 'неверно':
                 response_text = '❌ К сожалению, ответ неверный.'
             else:
@@ -141,19 +175,37 @@ async def check_text_answer(message: Message, state: FSMContext):
             response = answer_check
             print(response)
             response_text = f"""
-Вы набрали {response['score']} баллов из {response['max_score']} возможных.\n\nОбъяснение такой оценки:
-{response['explanation']}
-            """
+    Вы набрали {response['score']} баллов из {response['max_score']} возможных.\n\nОбъяснение такой оценки:
+    {response['explanation']}
+        """
         else:
             response_text = 'Ошибка: неверный формат ответа от системы проверки'
 
-        await message.answer(response_text,
+
+
+        if response_text == '❌ К сожалению, ответ неверный.':
+            await message.answer(response_text,
+                                 parse_mode="Markdown",
+                                 reply_markup=InlineKeyboardMarkup(
+                                     inline_keyboard=[
+                                         [InlineKeyboardButton(text='🤔 Объяснение',
+                                                               callback_data=f'explanation!ПУ!{task_id}!ПУ!{user_answer}')],
+                                         [InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
+                                         [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]
+                                        )
+                                 )
+
+        else:
+            await message.answer(response_text,
                              parse_mode="Markdown",
-                             reply_markup=InlineKeyboardMarkup(
-                                 inline_keyboard=[
-                                     [InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
-                                     [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]])
+                             reply_markup= InlineKeyboardMarkup(
+                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
                              )
+                             )
+
+        progress = await show_progress(user_id)
+        await message.answer(str(progress),
+                             parse_mode="Markdown")
         await state.clear()
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')

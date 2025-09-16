@@ -1,11 +1,11 @@
 import aiosqlite
 import os
-import tempfile
 from config.logger import logger
 from typing import Optional
 from langchain_gigachat.chat_models import GigaChat
 from langchain_core.messages import SystemMessage
 from services.database.database_prompts.evaluation_prompt import evaluation_prompt
+from services.database.database_prompts.explanation_prompt import explanation_prompt
 from services.database.speech_utils import transcribe_voice_message, text_to_speech
 from config.settings import Settings
 import json
@@ -171,39 +171,6 @@ async def get_user_name(telegram_id: int) -> Optional[str]:
         return None
 
 
-async def get_module_progress(telegram_id: int, module_id: int) -> Optional[tuple]:
-    """
-    Асинхронно получает прогресс пользователя по заданному модулю.
-
-    Выполняет запрос к базе данных для подсчёта суммы баллов, которые пользователь набрал в модуле,
-    а также максимального количества баллов, которые можно получить в этом модуле,
-    и вычисляет процент выполнения модуля.
-
-    Args:
-        telegram_id (int): Уникальный идентификатор пользователя в Telegram.
-        module_id (int): Идентификатор модуля.
-
-    Returns:
-        Optional[tuple]: Кортеж из (user_id, module_id, user_score, max_score_in_module, процент_выполнения)
-                         или None, если данные не найдены или возникла ошибка.
-    """
-    try:
-        async with aiosqlite.connect('BFU.db') as db:
-            cursor = await db.execute("""
-                    SELECT UserProgress.user_id, Tasks.module_id, SUM(UserProgress.score_earned) AS user_score, (SELECT SUM(score) FROM Tasks WHERE module_id = ?) AS max_score_in_module, 100*SUM(UserProgress.score_earned)/(SELECT SUM(score) FROM Tasks WHERE module_id = ?)
-                    FROM UserProgress JOIN Tasks ON UserProgress.task_id = Tasks.task_id
-                    GROUP BY UserProgress.user_id, Tasks.module_id
-                    HAVING UserProgress.user_id = ?""",
-                                      (module_id, module_id, telegram_id,))
-
-            result = await cursor.fetchone()
-            return result if result else None
-
-    except Exception as e:
-        logger.error(f"Error getting module progress: {e}")
-        return None
-
-
 # при авторизации получаем telegram_id и username пользователя
 # выводит id юзера
 async def get_user_id(inserted_telegram_id):
@@ -299,6 +266,26 @@ async def extract_audio_from_db(task_id: str) -> Optional[FSInputFile]:
         return None
 
 
+async def update_user_score(user_ident, level_id, score_change):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            result = await db.execute(
+            "SELECT score FROM UserModules WHERE user_id=? AND level_id=?",
+        (user_ident, level_id))
+            if await result.fetchone():
+                await db.execute(
+                "UPDATE UserModules SET score = score + ? WHERE user_id = ? AND level_id = ?",
+            (score_change, user_ident, level_id))
+            else:
+                await db.execute(
+                "INSERT INTO UserModules (user_id, level_id, score) VALUES (?, ?, ?)",
+                (user_ident, level_id, score_change))
+            await db.commit()
+    except Exception as e:
+        logger.error(f"Error connecting to db: {e}")
+        return False
+
+
 # тут дальше в коде мы получаем идентификтор из функции get_task
 async def check_task(user_ident, task_ident, user_answer, is_voice=False):
     """
@@ -314,8 +301,8 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
             check_answ = row[0] if row else None
 
             cursor = await db.execute("""
-                    SELECT T.type, T.score, T.level_id, L.module_name, T.question, T.content, L.level_name
-                    FROM Tasks T LEFT JOIN Modules L ON (T.module_id=L.module_id)
+                    SELECT T.type, T.score, T.level_id, M.module_name, T.question, T.content, L.level_name
+                    FROM Tasks T LEFT JOIN Modules M ON (T.module_id=M.module_id)
                     JOIN Levels L ON T.level_id = L.level_id
                     WHERE T.task_id=?
                 """, (task_ident,))
@@ -324,18 +311,15 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
 
             if check_answ:
                 if int(user_answer) == int(check_answ):
-                    await db.execute("""UPDATE UserModules 
-                        SET score = score + ? 
-                        WHERE user_id = ? AND level_id = ?
-                        """, (score_change, user_ident, level_id))
-                    await db.commit()
-                    return 'верно'
+                    await update_user_score(user_ident, level_id, score_change)
+                    score_message = f'За это задание вы набрали: {score_change}'
+                    return f'верно!{score_message}'
                 else:
-                    await db.execute("""UPDATE UserModules
-                        SET score = score - ?
-                        WHERE user_id = ? AND level_id = ?
-                        """, (score_change, user_ident, level_id))
-                    await db.commit()
+                    # await db.execute("""UPDATE UserModules
+                    #     SET score = score - ?
+                    #     WHERE user_id = ? AND level_id = ?
+                    #     """, (score_change, user_ident, level_id))
+                    # await db.commit()
                     return 'неверно'
 
             else:
@@ -368,12 +352,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     max_score = result.get('max_score', 0)
                     explanation = result.get('explanation', "")
 
-                    await db.execute("""UPDATE UserModules
-                            SET score = score + ?
-                            WHERE user_id = ? AND level_id = ?
-                            """, (score, user_ident, level_id))
-
-                    await db.commit()
+                    await update_user_score(user_ident, level_id, score_change)
 
                     return {"score": score, "max_score": max_score, "explanation": explanation}
 
@@ -381,10 +360,75 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     logger.error(f"Error parsing GigaChat response: {parse_error}, raw={response.content}")
                     return {"error": "Invalid response from AI"}
 
+    except Exception as e:
+        logger.error(f"Error checking user answer: {e}")
+        return False
+
+
+async def explain_multiple_choice(task_ident, user_answer):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT correct_answer FROM TasksAnswers WHERE task_id=?", (task_ident,))
+            row = await cursor.fetchone()
+            check_answ = row[0] if row else None
+
+            cursor = await db.execute("""
+                       SELECT question, content
+                       FROM Tasks 
+                       WHERE task_id=?
+                   """, (task_ident,))
+            task_row = await cursor.fetchone()
+            question, content = task_row
+
+            explain = explanation_prompt.format(
+                content=content,
+                question=question,
+                user_answer=user_answer,
+                correct_answer=check_answ
+            )
+            response = gigachat.invoke([
+                SystemMessage(content=explain)
+                ])
+
+            try:
+                content = response.content.strip()
+
+                return content
+
+            except Exception as parse_error:
+                logger.error(f"Error parsing GigaChat response: {parse_error}, raw={response.content}")
+                return {"error": "Invalid response from AI"}
 
     except Exception as e:
         logger.error(f"Error checking user answer: {e}")
         return False
 
 
+async def write_user_progress(user_id: int,
+                              task_id: int,
+                              user_answer: str,
+                              is_correct: bool,
+                              score_earned: int):
 
+    async with aiosqlite.connect('BFU.db') as db:
+        await db.execute("""
+        INSERT INTO UserProgress (user_id, task_id, user_answer, is_correct, created_at)
+        VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)""",
+                                  (user_id,
+                                   task_id,
+                                   user_answer,
+                                   is_correct,
+                                   score_earned,
+                                   ))
+        await db.commit()
+
+
+
+async def show_progress(user_ident):
+    async with aiosqlite.connect('BFU.db') as db:
+        cursor = await db.execute("""SELECT Levels.level_name, score 
+                                  FROM UserModules LEFT JOIN Levels ON UserModules.level_id = Levels.level_id
+                                  WHERE user_id=?""", (user_ident,))
+        user_progress = await cursor.fetchone()
+        level_name, score = user_progress
+        return f'Ваш прогресс по уровню {level_name}: {score} / 100 баллов.'
