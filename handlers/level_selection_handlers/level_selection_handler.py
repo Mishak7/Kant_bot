@@ -82,8 +82,8 @@ async def check_text_answer(message: Message, state: FSMContext):
 
         if isinstance(answer_check, str):
             if answer_check.startswith('верно'):
-                _, message = answer_check.split('!')
-                response_text = f'✅ Молодец! Все верно!\n{message}'
+                _, score_message = answer_check.split('!')
+                response_text = f'✅ Молодец! Все верно!\n{score_message}'
             elif answer_check == 'неверно':
                 response_text = '❌ К сожалению, ответ неверный.'
             else:

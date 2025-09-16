@@ -292,6 +292,25 @@ async def extract_audio_from_db(task_id: str) -> InputFile | None:
             return None
 
 
+async def update_user_score(user_ident, level_id, score_change):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            result = await db.execute(
+            "SELECT score FROM UserModules WHERE user_id=? AND level_id=?",
+        (user_ident, level_id))
+            if await result.fetchone():
+                await db.execute(
+                "UPDATE UserModules SET score = score + ? WHERE user_id = ? AND level_id = ?",
+            (score_change, user_ident, level_id))
+            else:
+                await db.execute(
+                "INSERT INTO UserModules (user_id, level_id, score) VALUES (?, ?, ?)",
+                (user_ident, level_id, score_change))
+            await db.commit()
+    except Exception as e:
+        logger.error(f"Error connecting to db: {e}")
+        return False
+
 # тут дальше в коде мы получаем идентификтор из функции get_task
 async def check_task(user_ident, task_ident, user_answer, is_voice=False):
     """
@@ -317,18 +336,8 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
 
             if check_answ:
                 if int(user_answer) == int(check_answ):
-                    result = await db.execute("""SELECT score FROM UserModules 
-                    WHERE user_id=? AND level_id=?""", (user_ident, level_id))
-                    if await result.fetchone():
-                        await db.execute("""UPDATE UserModules 
-                        SET score = score + ? 
-                        WHERE user_id = ? AND level_id = ?
-                        """, (score_change, user_ident, level_id))
-                    else:
-                        await db.execute("INSERT INTO UserModules (user_id, level_id, score) VALUES (?, ?, ?)",
-                    (user_ident, level_id, score_change))
+                    await update_user_score(user_ident, level_id, score_change)
                     score_message = f'За это задание вы набрали: {score_change}'
-                    await db.commit()
                     return f'верно!{score_message}'
                 else:
                     # await db.execute("""UPDATE UserModules
@@ -368,19 +377,13 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     max_score = result.get('max_score', 0)
                     explanation = result.get('explanation', "")
 
-                    await db.execute("""UPDATE UserModules
-                            SET score = score + ?
-                            WHERE user_id = ? AND level_id = ?
-                            """, (score, user_ident, level_id))
-
-                    await db.commit()
+                    await update_user_score(user_ident, level_id, score_change)
 
                     return {"score": score, "max_score": max_score, "explanation": explanation}
 
                 except Exception as parse_error:
                     logger.error(f"Error parsing GigaChat response: {parse_error}, raw={response.content}")
                     return {"error": "Invalid response from AI"}
-
 
     except Exception as e:
         logger.error(f"Error checking user answer: {e}")
