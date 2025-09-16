@@ -395,6 +395,10 @@ async def explain_multiple_choice(task_ident, user_answer):
             task_row = await cursor.fetchone()
             question, content = task_row
 
+            if user_answer.type=='':
+                user_answer = transcribe_voice_message(
+                    user_answer)
+
             explain = explanation_prompt.format(
                 content=content,
                 question=question,

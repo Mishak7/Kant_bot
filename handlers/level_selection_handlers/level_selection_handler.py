@@ -96,11 +96,20 @@ async def check_text_answer(message: Message, state: FSMContext):
         """
         else:
             response_text = 'Ошибка: неверный формат ответа от системы проверки'
-        await message.answer(response_text,
+
+        if response_text == '❌ К сожалению, ответ неверный.':
+            await message.answer(response_text,
                              parse_mode="Markdown",
                              reply_markup= InlineKeyboardMarkup(
                                  inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level"),
                                                    InlineKeyboardButton(text='Объяснение', callback_data=f'explanation!ПУ!{task_id}!ПУ!{user_answer}')]]
+                             )
+                             )
+        else:
+            await message.answer(response_text,
+                             parse_mode="Markdown",
+                             reply_markup= InlineKeyboardMarkup(
+                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
                              )
                              )
         await state.clear()
