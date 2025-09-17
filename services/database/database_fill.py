@@ -2959,7 +2959,956 @@ data = {
             "task_score": 10,
             "answer": 4,
             "with_audio": True
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Она моя ______ сестра.\n\n1)старшая\n2)старая\n3)старый\n4)старший",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Она достаточно полная, и у нее большой ______\n\n1)спина\n2)живот\n3)желудок\n4)грудь",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "-Ты почему такая ______?\n- Я долго не могла уснуть.\n\n1)бледная\n2)белая\n3)слабая\n4)низкая",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Вчера мы ______ в театр.\n\n1)пошёл\n2) пошли\n3) пошла",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Врач сделал мне ______, и я заснула.\n\n1) укол\n2) капельница\n3) насморк\n4) таблетка",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "______ - это блюдо русской кухни, которое часто едят с хлебом. \n\n1) щи\n2) суп\n3) макароны\n4) пицца",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Он критикует  ______ за опоздание.\n\n1) меня\n2) мне",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Эта картина нравится  ______.\n\n1) мне\n2) меня",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Я согласен  ______.\n\n1) тебе\n2) с тобой",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "ООН — это важная _____ организация.\n\n1) национальная\n2) международная\n3) народная",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Моя новая _____ из Англии.\n\n1) коллег\n2) коллега\n3) коллеги",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Ваш друг представил вам человека: «Это мой товарищ по университету».\n\n1) Очень приятно с вами познакомиться!\n2) Извините, я вас не знаю.\n3) А где вы живёте?\n\nЧто вы скажете в этой ситуации?",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Мой брат хочет ____ программистом.\n\n1) работать\n2) стать\n3) делать\n4) трудиться",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Grammar",
+            "task_content": "Они поздравили меня ____ днём рождения.\n\n1) в\n2) на\n3) с",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 3,
+            "answer": 3
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Моя бабушка прожила долгую жизнь и видела много удивительных вещей\n\n1)пожила\n2)жила\n3)прожила\n4)продлила",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Я всегда ______ , когда получаю хорошие оценки.\n\n1) радуюсь\n2) обрадуюсь\n3) грущу\n4) злюсь",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Мне нужно ______ эту гипотезу научным методом.\n\n1) доказать\n2) обсудить\n3) проверить",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Я хочу ______ с тобой планы на выходные.\n\n1) доказать\n2) обсудить\n3) проверить",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Не забудь ______ домашнее задание на ошибки.\n\n1) доказать\n2) обсудить\n3) проверить",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 3
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Кто является главой государства в республике?\n\n1) Царь\n2) Президент\n3) Посол\n4) Депутат",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Он часто ____ новые песни.\n\n1) создает\n2) создаю\n3) создал\n4) создавать",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Чтобы купить билет, нужно ... к кассе.\n\n1) отойти\n2) подойти\n3) переехать",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Через эту дверь пассажиры ... в вагон метро.\n\n1) выходят\n2) входят\n3) переходят",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Grammar",
+            "task_content": "Такси уже ... к нашему дому, будьте готовы.\n\n1) подъезжает\n2) уехало\n3) проехало",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 5,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Grammar",
+            "task_content": "Вчера я ______ своей маме.\n\n1) радуюсь\n2) улыбался\n3) улыбнулся\n4) улыбаюсь",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 3
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Grammar",
+            "task_content": "Он ______ летать на самолёте с детства.\n\n1) боится\n2) побоится",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 1
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Grammar",
+            "task_content": "Мы опоздали, автобус только что ... от остановки.\n\n1) пришёл\n2) отошёл\n3) подошёл",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 2
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Grammar",
+            "task_content": "Через пять минут поезд ... на станцию 'Октябрьская'.\n\n1) уходит\n2)отходит\n3) приходит",
+            "task_question": "Выбери верный вариант ответа из предложенных ниже",
+            "check_method": "multiple_choice",
+            "task_score": 7,
+            "answer": 3
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Writing",
+            "task_content": "Смайлик: 😭",
+            "task_question": "Представь, что ты пишешь короткое сообщение другу. Используй данный смайлик и составь предложение, которое соответствует его настроению (например, для 😢: «Мне сегодня так грустно, потому что...»).",
+            "check_method": "open_question_writing",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Writing",
+            "task_content": "Смайлик: 😁",
+            "task_question": "Представь, что ты пишешь короткое сообщение другу. Используй данный смайлик и составь предложение, которое соответствует его настроению (например, для 😢: «Мне сегодня так грустно, потому что...»).",
+            "check_method": "open_question_writing",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Writing",
+            "task_content": "Смайлик: 😡",
+            "task_question": "Представь, что ты пишешь короткое сообщение другу. Используй данный смайлик и составь предложение, которое соответствует его настроению (например, для 😢: «Мне сегодня так грустно, потому что...»).",
+            "check_method": "open_question_writing",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Writing",
+            "task_content": "Мне всегда приятно, когда...",
+            "task_question": "Закончи предложение (напиши как минимум 5 слов).",
+            "check_method": "open_question_writing",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Writing",
+            "task_content": "Я чувствую себя счастливым, когда...",
+            "task_question": "Закончи предложение (напиши как минимум 5 слов).",
+            "check_method": "open_question_writing",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Writing",
+            "task_content": "Мне бывает стыдно, если я...",
+            "task_question": "Закончи предложение (напиши как минимум 5 слов).",
+            "check_method": "open_question_writing",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Writing",
+            "task_content": "Составь список продуктов для приготовления ужина на двоих. Включи 5-7 продуктов из списка, 1 напиток и 1 десерт.",
+            "task_question": "Дай развернутый ответ",
+            "check_method": "open_question_writing",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Writing",
+            "task_content": "Напиши короткое сообщение другу, в котором:\n1) Пригласи его в кафе или на ужин.\n2) Спроси, что он любит есть/пить.",
+            "task_question": "Дай развернутый ответ",
+            "check_method": "open_question_writing",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Writing",
+            "task_content": "Составь список дел на день (в списке должны быть не менее 5 дел), связанных с домом. Используй глаголы в неопределенной форме.\nПример дела: вымыть пол в коридоре.",
+            "task_question": "Дай развернутый ответ",
+            "check_method": "open_question_writing",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Writing",
+            "task_content": "Как ты относишься к современной музыке? Она тебе нравится?",
+            "task_question": "Напиши ответ на вопрос (2-3 предложения).",
+            "check_method": "open_question_writing",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Writing",
+            "task_content": "На следующий Новый год я хочу...",
+            "task_question": "Закончи предложение. Напиши как минимум 5 слов.",
+            "check_method": "open_question_writing",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Writing",
+            "task_content": "Что вы говорите другу в день его рождения?",
+            "task_question": "Ответь на вопрос. Используй слова 'поздравлять' и 'желать'. Напиши 1-2 предложения.",
+            "check_method": "open_question_writing",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Writing",
+            "task_content": "Представь, что у тебя скоро праздник. Ты хочешь пригласить гостей.",
+            "task_question": "Напиши короткое приглашение для друзей с приглашением (1-2 предложения).",
+            "check_method": "open_question_writing",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Writing",
+            "task_content": "Напиши 5–7 предложений о своём дне рождения: когда ты родился(ась), как обычно отмечаешь, что ешь, кого приглашаешь.",
+            "task_question": "",
+            "check_method": "open_question_writing",
+            "task_score": 10
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Writing",
+            "task_content": "Опиши: «Моя комната мечты» (5-6 предложений). Используй слова: диван, шкаф, стол, окно, занавески, ковёр, лампа.",
+            "task_question": "",
+            "check_method": "open_question_writing",
+            "task_score": 10
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Writing",
+            "task_content": "Опиши ингредиенты для приготовления твоего любимого блюда. Напиши 3-5 предложений, используя слова-связки и прилагательные.",
+            "task_question": "",
+            "check_method": "open_question_writing",
+            "task_score": 10
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Writing",
+            "task_content": "Напиши короткий пост в соцсети (5-7 предложений) о человеке, который вам нравится (друг, актер, писатель). Обязательно используй 3-4 слова из списка для описания его характера и ума.",
+            "task_question": "",
+            "check_method": "open_question_writing",
+            "task_score": 10
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Writing",
+            "task_content": "Напиши короткий отзыв (3-4 предложения) на любой фильм или сериал, который ты недавно посмотрел. Обязательно используй слова: считать, концовка, понравиться.",
+            "task_question": "",
+            "check_method": "open_question_writing",
+            "task_score": 10
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Writing",
+            "task_content": "Напиши 3 предложения на тему 'Что важно в работе?'. ОБЯЗАТЕЛЬНО используй слова ценить, деньги.",
+            "task_question": "",
+            "check_method": "open_question_writing",
+            "task_score": 10
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Writing",
+            "task_content": "Напиши 3 предложения об образовании друга. ОБЯЗАТЕЛЬНО используй слова: поступить, изучать, окончить.",
+            "task_question": "",
+            "check_method": "open_question_writing",
+            "task_score": 10
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Speaking",
+            "task_content": "Какой вид спорта ты считаешь самым интересным?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
+            "check_method": "open_question_speaking",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Speaking",
+            "task_content": "Ты в аптеке. Скажи, что у тебя болит, и попроси лекарство.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
+            "check_method": "open_question_speaking",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Speaking",
+            "task_content": "Что важнее для здоровья — спорт или правильное питание?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-3 предложения.",
+            "check_method": "open_question_speaking",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Speaking",
+            "task_content": "Ситуация: Зимняя прогулка в лесу.\n\nЗадание: Расскажи, что вы будете одевать в следующей ситуации. Назови как минимум 3 предмета гардероба.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
+            "check_method": "open_question_speaking",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Speaking",
+            "task_content": "Ситуация: Спортивная тренировка.\n\nЗадание: Расскажи, что вы будете одевать в следующей ситуации. Назови как минимум 3 предмета гардероба.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
+            "check_method": "open_question_speaking",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Speaking",
+            "task_content": "Что удобнее: широкие джинсы или узкие? Почему?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
+            "check_method": "open_question_speaking",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Speaking",
+            "task_content": "Опиши профессию программиста. Что он делает? Где работает? Какие инструменты использует?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Easy",
+            "type_task": "Speaking",
+            "task_content": "Ты любишь ходить в кино? Какой твой любимый жанр фильмов: комедия, детектив или мультфильмы? ",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Speaking",
+            "task_content": "Что лучше — жить в большом городе или в деревне? Почему?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Speaking",
+            "task_content": "Какой праздник в твоей стране самый интересный?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Speaking",
+            "task_content": "Ты чаще заказываешь еду или готовишь сам(а)? Почему?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Speaking",
+            "task_content": "Представь, что ты общаешься с человеком, который не знает, что такое ХОЛОДИЛЬНИК. Попробуй объяснить ему значение этого слова. НЕЛЬЗЯ: называть само слово и использовать слова не на русском языке.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Speaking",
+            "task_content": "Представь, что ты общаешься с человеком, который не знает, что такое ЧЕМОДАН. Попробуй объяснить ему значение этого слова. НЕЛЬЗЯ: называть само слово и использовать слова не на русском языке.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Speaking",
+            "task_content": "Представь, что ты общаешься с человеком, который не знает, что такое ЗЕРКАЛО. Попробуй объяснить ему значение этого слова. НЕЛЬЗЯ: называть само слово и использовать слова не на русском языке.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Speaking",
+            "task_content": "Представь, что ты общаешься с человеком, который не знает, что такое СУВЕНИР. Попробуй объяснить ему значение этого слова. НЕЛЬЗЯ: называть само слово и использовать слова не на русском языке.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Middle",
+            "type_task": "Speaking",
+            "task_content": "Какой городской транспорт в твоем городе самый удобный? Почему?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 7
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Меню.\n\nОсновное меню:\n- Оладьи из кабачков с зеленым салатом и сметаной - 500р\n-nФранцузский омлет с тигровыми креветками, авокадо, шпинатом и сливочным сыром - 720р\n- Французский омлет с тамбовским окороком, шпинатом и сливочным сыром - 590р\n- Гриль чиз с цыпленком песто, моцареллой и базиликом - 480р\n\nНапитки:\n- Морс (клюква, смородина, малина) - 200р\n- Сок (апельсин, яблоко, вишня) - 150р.\n\nТы в кафе. Закажи еду и напитки из предложенного меню.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "У врача. Тебе нужно сказать, что ты себя плохо чувствуешь, назвать 2-3 симптома (например, болит голова) и предположить причину.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Твой друг сказал: 'Сильные люди никогда не плачут.' Расскажи, согласен ты или нет, и объясни почему.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Твой друг сказал: 'Дружить онлайн так же хорошо, как и в реальной жизни.' Твоя задача - сказать, согласен ты или нет с этим утверждением, и объяснить почему.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Хотел(а) бы ты когда-нибудь работать в международной организации или посольстве? Почему да или нет?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Расскажите, гражданином какой страны вы являетесь. А ваши родители?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Кем ты хотел(а) стать в детстве и почему?",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Представьте, что ты турист. Спроси у прохожего, как добраться до ближайшего музея от твоего места. Задайте 2-3 вопроса.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Что, по твоему мнению, удобнее: метро или автобус? Сравни их по скорости, стоимости и комфорту. Начни свой ответ так: «Я думаю, что... потому что...».",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Ты опоздал(а) на встречу с другом, потому что долго ждал(а) свой автобус. Задание: Оставь ему голосовое сообщение и извинись. Объясни причину и скажи, во сколько ты теперь приедешь.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Speaking",
+            "task_content": "Ты едешь в аэропорт. Ты выберешь такси или общественный транспорт? Объясни свой выбор.",
+            "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
+            "check_method": "open_question_speaking",
+            "task_score": 9
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "Итак, смотрите. У вас симптомы обычного отравления. Вы съели что-то несвежее. Вам нужно пить много воды, можно чай. Не ешьте тяжёлую пищу: жареное мясо, колбасу. Сварите лёгкий суп или кашу на воде. Если не будете выздоравливать — обязательно вызовите врача снова",
+            "task_question": "Прослушай аудиосообщение и ответь на вопрос. Что посоветовал врач?\n\n1)Пить много воды\n2)Пить кофе\n3)Есть много мяса",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
+        },
+        {
+            "level_score": 3,
+            "level_name": "B1",
+            "module_name": "Senior",
+            "type_task": "Listening",
+            "task_content": "",
+            "task_question": "",
+            "check_method": "multiple_choice",
+            "task_score": 5
         }
+
     ]
 }
 

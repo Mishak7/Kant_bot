@@ -410,7 +410,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                     max_score = result.get('max_score', 0)
                     explanation = result.get('explanation', "")
 
-                    await update_user_score(user_ident, level_id, score_change)
+                    await update_user_score(user_ident, level_id, int(score))
 
                     if score == 0.7 * max_score:
                         correct = True
