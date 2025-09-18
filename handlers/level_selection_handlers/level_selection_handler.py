@@ -2,7 +2,7 @@ import traceback
 from aiogram import Router, F
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
-from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db, explain_multiple_choice, show_progress
+from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db, explain_multiple_choice, show_progress, give_hint
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 
@@ -11,6 +11,17 @@ router = Router()
 
 class AnswerState(StatesGroup):
     waiting_for_answer = State()
+
+@router.callback_query(F.data.startswith('hint'))
+async def task_hint(callback: CallbackQuery):
+    try:
+        task_id = callback.data.split('!ПУ!')[1]
+        gigachat_hint = await give_hint(task_id)
+        await callback.message.answer(gigachat_hint, parse_mode='Markdown')
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Error: {e}\n{traceback.format_exc()}')
+        await callback.answer('Ошибка при выводе подсказки', show_alert=True)
 
 
 @router.callback_query(F.data.in_(["a1_level", "a2_level", "b1_level", "b2_level", "c1_level", "c2_level"]))
@@ -33,7 +44,11 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
                 await callback.message.edit_text(prepared_task['question'], parse_mode="Markdown")
                 await callback.bot.send_voice(chat_id=chat_id, voice=audio_file)
         else:
-            await callback.message.edit_text(text, parse_mode="Markdown")
+            await callback.message.edit_text(text, parse_mode="Markdown",
+                                             reply_markup=InlineKeyboardMarkup(
+                                                 inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка', callback_data=f'hint!ПУ!{prepared_task["task_id"]}')
+                                                 ]]
+                                             ))
         await callback.answer()
 
         await state.update_data(
