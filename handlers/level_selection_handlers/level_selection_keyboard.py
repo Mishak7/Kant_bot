@@ -9,12 +9,12 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 def level_selection_keyboard() -> InlineKeyboardMarkup:
     """Creates a keyboard layout for level selection."""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=f"✏️ A1", callback_data='a1_level')],
-        [InlineKeyboardButton(text=f"📝 A2", callback_data='a2_level')],
-        [InlineKeyboardButton(text=f"⭐ B1", callback_data='b1_level')],
-        [InlineKeyboardButton(text=f"🔥 B2", callback_data='b2_level')],
-        [InlineKeyboardButton(text=f"🏆 C1", callback_data='c1_level')],
-        [InlineKeyboardButton(text=f"👑 C2", callback_data='c2_level')],
+        [InlineKeyboardButton(text=f"✏️ A1", callback_data='A1')],
+        [InlineKeyboardButton(text=f"📝 A2", callback_data='A2')],
+        [InlineKeyboardButton(text=f"⭐ B1", callback_data='B1')],
+        [InlineKeyboardButton(text=f"🔥 B2", callback_data='B2')],
+        [InlineKeyboardButton(text=f"🏆 C1", callback_data='C1')],
+        [InlineKeyboardButton(text=f"👑 C2", callback_data='C2')],
         [InlineKeyboardButton(text=f"◀️ Назад", callback_data='back_to_main')]
     ])
 

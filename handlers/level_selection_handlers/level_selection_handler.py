@@ -1,6 +1,8 @@
 from aiogram import Router, F, Bot
 import os
 import tempfile
+
+from aiogram.filters import state
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
 from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, extract_audio_from_db, explain_multiple_choice, show_progress, give_hint
@@ -12,6 +14,8 @@ router = Router()
 
 class AnswerState(StatesGroup):
     waiting_for_answer = State()
+
+levels = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
 @router.callback_query(F.data.startswith('hint'))
 async def task_hint(callback: CallbackQuery):
@@ -25,13 +29,18 @@ async def task_hint(callback: CallbackQuery):
         await callback.answer('Ошибка при выводе подсказки', show_alert=True)
 
 
-@router.callback_query(F.data.in_(["a1_level", "a2_level", "b1_level", "b2_level", "c1_level", "c2_level"]))
+@router.callback_query(F.data.in_(["A1", "A2", "B1", "B2", "C1", "C2"]))
 async def level_handler(callback: CallbackQuery, state: FSMContext):
     """Handler for all tasks"""
     try:
         await callback.message.delete()
+
+        level = callback.data
+        await state.update_data(
+            level=level
+        )
         await state.set_state(AnswerState.waiting_for_answer)
-        level = 'A1'
+
         telegram_id = callback.from_user.id
         chat_id = callback.message.chat.id
         user_id = await get_user_id(telegram_id)
@@ -63,17 +72,34 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
 
 
 @router.callback_query(F.data.startswith('explanation'))
-async def explanation_handler(callback: CallbackQuery):
+async def explanation_handler(callback: CallbackQuery, state: FSMContext):
     try:
+        data = await state.get_data()
+        level = data['level']
+        user_id = data['user_id']
+        new_level = levels[levels.index(level) + 1] if len(levels) >= levels.index(
+                level) + 1 else 'всё!'
+
+
         explanation, task_id, user_answer = callback.data.split("!ПУ!")
         gigachat_explanation = await explain_multiple_choice(task_ident=task_id, user_answer=user_answer)
-        await callback.message.answer(str(gigachat_explanation),
-                                      parse_mode="Markdown",
-                                      reply_markup= InlineKeyboardMarkup(
-                                          inline_keyboard= [[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
-                                                            [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]
-                                        )
-                                      )
+
+        progress = await show_progress(user_id)
+        if progress['score'] >= 100:
+            await callback.message.answer(f"{str(gigachat_explanation)} \n🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
+                                 parse_mode="Markdown",
+                                 reply_markup=InlineKeyboardMarkup(
+                                     inline_keyboard=[[InlineKeyboardButton(
+                                         text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
+                                         callback_data=new_level)],
+                                         [InlineKeyboardButton(text='🔄 Продолжить текущий',
+                                                               callback_data=level)]]))
+        else:
+            await callback.message.answer(str(gigachat_explanation),
+                                          parse_mode="Markdown",
+                                          reply_markup= InlineKeyboardMarkup(
+                                              inline_keyboard= [[InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
+                                                                [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
         await callback.answer()
     except Exception as e:
@@ -100,6 +126,11 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
             data = await state.get_data()
             task_id = data.get('task_id')
             user_id = data.get('user_id')
+            level = data.get('level')
+
+            new_level = levels[levels.index(level) + 1] if len(levels) >= levels.index(
+                level) + 1 else 'всё!'
+
 
             if not task_id or not user_id:
                 await message.answer("Произошла ошибка. Попробуйте начать заново.")
@@ -126,23 +157,28 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
             else:
                 response_text = 'Ошибка: неверный формат ответа от системы проверки'
 
-            await message.answer(
-                response_text,
-                parse_mode="Markdown",
-                reply_markup=InlineKeyboardMarkup(
-                    inline_keyboard=[
-                                     [InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
-                                     [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]
-                                     ]
-                )
-            )
-
             progress = await show_progress(user_id)
             if progress['score'] >= 100:
-                await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!")
+                await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
+                                     parse_mode="Markdown",
+                                     reply_markup=InlineKeyboardMarkup(
+                                         inline_keyboard=[[InlineKeyboardButton(
+                                             text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
+                                             callback_data=new_level)],
+                                                          [InlineKeyboardButton(text='🔄 Продолжить текущий',
+                                                                                callback_data=level)]]))
+
             else:
-                await message.answer(progress['text'],
-                                     parse_mode="Markdown")
+                response_text += '\n' + progress['text']
+
+                await message.answer(
+                    response_text,
+                    parse_mode="Markdown",
+                    reply_markup=InlineKeyboardMarkup(
+                        inline_keyboard=[
+                                         [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
+                                         [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
+
             await state.clear()
 
         finally:
@@ -161,7 +197,10 @@ async def check_text_answer(message: Message, state: FSMContext):
         data = await state.get_data()
         task_id = data.get('task_id')
         user_id = data.get('user_id')
+        level = data.get('level')
         is_speaking_task = data.get("is_speaking_task", False)
+
+        new_level = levels[levels.index(level) + 1] if len(levels) >= levels.index(level) + 1 else 'всё!'
 
         if is_speaking_task:
             await message.answer("Пожалуйста, отправь голосовое сообщение.")
@@ -209,25 +248,26 @@ async def check_text_answer(message: Message, state: FSMContext):
                                      inline_keyboard=[
                                          [InlineKeyboardButton(text='🤔 Объяснение',
                                                                callback_data=f'explanation!ПУ!{task_id}!ПУ!{user_answer}')],
-                                         [InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")],
+                                         [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
                                          [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]
                                         )
                                  )
 
         else:
-            await message.answer(response_text,
-                             parse_mode="Markdown",
-                             reply_markup= InlineKeyboardMarkup(
-                                 inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание", callback_data="a1_level")]]
-                             )
-                             )
+            progress = await show_progress(user_id)
 
-        progress = await show_progress(user_id)
-        if progress['score'] >= 100:
-            await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!")
-        else:
-            await message.answer(progress['text'],
-                                 parse_mode="Markdown")
+            if progress['score'] >= 100:
+
+                await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
+                                     parse_mode="Markdown",
+                                     reply_markup=InlineKeyboardMarkup(
+                                         inline_keyboard=[[InlineKeyboardButton(text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}", callback_data=new_level)],
+                                                          [InlineKeyboardButton(text='🔄 Продолжить текущий', callback_data=level)]]))
+
+            else:
+                response_text += '\n' + progress['text']
+
+
         await state.clear()
 
     except Exception as e:
