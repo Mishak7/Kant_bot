@@ -4215,7 +4215,7 @@ data = {
             "level_name": "B1",
             "module_name": "Senior",
             "type_task": "Reading",
-            "task_content": "Уважаемые пассажиры! Обращаем ваше внимание на изменение в работе транспорта. Следующие два трамвая проследуют до станции «Садовая» без остановки на Проспекте Мира. Приносим извинения за временные неудобства.\n\n1) Трамваи теперь ходят быстрее.\n2) Некоторые трамваи не останавливаются на Проспекте Мира.\n3) Станция "Садовая" закрыта.",
+            "task_content": "Уважаемые пассажиры! Обращаем ваше внимание на изменение в работе транспорта. Следующие два трамвая проследуют до станции «Садовая» без остановки на Проспекте Мира. Приносим извинения за временные неудобства.\n\n1) Трамваи теперь ходят быстрее.\n2) Некоторые трамваи не останавливаются на Проспекте Мира.\n3) Станция 'Садовая' закрыта.",
             "task_question": "Прочитай текст. Вопрос: Что изменилось?",
             "check_method": "multiple_choice",
             "task_score": 9,
@@ -4627,39 +4627,6 @@ data = {
             "check_method": "multiple_choice",
             "task_score": 7,
             "answer": 3
-        },
-        {
-            "level_score": 3,
-            "level_name": "B1",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "",
-            "task_question": "",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer":
-        },
-        {
-            "level_score": 3,
-            "level_name": "B1",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "",
-            "task_question": "",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer":
-        },
-        {
-            "level_score": 3,
-            "level_name": "B1",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "",
-            "task_question": "",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer":
         },
         {
             "level_score": 3,
