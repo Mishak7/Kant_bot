@@ -6,6 +6,7 @@ from langchain_gigachat.chat_models import GigaChat
 from langchain_core.messages import SystemMessage
 from services.database.database_prompts.evaluation_prompt import evaluation_prompt
 from services.database.database_prompts.explanation_prompt import explanation_prompt
+from services.database.database_prompts.hint_prompt import hint_prompt
 from services.database.speech_utils import transcribe_voice_message, text_to_speech
 from config.settings import Settings
 import json
@@ -476,3 +477,29 @@ async def show_progress(user_ident):
         return {'score': score,
                 'level_name': level_name,
                 'text': f"Ваш прогресс по уровню {level_name}: {min(score, 100)} / 100 баллов."}
+
+async def give_hint(task_id):
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT content, question FROM Tasks WHERE task_id=?", (task_id, ))
+            content, question = await cursor.fetchone()
+
+            cursor = await db.execute("""
+            SELECT correct_answer 
+            FROM TasksAnswers WHERE task_id=?
+            """, (task_id, ))
+            result = await cursor.fetchone()
+            answer = result[0] if result else None
+
+            hint = hint_prompt.format(
+            content=content,
+            question=question,
+            answer=answer
+            )
+
+            response = gigachat.invoke([
+                SystemMessage(content=hint)])
+            return response.content
+    except Exception as e:
+        logger.error(f"Error giving a hint: {e}")
+        return False
