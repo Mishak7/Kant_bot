@@ -7391,7 +7391,2581 @@ data = {
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
             "task_score": 8
-        }
+        },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Вы организуете вечеринку и хотите пригласить друга. Напишите ему неформальное письмо с приглашением на вечеринку. Укажите дату, время и место проведения.",
+        "task_question": "Напишите неформальное письмо (2-3 предложения) в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 3,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Вы опоздали на встречу с другом. Напишите ему неформальное письмо с извинениями за опоздание и объясните причину.",
+        "task_question": "Напишите неформальное письмо (2-3 предложения) в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 3,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Ваш друг подарил Вам подарок. Напишите ему неформальное письмо с благодарностью за подарок и опишите, как Вы его используете.",
+        "task_question": "Напишите неформальное письмо (2-3 предложения) в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 3,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Вы хотите встретиться с другом. Напишите ему неформальное письмо с предложением встретиться и укажите возможные даты и время.",
+        "task_question": "Напишите неформальное письмо (2-3 предложения) в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 3,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Вы хотите пригласить друга посетить Калининград. Напишите ему неформальное письмо с приглашением и укажите, какие достопримечательности Вы хотите показать.",
+        "task_question": "Напишите неформальное письмо в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 3,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Вы хотите предложить другу посетить мероприятие в БФУ. Напишите ему неформальное письмо с предложением и укажите, какое мероприятие Вы хотите посетить.",
+        "task_question": "Напишите неформальное письмо в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 3,
+    },
+
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Университет Леона Козминского\nПольша (Варшава)\nЯзык обучения: английский.\nПрограмма: бакалавриат, магистратура\nСпециализации: бизнес, менеджмент,\nэкономика и финансы.\nСтоимость обучения:\nБакалавриат – 4150 €/год\nМагистратура – 11000 €/год\nwww.kozminski.edu.pl",
+        "task_question": "Представьте, что Ваш друг хочет пройти курс обучения заграницей. На основе предлагаемой рекламной информации напишите ему письмо, в котором рекомендуете ему предложенную программу обучения заграницей. Ваше письмо должно содержать информацию о программе, достаточную для принятия решения.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "EC Toronto\nКанада (Торонто)\nЯзык обучения: английский.\nПрограмма: бизнес английский, общий английский, подготовка к экзаменам IELTS, подготовка к экзаменам TOEFL.\nСтоимость (с проживанием): от 1050$\nwww.ecenglish.com/en/Toronto",
+        "task_question": "Представьте, что Ваш друг хочет пройти курс обучения заграницей. На основе предлагаемой рекламной информации напишите ему письмо, в котором рекомендуете ему предложенную программу обучения заграницей. Ваше письмо должно содержать информацию о программе, достаточную для принятия решения.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Школа здоровья и красоты «Ecovillage»\nФинляндия\nПрограмма: оздоровительный курс «Скандинавская фитотерапия».\nСтоимость – 1000€/месяц\nwww.ecovillage.com",
+        "task_question": "Представьте, что Ваш друг хочет пройти курс обучения заграницей. На основе предлагаемой рекламной информации напишите ему письмо, в котором рекомендуете ему предложенную программу обучения заграницей. Ваше письмо должно содержать информацию о программе, достаточную для принятия решения.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Домус Академи\nИталия (Милан)\nЯзык обучения: английский.\nПрограмма: летние курсы («Дизайн для всех», «Создание модной коллекции», «Моделирование одежды для дресс-кода», «Создаём выставку»).\nПродолжительность: 2 недели.\nСтоимость: 1750€ (стоимость авиабилета не включена)\nwww.domusacademy.com",
+        "task_question": "Представьте, что Ваш друг хочет пройти курс обучения заграницей. На основе предлагаемой рекламной информации напишите ему письмо, в котором рекомендуете ему предложенную программу обучения заграницей. Ваше письмо должно содержать информацию о программе, достаточную для принятия решения.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Санкт-Петербургский государственный университет\nЦентр международного обучения.\nПрограммы: различные формы обучения за рубежом для школьников и студентов.\nДля школьников: обучение в школах, языковые программы, стипендиальные программы.\nДля студентов: учёба в университетах, обменные и стипендиальные стажировки, языковые программы.\nspbu.ru",
+        "task_question": "Представьте, что Ваш друг хочет пройти курс обучения заграницей. На основе предлагаемой рекламной информации напишите ему письмо, в котором рекомендуете ему предложенную программу обучения заграницей. Ваше письмо должно содержать информацию о программе, достаточную для принятия решения.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте себе, что Вам назначили дату сдачи экзамена, но у Вас есть важное мероприятие в этот день. Напишите письмо декану факультета с аргументированной просьбой перенести дату экзамена.",
+        "task_question": "Напишите текст (2-3 предложения) официально-делового характера в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте себе, что Вы забронировали номер в отеле, но Ваши планы изменились, и Вам нужно перенести дату бронирования. Напишите письмо менеджеру отеля с аргументированной просьбой изменить дату бронирования.",
+        "task_question": "Напишите текст (2-3 предложения) официально-делового характера в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте себе, что Вы провели исследование на актуальную тему и хотите предложить статью для публикации в научном журнале. Напишите письмо в редакцию журнала с предложением статьи и кратким описанием Вашего исследования.",
+        "task_question": "Напишите текст (2-3 предложения) официально-делового характера в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте себе, что Вы получили плохое обслуживание в ресторане и хотите пожаловаться. Напишите письмо в компанию с жалобой на качество обслуживания и предложите меры по улучшению.",
+        "task_question": "Напишите текст (2-3 предложения) официально-делового характера в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте себе, что Вы эксперт в определенной области и хотите провести мастер-класс для студентов. Напишите письмо в университет с предложением провести мастер-класс и опишите его программу.",
+        "task_question": "Напишите текст (2-3 предложения) официально-делового характера в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Ваш друг спрашивает Вас о хорошем ресторане в городе. Напишите ему неформальное письмо с рекомендацией ресторана, который Вам нравится. Опишите, почему Вам нравится это место и что там можно попробовать.",
+        "task_question": "Напишите неформальное письмо в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Ваш друг спрашивает Вас о хорошем фильме или книге. Напишите ему неформальное письмо с рекомендацией фильма или книги, которые Вам понравились. Опишите, почему Вы их рекомендуете.",
+        "task_question": "Напишите неформальное письмо в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Ваш друг спрашивает Вас о хорошем месте для отдыха. Напишите ему неформальное письмо с рекомендацией места, где Вы отдыхали и которое Вам понравилось. Опишите, почему Вы его рекомендуете.",
+        "task_question": "Напишите неформальное письмо в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Ваш друг спрашивает Вас о хороших курсах или тренингах. Напишите ему неформальное письмо с рекомендацией курсов или тренингов, которые Вы посещали и которые Вам понравились. Опишите, почему Вы их рекомендуете.",
+        "task_question": "Напишите неформальное письмо в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Ваш друг спрашивает Вас о человеке, с которым можно было бы работать над проектом. Напишите ему неформальное письмо с рекомендацией человека, с которым Вы работали и который Вам понравился. Опишите, почему Вы его рекомендуете.",
+        "task_question": "Напишите неформальное письмо в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 5,
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Вы хотите предложить сотрудничество Сбербанку. Напишите письмо в Сбербанк с предложением о сотрудничестве и опишите, как Вы видите это сотрудничество.",
+        "task_question": "Напишите текст официально-делового характера в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 7,
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Writing",
+        "task_content": "Представьте, что Вы хотите предложить компании разработку мобильного приложения. Напишите письмо в компанию с предложением о разработке мобильного приложения и опишите, как Вы видите это приложение.",
+        "task_question": "Напишите текст официально-делового характера в соответствии с представленной ситуацией и предложенным заданием.",
+        "check_method": "open_question_writing",
+        "task_score": 7,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Writing",
+        "task_content": "Представьте, что у Вас есть идея для научного эксперимента, который можно провести на Международной космической станции. Напишите письмо в космическое агентство с подробным описанием Вашего предложения и объясните, почему этот эксперимент важен для науки.",
+        "task_question": "Напишите текст официально-делового характера в соответствии с представленной ситуацией.",
+        "check_method": "open_question_writing",
+        "task_score": 7,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Writing",
+        "task_content": "Вы узнали, что местный зоопарк планирует новую программу по сохранению вымирающих видов. Напишите письмо директору зоопарка с вашим предложением о том, какие виды животных следует включить в программу и какие меры по их сохранению вы считаете наиболее эффективными.",
+        "task_question": "Напишите текст официально-делового характера в соответствии с представленной ситуацией.",
+        "check_method": "open_question_writing",
+        "task_score": 7,
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Дирижёр Покровская прекрасно … вчера в Филармонии.\n\n1) выступил\n2) выступает\n3) выступила\n4) выступал",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "До отлета самолёта … еще полчаса.\n\n1) остались\n2) останутся\n3) остаются\n4) осталось",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Нашему институту в будущем году … 30 лет.\n\n1) будет\n2) будут\n3) было\n4) бывало",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Много статей в сборнике … совсем молодыми авторами.\n\n1) написали\n2) напишут\n3) написано\n4) написан",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Первая группа студентов уже … экзамен.\n\n1) сдала\n2) сдали\n3) сдадут\n4) сдаст",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Дверь в комнату оказалась ….\n\n1) закрыт\n2) закрытой\n3) закрыли\n4) закрыто",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Глаза у девушки ….\n\n1) большие и грустные\n2) больше и грустнее\n3) большими и грустными\n4) большой и грустный",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Туристы поднялись на вершину горы ….\n\n1) устало, но довольно\n2) устали, но довольны\n3) усталые, но довольные\n4) усталый, но довольный",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Всё, что вы рассказали, очень ….\n\n1) поучителен\n2) поучительный\n3) поучительное\n4) поучительно",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Мы обычно … изложение в классе за 2 часа.\n\n1) напишем\n2) пишем",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "В этот раз туристы … в этом городе на несколько дней.\n\n1) задержались\n2) задерживались",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Старший брат регулярно … утреннюю зарядку.\n\n1) делает\n2) сделает",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Неожиданно … громкий стук в дверь.\n\n1) слышался\n2) послышался",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Почему вы так долго не … на наше письмо?\n\n1) отвечали\n2) ответили",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "С каждым днём … теплее.\n\n1) стало\n2) становится",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Илья упорно … над своей магистерской диссертацией.\n\n1) работал\n2) поработал",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Не … к работе, пока не поймёшь хорошо задание.\n\n1) приступай\n2) приступи",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "- Как ты себя чувствуешь? Пожалуйста, … хоть слово!\n\n1) говори\n2) скажи",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "- Леночка, не … старшим, когда они разговаривают.\n\n1) помешай\n2) мешай",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Grammar",
+        "task_content": "Пассажирам не разрешается … двери вагона во время движения поезда.\n\n1) открывать\n2) открыть",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 1,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "С вами не возможно не ….\n\n1) соглашаться\n2) согласиться",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Зрительный зал был переполнен, и … было некуда.\n\n1) садиться\n2) сесть",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "До яблока на ветке никому не ….\n\n1) дотягиваться\n2) дотянуться",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Советую Вам … Вашу работу.\n\n1) переделывать\n2) переделать",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "На курсы иностранных языков придётся … по субботам.\n\n1) ходить\n2) идти",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Родители беспокоятся …, который учится в другом городе.\n\n1) своим сыном\n2) своему сыну\n3) для своего сына\n4) о своём сыне",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Войдя в аудиторию, профессор поздоровался ….\n\n1) собравшимися студентами\n2) собравшихся студентов\n3) с собравшимися студентами\n4) у собравшихся студентов",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Илья надолго задумался … из экзаменационного билета.\n\n1) с трудным вопросом\n2) над трудным вопросом\n3) по трудному вопросу\n4) о трудном вопросе",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Я нисколько не сомневаюсь …\n\n1) с полученными результатами\n2) о полученных результатах\n3) в полученных результатах\n4) над полученными результатами",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Девушка всех удивила ….\n\n1) своим ответом\n2) со своим ответом\n3) своему ответу\n4) по своему ответу",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Всем хорошим в своей жизни я обязан ….\n\n1) книгам\n2) книгами\n3) книг\n4) книги",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Этот фильм любим ….\n\n1) многими поколениями\n2) россиян\n3) многим поколениям россиян\n4) многих поколений россиян",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Задача легкая и понятна даже ….\n\n1) самыми слабыми учениками\n2) самым слабым ученикам\n3) самых слабых учеников\n4) самые слабые ученики",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Я уверен … моей любимой футбольной команды.\n\n1) в победе\n2) с победой\n3) к победе\n4) при победе",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Мои друзья недавно переехали ….\n\n1) на новую квартиру\n2) от новой квартиры\n3) с новой квартиры\n4) к новой квартире",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Друзья пригласила нас …\n\n1) на новоселье\n2) с новосельем\n3) к новоселью\n4) в новоселье",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Город находится ….\n\n1) на 5 километров от Байкала\n2) в 5 километрах к Байкалу\n3) в 5 километрах от Байкала\n4) с 5 километров от Байкала",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Летний дворец Петра I стоит ….\n\n1) на набережной за Невой\n2) от набережной к Неве\n3) на набережной Невы\n4) до набережной Невы",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Встречи членов Клуба молодых журналистов проходят ....\n\n1) на факультете по средам\n2) к факультету в среду\n3) от факультета по средам\n4) у факультета на среду",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Выставка в «Ленэкспо» продлится ….\n\n1) через две недели\n2) две недели\n3) на две недели\n4) двумя неделями",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "– Внимание! Поезд отправляется ….\n\n1) на 10 минут\n2) через 10 минут\n3) за 10 минут\n4) в 10 минут",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "… президентов было подписано несколько важных документов.\n\n1) С переговорами\n2) У переговоров\n3) При переговорах\n4) В ходе переговоров",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "– Не знаешь, сколько сейчас времени?\n– ….\n\n1) Два и три четверти\n2) Четверть до двух\n3) Четверть и два\n4) Без четверти два",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Заседание комиссии неожиданно перенесли ….\n\n1) на четверг\n2) до четверга\n3) к четвергу\n4) за четверг",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Туристы очень устали ….\n\n1) по трудной дороге\n2) от трудной дороги\n3) с трудной дороги\n4) у трудной дороги",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Комиссия установила, что авария случилась … водителя.\n\n1) благодаря ошибке\n2) из-за ошибки\n3) с ошибкой\n4) от ошибки",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Grammar",
+        "task_content": "Прошу разрешить мне отсутствовать на работе … сестры.\n\n1) по болезни\n2) в связи с болезнью\n3) вследствие болезни\n4) в результате болезни",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 2,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "… звоните 02.\n\n1) В случае пожара\n2) При условии пожара\n3) В ситуации пожара\n4) На пожаре",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Моя мечта, … наконец, осуществилась.\n\n1) для поездки в Париж\n2) поехать в Париж\n3) поездки в Париж\n4) с поездкой в Париж",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "… на своем заседании принял важные решения.\n\n1) Комитет по туризму\n2) Комитет туризма\n3) Комитет – туризм\n4) Туристический комитет",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Всем очень нравятся картины этого художника, … классические традиции.\n\n1) продолжаемые\n2) продолжающего\n3) продолжаемого\n4) продолженного",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "В этой книге собраны воспоминания человека, всю жизнь … воспитанию детей.\n\n1) посвящающего\n2) посвящённого\n3) посвятившего\n4) посвящаемого",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Учитель серьёзно поговорил с учеником, не … вчера контрольные задания.\n\n1) выполняющим\n2) выполняемым\n3) выполненным\n4) выполнившим",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "В прошлом году в стране, … развивать пищевую промышленность, был создан специальный комитет в составе правительства.\n\n1) решившей\n2) решаемый\n3) решённый\n4) решающей",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Прекрасен вид, … с галереи Исаакиевского собора.\n\n1) открывающийся\n2) открывавшийся\n3) открываемый\n4) открытый",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "…, Сергей громко поздоровался.\n\n1) Вошедший в комнату\n2) Войдя в комнату\n3) Входивший в комнату\n4) Входящий в комнату",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "…, выполнять задание, надо заранее обдумать все детали.\n\n1) Начинающий\n2) Начиная\n3) Начав\n4) Начинавший",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Не сохранилось ни одного портрета, … этого политического деятеля в молодости.\n\n1) изображаемого\n2) изображающего\n3) изображая\n4) изобразив",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "…, со своего места, Валерий быстро вышел из аудитории.\n\n1) Встав\n2) Вставая\n3) Вставший\n4) Встающий",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Собираясь летом путешествовать, …\n\n1) всё необходимое куплено весной\n2) весной я болел\n3) я купил всё необходимое весной\n4) весна прошла спокойно",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Отправляя на почте письмо, пожалуйста, ….\n\n1) я не забуду наклеить марку\n2) не забудь наклеить марку\n3) наклеить бы марку\n4) марка уже есть на конверте",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "…, много часов занимаясь в библиотеке.\n\n1) Студенты готовятся к экзамену\n2) Пора готовиться к экзамену\n3) Студенты готовы к экзамену\n4) Скоро экзамен у студентов",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Возвратившись на родину, … .\n\n1) мне придётся искать работу\n2) мне предложат работу\n3) я долго ищу работу\n4) с работой будут проблемы",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Прозвенел звонок, … школьники остались сидеть за партами, заканчивая сочинение.\n\n1) но\n2) и\n3) а\n4) зато",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Сегодня погода очень плохая, … на завтра обещают, что день будет тёплый, солнечный.\n\n1) и\n2) против\n3) а\n4) тоже",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "В Москве туристы осмотрели Кремль, познакомились они … с известными пригородными ансамблями.\n\n1) а\n2) также\n3) но\n4) зато",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Вчера я встретила подругу, … мы не виделись несколько лет.\n\n1) которой\n2) которую\n3) с которой\n4) у которой",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Недавно мои однокурсники ездили в Волгоград, подвигом … восхищается весь мир.\n\n1) которого\n2) которым\n3) который\n4) которому",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Новая песня, … исполнил молодой певец, всем понравилась.\n\n1) на которую\n2) которой\n3) о которой\n4) которую",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Нам никогда не забыть город, … мы недавно должны были уехать.\n\n1) откуда\n2) где\n3) какого\n4) которого",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Сегодня состоится встреча с писателем, … рассказами мы уже успели познакомиться.\n\n1) в чьих\n2) с чьими\n3) о чьих\n4) по чьим",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Недавно я прочитал такую интересную книгу, … ещё никогда не читал.\n\n1) какую\n2) которую\n3) чью\n4) такую",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Нам довелось жить в ХХ столетии, … мир не раз был на краю пропасти.\n\n1) где\n2) когда\n3) в каком\n4) откуда",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Мой руководитель не сомневается …, что я закончу работу в срок.\n\n1) в том\n2) с тем\n3) к тому\n4) при том",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Проблема заключается …, чтобы успеть закончить исследования в такой короткий срок.\n\n1) о том\n2) с тем\n3) на том\n4) в том",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Мне передали просьбу друзей, … завтра я пришёл на вечеринку пораньше.\n\n1) будто\n2) чтобы\n3) что\n4) как",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Моряки на потерпевшей аварию подводной лодке были уверены, … им обязательно помогут.\n\n1) чтобы\n2) будто\n3) как\n4) что",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Надеясь, … родители приедут завтра, брат решил их встретить сам.\n\n1) что\n2) чтобы\n3) как\n4) когда",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Мы остановились, … полюбоваться на разведение мостов над Невой.\n\n1) что\n2) как\n3) чтобы\n4) когда",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "… были построены мощные очистные комплексы, экологическая обстановка на Балтике значительно улучшилась.\n\n1) Хотя\n2) Если\n3) Так как\n4) Что",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "… ты переведешь текст, сможешь пойти погулять.\n\n1) По мере того, как\n2) С тех пор, как\n3) Пока\n4) После того, как",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "… профессии надо очень хорошо подумать.\n\n1) При выборах\n2) При выборе\n3) При выбирании\n4) При выборке",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "… сына в университет – праздник для всей нашей семьи.\n\n1) Поступок\n2) Проступок\n3) Преступление\n4) Поступление",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Мой брат – очень … человек.\n\n1) общий\n2) общественный\n3) общинный\n4) общительный",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Муж говорит, что его жена – … хозяйка.\n\n1) экономная\n2) экономическая\n3) экономичная\n4) экономящая",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Все противоречия устранены, и две страны подписали … договор.\n\n1) мировой\n2) миролюбивый\n3) мирный\n4) мирской",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Сергей Петрович – большой любитель … музыки.\n\n1) классной\n2) классической\n3) классовой\n4) классицистической",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Виталий еще ни разу не был за границей, летом он хочет … поехать.\n\n1) куда-нибудь\n2) куда-то\n3) кое-куда\n4) куда-либо",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "… на полях еще лежит снег, хотя уже апрель.\n\n1) Где-нибудь\n2) Куда-нибудь\n3) Где-то\n4) Кое-где",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "– Тебе лучше … посоветоваться в такой трудной ситуации.\n\n1) что-то\n2) с кем-нибудь\n3) с кем-то\n4) что-нибудь",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "На новом заводе положение улучшилось, дела … хорошо.\n\n1) ведут\n2) выходят\n3) ходят\n4) идут",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Когда рядом друзья, время … очень быстро.\n\n1) проходит\n2) выйдет\n3) выходит\n4) ходит",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Эта книга … в свет недавно, но уже стала библиографической редкостью.\n\n1) пришла\n2) дошла\n3) вошла\n4) вышла",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Я очень рад: мне … увидеть на сцене этого великого артиста в дни его молодости.\n\n1) пришлось\n2) удастся\n3) повезёт\n4) посчастливилось",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "– Тебе понравился новый фильм?\n– Да, его … посмотреть.\n\n1) придётся\n2) стоит\n3) удастся\n4) повезёт",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "После окончания университета сестра хочет … на курсы дизайнеров.\n\n1) вписаться\n2) подписаться\n3) записаться\n4) прописаться",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Подруги … в автобусе и проехали свою остановку.\n\n1) говорили\n2) заговорились\n3) сказали\n4) договорились",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Степан решил продолжать учиться, но потом вдруг ….\n\n1) продумал\n2) выдумал\n3) раздумал\n4) додумал",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "– Простите, я, кажется, … Вам на ногу.\n\n1) наступил\n2) поступил\n3) вступил\n4) выступил",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "– К сожалению, Ваш план работы неудачный, его придётся ….\n\n1) выработать\n2) переработать\n3) заработать\n4) проработать",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Владимир Александрович … долгую жизнь. Он помнит многие события начала века.\n\n1) выжил\n2) пережил\n3) пожил\n4) прожил",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Пожилой мужчина … и упал.\n\n1) поступился\n2) заступился\n3) оступился\n4) вступился",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Я сдал контрольную работу преподавателю, но, кажется, забыл её ….\n\n1) расписать\n2) подписать\n3) записать\n4) прописать",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Посетители с интересом … по сторонам. Красота помещения их поразила.\n\n1) засматривались\n2) всматривались\n3) осматривались\n4) присматривались",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Мне осталось … всего несколько страниц. Завтра я смогу вернуть книгу в библиотеку.\n\n1) начитать\n2) зачитать\n3) вычитать\n4) дочитать",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Свободные территории начали … новыми современными зданиями.\n\n1) застраиваться\n2) достраиваться\n3) надстраиваться\n4) встраиваться",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Лев Николаевич Толстой является ….\n\n1) великий русский писатель\n2) великим русским писателем\n3) великого русского писателя\n4) великому русскому писателю",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Жизнь будущего писателя не была ….\n\n1) простой\n2) прост\n3) простым\n4) просто",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "В молодости он служил … на Кавказе.\n\n1) офицер\n2) с офицером\n3) офицерами\n4) офицером",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "В разные годы Л. Н. Толстой занимался также ….\n\n1) издательская и педагогическая деятельность\n2) издательской и педагогической\n3) с издательской и педагогической деятельностью\n4) в издательской и педагогической деятельности",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 4
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "Л.Н. Толстой – … многих романов, рассказов и повестей, получивших мировую известность.\n\n1) автором\n2) автор\n3) автора\n4) автору",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Grammar",
+        "task_content": "«Войну и мир» называют …,\n\n1) романом-эпопеей\n2) роман-эпопея\n3) роман эпопея\n4) романа-эпопеи",
+        "task_question": "Выбери верный вариант ответа из предложенных ниже",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 1
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Вчера я весь день готовила. Испекла большой яблочный пирог, приготовила салат и замариновала курицу. Но самый главный сюрприз — торт «Наполеон», его все так ждали.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто было самым главным сюрпризом?\n\n1) Яблочный пирог\n2) Маринованная курица\n3) Торт «Наполеон»\n4) Салат",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 3,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Мы договорились встретиться в самом центре города, у нового памятника поэту. Я приду на десять минут раньше и буду ждать около книжного магазина.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nГде именно произойдёт встреча?\n\n1) В книжном магазине\n2) У нового памятника\n3) В самом центре города\n4) Около книжного магазина",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 4,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Погода совсем испортилась. Утром светило солнце, и мы планировали пикник. Но теперь небо покрылось тучами, и по радио предупредили о сильном дожде и возможном граде.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто обещали по радио?\n\n1) Солнечную погоду\n2) Сильный дождь и град\n3) Тёплый вечер\n4) Туман",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 2,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Я ищу не просто квартиру, а просторную квартиру с большой кухней, чтобы можно было принимать гостей. И обязательно с балконом, чтобы летом завтракать на свежем воздухе.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто для говорящего важно в квартире?\n\n1) Высокие потолки и новая мебель\n2) Большая кухня и балкон\n3) Наличие двух спален\n4) Современный ремонт",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 2,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Мой брат очень любит экстремальные виды спорта. Зимой он каждый weekend катается на сноуборде, а летом обязательно уезжает в горы, чтобы заняться альпинизмом.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧем занимается брат говорящего летом?\n\n1) Катается на сноуборде\n2) Занимается альпинизмом\n3) Путешествует по городам\n4) Катается на велосипеде",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 2,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Я предпочитаю смотреть фильмы в оригинале, с субтитрами. Так можно лучше понять игру актёров и почувствовать язык. А вот мой муж любит дубляж, ему не хочется читать текст во время просмотра.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nПочему муж предпочитает дубляж?\n\n1) Он не понимает иностранные языки\n2) Ему не нравится игра актёров\n3) Он не хочет читать субтитры\n4) Дубляж качественнее",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 3,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Чтобы добраться до вокзала, вам нужно сесть на автобус номер 15 или на троллейбус 4. Выйти нужно на остановке «Центральный рынок», а потом пять минут пешком прямо по улице.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nНа каком транспорте можно доехать до вокзала?\n\n1) На автобусе 4 или троллейбусе 15\n2) На автобусе 15 или троллейбусе 4\n3) Только на автобусе\n4) Только на троллейбусе",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 2,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "В качестве подарка на новоселье мы решили купить им не обычный чайный сервиз, а красивый набор для фондю. Они любят принимать гостей, и такой подарок будет очень кстати.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто решили купить в подарок?\n\n1) Чайный сервиз\n2) Кофемашину\n3) Набор для фондю\n4) Обычную посуду",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 3,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Я забыл позвонить бабушке вчера! Она ждала моего звонка весь вечер. Надо сделать это сегодня сразу после работы, иначе она будет сильно волноваться.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nПочему говорящий должен позвонить бабушке?\n\n1) Он обещал сделать это вчера\n2) У бабушки день рождения\n3) Он должен сообщить важные новости\n4) Бабушка ждёт его в гости",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 1,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "В этом ресторане готовят лучше всего не стейки, хотя они и хороши, а блюда местной кухни. Обязательно попробуйте уху и пироги с рыбой — это их фирменное блюдо.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто является фирменным блюдом ресторана?\n\n1) Стейки\n2) Пицца\n3) Уха и пироги с рыбой\n4) Десерты",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 3,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Многие ошибочно полагают, что он был великим полководцем. На самом деле его главный вклад — это реформы в области государственного управления и судебной системы, которые изменили страну.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём, согласно описанию, заключается главная заслуга этого исторического деятеля?\n\n1) В военных победах\n2) В развитии искусства\n3) В государственных и судебных реформах\n4) В открытии новых земель",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Решение было непростым. С одной стороны, выгодное финансовое предложение из-за рубежа. С другой — интересный, но менее оплачиваемый проект здесь, на родине. В итоге я выбрал то, что ближе душе.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nКакое решение принял говорящий?\n\n1) Уехать работать за границу\n2) Отказаться от обоих предложений\n3) Выбрать менее оплачиваемый, но интересный проект\n4) Взять паузу для раздумий",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Архитектору удалось совместить, казалось бы, несовместимое: классический фасад здания, который гармонирует со старым городом, и ультрасовременный технологичный интерьер внутри.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём заключается особенность здания?\n\n1) Полностью современный стиль\n2) Полностью классический стиль\n3) Современный интерьер и классический фасад\n4) Классический интерьер и современный фасад",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Критики высоко оценили фильм, особенно игру главного актёра и операторскую работу. Однако, по мнению многих зрителей, сценарий был слабым местом, и концовка показалась предсказуемой.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто, по мнению зрителей, было слабым местом фильма?\n\n1) Игра актёров\n2) Операторская работа\n3) Музыкальное сопровождение\n4) Сценарий и концовка",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 4,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Изначально планировалось провести конференцию в гибридном формате. Но из-за внезапных ограничений на массовые мероприятия пришлось в срочном порядке переводить всё в онлайн-режим.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ каком формате в итоге пройдёт конференция?\n\n1) В очном\n2) В гибридном\n3) В онлайн-режиме\n4) Её отменили",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Он не был прирождённым оратором. Его речи были суховаты и перегружены фактами. Но за этой внешней скучностью скрывалась блестящая логика и глубокая аналитика, которую ценили специалисты.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто ценили в его выступлениях специалисты?\n\n1) Эмоциональность и юмор\n2) Красивые жесты и голос\n3) Блестящую логику и аналитику\n4) Короткую продолжительность",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Наш тур будет необычным: мы сознательно избегаем популярных туристических мест. Вместо этого, мы покажем вам скрытые дворики, маленькие семейные мастерские и кафе, куда ходят местные.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто обещает тур?\n\n1) Посещение всех популярных достопримечательностей\n2) Знакомство с нетуристической стороной города\n3) Дешёвые покупки в больших магазинах\n4) Экстремальные приключения",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 2,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Эту книгу часто рекомендуют как лёгкое летнее чтение. Но это заблуждение. Под обложкой с яркой иллюстрацией скрывается сложный философский текст, требующий вдумчивого отношения.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nКакое утверждение о книге соответствует описанию?\n\n1) Это лёгкое развлекательное чтение\n2) Это сложный философский текст\n3) Она интересна только своими иллюстрациями\n4) Это детективный роман",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 2,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Проблема была не в стоимости подписки, а в её организации. Чтобы отписаться, нужно было отправить физическое письмо, а не просто нажать кнопку «отменить» в личном кабинете, как это сейчас принято.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём заключалась основная проблема с подпиской?\n\n1) В её высокой цене\n2) В плохом контенте\n3) В сложной процедуре отмены\n4) В отсутствии личного кабинета",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Ирония ситуации заключалась в том, что самый ярый критик этого проекта, выступавший против него на всех совещаниях, в итоге получил премию за его успешную реализацию, так как его начальник взял всю славу себе.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nПочему ситуация иронична?\n\n1) Проект провалился\n2) Критик проекта получил за него премию\n3) Начальник не получил премию\n4) Критик стал руководителем проекта",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 2,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Он виртуозно владеет техникой «импасто», нанося густые слои краски так, что полотно приобретает скульптурную выразительность. Его работы — это не изображение света, а его материальное воплощение.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nО каком виде искусства идёт речь?\n\n1) Скульптура\n2) Архитектура\n3) Живопись\n4) Литература",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Детектив был построен на классическом приёме «ненадёжного рассказчика». Читатель всё время был вынужден сомневаться: является ли главный герой жертвой сложного заговора или же его рассудок постепенно помрачается, и он сам того не осознаёт.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём была главная интрига детектива?\n\n1) В погоне за преступником\n2) В поиске спрятанных сокровищ\n3) В неопределённости: заговор или безумие героя\n4) В романтической линии",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Переговоры зашли в тупик не из-за существенных разногласий, а из-за вопроса процедурного характера: никак не могли договориться о языке и порядке выступлений, что было воспринято одной из сторон как неуважение.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто стало формальной причиной тупика в переговорах?\n\n1) Серьёзные разногласия по сути\n2) Вопросы процедуры: язык и порядок выступлений\n3) Отказ одной из сторон участвовать\n4) Неуважение к главе делегации",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Его последний роман был встречен прохладно. Критики упрекали его в самоповторе, утверждая, что автор эксплуатирует удачную находку десятилетней давности, не предлагая ничего нового.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём критики упрекали автора?\n\n1) В том, что он сменил литературный жанр\n2) В том, что он пишет слишком сложно\n3) В отсутствии новизны и повторении старого\n4) В том, что его роман слишком длинный",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Решение суда первой инстанции было обжаловано, так как, по мнению адвокатов, был нарушен key процессуальный принцип — право на справедливое судебное разбирательство. Апелляция это подтвердила.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nПочему решение суда было обжаловано?\n\n1) Из-за слишком строгого приговора\n2) Из-за нарушения процессуального принципа\n3) Из-за новых доказательств\n4) Из-за смены адвоката",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Фильм не является буквальной экранизацией. Режиссёр взял за основу лишь фабулу романа, перенёс действие в современность и сделал акцент на психологическом противостоянии героев, а не на социальном контексте, как в книге.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧем фильм отличается от книги?\n\n1) Это буквальная экранизация\n2) Действие происходит в прошлом\n3) Акцент смещён на психологию, а не на социальный контекст\n4) Изменены имена главных героев",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Изначально планировалось, что проект будет финансироваться из государственного бюджета. Однако впоследствии был сделан ставку на частно-государственное партнёрство, чтобы привлечь не только деньги, но и компетенции бизнеса.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nКак в итоге решили финансировать проект?\n\n1) Только из госбюджета\n2) Путем частно-государственного партнёрства\n3) Только за счёт частных инвестиций\n4) Через краудфандинг",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Его теория бросала вызов общепринятой парадигме и поначалу была встречена в штыки научным сообществом. Лишь годы спустя, после серии независимых экспериментов, её гениальность была наконец признана.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nКак изначально отнеслись к теории научного сообщества?\n\n1) Сразу признали её гениальной\n2) Встретили её враждебно\n3) Проигнорировали\n4) Начали сразу же её проверять",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2,
+        "with_audio": True
+    }
+
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Пьеса изобилует намёками и аллюзиями, понятными лишь современникам. Для сегодняшнего зрителя much из этого теряется, поэтому режиссёр вводит нового персонажа-рассказчика, который выступает в роли комментатора.",
+        "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЗачем режиссёр ввёл нового персонажа?\n\n1) Чтобы усложнить сюжет\n2) Чтобы заменить одного из старых героев\n3) Чтобы объяснять зрителю утраченные смыслы\n4) Чтобы сделать пьесу смешнее",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Speaking",
+        "task_content": "Вы прочитали в газете объявление о конкурсе на краткосрочную стажировку в престижный университет для студентов и молодых специалистов. \nОсновные условия участия: \nвладение иностранными языками, \nактуальность темы для России, \nналичие научных публикаций и участие в конференциях. \nВаша задача - позвонить по указанному номеру и выяснить все детали, чтобы оценить свои шансы.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение, имитирующее этот телефонный разговор (3-5 предложений). ",
+        "check_method": "open_question_speaking",
+        "task_score": 8
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Speaking",
+        "task_content": "Вы прочитали в газете объявление о конкурсе на краткосрочную стажировку в престижный университет для студентов и молодых специалистов. \nОсновные условия участия: \nвладение иностранными языками, \nактуальность темы для России, \nналичие научных публикаций и участие в конференциях. \nВаша задача - позвонить по указанному номеру и выяснить все детали, чтобы оценить свои шансы.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение, имитирующее этот телефонный разговор (3-5 предложений). ",
+        "check_method": "open_question_speaking",
+        "task_score": 8
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вас пригласили выступить на международном фестивале уличной еды в Москве. \nНеобходимо представить: \n- уникальное блюдо, сочетающее русские и иностранные кулинарные традиции, \n- его историю и культурное значение, \n- ингредиенты и способ приготовления.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием вашего кулинарного проекта для фестиваля (3-5 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 8
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вам предложили разработать новый формат языкового обмена между русскими и иностранными студентами. \nОсновные принципы: \n- совмещение изучения языка с практической деятельностью, \n- фокус на межкультурной коммуникации, \n- использование городской среды как учебного пространства.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием вашего проекта языкового обмена (3-5 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 7
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Вам предложили разработать новый формат языкового обмена между русскими и иностранными студентами. \nОсновные принципы: \n- совмещение изучения языка с практической деятельностью, \n- фокус на межкультурной коммуникации, \n- использование городской среды как учебного пространства.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием вашего проекта языкового обмена (3-5 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 7
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Вас попросили помочь иностранному другу понять русскую кухню. Он особенно интересуется блюдами, которые готовят на праздники.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием одного традиционного русского праздничного блюда (3-4 предложения).",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Вы показываете другу из другой страны ваш родной город. Составьте краткую экскурсию по самым интересным местам.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием 2-3 мест, которые вы обязательно покажете (3-4 предложения).",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Вам нужно порекомендовать иностранцу русский фильм или сериал для лучшего понимания культуры и языка.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с рекомендацией и кратким объяснением выбора (3-4 предложения).",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вам нужно разрешить сложный межкультурный конфликт в международной команде разработчиков. Российские и иностранные коллеги по-разному понимают сроки и приоритеты проекта.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение-обращение к команде (4-6 предложений), предлагающее решение и учитывающее культурные особенности всех сторон.",
+        "check_method": "open_question_speaking",
+        "task_score": 10,
+
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вы выступаете в качестве эксперта в теледебатах о будущем цифрового образования в России. Оппонент критикует традиционную российскую систему образования.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с вашим ответом на критику (5-7 предложений), используя контраргументы и примеры.",
+        "check_method": "open_question_speaking",
+        "task_score": 10
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Ваш друг-иностранец впервые приезжает в Россию зимой. Он очень переживает из-за холодов и не знает, какую одежду взять.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с 3-4 советами, как правильно одеваться зимой в России.",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Вы выбираете подарок коллеге из другой страны на Новый год. Хотите подарить что-то традиционное и русское, но не слишком сложное для перевозки.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием вашего выбора подарка и кратким объяснением (3-4 предложения).",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Иностранный друг спросил вас, почему русские часто говорят «ни пуха ни пера» и «к чёрту» перед важным событием.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение, как бы вы объяснили значение и происхождение этого выражения (3-4 предложения).",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Speaking",
+        "task_content": "Вы записываете голосовое сообщение для группового чата, где решаете, где провести выходные с друзьями (русскими и иностранцами).",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение (4-5 предложений), предлагая интересный вариант и аргументируя свой выбор.",
+        "check_method": "open_question_speaking",
+        "task_score": 7
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Speaking",
+        "task_content": "Вас пригласили на подкаст об изучении языков. Вам задают вопрос: «Как русский менталитет и культура влияют на сам язык?»",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение-ответ на этот вопрос, приведя 1-2 примера (4-5 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 7
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Speaking",
+        "task_content": "Вы увидели рекламу нового российского сериала, который стал очень популярен за рубежом. Ваш друг-иностранец спрашивает, стоит ли его смотреть.",
+        "task_question": "Запишите развёрнутое ГОЛОСОВОЕ сообщение с вашей рекомендацией (5-6 предложений), описав его стиль и почему он может быть интересен иностранцу.",
+        "check_method": "open_question_speaking",
+        "task_score": 7
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вы не согласны с мнением вашего иностранного коллеги о современной российской молодёжи, которое прозвучало на совещании. Его мнение основано на стереотипах.",
+        "task_question": "Запишите вежливое, но уверенное ГОЛОСОВОЕ сообщение-ответ коллеге (5-6 предложений), мягко возражая и приводя свои контраргументы.",
+        "check_method": "open_question_speaking",
+        "task_score": 9
+    },
+    {
+
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вы ведущий на свадьбе у друзей-международной пары (русский и иностранец). Нужно произнести короткий тост, который будет понятен всем гостям.",
+        "task_question": "Запишите свой тост в формате ГОЛОСОВОГО сообщения (5-7 предложений). Соедините в нём искренние пожелания и лёгкий юмор.",
+        "check_method": "open_question_speaking",
+        "task_score": 9
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вы спорите с другом о плюсах и минусах жизни в большом городе (например, в Москве) vs жизни в маленьком городе. Отстаивайте свою точку зрения.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение, убедительно аргументируя свою позицию (6-8 предложений). Используйте вводные конструкции и сложные предложения.",
+        "check_method": "open_question_speaking",
+        "task_score": 9
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Ваш иностранный друг хочет попробовать настоящую русскую кухню, но не знает, с чего начать.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с рекомендацией 2-3 блюд, которые стоит попробовать в первую очередь (3-4 предложения).",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Иностранец спрашивает у вас, какие сувениры из России пользуются наибольшей популярностью.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием 2-3 традиционных русских сувениров (3-4 предложения).",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Speaking",
+        "task_content": "Ваш друг планирует поездку в Россию и интересуется, в какое время года лучше приехать.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с рекомендацией и кратким объяснением выбора (3-4 предложения).",
+        "check_method": "open_question_speaking",
+        "task_score": 5
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Speaking",
+        "task_content": "Вас попросили объяснить иностранцу разницу между жизнью в Москве и в небольшом провинциальном городе.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение, сравнивая плюсы и минусы жизни в столице и провинции (4-5 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 7
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Speaking",
+        "task_content": "Иностранный коллега интересуется, как русские обычно отмечают дни рождения.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием традиционных и современных способов празднования (4-5 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 7
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Speaking",
+        "task_content": "Ваш друг хочет понять, почему бани являются важной частью русской культуры.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с объяснением культурного значения русской бани (4-5 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 7
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вам нужно объяснить иностранному бизнес-партнеру особенности делового этикета в России.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с описанием 3-4 ключевых особенностей ведения бизнеса в России (5-6 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 9
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Иностранный журналист берет у вас интервью о современной русской молодежи и их ценностях.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с вашим ответом на вопрос о главных ценностях современной молодежи в России (5-6 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 9
+    },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Speaking",
+        "task_content": "Вас пригласили выступить на международном форуме о будущем российского образования.",
+        "task_question": "Запишите ГОЛОСОВОЕ сообщение с вашим мнением о главных вызовах и возможностях для образования в России (5-7 предложений).",
+        "check_method": "open_question_speaking",
+        "task_score": 9
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Сегодняшний матч был настоящим испытанием для наших нервов. Наши ребята проигрывали 0:2 до 85-й минуты, но сумели собраться и совершили невозможное, забив три ответных мяча. Стадион взорвался от восторга».\n\n1) Команда уверенно выиграла матч\n2) Команда проиграла, не забив ни одного гола\n3) Команда одержала победу в концовке матча",
+        "task_question": "Как команда закончила матч?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Я всегда считал, что мой друг Максим — человек абсолютно бесстрашный. Но когда мы вчера пошли в парк аттракционов, он наотрез отказался садиться на новейшие американские горки, сославшись на внезапно разыгравшуюся мигрень».\n\n1) Максиму не понравились американские горки\n2) У Максима разболелась голова\n3) Максим испугался аттракциона",
+        "task_question": "Почему Максим не стал кататься на горках?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Переезд в новую квартиру занял у нас всего один день, но вот расставлять книги по полкам и развешивать картины я буду ещё очень долго. Кажется, я никогда не закончу это бесконечное наведение порядка».\n\n1) Переезд прошёл быстро и легко\n2) Самый сложный этап переезда ещё впереди\n3) Все вещи уже расставлены по местам",
+        "task_question": "Что из перечисленного верно?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Это кафе стало нашим любимым местом встреч не из-за кофе, который здесь довольно обычный, а из-за неповторимой атмосферы. Здесь тихо играет джаз, столики стоят далеко друг от друга, и официанты никогда не торопят посетителей».\n\n1) В кафе подают самый лучший кофе в городе\n2) Главное преимущество кафе — его уютная обстановка\n3) Кафе славится быстрым обслуживанием",
+        "task_question": "Почему автор любит это кафе?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Мой начальник — человек старой закалки. Он до сих пор распечатывает все электронные письма, хранит копии документов в огромных папках и не доверяет облачным сервисам. Говорит, что бумага — самый надёжный носитель информации».\n\n1) Начальник активно использует современные технологии\n2) Начальник предпочитает традиционные методы работы\n3) Начальник не умеет пользоваться компьютером",
+        "task_question": "Как можно охарактеризовать начальника?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Reading",
+        "task_content": "«Изначально проект казался нам провальным: инвесторы отказывались вкладывать деньги, команда была неопытной, а сроки поджимали. Однако упорство и нестандартный подход позволили нам не только завершить его в срок, но и получить премию в своей категории».\n\n1) Проект изначально имел все шансы на успех\n2) Успех проекта стал результатом трудной работы\n3) Проект так и не был завершён",
+        "task_question": "Как был достигнут успех проекта?",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Reading",
+        "task_content": "«Многие критиковали режиссёра за излишнюю многословность и затянутые диалоги в первой части фильма. Однако именно этот медленный темп позволил зрителю проникнуться атмосферой и лучше понять мотивацию главного героя перед кульминационными событиями».\n\n1) Медленный темп фильма был художественным приёмом\n2) Режиссёр не сумел правильно выстроить хронометраж\n3) Зрители оценили быстрый темп повествования",
+        "task_question": "Какова была функция медленного темпа в фильме?",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 1
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Reading",
+        "task_content": "«Решение о релокации было спонтанным: мы с женой посмотрели документальный фильм о жизни в Грузии, и через месяц уже сдавали квартиру в Москве. Сейчас, спустя год, мы ни разу не пожалели о своём выборе».\n\n1) Переезд был тщательно спланирован\n2) Решение о переезде приняли быстро\n3) Авторы сожалеют о своём решении",
+        "task_question": "Как было принято решение о переезде?",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Reading",
+        "task_content": "«Его последняя книга разительно отличается от всего, что он писал раньше. Исчезли ирония и сарказм, уступив место глубокому лиризму и ностальгии по ушедшей эпохе. Критики гадают, что послужило причиной такой трансформации».\n\n1) Стиль автора остался неизменным\n2) Автор сменил литературный жанр\n3) В новой книге изменился тон и настроение",
+        "task_question": "Что изменилось в новой книге автора?",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Reading",
+        "task_content": "«Конференция обещала быть скучной: тема узкоспециальная, спикеры не самые известные. Однако доклад молодой исследовательницы из Новосибирска перевернул все мои ожидания. Её открытие действительно может изменить нашу область».\n\n1) Конференция полностью оправдала ожидания\n2) Конференция разочаровала автора\n3) Одно выступление сделало конференцию значимой",
+        "task_question": "Как автор оценивает конференцию?",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Reading",
+        "task_content": "«Его подход к управлению часто называют диктаторским. Он редко советуется с командой, принимает решения единолично и требует беспрекословного выполнения. Парадоксально, именно эта жёсткая система принесла компании стабильный рост и процветание в кризисные времена».\n\n1) Стиль руководства эффективен, хотя и авторитарен\n2) Стиль руководства демократичен и популярен в коллективе\n3) Стиль руководства привёл компанию к кризису",
+        "task_question": "Каков результат его стиля руководства?",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 1
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Reading",
+        "task_content": "«Фильм не стремится дать однозначные ответы. Напротив, он играет со зрителем, предлагая множество трактовок и намёков. Эта интеллектуальная игра, требующая активного участия, и стала главной причиной его культовый статус среди ценителей артхауса».\n\n1) Фильм популярен благодаря простому и понятному сюжету\n2) Фильм стал культовым из-за своей неоднозначности\n3) Фильм получил статус артхауса случайно",
+        "task_question": "Почему фильм приобрёл культовый статус?",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Reading",
+        "task_content": "«Политик мастерски обошёл острые углы в ходе интервью. На прямые вопросы о скандале он отвечал общими фразами о будущем страны, переводил тему на свои успехи и в итоге не сказал ничего конкретного, оставив журналиста с носом».\n\n1) Политик дал исчерпывающие ответы на все вопросы\n2) Политик избежал ответов на неприятные вопросы\n3) Политик признал свои ошибки",
+        "task_question": "Как политик вёл себя во время интервью?",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Reading",
+        "task_content": "«Архитектор столкнулся с дилеммой: сохранить исторический фасад здания, пожертвовав функциональностью современного офисного пространства, или построить совершенно новое здание, нарушив архитектурный ансамбль улицы. Его компромиссное решение было высоко оценено профессиональным сообществом».\n\n1) Архитектор выбрал один из двух вариантов\n2) Архитектор нашёл третье, удачное решение\n3) Архитектор отказался от проекта",
+        "task_question": "Как архитектор разрешил дилемму?",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2
+     },
+
+     {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Reading",
+        "task_content": "«Её романы невозможно отнести к определённому жанру. В них причудливо переплетаются элементы детектива, исторической хроники и психологической драмы. Эта гибридная форма, ломающая привычные рамки, и является её фирменным стилем».\n\n1) Автор строго следует правилам одного жанра\n2) Стиль автора характеризуется смешением жанров\n3) Автор пишет в исключительно психологическом жанре",
+        "task_question": "Что характерно для стиля автора?",
+        "check_method": "multiple_choice",
+        "task_score": 9,
+        "answer": 2
+     },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Сначала я подумал, что опоздаю на самолёт из-за огромной очереди на паспортном контроле. Но офицер оказался на редкость расторопным и за две минуты проверил документы у всех, кто стоял передо мной. В итоге я не только успел, но и приобрёл пару сувениров в дьюти-фри».\n\n1) Автор опоздал на свой рейс\n2) Автор едва успел на регистрацию\n3) Автор успел на рейс и даже купил сувениры",
+        "task_question": "Чем закончилась история для автора?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Мой коллега всегда славился своей забывчивостью. На этот раз он оставил все документы для важной сделки в такси. К счастью, водитель оказался честным человеком и сам привёз портфель в офис, отказавшись от вознаграждения».\n\n1) Документы были утеряны безвозвратно\n2) Документы вернул таксист\n3) Коллега сам вспомнил, где оставил документы",
+        "task_question": "Что произошло с документами?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Мы планировали весь день провести на пляже, но погода внезапно испортилась. Пришлось импровизировать: купили билеты в местный музей, пообедали в уютном ресторанчике и целый день провели за душевными разговорами. Получился идеальный день, хоть и не такой, как мы ожидали».\n\n1) День был полностью испорчен из-за дождя\n2) План удалось выполнить несмотря ни на что\n3) План изменили, но день всё равно удался",
+        "task_question": "Как прошёл день?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 3
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Я всегда считал, что младшая сестра слишком легкомысленна для ведения бизнеса. Но когда её стартап suddenly стал приносить огромную прибыль, мне пришлось признать, что я серьёзно недооценивал её деловую хватку».\n\n1) Сестра провалила свой бизнес-план\n2) Бизнес сестры оказался успешным\n3) Автор всегда верил в успех сестры",
+        "task_question": "Как развивался бизнес сестры?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+    },
+
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Reading",
+        "task_content": "«Наш профессор истории мог говорить о Древнем Риме часами. Его лекции были настолько живыми и захватывающими, что даже те, кто никогда не интересовался историей, слушали его, затаив дыхание, и потом бежали в библиотеку за книгами».\n\n1) Лекции профессора были скучными\n2) Профессор умел увлечь аудиторию\n3) Профессор читал лекции только для узких специалистов",
+        "task_question": "Каким было выступление профессора?",
+        "check_method": "multiple_choice",
+        "task_score": 3,
+        "answer": 2
+     },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Middle",
+    "type_task": "Reading",
+    "task_content": "«Решение жюри многих удивило. Кандидат с блестящим резюме и рекомендациями от известных учёных прошёл лишь во второй тур, в то время как молодой специалист без большого опыта был допущен к финалу сразу. Видимо, члены жюри искали нестандартный подход, а не формальные заслуги».\n\n1) Жюри выбирало по формальным признакам\n2) Жюри искало свежий взгляд на проблему\n3) Решение жюри никого не удивило",
+    "task_question": "На основании чего жюри принимало решение?",
+    "check_method": "multiple_choice",
+    "task_score": 5,
+    "answer": 2
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Middle",
+    "type_task": "Reading",
+    "task_content": "«Его последняя картина была встречена прохладно. Критики отмечали, что, пытаясь угодить массовому зрителю, художник растерял свою уникальную манеру письма и создал нечто абсолютно безликое, хотя и технически безупречное».\n\n1) Картина стала популярной у массового зрителя\n2) Картина сохранила уникальный стиль художника\n3) Картина потеряла уникальность в погоне за популярностью",
+    "task_question": "Почему картина разочаровала критиков?",
+    "check_method": "multiple_choice",
+    "task_score": 5,
+    "answer": 3
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Middle",
+    "type_task": "Reading",
+    "task_content": "«Переговоры зашли в тупик после того, как одна из сторон внезапно выдвинула новые, абсолютно неприемлемые условия. Казалось, компромисс невозможен. Ситуацию спасло лишь то, что главные спонсоры проекта вмешались и заставили стороны вернуться к первоначальным договорённостям».\n\n1) Переговоры завершились провалом\n2) Переговоры удалось спасти благодаря внешнему вмешательству\n3) Стороны быстро нашли компромисс",
+    "task_question": "Как разрешилась ситуация с переговорами?",
+    "check_method": "multiple_choice",
+    "task_score": 5,
+    "answer": 2
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Middle",
+    "type_task": "Reading",
+    "task_content": "«Изначально городские власти были против этого фестиваля, предсказывая хаос и беспорядки. Однако организаторы проявили недюжинные способности к планированию, и мероприятие прошло на удивление гладко, собрав рекордное количество положительных отзывов».\n\n1) Фестиваль прошёл плохо, как и предсказывали власти\n2) Организаторы доказали, что опасения властей были напрасны\n3) Фестиваль отменили из-за угрозы беспорядков",
+    "task_question": "Как прошёл фестиваль?",
+    "check_method": "multiple_choice",
+    "task_score": 5,
+    "answer": 2
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Middle",
+    "type_task": "Reading",
+    "task_content": "«Его выступление на суде нельзя было назвать блестящим с точки зрения ораторского искусства. Он говорил медленно, подбирая слова. Но именно эта обстоятельность и искренняя убеждённость в своей правоте произвели на присяжных самое сильное впечатление».\n\n1) Выступление было неубедительным\n2) Убедительность заключалась не в красноречии, а в искренности\n3) Выступление было образцом ораторского искусства",
+    "task_question": "Что повлияло на присяжных?",
+    "check_method": "multiple_choice",
+    "task_score": 5,
+    "answer": 2
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Senior",
+    "type_task": "Reading",
+    "task_content": "«Фильм не стал давать простых ответов на сложные этические вопросы, поставленные в сюжете. Вместо этого режиссёр предложил зрителю самому сделать выводы, сталкивая его с разными точками зрения и оставляя финал открытым. Это вызвало горячие споры среди кинокритиков».\n\n1) Фильм предложил единственно верное решение проблем\n2) Фильм избегал прямых оценок, провоцируя зрителя на размышления\n3) Фильм вызвал споры из-за плохой актёрской игры",
+    "task_question": "В чём была особенность подачи материала в фильме?",
+    "check_method": "multiple_choice",
+    "task_score": 7,
+    "answer": 2
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Senior",
+    "type_task": "Reading",
+    "task_content": "«Его стратегия на переговорах казалась на первый взгляд пассивной. Он позволял оппонентам высказываться первыми, внимательно слушал и лишь затем, аккуратно парируя их аргументы, излагал свою позицию. Эта тактика неизменно приводила его к успеху, так как решения оказывались взвешенными и продуманными».\n\n1) Его стратегия была агрессивной и напористой\n2) Его стратегия основывалась на неторопливости и анализе\n3) Его стратегия обычно приводила к провалу",
+    "task_question": "В чём заключалась его стратегия?",
+    "check_method": "multiple_choice",
+    "task_score": 7,
+    "answer": 2
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Senior",
+    "type_task": "Reading",
+    "task_content": "«Критики часто обвиняли её в том, что её поздние романы утратили социальную остроту ранних работ. Однако немногие замечали, что её интерес сместился с внешних конфликтов на внутренний мир человека, на те нравственные дилеммы, с которыми сталкивается личность в эпоху больших перемен».\n\n1) Темы её романов остались неизменными\n2) В её романах поменялся фокус, но не глубина\n3) Её поздние романы стали более поверхностными",
+    "task_question": "Как изменилось творчество автора?",
+    "check_method": "multiple_choice",
+    "task_score": 7,
+    "answer": 2
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Senior",
+    "type_task": "Reading",
+    "task_content": "«Архитектор столкнулся с почти неразрешимой задачей: вписать современный культурный центр в историческую застройку, не разрушая её целостность. Его решение — стеклянный куб, возвышающийся над старинными зданиями, — сначала шокировало общественность, но позже было признано гениальным».\n\n1) Архитектор предложил просто скопировать старый стиль\n2) Решение было радикальным, но в итоге получило признание\n3) Проект так и не был реализован из-за протестов",
+    "task_question": "Как было воспринято новаторское решение архитектора?",
+    "check_method": "multiple_choice",
+    "task_score": 7,
+    "answer": 2
+  },
+
+  {
+    "level_score": 4,
+    "level_name": "B2",
+    "module_name": "Senior",
+    "type_task": "Reading",
+    "task_content": "«Политик, известный своими резкими и часто непопулярными решениями, неожиданно пошёл на уступки. Это был не признак слабости, а тонко просчитанный ход. Поступившись малым, он смог обеспечить поддержку своего главного законопроекта, который в иной ситуации был бы обречён на провал».\n\n1) Политик проявил слабость и отказался от своих принципов\n2) Уступка была тактическим шагом для достижения цели\n3) Законопроект в итоге не был принят",
+    "task_question": "Какой была истинная причина уступок политика?",
+    "check_method": "multiple_choice",
+    "task_score": 7,
+    "answer": 2
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
     ]
 }
 
