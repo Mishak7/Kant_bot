@@ -266,6 +266,13 @@ async def check_text_answer(message: Message, state: FSMContext):
 
             else:
                 response_text += '\n' + progress['text']
+                await message.answer(
+                    response_text,
+                    parse_mode="Markdown",
+                    reply_markup=InlineKeyboardMarkup(
+                        inline_keyboard=[
+                            [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
+                            [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
 
         await state.clear()
