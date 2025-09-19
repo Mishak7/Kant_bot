@@ -441,11 +441,13 @@ async def explain_multiple_choice(task_ident, user_answer):
             check_answ = row[0] if row else None
 
             cursor = await db.execute("""
-                       SELECT T.question, T.content
-                       WHERE T.task_id=?
+                        SELECT T.question, T.content, L.level_name
+                        FROM Tasks T
+                        JOIN Levels L ON T.level_id = L.level_id
+                        WHERE T.task_id = ?
                    """, (task_ident,))
             task_row = await cursor.fetchone()
-            question, content = task_row
+            question, content, level_name = task_row
 
             if user_answer.type=='':
                 user_answer = transcribe_voice_message(
@@ -455,7 +457,8 @@ async def explain_multiple_choice(task_ident, user_answer):
                 content=content,
                 question=question,
                 user_answer=user_answer,
-                correct_answer=check_answ
+                correct_answer=check_answ,
+                level_name=level_name
             )
             response = gigachat.invoke([
                 SystemMessage(content=explain)
