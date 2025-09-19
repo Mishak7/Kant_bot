@@ -36,9 +36,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         await callback.message.delete()
 
         level = callback.data
-        await state.update_data(
-            level=level
-        )
+
         await state.set_state(AnswerState.waiting_for_answer)
 
         telegram_id = callback.from_user.id
@@ -64,6 +62,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
             task_id=prepared_task['task_id'],
             user_id=user_id,
             is_speaking_task=is_speaking_task,
+            level=level
         )
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
