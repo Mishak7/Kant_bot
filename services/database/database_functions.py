@@ -471,7 +471,7 @@ async def show_progress(user_ident, level_name):
     async with aiosqlite.connect('BFU.db') as db:
         cursor = await db.execute("""SELECT Levels.level_name, score 
                                   FROM UserModules LEFT JOIN Levels ON UserModules.level_id = Levels.level_id
-                                  WHERE user_id=? AND level_name=?""", (user_ident, level_name))
+                                  WHERE user_id=? AND Levels.level_name=?""", (user_ident, level_name))
         user_progress = await cursor.fetchone()
         level_name, score = user_progress
         return {'score': score,
