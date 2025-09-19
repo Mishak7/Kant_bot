@@ -6221,7 +6221,8 @@ data = {
             "task_question": "Прослушай аудиосообщение и ответь на вопрос.\n\nЧто посоветовал врач?\n\n1)Пить много воды\n2)Пить кофе\n3)Есть много мяса",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6232,7 +6233,8 @@ data = {
             "task_question": "Прослушай короткий диалог.\n\nОпредели, какое чувство испытывает герой. Выбери ответ из списка слов ниже.\n\n1)радость\n2)грусть\n3) страх\n4) скука\n5) интерес\n6) стыд.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6243,7 +6245,8 @@ data = {
             "task_question": "Прослушай короткий диалог.\n\nОпредели, какое чувство испытывает герой.Выбери ответ из списка слов ниже.\n\n1)радость\n2)грусть\n3) страх\n4) скука\n5) интерес\n6) стыд.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6254,7 +6257,8 @@ data = {
             "task_question": "Прослушай короткий диалог.\n\nОпредели, какое чувство испытывает герой. Выбери ответ из списка слов ниже.\n\n1)радость\n2)грусть\n3) страх\n4) скука\n5) интерес\n6) стыд.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 6
+            "answer": 6,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6265,7 +6269,8 @@ data = {
             "task_question": "Прослушай короткий диалог.\n\nОпредели, какое чувство испытывает герой. Выбери ответ из списка слов ниже.\n\n1)радость\n2)грусть\n3) страх\n4) скука\n5) интерес\n6) стыд.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 4
+            "answer": 4,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6276,7 +6281,8 @@ data = {
             "task_question": "Прослушай аудио.\n\nГде работает этот человек?\n\n1) В школе\n2) В университете / научном институте\n3) В больнице\n4) На заводе.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6287,7 +6293,8 @@ data = {
             "task_question": "Прослушай аудио.\n\nКакая оценка у ученика? Запишите 1 цифрой.",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 5
+            "answer": 5,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6298,7 +6305,8 @@ data = {
             "task_question": "Прослушай аудио и ответь на вопрос.\n\nКто это?\n\n1) футболист\n2) хоккеист\n3) баскетболист\n4) теннисист.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6309,7 +6317,8 @@ data = {
             "task_question": "Прослушай аудио и ответь на вопрос.\n\nЧто будут праздновать?\n\n1) День рождения\n2) Новый год\n3) Пасху.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6320,7 +6329,8 @@ data = {
             "task_question": "Прослушай описание и ответь на вопрос:\n\nО какой комнате идет речь?\n\n1) Гостиная (зал)\n2) Кухня\n3) Спальня\n4) Балкон.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6331,7 +6341,8 @@ data = {
             "task_question": "Прослушай описание и ответь на вопрос:\n\nО какой комнате идет речь?\n\n1) Гостиная (зал)\n2) Кухня\n3) Спальня\n4) Балкон.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6342,7 +6353,8 @@ data = {
             "task_question": "Прослушай описание и ответь на вопрос:\n\nО какой комнате идет речь?\n\n1) Гостиная (зал)\n2) Кухня\n3) Кабинет\n4) Балкон.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6353,7 +6365,8 @@ data = {
             "task_question": "Прослушай описание и ответь на вопрос:\n\nО какой комнате идет речь?\n\n1) Гостиная (зал)\n2) Кухня\n3) Кабинет\n4) Балкон.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 4
+            "answer": 4,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6364,7 +6377,8 @@ data = {
             "task_question": "Прослушай описание.\n\nКак выглядел Алексей? Выбери правильный вариант\n\n1) Высокий мужчина в зимнем пальто и шапке. На нём тёмные джинсы и ботинки. В руках он держит перчатки.\n2) Молодой человек в светлой рубашке и галстуке. На нём лёгкая куртка и широкие брюки. На ногах — кроссовки.\n3) Мужчина в строгом костюме и плаще. На нём узкие брюки и туфли. В кармане виден платок.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6375,7 +6389,8 @@ data = {
             "task_question": "Прослушай короткое описание человека.\n\nВыбери, какая черта характера или умственное качество ему больше всего подходит.\n\n1) Обыкновенный\n2) Оригинальный\n3) Опытный.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6386,7 +6401,8 @@ data = {
             "task_question": "Прослушай короткое описание человека.\n\nВыбери, какая черта характера или умственное качество ему больше всего подходит.\n\n1) Вежливый\n2) Грубый\n3) Скромный.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6397,7 +6413,8 @@ data = {
             "task_question": "Прослушай короткое описание человека.\n\nВыбери, какая черта характера или умственное качество ему больше всего подходит.\n\n1) Скромный\n2) Решительный\n3) Усталый.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6408,7 +6425,8 @@ data = {
             "task_question": "Прослушай короткое описание человека.\n\nВыбери, какая черта характера или умственное качество ему больше всего подходит.\n\n1) Слабый\n2) Решительный\n3) Грустный.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6419,7 +6437,8 @@ data = {
             "task_question": "Прослушай мнение человека.\n\nПравда ли следующее утверждение?\n\nГоворящий критикует Алексея.\n\n1)Правда\n2) Ложь.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6430,7 +6449,8 @@ data = {
             "task_question": "Прослушай голосовое сообщение и ответь на вопрос.\n\nВопрос: Гражданином какой страны является человек?\n\n1) Россия\n2) Французской\n3) Германия.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 9,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6452,7 +6472,8 @@ data = {
             "task_question": "Прослушай описание человека и выбери правильную профессию.\n\n1) Медсестра\n2) Хирург\n3) Биолог\n4) Психоло.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 9,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6463,7 +6484,8 @@ data = {
             "task_question": "Прослушай описание человека и выбери правильную профессию.\n\n1) Философ\n2) Писатель\n3) Историк\n4) Географ.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 9,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6474,7 +6496,8 @@ data = {
             "task_question": "Прослушайте аудио и ответь на вопрос.\n\nНа чём они поедут обратно?\n\n1) На машине\n2) На корабле\n3) На поезде.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 9,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6485,7 +6508,8 @@ data = {
             "task_question": "Прослушай аудиосообщение и ответь на вопрос.\n\nЧто изменилось для пассажиров?\n\n1) Поезд до Подольска отменён.\n2) Поезд уходит с другой платформы.\n3) Поезд будет идти медленнее.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 9,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6496,7 +6520,8 @@ data = {
             "task_question": "Прослушай аудиосообщение и ответь на вопрос.\n\nО чём это объявление?\n\n1) Об отмене ночных рейсов.\n2) О повышении цен на билеты до аэропорта.\n3) О запуске нового ночного автобуса.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 9,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6958,7 +6983,8 @@ data = {
             "task_question": "Прослушайте аудио.\n\nЧто означает эта фраза?\n\n1) Человек прощается и планирует встретиться завтра.\n2) Человек спрашивает, как дела.\n3) Человек представляется.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6969,7 +6995,8 @@ data = {
             "task_question": "Прослушайте аудио и ответьте на вопрос.\n\n1) Летом.\n2) В Африке\n3) На Севере.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6980,7 +7007,8 @@ data = {
             "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: Какая сегодня погода в Санкт-Петербурге?\n\n1) Солнечно и жарко\n2) Пасмурно и туманно\n3) Холодно и снег.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -6991,7 +7019,8 @@ data = {
             "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: О каком животном идёт речь?\n\n1) Свинья\n2) Корова\n3) Лошадь.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7002,7 +7031,8 @@ data = {
             "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: О каком животном идёт речь?\n\n1) Медведь\n2) Волк\n3) Овца.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
-            "answer": 1
+            "answer": 1,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7013,7 +7043,8 @@ data = {
             "task_question": "Прослушайте аудио.\n\nО чём эта новость?\n\n1) О новой телепередаче\n2) О покупке нового телевизора\n3) О важном разговоре президентов.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7024,7 +7055,8 @@ data = {
             "task_question": "Прослушайте аудио.\n\nО чём эта новость?\n\n1) о рассказе друга\n2) о передаче по телевизору\n3) о диалоге учёных.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7035,7 +7067,8 @@ data = {
             "task_question": "Прослушайте прогноз погоды. \n\nКакая погода ожидается в Москве?\n\n1) Солнечно и жарко, +30°.\n2) Пасмурно, сильный дождь, +15°.\n3) Холодно, идёт снег, -5°.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7046,7 +7079,8 @@ data = {
             "task_question": "Прослушайте аудио.\n\nГде работает человек?",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7057,7 +7091,8 @@ data = {
             "task_question": "Прослушайте аудио.\n\nВопрос: Куда они в итоге не попали?",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7068,7 +7103,8 @@ data = {
             "task_question": "Прослушайте аудио.\n\nВопрос: Как студент добирается до университета?",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7079,7 +7115,8 @@ data = {
             "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: Где находится банк?\n\n1) Слева от парка\n2) Напротив парка\n3) Внутри парка.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 2
+            "answer": 2,
+            "with_audio": True
         },
         {
             "level_score": 3,
@@ -7090,7 +7127,8 @@ data = {
             "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: Где НЕ будет ждать говорящий?\n\n1) У входа в кафе\n2) На скамейке напротив\n3) В зале кафе.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
-            "answer": 3
+            "answer": 3,
+            "with_audio": True
         },
         {
             "level_score": 3,
