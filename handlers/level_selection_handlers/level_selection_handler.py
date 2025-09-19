@@ -84,7 +84,7 @@ async def explanation_handler(callback: CallbackQuery, state: FSMContext):
         explanation, task_id, user_answer = callback.data.split("!ПУ!")
         gigachat_explanation = await explain_multiple_choice(task_ident=task_id, user_answer=user_answer)
 
-        progress = await show_progress(user_id)
+        progress = await show_progress(user_id, level)
         if progress['score'] >= 100:
             await callback.message.answer(f"{str(gigachat_explanation)} \n🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
                                  parse_mode="Markdown",
@@ -157,7 +157,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
             else:
                 response_text = 'Ошибка: неверный формат ответа от системы проверки'
 
-            progress = await show_progress(user_id)
+            progress = await show_progress(user_id, level)
             if progress['score'] >= 100:
                 await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
                                      parse_mode="Markdown",
@@ -254,7 +254,7 @@ async def check_text_answer(message: Message, state: FSMContext):
                                  )
 
         else:
-            progress = await show_progress(user_id)
+            progress = await show_progress(user_id, level)
 
             if progress['score'] >= 100:
 
