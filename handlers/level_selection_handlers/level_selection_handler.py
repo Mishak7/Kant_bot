@@ -101,6 +101,8 @@ async def explanation_handler(callback: CallbackQuery, state: FSMContext):
                                                                 [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
         await callback.answer()
+        await state.clear()
+        
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await callback.answer('Ошибка при объяснении задания multiple_choice', show_alert=True)
@@ -178,7 +180,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
                                          [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
                                          [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
-            await state.clear()
+            
 
         finally:
             os.unlink(voice_file_path)
@@ -274,7 +276,7 @@ async def check_text_answer(message: Message, state: FSMContext):
                             [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
 
-        await state.clear()
+
 
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
