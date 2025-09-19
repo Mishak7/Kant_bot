@@ -75,8 +75,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
 async def explanation_handler(callback: CallbackQuery, state: FSMContext):
     try:
         data = await state.get_data()
-        level = data['level']
-        user_id = data['user_id']
+        level = data.get('level')
+        user_id = data.get('user_id')
         new_level = levels[levels.index(level) + 1] if len(levels) >= levels.index(
                 level) + 1 else 'всё!'
 
