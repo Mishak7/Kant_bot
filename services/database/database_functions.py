@@ -196,11 +196,15 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
     """
     try:
         async with aiosqlite.connect('BFU.db') as db:
-            cursor = await db.execute("SELECT score FROM UserModules WHERE user_id = ? AND level_name=?",
-                                      (user_id, name_level))
+            cursor = await db.execute("SELECT level_id FROM Levels WHERE level_name = ?", (name_level,))
+            level_row = await cursor.fetchone()
+            level_id = level_row[0] if level_row else None
+
+            cursor = await db.execute("SELECT score FROM UserModules WHERE user_id = ? AND level_id=?",
+                                      (user_id, level_id))
             row = await cursor.fetchone()
             user_score = row[0] if row else 0
-
+          
             if user_score < 30:
                 module_type = 'Easy'
             elif 30 <= user_score < 60:
