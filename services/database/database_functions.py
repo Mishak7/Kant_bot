@@ -204,7 +204,7 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
                                       (user_id, level_id))
             row = await cursor.fetchone()
             user_score = row[0] if row else 0
-
+          
             if user_score < 30:
                 module_type = 'Easy'
             elif 30 <= user_score < 60:
