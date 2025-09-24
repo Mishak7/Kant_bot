@@ -98,6 +98,7 @@ async def explanation_handler(callback: CallbackQuery, state: FSMContext):
             await callback.message.answer(
                 f"{str(gigachat_explanation)} \n🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
                 parse_mode="Markdown",
+                message_effect_id="5046509860389126442",
                 reply_markup=InlineKeyboardMarkup(
                     inline_keyboard=[[InlineKeyboardButton(
                         text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
@@ -173,6 +174,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
             if progress['score'] >= 100:
                 await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
                                      parse_mode="Markdown",
+                                     message_effect_id="5046509860389126442",
                                      reply_markup=InlineKeyboardMarkup(
                                          inline_keyboard=[[InlineKeyboardButton(
                                              text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
@@ -186,6 +188,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
                 await message.answer(
                     response_text,
                     parse_mode="Markdown",
+                    message_effect_id="5046509860389126442",
                     reply_markup=InlineKeyboardMarkup(
                         inline_keyboard=[
                             [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
@@ -284,6 +287,7 @@ async def check_text_answer(message: Message, state: FSMContext):
                 await message.answer(
                     response_text,
                     parse_mode="Markdown",
+                    message_effect_id="5046509860389126442",
                     reply_markup=InlineKeyboardMarkup(
                         inline_keyboard=[
                             [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],

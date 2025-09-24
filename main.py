@@ -21,7 +21,7 @@ from typing import Callable, Dict, Any, Awaitable
 from aiogram.types import TelegramObject
 import aiosqlite
 import asyncio
-
+import os
 
 
 class LanguageMiddleware(BaseMiddleware):
@@ -39,6 +39,10 @@ class LanguageMiddleware(BaseMiddleware):
 
 async def init_db():
     """Асинхронная инициализация базы данных"""
+    if os.path.exists('BFU.db'):
+        logger.info("Database already exists")
+        return
+
     async with aiosqlite.connect('BFU.db') as db:
         await db.execute("""
         CREATE TABLE IF NOT EXISTS Levels (
@@ -47,7 +51,7 @@ async def init_db():
         level_name TEXT
         )
         """
-                       )
+                         )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS Modules (
@@ -55,7 +59,7 @@ async def init_db():
         module_name TEXT
         )
         """
-                       )
+                         )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS LevelsModules(
@@ -66,7 +70,7 @@ async def init_db():
         PRIMARY KEY (level_id, module_id)
         )
         """
-                       )
+                         )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS Tasks(
@@ -83,7 +87,7 @@ async def init_db():
         FOREIGN KEY(module_id) REFERENCES Modules(module_id)
         )
         """
-                       )
+                         )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS TasksAnswers(
@@ -93,7 +97,7 @@ async def init_db():
         FOREIGN KEY(task_id) REFERENCES Tasks(task_id)
         )
         """
-                       )
+                         )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS Users(
@@ -106,7 +110,7 @@ async def init_db():
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
         """
-                       )
+                         )
 
         # изменила module_id на level_id (чтобы мы сохраняли именно прогресс по уровню, а не easy и тд модулям
         await db.execute("""
@@ -123,7 +127,7 @@ async def init_db():
         FOREIGN KEY(level_name) REFERENCES Levels(level_name)
         )
         """
-                       )
+                         )
 
         await db.execute("""
         CREATE TABLE IF NOT EXISTS UserProgress(
@@ -138,7 +142,7 @@ async def init_db():
         FOREIGN KEY(task_id) REFERENCES Tasks(task_id)
         )
         """
-                       )
+                         )
 
         await db.commit()
 
@@ -161,10 +165,9 @@ async def init_db():
         logger.info("База данных инициализирована")
 
 
-
 async def main():
-    # await init_db()
-    # await add_tasks(data=data)
+    await init_db()
+    await add_tasks(data=data, update_existing=True)
 
     bot = Bot(token=settings.TELEGRAM_TOKEN)
     storage = MemoryStorage()

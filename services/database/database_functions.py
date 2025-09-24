@@ -12,8 +12,7 @@ from config.settings import Settings
 import json
 from aiogram.types import FSInputFile
 
-
-#ОЧЕНЬ ВРЕМЕННО - спрятать такое лучше
+# ОЧЕНЬ ВРЕМЕННО - спрятать такое лучше
 gigachat = GigaChat(temperature=0,
                     top_p=0.1,
                     credentials=Settings.GIGA_CREDENTIALS,
@@ -22,30 +21,32 @@ gigachat = GigaChat(temperature=0,
 
 
 async def add_tasks(
-    data=None,
-    level_score=None,
-    level_name=None,
-    module_name=None,
-    type_task=None,
-    task_content=None,
-    task_question=None,
-    check_method=None,
-    task_score=None,
-    answer=None,
-    with_audio=False
+        data=None,
+        level_score=None,
+        level_name=None,
+        module_name=None,
+        type_task=None,
+        task_content=None,
+        task_question=None,
+        check_method=None,
+        task_score=None,
+        answer=None,
+        with_audio=False,
+        update_existing=False  # НОВЫЙ ПАРАМЕТР
 ):
     async def add_single_task(
-        db,
-        level_score,
-        level_name,
-        module_name,
-        type_task,
-        task_content,
-        task_question,
-        check_method,
-        task_score,
-        answer=None,
-        with_audio=False
+            db,
+            level_score,
+            level_name,
+            module_name,
+            type_task,
+            task_content,
+            task_question,
+            check_method,
+            task_score,
+            answer=None,
+            with_audio=False,
+            update_existing=False  # Параметр передается во внутреннюю функцию
     ):
         async with db.cursor() as cursor:
             await cursor.execute("SELECT level_id FROM Levels WHERE level_name=?", (level_name,))
@@ -54,7 +55,7 @@ async def add_tasks(
                 level_id = row[0]
             else:
                 await cursor.execute("INSERT INTO Levels (level_score, level_name) VALUES(?, ?)",
-                                    (level_score, level_name))
+                                     (level_score, level_name))
                 level_id = cursor.lastrowid
 
             await cursor.execute("SELECT module_id FROM Modules WHERE module_name=?", (module_name,))
@@ -67,9 +68,15 @@ async def add_tasks(
 
             await cursor.execute("SELECT 1 FROM LevelsModules WHERE level_id=? AND module_id=?", (level_id, module_id))
             if not await cursor.fetchone():
-                await cursor.execute("INSERT INTO LevelsModules(level_id, module_id) VALUES(?, ?)", (level_id, module_id))
+                await cursor.execute("INSERT INTO LevelsModules(level_id, module_id) VALUES(?, ?)",
+                                     (level_id, module_id))
 
-            await cursor.execute("SELECT task_id FROM Tasks WHERE question=? AND content=?", (task_question, task_content))
+            # Проверяем существование задания
+            await cursor.execute("""
+                SELECT task_id FROM Tasks 
+                WHERE level_id=? AND module_id=? AND type=? AND content=? AND question=? AND check_method=?
+            """, (level_id, module_id, type_task, task_content, task_question, check_method))
+
             row = await cursor.fetchone()
             if not row:
                 if with_audio:
@@ -79,7 +86,8 @@ async def add_tasks(
                     await cursor.execute("""
                         INSERT INTO Tasks(level_id, module_id, type, content, question, score, check_method, audio)
                         VALUES(?, ?, ?, ?, ?, ?, ?, ?)
-                    """, (level_id, module_id, type_task, task_content, task_question, task_score, check_method, audio_blob))
+                    """, (level_id, module_id, type_task, task_content, task_question, task_score, check_method,
+                          audio_blob))
                     if os.path.exists(audio_path):
                         os.remove(audio_path)
                 else:
@@ -88,14 +96,57 @@ async def add_tasks(
                         VALUES(?, ?, ?, ?, ?, ?, ?)
                     """, (level_id, module_id, type_task, task_content, task_question, task_score, check_method))
                 task_id = cursor.lastrowid
+
+                # Добавляем ответ только для нового задания
+                if answer is not None:
+                    await cursor.execute("""
+                        INSERT INTO TasksAnswers (task_id, correct_answer)
+                        VALUES (?, ?)
+                    """, (task_id, answer))
             else:
                 task_id = row[0]
+                if update_existing:
+                    # ОБНОВЛЯЕМ существующее задание
+                    if with_audio:
+                        audio_path = text_to_speech(task_content, "temp.wav")
+                        with open(audio_path, "rb") as f:
+                            audio_blob = f.read()
+                        await cursor.execute("""
+                            UPDATE Tasks 
+                            SET score=?, check_method=?, audio=?
+                            WHERE task_id=?
+                        """, (task_score, check_method, audio_blob, task_id))
+                        if os.path.exists(audio_path):
+                            os.remove(audio_path)
+                    else:
+                        await cursor.execute("""
+                            UPDATE Tasks 
+                            SET score=?, check_method=?
+                            WHERE task_id=?
+                        """, (task_score, check_method, task_id))
 
-            if answer is not None:
-                await cursor.execute("""
-                    INSERT INTO TasksAnswers (task_id, correct_answer)
-                    VALUES (?, ?)
-                """, (task_id, answer))
+                    # Обновляем ответ если нужно
+                    if answer is not None:
+                        # Сначала проверяем, есть ли уже ответ для этого задания
+                        await cursor.execute("SELECT id FROM TasksAnswers WHERE task_id=?", (task_id,))
+                        existing_answer = await cursor.fetchone()
+
+                        if existing_answer:
+                            await cursor.execute("""
+                                UPDATE TasksAnswers 
+                                SET correct_answer=?
+                                WHERE task_id=?
+                            """, (answer, task_id))
+                        else:
+                            await cursor.execute("""
+                                INSERT INTO TasksAnswers (task_id, correct_answer)
+                                VALUES (?, ?)
+                            """, (task_id, answer))
+
+                    logger.debug(f"Updated existing task: {task_question}")
+                else:
+                    logger.debug(f"Task has already been in DB: {task_question}")
+
             await db.commit()
 
     async with aiosqlite.connect('BFU.db') as db:
@@ -113,7 +164,8 @@ async def add_tasks(
                     check_method=task.get("check_method"),
                     task_score=task.get("task_score"),
                     answer=task.get("answer"),
-                    with_audio=task.get("with_audio", False)
+                    with_audio=task.get("with_audio", False),
+                    update_existing=update_existing  # Передаем параметр обновления
                 )
         else:
             await add_single_task(
@@ -127,7 +179,8 @@ async def add_tasks(
                 check_method=check_method,
                 task_score=task_score,
                 answer=answer,
-                with_audio=with_audio
+                with_audio=with_audio,
+                update_existing=update_existing  # Передаем параметр обновления
             )
 
 
@@ -144,6 +197,7 @@ async def create_user(telegram_id: int, username: str):
         logger.error(f"Error creating user: {e}")
         return False
 
+
 async def check_user_exists(telegram_id: int) -> bool:
     try:
         async with aiosqlite.connect('BFU.db') as db:
@@ -153,6 +207,7 @@ async def check_user_exists(telegram_id: int) -> bool:
     except Exception as e:
         logger.error(f"Error checking user existence: {e}")
         return False
+
 
 async def get_user_name(telegram_id: int) -> Optional[str]:
     try:
@@ -204,7 +259,7 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
                                       (user_id, level_id))
             row = await cursor.fetchone()
             user_score = row[0] if row else 0
-          
+
             if user_score < 30:
                 module_type = 'Easy'
             elif 30 <= user_score < 60:
@@ -236,7 +291,6 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
     except Exception as e:
         logger.error(f"Error getting a task: {e}")
         return False
-
 
 
 async def prepare_question(task):
@@ -281,8 +335,8 @@ async def update_user_score(user_ident, level_id, score_change):
     try:
         async with aiosqlite.connect('BFU.db') as db:
             result = await db.execute(
-            "SELECT score FROM UserModules WHERE user_id=? AND level_id=?",
-        (user_ident, level_id))
+                "SELECT score FROM UserModules WHERE user_id=? AND level_id=?",
+                (user_ident, level_id))
             score = await result.fetchone()
             if score:
                 if score[0] < 100:
@@ -298,20 +352,21 @@ async def update_user_score(user_ident, level_id, score_change):
 
             else:
                 await db.execute(
-                "INSERT INTO UserModules (user_id, level_id, score) VALUES (?, ?, ?)",
-                (user_ident, level_id, score_change))
+                    "INSERT INTO UserModules (user_id, level_id, score) VALUES (?, ?, ?)",
+                    (user_ident, level_id, score_change))
             await db.commit()
             return None
     except Exception as e:
         logger.error(f"Error connecting to db: {e}")
         return False
 
+
 async def update_user_progress(user_ident, task_ident, correct):
     try:
         async with aiosqlite.connect('BFU.db') as db:
             result = await db.execute(
-        "SELECT task_id FROM UserProgress WHERE user_id=? AND task_id=?",
-        (user_ident, task_ident))
+                "SELECT task_id FROM UserProgress WHERE user_id=? AND task_id=?",
+                (user_ident, task_ident))
             if await result.fetchone():
                 await db.execute(
                     "UPDATE UserProgress SET is_correct=? WHERE user_id=? AND task_id=?",
@@ -328,6 +383,7 @@ async def update_user_progress(user_ident, task_ident, correct):
     except Exception as e:
         logger.error(f"Error connecting to db: {e}")
         return False
+
 
 async def check_task(user_ident, task_ident, user_answer, is_voice=False):
     """
@@ -387,7 +443,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                         json_content = content
 
                     print(json_content)
-                    result = json.loads(json_content)
+                    result = json.loads(json_content, ensure_ascii=True)
                     score = result.get('score', 0)
                     max_score = result.get('max_score', 0)
                     explanation = result.get('explanation', "")
@@ -437,7 +493,7 @@ async def explain_multiple_choice(task_ident, user_answer):
             )
             response = gigachat.invoke([
                 SystemMessage(content=explain)
-                ])
+            ])
 
             try:
                 content = response.content.strip()
@@ -458,19 +514,17 @@ async def write_user_progress(user_id: int,
                               user_answer: str,
                               is_correct: bool,
                               score_earned: int):
-
     async with aiosqlite.connect('BFU.db') as db:
         await db.execute("""
         INSERT INTO UserProgress (user_id, task_id, user_answer, is_correct, created_at)
         VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)""",
-                                  (user_id,
-                                   task_id,
-                                   user_answer,
-                                   is_correct,
-                                   score_earned,
-                                   ))
+                         (user_id,
+                          task_id,
+                          user_answer,
+                          is_correct,
+                          score_earned,
+                          ))
         await db.commit()
-
 
 
 async def show_progress(user_ident, level_name):
@@ -484,23 +538,24 @@ async def show_progress(user_ident, level_name):
                 'level_name': level_name,
                 'text': f"Ваш прогресс по уровню {level_name}: {min(score, 100)} / 100 баллов."}
 
+
 async def give_hint(task_id):
     try:
         async with aiosqlite.connect('BFU.db') as db:
-            cursor = await db.execute("SELECT content, question FROM Tasks WHERE task_id=?", (task_id, ))
+            cursor = await db.execute("SELECT content, question FROM Tasks WHERE task_id=?", (task_id,))
             content, question = await cursor.fetchone()
 
             cursor = await db.execute("""
             SELECT correct_answer 
             FROM TasksAnswers WHERE task_id=?
-            """, (task_id, ))
+            """, (task_id,))
             result = await cursor.fetchone()
             answer = result[0] if result else None
 
             hint = hint_prompt.format(
-            content=content,
-            question=question,
-            answer=answer
+                content=content,
+                question=question,
+                answer=answer
             )
 
             response = gigachat.invoke([
