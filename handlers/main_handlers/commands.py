@@ -30,8 +30,11 @@ from handlers.sber_handlers.sber_keyboard import sber_keyboard
 from handlers.main_handlers.languages import TEXTS
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-from services.database.database_functions import  create_user, get_user_name
+from services.database.database_functions import create_user, get_user_name
 from handlers.level_selection_handlers.level_selection_keyboard import level_selection_keyboard
+from handlers.language_leadership_handlers.language_leadership_keyboard import language_leadership_or_level_keyboard
+from handlers.language_leadership_handlers.language_leadership_handlers import select_leaders_from_leaderboard
+
 
 class LanguageState(StatesGroup):
     waiting_for_language = State()
@@ -40,8 +43,10 @@ class LanguageState(StatesGroup):
 class UserRegistration(StatesGroup):
     waiting_for_name = State()
 
+
 router = Router()
 user_languages = {}
+
 
 @router.message(CommandStart())
 async def send_welcome(message: types.Message, state: FSMContext):
@@ -49,9 +54,10 @@ async def send_welcome(message: types.Message, state: FSMContext):
         logger.info(f'User {message.from_user.id} started bot')
         await state.set_state(LanguageState.waiting_for_language)
         await message.answer("Выберите язык / Choose language:",
-                           reply_markup=language_selection())
+                             reply_markup=language_selection())
     except Exception as e:
         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
+
 
 @router.callback_query(F.data == 'start_again')
 async def send_welcome_callback(callback: CallbackQuery, state: FSMContext):
@@ -59,7 +65,7 @@ async def send_welcome_callback(callback: CallbackQuery, state: FSMContext):
         logger.info(f'User {callback.from_user.id} started bot')
         await state.set_state(LanguageState.waiting_for_language)
         await callback.message.edit_text("Выберите язык / Choose language:",
-                           reply_markup=language_selection())
+                                         reply_markup=language_selection())
     except Exception as e:
         logger.error(f'Welcome error: {e}\n{traceback.format_exc()}')
 
@@ -173,7 +179,6 @@ async def sber_info(callback: CallbackQuery, language: str):
         await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
 
 
-
 @router.callback_query(F.data == "language_check")
 async def language_check_info(callback: CallbackQuery, language: str, state: FSMContext):
     """Display language checking tools section with user check."""
@@ -188,10 +193,9 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
             await state.set_state(UserRegistration.waiting_for_name)
             return
 
-
-        text = f"Привет, {user_info[0]}! Переходи к заданиям: 👇"
+        text = f"Привет, {user_info[0]}!🧑‍🎓"
         await callback.message.delete()
-        await callback.message.answer(text, reply_markup=level_selection_keyboard(), parse_mode="Markdown")
+        await callback.message.answer(text, reply_markup=language_leadership_or_level_keyboard(), parse_mode="Markdown")
         await callback.answer()
 
     except Exception as e:
@@ -199,6 +203,16 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
         await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
 
 
+@router.callback_query(F.data == "go_to_levels")
+async def select_level(callback: CallbackQuery):
+    await callback.message.edit_text(text='👇Выбери уровень:', reply_markup=level_selection_keyboard(),
+                                   parse_mode="Markdown")
+
+
+@router.callback_query(F.data == 'leadership_board')
+async def go_to_leaderboard(callback: CallbackQuery):
+    leaders = await select_leaders_from_leaderboard()
+    await callback.message.edit_text(text=leaders, parse_mode="Markdown")
 
 @router.message(UserRegistration.waiting_for_name)
 async def process_name(message: Message, state: FSMContext, language: str):

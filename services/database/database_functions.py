@@ -290,10 +290,20 @@ async def update_user_score(user_ident, level_id, score_change):
                         "UPDATE UserModules SET score = score + ? WHERE user_id = ? AND level_id = ?",
                         (score_change, user_ident, level_id))
 
+                    await db.execute(
+                        "UPDATE Users SET score = score + ? WHERE id = ?",
+                        (score_change, user_ident)
+                    )
+
                 else:
                     await db.execute(
                         "UPDATE UserModules SET is_completed = 1, completed_at = CURRENT_TIMESTAMP WHERE user_id = ? AND level_id = ?",
                         (score_change, user_ident, level_id)
+                    )
+
+                    await db.execute(
+                        "UPDATE Users SET score = score + ? WHERE id = ?",
+                        (score_change, user_ident)
                     )
 
             else:
