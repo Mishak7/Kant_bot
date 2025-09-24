@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7fcfffb-15b4-496d-8d0d-3c3d9cba29c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/handlers/language_leadership_handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/language_leadership_handlers/language_leadership_handlers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/language_leadership_handlers/language_leadership_keyboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers/main_handlers/main_prompts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers/main_handlers/main_prompts/prompt_obscene_language.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/neural_network_communication/gigachat_communication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/main_handlers/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/main_handlers/commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/database/database_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/database/database_functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

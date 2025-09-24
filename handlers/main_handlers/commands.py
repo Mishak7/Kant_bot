@@ -34,6 +34,8 @@ from services.database.database_functions import create_user, get_user_name
 from handlers.level_selection_handlers.level_selection_keyboard import level_selection_keyboard
 from handlers.language_leadership_handlers.language_leadership_keyboard import language_leadership_or_level_keyboard
 from handlers.language_leadership_handlers.language_leadership_handlers import select_leaders_from_leaderboard
+from services.neural_network_communication.gigachat_communication import gigachat_response
+from handlers.main_handlers.main_prompts import prompt_obscene_language as obscene_prompt
 
 
 class LanguageState(StatesGroup):
@@ -226,6 +228,11 @@ async def process_name(message: Message, state: FSMContext, language: str):
 
         if len(user_name) > 50:
             await message.answer("❌ Имя слишком длинное. Максимум 50 символов. Попробуйте еще раз:")
+            return
+
+        response = await gigachat_response(text=user_name, prompt=obscene_prompt)
+        if response == 'False':
+            await message.answer("❌ Имя содержит нецензурную лексику. Попробуйте еще раз:")
             return
 
         success = await create_user(
