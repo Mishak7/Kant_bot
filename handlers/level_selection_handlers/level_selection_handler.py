@@ -1,11 +1,6 @@
 from aiogram import Router, F, Bot
 import os
 import tempfile
-
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, reply_keyboard_markup, KeyboardButton, \
-    ReplyKeyboardMarkup, ReplyKeyboardRemove
-
-from aiogram.filters import state
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
 from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, \
@@ -71,6 +66,9 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
                                      [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                            callback_data="language_check")]
                                      ]))
+
+                number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
+                                                   string=prepared_task['content']))
                 if number_of_buttons != 0:
                     await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
         else:
