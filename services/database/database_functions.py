@@ -11,6 +11,7 @@ from services.database.speech_utils import transcribe_voice_message, text_to_spe
 from config.settings import Settings
 import json
 from aiogram.types import FSInputFile
+import random
 
 # ОЧЕНЬ ВРЕМЕННО - спрятать такое лучше
 gigachat = GigaChat(temperature=0,
@@ -295,6 +296,28 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
             row = await cursor.fetchone()
             return row
 
+    except Exception as e:
+        logger.error(f"Error getting a task: {e}")
+        return False
+
+
+async def review_mistakes(user_id):
+    """
+    Функция, которая позволяет пользователю после прохождения всего уровня перепройти невыполненные или плохо выполненные задания.
+    """
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT task_id FROM UserProgress WHERE user_id = ? AND is_correct = ?", (user_id, False))
+            unfinished_tasks = await cursor.fetchone()
+            
+            cursor = await db.execute(
+                """SELECT T.task_id, T.content, T.type, T.question, T.audio FROM Tasks T
+                WHERE T.task_id = ?
+                """,
+                (random.choice(unfinished_tasks)))
+            row = await cursor.fetchone()
+            return row
+        
     except Exception as e:
         logger.error(f"Error getting a task: {e}")
         return False

@@ -11,12 +11,11 @@ from handlers.language_check_handlers.grammar_handlers import grammar_handlers
 from handlers.language_check_handlers.listening_handlers import listening_handlers
 from handlers.language_check_handlers.speaking_handlers import speaking_handlers
 from handlers.sber_handlers import sber_handlers
-<<<<<<< HEAD
 
 async def main():
     bot = Bot(token=settings.TELEGRAM_TOKEN)
     dp = Dispatcher()
-=======
+
 from aiogram.fsm.storage.memory import MemoryStorage
 from handlers.level_selection_handlers import level_selection_handler
 from services.database.database_fill import data
@@ -179,7 +178,6 @@ async def main():
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
     dp.update.middleware(LanguageMiddleware())
->>>>>>> main
 
     dp.include_router(commands.router)
     dp.include_router(dormitory_handlers.router)
@@ -192,10 +190,7 @@ async def main():
     dp.include_router(listening_handlers.router)
     dp.include_router(speaking_handlers.router)
     dp.include_router(sber_handlers.router)
-<<<<<<< HEAD
-=======
     dp.include_router(level_selection_handler.router)
->>>>>>> main
 
     try:
         logger.info('Bot started')
@@ -205,11 +200,6 @@ async def main():
     finally:
         await bot.session.close()
 
-<<<<<<< HEAD
-if __name__ == '__main__':
-    import asyncio
-=======
-
-if __name__ == '__main__':
->>>>>>> main
-    asyncio.run(main())
+    if __name__ == '__main__':
+        import asyncio
+        asyncio.run(main())
