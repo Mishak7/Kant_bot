@@ -144,12 +144,6 @@ async def explanation_handler(callback: CallbackQuery, state: FSMContext):
 async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
     """Handler for voice answers from user"""
     try:
-        try:
-            await message.bot.delete_message(
-                chat_id=message.chat.id,
-                message_id=message.message_id - 1)
-        except:
-            pass
 
         file_id = message.voice.file_id
         file = await bot.get_file(file_id)
