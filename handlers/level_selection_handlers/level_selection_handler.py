@@ -69,6 +69,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
                                      [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                            callback_data="language_check")]
                                      ]))
+                if number_of_buttons != 0:
+                    await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
         else:
             await callback.message.answer(text, parse_mode="Markdown",
                                           reply_markup=InlineKeyboardMarkup(
