@@ -2,6 +2,9 @@ from aiogram import Router, F, Bot
 import os
 import tempfile
 
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, reply_keyboard_markup, KeyboardButton, \
+    ReplyKeyboardMarkup, ReplyKeyboardRemove
+
 from aiogram.filters import state
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
@@ -10,6 +13,8 @@ from services.database.database_functions import get_task, check_task, prepare_q
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 import traceback
+import re
+from handlers.level_selection_handlers.level_selection_keyboard import answer_keyboard
 
 router = Router()
 
@@ -48,6 +53,10 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         user_id = await get_user_id(telegram_id)
         task = await get_task(level, user_id)
         prepared_task = await prepare_question(task)
+
+        number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
+                                       string=prepared_task['content']))
+
         text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
         is_speaking_task = prepared_task.get('type') == 'Speaking'
         if prepared_task.get('audio'):
@@ -68,6 +77,9 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
                                                                [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                                                      callback_data="language_check")]
                                                                ]))
+
+            if number_of_buttons != 0:
+                await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
 
         await callback.answer()
         await state.update_data(

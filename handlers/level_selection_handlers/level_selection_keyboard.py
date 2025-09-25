@@ -1,10 +1,9 @@
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, reply_keyboard_markup, KeyboardButton, \
+    ReplyKeyboardMarkup, ReplyKeyboardRemove
 
 """
 Keyboards for handlers of level selection.
 """
-
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 def level_selection_keyboard() -> InlineKeyboardMarkup:
     """Creates a keyboard layout for level selection."""
@@ -23,3 +22,22 @@ def back_to_level_selection_keyboard():
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=f"◀️ Назад", callback_data="back_to_level_selection")]
     ])
+
+
+def answer_keyboard(number_of_buttons:int):
+
+    keyboards = {
+        2: ReplyKeyboardMarkup(keyboard=
+            [[KeyboardButton(text="1"), KeyboardButton(text="2")]],
+                               resize_keyboard=True, one_time_keyboard=True),
+
+        3: ReplyKeyboardMarkup(keyboard=[
+            [KeyboardButton(text="1"), KeyboardButton(text="2"),KeyboardButton(text="3")]], resize_keyboard=True, one_time_keyboard=True),
+
+        4: ReplyKeyboardMarkup(keyboard=[
+        [KeyboardButton(text="1"), KeyboardButton(text="2")],
+        [KeyboardButton(text="3"), KeyboardButton(text="4")]],
+            resize_keyboard=True, one_time_keyboard=True),}
+
+    return keyboards[number_of_buttons]
+
