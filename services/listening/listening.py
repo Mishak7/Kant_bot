@@ -46,7 +46,11 @@ class ListeningGeneration:
                                     verify=False)
         return response.content
 
+<<<<<<< HEAD
     def create_file(self, filename='output.wav'):
+=======
+    def create_file(self, filename='other_audio/output.wav'):
+>>>>>>> main
         with wave.open(filename, 'wb') as wf:
             wf.setnchannels(1)
             wf.setsampwidth(2)

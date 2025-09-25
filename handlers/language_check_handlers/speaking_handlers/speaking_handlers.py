@@ -6,17 +6,26 @@ from aiogram.fsm.context import FSMContext
 from services.speaking.speaking import SpeakingAnalyzer
 from handlers.language_check_handlers.speaking_handlers.speaking_keyboard import back_to_language_keyboard
 from handlers.main_handlers.languages import TEXTS
+<<<<<<< HEAD
 from handlers.main_handlers.commands import get_user_language
+=======
+>>>>>>> main
 
 
 class SpeakingStates(StatesGroup):
     waiting_for_voice = State()
 
 router = Router()
+<<<<<<< HEAD
 language = get_user_language(callback.from_user.id)
 
 @router.callback_query(F.data == 'language_speaking')
 async def speaking_send(callback: CallbackQuery, state: FSMContext):
+=======
+
+@router.callback_query(F.data == 'language_speaking')
+async def speaking_send(callback: CallbackQuery, state: FSMContext, language: str):
+>>>>>>> main
     topics = TEXTS[language]['handlers']['language_check_handlers']['speaking_handlers']['topics']
     chosen_topic = random.choice(topics)
 
@@ -26,7 +35,11 @@ async def speaking_send(callback: CallbackQuery, state: FSMContext):
 
 
 @router.message(F.voice, SpeakingStates.waiting_for_voice)
+<<<<<<< HEAD
 async def handle_voice_message(message: Message, state: FSMContext, bot: Bot):
+=======
+async def handle_voice_message(message: Message, state: FSMContext, bot: Bot, language: str):
+>>>>>>> main
     state_data = await state.get_data()
     topic = state_data.get('topic', 'Неизвестная тема')
 
@@ -37,8 +50,16 @@ async def handle_voice_message(message: Message, state: FSMContext, bot: Bot):
 
     try:
         result = await analyzer.process_voice_message(file_content.read())
+<<<<<<< HEAD
         await message.answer(f"Результат анализа:\n\n{result}", parse_mode="Markdown", reply_markup=back_to_language_keyboard())
     except Exception as e:
         await message.answer(f"{TEXTS[language]['errors']['audio_error']}: {e}")
 
     await state.clear()
+=======
+        await message.answer(f"Результат анализа:\n\n{result}", parse_mode="Markdown", reply_markup=back_to_language_keyboard(language))
+    except Exception as e:
+        await message.answer(f"{TEXTS[language]['errors']['audio_error']}: {e}")
+
+    await state.clear()
+>>>>>>> main

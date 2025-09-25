@@ -6,4 +6,10 @@ langchain-core~=0.3.74
 pydub~=0.25.1
 langchain-community~=0.3.28
 urllib3~=2.5.0
+<<<<<<< HEAD
 langgraph~=0.6.6
+=======
+langgraph~=0.6.6
+sqlalchemy~=2.0.43
+aiosqlite~=0.21.0
+>>>>>>> main

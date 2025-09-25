@@ -7,7 +7,11 @@ import requests
 from pydub import AudioSegment
 import tempfile
 import os
+<<<<<<< HEAD
 from handlers.language_check_handlers.database.prompts.prompt_check_speaking import system_prompt
+=======
+from services.speaking.speaking_prompt import system_prompt
+>>>>>>> main
 
 class SpeakingAnalyzer(ListeningGeneration):
     def __init__(self, text: str):
@@ -23,7 +27,11 @@ class SpeakingAnalyzer(ListeningGeneration):
             gigachat = GigaChat(
                 credentials=settings.GIGA_CREDENTIALS,
                 scope="GIGACHAT_API_PERS",
+<<<<<<< HEAD
                 model='GigaChat-Pro',
+=======
+                model='GigaChat-2-Max',
+>>>>>>> main
                 verify_ssl_certs=False
             )
             return gigachat

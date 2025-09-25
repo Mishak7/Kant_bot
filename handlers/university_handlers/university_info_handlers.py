@@ -34,4 +34,9 @@ async def office_contacts_handler(callback: CallbackQuery, language: str):
 async def visa_center_handler(callback: CallbackQuery, language: str):
     VISA_CENTER_TEXT = TEXTS[language]['handlers']['university_info_handlers']['visa_center_text']
     await callback.message.edit_text(VISA_CENTER_TEXT, parse_mode='Markdown', reply_markup=visa_info_keyboard(language))
+<<<<<<< HEAD
     await callback.answer()
+=======
+    await callback.answer()
+
+>>>>>>> main

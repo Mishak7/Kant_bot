@@ -25,4 +25,18 @@ def back_to_critical_keyboard(language: str):
     """Returns a single-button keyboard to go back to the 'Critical' section."""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['critical_keyboard']['back']}", callback_data="critical")]
+<<<<<<< HEAD
     ])
+=======
+    ])
+
+def info_keyboard(language: str) -> InlineKeyboardMarkup:
+    """Generates an information menu keyboard for university-related details."""
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="📅 Расписание", callback_data="schedule")],
+        [InlineKeyboardButton(text="💰 Стипендии", callback_data="scholarship")],
+        [InlineKeyboardButton(text="📞 Контакты учебного офиса", callback_data="office_contacts")],
+        [InlineKeyboardButton(text="🌍 Визово-миграционный центр", callback_data="visa_center")],
+        [InlineKeyboardButton(text="◀️ Назад", callback_data="back_to_main")]
+    ])
+>>>>>>> main

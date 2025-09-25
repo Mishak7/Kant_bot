@@ -39,4 +39,11 @@ def visa_info_keyboard(language: str) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=f"🌍 {TEXTS[language]['keyboards']['university_info_keyboard']['visa_center']}", url="https://kantiana.ru/universitys/administration/mezhdunarodnyy-ofis/")],
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['university_info_keyboard']['back']}", callback_data='info')]
+<<<<<<< HEAD
     ])
+=======
+    ])
+
+
+
+>>>>>>> main
