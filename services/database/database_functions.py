@@ -11,6 +11,7 @@ from services.database.speech_utils import transcribe_voice_message, text_to_spe
 from config.settings import Settings
 import json
 from aiogram.types import FSInputFile
+import re
 
 # ОЧЕНЬ ВРЕМЕННО - спрятать такое лучше
 gigachat = GigaChat(temperature=0,
@@ -48,7 +49,6 @@ async def add_tasks(
         update_existing=False
     ):
         async with db.cursor() as cursor:
-            # Проверяем существование уровня по обоим параметрам
             await cursor.execute("SELECT level_id FROM Levels WHERE level_name=? AND level_score=?",
                                (level_name, level_score))
             row = await cursor.fetchone()
@@ -60,7 +60,6 @@ async def add_tasks(
                 level_id = cursor.lastrowid
                 logger.info(f"Добавлен новый уровень: {level_name} (score: {level_score})")
 
-            # Проверяем существование модуля
             await cursor.execute("SELECT module_id FROM Modules WHERE module_name=?", (module_name,))
             row = await cursor.fetchone()
             if row:
@@ -70,14 +69,12 @@ async def add_tasks(
                 module_id = cursor.lastrowid
                 logger.info(f"Добавлен новый модуль: {module_name}")
 
-            # Проверяем связь уровня и модуля
             await cursor.execute("SELECT 1 FROM LevelsModules WHERE level_id=? AND module_id=?", (level_id, module_id))
             if not await cursor.fetchone():
                 await cursor.execute("INSERT INTO LevelsModules(level_id, module_id) VALUES(?, ?)",
                                    (level_id, module_id))
                 logger.info(f"Добавлена связь: уровень {level_name} - модуль {module_name}")
 
-            # Проверяем существование задания
             await cursor.execute("""
                 SELECT task_id FROM Tasks
                 WHERE level_id=? AND module_id=? AND type=? AND content=? AND question=? AND check_method=?
@@ -85,7 +82,6 @@ async def add_tasks(
             row = await cursor.fetchone()
 
             if not row:
-                # Добавляем новое задание
                 if with_audio:
                     audio_path = text_to_speech(task_content, "temp.wav")
                     with open(audio_path, "rb") as f:
@@ -309,6 +305,7 @@ async def prepare_question(task):
     task_id, content, task_type, question, audio = task
     # в выводе задания пользователю мы выводим только question, audio
     # content, task_id нам нужны доя проверки
+
     if audio:
         return {"task_id": task_id, "content": content, "type": task_type, "question": question, "audio": audio}
     else:
@@ -460,7 +457,7 @@ async def check_task(user_ident, task_ident, user_answer, is_voice=False):
                         json_content = content
 
                     print(json_content)
-                    result = json.loads(json_content, ensure_ascii=True)
+                    result = json.loads(json_content)
                     score = result.get('score', 0)
                     max_score = result.get('max_score', 0)
                     explanation = result.get('explanation', "")

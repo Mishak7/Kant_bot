@@ -216,7 +216,7 @@ async def select_level(callback: CallbackQuery):
 @router.callback_query(F.data == 'leadership_board')
 async def go_to_leaderboard(callback: CallbackQuery):
     leaders = await select_leaders_from_leaderboard()
-    await callback.message.edit_text(text=leaders, parse_mode="Markdown")
+    await callback.message.edit_text(text=leaders, parse_mode="Markdown", reply_markup=InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text=f"◀️ Назад", callback_data='language_check')]]))
 
 @router.message(UserRegistration.waiting_for_name)
 async def process_name(message: Message, state: FSMContext, language: str):

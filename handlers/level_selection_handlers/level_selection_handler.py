@@ -66,6 +66,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
                 await callback.bot.send_voice(chat_id=chat_id, voice=audio_file, reply_markup=InlineKeyboardMarkup(
                     inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
                                                            callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
+                                     [InlineKeyboardButton(text='👀 Пропустить',
+                                                           callback_data=level)],
                                      [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                            callback_data="language_check")]
                                      ]))
@@ -76,6 +78,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
                                           reply_markup=InlineKeyboardMarkup(
                                               inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
                                                                                      callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
+                                                               [InlineKeyboardButton(text='👀 Пропустить',
+                                                                                     callback_data=level)],
                                                                [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                                                      callback_data="language_check")]
                                                                ]))
