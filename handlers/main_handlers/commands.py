@@ -34,7 +34,7 @@ from services.database.database_functions import  create_user, get_user_name
 from handlers.level_selection_handlers.level_selection_keyboard import level_selection_keyboard
 from services.database.database_functions import select_leaders_from_leaderboard
 from services.neural_network_communication.gigachat_communication import gigachat_response
-from handlers.main_handlers.main_prompts import prompt_obscene_language as obscene_prompt
+from handlers.main_handlers.main_prompts.prompt_obscene_language import obscene_prompt
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
