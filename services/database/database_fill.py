@@ -7855,7 +7855,7 @@ data = {
             "task_question": "Выбери верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
-            "answer": 2
+            "answer": 1
         },
         {
             "level_score": 4,
