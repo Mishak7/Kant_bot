@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-import traceback
-from aiogram import Router, F, types
-from aiogram.types import CallbackQuery, Message
-from config.logger import logger
-from handlers.language_check_handlers.database.bot_logic import get_task, check_task, prepare_question, get_user_id
-from aiogram.fsm.state import State, StatesGroup
-from aiogram.fsm.context import FSMContext
-
-router = Router()
-
-class AnswerState(StatesGroup):
-    waiting_for_answer = State()
-
-@router.callback_query(F.data.in_(["a1_level", "a2_level", "b1_level", "b2_level", "c1_level", "c2_level"]))
-async def level_handler(callback: CallbackQuery, state: FSMContext):
-    """Handler for all tasks"""
-    try:
-        await state.set_state(AnswerState.waiting_for_answer)
-        level = callback.data.split('_')[0]
-        telegram_id = callback.from_user.id
-        user_id = get_user_id(telegram_id)
-        task = get_task(level, user_id)
-        prepared_task = prepare_question(task)
-        text = f'''
-{prepared_task['question']}
-
-{prepared_task['content']}
-'''
-        await callback.message.edit_text(text, parse_mode="Markdown")
-        await callback.answer()
-
-        await state.update_data(
-            task_id=prepared_task['task_id'],
-            user_id=user_id
-=======
 from aiogram import Router, F, Bot
 import os
 import tempfile
@@ -91,9 +55,12 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
             if audio_file:
                 await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
                 await callback.bot.send_voice(chat_id=chat_id, voice=audio_file, reply_markup=InlineKeyboardMarkup(
-                    inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
+                    inline_keyboard=[
+                                    [InlineKeyboardButton(text='👀 Пропустить',
+                                                           callback_data=level)],
+                                    [InlineKeyboardButton(text='💡 Подсказка',
                                                            callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
-                                     [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                    [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                            callback_data="language_check")]
                                      ]))
         else:
@@ -111,15 +78,12 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
             user_id=user_id,
             is_speaking_task=is_speaking_task,
             level=level
->>>>>>> main
         )
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await callback.answer('Ошибка при загрузке информации', show_alert=True)
 
 
-<<<<<<< HEAD
-=======
 @router.callback_query(F.data.startswith('explanation'))
 async def explanation_handler(callback: CallbackQuery, state: FSMContext):
     try:
@@ -243,7 +207,6 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
         await message.answer('Ошибка при обработке голосового сообщения')
 
 
->>>>>>> main
 @router.message(AnswerState.waiting_for_answer)
 async def check_text_answer(message: Message, state: FSMContext):
     """Проверка текстового ответа от пользователя"""
@@ -251,9 +214,6 @@ async def check_text_answer(message: Message, state: FSMContext):
         data = await state.get_data()
         task_id = data.get('task_id')
         user_id = data.get('user_id')
-<<<<<<< HEAD
-        
-=======
         level = data.get('level')
         is_speaking_task = data.get("is_speaking_task", False)
 
@@ -263,21 +223,10 @@ async def check_text_answer(message: Message, state: FSMContext):
             await message.answer("Пожалуйста, отправь голосовое сообщение.")
             return
 
->>>>>>> main
         if not task_id or not user_id:
             await message.answer("Произошла ошибка. Попробуйте начать заново.")
             await state.clear()
             return
-<<<<<<< HEAD
-        
-        answer_check = check_task(user_id, task_id, message.text)
-        
-        if isinstance(answer_check, str):
-            if answer_check == 'верно':
-                response_text = '✅ Молодец! Все верно!'
-            elif answer_check == 'неверно':
-                response_text = '❌ К сожалению, не верно.'
-=======
 
         if message.content_type == "voice" and message.voice:
             voice_file = await message.voice.download()
@@ -295,22 +244,10 @@ async def check_text_answer(message: Message, state: FSMContext):
                 response_text = f'✅ Молодец! Все верно!\n{score_message}'
             elif answer_check == 'неверно':
                 response_text = '❌ К сожалению, ответ неверный.'
->>>>>>> main
             else:
                 response_text = 'Неизвестный ответ от системы проверки'
         elif isinstance(answer_check, dict):
             response = answer_check
-<<<<<<< HEAD
-            response_text = f"""
-{'✅ Верно!' if response['correct'] is True else '❌ Не верно.'}
-{response['explanation']}
-"""
-        else:
-            response_text = 'Ошибка: неверный формат ответа от системы проверки'
-        await message.answer(response_text, parse_mode="Markdown")
-        await state.clear()
-        
-=======
             print(response)
             response_text = f"""
     Вы набрали {response['score']} баллов из {response['max_score']} возможных.\n\nОбъяснение такой оценки:
@@ -362,7 +299,6 @@ async def check_text_answer(message: Message, state: FSMContext):
 
 
 
->>>>>>> main
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await message.answer('Ошибка при проверке ответа')

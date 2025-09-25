@@ -9,7 +9,6 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 def level_selection_keyboard() -> InlineKeyboardMarkup:
     """Creates a keyboard layout for level selection."""
     return InlineKeyboardMarkup(inline_keyboard=[
-<<<<<<< HEAD
         [InlineKeyboardButton(text=f"✏️ A1", callback_data='a1_level')],
         [InlineKeyboardButton(text=f"📝 A2", callback_data='a2_level')],
         [InlineKeyboardButton(text=f"⭐ B1", callback_data='b1_level')],
@@ -20,7 +19,7 @@ def level_selection_keyboard() -> InlineKeyboardMarkup:
     ])
 
 def back_to_level_selection_keyboard() -> InlineKeyboardMarkup:
-=======
+        return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=f"✏️ A1", callback_data='A1')],
         [InlineKeyboardButton(text=f"📝 A2", callback_data='A2')],
         [InlineKeyboardButton(text=f"⭐ B1", callback_data='B1')],
@@ -31,12 +30,10 @@ def back_to_level_selection_keyboard() -> InlineKeyboardMarkup:
     ])
 
 def back_to_level_selection_keyboard():
->>>>>>> main
     """Returns a single-button keyboard to go back to the level selection."""
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=f"◀️ Назад", callback_data="back_to_level_selection")]
     ])
-<<<<<<< HEAD
 
 def send_task() -> InlineKeyboardMarkup:
     """Creates a keyboard for sending a new task"""
@@ -44,5 +41,3 @@ def send_task() -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text=f'Дальше', callback_data='next_task')],
         [InlineKeyboardButton(text=f'Назад', callback_data='back_to_level_selection')]
     ])
-=======
->>>>>>> main

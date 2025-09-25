@@ -4,10 +4,7 @@ Keyboard to choose from language exercises
 
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from handlers.main_handlers.languages import TEXTS
-<<<<<<< HEAD
 from handlers.main_handlers.commands import get_user_language
-
-language = get_user_language(callback.from_user.id)
 
 def language_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
@@ -16,7 +13,6 @@ def language_keyboard() -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text=f"\U0001F4AC {TEXTS[language]['keyboards']['language_check_keyboard']['language_check_keyboard']['speaking']}", callback_data='language_speaking')],
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['language_check_keyboard']['language_check_keyboard']['back']}", callback_data='back_to_main')],
     ])
-=======
 
 def language_keyboard(language: str) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
@@ -29,5 +25,3 @@ def go_to_lessons(language: str) -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['language_check_keyboard']['language_check_keyboard']['back']}", callback_data='back_to_main')],
     ])
 
-
->>>>>>> main
