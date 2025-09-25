@@ -869,7 +869,7 @@ data = {
             "task_score": 4,
             "answer": 1
         },
-        {
+{
             "level_score": 1,
             "level_name": "A1",
             "module_name": "Easy",
@@ -1386,7 +1386,7 @@ data = {
             "task_score": 7,
             "answer": 3
         },
-        {
+{
             "level_score": 1,
             "level_name": "A1",
             "module_name": "Easy",
@@ -1402,7 +1402,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Скажите, пожалуйста, вы говорите по-английски?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1412,7 +1412,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Сколько вам лет?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1422,7 +1422,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Откуда вы?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1432,7 +1432,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы студент или работаете?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1442,7 +1442,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как зовут вашу маму?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1452,7 +1452,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как зовут ваших родителей?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1462,7 +1462,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Кто ваш лучший друг или подруга?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1472,7 +1472,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «У вас много друзей?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1482,7 +1482,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Ваши друзья живут далеко от вас?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1492,7 +1492,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «На каком языке говорит ваш лучший друг?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1502,7 +1502,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Сегодня солнечно или идёт дождь?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1512,7 +1512,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какая сегодня погода?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1522,7 +1522,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «В вашем городе часто снег зимой?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1532,7 +1532,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы любите жару?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1542,7 +1542,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Где вы учитесь?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1552,7 +1552,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы учитесь или работаете?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1562,7 +1562,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вам нравится ваш университет?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1572,7 +1572,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы любите читать книги?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1582,7 +1582,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы любите смотреть фильмы или сериалы?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1592,7 +1592,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы любите ездить на поезде или на автобусе?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1602,7 +1602,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вы в автобусе. Слышите объявление:\n\n— Следующая остановка — «Центральный рынок».\n\n Вопрос: Куда вы приедете на следующей остановке?",
-            "task_question": "Ваша задача: Назвать место.\n\nОтветьте (отправьте голосовое сообщение).",
+            "task_question": "Ваша задача: Назвать место.\n\nОтветьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1612,7 +1612,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вы покупаете билет в кино. Кассир спрашивает:\n\n — Один билет на «Мстители» на 19:00?\n\nВопрос: На какой фильм и во сколько билет?",
-            "task_question": "Ваша задача: Повторить ключевую информацию (фильм и время).\n\nОтветьте (отправьте голосовое сообщение).",
+            "task_question": "Ваша задача: Повторить ключевую информацию (фильм и время).\n\nОтветьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1622,7 +1622,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Ситуация: Вы в магазине. Продавец спрашивает:\n\n — Вам пакет нужен?",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1632,7 +1632,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Ситуация: Вы спросили, где банк. Прохожий ответил:\n\n— Банк там, рядом с аптекой.",
-            "task_question": "Вопрос: Где банк?\n\nОтветьте (отправьте голосовое сообщение).",
+            "task_question": "Вопрос: Где находится банк?\n\nОтветьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -1641,8 +1641,8 @@ data = {
             "level_name": "A1",
             "module_name": "Middle",
             "type_task": "Speaking",
-            "task_content": "",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_content": "Вас спросил прохожий: «Откуда ты приехал?»",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1652,7 +1652,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задал вопрос друг: «Где вы обычно отдыхаете летом?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1662,7 +1662,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Где вы живёте?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1672,7 +1672,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Сколько у вас братьев и сестёр?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1682,7 +1682,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Есть ли у вас домашние животные?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1692,7 +1692,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Сколько человек в вашей семье?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1702,7 +1702,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Где живёт ваша семья?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1712,7 +1712,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы часто видитесь с семьёй?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1722,7 +1722,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Ваш друг тоже изучает русский язык?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1732,7 +1732,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как часто вы звоните друзьям?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1742,7 +1742,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы смотрите прогноз погоды?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1752,7 +1752,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы берёте зонт, если по прогнозу дождь?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1762,7 +1762,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Во сколько начинается ваш учебный день?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1772,7 +1772,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы устаёте после учебы?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1782,7 +1782,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какое у вас хобби?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1792,7 +1792,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какой сегодня день недели?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1802,7 +1802,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Когда у вас день рождения?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1812,7 +1812,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «В каком месяце вы родились?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1822,7 +1822,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Сколько дней в неделе?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1832,7 +1832,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Ситуация: Вы в кафе. Официант спрашивает:\n\n— Что будете пить?",
-            "task_question": "Ваша задача: Назвать напиток.\n\nОтветьте (отправьте голосовое сообщение).",
+            "task_question": "Ваша задача: Назвать напиток.\n\nОтветьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -1842,7 +1842,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «О чём вы мечтаете?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1852,7 +1852,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Кто в вашей семье самый старший?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1862,7 +1862,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вы любите делать вместе с семьёй?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1872,7 +1872,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Где вы познакомились с вашим лучшим другом?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1882,7 +1882,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как вы проводите время с друзьями?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1892,7 +1892,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вам нравится в вашем друге?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1902,7 +1902,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какая ваша любимая погода?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1912,7 +1912,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вы делаете, когда идёт дождь?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1922,7 +1922,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какая погода была вчера?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1932,7 +1932,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «На кого вы учитесь?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1942,7 +1942,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Кем вы хотите работать?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1952,7 +1952,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «С кем вы обычно проводите выходные?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1962,7 +1962,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Где вы обычно отдыхаете летом?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1972,7 +1972,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Который сейчас час?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1982,7 +1982,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какое сегодня число?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -1992,7 +1992,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Во сколько вы обычно просыпаетесь?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -2001,8 +2001,8 @@ data = {
             "level_name": "A1",
             "module_name": "Senior",
             "type_task": "Speaking",
-            "task_content": "Вам задали вопрос: «Сколько времени вы тратите на дорогу до работы или университета?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_content": "Вам задали вопрос: «Сколько времени вы тратите на дорогу до работы/университета?»",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -2012,7 +2012,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вы звоните в такси. Диспетчер спрашивает:\n\n— Какой ваш адрес? Откуда вас забрать?\n\nВаша задача: Назвать свой адрес или любое место в городе.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -2021,8 +2021,8 @@ data = {
             "level_name": "A1",
             "module_name": "Senior",
             "type_task": "Speaking",
-            "task_content": "Вы встречаете друга в аэропорту. Он звонит и говорит:\n\n— Я прилетел! Я выхожу к выходу номер 3.\n\nЗадание: Ответьте другу, что скоро подойдете, и скажите, где вы находитесь (можете придумать номер выхода).",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_content": "Вы встречаете друга в аэропорту. Он звонит и говорит:\n\n— Я прилетел! Я выхожу к выходу номер 3.\n\nЗадание: Ответьте, что скоро подойдете, и скажите, где вы находитесь (можете придумать номер выхода).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -2032,7 +2032,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Попросите преподавателя объяснить тему.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -2042,7 +2042,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Поздоровайтесь с одногруппником и представьтесь (имя, фамилия, откуда вы, сколько вам лет)",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -2052,7 +2052,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Попросите у одногруппника помочь с домашним заданием.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -2062,7 +2062,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вы в магазине. Скажите, что вы хотите купить молоко и хлеб.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -2072,7 +2072,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Скажите врачу, что у вас болит горло.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -2082,7 +2082,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Скажите врачу, сколько дней вы плохо себя чувствуете.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 10
         },
@@ -2091,7 +2091,7 @@ data = {
             "level_name": "A1",
             "module_name": "Easy",
             "type_task": "Writing",
-            "task_content": "Напиши однокурснику и спроси, во сколько начинаются пары завтра. Не забудь приветствие!",
+            "task_content": "Напиши однокурснику и спроси, во сколько начинаются занятия завтра. Не забудь приветствие!",
             "task_question": "Вам нужно написать сообщение. Объем: 1-2 предложения.",
             "check_method": "open_question_writing",
             "task_score": 8
@@ -2101,7 +2101,7 @@ data = {
             "level_name": "A1",
             "module_name": "Easy",
             "type_task": "Writing",
-            "task_content": "Напишите соседу и попросите сделать тише музыку.",
+            "task_content": "Напишите соседу записку и попросите сделать тише музыку.",
             "task_question": "Вам нужно написать сообщение. Объем: 1-2 предложения.",
             "check_method": "open_question_writing",
             "task_score": 7
@@ -2216,7 +2216,7 @@ data = {
             "check_method": "open_question_writing",
             "task_score": 10
         },
-        {
+{
             "level_score": 1,
             "level_name": "A1",
             "module_name": "Easy",
@@ -2426,7 +2426,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Listening",
             "task_content": "Расписание. 8:13 - Биология",
-            "task_question": "Прослушайте расписание и отметьте правильное время пары.\n\n1)8:30\n2)18:30\n3)8:13\n4)18:13\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай расписание и отметьте правильное время пары.\n\n1)8:30\n2)18:30\n3)8:13\n4)18:13\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
             "answer": 3,
@@ -2942,7 +2942,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Listening",
             "task_content": "Выключите телевизор! Он мешает спать!",
-            "task_question": "Прослушайте аудио и определите, что мешает соседу.\n\n1) Музыка\n2) Телевизор\n3) Телефон\n4) Радио\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио и определите, что мешает соседу.\n\n1) Музыка\n2) Телевизор\n3) Телефон\n4) Радио\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 10,
             "answer": 2,
@@ -4428,7 +4428,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как Вас зовут и откуда Вы?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4438,7 +4438,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Сколько Вам лет?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4448,7 +4448,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что Вы любите есть на завтрак?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4458,7 +4458,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какая сегодня погода?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4468,7 +4468,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какой ваш любимый цвет?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4478,7 +4478,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Во сколько вы обычно просыпаетесь?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4488,7 +4488,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «У вас есть домашнее животное?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4497,8 +4497,8 @@ data = {
             "level_name": "A2",
             "module_name": "Easy",
             "type_task": "Speaking",
-            "task_content": "Вам задали вопрос: «Какой ваш любимый день недели?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_content": "Вам задали вопрос: «Какой ваш любимый день недели и почему?»",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4508,7 +4508,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вы делаете вечером?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4518,7 +4518,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы любите кофе или чай?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4528,7 +4528,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Где вы живёте?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4538,7 +4538,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вы делаете в выходные?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4548,7 +4548,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какая ваша любимая еда?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4558,7 +4558,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как вас зовут полностью?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4568,7 +4568,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы работаете?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5
         },
@@ -4578,7 +4578,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Опишите вашу комнату или квартиру.»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4588,7 +4588,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Расскажите о вашей семье.»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4598,7 +4598,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вы делали вчера?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4608,7 +4608,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какое ваше хобби? Почему оно вам нравится?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4618,7 +4618,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Опишите вашего лучшего друга.»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4628,7 +4628,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как вы обычно проводите день?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4638,7 +4638,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какая ваша любимая музыка? Почему?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4648,7 +4648,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вы делаете, когда у вас есть свободное время?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4658,7 +4658,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Опишите ваш родной город.»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4668,7 +4668,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как вы праздновали ваш последний день рождения?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4678,7 +4678,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вы любите смотреть по телевизору или в интернете?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4688,7 +4688,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какая ваша любимая пора года? Объясните почему.» ",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4698,7 +4698,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что вы делаете, чтобы расслабиться?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4708,7 +4708,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Вы любите готовить? Какое блюдо вы умеете готовить?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4718,7 +4718,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Куда вы любите ходить с друзьями?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -4728,7 +4728,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Расскажите о вашей последней поездке в другой город или страну.»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4738,7 +4738,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Опишите ваш идеальный выходной день.»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4748,7 +4748,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какие у вас планы на ближайшие выходные?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4758,7 +4758,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Расскажите о вашей работе или учёбе. Что вам нравится?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4768,7 +4768,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как вы изучаете русский язык? Что вам помогает?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4778,7 +4778,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Опишите случай, когда вы помогли кому-то или кто-то помог вам.»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4788,7 +4788,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какая ваша самая большая мечта?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4798,7 +4798,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что бы вы хотели изменить в вашем городе? Почему?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4808,7 +4808,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Расскажите о традиции в вашей семье или стране.»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4818,7 +4818,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Какой совет вы дали бы человеку, который приезжает в вашу страну впервые?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4828,7 +4828,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Чем вы гордитесь в жизни?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4838,7 +4838,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Опишите вашу любимую книгу или фильм. Почему он вам нравится?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4848,7 +4848,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Что, по вашему мнению, самое важное в жизни?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4858,7 +4858,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Как технологии изменили вашу жизнь?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -4868,7 +4868,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Кем вы хотите быть через 10 лет?»",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -5561,7 +5561,7 @@ data = {
             "level_name": "B1",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Мой брат хочет \_\_\__ программистом.\n\n1) работать\n2) стать\n3) делать\n4) трудиться.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Мой брат с детства хотел \_\_\__ программистом.\n\n1) работать\n2) стать\n3) делать\n4) трудиться.\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выбери верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -5967,7 +5967,7 @@ data = {
             "level_name": "B1",
             "module_name": "Easy",
             "type_task": "Speaking",
-            "task_content": "Ситуация: Зимняя прогулка в лесу.\n\nЗадание: Расскажи, что вы будете одевать в следующей ситуации. Назови как минимум 3 предмета гардероба.",
+            "task_content": "Ситуация: Зимняя прогулка в лесу.\n\nЗадание: Расскажите, что вы будете надевать в следующей ситуации. Назови как минимум 3 предмета гардероба.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
             "task_score": 5
@@ -5977,7 +5977,7 @@ data = {
             "level_name": "B1",
             "module_name": "Easy",
             "type_task": "Speaking",
-            "task_content": "Ситуация: Спортивная тренировка.\n\nЗадание: Расскажи, что вы будете одевать в следующей ситуации. Назови как минимум 3 предмета гардероба.",
+            "task_content": "Ситуация: Спортивная тренировка.\n\nЗадание: Расскажите, что вы будете надевать в следующей ситуации. Назови как минимум 3 предмета гардероба.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
             "task_score": 5
@@ -6493,7 +6493,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Listening",
             "task_content": "В этом году мы поедем в отпуск в сентябре. Возьмём машину и поедем по новому шоссе к морю. Мы уже купили билеты на обратный путь на поезде, чтобы не устать от дороги.",
-            "task_question": "Прослушайте аудио и ответь на вопрос.\n\nНа чём они поедут обратно?\n\n1) На машине\n2) На корабле\n3) На поезде.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио и ответь на вопрос.\n\nНа чём они поедут обратно?\n\n1) На машине\n2) На корабле\n3) На поезде.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 9,
             "answer": 3,
@@ -6980,7 +6980,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Listening",
             "task_content": "Ну всё, мне пора. До завтра!",
-            "task_question": "Прослушайте аудио.\n\nЧто означает эта фраза?\n\n1) Человек прощается и планирует встретиться завтра.\n2) Человек спрашивает, как дела.\n3) Человек представляется.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио.\n\nЧто означает эта фраза?\n\n1) Человек прощается и планирует встретиться завтра.\n2) Человек спрашивает, как дела.\n3) Человек представляется.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
             "answer": 1,
@@ -6992,7 +6992,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Listening",
             "task_content": "Где находится Сибирь?",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\n1) Летом.\n2) В Африке\n3) На Севере.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио и ответь.\n\n1) Летом.\n2) В Африке\n3) На Севере.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
             "answer": 3,
@@ -7004,10 +7004,10 @@ data = {
             "module_name": "Easy",
             "type_task": "Listening",
             "task_content": "Сегодня в Санкт-Петербурге весь день пасмурно, туман. Температура воздуха плюс пять градусов. Ветер южный, тёплый.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: Какая сегодня погода в Санкт-Петербурге?\n\n1) Солнечно и жарко\n2) Пасмурно и туманно\n3) Холодно и снег.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио и ответь на вопрос. Вопрос: Какая сегодня погода в Санкт-Петербурге?\n\n1) Солнечно и жарко\n2) Пасмурно и туманно\n3) Холодно и снег.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
-            "answer": 3,
+            "answer": 2,
             "with_audio": True
         },
         {
@@ -7016,7 +7016,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Listening",
             "task_content": "Это животное даёт молоко и мычит. Оно живёт на ферме.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: О каком животном идёт речь?\n\n1) Свинья\n2) Корова\n3) Лошадь.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио и ответь. Вопрос: О каком животном идёт речь?\n\n1) Свинья\n2) Корова\n3) Лошадь.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
             "answer": 2,
@@ -7028,7 +7028,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Listening",
             "task_content": "Это большое дикое животное с коричневой шерстью. Оно любит мёд и зимой спит в берлоге.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: О каком животном идёт речь?\n\n1) Медведь\n2) Волк\n3) Овца.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио и ответь на вопрос. Вопрос: О каком животном идёт речь?\n\n1) Медведь\n2) Волк\n3) Овца.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 3,
             "answer": 1,
@@ -7040,7 +7040,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Listening",
             "task_content": "В новостях по радио сообщили о том, что президенты двух стран провели долгий диалог по телефону.",
-            "task_question": "Прослушайте аудио.\n\nО чём эта новость?\n\n1) О новой телепередаче\n2) О покупке нового телевизора\n3) О важном разговоре президентов.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио.\n\nО чём эта новость?\n\n1) О новой телепередаче\n2) О покупке нового телевизора\n3) О важном разговоре президентов.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
             "answer": 3,
@@ -7052,7 +7052,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Listening",
             "task_content": "В интернете появилась новость, что учёные провели разговор о защите природы",
-            "task_question": "Прослушайте аудио.\n\nО чём эта новость?\n\n1) о рассказе друга\n2) о передаче по телевизору\n3) о диалоге учёных.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио.\n\nО чём эта новость?\n\n1) о рассказе друга\n2) о передаче по телевизору\n3) о диалоге учёных.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
             "answer": 3,
@@ -7064,7 +7064,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Listening",
             "task_content": "А теперь прогноз погоды на понедельник. В Москве будет пасмурно, ожидается сильный дождь. Температура днём плюс пятнадцать градусов. Ветер западный, слабый.",
-            "task_question": "Прослушайте прогноз погоды. \n\nКакая погода ожидается в Москве?\n\n1) Солнечно и жарко, +30°.\n2) Пасмурно, сильный дождь, +15°.\n3) Холодно, идёт снег, -5°.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай прогноз погоды. \n\nКакая погода ожидается в Москве?\n\n1) Солнечно и жарко, +30°.\n2) Пасмурно, сильный дождь, +15°.\n3) Холодно, идёт снег, -5°.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
             "answer": 2,
@@ -7076,7 +7076,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Listening",
             "task_content": "Я живу не в центре города, мой район спальный. Каждый день я езжу на работу на автобусе. Выхожу на остановке «Центральный парк». Мое офисное здание находится рядом с площадью, напротив главного городского универмага и недалеко от вокзала. После работы я люблю ходить в большой современный спортивный комплекс с бассейном\n\n1) На фабрике\n2) В офисе в центре города\n3) В библиотеке.\n\nНапиши ТОЛЬКО номер ответа!",
-            "task_question": "Прослушайте аудио.\n\nГде работает человек?",
+            "task_question": "Прослушай аудио.\n\nГде работает человек?",
             "check_method": "multiple_choice",
             "task_score": 7,
             "answer": 2,
@@ -7088,7 +7088,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Listening",
             "task_content": "В субботу мы всей семьёй решили пойти в центр города. Сначала мы посетили большую выставку в художественной галерее, потом пообедали в столовой и купили сувениры в универмаге. Дети очень хотели в зоопарк, но он был слишком далеко, поэтому мы пошли в кинотеатр на новый мультфильм\n\n1) В художественную галерею\n2) В зоопарк\n3) В кинотеатр.\n\nНапиши ТОЛЬКО номер ответа!",
-            "task_question": "Прослушайте аудио.\n\nВопрос: Куда они в итоге не попали?",
+            "task_question": "Прослушай аудио.\n\nВопрос: Куда они в итоге не попали?",
             "check_method": "multiple_choice",
             "task_score": 7,
             "answer": 2,
@@ -7100,7 +7100,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Listening",
             "task_content": "Я учусь в университете на другом конце города. Каждый день я езжу на электричке. От станции до главного корпуса нашего института идти примерно пятнадцать минут мимо городского парка и современного стадиона. Моя аудитория находится на третьем этаже, но я всегда поднимаюсь по лестнице, чтобы размяться \n\n1) На автобусе от остановки\n2) На электричке до станции\n3) Пешком через парк.\n\nНапиши ТОЛЬКО номер ответа!",
-            "task_question": "Прослушайте аудио.\n\nВопрос: Как студент добирается до университета?",
+            "task_question": "Прослушай аудио.\n\nВопрос: Как студент добирается до университета?",
             "check_method": "multiple_choice",
             "task_score": 7,
             "answer": 2,
@@ -7112,7 +7112,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Listening",
             "task_content": "Чтобы найти банк, идите прямо два квартала, затем поверните налево. Он будет справа, напротив парка.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: Где находится банк?\n\n1) Слева от парка\n2) Напротив парка\n3) Внутри парка.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио и ответьте на вопрос. Вопрос: Где находится банк?\n\n1) Слева от парка\n2) Напротив парка\n3) Внутри парка.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
             "answer": 2,
@@ -7124,7 +7124,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Listening",
             "task_content": "Встретимся у входа в кафе. Я буду ждать тебя рядом с дверью. Если я не буду там, значит, я уже на улице, на скамейке напротив.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос. Вопрос: Где НЕ будет ждать говорящий?\n\n1) У входа в кафе\n2) На скамейке напротив\n3) В зале кафе.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай аудио и ответьте на вопрос. Вопрос: Где НЕ будет ждать говорящий?\n\n1) У входа в кафе\n2) На скамейке напротив\n3) В зале кафе.\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 7,
             "answer": 3,
@@ -8936,399 +8936,399 @@ data = {
             "answer": 1
         },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "Вчера я весь день готовила. Испекла большой яблочный пирог, приготовила салат и замариновала курицу. Но самый главный сюрприз — торт «Наполеон», его все так ждали.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто было самым главным сюрпризом?\n\n1) Яблочный пирог\n2) Маринованная курица\n3) Торт «Наполеон»\n4) Салат",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 3,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Вчера я весь день готовила. Испекла большой яблочный пирог, приготовила салат и замариновала курицу. Но самый главный сюрприз — торт «Наполеон», его все так ждали.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто было самым главным сюрпризом?\n\n1) Яблочный пирог\n2) Маринованная курица\n3) Торт «Наполеон»\n4) Салат",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 3,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "Мы договорились встретиться в самом центре города, у нового памятника поэту. Я приду на десять минут раньше и буду ждать около книжного магазина.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nГде именно произойдёт встреча?\n\n1) В книжном магазине\n2) У нового памятника\n3) В самом центре города\n4) Около книжного магазина",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 4,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Мы договорились встретиться в самом центре города, у нового памятника поэту. Я приду на десять минут раньше и буду ждать около книжного магазина.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nГде именно произойдёт встреча?\n\n1) В книжном магазине\n2) У нового памятника\n3) В самом центре города\n4) Около книжного магазина",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 4,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "Погода совсем испортилась. Утром светило солнце, и мы планировали пикник. Но теперь небо покрылось тучами, и по радио предупредили о сильном дожде и возможном граде.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто обещали по радио?\n\n1) Солнечную погоду\n2) Сильный дождь и град\n3) Тёплый вечер\n4) Туман",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 2,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Погода совсем испортилась. Утром светило солнце, и мы планировали пикник. Но теперь небо покрылось тучами, и по радио предупредили о сильном дожде и возможном граде.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто обещали по радио?\n\n1) Солнечную погоду\n2) Сильный дождь и град\n3) Тёплый вечер\n4) Туман",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 2,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "Я ищу не просто квартиру, а просторную квартиру с большой кухней, чтобы можно было принимать гостей. И обязательно с балконом, чтобы летом завтракать на свежем воздухе.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто для говорящего важно в квартире?\n\n1) Высокие потолки и новая мебель\n2) Большая кухня и балкон\n3) Наличие двух спален\n4) Современный ремонт",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 2,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Я ищу не просто квартиру, а просторную квартиру с большой кухней, чтобы можно было принимать гостей. И обязательно с балконом, чтобы летом завтракать на свежем воздухе.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто для говорящего важно в квартире?\n\n1) Высокие потолки и новая мебель\n2) Большая кухня и балкон\n3) Наличие двух спален\n4) Современный ремонт",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 2,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "Мой брат очень любит экстремальные виды спорта. Зимой он каждый weekend катается на сноуборде, а летом обязательно уезжает в горы, чтобы заняться альпинизмом.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧем занимается брат говорящего летом?\n\n1) Катается на сноуборде\n2) Занимается альпинизмом\n3) Путешествует по городам\n4) Катается на велосипеде",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 2,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Мой брат очень любит экстремальные виды спорта. Зимой он каждый weekend катается на сноуборде, а летом обязательно уезжает в горы, чтобы заняться альпинизмом.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧем занимается брат говорящего летом?\n\n1) Катается на сноуборде\n2) Занимается альпинизмом\n3) Путешествует по городам\n4) Катается на велосипеде",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 2,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "Я предпочитаю смотреть фильмы в оригинале, с субтитрами. Так можно лучше понять игру актёров и почувствовать язык. А вот мой муж любит дубляж, ему не хочется читать текст во время просмотра.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nПочему муж предпочитает дубляж?\n\n1) Он не понимает иностранные языки\n2) Ему не нравится игра актёров\n3) Он не хочет читать субтитры\n4) Дубляж качественнее",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 3,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Я предпочитаю смотреть фильмы в оригинале, с субтитрами. Так можно лучше понять игру актёров и почувствовать язык. А вот мой муж любит дубляж, ему не хочется читать текст во время просмотра.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nПочему муж предпочитает дубляж?\n\n1) Он не понимает иностранные языки\n2) Ему не нравится игра актёров\n3) Он не хочет читать субтитры\n4) Дубляж качественнее",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 3,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "Чтобы добраться до вокзала, вам нужно сесть на автобус номер 15 или на троллейбус 4. Выйти нужно на остановке «Центральный рынок», а потом пять минут пешком прямо по улице.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nНа каком транспорте можно доехать до вокзала?\n\n1) На автобусе 4 или троллейбусе 15\n2) На автобусе 15 или троллейбусе 4\n3) Только на автобусе\n4) Только на троллейбусе",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 2,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Чтобы добраться до вокзала, вам нужно сесть на автобус номер 15 или на троллейбус 4. Выйти нужно на остановке «Центральный рынок», а потом пять минут пешком прямо по улице.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nНа каком транспорте можно доехать до вокзала?\n\n1) На автобусе 4 или троллейбусе 15\n2) На автобусе 15 или троллейбусе 4\n3) Только на автобусе\n4) Только на троллейбусе",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 2,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "В качестве подарка на новоселье мы решили купить им не обычный чайный сервиз, а красивый набор для фондю. Они любят принимать гостей, и такой подарок будет очень кстати.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто решили купить в подарок?\n\n1) Чайный сервиз\n2) Кофемашину\n3) Набор для фондю\n4) Обычную посуду",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 3,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "В качестве подарка на новоселье мы решили купить им не обычный чайный сервиз, а красивый набор для фондю. Они любят принимать гостей, и такой подарок будет очень кстати.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто решили купить в подарок?\n\n1) Чайный сервиз\n2) Кофемашину\n3) Набор для фондю\n4) Обычную посуду",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 3,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "Я забыл позвонить бабушке вчера! Она ждала моего звонка весь вечер. Надо сделать это сегодня сразу после работы, иначе она будет сильно волноваться.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nПочему говорящий должен позвонить бабушке?\n\n1) Он обещал сделать это вчера\n2) У бабушки день рождения\n3) Он должен сообщить важные новости\n4) Бабушка ждёт его в гости",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 1,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "Я забыл позвонить бабушке вчера! Она ждала моего звонка весь вечер. Надо сделать это сегодня сразу после работы, иначе она будет сильно волноваться.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nПочему говорящий должен позвонить бабушке?\n\n1) Он обещал сделать это вчера\n2) У бабушки день рождения\n3) Он должен сообщить важные новости\n4) Бабушка ждёт его в гости",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 1,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Easy",
-            "type_task": "Listening",
-            "task_content": "В этом ресторане готовят лучше всего не стейки, хотя они и хороши, а блюда местной кухни. Обязательно попробуйте уху и пироги с рыбой — это их фирменное блюдо.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто является фирменным блюдом ресторана?\n\n1) Стейки\n2) Пицца\n3) Уха и пироги с рыбой\n4) Десерты",
-            "check_method": "multiple_choice",
-            "task_score": 4,
-            "answer": 3,
-            "with_audio": True
-        },
+    {
+        "level_score": 3,
+        "level_name": "B2",
+        "module_name": "Easy",
+        "type_task": "Listening",
+        "task_content": "В этом ресторане готовят лучше всего не стейки, хотя они и хороши, а блюда местной кухни. Обязательно попробуйте уху и пироги с рыбой — это их фирменное блюдо.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто является фирменным блюдом ресторана?\n\n1) Стейки\n2) Пицца\n3) Уха и пироги с рыбой\n4) Десерты",
+        "check_method": "multiple_choice",
+        "task_score": 4,
+        "answer": 3,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Многие ошибочно полагают, что он был великим полководцем. На самом деле его главный вклад — это реформы в области государственного управления и судебной системы, которые изменили страну.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём, согласно описанию, заключается главная заслуга этого исторического деятеля?\n\n1) В военных победах\n2) В развитии искусства\n3) В государственных и судебных реформах\n4) В открытии новых земель",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 3,
-            "with_audio": True
-        },
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Многие ошибочно полагают, что он был великим полководцем. На самом деле его главный вклад — это реформы в области государственного управления и судебной системы, которые изменили страну.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nВ чём, согласно описанию, заключается главная заслуга этого исторического деятеля?\n\n1) В военных победах\n2) В развитии искусства\n3) В государственных и судебных реформах\n4) В открытии новых земель",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    },
 
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Решение было непростым. С одной стороны, выгодное финансовое предложение из-за рубежа. С другой — интересный, но менее оплачиваемый проект здесь, на родине. В итоге я выбрал то, что ближе душе.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nКакое решение принял говорящий?\n\n1) Уехать работать за границу\n2) Отказаться от обоих предложений\n3) Выбрать менее оплачиваемый, но интересный проект\n4) Взять паузу для раздумий",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 3,
-            "with_audio": True
-        }
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Решение было непростым. С одной стороны, выгодное финансовое предложение из-за рубежа. С другой — интересный, но менее оплачиваемый проект здесь, на родине. В итоге я выбрал то, что ближе душе.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nКакое решение принял говорящий?\n\n1) Уехать работать за границу\n2) Отказаться от обоих предложений\n3) Выбрать менее оплачиваемый, но интересный проект\n4) Взять паузу для раздумий",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Архитектору удалось совместить, казалось бы, несовместимое: классический фасад здания, который гармонирует со старым городом, и ультрасовременный технологичный интерьер внутри.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём заключается особенность здания?\n\n1) Полностью современный стиль\n2) Полностью классический стиль\n3) Современный интерьер и классический фасад\n4) Классический интерьер и современный фасад",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 3,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Архитектору удалось совместить, казалось бы, несовместимое: классический фасад здания, который гармонирует со старым городом, и ультрасовременный технологичный интерьер внутри.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nВ чём заключается особенность здания?\n\n1) Полностью современный стиль\n2) Полностью классический стиль\n3) Современный интерьер и классический фасад\n4) Классический интерьер и современный фасад",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Критики высоко оценили фильм, особенно игру главного актёра и операторскую работу. Однако, по мнению многих зрителей, сценарий был слабым местом, и концовка показалась предсказуемой.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто, по мнению зрителей, было слабым местом фильма?\n\n1) Игра актёров\n2) Операторская работа\n3) Музыкальное сопровождение\n4) Сценарий и концовка",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 4,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Критики высоко оценили фильм, особенно игру главного актёра и операторскую работу. Однако, по мнению многих зрителей, сценарий был слабым местом, и концовка показалась предсказуемой.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто, по мнению зрителей, было слабым местом фильма?\n\n1) Игра актёров\n2) Операторская работа\n3) Музыкальное сопровождение\n4) Сценарий и концовка",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 4,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Изначально планировалось провести конференцию в гибридном формате. Но из-за внезапных ограничений на массовые мероприятия пришлось в срочном порядке переводить всё в онлайн-режим.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ каком формате в итоге пройдёт конференция?\n\n1) В очном\n2) В гибридном\n3) В онлайн-режиме\n4) Её отменили",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 3,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Изначально планировалось провести конференцию в гибридном формате. Но из-за внезапных ограничений на массовые мероприятия пришлось в срочном порядке переводить всё в онлайн-режим.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nВ каком формате в итоге пройдёт конференция?\n\n1) В очном\n2) В гибридном\n3) В онлайн-режиме\n4) Её отменили",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Он не был прирождённым оратором. Его речи были суховаты и перегружены фактами. Но за этой внешней скучностью скрывалась блестящая логика и глубокая аналитика, которую ценили специалисты.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто ценили в его выступлениях специалисты?\n\n1) Эмоциональность и юмор\n2) Красивые жесты и голос\n3) Блестящую логику и аналитику\n4) Короткую продолжительность",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 3,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Он не был прирождённым оратором. Его речи были суховаты и перегружены фактами. Но за этой внешней скучностью скрывалась блестящая логика и глубокая аналитика, которую ценили специалисты.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто ценили в его выступлениях специалисты?\n\n1) Эмоциональность и юмор\n2) Красивые жесты и голос\n3) Блестящую логику и аналитику\n4) Короткую продолжительность",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Наш тур будет необычным: мы сознательно избегаем популярных туристических мест. Вместо этого, мы покажем вам скрытые дворики, маленькие семейные мастерские и кафе, куда ходят местные.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто обещает тур?\n\n1) Посещение всех популярных достопримечательностей\n2) Знакомство с нетуристической стороной города\n3) Дешёвые покупки в больших магазинах\n4) Экстремальные приключения",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 2,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Наш тур будет необычным: мы сознательно избегаем популярных туристических мест. Вместо этого, мы покажем вам скрытые дворики, маленькие семейные мастерские и кафе, куда ходят местные.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто обещает тур?\n\n1) Посещение всех популярных достопримечательностей\n2) Знакомство с нетуристической стороной города\n3) Дешёвые покупки в больших магазинах\n4) Экстремальные приключения",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 2,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Эту книгу часто рекомендуют как лёгкое летнее чтение. Но это заблуждение. Под обложкой с яркой иллюстрацией скрывается сложный философский текст, требующий вдумчивого отношения.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nКакое утверждение о книге соответствует описанию?\n\n1) Это лёгкое развлекательное чтение\n2) Это сложный философский текст\n3) Она интересна только своими иллюстрациями\n4) Это детективный роман",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 2,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Эту книгу часто рекомендуют как лёгкое летнее чтение. Но это заблуждение. Под обложкой с яркой иллюстрацией скрывается сложный философский текст, требующий вдумчивого отношения.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nКакое утверждение о книге соответствует описанию?\n\n1) Это лёгкое развлекательное чтение\n2) Это сложный философский текст\n3) Она интересна только своими иллюстрациями\n4) Это детективный роман",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 2,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Проблема была не в стоимости подписки, а в её организации. Чтобы отписаться, нужно было отправить физическое письмо, а не просто нажать кнопку «отменить» в личном кабинете, как это сейчас принято.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём заключалась основная проблема с подпиской?\n\n1) В её высокой цене\n2) В плохом контенте\n3) В сложной процедуре отмены\n4) В отсутствии личного кабинета",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 3,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Проблема была не в стоимости подписки, а в её организации. Чтобы отписаться, нужно было отправить физическое письмо, а не просто нажать кнопку «отменить» в личном кабинете, как это сейчас принято.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nВ чём заключалась основная проблема с подпиской?\n\n1) В её высокой цене\n2) В плохом контенте\n3) В сложной процедуре отмены\n4) В отсутствии личного кабинета",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Middle",
-            "type_task": "Listening",
-            "task_content": "Ирония ситуации заключалась в том, что самый ярый критик этого проекта, выступавший против него на всех совещаниях, в итоге получил премию за его успешную реализацию, так как его начальник взял всю славу себе.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nПочему ситуация иронична?\n\n1) Проект провалился\n2) Критик проекта получил за него премию\n3) Начальник не получил премию\n4) Критик стал руководителем проекта",
-            "check_method": "multiple_choice",
-            "task_score": 5,
-            "answer": 2,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 4,
+        "level_name": "B2",
+        "module_name": "Middle",
+        "type_task": "Listening",
+        "task_content": "Ирония ситуации заключалась в том, что самый ярый критик этого проекта, выступавший против него на всех совещаниях, в итоге получил премию за его успешную реализацию, так как его начальник взял всю славу себе.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nПочему ситуация иронична?\n\n1) Проект провалился\n2) Критик проекта получил за него премию\n3) Начальник не получил премию\n4) Критик стал руководителем проекта",
+        "check_method": "multiple_choice",
+        "task_score": 5,
+        "answer": 2,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Он виртуозно владеет техникой «импасто», нанося густые слои краски так, что полотно приобретает скульптурную выразительность. Его работы — это не изображение света, а его материальное воплощение.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nО каком виде искусства идёт речь?\n\n1) Скульптура\n2) Архитектура\n3) Живопись\n4) Литература",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 3,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Он виртуозно владеет техникой «импасто», нанося густые слои краски так, что полотно приобретает скульптурную выразительность. Его работы — это не изображение света, а его материальное воплощение.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nО каком виде искусства идёт речь?\n\n1) Скульптура\n2) Архитектура\n3) Живопись\n4) Литература",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Детектив был построен на классическом приёме «ненадёжного рассказчика». Читатель всё время был вынужден сомневаться: является ли главный герой жертвой сложного заговора или же его рассудок постепенно помрачается, и он сам того не осознаёт.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём была главная интрига детектива?\n\n1) В погоне за преступником\n2) В поиске спрятанных сокровищ\n3) В неопределённости: заговор или безумие героя\n4) В романтической линии",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 3,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Детектив был построен на классическом приёме «ненадёжного рассказчика». Читатель всё время был вынужден сомневаться: является ли главный герой жертвой сложного заговора или же его рассудок постепенно помрачается, и он сам того не осознаёт.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nВ чём была главная интрига детектива?\n\n1) В погоне за преступником\n2) В поиске спрятанных сокровищ\n3) В неопределённости: заговор или безумие героя\n4) В романтической линии",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Переговоры зашли в тупик не из-за существенных разногласий, а из-за вопроса процедурного характера: никак не могли договориться о языке и порядке выступлений, что было воспринято одной из сторон как неуважение.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧто стало формальной причиной тупика в переговорах?\n\n1) Серьёзные разногласия по сути\n2) Вопросы процедуры: язык и порядок выступлений\n3) Отказ одной из сторон участвовать\n4) Неуважение к главе делегации",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 2,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Переговоры зашли в тупик не из-за существенных разногласий, а из-за вопроса процедурного характера: никак не могли договориться о языке и порядке выступлений, что было воспринято одной из сторон как неуважение.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧто стало формальной причиной тупика в переговорах?\n\n1) Серьёзные разногласия по сути\n2) Вопросы процедуры: язык и порядок выступлений\n3) Отказ одной из сторон участвовать\n4) Неуважение к главе делегации",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Его последний роман был встречен прохладно. Критики упрекали его в самоповторе, утверждая, что автор эксплуатирует удачную находку десятилетней давности, не предлагая ничего нового.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nВ чём критики упрекали автора?\n\n1) В том, что он сменил литературный жанр\n2) В том, что он пишет слишком сложно\n3) В отсутствии новизны и повторении старого\n4) В том, что его роман слишком длинный",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 3,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Его последний роман был встречен прохладно. Критики упрекали его в самоповторе, утверждая, что автор эксплуатирует удачную находку десятилетней давности, не предлагая ничего нового.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nВ чём критики упрекали автора?\n\n1) В том, что он сменил литературный жанр\n2) В том, что он пишет слишком сложно\n3) В отсутствии новизны и повторении старого\n4) В том, что его роман слишком длинный",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Решение суда первой инстанции было обжаловано, так как, по мнению адвокатов, был нарушен key процессуальный принцип — право на справедливое судебное разбирательство. Апелляция это подтвердила.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nПочему решение суда было обжаловано?\n\n1) Из-за слишком строгого приговора\n2) Из-за нарушения процессуального принципа\n3) Из-за новых доказательств\n4) Из-за смены адвоката",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 2,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Решение суда первой инстанции было обжаловано, так как, по мнению адвокатов, был нарушен key процессуальный принцип — право на справедливое судебное разбирательство. Апелляция это подтвердила.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nПочему решение суда было обжаловано?\n\n1) Из-за слишком строгого приговора\n2) Из-за нарушения процессуального принципа\n3) Из-за новых доказательств\n4) Из-за смены адвоката",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Фильм не является буквальной экранизацией. Режиссёр взял за основу лишь фабулу романа, перенёс действие в современность и сделал акцент на психологическом противостоянии героев, а не на социальном контексте, как в книге.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЧем фильм отличается от книги?\n\n1) Это буквальная экранизация\n2) Действие происходит в прошлом\n3) Акцент смещён на психологию, а не на социальный контекст\n4) Изменены имена главных героев",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 3,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Фильм не является буквальной экранизацией. Режиссёр взял за основу лишь фабулу романа, перенёс действие в современность и сделал акцент на психологическом противостоянии героев, а не на социальном контексте, как в книге.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЧем фильм отличается от книги?\n\n1) Это буквальная экранизация\n2) Действие происходит в прошлом\n3) Акцент смещён на психологию, а не на социальный контекст\n4) Изменены имена главных героев",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Изначально планировалось, что проект будет финансироваться из государственного бюджета. Однако впоследствии был сделан ставку на частно-государственное партнёрство, чтобы привлечь не только деньги, но и компетенции бизнеса.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nКак в итоге решили финансировать проект?\n\n1) Только из госбюджета\n2) Путем частно-государственного партнёрства\n3) Только за счёт частных инвестиций\n4) Через краудфандинг",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 2,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Изначально планировалось, что проект будет финансироваться из государственного бюджета. Однако впоследствии был сделан ставку на частно-государственное партнёрство, чтобы привлечь не только деньги, но и компетенции бизнеса.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nКак в итоге решили финансировать проект?\n\n1) Только из госбюджета\n2) Путем частно-государственного партнёрства\n3) Только за счёт частных инвестиций\n4) Через краудфандинг",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Его теория бросала вызов общепринятой парадигме и поначалу была встречена в штыки научным сообществом. Лишь годы спустя, после серии независимых экспериментов, её гениальность была наконец признана.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nКак изначально отнеслись к теории научного сообщества?\n\n1) Сразу признали её гениальной\n2) Встретили её враждебно\n3) Проигнорировали\n4) Начали сразу же её проверять",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 2,
-            "with_audio": True
-        }
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Его теория бросала вызов общепринятой парадигме и поначалу была встречена в штыки научным сообществом. Лишь годы спустя, после серии независимых экспериментов, её гениальность была наконец признана.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nКак изначально отнеслись к теории научного сообщества?\n\n1) Сразу признали её гениальной\n2) Встретили её враждебно\n3) Проигнорировали\n4) Начали сразу же её проверять",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 2,
+        "with_audio": True
+    }
 
-        ,
-        {
-            "level_score": 4,
-            "level_name": "B2",
-            "module_name": "Senior",
-            "type_task": "Listening",
-            "task_content": "Пьеса изобилует намёками и аллюзиями, понятными лишь современникам. Для сегодняшнего зрителя much из этого теряется, поэтому режиссёр вводит нового персонажа-рассказчика, который выступает в роли комментатора.",
-            "task_question": "Прослушайте аудио и ответьте на вопрос.\n\nЗачем режиссёр ввёл нового персонажа?\n\n1) Чтобы усложнить сюжет\n2) Чтобы заменить одного из старых героев\n3) Чтобы объяснять зрителю утраченные смыслы\n4) Чтобы сделать пьесу смешнее",
-            "check_method": "multiple_choice",
-            "task_score": 7,
-            "answer": 3,
-            "with_audio": True
-        },
+    ,
+    {
+        "level_score": 5,
+        "level_name": "B2",
+        "module_name": "Senior",
+        "type_task": "Listening",
+        "task_content": "Пьеса изобилует намёками и аллюзиями, понятными лишь современникам. Для сегодняшнего зрителя much из этого теряется, поэтому режиссёр вводит нового персонажа-рассказчика, который выступает в роли комментатора.",
+        "task_question": "Прослушай аудио и ответьте полным предложением на вопрос.\n\nЗачем режиссёр ввёл нового персонажа?\n\n1) Чтобы усложнить сюжет\n2) Чтобы заменить одного из старых героев\n3) Чтобы объяснять зрителю утраченные смыслы\n4) Чтобы сделать пьесу смешнее",
+        "check_method": "multiple_choice",
+        "task_score": 7,
+        "answer": 3,
+        "with_audio": True
+    },
 
         {
             "level_score": 4,
@@ -14509,7 +14509,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Вам задали вопрос: «Считаете ли вы, что самообразование может быть эффективнее формального?» Ответьте, приведя 2-3 аргумента в защиту своей точки зрения.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями(отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14519,7 +14519,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Опишите работу вашей мечты. Не просто назовите профессию, а объясните, какие задачи, атмосфера и ценности были бы для вас ключевыми.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14529,7 +14529,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Как вы определяете для себя понятие «успех»? Поделитесь своим мнением, сознательно противопоставив материальные и нематериальные критерии.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14539,7 +14539,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Путешествия расширяют кругозор или просто развлекают? Выразите свою позицию, приведя личный пример.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14549,7 +14549,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Опишите одно значимое технологическое изменение в вашей жизни за последние 5 лет и проанализируйте его положительные и отрицательные стороны.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14559,7 +14559,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Что важнее для успеха проекта: гениальный лидер или сплоченная команда? Обоснуйте свой выбор.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14569,7 +14569,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Что, на ваш взгляд, дает более глубокое впечатление — книга или ее экранизация? Сравните эти два формата.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14579,7 +14579,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Опишите ваш идеальный способ провести выходные. Объясните, почему именно этот формат вам подходит.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14589,7 +14589,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Расскажите о случае, когда вы столкнулись с культурными различиями. Опишите свои чувства и как вы с этим справились.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14599,7 +14599,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Куда вы бы хотели переехать жить в будущем и почему? Аргументируйте свой выбор, рассмотрев не менее трех аспектов (например, карьера, культура, климат).",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14609,7 +14609,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Что или кто вас вдохновляет в трудные моменты? Ответьте развернуто, объяснив механизм этого влияния.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14619,7 +14619,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Как вы поддерживаете баланс между работой и личной жизнью? Поделитесь своими стратегиями. ",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14629,7 +14629,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Какая покупка за последние годы принесла вам наибольшую пользу или радость? Опишите ее и объясните свой выбор. ",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14639,7 +14639,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Опишите, какую музыку вы слушаете в разных настроениях или ситуациях. Объясните связь между музыкой и вашим эмоциональным состоянием.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14649,7 +14649,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Speaking",
             "task_content": "Согласны ли вы с утверждением, что на ошибках учатся? Приведите пример из своей жизни, подтверждающий или опровергающий эту мысль.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 7
         },
@@ -14659,7 +14659,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "В чем, по-вашему, принципиальная разница между толерантностью и равнодушием? Проиллюстрируйте свое объяснение примером.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14669,7 +14669,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Современный мир предлагает нам огромный выбор во всем. Парализует ли это нас или делает свободнее? Выразите свое мнение, рассмотрев обе стороны проблемы.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14679,7 +14679,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Если бы вам нужно было назвать главную черту современного «героя» (не в смысле кино, а в смысле человека, достойного уважения), что бы это было? Обоснуйте свой ответ.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14689,7 +14689,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Должны ли существовать этические ограничения для научных исследований? Приведите пример области, где такие ограничения, на ваш взгляд, необходимы.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14699,7 +14699,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Почему люди часто склонны идеализировать прошлое? Дайте психологическое или социальное объяснение этому феномену.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14709,7 +14709,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Может ли продукт, созданный искусственным интеллектом, быть настоящим искусством? Выразите свою позицию, дав определение тому, что вы считаете «настоящим искусством».",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14719,7 +14719,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Как изучение нового языка изменило ваше восприятие мира или родного языка? Приведите конкретные примеры.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14729,7 +14729,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Опишите ситуацию, которая сначала казалась провалом, но в итоге привела к положительным изменениям в вашей жизни. Что этот опыт вам показал?",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14739,7 +14739,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Согласны ли вы, что неудачи важнее для долгосрочного успеха, чем победы? Обоснуйте свою точку зрения.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14749,7 +14749,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Как, по вашему мнению, изменится система образования через 20 лет? Опишите один-два наиболее значимых, на ваш взгляд, изменения.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14759,7 +14759,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Что для вас важнее в жизни — ощущение счастья или чувство смысла? Может ли одно существовать без другого? Поделитесь своими размышлениями.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14769,7 +14769,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Почему в эпоху социальных сетей многие люди чувствуют себя одинокими? Предложите свое объяснение этого парадокса.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14779,7 +14779,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Каковы, по вашему мнению, главные правила ведения продуктивной и уважительной дискуссии? Сформулируйте 2-3 ключевых принципа.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14789,7 +14789,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Насколько необходимо современному человеку периодически «отключаться» от цифрового мира? Поделитесь своим опытом и рекомендациями.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14799,7 +14799,7 @@ data = {
             "module_name": "Middle",
             "type_task": "Speaking",
             "task_content": "Должны ли традиции адаптироваться к современности или сохраняться в неизменном виде? Приведите пример, иллюстрирующий вашу точку зрения.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 9
         },
@@ -14809,7 +14809,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Представьте, что вы — старинная книга в библиотеке. Опишите свои «мысли» и «чувства» по поводу того, как изменились читатели и мир вокруг вас.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14819,7 +14819,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Выступите с короткой сатирической речью на тему «Бесконечный поиск идеального селфи». Используйте преувеличение (гиперболу) и иронию.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14829,7 +14829,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Проанализируйте плюсы и минусы ориентации на первое впечатление о человеке. В конце речи намеренно измените свою первоначальную позицию, демонстрируя гибкость мышления.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14839,7 +14839,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Сравните молодое поколение сегодня и поколение ваших родителей в их молодости. Избегайте штампов, говорите о конкретных различиях в ценностях, возможностях и вызовах.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14849,7 +14849,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Выскажите критическое мнение о widely acclaimed книге, фильме или произведении искусства, которое принято хвалить. Объясните, в чем, по-вашему, его переоцененность.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14859,7 +14859,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Опишите самую серьезную этическую дилемму, которую, на ваш взгляд, порождает развитие технологий (например, в области ИИ или биоинженерии). Не предлагайте решения, проанализируйте саму суть конфликта.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14869,7 +14869,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Некоторые философы говорят, что современный человек живет в «вечном настоящем», забывая о прошлом и не думая о будущем. Согласны ли вы с этим?",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14879,7 +14879,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Дайте свое определение мудрости. Чем она отличается от ума, знаний или опыта? Постарайтесь быть максимально точным.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14889,7 +14889,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Может ли абсолютная свобода одного человека ограничивать свободу другого? Где проходит граница личной свободы? Поделитесь своими соображениями.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14899,7 +14899,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Произнесите короткую речь-прощание с каким-либо явлением, которое, по вашему мнению, исчезает из современной жизни (например, «право на неответность», «анонимность», «долгое ожидание»).",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14909,7 +14909,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Раскройте метафору «Время — это деньги». В чем ее сила и в чем ее ограниченность? Что это сравнение говорит о нашем обществе?",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14919,7 +14919,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "(Представьте, что вам показывают абстрактную или сюрреалистичную картинку). Опишите, что вы видите, и сочините короткую историю, которую может рассказывать эта картинка.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14929,7 +14929,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Выступите с краткой речью в защиту ценности, которая сегодня не в моде (например, «скромность», «медлительность», «молчание»). Объясните, почему она важна.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14939,7 +14939,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Может ли слово изменить мир? Или его сила преувеличена? Оцените силу и ограничения слова как инструмента влияния.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
@@ -14949,7 +14949,7 @@ data = {
             "module_name": "Senior",
             "type_task": "Speaking",
             "task_content": "Сформулируйте 2-3 принципа, по которым вы стараетесь жить. Не просто назовите их, а объясните, почему именно они для вас важны и как вы к ним пришли.",
-            "task_question": "Ответьте (отправьте голосовое сообщение).",
+            "task_question": "Ответьте несколькими предложениями (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 11
         },
