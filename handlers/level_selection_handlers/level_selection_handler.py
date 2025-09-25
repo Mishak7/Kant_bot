@@ -233,12 +233,6 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
 async def check_text_answer(message: Message, state: FSMContext):
     """Проверка текстового ответа от пользователя"""
     try:
-        try:
-            await message.bot.delete_message(
-                chat_id=message.chat.id,
-                message_id=message.message_id - 1)
-        except:
-            pass
 
         data = await state.get_data()
         task_id = data.get('task_id')
@@ -268,6 +262,12 @@ async def check_text_answer(message: Message, state: FSMContext):
         answer_check = await check_task(user_id, task_id, user_answer, is_voice)
 
         if isinstance(answer_check, str):
+            try:
+                await message.bot.delete_message(
+                    chat_id=message.chat.id,
+                    message_id=message.message_id - 1)
+            except:
+                pass
             if answer_check.startswith('верно'):
                 score_message = answer_check.split('!')[1]
                 response_text = f'✅ Молодец! Все верно!\n{score_message}'
