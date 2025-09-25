@@ -32,6 +32,11 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 from services.database.database_functions import  create_user, get_user_name
 from handlers.level_selection_handlers.level_selection_keyboard import level_selection_keyboard
+from services.database.database_functions import select_leaders_from_leaderboard
+from services.neural_network_communication.gigachat_communication import gigachat_response
+from handlers.main_handlers.main_prompts import prompt_obscene_language as obscene_prompt
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 
 class LanguageState(StatesGroup):
     waiting_for_language = State()
@@ -188,10 +193,13 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
             await state.set_state(UserRegistration.waiting_for_name)
             return
 
-
-        text = f"Привет, {user_info[0]}! Переходи к заданиям: 👇"
+        text = f"Привет, {user_info[0]}!🧑‍🎓"
         await callback.message.delete()
-        await callback.message.answer(text, reply_markup=level_selection_keyboard(), parse_mode="Markdown")
+        await callback.message.answer(text, reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text='📝 Перейти к заданиям:', callback_data='go_to_levels')],
+        [InlineKeyboardButton(text='🏆 Доска лидеров', callback_data='leadership_board')],
+        [InlineKeyboardButton(text=f"◀️ Назад", callback_data='back_to_main')]
+    ]), parse_mode="Markdown")
         await callback.answer()
 
     except Exception as e:
@@ -199,6 +207,16 @@ async def language_check_info(callback: CallbackQuery, language: str, state: FSM
         await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
 
 
+@router.callback_query(F.data == "go_to_levels")
+async def select_level(callback: CallbackQuery):
+    await callback.message.edit_text(text='👇Выбери уровень:', reply_markup=level_selection_keyboard(),
+                                   parse_mode="Markdown")
+
+
+@router.callback_query(F.data == 'leadership_board')
+async def go_to_leaderboard(callback: CallbackQuery):
+    leaders = await select_leaders_from_leaderboard()
+    await callback.message.edit_text(text=leaders, parse_mode="Markdown")
 
 @router.message(UserRegistration.waiting_for_name)
 async def process_name(message: Message, state: FSMContext, language: str):
@@ -212,6 +230,11 @@ async def process_name(message: Message, state: FSMContext, language: str):
 
         if len(user_name) > 50:
             await message.answer("❌ Имя слишком длинное. Максимум 50 символов. Попробуйте еще раз:")
+            return
+
+        response = await gigachat_response(text=user_name, prompt=obscene_prompt)
+        if response == 'False':
+            await message.answer("❌ Имя содержит нецензурную лексику. Попробуйте еще раз:")
             return
 
         success = await create_user(

@@ -344,10 +344,20 @@ async def update_user_score(user_ident, level_id, score_change):
                         "UPDATE UserModules SET score = score + ? WHERE user_id = ? AND level_id = ?",
                         (score_change, user_ident, level_id))
 
+                    await db.execute(
+                        "UPDATE Users SET score = score + ? WHERE id = ?",
+                        (score_change, user_ident)
+                    )
+
                 else:
                     await db.execute(
                         "UPDATE UserModules SET is_completed = 1, completed_at = CURRENT_TIMESTAMP WHERE user_id = ? AND level_id = ?",
                         (score_change, user_ident, level_id)
+                    )
+
+                    await db.execute(
+                        "UPDATE Users SET score = score + ? WHERE id = ?",
+                        (score_change, user_ident)
                     )
 
             else:
@@ -564,3 +574,29 @@ async def give_hint(task_id):
     except Exception as e:
         logger.error(f"Error giving a hint: {e}")
         return False
+
+
+async def select_leaders_from_leaderboard():
+    try:
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("""SELECT username, score FROM Users
+                                        ORDER BY score DESC
+                                        LIMIT 5""")
+            best_users = await cursor.fetchall()
+
+            medals = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"]
+            lines_output = []
+
+            for i, (user, score) in enumerate(best_users):
+                medal = medals[i]
+                lines_output.append(f'{medal} {user} - {score} баллов')
+
+            final_leaderboard = '🏆Рейтинг лучших игроков:\n\n' + '\n'.join(lines_output)
+            return final_leaderboard
+
+
+    except Exception as e:
+        logger.error(f"Error with showing leaderboard: {e}")
+        return False
+
+
