@@ -280,7 +280,7 @@ async def check_text_answer(message: Message, state: FSMContext):
         if response_text == '❌ К сожалению, ответ неверный.':
             await message.answer(response_text,
                                  parse_mode="Markdown",
-                                 message_effect_id="5046589136895476101",
+                                 message_effect_id="5104858069142078462",
                                  reply_markup=InlineKeyboardMarkup(
                                      inline_keyboard=[
                                          [InlineKeyboardButton(text='🤔 Объяснение',
