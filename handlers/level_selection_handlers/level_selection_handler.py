@@ -57,6 +57,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         if prepared_task.get('audio'):
             audio_file = await extract_audio_from_db(prepared_task['task_id'])
             if audio_file:
+                number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
+                                                   string=prepared_task['question']))
                 await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
                 await callback.bot.send_voice(chat_id=chat_id, voice=audio_file, reply_markup=InlineKeyboardMarkup(
                     inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
@@ -67,8 +69,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
                                                            callback_data="language_check")]
                                      ]))
 
-                number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
-                                                   string=prepared_task['content']))
+
                 if number_of_buttons != 0:
                     await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
         else:
