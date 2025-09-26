@@ -556,20 +556,22 @@ async def show_progress(user_ident, level_name):
 async def give_hint(task_id):
     try:
         async with aiosqlite.connect('BFU.db') as db:
-            cursor = await db.execute("SELECT content, question FROM Tasks WHERE task_id=?", (task_id,))
-            content, question = await cursor.fetchone()
+            cursor = await db.execute("SELECT content, question, level_name FROM Tasks LEFT JOIN Levels on Tasks.level_id = Levels.level_id WHERE task_id=?", (task_id,))
+            content, question, level_name = await cursor.fetchone()
 
             cursor = await db.execute("""
             SELECT correct_answer 
             FROM TasksAnswers WHERE task_id=?
             """, (task_id,))
             result = await cursor.fetchone()
+
             answer = result[0] if result else None
 
             hint = hint_prompt.format(
                 content=content,
                 question=question,
-                answer=answer
+                answer=answer,
+                level_name=level_name
             )
 
             response = gigachat.invoke([
