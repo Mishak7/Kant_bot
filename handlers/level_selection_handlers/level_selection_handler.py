@@ -66,9 +66,11 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         else:
             await callback.message.answer(text, parse_mode="Markdown",
                                           reply_markup=InlineKeyboardMarkup(
-                                              inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
+                                              inline_keyboard=[[InlineKeyboardButton(text='👀 Пропустить',
+                                                                                     callback_data=level)],
+                                                                [InlineKeyboardButton(text='💡Подсказка',
                                                                                      callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
-                                                               [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                                                [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                                                      callback_data="language_check")]
                                                                ]))
 

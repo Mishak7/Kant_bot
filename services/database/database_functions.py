@@ -294,6 +294,7 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
                 """,
                 (module_id, level_id, user_id))
             row = await cursor.fetchone()
+            await update_user_progress(user_id, row[0])
             return row
 
     except Exception as e:
@@ -401,7 +402,7 @@ async def update_user_score(user_ident, level_id, score_change):
         return False
 
 
-async def update_user_progress(user_ident, task_ident, correct):
+async def update_user_progress(user_ident, task_ident, correct=False):
     try:
         async with aiosqlite.connect('BFU.db') as db:
             result = await db.execute(
