@@ -4557,7 +4557,7 @@ data = {
             "level_name": "A2",
             "module_name": "Easy",
             "type_task": "Speaking",
-            "task_content": "Вам задали вопрос: «Как вас зовут полностью?»",
+            "task_content": "Вам задали вопрос: «Какое ваше полное имя?» (фамилия, имя)",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
             "task_score": 5

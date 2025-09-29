@@ -309,16 +309,20 @@ async def check_text_answer(message: Message, state: FSMContext):
 
             else:
                 response_text += '\n' + progress['text']
-                await message.answer(
-                    response_text,
-                    parse_mode="Markdown",
-                    message_effect_id="5046509860389126442",
-                    reply_markup=InlineKeyboardMarkup(
-                        inline_keyboard=[
-                            [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
-                            [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
+                condition_open_question = False
+                if response:
+                    condition_open_question = (response.get('score', 0) >= response.get('max_score', 0) * 0.7)
 
+                if response_text.startswith('✅ Молодец!') or condition_open_question:
+                    await message.answer(
+                        response_text,
+                        parse_mode="Markdown",
+                        message_effect_id="5046509860389126442",
+                        reply_markup=InlineKeyboardMarkup(
+                            inline_keyboard=[
+                                [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
+                                [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
 
     except Exception as e:
