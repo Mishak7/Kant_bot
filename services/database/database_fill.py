@@ -2192,7 +2192,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Writing",
             "task_content": "Объясните другу, как пройти в магазин от вашего дома.",
-            "task_question": "Напишите короткий текст. Объем: 2-3 предложениz.",
+            "task_question": "Напишите короткий текст. Объем: 2-3 предложения.",
             "check_method": "open_question_writing",
             "task_score": 10
         },
@@ -2426,7 +2426,7 @@ data = {
             "module_name": "Easy",
             "type_task": "Listening",
             "task_content": "Расписание. 8:13 - Биология",
-            "task_question": "Прослушай расписание и отметьте правильное время пары.\n\n1)8:30\n2)18:30\n3)8:13\n4)18:13\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_question": "Прослушай расписание и отметьте правильное время пары.\n\n1) 8:30\n2) 18:30\n3) 8:13\n4) 18:13\n\nНапиши ТОЛЬКО номер ответа!",
             "check_method": "multiple_choice",
             "task_score": 5,
             "answer": 3,
