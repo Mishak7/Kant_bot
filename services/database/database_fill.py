@@ -7238,17 +7238,6 @@ data = {
             "level_name": "B1",
             "module_name": "Easy",
             "type_task": "Reading",
-            "task_content": "\n\nНапиши ТОЛЬКО номер ответа!",
-            "task_question": "",
-            "check_method": "multiple_choice",
-            "task_score": 3,
-            "answer":
-        },
-        {
-            "level_score": 3,
-            "level_name": "B1",
-            "module_name": "Easy",
-            "type_task": "Reading",
             "task_content": "Летом мы поедем на Чёрное море. Там очень тепло, светит солнце, но иногда бывает сильный ветер и идёт дождь. Вода тёплая.\n\n1)	Всегда холодно и идёт снег.\n2) Тепло, но иногда дождь.\n3) Всегда жарко и сухо.\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выбери верный вариант ответа из предложенных ниже\n\nКакая погода бывает на Чёрном море летом? ",
             "check_method": "multiple_choice",
