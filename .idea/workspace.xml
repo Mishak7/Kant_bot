@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c7fcfffb-15b4-496d-8d0d-3c3d9cba29c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/main_handlers/main_prompts/prompt_obscene_language.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/main_handlers/main_prompts/prompt_obscene_language.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/database/database_prompts/evaluation_prompt.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/database/database_prompts/evaluation_prompt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/database/database_prompts/explanation_prompt.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/database/database_prompts/explanation_prompt.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
