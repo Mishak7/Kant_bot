@@ -12,7 +12,6 @@ from aiogram.types import CallbackQuery
 from config.logger import logger
 from handlers.critical_info_handlers.critical_keyboard import back_to_critical_keyboard
 from handlers.main_handlers.languages import TEXTS
-<<<<<<< HEAD
 from handlers.main_handlers.commands import get_user_language
 
 router = Router()
@@ -25,7 +24,7 @@ async def critical_police_handler(callback: CallbackQuery):
     try:
         text = TEXTS[language]['handlers']['critical_handlers']['critical_police_handler']
         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
-=======
+
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 router = Router()
@@ -37,7 +36,7 @@ async def critical_police_handler(callback: CallbackQuery, language: str):
     try:
         text = TEXTS[language]['handlers']['critical_handlers']['critical_police_handler']
         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard(language))
->>>>>>> main
+
         await callback.answer()
     except Exception as e:
         logger.error(f'Police contacts error: {e}\n{traceback.format_exc()}')
@@ -45,19 +44,16 @@ async def critical_police_handler(callback: CallbackQuery, language: str):
 
 
 @router.callback_query(F.data == "critical_hotline")
-<<<<<<< HEAD
 async def critical_hotline_handler(callback: CallbackQuery):
     """Provide visa and migration support hotline information."""
     try:
         text = TEXTS[language]['handlers']['critical_handlers']['critical_hotline_handler']
         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard())
-=======
 async def critical_hotline_handler(callback: CallbackQuery, language: str):
     """Provide visa and migration support hotline information."""
     try:
         text = TEXTS[language]['handlers']['critical_handlers']['critical_hotline_handler']
         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=back_to_critical_keyboard(language))
->>>>>>> main
         await callback.answer()
     except Exception as e:
         logger.error(f'Hotline contacts error: {e}\n{traceback.format_exc()}')

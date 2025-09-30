@@ -302,25 +302,79 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
         return False
 
 
-async def review_mistakes(user_id):
+async def review_mistakes(user_id, level):
     """
     Функция, которая позволяет пользователю после прохождения всего уровня перепройти невыполненные или плохо выполненные задания.
     """
     try:
         async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT level_id FROM Levels WHERE level_name = ?", (level,))
+            level_row = await cursor.fetchone()
+            level_id = level_row[0] if level_row else None
+
             cursor = await db.execute("SELECT task_id FROM UserProgress WHERE user_id = ? AND is_correct = ?", (user_id, False))
-            unfinished_tasks = await cursor.fetchone()
+            unfinished_tasks = await cursor.fetchall()
+            if not unfinished_tasks:
+                return None
+            
+            random_task_id = random.choice([task[0] for task in unfinished_tasks])
             
             cursor = await db.execute(
                 """SELECT T.task_id, T.content, T.type, T.question, T.audio FROM Tasks T
-                WHERE T.task_id = ?
+                WHERE T.task_id = ? AND T.level_id = ?
                 """,
-                (random.choice(unfinished_tasks)))
+                (random_task_id, level_id))
             row = await cursor.fetchone()
             return row
         
     except Exception as e:
-        logger.error(f"Error getting a task: {e}")
+        logger.error(f"Error getting a review task: {e}")
+        return False
+    
+
+async def all_tasks_done_right(user_id, level):
+    """
+    Функция, которая показывает, если пользователь правильно прошел все задания одного модуля
+    """
+    try: 
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT level_id FROM Levels WHERE level_name = ?", (level,))
+            level_row = await cursor.fetchone()
+            level_id = level_row[0] if level_row else None
+
+            cursor = await db.execute("SELECT COUNT(DISTINCT task_id) FROM UserProgress WHERE user_id = ? AND is_correct = ?", (user_id, True))
+            done_right_tasks = (await cursor.fetchone())[0]
+
+            cursor = await db.execute("SELECT COUNT (*) FROM Tasks WHERE level_id = ?", (level_id,))
+            all_tasks = (await cursor.fetchone())[0]
+
+            return done_right_tasks == all_tasks
+        
+    except Exception as e:
+        logger.error(f"Error function all_task_done_right: {e}")
+        return False
+    
+
+async def all_tasks_done(user_id, level):
+    """
+    Функция, которая показывает, если пользователь прошел все задания одного модуля
+    """
+    try: 
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT level_id FROM Levels WHERE level_name = ?", (level,))
+            level_row = await cursor.fetchone()
+            level_id = level_row[0] if level_row else None
+
+            cursor = await db.execute("SELECT COUNT(DISTINCT task_id) FROM UserProgress WHERE user_id = ?", (user_id,))
+            done_tasks = (await cursor.fetchone())[0]
+
+            cursor = await db.execute("SELECT COUNT (*) FROM Tasks WHERE level_id = ?", (level_id,))
+            all_tasks = (await cursor.fetchone())[0]
+
+            return done_tasks == all_tasks
+        
+    except Exception as e:
+        logger.error(f"Error function all_task_done: {e}")
         return False
 
 
