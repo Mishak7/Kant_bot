@@ -4,7 +4,8 @@ import tempfile
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config.logger import logger
 from services.database.database_functions import get_task, check_task, prepare_question, get_user_id, \
-    extract_audio_from_db, explain_multiple_choice, show_progress, give_hint
+    extract_audio_from_db, explain_multiple_choice, show_progress, give_hint, all_tasks_done, all_tasks_done_right, \
+    review_mistakes
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 import traceback
@@ -46,53 +47,104 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
         telegram_id = callback.from_user.id
         chat_id = callback.message.chat.id
         user_id = await get_user_id(telegram_id)
-        task = await get_task(level, user_id)
-        prepared_task = await prepare_question(task)
 
-        number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
-                                       string=prepared_task['content']))
+        are_all_tasks_done = await all_tasks_done(user_id, level)
+        if not are_all_tasks_done:
+            await state.set_state(AnswerState.waiting_for_answer)
 
-        text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
-        is_speaking_task = prepared_task.get('type') == 'Speaking'
-        if prepared_task.get('audio'):
-            audio_file = await extract_audio_from_db(prepared_task['task_id'])
-            if audio_file:
-                number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
-                                                   string=prepared_task['question']))
-                await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
-                await callback.bot.send_voice(chat_id=chat_id, voice=audio_file, reply_markup=InlineKeyboardMarkup(
-                    inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
-                                                           callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
-                                     [InlineKeyboardButton(text='👀 Пропустить',
-                                                           callback_data=level)],
-                                     [InlineKeyboardButton(text="↩️ Назад к уровням",
-                                                           callback_data="language_check")]
-                                     ]))
+            task = await get_task(level, user_id)
+            prepared_task = await prepare_question(task)
 
+            number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
+                                           string=prepared_task['content']))
+
+            text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
+            is_speaking_task = prepared_task.get('type') == 'Speaking'
+            if prepared_task.get('audio'):
+                audio_file = await extract_audio_from_db(prepared_task['task_id'])
+                if audio_file:
+                    number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
+                                                       string=prepared_task['question']))
+                    await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
+                    await callback.bot.send_voice(chat_id=chat_id, voice=audio_file, reply_markup=InlineKeyboardMarkup(
+                        inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
+                                                               callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
+                                         [InlineKeyboardButton(text='👀 Пропустить',
+                                                               callback_data=level)],
+                                         [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                                               callback_data="language_check")]
+                                         ]))
+
+
+                    if number_of_buttons != 0:
+                        await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
+            else:
+                await callback.message.answer(text, parse_mode="Markdown",
+                                              reply_markup=InlineKeyboardMarkup(
+                                                  inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
+                                                                                         callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
+                                                                   [InlineKeyboardButton(text='👀 Пропустить',
+                                                                                         callback_data=level)],
+                                                                   [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                                                                         callback_data="language_check")]
+                                                                   ]))
 
                 if number_of_buttons != 0:
                     await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
+
+            await callback.answer()
+            await state.update_data(
+                task_id=prepared_task['task_id'],
+                user_id=user_id,
+                is_speaking_task=is_speaking_task,
+                level=level
+            )
         else:
-            await callback.message.answer(text, parse_mode="Markdown",
-                                          reply_markup=InlineKeyboardMarkup(
-                                              inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
-                                                                                     callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
-                                                               [InlineKeyboardButton(text='👀 Пропустить',
-                                                                                     callback_data=level)],
-                                                               [InlineKeyboardButton(text="↩️ Назад к уровням",
-                                                                                     callback_data="language_check")]
-                                                               ]))
+            are_all_tasks_done_right = await all_tasks_done_right(user_id, level)
+            if are_all_tasks_done_right:
+                progress = await show_progress(user_id, level)
+                new_level = levels[levels.index(level) + 1] if levels.index(level) + 1 < len(levels) else 'всё!'
+                await callback.message.answer(
+                    f"🎉 Поздравляем, вы полностью закончили уровень {progress['level_name']}! Переходите на новый уровень для дальнейшего обучения!",
+                    parse_mode="Markdown", message_effect_id="5046509860389126442",
+                    reply_markup=InlineKeyboardMarkup(
+                        inline_keyboard=[[InlineKeyboardButton(
+                            text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
+                            callback_data=new_level)],
+                            [InlineKeyboardButton(text='🔄 Продолжить текущий',
+                                                  callback_data=level)],
+                            [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                                  callback_data="language_check")]]))
+            else:
+                task = await review_mistakes(user_id, level)
+                prepared_task = await prepare_question(task)
+                text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
+                is_speaking_task = prepared_task.get('type') == 'Speaking'
+                if prepared_task.get('audio'):
+                    audio_file = await extract_audio_from_db(prepared_task['task_id'])
+                    if audio_file:
+                        await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
+                        await callback.bot.send_voice(chat_id=chat_id, voice=audio_file,
+                                                      reply_markup=InlineKeyboardMarkup(
+                                                          inline_keyboard=[
+                                                              [InlineKeyboardButton(text='👀 Пропустить',
+                                                                                    callback_data=level)],
+                                                              [InlineKeyboardButton(text='💡 Подсказка',
+                                                                                    callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
+                                                              [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                                                                    callback_data="language_check")]
+                                                          ]))
+                else:
+                    await callback.message.answer(text, parse_mode="Markdown",
+                                                  reply_markup=InlineKeyboardMarkup(
+                                                      inline_keyboard=[[InlineKeyboardButton(text='👀 Пропустить',
+                                                                                             callback_data=level)],
+                                                                       [InlineKeyboardButton(text='💡Подсказка',
+                                                                                             callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
+                                                                       [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                                                                             callback_data="language_check")]
+                                                                       ]))
 
-            if number_of_buttons != 0:
-                await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
-
-        await callback.answer()
-        await state.update_data(
-            task_id=prepared_task['task_id'],
-            user_id=user_id,
-            is_speaking_task=is_speaking_task,
-            level=level
-        )
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await callback.answer('Ошибка при загрузке информации', show_alert=True)
@@ -113,7 +165,7 @@ async def explanation_handler(callback: CallbackQuery, state: FSMContext):
         progress = await show_progress(user_id, level)
         if progress['score'] >= 100:
             await callback.message.answer(
-                f"{str(gigachat_explanation)} \n🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
+                f"{str(gigachat_explanation)} \n🎉 Поздравляем, вы прошли уровень {progress['level_name']}!",
                 parse_mode="Markdown",
                 message_effect_id="5046509860389126442",
                 reply_markup=InlineKeyboardMarkup(
@@ -190,7 +242,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
 
             progress = await show_progress(user_id, level)
             if progress['score'] >= 100:
-                await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
+                await message.answer(f"🎉 Поздравляем, вы прошли уровень {progress['level_name']}!",
                                      parse_mode="Markdown",
                                      message_effect_id="5046509860389126442",
                                      reply_markup=InlineKeyboardMarkup(
@@ -198,19 +250,32 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
                                              text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
                                              callback_data=new_level)],
                                              [InlineKeyboardButton(text='🔄 Продолжить текущий',
-                                                                   callback_data=level)]]))
+                                                                   callback_data=level)],
+                                             [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                                                   callback_data="language_check")]]))
 
             else:
                 response_text += '\n' + progress['text']
 
-                await message.answer(
-                    response_text,
-                    parse_mode="Markdown",
-                    message_effect_id="5046509860389126442",
-                    reply_markup=InlineKeyboardMarkup(
-                        inline_keyboard=[
-                            [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
-                            [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
+                if response.get('score', 0) >= response.get('max_score', 0) * 0.7:
+                    await message.answer(
+                        response_text,
+                        parse_mode="Markdown",
+                        message_effect_id="5046509860389126442",
+                        reply_markup=InlineKeyboardMarkup(
+                            inline_keyboard=[
+                                [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
+                                [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
+                else:
+                    await message.answer(
+                        response_text,
+                        parse_mode="Markdown",
+                        message_effect_id="5104858069142078462",
+                        reply_markup=InlineKeyboardMarkup(
+                            inline_keyboard=[
+                                [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
+                                [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
+
 
 
 
@@ -302,20 +367,30 @@ async def check_text_answer(message: Message, state: FSMContext):
                                          inline_keyboard=[[InlineKeyboardButton(
                                              text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
                                              callback_data=new_level)],
-                                                          [InlineKeyboardButton(text='🔄 Продолжить текущий',
-                                                                                callback_data=level)]]))
+                                             [InlineKeyboardButton(text='🔄 Продолжить текущий',
+                                                                   callback_data=level)],
+                                             [InlineKeyboardButton(text="↩️ Назад к уровням",
+                                                                   callback_data="language_check")]]))
 
             else:
-                response_text += '\n' + progress['text']
-                await message.answer(
-                    response_text,
-                    parse_mode="Markdown",
-                    message_effect_id="5046509860389126442",
-                    reply_markup=InlineKeyboardMarkup(
-                        inline_keyboard=[
-                            [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
-                            [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
-
+                if response.get('score', 0) >= response.get('max_score', 0) * 0.7:
+                    await message.answer(
+                        response_text,
+                        parse_mode="Markdown",
+                        message_effect_id="5046509860389126442",
+                        reply_markup=InlineKeyboardMarkup(
+                            inline_keyboard=[
+                                [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
+                                [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
+                else:
+                    await message.answer(
+                        response_text,
+                        parse_mode="Markdown",
+                        message_effect_id="5104858069142078462",
+                        reply_markup=InlineKeyboardMarkup(
+                            inline_keyboard=[
+                                [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
+                                [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
 
 
