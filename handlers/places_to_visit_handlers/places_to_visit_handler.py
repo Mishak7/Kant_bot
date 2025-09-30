@@ -34,7 +34,7 @@ async def places_to_visit_handler(callback: CallbackQuery, state: FSMContext, la
             text=TEXT,
             reply_markup=InlineKeyboardMarkup(
                 inline_keyboard=[[InlineKeyboardButton(text='Рандом', callback_data='random_place')],
-                                 [InlineKeyboardButton(text="◀️ Назад", callback_data='back_to_main_no_delete')]]))
+                                 [InlineKeyboardButton(text="◀️ Назад", callback_data='back_to_main')]]))
 
         await state.update_data(places_message_id=sent_message.message_id)
 

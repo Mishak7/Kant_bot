@@ -17,6 +17,7 @@ router = Router()
 
 class AnswerState(StatesGroup):
     waiting_for_answer = State()
+    messages_to_delete = State()
 
 
 levels = ["A1", "A2", "B1", "B2", "C1", "C2"]
@@ -38,6 +39,23 @@ async def task_hint(callback: CallbackQuery):
 async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
     """Handler for all tasks"""
     try:
+
+        data = await state.get_data()
+        message_ids = data.get('message_ids', [])
+
+        # Удаляем каждое сообщение из списка
+        for msg_id in message_ids:
+            try:
+                await callback.bot.delete_message(
+                    chat_id=callback.message.chat.id,
+                    message_id=msg_id
+                )
+            except:
+                pass  # Игнорируем если сообщение уже удалено или недоступно
+
+        # 2. ОЧИЩАЕМ СПИСОК для новых сообщений
+        await state.update_data(message_ids=[])
+
         await callback.message.delete()
 
         level = callback.data
@@ -65,7 +83,13 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                 if audio_file:
                     number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
                                                        string=prepared_task['question']))
-                    await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
+                    audio_question = await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
+
+                    data = await state.get_data()
+                    message_ids = data.get('message_ids', [])
+                    message_ids.append(audio_question.message_id)
+                    await state.update_data(message_ids=message_ids)
+
                     await callback.bot.send_voice(chat_id=chat_id, voice=audio_file, reply_markup=InlineKeyboardMarkup(
                         inline_keyboard=[[InlineKeyboardButton(text='💡Подсказка',
                                                                callback_data=f'hint!ПУ!{prepared_task["task_id"]}')],
@@ -76,7 +100,14 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                                          ]))
 
                     if number_of_buttons != 0:
-                        await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
+                        answer_msg = await callback.message.answer("Выбери ответ:",
+                                                                   reply_markup=answer_keyboard(number_of_buttons))
+
+                        data = await state.get_data()
+                        message_ids = data.get('message_ids', [])
+                        message_ids.append(answer_msg.message_id)
+                        await state.update_data(message_ids=message_ids)
+
             else:
                 await callback.message.answer(text, parse_mode="Markdown",
                                               reply_markup=InlineKeyboardMarkup(
@@ -89,7 +120,14 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                                                                    ]))
 
                 if number_of_buttons != 0:
-                    await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
+                    answer_msg = await callback.message.answer("Выбери ответ:",
+                                                               reply_markup=answer_keyboard(number_of_buttons))
+
+                    # Добавляем ID в список
+                    data = await state.get_data()
+                    message_ids = data.get('message_ids', [])
+                    message_ids.append(answer_msg.message_id)
+                    await state.update_data(message_ids=message_ids)
 
             await callback.answer()
             await state.update_data(
@@ -122,7 +160,13 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                 if prepared_task.get('audio'):
                     audio_file = await extract_audio_from_db(prepared_task['task_id'])
                     if audio_file:
-                        await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
+                        audio_question = await callback.message.answer(prepared_task['question'], parse_mode="Markdown")
+
+                        data = await state.get_data()
+                        message_ids = data.get('message_ids', [])
+                        message_ids.append(audio_question.message_id)
+                        await state.update_data(message_ids=message_ids)
+
                         await callback.bot.send_voice(chat_id=chat_id, voice=audio_file,
                                                       reply_markup=InlineKeyboardMarkup(
                                                           inline_keyboard=[
@@ -133,6 +177,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                                                               [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                                                     callback_data="language_check")]
                                                           ]))
+
                 else:
                     await callback.message.answer(text, parse_mode="Markdown",
                                                   reply_markup=InlineKeyboardMarkup(
@@ -392,7 +437,7 @@ async def check_text_answer(message: Message, state: FSMContext):
                                 [InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
 
 
-
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
         await message.answer('Ошибка при проверке ответа')
+
