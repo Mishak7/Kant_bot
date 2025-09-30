@@ -268,3 +268,15 @@ async def back_to_main_menu(callback: CallbackQuery, language: str):
     except Exception as e:
         logger.error(f'Back to main error: {e}\n{traceback.format_exc()}')
         await callback.answer(f"{TEXTS[language]['errors']['back_error']}")
+
+
+@router.callback_query(F.data == "back_to_main_no_delete")
+async def back_to_main_no_delete_menu(callback: CallbackQuery, language: str):
+    """Return to main menu from any section without deleting message"""
+    try:
+        text = f"{TEXTS[language]['greetings']}"
+        await callback.message.answer(text, reply_markup=main_roots_keyboard(language), parse_mode="Markdown")
+        await callback.answer()
+    except Exception as e:
+        logger.error(f'Back to main error: {e}\n{traceback.format_exc()}')
+        await callback.answer(f"{TEXTS[language]['errors']['back_error']}")
