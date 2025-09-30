@@ -322,17 +322,18 @@ async def extract_audio_from_db(task_id: str) -> Optional[FSInputFile]:
     if os.path.exists(audio_path):
         return FSInputFile(audio_path)
 
-    async with aiosqlite.connect('BFU.db') as db:
-        cursor = await db.execute("SELECT audio FROM Tasks WHERE task_id=?", (task_id,))
-        row = await cursor.fetchone()
-
-    if row and row[0]:
-        audio_blob = row[0]
-        with open(audio_path, "wb") as f:
-            f.write(audio_blob)
-        return FSInputFile(audio_path)
     else:
-        return None
+        async with aiosqlite.connect('BFU.db') as db:
+            cursor = await db.execute("SELECT audio FROM Tasks WHERE task_id=?", (task_id,))
+            row = await cursor.fetchone()
+
+        if row and row[0]:
+            audio_blob = row[0]
+            with open(audio_path, "wb") as f:
+                f.write(audio_blob)
+            return FSInputFile(audio_path)
+        else:
+            return None
 
 
 async def update_user_score(user_ident, level_id, score_change):

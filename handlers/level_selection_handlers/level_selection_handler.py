@@ -288,9 +288,7 @@ async def check_text_answer(message: Message, state: FSMContext):
                                                                callback_data=f'explanation!ПУ!{task_id}!ПУ!{user_answer}')],
                                          [InlineKeyboardButton(text="➡️ Следующее задание", callback_data=level)],
                                          [InlineKeyboardButton(text="↩️ Назад к уровням",
-                                                               callback_data="language_check")]]
-                                 )
-                                 )
+                                                               callback_data="language_check")]]))
 
         else:
             progress = await show_progress(user_id, level)
