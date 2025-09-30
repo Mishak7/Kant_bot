@@ -35,7 +35,7 @@ async def task_hint(callback: CallbackQuery):
 
 
 @router.callback_query(F.data.in_(["A1", "A2", "B1", "B2", "C1", "C2"]))
-async def level_handler(callback: CallbackQuery, state: FSMContext):
+async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
     """Handler for all tasks"""
     try:
         await callback.message.delete()
@@ -56,7 +56,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
             prepared_task = await prepare_question(task)
 
             number_of_buttons = len(re.findall(pattern=r'[1-4]\)',
-                                           string=prepared_task['content']))
+                                               string=prepared_task['content']))
 
             text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
             is_speaking_task = prepared_task.get('type') == 'Speaking'
@@ -74,7 +74,6 @@ async def level_handler(callback: CallbackQuery, state: FSMContext):
                                          [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                                callback_data="language_check")]
                                          ]))
-
 
                     if number_of_buttons != 0:
                         await callback.message.answer("Выбери ответ:", reply_markup=answer_keyboard(number_of_buttons))
@@ -257,7 +256,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
             else:
                 response_text += '\n' + progress['text']
 
-                if response.get('score', 0) >= response.get('max_score', 0) * 0.7:
+                if isinstance(answer_check, dict) and response.get('score', 0) >= response.get('max_score', 0) * 0.7:
                     await message.answer(
                         response_text,
                         parse_mode="Markdown",
@@ -373,7 +372,7 @@ async def check_text_answer(message: Message, state: FSMContext):
                                                                    callback_data="language_check")]]))
 
             else:
-                if response.get('score', 0) >= response.get('max_score', 0) * 0.7:
+                if response_text.startswith('✅ Молодец! Все верно!') or (isinstance(answer_check, dict) and response.get('score', 0) >= response.get('max_score', 0) * 0.7):
                     await message.answer(
                         response_text,
                         parse_mode="Markdown",
