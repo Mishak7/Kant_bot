@@ -14,7 +14,6 @@ LOG_FORMAT = '%(asctime)s - %(filename)s - %(name)s - %(levelname)s - %(message)
 MAX_BYTES = 1024 * 1024
 BACKUP_COUNT = 5
 LOG_LEVEL = logging.CRITICAL
-
 def setup_logger():
     """Logger configuration"""
     try:

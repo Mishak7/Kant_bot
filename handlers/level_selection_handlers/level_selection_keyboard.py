@@ -35,8 +35,8 @@ def answer_keyboard(number_of_buttons:int):
             [KeyboardButton(text="1"), KeyboardButton(text="2"),KeyboardButton(text="3")]], resize_keyboard=True, one_time_keyboard=True),
 
         4: ReplyKeyboardMarkup(keyboard=[
-        [KeyboardButton(text="1"), KeyboardButton(text="2")],
-        [KeyboardButton(text="3"), KeyboardButton(text="4")]],
+        [KeyboardButton(text="1")], [KeyboardButton(text="2")],
+        [KeyboardButton(text="3")], [KeyboardButton(text="4")]],
             resize_keyboard=True, one_time_keyboard=True),}
 
     return keyboards[number_of_buttons]
