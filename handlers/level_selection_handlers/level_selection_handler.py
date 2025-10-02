@@ -22,6 +22,7 @@ class AnswerState(StatesGroup):
 
 levels = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
+reached_max = True
 
 @router.callback_query(F.data.startswith('hint'))
 async def task_hint(callback: CallbackQuery):
@@ -51,9 +52,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                     message_id=msg_id
                 )
             except:
-                pass  # Игнорируем если сообщение уже удалено или недоступно
+                pass
 
-        # 2. ОЧИЩАЕМ СПИСОК для новых сообщений
         await state.update_data(message_ids=[])
 
         await callback.message.delete()
@@ -123,7 +123,6 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                     answer_msg = await callback.message.answer("Выбери ответ:",
                                                                reply_markup=answer_keyboard(number_of_buttons))
 
-                    # Добавляем ID в список
                     data = await state.get_data()
                     message_ids = data.get('message_ids', [])
                     message_ids.append(answer_msg.message_id)
@@ -148,8 +147,6 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                         inline_keyboard=[[InlineKeyboardButton(
                             text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
                             callback_data=new_level)],
-                            [InlineKeyboardButton(text='🔄 Продолжить текущий',
-                                                  callback_data=level)],
                             [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                   callback_data="language_check")]]))
             else:
@@ -199,27 +196,10 @@ async def explanation_handler(callback: CallbackQuery, state: FSMContext):
     try:
         data = await state.get_data()
         level = data.get('level')
-        user_id = data.get('user_id')
-        new_level = levels[levels.index(level) + 1] if len(levels) >= levels.index(
-            level) + 1 else 'всё!'
-
         explanation, task_id, user_answer = callback.data.split("!ПУ!")
         gigachat_explanation = await explain_multiple_choice(task_ident=task_id, user_answer=user_answer)
 
-        progress = await show_progress(user_id, level)
-        if progress['score'] >= 100:
-            await callback.message.answer(
-                f"{str(gigachat_explanation)} \n🎉 Поздравляем, вы прошли уровень {progress['level_name']}!",
-                parse_mode="Markdown",
-                message_effect_id="5046509860389126442",
-                reply_markup=InlineKeyboardMarkup(
-                    inline_keyboard=[[InlineKeyboardButton(
-                        text=f"🚀 Перейти на новый уровень: {level} 🛬 {new_level}",
-                        callback_data=new_level)],
-                        [InlineKeyboardButton(text='🔄 Продолжить текущий',
-                                              callback_data=level)]]))
-        else:
-            await callback.message.answer(str(gigachat_explanation),
+        await callback.message.answer(str(gigachat_explanation),
                                           parse_mode="Markdown",
                                           reply_markup=InlineKeyboardMarkup(
                                               inline_keyboard=[[InlineKeyboardButton(text="➡️ Следующее задание",
@@ -238,6 +218,7 @@ async def explanation_handler(callback: CallbackQuery, state: FSMContext):
 @router.message(AnswerState.waiting_for_answer, F.content_type == 'voice')
 async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
     """Handler for voice answers from user"""
+    global reached_max
     try:
 
         file_id = message.voice.file_id
@@ -285,7 +266,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
                 response_text = 'Ошибка: неверный формат ответа от системы проверки'
 
             progress = await show_progress(user_id, level)
-            if progress['score'] >= 100:
+            if progress['score'] >= 100 and reached_max:
                 await message.answer(f"🎉 Поздравляем, вы прошли уровень {progress['level_name']}!",
                                      parse_mode="Markdown",
                                      message_effect_id="5046509860389126442",
@@ -296,7 +277,9 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
                                              [InlineKeyboardButton(text='🔄 Продолжить текущий',
                                                                    callback_data=level)],
                                              [InlineKeyboardButton(text="↩️ Назад к уровням",
-                                                                   callback_data="language_check")]]))
+                                                                 callback_data="language_check")]]))
+                reached_max = False
+
 
             else:
                 response_text += '\n' + progress['text']
@@ -334,6 +317,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
 @router.message(AnswerState.waiting_for_answer)
 async def check_text_answer(message: Message, state: FSMContext):
     """Проверка текстового ответа от пользователя"""
+    global reached_max
     try:
 
         data = await state.get_data()
@@ -401,8 +385,9 @@ async def check_text_answer(message: Message, state: FSMContext):
 
         else:
             progress = await show_progress(user_id, level)
+            response_text += '\n' + progress['text']
 
-            if progress['score'] >= 100:
+            if progress['score'] >= 100 and reached_max:
 
                 await message.answer(f"🎉 Поздравляем, вы закончили уровень {progress['level_name']}!",
                                      parse_mode="Markdown",
@@ -415,6 +400,7 @@ async def check_text_answer(message: Message, state: FSMContext):
                                                                    callback_data=level)],
                                              [InlineKeyboardButton(text="↩️ Назад к уровням",
                                                                    callback_data="language_check")]]))
+                reached_max = False
 
             else:
                 if response_text.startswith('✅ Молодец! Все верно!') or (isinstance(answer_check, dict) and response.get('score', 0) >= response.get('max_score', 0) * 0.7):

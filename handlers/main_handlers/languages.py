@@ -1,4 +1,3 @@
-
 TEXTS = {
     'ru': {
         'greetings': """
@@ -20,24 +19,25 @@ TEXTS = {
         """,
 
         'language_selection': 'Выберите язык/Choose a language:',
-                              'errors': {
-    'start_error': 'Произошла ошибка при запуске бота. Пожалуйста, попробуйте позже.',
-    'info_error': 'Ошибка при загрузке информации',
-    'back_error': 'Ошибка при возврате в главное меню',
-    'audio_error': 'Ошибка при обработке',
-    'photo_error': 'Произошла ошибка при загрузке фото',
-    'gigachat_error': 'Ошибка инициализации GigaChat:',
-},
+        'errors': {
+            'start_error': 'Произошла ошибка при запуске бота. Пожалуйста, попробуйте позже.',
+            'info_error': 'Ошибка при загрузке информации',
+            'back_error': 'Ошибка при возврате в главное меню',
+            'audio_error': 'Ошибка при обработке',
+            'photo_error': 'Произошла ошибка при загрузке фото',
+            'gigachat_error': 'Ошибка инициализации GigaChat:',
+        },
 
-'keyboards': {
-    'main_keyboard': {
-        'info': 'Инфо',
+        'keyboards': {
+            'main_keyboard': {
+                'info': 'Инфо',
                 'location': 'Корпуса',
                 'dormitory': 'Общежития',
                 'hospital': 'Медцентр',
                 'sber': 'СБЕР',
                 'critical': 'SOS',
                 'language_check': 'Тренажер',
+                'places': 'Куда сходить?',
                 'back': 'Назад'
             },
             'critical_keyboard': {
@@ -46,7 +46,7 @@ TEXTS = {
                 'government': 'Местные органы власти',
                 'consulate': 'Консульство',
                 'back': 'Назад',
-                'appeal':'Электронное обращение'
+                'appeal': 'Электронное обращение'
             },
             'dormitory_keyboard': {
                 'check-in': 'Заселение в общежитие',
@@ -71,28 +71,28 @@ TEXTS = {
             },
             'payment_keyboard': {
                 'sber_payment': 'Оплатить в Сбере',
-        'back': 'Назад',
-        'more': 'Подробнее'
-    },
-    'language_check_keyboard': {
-        'grammar_keyboard': {
-            'to_russian': 'Перевести на русский',
-            'from_russian': 'Перевести с русского',
-            'back': 'Назад'
-        },
-        'speaking_keyboard': {
-            'back': 'Назад'
-        },
-        'language_check_keyboard': {
-            'Authorization':'Напиши свое имя',
-            'to_lessons':'Учить русский',
-            'audio': 'Аудирование',
-            'grammar': 'Грамматика',
-            'speaking': 'Говорение',
-            'back': 'Назад'
-        }
-    },
-    'location_keyboard': {
+                'back': 'Назад',
+                'more': 'Подробнее'
+            },
+            'language_check_keyboard': {
+                'grammar_keyboard': {
+                    'to_russian': 'Перевести на русский',
+                    'from_russian': 'Перевести с русского',
+                    'back': 'Назад'
+                },
+                'speaking_keyboard': {
+                    'back': 'Назад'
+                },
+                'language_check_keyboard': {
+                    'Authorization': 'Напиши свое имя',
+                    'to_lessons': 'Учить русский',
+                    'audio': 'Аудирование',
+                    'grammar': 'Грамматика',
+                    'speaking': 'Говорение',
+                    'back': 'Назад'
+                }
+            },
+            'location_keyboard': {
                 'loc_1': '🏛️ Админкорпус',
                 'loc_2': '🧮 Физмат',
                 'loc_3': '🧬 Живые системы',
@@ -120,34 +120,39 @@ TEXTS = {
                 'loc_32': '🔬 Фабрика',
                 'loc_35': '🏊‍♂️ Бассейн',
                 'back': '⬅️ Назад'
-    },
-    'university_info_keyboard': {
-        'schedule': 'Расписание',
-        'scholarship': 'Стипендии',
-        'office_contacts': 'Контакты учебного офиса',
-        'visa_center': 'Визово-миграционный центр',
-        'back': 'Назад'
-    },
-    'language_selection_keyboard': {
-        'back': 'Назад'
-    },
-    'sber_keyboard': {
-        'educational_loan': 'Образовательный кредит',
-        'sber_card': 'Карта для стипендии',
-        'useful_links': 'Полезные ссылки',
-        'details': 'Подробнее',
-        'back': 'Назад'
-    },
+            },
+            'university_info_keyboard': {
+                'schedule': 'Расписание',
+                'scholarship': 'Стипендии',
+                'office_contacts': 'Контакты учебного офиса',
+                'visa_center': 'Визово-миграционный центр',
+                'back': 'Назад'
+            },
+            'language_selection_keyboard': {
+                'back': 'Назад'
+            },
+            'sber_keyboard': {
+                'educational_loan': 'Образовательный кредит',
+                'sber_card': 'Карта для стипендии',
+                'useful_links': 'Полезные ссылки',
+                'details': 'Подробнее',
+                'back': 'Назад'
+            },
 
-    'hospital_keyboard': {
-        'insurance':'Медицинское страхование',
-        'attachment':'Прикреплению к поликлинике'
-    }
-},
+            'hospital_keyboard': {
+                'insurance': 'Медицинское страхование',
+                'attachment': 'Прикреплению к поликлинике'
+            },
+            'places_keyboard': {
+                'random': 'Рандом',
+                'analysis': 'Анализирую ваш запрос...',
+                'processing': 'Обрабатываю запрос... Подбираю лучшие места!',
+            }
+        },
 
-'handlers': {
-    'critical_handlers': {
-        'critical_police_handler': '''
+        'handlers': {
+            'critical_handlers': {
+                'critical_police_handler': '''
 🚨 *Экстренные контакты*
 
 *Единый номер служб экстренного реагирования*
@@ -166,7 +171,7 @@ TEXTS = {
 💡 Сохрани эти номера в быстром доступе!
                                                     ''',
 
-        'critical_hotline_handler': '''
+                'critical_hotline_handler': '''
 🚪 *Сектор визово-миграционной поддержки*
 
 📞 *Телефон*:
@@ -185,7 +190,7 @@ TEXTS = {
 Обед 13:00–14:00 
                                                     ''',
 
-        'critical_government_handler': '''
+                'critical_government_handler': '''
 🏛️ *Комитет по межнациональным отношениям и реализации миграционной политики в Санкт‑Петербурге*
 
 Вы можете записаться на онлайн- или офлайн-встречу!
@@ -219,7 +224,7 @@ TEXTS = {
 Записаться можно через официальные ресурсы Комитета.
 Ссылка для записи:''',
 
-        'critical_consulate_handler': '''
+                'critical_consulate_handler': '''
 *Представительство МИД России в Калининграде* 🏛️
 
 *Адрес*: 🏠
@@ -237,13 +242,13 @@ TEXTS = {
 Пт: с *9:00* до *16:00* (перерыв с *12:00* до *14:00*)
 Сб-Вс: 🚫 Выходной
                                             ''',
-    },
+            },
 
-    'dormitory_handlers': {
-        'dormitory_text': """
+            'dormitory_handlers': {
+                'dormitory_text': """
        Для оформления места в общежитии 🏠 важно заранее подготовить необходимые документы 📋 и ознакомиться с процедурой подачи заявления 📝. Ознакомьтесь с подробной инструкцией ниже 👇:""",
 
-        'payment_text': """
+                'payment_text': """
 Оплатить общежитие можно двумя путями.
 
 1. Лично. В кабинет № 222 административного корпуса, 2 этаж. Здесь ты получишь квитанцию для оплаты в кассе на том же этаже. Оплатить через кассу можно наличными в рублях или банковской картой.
@@ -252,9 +257,9 @@ TEXTS = {
 
 Первокурсники оплачивают при заселении полностью первый семестр. Далее осенний семестр оплачивается до 15 сентября, а весенний – до 15 февраля.
                                             """,
-        'rules_text': """
+                'rules_text': """
         Нажми сюда 🏘️ «Правила проживания», чтобы ознакомиться с важными правилами и рекомендациями, которые помогут сделать твоё пребывание комфортным и безопасным. Здесь ты найдёшь всю необходимую информацию о режиме работы, обязанностях жильцов, правилах поведения и многое другое.✨""",
-        'laundry_text': """
+                'laundry_text': """
 🏢 *Расположение*:
 Прачечные находятся в каждом общежитии. Точное расположение и график работы подскажут комендант или вахтёр.
 
@@ -270,7 +275,7 @@ TEXTS = {
 
 ✨ Всё организовано для твоего удобства — пользуйся аккуратно!
                                             """,
-        'no_certificate_text': """
+                'no_certificate_text': """
 ЕСЛИ НЕТ СЕРТИФИКАТА ПРИВИВОК ИЛИ ФЛЮОРОГРАФИИ
 
 1 *Если у вас отсутствует свежая флюорография*
@@ -297,64 +302,64 @@ TEXTS = {
 Результат выдается через 4 рабочих дня (результат можно получить в
 личном кабинете).
                                                 """,
-    },
+            },
 
-    'dormitory_location_handlers': 'Общежитие №',
+            'dormitory_location_handlers': 'Общежитие №',
 
-    'hospital_handlers': {
-        'hospital_text': '''
+            'hospital_handlers': {
+                'hospital_text': '''
 *Университетская клиника БФУ им. И. Канта*
 
 *Адрес*: 236041, Россия, Калининград, ул. 9 апреля, 60
 *Контакты*: +7 (4012) 31-33-39    kdc@kantiana.ru
   '''
-    },
+            },
 
-    'language_check_handlers': {
-        'grammar_handlers': {
-            'language_grammar_handler': '''
+            'language_check_handlers': {
+                'grammar_handlers': {
+                    'language_grammar_handler': '''
                                             *Выберите вариант перевода*:
                                             ''',
-            'translate_to_russian_handler': '''
+                    'translate_to_russian_handler': '''
                                             Переведите данный текст на русский язык:
                                             ''',
-            'translate_from_russian_handler': '''
+                    'translate_from_russian_handler': '''
                                             Переведите данный текст с русского языка на свой:
                                             ''',
-        },
+                },
 
-        'listening_handlers': {
-            'send_voice': 'Прослушайте текст и попробуйте написать его на русском.',
-        },
+                'listening_handlers': {
+                    'send_voice': 'Прослушайте текст и попробуйте написать его на русском.',
+                },
 
-        'speaking_handlers': {
-            'topics': [
-                'Расскажите немного о своей семье.',
-                'Есть ли у вас домашнее животное?',
-                'Какие блюда вам нравятся?',
-                'Опишите свою комнату.',
-                'Какой ваш любимый вид транспорта?',
-                'Где вы любите проводить свободное время?',
-                'Как вы проводите свое воскресенье?',
-                'Ваше самое яркое воспоминание детства?',
-                'Куда вы хотели бы отправиться в путешествие?',
-                'Какие привычки помогают вам оставаться продуктивным?',
-                'Как прошёл твой вчерашний день?',
-                'Кем ты работаешь и чем занимаешься на работе?',
-                'О чём мечтает твоя семья?',
-                'Что интересного произошло с тобой на прошлой неделе?',
-                'Чем увлекается твой лучший друг?',
-                'Поделись своими впечатлениями от последнего фильма, который смотрел.',
-                'Почему ты решил учиться в Калининграде?'
-            ],
-            'speaking_send': 'Жду твой рассказ на тему:',
-            'handle_voice_message': 'Результат анализа:',
-        }
-    },
+                'speaking_handlers': {
+                    'topics': [
+                        'Расскажите немного о своей семье.',
+                        'Есть ли у вас домашнее животное?',
+                        'Какие блюда вам нравятся?',
+                        'Опишите свою комнату.',
+                        'Какой ваш любимый вид транспорта?',
+                        'Где вы любите проводить свободное время?',
+                        'Как вы проводите свое воскресенье?',
+                        'Ваше самое яркое воспоминание детства?',
+                        'Куда вы хотели бы отправиться в путешествие?',
+                        'Какие привычки помогают вам оставаться продуктивным?',
+                        'Как прошёл твой вчерашний день?',
+                        'Кем ты работаешь и чем занимаешься на работе?',
+                        'О чём мечтает твоя семья?',
+                        'Что интересного произошло с тобой на прошлой неделе?',
+                        'Чем увлекается твой лучший друг?',
+                        'Поделись своими впечатлениями от последнего фильма, который смотрел.',
+                        'Почему ты решил учиться в Калининграде?'
+                    ],
+                    'speaking_send': 'Жду твой рассказ на тему:',
+                    'handle_voice_message': 'Результат анализа:',
+                }
+            },
 
-    'location_handlers': {
-        'addresses_handler': 'Выбери корпус',
-        'loc_1_handler': """
+            'location_handlers': {
+                'addresses_handler': 'Выбери корпус',
+                'loc_1_handler': """
 *Административный корпус, ул. А.Невского, 14*
 
 Здесь находятся:
@@ -369,7 +374,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_2_handler': """
+                'loc_2_handler': """
 *Корпус №2, Институт физики, математики и информационных технологий («Физмат»), ул. А.Невского, 14*
 
 Здесь находятся:
@@ -381,7 +386,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_3_handler': """
+                'loc_3_handler': """
 *Корпус №3, ул. Университетская, 2*
 
 Здесь находятся:
@@ -390,7 +395,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_4_handler': """
+                'loc_4_handler': """
 *Корпус №4, ул. Чернышевского, 56 («Корпус с часами»)*
 
 Здесь находятся:
@@ -400,7 +405,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_5_handler': """
+                'loc_5_handler': """
 *Корпус №5, ул. Чернышевского, 56а*
 
 Здесь находится:
@@ -408,7 +413,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_6_handler': """
+                'loc_6_handler': """
 *Корпус №6, ул. А. Невского, 14б («Шайба»)*
 
 Здесь находятся:
@@ -416,7 +421,7 @@ TEXTS = {
 ·Управление внеучебной деятельности
                                             """,
 
-        'loc_7_handler': """
+                'loc_7_handler': """
 *Корпус №7, ул. Фрунзе, 6*
 
 Здесь находятся:
@@ -424,7 +429,7 @@ TEXTS = {
 ·Юридический институт
                                             """,
 
-        'loc_8_handler': """
+                'loc_8_handler': """
 *Корпус №8, ул. 9 Апреля, 5*
 
 Здесь находится:
@@ -432,7 +437,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_9_handler': """
+                'loc_9_handler': """
 *Корпус №9, ул. А.Невского,14 («ФОК»)*
 
 Здесь находится:
@@ -440,7 +445,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_10_handler': """
+                'loc_10_handler': """
 *Корпус №10, ул. А. Невского. 14 («Свечка»)*
 
 Здесь находятся:
@@ -449,7 +454,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_11_handler': """
+                'loc_11_handler': """
 *Корпус №11, ул.Боткина, 3*
 
 Здесь находится:
@@ -457,7 +462,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_12_handler': """
+                'loc_12_handler': """
 *Корпус №12, ул.Боткина, 4-6*
 
 Здесь находится:
@@ -465,7 +470,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_13_handler': """
+                'loc_13_handler': """
 *Корпус №13, ул.Боткина, 4-6*
 
 Здесь находится:
@@ -473,7 +478,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_14_handler': """
+                'loc_14_handler': """
 *Корпус №14, ул. Александра Невского, 14, корп. 4*
 
 Здесь находится:
@@ -481,8 +486,8 @@ TEXTS = {
 · Управление по эксплуатации имущественного комплекса
 · Отдел по обеспечению режимов
                                             """,
-        
-        'loc_19_handler': """
+
+                'loc_19_handler': """
 *Корпус №19, Пионерский, пос. Рыбное, 23*
 
 Здесь находится:
@@ -490,7 +495,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_20_handler': """
+                'loc_20_handler': """
 *Корпус №20, Светлогорск, Калининградский проспект, 102*
 
 Здесь находится:
@@ -498,7 +503,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_21_handler': """
+                'loc_21_handler': """
 *Корпус №21, ул. Лесная, 12*
 
 Здесь находится:
@@ -506,7 +511,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_22_handler': """
+                'loc_22_handler': """
 *Корпус №22, ул. А.Невского,14*
 
 Здесь находится:
@@ -514,7 +519,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_23_handler': """
+                'loc_23_handler': """
 *Корпус №23, ул. Дмитрия Донского, 27к1*
 
 Здесь находится:
@@ -522,7 +527,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_24_handler': """
+                'loc_24_handler': """
 *Корпус №24, ул. Зоологическая, 2*
 
 Здесь находятся:
@@ -530,7 +535,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_25_handler': """
+                'loc_25_handler': """
 *Корпус №25, ул. Космонавта Пацаева, 12*
 
 Здесь находятся:
@@ -539,7 +544,7 @@ TEXTS = {
 
                                             """,
 
-        'loc_27_handler': """
+                'loc_27_handler': """
 *Корпус №27, ул. Генерала-лейтенанта Озерова, 57*
 
 Здесь находятся:
@@ -547,43 +552,43 @@ TEXTS = {
 · Арена «Кантиана»
                                             """,
 
-        'loc_28_handler': """
+                'loc_28_handler': """
 *Корпус №28, ул. Горького, 23*
 
 Здесь находятся:
 · Институт экономики и менеджмента
                                             """,
-        
-        'loc_29_handler': """
+
+                'loc_29_handler': """
 *Корпус №29, ул. Пролетарская, 131*
 
 Здесь находятся:
 · НИИ прикладной информатики и математической геофизики
                                             """,
-        
-        'loc_32_handler': """
+
+                'loc_32_handler': """
 *Корпус №32, ул. Гайдара, 6*
 
 Здесь находятся:
 · Научно-технологический парк «Фабрика»
                                             """,
 
-        'loc_35_handler': """
+                'loc_35_handler': """
 *Корпус №35, ул. Александра Невского, 14В*
 
 Здесь находятся:
 · Плавательный бассейн
                                             """,
-    },
+            },
 
-    'university_info_handlers': {
-        'schedule_text': '''
+            'university_info_handlers': {
+                'schedule_text': '''
 *Расписание занятий*:
                                             ''',
-        'scholarship_text': '''
+                'scholarship_text': '''
 *Информация о стипендиях и материальной помощи*:
                                             ''',
-        'office_contacts_text': '''
+                'office_contacts_text': '''
 *Контакты*:
 
 _Адрес_: 236041, Калининград, ул. Александра Невского, 14
@@ -615,7 +620,7 @@ _перерыв_: 13:00—13:45
 
 Суббота и воскресенье: выходные дни
 ''',
-        'visa_center_text': '''
+                'visa_center_text': '''
 *Визово-миграционный центр*:
 
 *Контакты*
@@ -625,10 +630,10 @@ _Часы_ _работы_: Понедельник — четверг с 9:00 д�
 _Телефон_: +7 (4012) 31-33-99
 _Email_: international-study@kantiana.ru
 '''
-    },
+            },
 
-    'sber_handlers': {
-        'useful_links_text': """
+            'sber_handlers': {
+                'useful_links_text': """
 🔗 Полезные ресурсы Сбера и партнёров:
 
 • [Платформа Нетология](https://netology.ru/navigation) — онлайн‑курсы и профессии
@@ -641,7 +646,7 @@ _Email_: international-study@kantiana.ru
 • [Стажировки](https://sbergraduate.ru/practice/) — вакансии и стажировки
 """,
 
-        'sber_card_text': """
+                'sber_card_text': """
 💳 *Карта Сбера*
 
 ✨ *Бесплатное обслуживание навсегда*
@@ -653,7 +658,7 @@ _Email_: international-study@kantiana.ru
 Нажми *кнопку ниже* для подробностей:
 """,
 
-        'educational_loan_text': """
+                'educational_loan_text': """
 🎓 *Образовательный кредит от Сбера*
 
 🎯 *Всего 3% годовых*
@@ -663,12 +668,22 @@ _Email_: international-study@kantiana.ru
 
 Нажми *кнопку ниже* для подробностей:
 """
-    }
-}
-},
+            },
+            'places_handler': """
+        Привет, студент! 🎓
+Готов открывать самые крутые места Калининграда?
+Расскажи, как хочешь провести время:
+• 🍕 Недорого поесть
+• ☕ Уютно посидеть с ноутбуком
+• 🎳 Развлечься с друзьями
+• 🌿 Открыть новое место для отдыха
+Пиши сообщение — я подскажу лучшие варианты! 👇
+""",
+        }
+    },
 
-'en': {
-    'greetings': """
+    'en': {
+        'greetings': """
 Hello, IKBFU student! 🌍✨
 
 We're glad to see you in the official chat bot for international students of the Immanuel Kant Baltic Federal University! 🎓🇷🇺
@@ -684,14 +699,14 @@ I'm your personal assistant for any questions in Kaliningrad. With me you can:
 🚀 Adapt to the city and find like-minded people
 
 Where shall we start? 👇 Choose a menu item!""",
-    'errors': {
-        'start_error': 'An error occurred while starting the bot. Please try again later.',
-        'info_error': 'Error loading information',
-        'back_error': 'Error when returning to the main menu',
-        'audio_error': 'Error during processing',
-        'photo_error': 'An error occurred while uploading the photo',
-        'gigachat_error': 'Error initializing GigaChat:',
-    },
+        'errors': {
+            'start_error': 'An error occurred while starting the bot. Please try again later.',
+            'info_error': 'Error loading information',
+            'back_error': 'Error when returning to the main menu',
+            'audio_error': 'Error during processing',
+            'photo_error': 'An error occurred while uploading the photo',
+            'gigachat_error': 'Error initializing GigaChat:',
+        },
 
         'keyboards': {
             'main_keyboard': {
@@ -701,7 +716,8 @@ Where shall we start? 👇 Choose a menu item!""",
                 'hospital': 'Medical Center',
                 'critical': 'SOS',
                 'language_check': 'Trainer',
-                'sber':'SBER',
+                'places': 'Where to go?',
+                'sber': 'SBER',
                 'back': 'Back'
             },
             'critical_keyboard': {
@@ -710,7 +726,7 @@ Where shall we start? 👇 Choose a menu item!""",
                 'government': 'Local authorities',
                 'consulate': 'Consulate',
                 'back': 'Back',
-                'appeal':'Online request'
+                'appeal': 'Online request'
             },
             'dormitory_keyboard': {
                 'check-in': 'Dormitory check-in',
@@ -735,7 +751,7 @@ Where shall we start? 👇 Choose a menu item!""",
                 'dormitory_9': 'Yubileynaya',
             },
 
-            'payment_keyboard':{
+            'payment_keyboard': {
                 'sber_payment': 'Pay at Sber',
                 'back': 'Back'
             },
@@ -802,15 +818,20 @@ Where shall we start? 👇 Choose a menu item!""",
                 'details': 'Details',
                 'back': 'Back'
             },
-'hospital_keyboard': {
-    'insurance': 'Health Insurance',
-    'attachment': 'Clinic Attachment'
-}
+            'hospital_keyboard': {
+                'insurance': 'Health Insurance',
+                'attachment': 'Clinic Attachment'
+            },
+            'places_keyboard': {
+                'random': 'Random place',
+                'analysis': 'Analyzing your request...',
+                'processing': 'Processing your request... Finding the best spots!',
+            }
         },
 
-    'handlers': {
-        'critical_handlers': {
-            'critical_police_handler': '''
+        'handlers': {
+            'critical_handlers': {
+                'critical_police_handler': '''
 🚨 *Emergency Contacts*
 
 *Unified Emergency Response Number*
@@ -829,7 +850,7 @@ Where shall we start? 👇 Choose a menu item!""",
 💡 Save these numbers for quick access!
                                                     ''',
 
-            'critical_hotline_handler': '''
+                'critical_hotline_handler': '''
 🚪 *Visa and Migration Support Division*
 
 📞 *Phone*:
@@ -848,7 +869,7 @@ Fri 10:00–13:00
 Lunch break: 13:00–14:00 
                                                     ''',
 
-            'critical_government_handler': '''
+                'critical_government_handler': '''
 🏛️ *Committee on Interethnic Relations and Migration Policy in St. Petersburg*
 You can book an online or offline meeting!
 
@@ -881,7 +902,7 @@ Issue outside the Committee’s competence → you will be redirected to the rel
 Book via the Committee’s official resources.
 Booking link: ''',
 
-            'critical_consulate_handler': '''
+                'critical_consulate_handler': '''
 *Representative Office of the Ministry of Foreign Affairs of Russia in Kaliningrad* 🏛️
 
 *Address*: 🏠
@@ -899,14 +920,14 @@ Mon-Thu: from *9:00* to *17:00* (break from *12:00* to *14:00*)
 Fri: from *9:00* to *16:00* (break from *12:00* to *14:00*)
 Sat-Sun: 🚫 Day off
                                             ''',
-        },
+            },
 
-        'dormitory_handlers': {
-            'dormitory_text': """
+            'dormitory_handlers': {
+                'dormitory_text': """
             To apply for a place in the dormitory 🏠, it is important to prepare the necessary documents 📋  in advance and familiarize yourself with the application procedure. Check out the detailed instructions below 👇:
 """,
 
-            'payment_text': """
+                'payment_text': """
 You can pay for the dormitory in two ways. 
 
 1. In person. 
@@ -918,11 +939,11 @@ You can pay at the cash desk in cash in rubles or by bank card.
 Subsequently, the autumn semester is to be paid by September 15, and the spring semester by February 15.
                                             """,
 
-            'rules_text': """
+                'rules_text': """
 Click here 🏘️ "Rules of Residence" to learn about important rules and recommendations that will make your stay comfortable and safe. Here you will find all the necessary information about operating hours, resident responsibilities, code of conduct, and much more.✨
 """,
 
-            'laundry_text': """
+                'laundry_text': """
 🏢 *Location*:
 Laundry rooms are located in every dormitory building. The exact location and operating hours can be provided by the warden or supervisor.
 
@@ -938,7 +959,7 @@ Return the key to the supervisor *exactly at the agreed time* — other students
 
 ✨ Everything is organized for your convenience — please use it carefully!""",
 
-            'no_certificate_text': """
+                'no_certificate_text': """
 IF THERE IS NO VACCINATION OR FLUOROGRAPHY CERTIFICATE
 
 1. *If you do not have a recent fluorography*
@@ -956,63 +977,63 @@ The test can be taken every day, Monday to Friday from 7:30 AM to 7 PM, weekends
 The test is done on an empty stomach.
 The result is provided within 4 working days (it can be obtained in the personal account).
                                                 """,
-        },
+            },
 
-        'dormitory_location_handlers': 'Dormitory №',
+            'dormitory_location_handlers': 'Dormitory №',
 
-        'hospital_handlers': {
-            'hospital_text': '''
+            'hospital_handlers': {
+                'hospital_text': '''
 *University Clinic of BFU named after I. Kant*
 
 *Address*: 236041, Russia, Kaliningrad, ul. 9 April, 60
 *Contacts*: +7 (4012) 31-33-39 kdc@kantiana.ru'''
-        },
+            },
 
-        'language_check_handlers': {
-            'grammar_handlers': {
-                'language_grammar_handler': '''
+            'language_check_handlers': {
+                'grammar_handlers': {
+                    'language_grammar_handler': '''
                                             *Choose an option for translation*:
                                             ''',
-                'translate_to_russian_handler': '''
+                    'translate_to_russian_handler': '''
                                             Translate this text into Russian:
                                             ''',
-                'translate_from_russian_handler': '''
+                    'translate_from_russian_handler': '''
                                             Translate this text from Russian into your native language:
                                             ''',
+                },
+
+                'listening_handlers': {
+                    'send_voice': 'Listen to the text and try to write it in Russian.',
+                },
+
+                'speaking_handlers': {
+                    'topics': [
+                        'Tell us a little about your family.',
+                        'Do you have a pet?',
+                        'What dishes do you like?',
+                        'Describe your room.',
+                        'What is your favourite mode of transport?',
+                        'Where do you like to spend your free time?',
+                        'How do you spend your Sunday?',
+                        'What is your most vivid childhood memory?',
+                        'Where would you like to travel?',
+                        'What habits help you stay productive?',
+                        'How was your yesterday?',
+                        'What do you do for a job and what do you do at work?',
+                        'What is your family dreaming about?',
+                        'What interesting things happened to you last week?',
+                        'What is your best friend interested in?',
+                        'Share your impressions of the last movie you saw.',
+                        'Why did you decide to study in Kaliningrad?'
+                    ],
+                    'speaking_send': 'I\'m waiting for your story on the topic:',
+                    'handle_voice_message': 'Analysis result:',
+                }
             },
 
-            'listening_handlers': {
-                'send_voice': 'Listen to the text and try to write it in Russian.',
-            },
-
-            'speaking_handlers': {
-                'topics': [
-                    'Tell us a little about your family.',
-                    'Do you have a pet?',
-                    'What dishes do you like?',
-                    'Describe your room.',
-                    'What is your favourite mode of transport?',
-                    'Where do you like to spend your free time?',
-                    'How do you spend your Sunday?',
-                    'What is your most vivid childhood memory?',
-                    'Where would you like to travel?',
-                    'What habits help you stay productive?',
-                    'How was your yesterday?',
-                    'What do you do for a job and what do you do at work?',
-                    'What is your family dreaming about?',
-                    'What interesting things happened to you last week?',
-                    'What is your best friend interested in?',
-                    'Share your impressions of the last movie you saw.',
-                    'Why did you decide to study in Kaliningrad?'
-                ],
-                'speaking_send': 'I\'m waiting for your story on the topic:',
-                'handle_voice_message': 'Analysis result:',
-            }
-        },
-
-        'location_handlers': {
-            'addresses_handler': 'Choose a building',
-            'loc_1_handler': """
+            'location_handlers': {
+                'addresses_handler': 'Choose a building',
+                'loc_1_handler': """
 *Administrative building, A. Nevsky St., 14*
 
 Here you can find:
@@ -1026,7 +1047,7 @@ Here you can find:
 · Cafeteria (first floor)
                                             """,
 
-            'loc_2_handler': """
+                'loc_2_handler': """
 *Building No. 2, Institute of Physics, Mathematics and Information Technologies, A. Nevsky St., 14*
 
 Here are located:
@@ -1037,7 +1058,7 @@ Here are located:
 · IT Infrastructure Service (room 121)
                                             """,
 
-            'loc_3_handler': """
+                'loc_3_handler': """
 *Building No. 3, Universitetskaya St., 2*
 
 Here you can find:
@@ -1045,7 +1066,7 @@ Here you can find:
 · Main University Library: Scientific subscription (room 126), reading room (room 115)
                                             """,
 
-            'loc_4_handler': """
+                'loc_4_handler': """
 *Building No. 4, Chernyshevsky Street, 56 (‘The Building with the Clock’)*
 
 Here are located:
@@ -1054,14 +1075,14 @@ Here are located:
 · Museum of Soviet Childhood
                                             """,
 
-            'loc_5_handler': """
+                'loc_5_handler': """
 *Building No. 5, 56a Chernyshevskogo Street*  
 
 Here is located:  
 · Institute of Education  
                                             """,
 
-            'loc_6_handler': """
+                'loc_6_handler': """
 *Building No. 6, A. Nevsky St., 14b ('Shaiba')*
 
 Here are located:
@@ -1069,7 +1090,7 @@ Here are located:
 · Office of extracurricular activities
                                             """,
 
-            'loc_7_handler': """
+                'loc_7_handler': """
 *Building No. 7, Frunze St., 6* 
 
 Here you can find: 
@@ -1077,21 +1098,21 @@ Here you can find:
 · Law Institute 
                                             """,
 
-            'loc_8_handler': """
+                'loc_8_handler': """
 *Building No. 8, 9 April Street, 5*
 
 Here is located:
 · Medical Library
                                             """,
 
-            'loc_9_handler': """
+                'loc_9_handler': """
 *Building No. 9, A. Nevsky Street, 14 ('FOK')* 
 
 Here is located: 
 · Physical Culture and Health Complex 
                                             """,
 
-            'loc_10_handler': """
+                'loc_10_handler': """
 *Building No. 10, A. Nevsky St. 14 (“Candle”)*
 
 Here are located:
@@ -1099,7 +1120,7 @@ Here are located:
 · Career Center
                                             """,
 
-            'loc_11_handler': """
+                'loc_11_handler': """
 *Building No. 11, 3 Botkina Street*
 
 Here is located:
@@ -1107,14 +1128,14 @@ Here is located:
 
                                             """,
 
-            'loc_12_handler': """
+                'loc_12_handler': """
 *Building No. 12, Botkina Street, 4-6* 
 
 Here is located: 
 · Medical Institute 
                                             """,
 
-            'loc_13_handler': """
+                'loc_13_handler': """
 *Building No. 13, 4-6 Botkina Street*
 
 Here is located:
@@ -1122,7 +1143,7 @@ Here is located:
 
                                             """,
 
-            'loc_14_handler': """
+                'loc_14_handler': """
 *Building No. 14, 14 Aleksandra Nevskogo Street, Building No. 4*
 
 Here are located:
@@ -1130,8 +1151,8 @@ Here are located:
 · Property Management Department
 · Security Department
                                             """,
-        
-            'loc_19_handler': """
+
+                'loc_19_handler': """
 *Building No. 19, Pionersky, village Rybnoye, 23*
 
 Here are located:
@@ -1139,7 +1160,7 @@ Here are located:
 
                                             """,
 
-            'loc_20_handler': """
+                'loc_20_handler': """
 *Building No. 20, Svetlogorsk, Kaliningrad Avenue, 102*
 
 Here is located:
@@ -1147,7 +1168,7 @@ Here is located:
 
                                             """,
 
-            'loc_21_handler': """
+                'loc_21_handler': """
 *Building 21, 12 Lesnaya Street*
 
 Here is located:
@@ -1155,14 +1176,14 @@ Here is located:
 
                                             """,
 
-            'loc_22_handler': """
+                'loc_22_handler': """
 *Building No. 22, A. Nevsky St., 14* 
 
 Here is located: 
 · Educational and Sports Complex with a swimming pool 
                                             """,
 
-            'loc_23_handler': """
+                'loc_23_handler': """
 *Building No. 23, 27k1 Dmitriya Donskogo Street*
 
  Here is located:
@@ -1170,14 +1191,14 @@ Here is located:
 
                                             """,
 
-            'loc_24_handler': """
+                'loc_24_handler': """
 *Building No. 24, Zoologicheskaya St., 2*  
 
 Here is located:  
 · University College  
                                             """,
 
-            'loc_25_handler': """
+                'loc_25_handler': """
 *Building No. 25, 12 Kosmonavta Patsaeva Street*
 
 Here are located:
@@ -1186,7 +1207,7 @@ Here are located:
 
                                             """,
 
-            'loc_27_handler': """
+                'loc_27_handler': """
 *Building No. 27, Gen. Lt. Ozerov St., 57* 
 
 Here are located:  
@@ -1194,43 +1215,43 @@ Here are located:
 · «Kantiana» Arena  
                                             """,
 
-            'loc_28_handler': """
+                'loc_28_handler': """
 *Building No. 28, Gorky Street, 23*
 
 Here is located:
 · Institute of Economics and Management
                                             """,
 
-            'loc_29_handler': """
+                'loc_29_handler': """
 *Building No. 29, 131 Proletarskaya Street*
 
 Here are located:
 · Research Institute of Applied Informatics and Mathematical Geophysics
                                             """,
-        
-            'loc_32_handler': """
+
+                'loc_32_handler': """
 *Building No. 32, 6 Gaidara Street*
 
 Here are located:
 · Factory Science and Technology Park
                                             """,
 
-            'loc_35_handler': """
+                'loc_35_handler': """
 *Building No. 35, 14B Aleksandra Nevskogo Street*
 
 Here is located:
 · Swimming pool
                                             """,
-        },
+            },
 
-        'university_info_handlers': {
-            'schedule_text': '''
+            'university_info_handlers': {
+                'schedule_text': '''
 *Class schedule*:
                                             ''',
-            'scholarship_text': '''
+                'scholarship_text': '''
 *Information about scholarships and financial aid*:
                                             ''',
-            'office_contacts_text': '''
+                'office_contacts_text': '''
 *Contacts*:
 
 _Address_: 236041, Kaliningrad, Alexander Nevsky St., 14
@@ -1252,7 +1273,7 @@ Thursday: 9:00 — 18:00  _break_: 13:00 — 13:45
 Friday: 9:00 — 16:45    _break_: 13:00 — 13:45 
 Saturday and Sunday: days off
 ''',
-            'visa_center_text': '''
+                'visa_center_text': '''
 *Visa and Migration Center*:
 
 *Contacts*  
@@ -1267,10 +1288,10 @@ Friday from 9:00 to 16:45
 _Phone_: +7 (4012) 31-33-99  
 _Email_: international-study@kantiana.ru
 '''
-        },
+            },
 
-        'sber_handlers': {
-            'useful_links_text': """
+            'sber_handlers': {
+                'useful_links_text': """
 🔗 Useful resources from Sber and partners:
 
 • [Netology Platform](https://netology.ru/navigation) — online courses and professions
@@ -1283,7 +1304,7 @@ _Email_: international-study@kantiana.ru
 • [Internships](https://sbergraduate.ru/practice/) — job vacancies and internships
 """,
 
-            'sber_card_text': """
+                'sber_card_text': """
 💳 *Sber Card*
 
 ✨ *Free maintenance forever*
@@ -1295,7 +1316,7 @@ _Email_: international-study@kantiana.ru
 Click the *button below* for details:
 """,
 
-            'educational_loan_text': """
+                'educational_loan_text': """
 🎓 *Educational loan from Sber*    
 
 🎯 *Only 3% annual interest*  
@@ -1305,7 +1326,17 @@ Click the *button below* for details:
 
 Click the *button below* for details:
 """
-            }
+            },
+            "places_handler": """
+        Hello, student! 🎓
+Ready to discover the coolest places in Kaliningrad?
+Tell me how you want to spend your time:
+• 🍕 Grab a cheap bite
+• ☕ Find a cozy spot for your laptop
+• 🎳 Have fun with friends
+• 🌿 Discover a new relaxing spot
+Send me a message - I'll suggest the best options! 👇
+"""
         }
     },
 
@@ -1346,7 +1377,8 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'hospital': 'Santé',
                 'critical': 'SOS',
                 'language_check': 'Coach',
-                'sber':'SBER',
+                'places': 'Où aller?',
+                'sber': 'SBER',
                 'back': 'Retour'
             },
             'critical_keyboard': {
@@ -1355,7 +1387,7 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'government': 'Autorités locales',
                 'consulate': 'Consulat',
                 'back': 'Retour',
-                'appeal':'Demande en ligne'
+                'appeal': 'Demande en ligne'
             },
             'dormitory_keyboard': {
                 'check-in': 'Installation dans le dortoir',
@@ -1446,6 +1478,11 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
             'hospital_keyboard': {
                 'insurance': 'Assurance médicale',
                 'attachment': 'Affiliation à la polyclinique'
+            },
+            'places_keyboard': {
+                'random': 'Lieu aléatoire',
+                'analysis': 'Analyse de votre demande...',
+                'processing': 'Traitement de votre demande... Recherche des meilleurs endroits !',
             }
         },
 
@@ -1774,7 +1811,7 @@ Ici se trouve:
 · Gestion du complexe immobilier
 · Division des régimes
                                             """,
-        
+
                 'loc_19_handler': """
 *Bâtiment №19, Pionersky, village.*
 
@@ -1851,7 +1888,7 @@ Ici se trouvent :
 Ici sont:
 · Institut de recherche en informatique appliquée et géophysique mathématique
                                             """,
-        
+
                 'loc_32_handler': """
 *Bâtiment n ° 32, rue Gaydar, 6*
 
@@ -1946,7 +1983,17 @@ Cliquez sur *le bouton ci-dessous* pour plus de détails :
 
 Clique sur *le bouton ci-dessous* pour plus de détails:
 """
-            }
+            },
+            "places_handler": """
+        Salut, l'étudiant(e) ! 🎓
+Prêt(e) à découvrir les endroits les plus sympas de Kaliningrad ?
+Dis-moi comment tu veux passer ton temps :
+• 🍕 Manger un morceau pas cher
+• ☕ Se poser au calme avec un ordinateur
+• 🎳 S'amuser avec des amis
+• 🌿 Découvrir un nouvel endroit pour se détendre
+Écris un message - je te proposerai les meilleures options ! 👇
+"""
         }
     },
 
@@ -1986,7 +2033,8 @@ Conmigo podrás:
                 'hospital': 'Centro médico',
                 'critical': 'SOS',
                 'language_check': 'Entrenador',
-                'sber':'SBER',
+                'places': '¿A dónde ir?',
+                'sber': 'SBER',
                 'back': 'Atrás'
             },
             'critical_keyboard': {
@@ -1995,7 +2043,7 @@ Conmigo podrás:
                 'government': 'Autoridades locales',
                 'consulate': 'Consulado',
                 'back': 'Atrás',
-                'appeal':'Solicitud en línea'
+                'appeal': 'Solicitud en línea'
             },
             'dormitory_keyboard': {
                 'check-in': 'Alojamiento en un dormitorio',
@@ -2087,6 +2135,11 @@ Conmigo podrás:
             'hospital_keyboard': {
                 'insurance': 'Seguro médico',
                 'attachment': 'Afiliación a la policlínica'
+            },
+            '       places_keyboard': {
+                'random': 'Lugar aleatorio',
+                'analysis': 'Analizando su solicitud...',
+                'processing': 'Procesando su solicitud... ¡Buscando los mejores lugares!',
             }
         },
 
@@ -2415,7 +2468,7 @@ Aquí está:
 · Oficina de administración del complejo de bienes
 · División de regímenes
                                             """,
-        
+
                 'loc_19_handler': """
 *Edificio №19, Pionersky, pueblo de pescado, 23*
 
@@ -2492,7 +2545,7 @@ Aquí se encuentran:
 Aquí están:
 · Instituto de Ciencias de la computación aplicada y geofísica matemática
                                             """,
-        
+
                 'loc_32_handler': """
 *Edificio no. 32, calle Gaidar, 6*
 
@@ -2586,7 +2639,17 @@ Haz clic en *el botón de abajo* para más detalles:
 
 Haz clic en *el botón de abajo* para más detalles:
 """
-            }
+            },
+            "places_handler": """
+        ¡Hola, estudiante! 🎓
+¿Listo para descubrir los lugares más geniales de Kaliningrado?
+Cuéntame cómo quieres pasar el tiempo:
+• 🍕 Comer algo barato
+• ☕ Estar cómodamente con el portátil
+• 🎳 Divertirse con amigos
+• 🌿 Descubrir un nuevo lugar de relax
+¡Escribe un mensaje - te sugeriré las mejores opciones! 👇
+"""
         }
     },
 
@@ -2625,8 +2688,9 @@ Haz clic en *el botón de abajo* para más detalles:
                 'dormitory': '宿舍',
                 'hospital': '醫療中心',
                 'critical': 'SOS',
-                'sber':'SBER',
+                'sber': 'SBER',
                 'language_check': '訓練器',
+                'places': '去哪裡？',
                 'back': '回去'
             },
             'critical_keyboard': {
@@ -2635,7 +2699,7 @@ Haz clic en *el botón de abajo* para más detalles:
                 'government': '地方當局',
                 'consulate': '領事館',
                 'back': '回去',
-                'appeal':'線上申請 '
+                'appeal': '線上申請 '
             },
             'dormitory_keyboard': {
                 'check-in': '入住宿舍',
@@ -2727,6 +2791,11 @@ Haz clic en *el botón de abajo* para más detalles:
             'hospital_keyboard': {
                 'insurance': '醫療保險',
                 'attachment': '診所附屬'
+            },
+            'places_keyboard': {
+                'random': 'कोई स्थान',
+                'analysis': '正在分析您的請求...',
+                'processing': '正在處理請求... 尋找最佳地點!',
             }
         },
 
@@ -2888,7 +2957,7 @@ Haz clic en *el botón de abajo* para más detalles:
 
 *地址*: 236041，俄羅斯，卡里寧格勒，4月9日街60號  
 *聯繫方式*: +7 (4012) 31-33-39 kdc@kantiana.ru '''
-},
+            },
 
             'language_chack_handlers': {
                 'grammar_handlers': {
@@ -3052,7 +3121,7 @@ Haz clic en *el botón de abajo* para más detalles:
 · 管理物业综合大楼的运作
 · 政权保证部
                                             """,
-        
+
                 'loc_19_handler': """
 *Rybnoye村Pionersky19号楼23号*
 
@@ -3129,7 +3198,7 @@ Haz clic en *el botón de abajo* para más detalles:
 有:
 · 应用信息学和数学地球物理研究所
                                             """,
-        
+
                 'loc_32_handler': """
 *盖达拉街6号32号楼*
 
@@ -3222,7 +3291,17 @@ _電子郵件_: international-study@kantiana.ru
 
 請點擊 *下方按鈕* 獲取詳情：
 """
-            }
+            },
+            "places_handler": """
+        同學，你好！🎓
+準備好探索加里寧格勒最棒的地方了嗎？
+告訴我你想怎麼度過時間：
+• 🍕 找個便宜的地方吃點東西
+• ☕ 找個舒適的地方用筆電
+• 🎳 和朋友一起玩樂
+• 🌿 探索新的休閒去處
+發訊息給我——我會給你最好的建議！👇
+"""
         }
     },
 
@@ -3261,8 +3340,9 @@ _電子郵件_: international-study@kantiana.ru
                 'dormitory': 'छात्रावास',
                 'hospital': 'मेडिकल सेंटर',
                 'critical': 'SOS',
-                'sber':'SBER',
+                'sber': 'SBER',
                 'language_check': 'व्यायाम मशीन',
+                'places': 'कहाँ घूमने जाएँ?',
                 'back': 'पीछे'
             },
             'critical_keyboard': {
@@ -3271,7 +3351,7 @@ _電子郵件_: international-study@kantiana.ru
                 'government': 'स्थानीय सरकारी संस्थाएँ',
                 'consulate': 'कांसुलीट',
                 'back': 'पीछे',
-                'appeal':'ऑनलाइन अनुरोध'
+                'appeal': 'ऑनलाइन अनुरोध'
             },
             'dormitory_keyboard': {
                 'check-in': 'हॉस्टल में दाखिला',
@@ -3363,6 +3443,11 @@ _電子郵件_: international-study@kantiana.ru
             'hospital_keyboard': {
                 'insurance': 'स्वास्थ्य बीма',
                 'attachment': 'क्लिनिक से संलग्नक'
+            },
+            'places_keyboard': {
+                'random': 'कोई स्थान',
+                'analysis': 'आपकी अनुरोध का विश्लेषण कर रहा हूं...',
+                'processing': 'आपकी अनुरोध प्रसंस्करण... सर्वोत्तम स्थान ढूंढ रहा हूं!',
             }
         },
 
@@ -3723,7 +3808,6 @@ _電子郵件_: international-study@kantiana.ru
 · एकेडमिक-फिजिकल कॉम्प्लेक्स जिसमें स्विमिंग पूल है
                                             """,
 
-
                 'loc_23_handler': """
 *बिल्डिंग नंबर 23, दिमित्री डोंस्कॉय स्ट्र । , 27 के 1*
 
@@ -3769,7 +3853,7 @@ _電子郵件_: international-study@kantiana.ru
 वहाँ हैं:
 · अनुप्रयुक्त सूचना विज्ञान और गणितीय भूभौतिकी के अनुसंधान संस्थान
                                             """,
-        
+
                 'loc_32_handler': """
 *बिल्डिंग नंबर 32, 6 गेदरा सेंट । *
 
@@ -3856,7 +3940,17 @@ _ईमेल_: international-study@kantiana.ru
 👨‍🎓 *14 वर्ष की उम्र से आवेदन करें* 
 ⏳ *स्नातक होने के बाद 15 वर्ष की किस्तें* विवरण के लिए *नीचे बटन* पर क्लिक करें:
 """
-            }
+            },
+            "places_handler": """
+        नमस्ते, छात्र! 🎓
+क्या आप कैलिनिनग्राद के सबसे अच्छे स्थानों को खोजने के लिए तैयार हैं?
+मुझे बताएं कि आप अपना समय कैसे बिताना चाहते हैं:
+• 🍕 सस्ते में कुछ खाने का
+• ☕ लैपटॉप के साथ आरामदायक जगह तलाशने का
+• 🎳 दोस्तों के साथ मस्ती करने का
+• 🌿 आराम करने की नई जगह खोजने का
+मुझे एक संदेश भेजें - मैं सबसे अच्छे विकल्प सुझाऊंगा! 👇
+"""
         }
     }
 }
