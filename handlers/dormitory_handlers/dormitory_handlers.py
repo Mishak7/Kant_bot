@@ -35,7 +35,7 @@ async def dormitory_check_in_handler(callback: CallbackQuery, language: str):
             DORMITORY_TEXT,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"🧳  {TEXTS[language]['keyboards']['dormitory_keyboard']['check-in']}", url=f'https://telegra.ph/Zaselenie-v-obshchezhitie-{language}-09-04')],
+                [InlineKeyboardButton(text=f"🧳  {TEXTS[language]['keyboards']['dormitory_keyboard']['check-in']}", url=TEXTS[language]['keyboards']['dormitory_links']['check-in'])],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]]))
         await callback.answer()
     except Exception as e:
@@ -83,7 +83,7 @@ async def dormitory_rules_handler(callback: CallbackQuery, language: str):
             text=RULES_TEXT,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=f"🔗 {TEXTS[language]['keyboards']['dormitory_keyboard']['rules']}", url='https://telegra.ph/Pravila-zhizni-v-obshchezhitii-09-02')],
+        [InlineKeyboardButton(text=f"🔗 {TEXTS[language]['keyboards']['dormitory_keyboard']['rules']}", url='')],
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]
     ])
         )

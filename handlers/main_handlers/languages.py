@@ -58,6 +58,12 @@ TEXTS = {
                 'details': 'Подробнее',
                 'back': 'Назад'
             },
+
+            'dormitory_links':{
+                'check-in': 'https://telegra.ph/Zaselenie-v-obshchezhitie-10-02',
+                'rules': 'https://telegra.ph/Pravila-zhizni-v-obshchezhitii-09-02'
+            },
+
             'dormitory_locations_keyboard': {
                 'dormitory_1': 'Соммера',
                 'dormitory_2': 'Чернышевского',
@@ -136,7 +142,8 @@ TEXTS = {
                 'sber_card': 'Карта для стипендии',
                 'useful_links': 'Полезные ссылки',
                 'details': 'Подробнее',
-                'back': 'Назад'
+                'back': 'Назад',
+                'link': 'https://telegra.ph/Obrazovatelnyj-kredit-06-19'
             },
 
             'hospital_keyboard': {
@@ -739,6 +746,12 @@ Where shall we start? 👇 Choose a menu item!""",
                 'back': 'Back'
             },
 
+            'dormitory_links':{
+                'check-in': 'https://telegra.ph/Dormitory-check-in-10-02',
+                'rules':'https://telegra.ph/Dormitory-Rules-of-Residence-10-02'
+            },
+
+
             'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Chernyshevskogo',
@@ -816,7 +829,8 @@ Where shall we start? 👇 Choose a menu item!""",
                 'sber_card': 'Scholarship card',
                 'useful_links': 'Useful links',
                 'details': 'Details',
-                'back': 'Back'
+                'back': 'Back',
+                'link': 'https://telegra.ph/SberBank-Education-Loan-with-State-Support-10-02'
             },
             'hospital_keyboard': {
                 'insurance': 'Health Insurance',
@@ -1401,6 +1415,12 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'back': 'Retour'
             },
 
+            'dormitory_links':{
+                'check-in': 'https://telegra.ph/Arrivée-dans-le-dortoir-10-02',
+                'rules': 'https://telegra.ph/Règlement-de-la-Résidence-Universitaire-10-02'
+            },
+
+
             'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Tchernyshevskogo',
@@ -1473,7 +1493,8 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'sber_card': 'Carte pour la bourse',
                 'useful_links': 'Liens utiles',
                 'details': 'Plus de détails',
-                'back': 'Retour'
+                'back': 'Retour',
+                'link': 'https://telegra.ph/Cr%C3%A9dit-%C3%89ducatif-SberBank-avec-Soutien-de-l%C3%89tat-10-02'
             },
             'hospital_keyboard': {
                 'insurance': 'Assurance médicale',
@@ -2055,6 +2076,12 @@ Conmigo podrás:
                 'no_certificate': 'No hay un certificado de vacunas o de fluorografía',
                 'back': 'Atrás'
             },
+
+            'dormitory_links':{
+                'check-in': 'https://telegra.ph/Alojamiento-en-el-dormitorio-10-02',
+                'rules': 'https://telegra.ph/Normas-de-Convivencia-de-la-Residencia-10-02'
+            },
+
             'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Tchernyshevskogo',
@@ -2130,13 +2157,14 @@ Conmigo podrás:
                 'sber_card': 'Mapa para la beca',
                 'useful_links': 'Enlaces útiles',
                 'details': 'Más detalles',
-                'back': 'Atrás'
+                'back': 'Atrás',
+                'link': 'https://telegra.ph/Cr%C3%A9dito-Educativo-de-SberBank-con-Apoyo-Estatal-10-02'
             },
             'hospital_keyboard': {
                 'insurance': 'Seguro médico',
                 'attachment': 'Afiliación a la policlínica'
             },
-            '       places_keyboard': {
+            'places_keyboard': {
                 'random': 'Lugar aleatorio',
                 'analysis': 'Analizando su solicitud...',
                 'processing': 'Procesando su solicitud... ¡Buscando los mejores lugares!',
@@ -2711,6 +2739,12 @@ Cuéntame cómo quieres pasar el tiempo:
                 'no_certificate': '沒有疫苗接種證明或胸部X光檢查報告',
                 'back': '回去'
             },
+
+            'dormitory_links':{
+                'check-in': 'https://telegra.ph/宿舍入住-10-02',
+                'rules': 'https://telegra.ph/宿舍居住规则-10-02'
+            },
+
             'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Tchernyshevskogo',
@@ -2786,7 +2820,8 @@ Cuéntame cómo quieres pasar el tiempo:
                 'sber_card': '獎學金地圖',
                 'useful_links': '有用的鏈接',
                 'details': '更詳細的資訊',
-                'back': '回去'
+                'back': '回去',
+                'link': 'https://telegra.ph/%E5%9B%BD%E5%AE%B6%E6%94%AF%E6%8C%81%E7%9A%84SberBank%E6%95%99%E8%82%B2%E8%B4%B7%E6%AC%BE-10-02'
             },
             'hospital_keyboard': {
                 'insurance': '醫療保險',
@@ -3305,7 +3340,7 @@ _電子郵件_: international-study@kantiana.ru
         }
     },
 
-    'in': {
+    'hi': {
         'greetings': '''
 नमस्ते, BFU के छात्र! 🌍✨
 
@@ -3363,6 +3398,12 @@ _電子郵件_: international-study@kantiana.ru
                 'no_certificate': 'कोई टीकाकरण या फ्लोरोोग्राफी का प्रमाण पत्र नहीं है',
                 'back': 'पीछे'
             },
+
+            'dormitory_links':{
+                'check-in': 'https://telegra.ph/छतरवस-म-परवश-10-02',
+                'rules': 'https://telegra.ph/छतरवस-नवस-नयम-10-02'
+            },
+
             'dormitory_locations_keyboard': {
                 'dormitory_1': 'Sommera',
                 'dormitory_2': 'Tchernyshevskogo',
@@ -3438,7 +3479,8 @@ _電子郵件_: international-study@kantiana.ru
                 'sber_card': 'छात्रवृत्ति के लिए नक्शा',
                 'useful_links': 'उपयोगी लिंक',
                 'details': 'अधिक जानकारी',
-                'back': 'पीछे'
+                'back': 'पीछे',
+                'link': 'https://telegra.ph/%E0%A4%B0%E0%A4%9C%E0%A4%AF-%E0%A4%B8%E0%A4%AE%E0%A4%B0%E0%A4%A5%E0%A4%A8-%E0%A4%B5%E0%A4%B2-SberBank-%E0%A4%B6%E0%A4%95%E0%A4%B7-%E0%A4%8B%E0%A4%A3-10-02'
             },
             'hospital_keyboard': {
                 'insurance': 'स्वास्थ्य बीма',

@@ -23,7 +23,7 @@ def card_keyboard(language: str) -> InlineKeyboardMarkup:
 def loan_keyboard(language: str) -> InlineKeyboardMarkup:
     """Go to loan info - MAY BE OUTDATED, WEBSITE MADE BY NOVGU!!!"""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=f"🔗 {TEXTS[language]['keyboards']['sber_keyboard']['details']}", url='https://telegra.ph/Obrazovatelnyj-kredit-06-19')],
+        [InlineKeyboardButton(text=f"🔗 {TEXTS[language]['keyboards']['sber_keyboard']['details']}", url=TEXTS[language]['keyboards']['sber_keyboard']['link'])],
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['sber_keyboard']['back']}", callback_data='sber')]
     ])
 
