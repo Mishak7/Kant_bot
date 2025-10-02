@@ -7,14 +7,13 @@ import random
 
 from config.settings import settings
 
-
 class PlacesDatabase:
     def __init__(self, db_path: str = "places.db"):
         self.db_path = db_path
         self.init_database()
 
     def init_database(self):
-        """Инициализация базы данных и создание таблиц"""
+        """DB initialization and tables creation"""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
 
@@ -46,7 +45,7 @@ class PlacesDatabase:
             conn.commit()
 
     def populate_database(self):
-        """Заполнение базы данных начальными данными"""
+        """DB fill"""
         places_data = [
             (1, "Фьюжн Экспресс", "кафе",
              "Целевая аудитория - зуммеры. В кафе «Фьюжн экспресс» подают вкусную паназиатскую еду с большими порциями. В меню представлен широкий выбор блюд, включая лапшу, рамен, вок и другие азиатские блюда. Есть блюда, которые подходят для вегетарианцев и веганов. Цены доступные, обслуживание оперативное. Предлагаются напитки, к примеру чай и кофе. Есть возможность заказать блюда на вынос и по телефону.",
@@ -90,9 +89,6 @@ class PlacesDatabase:
             (14, "Онегин", "рюмочная",
              "Кофейня «Онегин» — это уютное место, где можно провести время в приятной компании, наслаждаясь ароматным кофе, круассанами и коктейлями.",
              "https://go.2gis.com/M72kq", 0, "all", 1),
-            (15, "Ситиджаз фест", "фестиваль",
-             "XVIII международный музыкальный фестиваль «Калининград Сити Джаз» 1-3 августа 2025 Центральный парк культуры и отдыха",
-             "https://vk.com/jazzfestivalru", 1, "summer", 0),
             (16, "Остров Канта", "достопримечательность",
              "Описание самого острова: Остров Иммануила Канта — историческое место в центре Калининграда, расположенное на реке Преголя. Ранее известный как Кнайпхоф, он был самостоятельным городом до 1724 года. Сегодня остров — зелёная зона с главной достопримечательностью — Кафедральным собором XIV века, где покоится философ Иммануил Кант. Сейчас это культурное пространство с концертами органной музыки, выставками и фестивалями. В 2016 году острову официально присвоили имя Канта в честь его вклада в мировую философию.",
              "https://go.2gis.com/3BoXt", 0, "all", 0),
@@ -130,11 +126,9 @@ class PlacesDatabase:
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
 
-            # Очищаем таблицы перед заполнением
             cursor.execute("DELETE FROM places")
             cursor.execute("DELETE FROM events")
 
-            # Заполняем данными
             cursor.executemany('''
                 INSERT OR REPLACE INTO places (id, name, type, description, link, is_seasonal, best_season, indoor)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -151,13 +145,15 @@ class PlacesDatabase:
 
 class VisitAgent:
 
-    def __init__(self, db_path: str = "places.db", is_random: bool = False):
+    def __init__(self, db_path: str = "places.db", language:str = 'ru', is_random: bool = False):
         self.db_path = db_path
-        self.db = PlacesDatabase(db_path)  # Инициализируем базу данных
+        self.db = PlacesDatabase(db_path)
         self.client = self.initialize_client()
+        self.language = language
         self.is_random = is_random
         self.db.populate_database()
 
+        self.convert_language()
 
     @staticmethod
     def initialize_client():
@@ -170,8 +166,19 @@ class VisitAgent:
             verify_ssl_certs=False
         )
 
+    def convert_language(self):
+        language_names = {
+            'ru': 'Russian',
+            'en': 'English',
+            'fr': 'French',
+            'es': 'Spanish',
+            'cn': 'Chinese Traditional',
+            'in': 'Hindi'
+        }
+        self.language = language_names.get(self.language, 'Russian')
+
     async def get_recommendations(self, user_query: str) -> str:
-        """Получить рекомендации мест на основе запроса пользователя"""
+        """Get recommendations based on user request"""
         try:
             places = self._get_all_places()
 
@@ -187,7 +194,7 @@ class VisitAgent:
             return f"❌ **Произошла ошибка**\n\nНе удалось подобрать места: {str(e)}"
 
     def _get_all_places(self) -> List[Dict[str, Any]]:
-        """Получить все места из базы данных"""
+        """Get all places from DB"""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
             cursor.execute('''
@@ -209,7 +216,7 @@ class VisitAgent:
             return places
 
     def _get_current_events(self) -> List[Dict[str, Any]]:
-        """Получить актуальные события"""
+        """Get actual events"""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
             cursor.execute('''
@@ -230,7 +237,7 @@ class VisitAgent:
             return events
 
     def _build_prompt(self, user_query: str, places: List[Dict], events: List[Dict]) -> str:
-        """Построить промпт для LLM"""
+        """Build prompt for LLM"""
         if self.is_random:
             random_place = random.choice(places)
             prompt_random = f"""
@@ -240,6 +247,8 @@ class VisitAgent:
             Место: f"**{random_place['name']}** ({random_place['type']}) - {random_place['description']}\n 🔗 {random_place['link']}\n\n"
             
             Формат ответа в Markdown:
+            ЯЗЫК ДЛЯ ТВОЕГО ОТВЕТА: {self.language} - ты должен отвечать ТОЛЬКО на нем в рамках всего задания, даже если входные данные на русском, использование другого языка вместо {self.language} ЗАПРЕЩЕНО!
+            
     
             🎯 Рекомендации для вас:
     
@@ -287,6 +296,8 @@ class VisitAgent:
             Формат ответа в Markdown:
     
             🎯 Рекомендации для вас:
+             ЯЗЫК ДЛЯ ТВОЕГО ОТВЕТА: {self.language} - ты должен отвечать ТОЛЬКО на нем в рамках всего задания, даже если входные данные на русском, использование другого языка вместо {self.language} ЗАПРЕЩЕНО!
+        
     
             1. **[Название]** [эмодзи]
             📍 **Описание:** [краткое описание]
@@ -306,7 +317,7 @@ class VisitAgent:
             return prompt
 
     async def _get_llm_response(self, prompt: str) -> str:
-        """Получить ответ от LLM"""
+        """Get response from LLM"""
         try:
             if self.is_random:
                 messages = [HumanMessage(content=prompt)]
@@ -327,6 +338,6 @@ class VisitAgent:
             return f"❌ **Ошибка при обработке запроса**\n\nНе удалось получить рекомендации. Попробуйте позже."
 
     async def close(self):
-        """Закрыть соединения"""
+        """Close connection"""
         if hasattr(self.client, 'close'):
             await self.client.close()

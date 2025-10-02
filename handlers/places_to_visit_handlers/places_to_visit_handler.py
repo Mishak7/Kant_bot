@@ -7,6 +7,7 @@ import traceback
 from handlers.places_to_visit_handlers.places_to_visit_services import VisitAgent
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import asyncio
+from handlers.main_handlers.languages import TEXTS
 
 
 class VisitStates(StatesGroup):
@@ -15,26 +16,15 @@ class VisitStates(StatesGroup):
 
 router = Router()
 
-TEXT = """
-        Привет, студент! 🎓
-Готов открывать самые крутые места Калининграда?
-Расскажи, как хочешь провести время:
-• 🍕 Недорого поесть
-• ☕ Уютно посидеть с ноутбуком
-• 🎳 Развлечься с друзьями
-• 🌿 Открыть новое место для отдыха
-Пиши сообщение — я подскажу лучшие варианты! 👇
-"""
-
-
 @router.callback_query(F.data == "places_to_visit")
 async def places_to_visit_handler(callback: CallbackQuery, state: FSMContext, language: str):
     try:
+        text = TEXTS[language]['handlers']['places_handler']
         sent_message = await callback.message.edit_text(
-            text=TEXT,
+            text=text,
             reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[[InlineKeyboardButton(text='Рандом', callback_data='random_place')],
-                                 [InlineKeyboardButton(text="◀️ Назад", callback_data='back_to_main')]]))
+                inline_keyboard=[[InlineKeyboardButton(text=f"🎲 {TEXTS[language]['keyboards']['places_keyboard']['random']}", callback_data='random_place')],
+                                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}", callback_data="back_to_main")]]))
 
         await state.update_data(places_message_id=sent_message.message_id)
 
@@ -42,11 +32,11 @@ async def places_to_visit_handler(callback: CallbackQuery, state: FSMContext, la
         await callback.answer()
     except Exception as e:
         logger.error(f'Places to visit error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"Произошла ошибка при обработке запроса.")
+        await callback.answer()
 
 
 @router.message(VisitStates.waiting_for_mood)
-async def process_mood(message: Message, state: FSMContext, bot: Bot):
+async def process_mood(message: Message, state: FSMContext, bot: Bot, language: str):
     processing_message = None
     try:
         user_message = message.text
@@ -54,7 +44,7 @@ async def process_mood(message: Message, state: FSMContext, bot: Bot):
         state_data = await state.get_data()
         places_message_id = state_data.get('places_message_id')
 
-        processing_message = await message.answer("🎯 Анализирую ваш запрос...")
+        processing_message = await message.answer(f"🎯 {TEXTS[language]['keyboards']['places_keyboard']['analysis']}")
 
         spinner_frames = ["🔄", "⏳", "💭", "🎯"]
         for i, frame in enumerate(spinner_frames):
@@ -62,14 +52,14 @@ async def process_mood(message: Message, state: FSMContext, bot: Bot):
                 await bot.edit_message_text(
                     chat_id=message.chat.id,
                     message_id=processing_message.message_id,
-                    text=f"{frame} Обрабатываю запрос... Подбираю лучшие места!"
+                    text=f"{frame} {TEXTS[language]['keyboards']['places_keyboard']['processing']}"
                 )
                 if i < len(spinner_frames) - 1:
                     await asyncio.sleep(0.5)
             except:
                 pass
 
-        agent = VisitAgent()
+        agent = VisitAgent(language = language)
         response = await agent.get_recommendations(user_message)
 
         await bot.delete_message(chat_id=message.chat.id, message_id=processing_message.message_id)
@@ -84,7 +74,7 @@ async def process_mood(message: Message, state: FSMContext, bot: Bot):
             response,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[[InlineKeyboardButton(text="◀️ Назад", callback_data='back_to_main_no_delete')]]
+                inline_keyboard=[ [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}", callback_data="back_to_main_no_delete")]]
             ),
             disable_web_page_preview=True
         )
@@ -101,21 +91,20 @@ async def process_mood(message: Message, state: FSMContext, bot: Bot):
                 pass
 
         await message.answer(
-            "❌ Произошла ошибка при обработке вашего запроса. Попробуйте еще раз.",
+            f"❌ {TEXTS[language]['errors']['info_error']}",
             reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[[InlineKeyboardButton(text="◀️ Назад", callback_data='back_to_main')]]
+                inline_keyboard=[ [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}", callback_data="back_to_main")]]
             )
         )
 
 
 @router.callback_query(F.data == "random_place")
-async def random_place_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
+async def random_place_handler(callback: CallbackQuery, state: FSMContext, bot: Bot, language: str):
     try:
-        # Получаем текущие данные состояния
         state_data = await state.get_data()
         places_message_id = state_data.get('places_message_id')
 
-        processing_message = await callback.message.answer("🎯 Анализирую ваш запрос...")
+        processing_message = await callback.message.answer(f"🎯 {TEXTS[language]['keyboards']['places_keyboard']['analysis']}")
 
         spinner_frames = ["🔄", "⏳", "💭", "🎯"]
         for i, frame in enumerate(spinner_frames):
@@ -123,19 +112,18 @@ async def random_place_handler(callback: CallbackQuery, state: FSMContext, bot: 
                 await bot.edit_message_text(
                     chat_id=callback.message.chat.id,
                     message_id=processing_message.message_id,
-                    text=f"{frame} Обрабатываю запрос... Подбираю лучшие места!"
+                    text=f"{frame} {TEXTS[language]['keyboards']['places_keyboard']['processing']}"
                 )
                 if i < len(spinner_frames) - 1:
                     await asyncio.sleep(0.5)
             except:
                 pass
 
-        agent = VisitAgent(is_random=True)
+        agent = VisitAgent(language = language, is_random=True)
         response = await agent.get_recommendations(' ')
 
         await bot.delete_message(chat_id=callback.message.chat.id, message_id=processing_message.message_id)
 
-        # Удаляем сообщение с приветствием если оно есть
         if places_message_id:
             try:
                 await bot.delete_message(chat_id=callback.message.chat.id, message_id=places_message_id)
@@ -146,13 +134,15 @@ async def random_place_handler(callback: CallbackQuery, state: FSMContext, bot: 
             response,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[[InlineKeyboardButton(text='Рандом', callback_data='random_place')],
-                                 [InlineKeyboardButton(text="◀️ Назад", callback_data='back_to_main_no_delete')]]),
-            disable_web_page_preview=True
-        )
+                inline_keyboard=[[InlineKeyboardButton(text=f"🎲 {TEXTS[language]['keyboards']['places_keyboard']['random']}",
+                                                 callback_data='random_place')],
+                                [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}",
+                                                 callback_data="back_to_main")]]),
+            disable_web_page_preview=True)
+
 
         await state.set_state(VisitStates.waiting_for_mood)
         await callback.answer()
     except Exception as e:
         logger.error(f'Places to visit error: {e}\n{traceback.format_exc()}')
-        await callback.answer(f"Произошла ошибка при обработке запроса.")
+        await callback.answer(f"{TEXTS[language]['errors']['info_error']}")
