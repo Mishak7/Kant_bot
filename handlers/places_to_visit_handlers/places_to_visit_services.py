@@ -173,7 +173,7 @@ class VisitAgent:
             'fr': 'French',
             'es': 'Spanish',
             'cn': 'Chinese Traditional',
-            'in': 'Hindi'
+            'hi': 'Hindi'
         }
         self.language = language_names.get(self.language, 'Russian')
 
