@@ -143,7 +143,7 @@ TEXTS = {
                 'useful_links': 'Полезные ссылки',
                 'details': 'Подробнее',
                 'back': 'Назад',
-                'link': 'https://telegra.ph/Obrazovatelnyj-kredit-06-19'
+                'link': 'https://telegra.ph/Obrazovatelnyj-kredit-SberBanka-s-gosudarstvennoj-podderzhkoj-10-02'
             },
 
             'hospital_keyboard': {
