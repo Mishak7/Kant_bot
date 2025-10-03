@@ -65,7 +65,7 @@ async def dormitory_addresses_handler(callback: CallbackQuery, language: str):
     try:
         await callback.message.delete()
         await callback.message.answer(
-            'Выбери общежитие',
+            TEXTS[language]['handlers']['dormitory_handlers']['dormitory_address'],
             reply_markup=dormitories_keyboard_back_to_dormitory_info(language)
         )
         await callback.answer()
