@@ -1479,7 +1479,7 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'back': 'Retour'
             },
             'university_info_keyboard': {
-                'schedule': 'Horaires',
+                'schedule': 'Horaire',
                 'scholarship': 'Bourses',
                 'office_contacts': 'Contacts du bureau académique',
                 'visa_center': 'Centre de visa et de migration',
