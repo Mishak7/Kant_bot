@@ -2621,7 +2621,7 @@ _Comisión de admisión_: calle Aleksandra Nevski, 14
 _Oficina_: +7 (4012) 59-55-97  
 _Correo electrónico_: post@kantiana.ru  
 
-*Horario de trabajo de los servicios administrativos*  
+*Horarios de trabajo de los servicios administrativos*  
 
 Lunes: 9:00 — 18:00 _pausa_: 13:00—13:45  
 Martes: 9:00 — 18:00 _pausa_: 13:00—13:45  
