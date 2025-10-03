@@ -309,6 +309,9 @@ TEXTS = {
 Результат выдается через 4 рабочих дня (результат можно получить в
 личном кабинете).
                                                 """,
+                'dormitory_address': """
+Выбери общежитие
+                """,
             },
 
             'dormitory_location_handlers': 'Общежитие №',
@@ -991,6 +994,9 @@ The test can be taken every day, Monday to Friday from 7:30 AM to 7 PM, weekends
 The test is done on an empty stomach.
 The result is provided within 4 working days (it can be obtained in the personal account).
                                                 """,
+                'dormitory_address': """
+Choose a dormitory
+                """,
             },
 
             'dormitory_location_handlers': 'Dormitory №',
@@ -1479,7 +1485,7 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'back': 'Retour'
             },
             'university_info_keyboard': {
-                'schedule': 'Horaires',
+                'schedule': 'Horaire',
                 'scholarship': 'Bourses',
                 'office_contacts': 'Contacts du bureau académique',
                 'visa_center': 'Centre de visa et de migration',
@@ -1658,6 +1664,9 @@ Le test doit être effectué à jeun.
 
 Le résultat est délivré dans un délai de 4 jours ouvrables (le résultat peut être obtenu dans le cabinet personnel).
                                                 """,
+                'dormitory_address': """
+Choisissez une auberge
+                """,
             },
 
             'dormitory_location_handlers': 'Résidence universitaire №',
@@ -2322,6 +2331,9 @@ El análisis se realiza en ayunas.
 
 El resultado se emite en 4 días hábiles (el resultado se puede obtener en el área personal).
                                                 """,
+                'dormitory_address': """
+Elige un albergue
+                """,
             },
 
             'dormitory_location_handlers': 'Residencia estudiantil №',
@@ -2984,6 +2996,9 @@ Cuéntame cómo quieres pasar el tiempo:
 
 结果在4个工作日后出具 (结果可在个人账户中获取)。
                                                 """,
+                'dormitory_address': """
+选择宿舍
+                """,
             },
 
             'dormitory_location_handlers': '宿舍号',
@@ -3676,6 +3691,9 @@ _邮箱_: international-study@kantiana.ru
 
 परिणाम 4 कार्य दिवसों के बाद जारी किया जाता है (परिणाम व्यक्तिगत खाते में प्राप्त किया जा सकता है)।
                                                 """,
+                'dormitory_address': """
+एक छात्रावास चुनें
+                """,
             },
 
             'dormitory_location_handlers': 'छात्रावास №',

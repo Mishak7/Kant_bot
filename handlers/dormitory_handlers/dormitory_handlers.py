@@ -35,7 +35,7 @@ async def dormitory_check_in_handler(callback: CallbackQuery, language: str):
             DORMITORY_TEXT,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=f"🧳  {TEXTS[language]['keyboards']['dormitory_keyboard']['check-in']}", url=TEXTS[language]['keyboards']['dormitory_links']['check-in'])],
+                [InlineKeyboardButton(text=f"🧳 {TEXTS[language]['keyboards']['dormitory_keyboard']['check-in']}", url=TEXTS[language]['keyboards']['dormitory_links']['check-in'])],
                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]]))
         await callback.answer()
     except Exception as e:
@@ -65,7 +65,7 @@ async def dormitory_addresses_handler(callback: CallbackQuery, language: str):
     try:
         await callback.message.delete()
         await callback.message.answer(
-            'Выбери общежитие',
+            TEXTS[language]['handlers']['dormitory_handlers']['dormitory_address'],
             reply_markup=dormitories_keyboard_back_to_dormitory_info(language)
         )
         await callback.answer()
