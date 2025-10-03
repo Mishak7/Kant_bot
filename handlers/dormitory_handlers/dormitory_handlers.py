@@ -83,7 +83,7 @@ async def dormitory_rules_handler(callback: CallbackQuery, language: str):
             text=RULES_TEXT,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=f"🔗 {TEXTS[language]['keyboards']['dormitory_keyboard']['rules']}", url='')],
+        [InlineKeyboardButton(text=f"🔗 {TEXTS[language]['keyboards']['dormitory_keyboard']['rules']}", url=TEXTS[language]['keyboards']['dormitory_links']['rules'])],
         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['dormitory_keyboard']['back']}", callback_data="dormitory")]
     ])
         )
