@@ -3531,7 +3531,7 @@ _邮箱_: international-study@kantiana.ru
                 'link': 'https://telegra.ph/%E0%A4%B0%E0%A4%9C%E0%A4%AF-%E0%A4%B8%E0%A4%AE%E0%A4%B0%E0%A4%A5%E0%A4%A8-%E0%A4%B5%E0%A4%B2-SberBank-%E0%A4%B6%E0%A4%95%E0%A4%B7-%E0%A4%8B%E0%A4%A3-10-02'
             },
             'hospital_keyboard': {
-                'insurance': 'स्वास्थ्य बीма',
+                'insurance': 'चिकित्सा बीमा',
                 'attachment': 'क्लिनिक से संलग्नक'
             },
             'places_keyboard': {
