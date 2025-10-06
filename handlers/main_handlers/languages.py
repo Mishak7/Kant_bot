@@ -1417,8 +1417,12 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'laundry': 'Buanderie',
                 'details': 'En savoir plus',
                 'no_certificate': 'Pas de certificat de vaccination ou de radiographie des poumons.',
-                'sber_payment': 'Payer dans Sber',
                 'back': 'Retour'
+            },
+
+                'payment_keyboard': {
+                'sber_payment': 'Payer dans Sber',
+                'back': 'Back'
             },
 
             'dormitory_links':{
@@ -2692,169 +2696,168 @@ Cuéntame cómo quieres pasar el tiempo:
 """
         }
     },
+'cn': {
+    'greetings': """
+你好，BFU的同学！🌍✨
 
-    'cn': {
-        'greetings': """
-你好，BFU学生！🌍✨
+欢迎来到伊曼纽尔·康德波罗的海联邦大学的官方留学生聊天机器人！🎓🇷🇺
 
-欢迎来到伊曼纽尔·康德波罗的海联邦大学外国学生官方聊天机器人！🎓🇷🇺
+我是你在加里宁格勒的私人助手，可以帮你处理各类问题。和我一起，你可以：
 
-我是你在加里宁格勒的个人助手，可以帮你解决任何问题。通过我，你可以：
-
-🧠 通过智能AI练习提升俄语水平
-🏛️ 了解大学及其生活实用信息：
-📍 查找教学楼和宿舍
+🧠 通过智能AI助手提升俄语水平
+🏛️ 获取关于大学及其生活的实用信息：
+📍 找到教学楼和宿舍位置
 🏠 解决住宿问题
-🤝 获得支持和帮助
-🏦 了解SBER有用服务 😊
-🚀 适应城市生活并找到志同道合的朋友
+🤝 获得支持与帮助
+🏦 了解SBER银行的实用服务 😊
+🚀 适应城市生活，找到志同道合的朋友
 
-让我们开始吧？👇 选择菜单选项！
+我们从哪里开始？👇 请选择菜单项！
         """,
 
-        'language_selection': '选择语言/Choose a language:',
-        'errors': {
-            'start_error': '启动机器人时出错。请稍后再试。',
-            'info_error': '加载信息时出错',
-            'back_error': '返回主菜单时出错',
-            'audio_error': '处理时出错',
-            'photo_error': '上传照片时出错',
-            'gigachat_error': '初始化GigaChat时出错:',
+    'language_selection': '选择语言/Choose a language:',
+    'errors': {
+        'start_error': '启动机器人时发生错误，请稍后再试。',
+        'info_error': '信息加载错误',
+        'back_error': '返回主菜单时出错',
+        'audio_error': '处理时发生错误',
+        'photo_error': '上传照片时发生错误',
+        'gigachat_error': 'GigaChat初始化错误:',
+    },
+
+    'keyboards': {
+        'main_keyboard': {
+            'info': '信息',
+            'location': '教学楼',
+            'dormitory': '学生宿舍',
+            'hospital': '医疗中心',
+            'sber': 'SBER银行',
+            'critical': '紧急求助',
+            'language_check': '语言练习',
+            'places': '去哪逛逛？',
+            'back': '返回'
+        },
+        'critical_keyboard': {
+            'police': '紧急服务',
+            'hotline': '联邦移民局热线',
+            'government': '当地政府机构',
+            'consulate': '领事馆',
+            'back': '返回',
+            'appeal': '在线申诉'
+        },
+        'dormitory_keyboard': {
+            'check-in': '宿舍入住',
+            'payment': '支付费用',
+            'address': '宿舍地址',
+            'rules': '住宿规定',
+            'laundry': '洗衣房',
+            'no_certificate': '无接种或胸透证明',
+            'details': '了解更多',
+            'back': '返回'
         },
 
-        'keyboards': {
-            'main_keyboard': {
-                'info': '信息',
-                'location': '教学楼',
-                'dormitory': '宿舍',
-                'hospital': '医疗中心',
-                'sber': 'SBER',
-                'critical': 'SOS',
-                'language_check': '语言练习',
-                'places': '去哪里？',
+        'dormitory_links':{
+            'check-in': 'https://telegra.ph/Zaselenie-v-obshchezhitie-10-02',
+            'rules': 'https://telegra.ph/Pravila-zhizni-v-obshchezhitii-09-02'
+        },
+
+        'dormitory_locations_keyboard': {
+            'dormitory_1': '索梅拉大街',
+            'dormitory_2': '车尔尼雪夫斯基大街',
+            'dormitory_3': '亚历山大·涅夫斯基大街',
+            'dormitory_4': '亚历山大·涅夫斯基大街',
+            'dormitory_5': '柴可夫斯基大街',
+            'dormitory_6': '阿佐夫斯卡亚街',
+            'dormitory_7': '叶洛瓦亚街',
+            'dormitory_8': '叶洛瓦亚街',
+            'dormitory_9': '尤比列伊纳亚街',
+        },
+        'payment_keyboard': {
+            'sber_payment': '通过Sber支付',
+            'back': '返回',
+            'more': '了解更多'
+        },
+        'language_check_keyboard': {
+            'grammar_keyboard': {
+                'to_russian': '翻译成俄语',
+                'from_russian': '从俄语翻译',
                 'back': '返回'
             },
-            'critical_keyboard': {
-                'police': '紧急服务',
-                'hotline': 'FMS热线',
-                'government': '地方政府',
-                'consulate': '领事馆',
-                'back': '返回',
-                'appeal': '电子申诉'
-            },
-            'dormitory_keyboard': {
-                'check-in': '入住宿舍',
-                'payment': '支付',
-                'address': '宿舍地址',
-                'rules': '住宿规则',
-                'laundry': '洗衣房',
-                'no_certificate': '无接种证书或X光检查',
-                'details': '更多信息',
+            'speaking_keyboard': {
                 'back': '返回'
-            },
-
-            'dormitory_links':{
-                'check-in': 'https://telegra.ph/Zaselenie-v-obshchezhitie-10-02',
-                'rules': 'https://telegra.ph/Pravila-zhizni-v-obshchezhitii-09-02'
-            },
-
-            'dormitory_locations_keyboard': {
-                'dormitory_1': 'Sommera',
-                'dormitory_2': 'Chernyshevskogo',
-                'dormitory_3': 'A. Nevskogo',
-                'dormitory_4': 'A. Nevskogo',
-                'dormitory_5': 'Chaikovskogo',
-                'dormitory_6': 'Azovskaya',
-                'dormitory_7': 'Elovaya',
-                'dormitory_8': 'Elovaya',
-                'dormitory_9': 'Yubileynaya',
-            },
-            'payment_keyboard': {
-                'sber_payment': '在Sber支付',
-                'back': '返回',
-                'more': '更多信息'
             },
             'language_check_keyboard': {
-                'grammar_keyboard': {
-                    'to_russian': '翻译成俄语',
-                    'from_russian': '从俄语翻译',
-                    'back': '返回'
-                },
-                'speaking_keyboard': {
-                    'back': '返回'
-                },
-                'language_check_keyboard': {
-                    'Authorization': '写下你的名字',
-                    'to_lessons': '学习俄语',
-                    'audio': '听力',
-                    'grammar': '语法',
-                    'speaking': '口语',
-                    'back': '返回'
-                }
-            },
-            'location_keyboard': {
-                'loc_1': '🏛️ 行政楼',
-                'loc_2': '🧮 物理数学',
-                'loc_3': '🧬 生命系统',
-                'loc_4': '🏫 人文学院',
-                'loc_5': '👨‍🏫 教育学院',
-                'loc_6': '🛌 "冰球"宿舍',
-                'loc_7': '⚖️ 法学院',
-                'loc_8': '📚 医学图书馆',
-                'loc_9': '🏐 体育中心',
-                'loc_10': '👩‍🏫 "蜡烛"楼',
-                'loc_11': '✨ 资源中心',
-                'loc_12': '🩺 医学院',
-                'loc_13': '👩‍⚕️ 诊所',
-                'loc_14': '🚗 交通学院',
-                'loc_19': '🏡 基地19号',
-                'loc_20': '🏡 基地20号',
-                'loc_21': '🌳 植物园',
-                'loc_22': '🏊‍♂️ 游泳池',
-                'loc_23': '🧪 实验楼',
-                'loc_24': '🎓 学院',
-                'loc_25': '👨‍🔬 网络物理',
-                'loc_27': '⚙️ 工程技术学院',
-                'loc_28': '💸 经济学院',
-                'loc_29': '🥽 地球物理',
-                'loc_32': '🔬 "工厂"科技园',
-                'loc_35': '🏊‍♂️ 游泳池',
-                'back': '⬅️ 返回'
-            },
-            'university_info_keyboard': {
-                'schedule': '课程表',
-                'scholarship': '奖学金',
-                'office_contacts': '教务处联系方式',
-                'visa_center': '签证移民中心',
+                'Authorization': '请输入你的姓名',
+                'to_lessons': '学习俄语',
+                'audio': '听力练习',
+                'grammar': '语法练习',
+                'speaking': '口语练习',
                 'back': '返回'
-            },
-            'language_selection_keyboard': {
-                'back': '返回'
-            },
-            'sber_keyboard': {
-                'educational_loan': '教育贷款',
-                'sber_card': '奖学金卡',
-                'useful_links': '有用链接',
-                'details': '更多信息',
-                'back': '返回',
-                'link': 'https://telegra.ph/Obrazovatelnyj-kredit-SberBanka-s-gosudarstvennoj-podderzhkoj-10-02'
-            },
-
-            'hospital_keyboard': {
-                'insurance': '医疗保险',
-                'attachment': '附属于诊所'
-            },
-            'places_keyboard': {
-                'random': '随机推荐',
-                'analysis': '分析您的请求...',
-                'processing': '处理请求... 正在挑选最佳地点！',
             }
         },
+        'location_keyboard': {
+            'loc_1': '🏛️ 行政楼',
+            'loc_2': '🧮 数理学院',
+            'loc_3': '🧬 生命系统学院',
+            'loc_4': '🏫 人文科学学院',
+            'loc_5': '👨‍🏫 教育学院',
+            'loc_6': '🛌 "冰球"宿舍楼',
+            'loc_7': '⚖️ 法学院',
+            'loc_8': '📚 医学图书馆',
+            'loc_9': '🏐 体育中心',
+            'loc_10': '👩‍🏫 "蜡烛"楼',
+            'loc_11': '✨ 模拟医学资源中心',
+            'loc_12': '🩺 医学院',
+            'loc_13': '👩‍⚕️ 大学诊所',
+            'loc_14': '🚗 交通学院',
+            'loc_19': '🏡 19号基地',
+            'loc_20': '🏡 20号基地',
+            'loc_21': '🌳 植物园',
+            'loc_22': '🏊‍♂️ 游泳池',
+            'loc_23': '🧪 实验楼',
+            'loc_24': '🎓 大学学院',
+            'loc_25': '👨‍🔬 网络物理系统学院',
+            'loc_27': '⚙️ 工程技术学院',
+            'loc_28': '💸 经济学院',
+            'loc_29': '🥽 地球物理学院',
+            'loc_32': '🔬 "工厂"科技园',
+            'loc_35': '🏊‍♂️ 游泳池',
+            'back': '⬅️ 返回'
+        },
+        'university_info_keyboard': {
+            'schedule': '课程表',
+            'scholarship': '奖学金',
+            'office_contacts': '教务处联系方式',
+            'visa_center': '签证移民中心',
+            'back': '返回'
+        },
+        'language_selection_keyboard': {
+            'back': '返回'
+        },
+        'sber_keyboard': {
+            'educational_loan': '教育贷款',
+            'sber_card': '奖学金银行卡',
+            'useful_links': '实用链接',
+            'details': '了解更多',
+            'back': '返回',
+            'link': 'https://telegra.ph/Obrazovatelnyj-kredit-SberBanka-s-gosudarstvennoj-podderzhkoj-10-02'
+        },
 
-        'handlers': {
-            'critical_handlers': {
-                'critical_police_handler': '''
-🚨 *紧急联系方式*
+        'hospital_keyboard': {
+            'insurance': '医疗保险',
+            'attachment': '附属诊所'
+        },
+        'places_keyboard': {
+            'random': '随机推荐',
+            'analysis': '正在分析您的请求...',
+            'processing': '正在处理请求... 为您筛选最佳地点！',
+        }
+    },
+
+    'handlers': {
+        'critical_handlers': {
+            'critical_police_handler': '''
+🚨 *紧急联系电话*
 
 *紧急服务统一号码*
 (消防、紧急情况部、警察、救护车、燃气服务)
@@ -2872,15 +2875,15 @@ Cuéntame cómo quieres pasar el tiempo:
 💡 请保存这些号码以备急用！
                                                     ''',
 
-                'critical_hotline_handler': '''
+            'critical_hotline_handler': '''
 🚪 *签证移民支持部门*
 
 📞 *电话*:
-+7 (4012) 595-595 (分机 7454) — 移民登记和签证
-+7 (4012) 595-595 (分机 7452) — 签证邀请
++7 (4012) 595-595 (分机号 7454) — 移民登记和签证
++7 (4012) 595-595 (分机号 7452) — 签证邀请函
 
 🏢 *地址*:
-俄罗斯，加里宁格勒市，A. Nevskogo街14号，2号楼，114办公室
+俄罗斯，加里宁格勒市，亚历山大·涅夫斯基大街14号，2号楼，114室
 
 🕒 *接待时间*:
 周一 14:00–17:00
@@ -2891,414 +2894,407 @@ Cuéntame cómo quieres pasar el tiempo:
 午休 13:00–14:00
                                                     ''',
 
-                'critical_government_handler': '''
+            'critical_government_handler': '''
 🏛️ *圣彼得堡民族关系与移民政策实施委员会*
 
-您可以预约在线或线下会面！
+您可以预约线上或线下会面！
 
-1. 📅 *线下形式* (公民亲自接待)
+1. 📅 *线下形式* (公民当面接待)
 如何预约？
-电话预约：*576-28-08*
+电话预约：*576-28-08* 1.
 接待处工作时间：
 • 周一至周四：*9:00 – 18:00*
 • 周五：*9:00 – 17:00*
 • 午休：*13:00 – 14:00* (不接听电话)
-• 周六和周日：休息。
+• 周六和周日：休息日。
 
-*需要带什么？*
+*需要携带什么？*
 
 护照或其他身份证明文件。
 
 *接待流程如何？*
-您将由委员会主席、副主席或授权人员接待。
+将由委员会主席、副主席或授权人员接待 4。
 
-申诉记录在个人接待卡中。
+申诉会记录在个人接待卡中。
 
-简单问题 → 口头答复 (记录在卡中)。
+简单问题 → 口头答复 (记录在卡)。
 
-复杂问题 → 稍后书面答复。
+复杂问题 → 后续书面答复。
 
-问题不在委员会权限范围内 → 您将被转介至相应机构。
-⚠️ 如果您的问题已有答复，可能会被拒绝再次接待。
+问题不属于委员会职权范围 → 将指导您前往相应机构。
+⚠️ 如果您的问题已有答复，可能会拒绝再次接待。
 
-2. 🌐 *在线接待*
+2. 🌐 *线上接待*
 可通过委员会官方资源预约。
 预约链接：''',
 
-                'critical_consulate_handler': '''
+            'critical_consulate_handler': '''
 *俄罗斯外交部加里宁格勒代表处* 🏛️
 
 *地址*: 🏠
-236022, 俄罗斯, 加里宁格勒市, Kirova街17号
+236022, 俄罗斯, 加里宁格勒市, 基洛夫街17号
 
 *电话*: 📞
 接待处: + 7 (401) 221-37-12
 传真: + 7 (401) 221-06-26
-领事部: + 7 (401) 221-16-68
-护照处: + 7 (401) 295-82-02
-邀请函处: + 7 (4012) 21-59-28
+领事部门: + 7 (401) 221-16-68
+护照部门: + 7 (401) 295-82-02
+邀请函部门: + 7 (4012) 21-59-28
 
-*领事法律问题公民接待* ⚖️
-周一至周四: *9:00* 至 *17:00* (休息 *12:00* 至 *14:00*)
+*公民领事法律事务接待* ⚖️
+周一-周四: *9:00* 至 *17:00* (休息 *12:00* 至 *14:00*)
 周五: *9:00* 至 *16:00* (休息 *12:00* 至 *14:00*)
-周六至周日: 🚫 休息
+周六-周日: 🚫 休息日
                                             ''',
-            },
+        },
 
-            'dormitory_handlers': {
-                'dormitory_text': """
-       🏠 为了安排宿舍位置，提前准备必要文件📋并熟悉申请程序📝非常重要。请查看下面的详细说明👇：""",
+        'dormitory_handlers': {
+            'dormitory_text': """
+       办理宿舍入住 🏠，请提前准备好所需文件 📋 并了解申请流程 📝。请查看以下详细说明 👇：""",
 
-                'payment_text': """
+            'payment_text': """
 支付宿舍费用有两种方式。
 
-1. 亲自支付。在行政楼222办公室，2楼。在这里您将获得付款单，可在同一层的收银台支付。可通过收银台用卢布现金或银行卡支付。
+1. 亲自办理。到行政楼2楼222室，在此领取缴费单，然后在同层收银处支付。收银处支持卢布现金或银行卡支付。
 
-2. 通过网站远程支付。
+2. 网上支付。
 
-新生在入住时需全额支付第一学期费用。秋季学期需在9月15日前支付，春季学期在2月15日前支付。
+新生在入住时需全额支付第一学期费用。此后，秋季学期需在9月15日前支付，春季学期需在2月15日前支付。
                                             """,
-                'rules_text': """
-        🏘️ 点击此处"住宿规则"，了解重要规则和建议，这些将帮助您住得舒适安全。在这里您将找到关于工作时间、住户义务、行为规范等所有必要信息。✨""",
-                'laundry_text': """
-🏢 *位置*:
-每个宿舍楼都有洗衣房。具体位置和工作时间可询问舍监或值班员。
+            'rules_text': """
+        点击这里 🏘️「住宿规定」，查看重要规定和建议，助您住得舒适安全。此处提供有关工作时间、住户责任、行为规范等所有必要信息。✨""",
+            'laundry_text': """
+🏢 *位置*：
+每个宿舍楼均设有洗衣房。具体位置和工作时间可咨询舍管或值班员。
 
-🧼 *使用规则*:
+🧼 *使用规则*：
 • 请自带洗衣粉
-• 使用专用内衣袋
-• *禁止*洗涤鞋子 (这会损坏机器)
+• 请使用专用内衣袋
+• *禁止* 清洗鞋子 (会损坏机器)
 • 使用前请阅读现场说明
-• 在专用烘干室烘干衣物
+• 请在专用烘干房烘干衣物
 
 ⏰ *重要提示！*
-请*准时*将钥匙归还给值班员 — 其他学生也想洗衣服！🙏
+请 *准时* 将钥匙归还给值班员 — 其他同学也需要洗衣！🙏
 
-✨ 一切都为您的便利而组织 — 请小心使用！
+✨ 一切均为您的方便而设 — 请爱护使用！
                                             """,
-                'no_certificate_text': """
-如果没有接种证书或X光检查结果
+            'no_certificate_text': """
+若无预防接种证明或胸透检查报告
 
-1 *如果您没有近期的X光检查*
-您可以在以下几个地方进行，例如：
-- 在BFU KDC，凭学生卡320卢布 (需有卡)。KDC位置：[https://goo.gl/maps/P4djCkwJ3ZQHThgGA](https://goo.gl/maps/P4djCkwJ3ZQHThgGA)
-- 在Medexpert (Kosmicheskaya街或莫斯科大街)，17:00前，450卢布无影像。位置：
+1 *如果您没有近期的胸透检查报告*
+您可以在以下几个地方进行拍摄，例如：
+- 在BFU医疗诊断中心，凭学生卡（需有效）支付320卢布。位置：[https://goo.gl/maps/P4djCkwJ3ZQHThgGA]
+(https://goo.gl/maps/P4djCkwJ3ZQHThgGA)
+- 在Medexpert（宇宙街或莫斯科大街），17:00前，450卢布，不含胶片。位置：
 [https://goo.gl/maps/rRiC1Nh35BNPw2w3A](https://goo.gl/maps/rRiC1Nh35BNPw2w3A)
-- Novomed (Gagarina街2B) 17:00前，350卢布。
+- Novomed（加加林大街2B号）17:00前，350卢布。
 位置：
 [https://goo.gl/maps/kgEkj4yLnWBNbFUm6](https://goo.gl/maps/kgEkj4yLnWBNbFUm6)
 
-2 *如果您没有接种证书*
+2 *如果您没有预防接种证明*
 
-请联系任何Medexpert分支机构。您需要在那里进行名为"麻疹和白喉免疫力强度"的验血。化验可在每天进行，周一至周五7:30至19:00，周末7:30至17:00。
+请前往Medexpert的任何部门。您需要在那里抽血进行名为"麻疹和白喉免疫力强度"的检测。抽血时间为每天周一至周五7:30至19:00，周末7:30至17:00。
 
-需空腹抽血。
+检测需空腹进行。
 
-结果在4个工作日后出具 (结果可在个人账户中获取)。
+结果在4个工作日后出具（结果可在个人账户中查看）。
                                                 """,
-                'dormitory_address': """
-选择宿舍
+            'dormitory_address': """
+请选择宿舍
                 """,
-            },
+        },
 
-            'dormitory_location_handlers': '宿舍号',
+        'dormitory_location_handlers': '宿舍号',
 
-            'hospital_handlers': {
-                'hospital_text': '''
-*BFU伊曼纽尔·康德大学诊所*
+        'hospital_handlers': {
+            'hospital_text': '''
+*伊曼纽尔·康德波罗的海联邦大学诊所*
 
-*地址*: 236041, 俄罗斯, 加里宁格勒, 4月9日街60号
+*地址*: 236041, 俄罗斯, 加里宁格勒, 4月9日大街60号
 *联系方式*: +7 (4012) 31-33-39    kdc@kantiana.ru
   '''
+        },
+
+        'language_check_handlers': {
+            'grammar_handlers': {
+                'language_grammar_handler': '''
+                                            *请选择翻译选项*:
+                                            ''',
+                'translate_to_russian_handler': '''
+                                            请将以下文本翻译成俄语：
+                                            ''',
+                'translate_from_russian_handler': '''
+                                            请将以下俄语文本翻译成你的母语：
+                                            ''',
             },
 
-            'language_check_handlers': {
-                'grammar_handlers': {
-                    'language_grammar_handler': '''
-                                            *选择翻译选项*:
-                                            ''',
-                    'translate_to_russian_handler': '''
-                                            将以下文本翻译成俄语：
-                                            ''',
-                    'translate_from_russian_handler': '''
-                                            将以下文本从俄语翻译成您的语言：
-                                            ''',
-                },
-
-                'listening_handlers': {
-                    'send_voice': '收听文本并尝试用俄语写出来。',
-                },
-
-                'speaking_handlers': {
-                    'topics': [
-                        '请介绍一下您的家庭。',
-                        '您有宠物吗？',
-                        '您喜欢哪些菜肴？',
-                        '描述一下您的房间。',
-                        '您最喜欢的交通工具是什么？',
-                        '您喜欢在哪里度过空闲时间？',
-                        '您如何度过周日？',
-                        '您童年最鲜活的记忆是什么？',
-                        '您想去哪里旅行？',
-                        '哪些习惯帮助您保持高效？',
-                        '昨天过得怎么样？',
-                        '您做什么工作，工作内容是什么？',
-                        '您的家庭梦想是什么？',
-                        '上周有什么有趣的事发生在您身上？',
-                        '您最好的朋友有什么爱好？',
-                        '分享您对最近观看电影的感想。',
-                        '为什么决定在加里宁格勒学习？'
-                    ],
-                    'speaking_send': '等待您就以下主题进行讲述：',
-                    'handle_voice_message': '分析结果：',
-                }
+            'listening_handlers': {
+                'send_voice': '请听录音，并尝试用俄文写出。',
             },
 
-            'location_handlers': {
-                'addresses_handler': '选择教学楼',
-                'loc_1_handler': """
-*行政楼，A. Nevskogo街14号*
+            'speaking_handlers': {
+                'topics': [
+                    '请介绍一下你的家庭。',
+                    '你养宠物吗？',
+                    '你喜欢吃什么菜？',
+                    '描述一下你的房间。',
+                    '你最喜欢的交通工具是什么？',
+                    '你业余时间喜欢去哪里？',
+                    '你通常怎么过周日？',
+                    '你童年最深刻的记忆是什么？',
+                    '你最想去哪里旅行？',
+                    '哪些习惯帮助你保持高效？',
+                    '你昨天过得怎么样？',
+                    '你做什么工作？工作内容是什么？',
+                    '你的家庭有什么梦想？',
+                    '上周你身边发生了什么有趣的事？',
+                    '你最好的朋友有什么爱好？',
+                    '分享你最近看的一部电影的观后感。',
+                    '你为什么决定在加里宁格勒学习？'
+                ],
+                'speaking_send': '请你就以下主题进行讲述：',
+                'handle_voice_message': '分析结果：',
+            }
+        },
 
-这里设有：
-· 文书处 (115办公室)
-· 会计服务处 (212办公室)
-· 档案馆 (221办公室)
-· 收入和税务核算组 (222办公室)
-· 收银台 (二楼)
+        'location_handlers': {
+            'addresses_handler': '请选择教学楼',
+            'loc_1_handler': """
+*行政楼，亚历山大·涅夫斯基大街14号*
+
+此处设有：
+· 文书处 (115室)
+· 会计处 (212室)
+· 档案室 (221室)
+· 收入与税务核算组 (222室)
+· 收银处 (二楼)
 · Aquarium大厅
 · Maximum大厅
 · 食堂 (一楼)
 
                                             """,
 
-                'loc_2_handler': """
-*2号楼，物理、数学与信息技术学院 ("物理数学楼")，A. Nevskogo街14号*
+            'loc_2_handler': """
+*2号楼，物理、数学与信息技术学院 («数理学院»)，亚历山大·涅夫斯基大街14号*
 
-这里设有：
-· 外国学生事务处 (119办公室)
-· 签证移民支持部门 (114办公室)
-· 招生委员会 (116和117办公室)
-· 图书馆，202办公室 ("阅览室")
-· IT基础设施维护服务处 (121办公室)
+此处设有：
+· 外国学生事务处 (119室)
+· 签证移民支持部门 (114室)
+· 招生委员会 (116和117室)
+· 图书馆，202室 («阅览室»)
+· IT基础设施服务处 (121室)
 
                                             """,
 
-                'loc_3_handler': """
-*3号楼，Universitetskaya街2号*
+            'loc_3_handler': """
+*3号楼，大学街2号*
 
-这里设有：
+此处设有：
 · 生命系统学院
-· 主大学图书馆：科学借阅处 (126办公室)，阅览室 (115办公室)
+· 大学主图书馆：科技借阅处 (126室)，阅览室 (115室)
 
                                             """,
 
-                'loc_4_handler': """
-*4号楼，Chernyshevskogo街56号 ("带钟楼的楼")*
+            'loc_4_handler': """
+*4号楼，车尔尼雪夫斯基大街56号 («带钟表的楼»)*
 
-这里设有：
-· 人文学院
-· 俄语中心 (01办公室)
+此处设有：
+· 人文科学学院
+· 俄语中心 (01室)
 · 苏联童年博物馆
 
                                             """,
 
-                'loc_5_handler': """
-*5号楼，Chernyshevskogo街56a号*
+            'loc_5_handler': """
+*5号楼，车尔尼雪夫斯基大街56a号*
 
-这里设有：
+此处设有：
 · 教育学院
 
                                             """,
 
-                'loc_6_handler': """
-*6号楼，A. Nevskogo街14b号 ("冰球"楼)*
+            'loc_6_handler': """
+*6号楼，亚历山大·涅夫斯基大街14b号 («冰球»)*
 
-这里设有：
-· 学生宿舍综合体 (101办公室)
+此处设有：
+· 学生宿舍综合体 (101室)
 · 课外活动管理处
-
                                             """,
 
-                'loc_7_handler': """
-*7号楼，Frunze街6号*
+            'loc_7_handler': """
+*7号楼，伏龙芝街6号*
 
-这里设有：
+此处设有：
 · 教学电视演播室
 · 法学院
-
                                             """,
 
-                'loc_8_handler': """
-*8号楼，4月9日街5号*
+            'loc_8_handler': """
+*8号楼，4月9日大街5号*
 
-这里设有：
+此处设有：
 · 医学图书馆
 
                                             """,
 
-                'loc_9_handler': """
-*9号楼，A. Nevskogo街14号 ("体育中心")*
+            'loc_9_handler': """
+*9号楼，亚历山大·涅夫斯基大街14号 («体育中心»)*
 
-这里设有：
-体育健康综合体
-
-                                            """,
-
-                'loc_10_handler': """
-*10号楼，A. Nevskogo街14号 ("蜡烛"楼)*
-
-这里设有：
-· 学生社会经济支持中心 (14办公室)
-· 职业中心
+此处设有：
+体育健身中心
 
                                             """,
 
-                'loc_11_handler': """
-*11号楼，Botkina街3号*
+            'loc_10_handler': """
+*10号楼，亚历山大·涅夫斯基大街14号 («蜡烛»楼)*
 
-这里设有：
-· 医学模拟学习与认证区域资源中心
+此处设有：
+· 学生社会经济支持中心 (14室)
+· 职业发展中心
 
                                             """,
 
-                'loc_12_handler': """
-*12号楼，Botkina街4-6号*
+            'loc_11_handler': """
+*11号楼，博特金娜街3号*
 
-这里设有：
+此处设有：
+· 模拟医学与认证区域资源中心
+
+                                            """,
+
+            'loc_12_handler': """
+*12号楼，博特金娜街4-6号*
+
+此处设有：
 · 医学院
 
                                             """,
 
-                'loc_13_handler': """
-*13号楼，Botkina街4-6号*
+            'loc_13_handler': """
+*13号楼，博特金娜街4-6号*
 
-这里设有：
+此处设有：
 · 大学诊所
 
                                             """,
 
-                'loc_14_handler': """
-*14号楼，Alexandra Nevskogo街14号，4号楼*
+            'loc_14_handler': """
+*14号楼，亚历山大·涅夫斯基大街14号，4号楼*
 
-这里设有：
+此处设有：
 · 交通服务组
-· 财产综合设施运营管理处
+· 物业综合体运营管理处
 · 制度保障处
-
                                             """,
 
-                'loc_19_handler': """
-*19号楼，皮奥涅尔斯基，Rybnoe村23号*
+            'loc_19_handler': """
+*19号楼，皮奥涅尔斯基市，雷布诺耶镇，23号*
 
-这里设有：
+此处设有：
 · 教学实践基地
 
                                             """,
 
-                'loc_20_handler': """
-*20号楼，斯韦特洛戈尔斯克，加里宁格勒大街102号*
+            'loc_20_handler': """
+*20号楼，斯韦特洛戈尔斯克市，加里宁格勒大街102号*
 
-这里设有：
+此处设有：
 · 教学实践基地
 
                                             """,
 
-                'loc_21_handler': """
-*21号楼，Lesnaya街12号*
+            'loc_21_handler': """
+*21号楼，列斯纳亚街12号*
 
-这里设有：
+此处设有：
 · 植物园
 
                                             """,
 
-                'loc_22_handler': """
-*22号楼，A. Nevskogo街14号*
+            'loc_22_handler': """
+*22号楼，亚历山大·涅夫斯基大街14号*
 
-这里设有：
-· 带游泳池的教学体育综合体
-
-                                            """,
-
-                'loc_23_handler': """
-*23号楼，Dmitriya Donskogo街27号1栋*
-
-这里设有：
-· 高等医学院教学实验室楼
+此处设有：
+· 带游泳池的体育教学综合体
 
                                             """,
 
-                'loc_24_handler': """
-*24号楼，Zoologicheskaya街2号*
+            'loc_23_handler': """
+*23号楼，德米特里·顿斯科伊大街27号1栋*
 
-这里设有：
+此处设有：
+· 高等医学院教学实验楼
+
+                                            """,
+
+            'loc_24_handler': """
+*24号楼，动物学街2号*
+
+此处设有：
 · 大学学院
 
                                             """,
 
-                'loc_25_handler': """
-*25号楼，Kosmonavta Patsaeva街12号*
+            'loc_25_handler': """
+*25号楼，宇航员帕察耶夫街12号*
 
-这里设有：
-· 高等技术学院ONC
+此处设有：
+· 高等技术学院ONKC
 · 网络物理系统高等学院
 
                                             """,
 
-                'loc_27_handler': """
-*27号楼，General-leitenanta Ozerova街57号*
+            'loc_27_handler': """
+*27号楼，奥泽罗夫中将街57号*
 
-这里设有：
+此处设有：
 · 工程技术学院
-· "Kantiana"竞技场
-
+· «Kantiana»竞技场
                                             """,
 
-                'loc_28_handler': """
-*28号楼，Gorkogo街23号*
+            'loc_28_handler': """
+*28号楼，高尔基街23号*
 
-这里设有：
+此处设有：
 · 经济与管理学院
-
                                             """,
 
-                'loc_29_handler': """
-*29号楼，Proletarskaya街131号*
+            'loc_29_handler': """
+*29号楼，无产者大街131号*
 
-这里设有：
+此处设有：
 · 应用信息学与数学地球物理研究所
-
                                             """,
 
-                'loc_32_handler': """
-*32号楼，Gaidara街6号*
+            'loc_32_handler': """
+*32号楼，盖达拉街6号*
 
-这里设有：
-· "工厂"科技园
-
+此处设有：
+· «工厂»科技园
                                             """,
 
-                'loc_35_handler': """
-*35号楼，Alexandra Nevskogo街14B号*
+            'loc_35_handler': """
+*35号楼，亚历山大·涅夫斯基大街14B号*
 
-这里设有：
+此处设有：
 · 游泳池
-
                                             """,
-            },
+        },
 
-            'university_info_handlers': {
-                'schedule_text': '''
-*课程表*:
+        'university_info_handlers': {
+            'schedule_text': '''
+*课程表*：
                                             ''',
-                'scholarship_text': '''
-*关于奖学金和物质援助的信息*:
+            'scholarship_text': '''
+*关于奖学金和物质帮助的信息*：
                                             ''',
-                'office_contacts_text': '''
+            'office_contacts_text': '''
 *联系方式*:
 
-_地址_: 236041, 加里宁格勒, Alexandra Nevskogo街14号
+_地址_: 236041, 加里宁格勒, 亚历山大·涅夫斯基大街14号
 _联系电话_: +7 (4012) 59-55-95
-_招生委员会_: Alexandra Nevskogo街14号
+_招生委员会_: 亚历山大·涅夫斯基大街14号
 
 8 (800) 600-52-39 免费电话
 +7 (4012) 59-55-96
@@ -3309,83 +3305,82 @@ _电子邮箱_: post@kantiana.ru
 
 *行政服务工作时间*
 
-周一: 9:00 — 18:00    
+周一: 9:00 — 18:00
 _午休_: 13:00—13:45
 
-周二: 9:00 — 18:00        
+周二: 9:00 — 18:00
 _午休_: 13:00—13:45
 
-周三: 不接待 (处理文件)
+周三: 非接待日 (处理文件)
 
-周四: 9:00 — 18:00        
+周四: 9:00 — 18:00
 _午休_: 13:00—13:45
 
-周五: 9:00 — 16:45        
+周五: 9:00 — 16:45
 _午休_: 13:00—13:45
 
 周六和周日: 休息日
 ''',
-                'visa_center_text': '''
+            'visa_center_text': '''
 *签证移民中心*:
 
 *联系方式*
 
-_地址_: 236041, 俄罗斯, 加里宁格勒, A. Nevskogo街14号，2号楼，119办公室
+_地址_: 236041, 俄罗斯, 加里宁格勒, 亚历山大·涅夫斯基大街14号，2号楼，119室
 _工作时间_: 周一至周四 9:00 至 18:00, 周五 9:00 至 16:45
 _电话_: +7 (4012) 31-33-99
 _邮箱_: international-study@kantiana.ru
 '''
-            },
+        },
 
-            'sber_handlers': {
-                'useful_links_text': """
-🔗 Sber及合作伙伴有用资源：
+        'sber_handlers': {
+            'useful_links_text': """
+🔗 Sber银行及合作伙伴实用资源：
 
-• [Netology平台](https://netology.ru/navigation) — 在线课程和专业
-• [训练冷静](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — 面试模拟器
-• [21学校](https://sbergraduate.ru/careerofthefuture/) — 免费IT教育
+• [Netology平台](https://netology.ru/navigation) — 在线课程与职业培训
+• [面试模拟器](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — 面试练习
+• [21号学校](https://sbergraduate.ru/careerofthefuture/) — 免费IT教育
 • [SberSova](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — 教育平台
-• [Kibrary](https://sber.ru/kibrary) — 数字图书馆
-• [数字马拉松](https://it-marathon.21-school.ru/?utm_source=ter_bank&utm_medium=referral&utm_campaign) — 竞赛和挑战
-• [Sber初创企业](https://sberstudent.sberclass.ru/) — 初创企业支持
-• [实习](https://sbergraduate.ru/practice/) — 职位和实习
+• [Kibrary数字图书馆](https://sber.ru/kibrary) — 数字图书馆
+• [数字马拉松](https://it-marathon.21-school.ru/?utm_source=ter_bank&utm_medium=referral&utm_campaign) — 竞赛与挑战
+• [Sber初创企业支持](https://sberstudent.sberclass.ru/) — 初创企业支持
+• [实习机会](https://sbergraduate.ru/practice/) — 职位与实习
 """,
 
-                'sber_card_text': """
-💳 *Sber卡*
+            'sber_card_text': """
+💳 *Sber银行卡*
 
-✨ *永久免费服务*
-💸 最爱购物*高达5%返现*
-📈 储蓄账户利息高达*16%*年利率
-🎨 每笔交易的*独特Sber贴纸* — 收集并与朋友分享！
-🎯 *青年特别优惠* — 娱乐、教育等折扣
+✨ *终身免管理费*
+💸 消费享*高达5%现金返还*
+📈 储蓄账户年利率高达*16%*
+🎨 每笔交易可获得*Sber独家贴纸* — 收集并与朋友分享！
+🎯 *青年专属优惠* — 娱乐、教育等各类折扣
 
-点击*下方按钮*了解更多：
+点击下方*按钮*了解详情：
 """,
 
-                'educational_loan_text': """
-🎓 *Sber教育贷款*
+            'educational_loan_text': """
+🎓 *Sber银行教育贷款*
 
 🎯 *年利率仅3%*
-📚 *学习期间仅支付利息*
-👨‍🎓 *14岁起即可申请*
-⏳ *毕业后分期付款长达15年*
+📚 *学习期间仅需支付利息*
+👨‍🎓 *年满14岁即可申请*
+⏳ *毕业后最长15年分期还款*
 
-点击*下方按钮*了解更多：
+点击下方*按钮*了解详情：
 """
-            },
-            'places_handler': """
-        你好，同学！🎓
-准备好探索加里宁格勒最酷的地方了吗？
-告诉我你想如何度过时光：
-• 🍕 便宜吃饭
-• ☕ 带笔记本电脑舒适小坐
-• 🎳 与朋友娱乐
-• 🌿 发现新的休息地点
-写信告诉我 — 我会推荐最佳选择！👇
+        },
+        'places_handler': """
+        同学你好！🎓
+准备好探索加里宁格勒最棒的地方了吗？
+告诉我你想怎么度过闲暇时光：
+• 🍕 找个实惠的地方吃饭
+• ☕ 带笔记本找个舒适角落
+• 🎳 和朋友一起找点乐子
+• 🌿 发现新的休闲地点
+发消息给我 — 我来推荐最佳选择！👇
 """,
-        }
-
+    }
 },
 
     'hi': {

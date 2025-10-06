@@ -270,9 +270,11 @@ async def back_to_main_menu(callback: CallbackQuery, language: str):
         await callback.answer(f"{TEXTS[language]['errors']['back_error']}")
 
 
-@router.callback_query(F.data == "back_to_main_no_delete")
-async def back_to_main_no_delete_menu(callback: CallbackQuery, language: str):
+@router.callback_query(F.data.startswith("back_to_main_no_delete"))
+async def back_to_main_no_delete_menu(callback: CallbackQuery):
     """Return to main menu from any section without deleting message"""
+    parts = callback.data.split(":")
+    language = parts[1] if len(parts) > 1 else 'ru'
     try:
         text = f"{TEXTS[language]['greetings']}"
         await callback.message.answer(text, reply_markup=main_roots_keyboard(language), parse_mode="Markdown")

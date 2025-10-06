@@ -74,7 +74,7 @@ async def process_mood(message: Message, state: FSMContext, bot: Bot, language: 
             response,
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[ [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}", callback_data="back_to_main_no_delete")]]
+                inline_keyboard=[ [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}", callback_data=f"back_to_main_no_delete:{language}")]]
             ),
             disable_web_page_preview=True
         )
@@ -93,7 +93,7 @@ async def process_mood(message: Message, state: FSMContext, bot: Bot, language: 
         await message.answer(
             f"❌ {TEXTS[language]['errors']['info_error']}",
             reply_markup=InlineKeyboardMarkup(
-                inline_keyboard=[ [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}", callback_data="back_to_main")]]
+                inline_keyboard=[ [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}", сallback_data=f"back_to_main_no_delete:{language}")]]
             )
         )
 
