@@ -44,7 +44,6 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
         data = await state.get_data()
         message_ids = data.get('message_ids', [])
 
-        # Удаляем каждое сообщение из списка
         for msg_id in message_ids:
             try:
                 await callback.bot.delete_message(

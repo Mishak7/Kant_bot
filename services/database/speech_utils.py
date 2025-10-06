@@ -19,29 +19,47 @@ def salute_speech_token():
 
     return response.json()['access_token']
 
-def transcribe_voice_message(file_path: str) -> str:
-    """Конвертация и транскрипция голосового сообщения"""
-    token = salute_speech_token()
 
+def transcribe_voice_message(file_path: str) -> str:
+    """Оптимизированная версия с буферизацией в памяти"""
+    token = salute_speech_token()
     audio = AudioSegment.from_file(file_path, format="ogg")
     audio = audio.set_frame_rate(16000).set_channels(1).set_sample_width(2)
-    audio.export("audio.raw", format="raw")
 
-    with open("audio.raw", "rb") as f:
-        audio_data = f.read()
+    max_length_ms = 60000
+    full_text = ""
 
-    url = "https://smartspeech.sber.ru/rest/v1/speech:recognize"
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Content-Type": "audio/x-pcm;bit=16;rate=16000"
-    }
-    params = {"model": "general", "language": "ru-RU"}
+    if len(audio) <= max_length_ms:
+        full_text = process_audio_in_memory(audio, token)
+    else:
+        for i in range(0, len(audio), max_length_ms):
+            segment = audio[i:i + max_length_ms]
+            segment_text = process_audio_in_memory(segment, token)
+            full_text += segment_text + " "
 
-    response = requests.post(url, headers=headers, params=params, data=audio_data, verify=False)
-    result_json = response.json()
+    return full_text.strip()
 
-    salute_text = ''.join(result_json.get('result', []))
-    return salute_text
+
+def process_audio_in_memory(audio_segment: AudioSegment, token: str) -> str:
+    """Обработка аудио без создания временных файлов"""
+    try:
+        audio_buffer = audio_segment.export(format="raw").read()
+
+        url = "https://smartspeech.sber.ru/rest/v1/speech:recognize"
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "audio/x-pcm;bit=16;rate=16000"
+        }
+        params = {"model": "general", "language": "ru-RU"}
+
+        response = requests.post(url, headers=headers, params=params, data=audio_buffer, verify=False)
+        result_json = response.json()
+
+        return ''.join(result_json.get('result', []))
+
+    except Exception as e:
+        print(f"Ошибка при обработке аудио: {e}")
+        return ""
 
 def text_to_speech(text: str, filename: str = "temp.wav") -> str:
     """
