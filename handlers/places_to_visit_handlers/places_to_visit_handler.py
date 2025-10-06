@@ -137,7 +137,7 @@ async def random_place_handler(callback: CallbackQuery, state: FSMContext, bot: 
                 inline_keyboard=[[InlineKeyboardButton(text=f"🎲 {TEXTS[language]['keyboards']['places_keyboard']['random']}",
                                                  callback_data='random_place')],
                                 [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['main_keyboard']['back']}",
-                                                 callback_data="back_to_main")]]),
+                                                 callback_data=f"back_to_main_no_delete:{language}")]]),
             disable_web_page_preview=True)
 
 
