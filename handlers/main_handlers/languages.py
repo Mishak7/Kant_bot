@@ -125,7 +125,7 @@ TEXTS = {
                 'loc_29': '🥽 Геофизика',
                 'loc_32': '🔬 Фабрика',
                 'loc_35': '🏊‍♂️ Бассейн',
-                'back': '⬅️ Назад'
+                'back': 'Назад'
             },
             'university_info_keyboard': {
                 'schedule': 'Расписание',
@@ -288,8 +288,7 @@ TEXTS = {
 1 *Если у вас отсутствует свежая флюорография*
 Вы можете сделать ее в нескольких местах, например:
 - В КДЦ БФУ за 320 руб. по карте студента (она должна быть в
-наличии). Расположение КДЦ: [https://goo.gl/maps/P4djCkwJ3ZQHThgGA]
-(https://goo.gl/maps/P4djCkwJ3ZQHThgGA)
+наличии). Расположение КДЦ: [https://go.2gis.com/QuKf3]
 - в Медэксперте (ул. Космическая или московский пр-т), до 17:00, за
 450 руб. без снимка. Расположение:
 [https://goo.gl/maps/rRiC1Nh35BNPw2w3A](https://goo.gl/maps/rRiC1Nh35BNPw2w3A)
@@ -983,7 +982,7 @@ IF THERE IS NO VACCINATION OR FLUOROGRAPHY CERTIFICATE
 
 You can get it done in several places, for example:
 
-- At the KDC BFU for 320 rubles with a student card (it must be available). Location KDC: [https://goo.gl/maps/P4djCkwJ3ZQHThgGA]
+- At the KDC BFU for 320 rubles with a student card (it must be available). Location KDC: [https://go.2gis.com/QuKf3]
 - At Medexpert (Kosmicheskaya St. or Moscow Ave.), until 5:00 PM, for 450 rubles without a photo. Location: [https://goo.gl/maps/rRiC1Nh35BNPw2w3A]
 - Novomed (Gagarina 2V) until 5:00 PM, 350 rubles. Location: [https://goo.gl/maps/kgEkj4yLnWBNbFUm6]
 
@@ -1656,7 +1655,7 @@ S'IL N'Y A PAS DE CERTIFICAT DE VACCINATION OU DE RADIOGRAPHIE
 
 Vous pouvez en faire une à plusieurs endroits, par exemple: 
 
-- Au KDC de l'Université fédérale de l'Oural pour 320 roubles avec la carte d'étudiant (elle doit être en possession). Emplacement du KDC : [https://goo.gl/maps/P4djCkwJ3ZQHThgGA]
+- Au KDC de l'Université fédérale de l'Oural pour 320 roubles avec la carte d'étudiant (elle doit être en possession). Emplacement du KDC : [https://go.2gis.com/QuKf3]
 - chez Medexpert (rue Kosmicheskaya ou avenue de Moscou), jusqu'à 17h00, pour 450 roubles sans photo. Emplacement : [https://goo.gl/maps/rRiC1Nh35BNPw2w3A]
 - Novomed (Gagarin 2B) jusqu'à 17h00, 350 roubles. Emplacement : [https://goo.gl/maps/kgEkj4yLnWBNbFUm6]
 
@@ -2322,7 +2321,7 @@ SI NO TIENES CERTIFICADO DE VACUNAS O DE FLUOROGRAFÍA
 1. *Si no tienes una fleografía reciente*
 
 Puedes hacerla en varios lugares, por ejemplo:
-- En el KDC BFU por 320 rublos con la tarjeta de estudiante (debe estar disponible). Ubicación del KDC: [https://goo.gl/maps/P4djCkwJ3ZQHThgGA] (https://goo.gl/maps/P4djCkwJ3ZQHThgGA)
+- En el KDC BFU por 320 rublos con la tarjeta de estudiante (debe estar disponible). Ubicación del KDC: [https://go.2gis.com/QuKf3]
 - En Medexpert (calle Kosmicheskaya o avenida Moscú), hasta las 17:00, por 450 rublos sin radiografía. Ubicación: [https://goo.gl/maps/rRiC1Nh35BNPw2w3A](https://goo.gl/maps/rRiC1Nh35BNPw2w3A)
 - Novomed (Gagarina 2B) hasta las 17:00, 350 rublos. Ubicación: [https://goo.gl/maps/kgEkj4yLnWBNbFUm6](https://goo.gl/maps/kgEkj4yLnWBNbFUm6)
 
@@ -2757,8 +2756,8 @@ Cuéntame cómo quieres pasar el tiempo:
         },
 
         'dormitory_links':{
-            'check-in': 'https://telegra.ph/Zaselenie-v-obshchezhitie-10-02',
-            'rules': 'https://telegra.ph/Pravila-zhizni-v-obshchezhitii-09-02'
+            'check-in': 'https://telegra.ph/宿舍入住-10-02',
+            'rules': 'https://telegra.ph/宿舍居住规则-10-02'
         },
 
         'dormitory_locations_keyboard': {
@@ -2984,8 +2983,7 @@ Cuéntame cómo quieres pasar el tiempo:
 
 1 *如果您没有近期的胸透检查报告*
 您可以在以下几个地方进行拍摄，例如：
-- 在BFU医疗诊断中心，凭学生卡（需有效）支付320卢布。位置：[https://goo.gl/maps/P4djCkwJ3ZQHThgGA]
-(https://goo.gl/maps/P4djCkwJ3ZQHThgGA)
+- 在BFU医疗诊断中心，凭学生卡（需有效）支付320卢布。位置：[https://go.2gis.com/QuKf3]
 - 在Medexpert（宇宙街或莫斯科大街），17:00前，450卢布，不含胶片。位置：
 [https://goo.gl/maps/rRiC1Nh35BNPw2w3A](https://goo.gl/maps/rRiC1Nh35BNPw2w3A)
 - Novomed（加加林大街2B号）17:00前，350卢布。
@@ -3673,7 +3671,7 @@ _邮箱_: international-study@kantiana.ru
 1. *यदि आपके पास ताजा फ्लुओरोप्टोग्राफी नहीं है*  
 
 आप इसे कई स्थानों पर करा सकते हैं, उदाहरण के लिए:  
-- बीएफयू के केडीसी में 320 रू. छात्र कार्ड पर (यह पास में होना चाहिए)। केडीसी का स्थान: [https://goo.gl/maps/P4djCkwJ3ZQHThgGA]  
+- बीएफयू के केडीसी में 320 रू. छात्र कार्ड पर (यह पास में होना चाहिए)। केडीसी का स्थान: [https://go.2gis.com/QuKf3]  
 - मेडएक्सपर्ट में (कосмическая स्ट्रीट या मॉस्को प्रॉस्पेक्ट), 17:00 बजे तक, बिना चित्र के 450 रू. स्थान:  [https://goo.gl/maps/rRiC1Nh35BNPw2w3A]  
 - नोवोमेड (गागरिन 2वी) 17:00 बजे तक, 350 रू.  स्थान:  [https://goo.gl/maps/kgEkj4yLnWBNbFUm6]    
 
