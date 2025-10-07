@@ -2839,7 +2839,7 @@ Cuéntame cómo quieres pasar el tiempo:
             'useful_links': '实用链接',
             'details': '了解更多',
             'back': '返回',
-            'link': 'https://telegra.ph/Obrazovatelnyj-kredit-SberBanka-s-gosudarstvennoj-podderzhkoj-10-02'
+            'link': 'https://telegra.ph/SberBank%E5%9B%BD%E5%AE%B6%E6%94%AF%E6%8C%81%E6%95%99%E8%82%B2%E8%B4%B7%E6%AC%BE-10-07'
         },
 
         'hospital_keyboard': {
