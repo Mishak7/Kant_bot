@@ -107,6 +107,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                         message_ids.append(answer_msg.message_id)
                         await state.update_data(message_ids=message_ids)
 
+
+
             else:
                 await callback.message.answer(text, parse_mode="Markdown",
                                               reply_markup=InlineKeyboardMarkup(
@@ -138,7 +140,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
             are_all_tasks_done_right = await all_tasks_done_right(user_id, level)
             if are_all_tasks_done_right:
                 progress = await show_progress(user_id, level)
-                new_level = levels[levels.index(level) + 1] if levels.index(level) + 1 < len(levels) else 'всё!'
+                new_level = levels[min(len(levels), levels.index(level) + 1)] if levels.index(level) + 1 < len(levels) else 'всё!'
                 await callback.message.answer(
                     f"🎉 Поздравляем, вы полностью закончили уровень {progress['level_name']}! Переходите на новый уровень для дальнейшего обучения!",
                     parse_mode="Markdown", message_effect_id="5046509860389126442",
@@ -236,9 +238,7 @@ async def handle_voice_answer(message: Message, state: FSMContext, bot: Bot):
             user_id = data.get('user_id')
             level = data.get('level')
 
-            new_level = levels[levels.index(level) + 1] if len(levels) >= levels.index(
-                level) + 1 else 'всё!'
-
+            new_level = levels[min(len(levels), levels.index(level) + 1)] if levels.index(level) + 1 < len(levels) else 'всё!'
             if not task_id or not user_id:
                 await message.answer("Произошла ошибка. Попробуйте начать заново.")
                 await state.clear()
@@ -325,7 +325,7 @@ async def check_text_answer(message: Message, state: FSMContext):
         level = data.get('level')
         is_speaking_task = data.get("is_speaking_task", False)
 
-        new_level = levels[levels.index(level) + 1] if len(levels) >= levels.index(level) + 1 else 'всё!'
+        new_level = levels[min(len(levels), levels.index(level) + 1)] if levels.index(level) + 1 < len(levels) else 'всё!'
 
         if is_speaking_task:
             await message.answer("Пожалуйста, отправь голосовое сообщение.")
