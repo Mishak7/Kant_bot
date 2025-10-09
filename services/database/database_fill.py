@@ -1396,7 +1396,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как вы себя чувствуете?»",
             "task_question": "Ответьте (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1406,7 +1407,8 @@ data = {
             "task_content": "Вам задали вопрос: «Скажите, пожалуйста, вы говорите по-английски?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1416,7 +1418,8 @@ data = {
             "task_content": "Вам задали вопрос: «Сколько вам лет?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+                  
         },
         {
             "level_score": 1,
@@ -1426,7 +1429,8 @@ data = {
             "task_content": "Вам задали вопрос: «Откуда вы?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1436,7 +1440,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы студент или работаете?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1446,7 +1451,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как зовут вашу маму?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1456,7 +1462,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как зовут ваших родителей?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1466,7 +1473,8 @@ data = {
             "task_content": "Вам задали вопрос: «Кто ваш лучший друг или подруга?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1476,7 +1484,8 @@ data = {
             "task_content": "Вам задали вопрос: «У вас много друзей?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1486,7 +1495,8 @@ data = {
             "task_content": "Вам задали вопрос: «Ваши друзья живут далеко от вас?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1496,7 +1506,8 @@ data = {
             "task_content": "Вам задали вопрос: «На каком языке говорит ваш лучший друг?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1506,7 +1517,8 @@ data = {
             "task_content": "Вам задали вопрос: «Сегодня солнечно или идёт дождь?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1516,7 +1528,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какая сегодня погода?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1526,7 +1539,8 @@ data = {
             "task_content": "Вам задали вопрос: «В вашем городе часто снег зимой?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1536,7 +1550,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы любите жару?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1546,7 +1561,8 @@ data = {
             "task_content": "Вам задали вопрос: «Где вы учитесь?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1556,7 +1572,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы учитесь или работаете?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1566,7 +1583,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вам нравится ваш университет?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1576,7 +1594,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы любите читать книги?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1586,7 +1605,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы любите смотреть фильмы или сериалы?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1596,7 +1616,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы любите ездить на поезде или на автобусе?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1606,7 +1627,8 @@ data = {
             "task_content": "Вы в автобусе. Слышите объявление:\n\n— Следующая остановка — «Центральный рынок».\n\n Вопрос: Куда вы приедете на следующей остановке?",
             "task_question": "Ваша задача: Назвать место.\n\nОтветьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1616,7 +1638,8 @@ data = {
             "task_content": "Вы покупаете билет в кино. Кассир спрашивает:\n\n — Один билет на «Мстители» на 19:00?\n\nВопрос: На какой фильм и во сколько билет?",
             "task_question": "Ваша задача: Повторить ключевую информацию (фильм и время).\n\nОтветьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1626,7 +1649,8 @@ data = {
             "task_content": "Ситуация: Вы в магазине. Продавец спрашивает:\n\n — Вам пакет нужен?",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1636,7 +1660,8 @@ data = {
             "task_content": "Ситуация: Вы спросили, где банк. Прохожий ответил:\n\n— Банк там, рядом с аптекой.",
             "task_question": "Вопрос: Где находится банк?\n\nОтветьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 1,
@@ -1646,7 +1671,8 @@ data = {
             "task_content": "Вас спросил прохожий: «Откуда ты приехал?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1656,7 +1682,8 @@ data = {
             "task_content": "Вам задал вопрос друг: «Где вы обычно отдыхаете летом?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1666,7 +1693,8 @@ data = {
             "task_content": "Вам задали вопрос: «Где вы живёте?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1676,7 +1704,8 @@ data = {
             "task_content": "Вам задали вопрос: «Сколько у вас братьев и сестёр?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1686,7 +1715,8 @@ data = {
             "task_content": "Вам задали вопрос: «Есть ли у вас домашние животные?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1696,7 +1726,8 @@ data = {
             "task_content": "Вам задали вопрос: «Сколько человек в вашей семье?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1706,7 +1737,8 @@ data = {
             "task_content": "Вам задали вопрос: «Где живёт ваша семья?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1716,7 +1748,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы часто видитесь с семьёй?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1726,7 +1759,8 @@ data = {
             "task_content": "Вам задали вопрос: «Ваш друг тоже изучает русский язык?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1736,7 +1770,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как часто вы звоните друзьям?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1746,7 +1781,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы смотрите прогноз погоды?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1756,7 +1792,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы берёте зонт, если по прогнозу дождь?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1766,7 +1803,8 @@ data = {
             "task_content": "Вам задали вопрос: «Во сколько начинается ваш учебный день?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1776,7 +1814,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы устаёте после учебы?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1786,7 +1825,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какое у вас хобби?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1796,7 +1836,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какой сегодня день недели?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1806,7 +1847,8 @@ data = {
             "task_content": "Вам задали вопрос: «Когда у вас день рождения?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1816,7 +1858,8 @@ data = {
             "task_content": "Вам задали вопрос: «В каком месяце вы родились?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1826,7 +1869,8 @@ data = {
             "task_content": "Вам задали вопрос: «Сколько дней в неделе?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1836,7 +1880,8 @@ data = {
             "task_content": "Ситуация: Вы в кафе. Официант спрашивает:\n\n— Что будете пить?",
             "task_question": "Ваша задача: Назвать напиток.\n\nОтветьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -1846,7 +1891,8 @@ data = {
             "task_content": "Вам задали вопрос: «О чём вы мечтаете?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1856,7 +1902,8 @@ data = {
             "task_content": "Вам задали вопрос: «Кто в вашей семье самый старший?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1866,7 +1913,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вы любите делать вместе с семьёй?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1876,7 +1924,8 @@ data = {
             "task_content": "Вам задали вопрос: «Где вы познакомились с вашим лучшим другом?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1886,7 +1935,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как вы проводите время с друзьями?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1896,7 +1946,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вам нравится в вашем друге?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1906,7 +1957,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какая ваша любимая погода?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1916,7 +1968,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вы делаете, когда идёт дождь?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1926,7 +1979,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какая погода была вчера?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1936,7 +1990,8 @@ data = {
             "task_content": "Вам задали вопрос: «На кого вы учитесь?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1946,7 +2001,8 @@ data = {
             "task_content": "Вам задали вопрос: «Кем вы хотите работать?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1956,7 +2012,8 @@ data = {
             "task_content": "Вам задали вопрос: «С кем вы обычно проводите выходные?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1966,7 +2023,8 @@ data = {
             "task_content": "Вам задали вопрос: «Где вы обычно отдыхаете летом?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1976,7 +2034,8 @@ data = {
             "task_content": "Вам задали вопрос: «Который сейчас час?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1986,7 +2045,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какое сегодня число?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -1996,7 +2056,8 @@ data = {
             "task_content": "Вам задали вопрос: «Во сколько вы обычно просыпаетесь?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -2006,7 +2067,8 @@ data = {
             "task_content": "Вам задали вопрос: «Сколько времени вы тратите на дорогу до работы/университета?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -2016,7 +2078,8 @@ data = {
             "task_content": "Вы звоните в такси. Диспетчер спрашивает:\n\n— Какой ваш адрес? Откуда вас забрать?\n\nВаша задача: Назвать свой адрес или любое место в городе.",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -2026,7 +2089,8 @@ data = {
             "task_content": "Вы встречаете друга в аэропорту. Он звонит и говорит:\n\n— Я прилетел! Я выхожу к выходу номер 3.\n\nЗадание: Ответьте, что скоро подойдете, и скажите, где вы находитесь (можете придумать номер выхода).",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -2046,7 +2110,8 @@ data = {
             "task_content": "Поздоровайтесь с одногруппником и представьтесь (имя, фамилия, откуда вы, сколько вам лет)",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -2056,7 +2121,8 @@ data = {
             "task_content": "Попросите у одногруппника помочь с домашним заданием.",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -2066,7 +2132,8 @@ data = {
             "task_content": "Вы в магазине. Скажите, что вы хотите купить молоко и хлеб.",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -2076,7 +2143,8 @@ data = {
             "task_content": "Скажите врачу, что у вас болит горло.",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 1,
@@ -2086,7 +2154,8 @@ data = {
             "task_content": "Скажите врачу, сколько дней вы плохо себя чувствуете.",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 10
+            "task_score": 10,
+            
         },
         {
             "level_score": 1,
@@ -4432,7 +4501,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как Вас зовут и откуда Вы?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4442,7 +4512,8 @@ data = {
             "task_content": "Вам задали вопрос: «Сколько Вам лет?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4452,7 +4523,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что Вы любите есть на завтрак?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4462,7 +4534,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какая сегодня погода?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4472,7 +4545,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какой ваш любимый цвет?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4482,7 +4556,8 @@ data = {
             "task_content": "Вам задали вопрос: «Во сколько вы обычно просыпаетесь?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4492,7 +4567,8 @@ data = {
             "task_content": "Вам задали вопрос: «У вас есть домашнее животное?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4502,7 +4578,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какой ваш любимый день недели и почему?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4512,7 +4589,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вы делаете вечером?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4522,7 +4600,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы любите кофе или чай?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4532,7 +4611,8 @@ data = {
             "task_content": "Вам задали вопрос: «Где вы живёте?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4542,7 +4622,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вы делаете в выходные?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4552,7 +4633,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какая ваша любимая еда?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4562,7 +4644,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какое ваше полное имя?» (фамилия, имя)",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4572,7 +4655,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы работаете?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 2,
@@ -4582,7 +4666,8 @@ data = {
             "task_content": "Вам задали вопрос: «Опишите вашу комнату или квартиру.»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4592,7 +4677,8 @@ data = {
             "task_content": "Вам задали вопрос: «Расскажите о вашей семье.»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4602,7 +4688,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вы делали вчера?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4612,7 +4699,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какое ваше хобби? Почему оно вам нравится?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4622,7 +4710,8 @@ data = {
             "task_content": "Вам задали вопрос: «Опишите вашего лучшего друга.»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4632,7 +4721,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как вы обычно проводите день?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4642,7 +4732,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какая ваша любимая музыка? Почему?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4652,7 +4743,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вы делаете, когда у вас есть свободное время?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4662,7 +4754,8 @@ data = {
             "task_content": "Вам задали вопрос: «Опишите ваш родной город.»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4672,7 +4765,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как вы праздновали ваш последний день рождения?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4682,7 +4776,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вы любите смотреть по телевизору или в интернете?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4692,7 +4787,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какая ваша любимая пора года? Объясните почему.» ",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4702,7 +4798,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что вы делаете, чтобы расслабиться?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4712,7 +4809,8 @@ data = {
             "task_content": "Вам задали вопрос: «Вы любите готовить? Какое блюдо вы умеете готовить?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4722,7 +4820,8 @@ data = {
             "task_content": "Вам задали вопрос: «Куда вы любите ходить с друзьями?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 2,
@@ -4732,7 +4831,8 @@ data = {
             "task_content": "Вам задали вопрос: «Расскажите о вашей последней поездке в другой город или страну.»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4742,7 +4842,8 @@ data = {
             "task_content": "Вам задали вопрос: «Опишите ваш идеальный выходной день.»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4752,7 +4853,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какие у вас планы на ближайшие выходные?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4762,7 +4864,8 @@ data = {
             "task_content": "Вам задали вопрос: «Расскажите о вашей работе или учёбе. Что вам нравится?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4772,7 +4875,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как вы изучаете русский язык? Что вам помогает?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4782,7 +4886,8 @@ data = {
             "task_content": "Вам задали вопрос: «Опишите случай, когда вы помогли кому-то или кто-то помог вам.»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4792,7 +4897,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какая ваша самая большая мечта?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4802,7 +4908,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что бы вы хотели изменить в вашем городе? Почему?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4812,7 +4919,8 @@ data = {
             "task_content": "Вам задали вопрос: «Расскажите о традиции в вашей семье или стране.»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4822,7 +4930,8 @@ data = {
             "task_content": "Вам задали вопрос: «Какой совет вы дали бы человеку, который приезжает в вашу страну впервые?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4832,7 +4941,8 @@ data = {
             "task_content": "Вам задали вопрос: «Чем вы гордитесь в жизни?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4842,7 +4952,8 @@ data = {
             "task_content": "Вам задали вопрос: «Опишите вашу любимую книгу или фильм. Почему он вам нравится?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4852,7 +4963,8 @@ data = {
             "task_content": "Вам задали вопрос: «Что, по вашему мнению, самое важное в жизни?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4862,7 +4974,8 @@ data = {
             "task_content": "Вам задали вопрос: «Как технологии изменили вашу жизнь?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -4872,7 +4985,8 @@ data = {
             "task_content": "Вам задали вопрос: «Кем вы хотите быть через 10 лет?»",
             "task_question": "Ответьте полным предложением (отправьте голосовое сообщение).",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 2,
@@ -6012,7 +6126,8 @@ data = {
             "task_content": "Какой вид спорта ты считаешь самым интересным?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6022,7 +6137,8 @@ data = {
             "task_content": "Ты в аптеке. Скажи, что у тебя болит, и попроси лекарство.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6032,7 +6148,8 @@ data = {
             "task_content": "Что, по-вашему, лучше: играть в футбол или смотреть его по телевизору? Почему?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6042,7 +6159,8 @@ data = {
             "task_content": "Что вы предпочитаете: читать книги или смотреть фильмы? Почему?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6052,7 +6170,8 @@ data = {
             "task_content": "Что важнее для здоровья — спорт или правильное питание?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-3 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6062,7 +6181,8 @@ data = {
             "task_content": "Ситуация: Зимняя прогулка в лесу.\n\nЗадание: Расскажите, что вы будете надевать в следующей ситуации. Назови как минимум 3 предмета гардероба.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6072,7 +6192,8 @@ data = {
             "task_content": "Ситуация: Спортивная тренировка.\n\nЗадание: Расскажите, что вы будете надевать в следующей ситуации. Назови как минимум 3 предмета гардероба.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6082,7 +6203,8 @@ data = {
             "task_content": "Где удобней жить, в городе или в деревне? Почему?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения.Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6092,7 +6214,8 @@ data = {
             "task_content": "Опиши профессию программиста. Что он делает? Где работает? Какие инструменты использует?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6102,7 +6225,8 @@ data = {
             "task_content": "Ты любишь ходить в кино? Какой твой любимый жанр фильмов: комедия, детектив или мультфильмы? ",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 5
+            "task_score": 5,
+            
         },
         {
             "level_score": 3,
@@ -6112,7 +6236,8 @@ data = {
             "task_content": "Что лучше — жить в большом городе или в деревне? Почему?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6122,7 +6247,8 @@ data = {
             "task_content": "Какой праздник в твоей стране самый интересный?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6132,7 +6258,8 @@ data = {
             "task_content": "Ты чаще заказываешь еду или готовишь сам(а)? Почему?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6142,7 +6269,8 @@ data = {
             "task_content": "Что вы любите фотографировать, когда путешествуете?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6152,7 +6280,8 @@ data = {
             "task_content": "Опишите, как вы обычно проводите Новый год. Это семейный праздник для вас?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6162,7 +6291,8 @@ data = {
             "task_content": "Представь, что ты общаешься с человеком, который не знает, что такое ХОЛОДИЛЬНИК. Попробуй объяснить ему значение этого слова. НЕЛЬЗЯ: называть само слово и использовать слова не на русском языке.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6172,7 +6302,8 @@ data = {
             "task_content": "Представь, что ты общаешься с человеком, который не знает, что такое ЧЕМОДАН. Попробуй объяснить ему значение этого слова. НЕЛЬЗЯ: называть само слово и использовать слова не на русском языке.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6182,7 +6313,8 @@ data = {
             "task_content": "Представь, что ты общаешься с человеком, который не знает, что такое ЗЕРКАЛО. Попробуй объяснить ему значение этого слова. НЕЛЬЗЯ: называть само слово и использовать слова не на русском языке.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6192,7 +6324,8 @@ data = {
             "task_content": "Представь, что ты общаешься с человеком, который не знает, что такое СУВЕНИР. Попробуй объяснить ему значение этого слова. НЕЛЬЗЯ: называть само слово и использовать слова не на русском языке.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6202,7 +6335,8 @@ data = {
             "task_content": "Какой городской транспорт в твоем городе самый удобный? Почему?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 7
+            "task_score": 7,
+            
         },
         {
             "level_score": 3,
@@ -6212,7 +6346,8 @@ data = {
             "task_content": "",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6222,7 +6357,8 @@ data = {
             "task_content": "Меню.\n\nОсновное меню:\n- Оладьи из кабачков с зеленым салатом и сметаной - 500р\n- Французский омлет с тигровыми креветками, авокадо, шпинатом и сливочным сыром - 720р\n- Французский омлет с тамбовским окороком, шпинатом и сливочным сыром - 590р\n- Гриль чиз с цыпленком песто, моцареллой и базиликом - 480р\n\nНапитки:\n- Морс (клюква, смородина, малина) - 200р\n- Сок (апельсин, яблоко, вишня) - 150р.\n\nТы в кафе. Закажи еду и напитки из предложенного меню.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6232,7 +6368,8 @@ data = {
             "task_content": "У врача. Тебе нужно сказать, что ты себя плохо чувствуешь, назвать 2-3 симптома (например, болит голова) и предположить причину.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6242,7 +6379,8 @@ data = {
             "task_content": "Твой друг сказал: 'Сильные люди никогда не плачут.' Расскажи, согласен ты или нет, и объясни почему.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6252,7 +6390,8 @@ data = {
             "task_content": "Твой друг сказал: 'Дружить онлайн так же хорошо, как и в реальной жизни.' Твоя задача - сказать, согласен ты или нет с этим утверждением, и объяснить почему.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6262,7 +6401,8 @@ data = {
             "task_content": "Хотел(а) бы ты когда-нибудь работать в международной организации или посольстве? Почему да или нет?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6272,7 +6412,8 @@ data = {
             "task_content": "Расскажите, гражданином какой страны вы являетесь. А ваши родители?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6282,7 +6423,8 @@ data = {
             "task_content": "Кем ты хотел(а) стать в детстве и почему?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6292,7 +6434,8 @@ data = {
             "task_content": "Какое ваше любимое место в городе? Это музей, парк или, может быть, стадион? Почему?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6302,7 +6445,8 @@ data = {
             "task_content": "Ваш друг говорит: «Я боюсь, что не сдам экзамен». Что вы ему скажете, чтобы поддержать?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6312,7 +6456,8 @@ data = {
             "task_content": "Представьте, что ты турист. Спроси у прохожего, как добраться до ближайшего музея от твоего места. Задайте 2-3 вопроса.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6322,7 +6467,8 @@ data = {
             "task_content": "Что, по твоему мнению, удобнее: метро или автобус? Сравни их по скорости, стоимости и комфорту. Начни свой ответ так: «Я думаю, что... потому что...».",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6332,7 +6478,8 @@ data = {
             "task_content": "Ты опоздал(а) на встречу с другом, потому что долго ждал(а) свой автобус. Задание: Оставь ему голосовое сообщение и извинись. Объясни причину и скажи, во сколько ты теперь приедешь.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -6342,7 +6489,8 @@ data = {
             "task_content": "Ты едешь в аэропорт. Ты выберешь такси или общественный транспорт? Объясни свой выбор.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения. Ответь на ВСЕ вопросы.",
             "check_method": "open_question_speaking",
-            "task_score": 9
+            "task_score": 9,
+            
         },
         {
             "level_score": 3,
@@ -7037,7 +7185,7 @@ data = {
             "level_name": "B1",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Студенты внимательно слушают \_\_\_\_\_\_\n\n1) преподаватель\n2) преподавателя\n3) преподавателю.\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Школьники внимательно слушают \_\_\_\_\_\_\n\n1) преподаватель\n2) преподавателя\n3) преподавателю.\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выбери верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 4,
@@ -7627,7 +7775,8 @@ data = {
             "task_content": "На каком транспорте ты обычно добираешься на учебу?",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 4
+            "task_score": 4,
+            
         },
         {
             "level_score": 3,
@@ -7637,7 +7786,8 @@ data = {
             "task_content": "Ты не понял(а), что сказал преподаватель. Вежливо переспроси.",
             "task_question": "Ответь в формате ГОЛОСОВОГО сообщения. Твой ответ должен содержать 2-4 предложения.",
             "check_method": "open_question_speaking",
-            "task_score": 4
+            "task_score": 4,
+            
         },
         {
             "level_score": 3,
@@ -13406,7 +13556,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Он всегда славился своим \\_\\_\\_\\_\\_\\_\\_\\_\\__ подходом к решению проблем, что часто выводило коллег из себя.\n\n1) нестандартным\n2) нестабильным\n3) нестационарным\n4) нестоящим\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Он всегда славился своим \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ подходом к решению проблем, что часто выводило коллег из себя.\n\n1) нестандартным\n2) нестабильным\n3) нестационарным\n4) нестоящим\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13417,7 +13567,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Переговоры зашли в тупик, и надежда на компромисс стала \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) таять\n2) тонуть\n3) умирать\n4) утекать\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Переговоры зашли в тупик, и надежда на компромисс стала \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) таять\n2) тонуть\n3) умирать\n4) утекать\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13428,7 +13578,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Его объяснение прозвучало настолько \\_\\_\\_\\_\\_\\_\\_\\_\\__, что никто не решился задать уточняющий вопрос.\n\n1) истощающе\n2) исчерпывающе\n3) истощено\n4) иссякающе\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Его объяснение прозвучало настолько \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_, что никто не решился задать уточняющий вопрос.\n\n1) истощающе\n2) исчерпывающе\n3) истощено\n4) иссякающе\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13439,7 +13589,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Ученый представил \\_\\_\\_\\_\\_\\_\\_\\_\\__ доклад, который перевернул представления о проблеме.\n\n1) знаменательный\n2) значащий\n3) значительный\n4) знающий\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Ученый представил \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ доклад, который перевернул представления о проблеме.\n\n1) знаменательный\n2) значащий\n3) значительный\n4) знающий\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13450,7 +13600,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Она обладала \\_\\_\\_\\_\\_\\_\\_\\_\\__ умением находить общий язык с любым человеком.\n\n1) уникальным\n2) унизительным\n3) унитарным\n4) универсальным\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Она обладала \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ умением находить общий язык с любым человеком.\n\n1) уникальным\n2) унизительным\n3) унитарным\n4) универсальным\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13461,7 +13611,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "После скандала его репутация была безнадежно \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) опорочена\n2) подорвана\n3) разрушена\n4) запятнана\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "После скандала его репутация была безнадежно \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) опорочена\n2) подорвана\n3) разрушена\n4) запятнана\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13472,7 +13622,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Своей грубостью он \\_\\_\\_\\_\\_\\_\\_\\_\\__ всех присутствующих.\n\n1) сконфузил\n2) привёл в смущение\n3) привёл в замешательство\n4) оскорбил\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Своей грубостью он \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ всех присутствующих.\n\n1) сконфузил\n2) привёл в смущение\n3) привёл в замешательство\n4) оскорбил\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13483,7 +13633,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Идея была хороша, но ее реализация оставляла желать много лучшего, так как оказалась весьма \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) затратной\n2) дорогостоящей\n3) ценной\n4) стоимостной\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Идея была хороша, но ее реализация оставляла желать много лучшего, так как оказалась весьма \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) затратной\n2) дорогостоящей\n3) ценной\n4) стоимостной\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13494,7 +13644,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Его критика была резкой, но \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) справедливой\n2) правовой\n3) правильной\n4) правдивой\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Его критика была резкой, но \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) справедливой\n2) правовой\n3) правильной\n4) правдивой\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13505,7 +13655,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Он смотрел на мир сквозь \\_\\_\\_\\_\\_\\_\\_\\_\\__ оптимизма.\n\n1) очки\n2) линзы\n3) призму\n4) стекло\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Он смотрел на мир сквозь \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ оптимизма.\n\n1) очки\n2) линзы\n3) призму\n4) стекло\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13516,7 +13666,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Договор был расторгнут вследствие \\_\\_\\_\\_\\_\\_\\_\\_\\__ одной из сторон своих обязательств.\n\n1) невыполнения\n2) неисполнения\n3) несоблюдения\n4) нарушения\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Договор был расторгнут вследствие \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ одной из сторон своих обязательств.\n\n1) невыполнения\n2) неисполнения\n3) несоблюдения\n4) нарушения\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13527,7 +13677,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Старая картина была тщательно \\_\\_\\_\\_\\_\\_\\_\\_\\__ в мастерской реставраторов.\n\n1) обновлена\n2) восстановлена\n3) отремонтирована\n4) возобновлена\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Старая картина была тщательно \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ в мастерской реставраторов.\n\n1) обновлена\n2) восстановлена\n3) отремонтирована\n4) возобновлена\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13538,7 +13688,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Он был \\_\\_\\_\\_\\_\\_\\_\\_\\__ специалистом в своей области, к мнению которого прислушивались во всем мире.\n\n1) признанным\n2) узнанным\n3) принятым\n4) допущенным\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Он был \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ специалистом в своей области, к мнению которого прислушивались во всем мире.\n\n1) признанным\n2) узнанным\n3) принятым\n4) допущенным\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13549,7 +13699,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Его поступок был расценен как акт неслыханной \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) наглости\n2) смелости\n3) дерзости\n4) отваги\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Его поступок был расценен как акт неслыханной \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) наглости\n2) смелости\n3) дерзости\n4) отваги\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13560,7 +13710,7 @@ data = {
             "level_name": "C2",
             "module_name": "Easy",
             "type_task": "Grammar",
-            "task_content": "Дождь \\_\\_\\_\\_\\_\\_\\_\\_\\__ не переставая, с самого утра.\n\n1) лил\n2) шёл\n3) тёк\n4) капал\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Дождь \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ не переставая, с самого утра.\n\n1) лил\n2) шёл\n3) тёк\n4) капал\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 1,
@@ -13571,7 +13721,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "После провала проекта ему пришлось \\_\\_\\_\\_\\_\\_\\_\\_\\__ последствия своих решений.\n\n1) расхлёбывать\n2) выдерживать\n3) принимать\n4) нести\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "После провала проекта ему пришлось \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ последствия своих решений.\n\n1) расхлёбывать\n2) выдерживать\n3) принимать\n4) нести\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13582,7 +13732,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Не стоит делать из этого события \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) трагедию из мухи\n2) слона из мухи\n3) кита из комара\n4) гору из песчинки\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Не стоит делать из этого события \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) трагедию из мухи\n2) слона из мухи\n3) кита из комара\n4) гору из песчинки\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13593,7 +13743,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Новый начальник стал \\_\\_\\_\\_\\_\\_\\_\\_\\__ в работе отдела, уволив нескольких старых сотрудников.\n\n1) ломать лёд\n2) рубить сплеча\n3) рубить с плеча\n4) бить кулаком по столу\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Новый начальник стал \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ в работе отдела, уволив нескольких старых сотрудников.\n\n1) ломать лёд\n2) рубить сплеча\n3) рубить с плеча\n4) бить кулаком по столу\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13604,7 +13754,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Его аргументы в споре всегда \\_\\_\\_\\_\\_\\_\\_\\_\\__ на глубоком знании предмета.\n\n1) базируются\n2) основываются\n3) покоятся\n4) зиждутся\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Его аргументы в споре всегда \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ на глубоком знании предмета.\n\n1) базируются\n2) основываются\n3) покоятся\n4) зиждутся\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13615,7 +13765,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Узнав правду, она испытала \\_\\_\\_\\_\\_\\_\\_\\_\\__ чувство разочарования.\n\n1) гнетущее\n2) давящее\n3) тяжёлое\n4) угнетающее\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Узнав правду, она испытала \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ чувство разочарования.\n\n1) гнетущее\n2) давящее\n3) тяжёлое\n4) угнетающее\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13626,7 +13776,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Переговоры были \\_\\_\\_\\_\\_\\_\\_\\_\\__ на неопределенный срок.\n\n1) отложены\n2) отсрочены\n3) перенесены\n4) отменены\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Переговоры были \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ на неопределенный срок.\n\n1) отложены\n2) отсрочены\n3) перенесены\n4) отменены\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13637,7 +13787,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Он мастерски \\_\\_\\_\\_\\_\\_\\_\\_\\__ разговор на другую тему.\n\n1) перевёл\n2) переключил\n3) свернул\n4) обратил\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Он мастерски \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ разговор на другую тему.\n\n1) перевёл\n2) переключил\n3) свернул\n4) обратил\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13648,7 +13798,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Его поведение \\_\\_\\_\\_\\_\\_\\_\\_\\__ все мыслимые рамки приличия.\n\n1) переступило\n2) превзошло\n3) превысило\n4) перешагнуло\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Его поведение \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ все мыслимые рамки приличия.\n\n1) переступило\n2) превзошло\n3) превысило\n4) перешагнуло\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13659,7 +13809,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Доказательства, представленные обвинением, были \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) очевидными\n2) явными\n3) неопровержимыми\n4) заметными\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Доказательства, представленные обвинением, были \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) очевидными\n2) явными\n3) неопровержимыми\n4) заметными\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13670,7 +13820,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Он всегда имел \\_\\_\\_\\_\\_\\_\\_\\_\\__ запас энергии для новых проектов.\n\n1) неистощимый\n2) бесконечный\n3) безграничный\n4) неиссякаемый\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Он всегда имел \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ запас энергии для новых проектов.\n\n1) неистощимый\n2) бесконечный\n3) безграничный\n4) неиссякаемый\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13681,7 +13831,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Слухи о его отставке оказались сильно \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) преувеличены\n2) увеличены\n3) приувеличены\n4) превышены\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Слухи о его отставке оказались сильно \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) преувеличены\n2) увеличены\n3) приувеличены\n4) превышены\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13692,7 +13842,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Своим заявлением он \\_\\_\\_\\_\\_\\_\\_\\_\\__ сомнения в честности конкурентов.\n\n1) посеял\n2) посадил\n3) бросил\n4) вбросил\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Своим заявлением он \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ сомнения в честности конкурентов.\n\n1) посеял\n2) посадил\n3) бросил\n4) вбросил\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13703,7 +13853,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Эта история стала \\_\\_\\_\\_\\_\\_\\_\\_\\__ триггером для начала крупного расследования.\n\n1) отправным\n2) начальным\n3) стартовым\n4) исходным\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Эта история стала \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ триггером для начала крупного расследования.\n\n1) отправным\n2) начальным\n3) стартовым\n4) исходным\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13714,7 +13864,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Его доводы, хотя и звучали убедительно, были совершенно \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) нежизненными\n2) несостоятельными\n3) стартовым\n4) исходным\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Его доводы, хотя и звучали убедительно, были совершенно \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) нежизненными\n2) несостоятельными\n3) стартовым\n4) исходным\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13725,7 +13875,7 @@ data = {
             "level_name": "C2",
             "module_name": "Middle",
             "type_task": "Grammar",
-            "task_content": "Между двумя компаниями давно сложились отношения добросовестной \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) конкуренции\n2) вражды\n3) борьбы\n4) конфронтации\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Между двумя компаниями давно сложились отношения добросовестной \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) конкуренции\n2) вражды\n3) борьбы\n4) конфронтации\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 2,
@@ -13736,7 +13886,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Он человек редкой душевной \\_\\_\\_\\_\\_\\_\\_\\_\\__, всегда готовый прийти на помощь.\n\n1) широты\n2) толщины\n3) глубины\n4) высоты\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Он человек редкой душевной \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_, всегда готовый прийти на помощь.\n\n1) широты\n2) толщины\n3) глубины\n4) высоты\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13747,7 +13897,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Его речь была полна \\_\\_\\_\\_\\_\\_\\_\\_\\__ намеков и аллегорий, понятных лишь посвященным.\n\n1) тёмных\n2) туманных\n3) слепых\n4) глухих\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Его речь была полна \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ намеков и аллегорий, понятных лишь посвященным.\n\n1) тёмных\n2) туманных\n3) слепых\n4) глухих\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13758,7 +13908,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Своим открытием он \\_\\_\\_\\_\\_\\_\\_\\_\\__ устоявшуюся научную парадигму.\n\n1) низверг\n2) опроверг\n3) низринул\n4) разрушил\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Своим открытием он \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ устоявшуюся научную парадигму.\n\n1) низверг\n2) опроверг\n3) низринул\n4) разрушил\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13769,7 +13919,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Наследники великого актера тщательно \\_\\_\\_\\_\\_\\_\\_\\_\\__ его творческое наследие.\n\n1) берегут\n2) блюдут\n3) хранят\n4) охраняют\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Наследники великого актера тщательно \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ его творческое наследие.\n\n1) берегут\n2) блюдут\n3) хранят\n4) охраняют\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13780,7 +13930,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Дружба, \\_\\_\\_\\_\\_\\_\\_\\_\\__ в годы войны, прошла проверку временем.\n\n1) завязанная\n2) связанная\n3) скреплённая\n4) сплочённая\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Дружба, \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ в годы войны, прошла проверку временем.\n\n1) завязанная\n2) связанная\n3) скреплённая\n4) сплочённая\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13791,7 +13941,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Он смотрел на нее с \\_\\_\\_\\_\\_\\_\\_\\_\\__ обожанием.\n\n1) собачьим\n2) птичьим\n3) овечьим\n4) телячьим\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Он смотрел на нее с \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ обожанием.\n\n1) собачьим\n2) птичьим\n3) овечьим\n4) телячьим\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13802,7 +13952,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Политик пытался \\_\\_\\_\\_\\_\\_\\_\\_\\__ свою позицию, но это выглядело как откровенная ложь.\n\n1) смягчить\n2) облагородить\n3) приукрасить\n4) обелить\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Политик пытался \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ свою позицию, но это выглядело как откровенная ложь.\n\n1) смягчить\n2) облагородить\n3) приукрасить\n4) обелить\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13813,7 +13963,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "В его голосе звучали \\_\\_\\_\\_\\_\\_\\_\\_\\__ высокомерия.\n\n1) переливы\n2) звоны\n3) отзвуки\n4) нотки\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "В его голосе звучали \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ высокомерия.\n\n1) переливы\n2) звоны\n3) отзвуки\n4) нотки\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13824,7 +13974,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Этот поступок окончательно \\_\\_\\_\\_\\_\\_\\_\\_\\__ его репутацию порядочного человека.\n\n1) похоронил\n2) уничтожил\n3) аннулировал\n4) ликвидировал\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Этот поступок окончательно \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ его репутацию порядочного человека.\n\n1) похоронил\n2) уничтожил\n3) аннулировал\n4) ликвидировал\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13835,7 +13985,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Между ними возникла \\_\\_\\_\\_\\_\\_\\_\\_\\__ неприязнь с первой же встречи.\n\n1) взаимная\n2) обоюдная\n3) двухсторонняя\n4) двусторонняя\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Между ними возникла \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ неприязнь с первой же встречи.\n\n1) взаимная\n2) обоюдная\n3) двухсторонняя\n4) двусторонняя\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13846,7 +13996,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Ученый говорил о таких \\_\\_\\_\\_\\_\\_\\_\\_\\__ материях, что большинство слушателей ничего не поняло.\n\n1) умозрительных\n2) абстрактных\n3) отвлечённых\n4) воздушных\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Ученый говорил о таких \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ материях, что большинство слушателей ничего не поняло.\n\n1) умозрительных\n2) абстрактных\n3) отвлечённых\n4) воздушных\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13857,7 +14007,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Его успех – это не случайность, а результат \\_\\_\\_\\_\\_\\_\\_\\_\\__ труда.\n\n1) титанического\n2) громадного\n3) огромного\n4) гигантского\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Его успех – это не случайность, а результат \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ труда.\n\n1) титанического\n2) громадного\n3) огромного\n4) гигантского\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13868,7 +14018,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Старый дом имел совершенно \\_\\_\\_\\_\\_\\_\\_\\_\\__ вид.\n\n1) заброшенный\n2) запущенный\n3) покинутый\n4) оставленный\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Старый дом имел совершенно \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ вид.\n\n1) заброшенный\n2) запущенный\n3) покинутый\n4) оставленный\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13879,7 +14029,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Судьба распорядилась так, что их пути \\_\\_\\_\\_\\_\\_\\_\\_\\__.\n\n1) разошлись\n2) разъехались\n3) разделились\n4) разлились\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Судьба распорядилась так, что их пути \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.\n\n1) разошлись\n2) разъехались\n3) разделились\n4) разлились\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
@@ -13890,7 +14040,7 @@ data = {
             "level_name": "C2",
             "module_name": "Senior",
             "type_task": "Grammar",
-            "task_content": "Он обладал \\_\\_\\_\\_\\_\\_\\_\\_\\__ даром убеждения, мог уговорить кого угодно на что угодно.\n\n1) змеиным\n2) волшебным\n3) дьявольским\n4) ангельским\n\nНапиши ТОЛЬКО номер ответа!",
+            "task_content": "Он обладал \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ даром убеждения, мог уговорить кого угодно на что угодно.\n\n1) змеиным\n2) волшебным\n3) дьявольским\n4) ангельским\n\nНапиши ТОЛЬКО номер ответа!",
             "task_question": "Выберите верный вариант ответа из предложенных ниже",
             "check_method": "multiple_choice",
             "task_score": 3,
