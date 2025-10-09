@@ -189,14 +189,24 @@ async def main():
     dp.include_router(level_selection_handler.router)
     dp.include_router(places_to_visit_handler.router)
 
+    from aiohttp import web
+    from aiogram.types import Update
+    app = web.Application()
 
-    try:
-        logger.info('Bot started')
+    async def webhook_handler(request):
+        update_data = await request.json()
+        update = Update(**update_data)
+        await dp.feed_update(bot, update)
+        return web.Response(status=200)
+
+    app.router.add_post('/webhook', webhook_handler)
+
+    if os.getenv('TEST_MODE'):
+        logger.info('Starting in WEBHOOK mode for testing')
+        web.run_app(app, host='0.0.0.0', port=8080)
+    else:
+        logger.info('Starting in POLLING mode')
         await dp.start_polling(bot)
-    except Exception as e:
-        logger.critical(f'Bot crashed: {e}')
-    finally:
-        await bot.session.close()
 
 
 if __name__ == '__main__':
