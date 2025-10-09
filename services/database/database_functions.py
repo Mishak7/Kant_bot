@@ -390,7 +390,6 @@ async def prepare_question(task):
     task_id, content, task_type, question, audio = task
     # в выводе задания пользователю мы выводим только question, audio
     # content, task_id нам нужны доя проверки
-    print(task)
     if audio:
         return {"task_id": task_id, "content": content, "type": task_type, "question": question, "audio": audio}
     else:
