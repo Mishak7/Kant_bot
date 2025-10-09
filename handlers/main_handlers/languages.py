@@ -38,6 +38,7 @@ TEXTS = {
                 'critical': 'SOS',
                 'language_check': 'Тренажер',
                 'places': 'Куда сходить?',
+                'feedback': 'Нашел ошибку?',
                 'back': 'Назад'
             },
             'critical_keyboard': {
@@ -688,6 +689,10 @@ _Email_: international-study@kantiana.ru
 • 🌿 Открыть новое место для отдыха
 Пиши сообщение — я подскажу лучшие варианты! 👇
 """,
+            'feedback_handler': {
+        "prompt": "📝 Пожалуйста, напишите ваш отзыв или сообщение об ошибке одним сообщением (ты можешь прикрепить фото):",
+        "thanks_general": "✅ Спасибо! Ваше сообщение отправлено разработчику."
+            }
         }
     },
 
@@ -727,6 +732,7 @@ Where shall we start? 👇 Choose a menu item!""",
                 'language_check': 'Trainer',
                 'places': 'Where to go?',
                 'sber': 'SBER',
+                'feedback': 'Report a bug?',
                 'back': 'Back'
             },
             'critical_keyboard': {
@@ -1355,7 +1361,11 @@ Tell me how you want to spend your time:
 • 🎳 Have fun with friends
 • 🌿 Discover a new relaxing spot
 Send me a message - I'll suggest the best options! 👇
-"""
+""",
+'feedback_handler': {
+        "prompt": "📝 Please write your feedback or bug report in one message (you can attach a photo):",
+        "thanks_general": "✅ Thank you! Your message has been sent to the developer."
+            }
         }
     },
 
@@ -1398,6 +1408,7 @@ Par quoi allons-nous commencer ? 👇 Choisis un élément du menu !
                 'language_check': 'Coach',
                 'places': 'Où aller?',
                 'sber': 'SBER',
+                'feedback': 'Signaler un bug ?',
                 'back': 'Retour'
             },
             'critical_keyboard': {
@@ -2026,7 +2037,11 @@ Dis-moi comment tu veux passer ton temps :
 • 🎳 S'amuser avec des amis
 • 🌿 Découvrir un nouvel endroit pour se détendre
 Écris un message - je te proposerai les meilleures options ! 👇
-"""
+""",
+            'feedback_handler': {
+        "prompt": "📝 Veuillez écrire vos commentaires ou signaler un bug en un seul message (vous pouvez joindre une photo) :",
+        "thanks_general": "✅ Merci ! Votre message a été envoyé au développeur."
+            }
         }
     },
 
@@ -2068,6 +2083,7 @@ Conmigo podrás:
                 'language_check': 'Entrenador',
                 'places': '¿A dónde ir?',
                 'sber': 'SBER',
+                'feedback': '¿Reportar un error?',
                 'back': 'Atrás'
             },
             'critical_keyboard': {
@@ -2692,7 +2708,11 @@ Cuéntame cómo quieres pasar el tiempo:
 • 🎳 Divertirse con amigos
 • 🌿 Descubrir un nuevo lugar de relax
 ¡Escribe un mensaje - te sugeriré las mejores opciones! 👇
-"""
+""",
+            'feedback_handler': {
+        "prompt": "📝 Por favor, escribe tus comentarios o reporta un error en un solo mensaje (puedes adjuntar una foto):",
+        "thanks_general": "✅ ¡Gracias! Tu mensaje ha sido enviado al desarrollador."
+            }
         }
     },
 'cn': {
@@ -2734,6 +2754,7 @@ Cuéntame cómo quieres pasar el tiempo:
             'critical': '紧急求助',
             'language_check': '语言练习',
             'places': '去哪逛逛？',
+            'feedback':'报告错误?',
             'back': '返回'
         },
         'critical_keyboard': {
@@ -3378,6 +3399,10 @@ _邮箱_: international-study@kantiana.ru
 • 🌿 发现新的休闲地点
 发消息给我 — 我来推荐最佳选择！👇
 """,
+        'feedback_handler': {
+        "prompt": "📝 请在一个消息中写下您的反馈或错误报告（您可以附加照片）：",
+        "thanks_general": "✅ 谢谢！您的消息已发送给开发者。"
+        }
     }
 },
 
@@ -3419,6 +3444,7 @@ _邮箱_: international-study@kantiana.ru
                 'sber': 'SBER',
                 'language_check': 'व्यायाम मशीन',
                 'places': 'कहाँ घूमने जाएँ?',
+                'feedback': 'गलती रिपोर्ट करें?',
                 'back': 'पीछे'
             },
             'critical_keyboard': {
@@ -4036,7 +4062,11 @@ _ईमेल_: international-study@kantiana.ru
 • 🎳 दोस्तों के साथ मस्ती करने का
 • 🌿 आराम करने की नई जगह खोजने का
 मुझे एक संदेश भेजें - मैं सबसे अच्छे विकल्प सुझाऊंगा! 👇
-"""
+""",
+            'feedback_handler': {
+        "prompt": "📝 कृपया अपनी प्रतिक्रिया या बग रिपोर्ट एक संदेश में लिखें (आप एक फोटो संलग्न कर सकते हैं):",
+        "thanks_general": "✅ धन्यवाद! आपका संदेश डेवलपर को भेज दिया गया है।"
+            }
         }
     }
 }

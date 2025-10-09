@@ -16,6 +16,7 @@ from handlers.level_selection_handlers import level_selection_handler
 from services.database.database_fill import data
 from services.database.database_functions import add_tasks
 from handlers.places_to_visit_handlers import places_to_visit_handler
+from handlers.feedback_handlers import feedback_handler
 
 from aiogram import BaseMiddleware
 from typing import Callable, Dict, Any, Awaitable
@@ -188,6 +189,7 @@ async def main():
     dp.include_router(sber_handlers.router)
     dp.include_router(level_selection_handler.router)
     dp.include_router(places_to_visit_handler.router)
+    dp.include_router(feedback_handler.router)
 
 
     try:
