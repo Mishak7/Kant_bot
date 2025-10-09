@@ -23,7 +23,7 @@ from aiogram.types import TelegramObject
 import aiosqlite
 import asyncio
 import os
-
+from aiohttp import web
 
 class LanguageMiddleware(BaseMiddleware):
     async def __call__(
@@ -37,6 +37,9 @@ class LanguageMiddleware(BaseMiddleware):
         data['language'] = user_data.get('language', 'ru')
         return await handler(event, data)
 
+
+async def handle(request):
+    return web.Response(text="OK")
 
 async def init_db():
     """Асинхронная инициализация базы данных"""
@@ -166,7 +169,7 @@ async def init_db():
         logger.info("База данных инициализирована")
 
 
-async def main():
+async def start_bot():
     await init_db()
     await add_tasks(data=data)
 
@@ -198,6 +201,24 @@ async def main():
     finally:
         await bot.session.close()
 
+async def start_webserver():
+    app = web.Application()
+    app.add_routes([web.get('/', handle)])
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, '0.0.0.0', 8000)
+    await site.start()
+    logger.info("HTTP server started at http://0.0.0.0:8000/")
+
+async def main():
+    await init_db()
+    # Запускаем одновременно бота и веб-сервер
+    await asyncio.gather(
+        start_bot(),
+        start_webserver()
+    )
 
 if __name__ == '__main__':
     asyncio.run(main())
+
+
