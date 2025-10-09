@@ -17,9 +17,6 @@ from services.database.database_fill import data
 from services.database.database_functions import add_tasks
 from handlers.places_to_visit_handlers import places_to_visit_handler
 
-from aiogram.types import Update
-from aiohttp import web
-
 from aiogram import BaseMiddleware
 from typing import Callable, Dict, Any, Awaitable
 from aiogram.types import TelegramObject
@@ -168,7 +165,8 @@ async def init_db():
 
         logger.info("База данных инициализирована")
 
-async def init_bot():
+
+async def main():
     await init_db()
     await add_tasks(data=data)
 
@@ -191,40 +189,15 @@ async def init_bot():
     dp.include_router(level_selection_handler.router)
     dp.include_router(places_to_visit_handler.router)
 
-    return bot, dp
 
-async def webhook_handler(request):
     try:
-        bot = request.app['bot']
-        dp = request.app['dp']
-        update_data = await request.json()
-        update = Update(**update_data)
-        await dp.feed_update(bot, update)
-        return web.Response(status=200)
+        logger.info('Bot started')
+        await dp.start_polling(bot)
     except Exception as e:
-        logger.error(f"Webhook error: {e}")
-        return web.Response(status=500)
+        logger.critical(f'Bot crashed: {e}')
+    finally:
+        await bot.session.close()
 
-async def make_web_app():
-    bot, dp = await init_bot()
-    app = web.Application()
-    app['bot'] = bot
-    app['dp'] = dp
-    app.router.add_post('/webhook', webhook_handler)
-    return app
-
-async def polling_main():
-    bot, dp = await init_bot()
-    logger.info('Starting in POLLING mode')
-    await dp.start_polling(bot)
-
-def main():
-    if os.getenv('TEST_MODE'):
-        logger.info('Starting in WEBHOOK mode for testing')
-        web.run_app(make_web_app(), host='0.0.0.0', port=8080)
-    else:
-        logger.info('Starting in POLLING mode')
-        asyncio.run(polling_main())
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
