@@ -72,8 +72,8 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
             task = await get_task(level, user_id)
             prepared_task = await prepare_question(task)
 
-            number_of_buttons = len(re.findall(pattern=r'[1-4]\)', string=prepared_task['content'])) + len(re.findall(pattern=r'[1-4]\)',
-                                               string=prepared_task['question']))
+            number_of_buttons = (len(re.findall(pattern=r'[1-4]\)', string=prepared_task['content'])) + len(re.findall(pattern=r'[1-4]\)',
+                                               string=prepared_task['question'])))*(prepared_task.get('type') != 'Writing')
 
             text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
             is_speaking_task = prepared_task.get('type') == 'Speaking'

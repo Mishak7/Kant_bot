@@ -19,6 +19,7 @@ gigachat = GigaChat(temperature=0,
                     credentials=Settings.GIGA_CREDENTIALS,
                     model="GigaChat-2-Max",
                     verify_ssl_certs=False)
+
 async def add_tasks(
     data=None,
     level_score=None,
@@ -76,11 +77,11 @@ async def add_tasks(
 
             await cursor.execute("""
                 SELECT task_id FROM Tasks
-                WHERE level_id=? AND module_id=? AND type=? AND question=? AND check_method=?
-            """, (level_id, module_id, type_task, task_question, check_method))
+                WHERE level_id=? AND module_id=? AND type=? AND content=? AND question=? AND check_method=?
+            """, (level_id, module_id, type_task, task_content, task_question, check_method))
             row = await cursor.fetchone()
+
             if not row:
-                # Добавление нового задания
                 if with_audio:
                     audio_path = text_to_speech(task_content, "temp.wav")
                     with open(audio_path, "rb") as f:
@@ -97,6 +98,8 @@ async def add_tasks(
                         VALUES(?, ?, ?, ?, ?, ?, ?)
                     """, (level_id, module_id, type_task, task_content, task_question, task_score, check_method))
                 task_id = cursor.lastrowid
+
+                # Добавляем ответ только для нового задания
                 if answer is not None:
                     await cursor.execute("""
                         INSERT INTO TasksAnswers (task_id, correct_answer)
@@ -106,52 +109,47 @@ async def add_tasks(
             else:
                 task_id = row[0]
                 if update_existing:
-                    await cursor.execute("SELECT content FROM Tasks WHERE task_id=?", (task_id,))
-                    current_content = await cursor.fetchone()
-                    content_changed = not current_content or current_content[0] != task_content
-
-                    if content_changed:
-                        if with_audio:
-                            audio_path = text_to_speech(task_content, "temp.wav")
-                            with open(audio_path, "rb") as f:
-                                audio_blob = f.read()
-                            await cursor.execute("""
-                                UPDATE Tasks
-                                SET content=?, score=?, check_method=?, audio=?
-                                WHERE task_id=?
-                            """, (task_content, task_score, check_method, audio_blob, task_id))
-                            if os.path.exists(audio_path):
-                                os.remove(audio_path)
-                        else:
-                            await cursor.execute("""
-                                UPDATE Tasks
-                                SET content=?, score=?, check_method=?
-                                WHERE task_id=?
-                            """, (task_content, task_score, check_method, task_id))
-                    else:
+                    # Обновляем существующее задание
+                    if with_audio:
+                        audio_path = text_to_speech(task_content, "temp.wav")
+                        with open(audio_path, "rb") as f:
+                            audio_blob = f.read()
                         await cursor.execute("""
                             UPDATE Tasks
-                            SET score=?, check_method=?
+                            SET score=?, check_method=?, audio=?
                             WHERE task_id=?
-                        """, (task_score, check_method, task_id))
+                        """, (task_score, check_method, audio_blob, task_id))
+                        if os.path.exists(audio_path):
+                            os.remove(audio_path)
+                    else:
+                        await cursor.execute("""
+                                                UPDATE Tasks
+                                                SET score=?, check_method=?
+                                                WHERE task_id=?
+                                            """, (task_score, check_method, task_id))
 
+                        # Обновляем ответ если нужно
                     if answer is not None:
                         await cursor.execute("SELECT id FROM TasksAnswers WHERE task_id=?", (task_id,))
                         existing_answer = await cursor.fetchone()
                         if existing_answer:
                             await cursor.execute("""
-                                UPDATE TasksAnswers
-                                SET correct_answer=?
-                                WHERE task_id=?
+                                                            UPDATE TasksAnswers
+                                                            SET correct_answer=? WHERE task_id=?
                             """, (answer, task_id))
+
                         else:
                             await cursor.execute("""
-                                INSERT INTO TasksAnswers (task_id, correct_answer)
-                                VALUES (?, ?)
-                            """, (task_id, answer))
+                                    INSERT INTO TasksAnswers (task_id, correct_answer)
+                                    VALUES (?, ?)
+                                """, (task_id, answer))
+
+
                     logger.info(f"Обновлено существующее задание: {task_question}")
+
                 else:
                     logger.info(f"Задание уже существует (пропущено): {task_question}")
+
             await db.commit()
 
     async with aiosqlite.connect('BFU.db') as db:
@@ -343,12 +341,15 @@ async def all_tasks_done_right(user_id, level):
             level_row = await cursor.fetchone()
             level_id = level_row[0] if level_row else None
 
-            cursor = await db.execute(
-                "SELECT COUNT(DISTINCT task_id) FROM UserProgress WHERE user_id = ? AND is_correct = ?",
-                (user_id, True))
+            cursor = await db.execute("""
+                SELECT COUNT(DISTINCT up.task_id) 
+                FROM UserProgress up
+                JOIN Tasks t ON up.task_id = t.task_id
+                WHERE up.user_id = ? AND up.is_correct = ? AND t.level_id = ?
+            """, (user_id, True, level_id))
             done_right_tasks = (await cursor.fetchone())[0]
 
-            cursor = await db.execute("SELECT COUNT (*) FROM Tasks WHERE level_id = ?", (level_id,))
+            cursor = await db.execute("SELECT COUNT(*) FROM Tasks WHERE level_id = ?", (level_id,))
             all_tasks = (await cursor.fetchone())[0]
 
             return done_right_tasks == all_tasks
@@ -368,10 +369,15 @@ async def all_tasks_done(user_id, level):
             level_row = await cursor.fetchone()
             level_id = level_row[0] if level_row else None
 
-            cursor = await db.execute("SELECT COUNT(DISTINCT task_id) FROM UserProgress WHERE user_id = ?", (user_id,))
+            cursor = await db.execute("""
+                SELECT COUNT(DISTINCT up.task_id) 
+                FROM UserProgress up
+                JOIN Tasks t ON up.task_id = t.task_id
+                WHERE up.user_id = ? AND t.level_id = ?
+            """, (user_id, level_id))
             done_tasks = (await cursor.fetchone())[0]
 
-            cursor = await db.execute("SELECT COUNT (*) FROM Tasks WHERE level_id = ?", (level_id,))
+            cursor = await db.execute("SELECT COUNT(*) FROM Tasks WHERE level_id = ?", (level_id,))
             all_tasks = (await cursor.fetchone())[0]
 
             return done_tasks == all_tasks
@@ -379,7 +385,6 @@ async def all_tasks_done(user_id, level):
     except Exception as e:
         logger.error(f"Error function all_task_done: {e}")
         return False
-
 
 async def prepare_question(task):
     """
