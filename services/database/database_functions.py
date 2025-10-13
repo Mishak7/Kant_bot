@@ -286,7 +286,7 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
                 WHERE T.module_id =? AND T.level_id = ? 
                 AND T.task_id NOT IN(
                     SELECT task_id FROM UserProgress
-                    WHERE user_id = ? and is_correct=TRUE)
+                    WHERE user_id = ?)
                 ORDER BY RANDOM() 
                 LIMIT 1
                 """,
