@@ -60,34 +60,3 @@ class ListeningGeneration:
             return filename
 
 
-
-
-llm = GigaChat(credentials= "M2RiNDYxMjUtNjhkZC00ODRmLWJjNjktMDNiNDU1ZjkxZTVhOjc5OTljYmU5LTM1ZjEtNGI0Yi04M2MwLTJmYTZiYjgxMGI2Ng==",
-               model="GigaChat-2-Max",
-               profanity_check=False,
-               top_p=0,
-               timeout=120,
-               verify_ssl_certs=False)
-
-
-
-from langgraph.prebuilt import create_react_agent
-
-
-@tool
-def generate_audio(text: str) -> str:
-    """Генерирует аудиофайл из текста и возвращает путь к файлу."""
-    lg = ListeningGeneration(text)
-    filename = f"audio_{uuid.uuid4().hex}.wav"
-    lg.create_file(filename)
-    return f"Аудиофайл создан: {filename}"
-
-
-tools = [generate_audio]
-agent = create_react_agent(llm, tools=tools, prompt="""Ты помощник, способный создавать аудиофайлы из текста.
-Для создания файлов используй доступный инструмент generate_audio.
-Например, если нужно создать аудиофайл с текстом "Банан", используй команду generate_audio("Банан").""")
-
-response = agent.invoke({"messages": [HumanMessage(content="создай аудио с словом: банан")]})
-print(response)
-print(response['messages'][-1].content)
