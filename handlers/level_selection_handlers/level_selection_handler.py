@@ -70,7 +70,18 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
             await state.set_state(AnswerState.waiting_for_answer)
 
             task = await get_task(level, user_id)
+            if not task:
+                await callback.message.answer("Задания для этого уровня закончились 🙂",
+                                            reply_markup=InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="↩️ Назад к уровням",callback_data="language_check")]]))
+                await callback.answer()
+                return
+
             prepared_task = await prepare_question(task)
+            if not prepared_task:
+                await callback.message.answer("Произошла ошибка при загрузке задания 😢\nПопробуйте позже.", reply_markup=InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="↩️ Назад к уровням", callback_data="language_check")]]))
+                await callback.answer()
+                return
+            
 
             number_of_buttons = (len(re.findall(pattern=r'[1-4]\)', string=prepared_task['content'])) + len(re.findall(pattern=r'[1-4]\)',
                                                string=prepared_task['question'])))*(prepared_task.get('type') != 'Writing')
