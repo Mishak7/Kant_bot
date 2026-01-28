@@ -647,7 +647,7 @@ _Email_: international-study@kantiana.ru
 🔗 Полезные ресурсы Сбера и партнёров:
 
 • [Платформа Нетология](https://netology.ru/navigation) — онлайн‑курсы и профессии
-• [Тренируй спокойствие](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — тренажёр для собеседований
+• [Тренируй спокойствие](https://sber-interview.fut.ru/?utm_source=fut&utm_medium=article_16_mistakes) — тренажёр для собеседований
 • [Школа 21](https://sbergraduate.ru/careerofthefuture/) — бесплатное IT‑образование
 • [СберСова](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — образовательная платформа
 • [Кибрарий](https://sber.ru/kibrary) — цифровая библиотека
@@ -1320,7 +1320,7 @@ _Email_: international-study@kantiana.ru
 🔗 Useful resources from Sber and partners:
 
 • [Netology Platform](https://netology.ru/navigation) — online courses and professions
-• [Train Calmness](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — interview simulator
+• [Train Calmness](https://sber-interview.fut.ru/?utm_source=fut&utm_medium=article_16_mistakes) — interview simulator
 • [School 21](https://sbergraduate.ru/careerofthefuture/) — free IT education
 • [SberSova](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — educational platform
 • [Kibrary](https://sber.ru/kibrary) — digital library
@@ -1997,7 +1997,7 @@ _Email_ : international-study@kantiana.ru
                 'useful_links_text': """
 🔗 Ressources utiles de Sber et de ses partenaires :
 • [Plateforme Netologie](https://netology.ru/navigation) — cours en ligne et professions
-• [Entraîne ta tranquillité](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — simulateur d'entretiens
+• [Entraîne ta tranquillité](https://sber-interview.fut.ru/?utm_source=fut&utm_medium=article_16_mistakes) — simulateur d'entretiens
 • [École 21](https://sbergraduate.ru/careerofthefuture/) — éducation IT gratuite
 • [SberSova](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — plateforme éducative
 • [Cyberbibliothèque](https://sber.ru/kibrary) — bibliothèque numérique
@@ -2669,7 +2669,7 @@ _Email_: international-study@kantiana.ru
                 'useful_links_text': """
 🔗 Recursos útiles de Sber y sus socios:
 • [Plataforma Netología](https://netology.ru/navigation) — cursos y profesiones en línea
-• [Entrena la calma](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — simulador para entrevistas
+• [Entrena la calma](https://sber-interview.fut.ru/?utm_source=fut&utm_medium=article_16_mistakes) — simulador para entrevistas
 • [Escuela 21](https://sbergraduate.ru/careerofthefuture/) — educación IT gratuita
 • [SberSova](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — plataforma educativa
 • [Cibiblioteca](https://sber.ru/kibrary) — biblioteca digital
@@ -3357,7 +3357,7 @@ _邮箱_: international-study@kantiana.ru
 🔗 Sber银行及合作伙伴实用资源：
 
 • [Netology平台](https://netology.ru/navigation) — 在线课程与职业培训
-• [面试模拟器](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — 面试练习
+• [面试模拟器](https://sber-interview.fut.ru/?utm_source=fut&utm_medium=article_16_mistakes) — 面试练习
 • [21号学校](https://sbergraduate.ru/careerofthefuture/) — 免费IT教育
 • [SberSova](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — 教育平台
 • [Kibrary数字图书馆](https://sber.ru/kibrary) — 数字图书馆
@@ -4027,7 +4027,7 @@ _ईमेल_: international-study@kantiana.ru
                 'useful_links_text': """
 🔗 स्बेर और भागीदारों के उपयोगी संसाधन:
 • [नेटोलॉजी प्लेटफॉर्म](https://netology.ru/navigation) — ऑनलाइन पाठ्यक्रम और प्रोफेशन
-• [शांत रहने की प्रैक्टिस](http://interview.sberstudent.ru/?utm_source=sber&utm_medium=internal&utm_campaign=salaryprojectmanagement) — साक्षात्कार के लिए ट्रेनर
+• [शांत रहने की प्रैक्टिस](https://sber-interview.fut.ru/?utm_source=fut&utm_medium=article_16_mistakes) — साक्षात्कार के लिए ट्रेनर
 • [स्कूल 21](https://sbergraduate.ru/careerofthefuture/) — मुफ्त आईटी शिक्षा
 • [स्बेरसोवा](https://sbersova.ru/academy/courses/kibergramotnost?utm_source=event&utm_medium=free&utm_campaign=speaker) — शैक्षिक प्लेटफॉर्म
 • [किब्रारी](https://sber.ru/kibrary) — डिजिटल पुस्तकालय
