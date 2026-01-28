@@ -76,6 +76,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
                                                string=prepared_task['question'])))*(prepared_task.get('type') != 'Writing')
 
             text = f"""{prepared_task['question']}\n\n{prepared_task['content']}"""
+            logger.info(text)
             is_speaking_task = prepared_task.get('type') == 'Speaking'
             if prepared_task.get('audio'):
                 audio_file = await extract_audio_from_db(prepared_task['task_id'])
@@ -189,7 +190,7 @@ async def level_handler(callback: CallbackQuery, state: FSMContext, bot: Bot):
 
     except Exception as e:
         logger.error(f'Error: {e}\n{traceback.format_exc()}')
-        await callback.answer('Ошибка при загрузке информации', show_alert=True)
+        await callback.answer(f"Ошибка при загрузке информации {e} {traceback.format_exc()}", show_alert=True)
 
 
 @router.callback_query(F.data.startswith('explanation'))
