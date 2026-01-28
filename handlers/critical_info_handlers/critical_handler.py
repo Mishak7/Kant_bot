@@ -41,18 +41,18 @@ async def critical_hotline_handler(callback: CallbackQuery, language: str):
         await callback.answer(TEXTS[language]['errors']['info_error'], show_alert=True)
 
 
-@router.callback_query(F.data == "critical_government")
-async def critical_government_handler(callback: CallbackQuery, language: str):
-    """Provide local government contact information and procedures."""
-    try:
-        text = TEXTS[language]['handlers']['critical_handlers']['critical_government_handler']
-        await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=f"📤 {TEXTS[language]['keyboards']['critical_keyboard']['appeal']}", url='https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2')],
-        [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['critical_keyboard']['back']}", callback_data="critical")]]))
-        await callback.answer()
-    except Exception as e:
-        logger.error(f'Government contacts error: {e}\n{traceback.format_exc()}')
-        await callback.answer(TEXTS[language]['errors']['info_error'], show_alert=True)
+# @router.callback_query(F.data == "critical_government")
+# async def critical_government_handler(callback: CallbackQuery, language: str):
+#     """Provide local government contact information and procedures."""
+#     try:
+#         text = TEXTS[language]['handlers']['critical_handlers']['critical_government_handler']
+#         await callback.message.edit_text(text, parse_mode="Markdown", reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+#         [InlineKeyboardButton(text=f"📤 {TEXTS[language]['keyboards']['critical_keyboard']['appeal']}", url='https://letters.gov.spb.ru/reception/form/?agency=1de5085ac50e44028bb31f2b97ac0fe2')],
+#         [InlineKeyboardButton(text=f"◀️ {TEXTS[language]['keyboards']['critical_keyboard']['back']}", callback_data="critical")]]))
+#         await callback.answer()
+#     except Exception as e:
+#         logger.error(f'Government contacts error: {e}\n{traceback.format_exc()}')
+#         await callback.answer(TEXTS[language]['errors']['info_error'], show_alert=True)
 
 
 @router.callback_query(F.data == "critical_consulate")
