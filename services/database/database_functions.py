@@ -296,8 +296,8 @@ async def get_task(name_level, user_id):  # user_id - результат раб�
             return row
 
     except Exception as e:
-        logger.error(f"Error getting a task: {e}")
-        return False
+        logger.exception("Error getting a task")
+        return None
 
 
 async def review_mistakes(user_id, level):
@@ -392,6 +392,9 @@ async def prepare_question(task):
 
     task - результат работы функции get_task.
     """
+    if not task:
+      return None
+      
     task_id, content, task_type, question, audio = task
     # в выводе задания пользователю мы выводим только question, audio
     # content, task_id нам нужны доя проверки
